@@ -223,12 +223,22 @@
       font-size: 12px;
     }
     .company-code { color: var(--text-muted); font-family: monospace; }
-    .company-name { color: var(--text); font-weight: 600; }
+    .company-name {
+      color: var(--text); font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
     .highlight-text {
       color: var(--text-muted);
       font-size: 12px;
       line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .highlight-dot {
       display: inline-block; width: 6px; height: 6px;
@@ -602,7 +612,7 @@ function renderTable(data) {
         const compCell = document.createElement('td');
         compCell.innerHTML = `
           <span class="company-pill">
-            <span class="company-code">${company.code}</span>
+            ${company.code ? `<span class="company-code">${company.code}</span>` : ''}
             <span class="company-name">${company.name}</span>
           </span>
         `;
@@ -667,9 +677,10 @@ function renderMindMap(data) {
     label: { color: '#fff' },
     children: seg.companies.map(c => ({
       name: c.name,
-      value: c.code,
+      value: c.code || c.name,
       label: {
-        formatter: (p) => `{code|${c.code}}\n{name|${c.name}}`,
+        formatter: (p) => `${c.code ? `{code|${c.code}}\n` : ''}{name|${c.name}}`,
+        // formatter: (p) => `{code|${c.code}}\n{name|${c.name}}`,
         rich: {
           code: { color: '#aaa', fontSize: 10, lineHeight: 16 },
           name: { color: '#fff', fontSize: 12, fontWeight: 'bold', lineHeight: 18 }
@@ -713,7 +724,7 @@ function renderMindMap(data) {
         const d = p.data;
         const company = findCompany(currentIndustry, d.name);
         if (company) {
-          return `<b>${company.name}</b> <span style="color:#aaa">${company.code}</span><br/><span style="color:#ccc;font-size:12px">${company.highlight}</span>`;
+          return `<b>${company.name}</b>${company.code ? ` <span style="color:#aaa">${company.code}</span>` : ''}<br/><span style="color:#ccc;font-size:12px">${company.highlight}</span>`;
         }
         return d.name;
       }
@@ -1252,9 +1263,11 @@ function drawPoster(ctx, data, W, H) {
         ctx.fill();
 
         // 股票代码
-        ctx.fillStyle = tier.color + 'cc';
-        ctx.font = '10px monospace';
-        ctx.fillText(company.code, PAD + 22, y + 16);
+        if (company.code) {
+          ctx.fillStyle = tier.color + 'cc';
+          ctx.font = '10px monospace';
+          ctx.fillText(company.code, PAD + 22, y + 16);
+        }
 
         // 公司名
         ctx.fillStyle = '#ffffff';
