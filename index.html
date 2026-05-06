@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产业链分析工具</title>
+  <!-- ECharts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --surface: #1a1a2e;
+      --surface2: #16213e;
+      --border: rgba(255,255,255,0.08);
+      --text: #e8e8f0;
+      --text-muted: #8888aa;
+      --accent: #6c63ff;
+      --accent2: #00d4ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
+    .logo-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ===== SEARCH BOX ===== */
+    .search-wrap {
+      flex: 1;
+      min-width: 260px;
+      max-width: 600px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 52px 12px 18px;
+      border-radius: 12px;
+      border: 1.5px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108,99,255,0.2);
+    }
+    .search-btn {
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none; color: #fff; cursor: pointer;
+      border-radius: 8px; padding: 6px 14px; font-size: 14px; font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .search-btn:hover { opacity: 0.85; }
+
+    /* ===== HOTKEYS ===== */
+    .hotkeys {
+      display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+      font-size: 12px; color: var(--text-muted);
+    }
+    .hotkey-label { margin-right: 2px; }
+    .hotkey-tag {
+      background: rgba(108,99,255,0.15);
+      border: 1px solid rgba(108,99,255,0.35);
+      color: var(--accent2);
+      padding: 3px 10px; border-radius: 20px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hotkey-tag:hover { background: rgba(108,99,255,0.3); }
+
+    /* ===== MAIN CONTENT ===== */
+    .main { max-width: 1400px; margin: 0 auto; padding: 32px; }
+
+    /* ===== WELCOME ===== */
+    .welcome {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .welcome-icon { font-size: 64px; margin-bottom: 20px; }
+    .welcome h2 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .welcome p { color: var(--text-muted); font-size: 16px; line-height: 1.7; max-width: 500px; margin: 0 auto; }
+    .welcome-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;
+    }
+    .welcome-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .welcome-card:hover {
+      border-color: var(--accent);
+      background: rgba(108,99,255,0.1);
+      transform: translateY(-2px);
+    }
+    .welcome-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .welcome-card-name { font-size: 14px; font-weight: 600; }
+
+    /* ===== INDUSTRY HEADER ===== */
+    .industry-header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .industry-header::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--ind-gradient, linear-gradient(135deg, #1a73e8, #0d47a1));
+      opacity: 0.07;
+    }
+    .industry-header-content { position: relative; z-index: 1; }
+    .industry-title { font-size: 26px; font-weight: 800; letter-spacing: 1px; }
+    .industry-desc { color: var(--text-muted); font-size: 14px; margin-top: 8px; line-height: 1.7; max-width: 700px; }
+    .industry-stats {
+      display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .stat-item { }
+    .stat-num { font-size: 22px; font-weight: 700; color: var(--accent2); }
+    .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* ===== TABS ===== */
+    .tabs {
+      display: flex; gap: 4px; margin-bottom: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 4px;
+      width: fit-content;
+    }
+    .tab-btn {
+      padding: 8px 20px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 14px; font-weight: 500;
+      border-radius: 9px; cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
+
+    /* ===== TABLE VIEW ===== */
+    .view-panel { display: none; }
+    .view-panel.active { display: block; }
+
+    .chain-table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .chain-table { width: 100%; border-collapse: collapse; }
+    .chain-table th {
+      background: rgba(255,255,255,0.04);
+      padding: 14px 18px; font-size: 13px; font-weight: 600;
+      color: var(--text-muted); text-align: left; letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+    }
+    .chain-table td {
+      padding: 14px 18px; border-bottom: 1px solid var(--border);
+      font-size: 13px; vertical-align: top;
+    }
+    .chain-table tr:last-child td { border-bottom: none; }
+    .chain-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .tier-badge {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-size: 12px; font-weight: 600; white-space: nowrap;
+    }
+    .tier-up { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+    .tier-mid { background: rgba(108,99,255,0.15); color: #a78bfa; border: 1px solid rgba(108,99,255,0.3); }
+    .tier-down { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+
+    .company-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 4px 10px; margin: 2px;
+      font-size: 12px;
+    }
+    .company-code { color: var(--text-muted); font-family: monospace; }
+    .company-name { color: var(--text); font-weight: 600; }
+
+    .highlight-text {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .highlight-dot {
+      display: inline-block; width: 6px; height: 6px;
+      border-radius: 50%; background: var(--accent2);
+      margin-right: 4px; flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .highlight-row { display: flex; align-items: flex-start; gap: 4px; }
+
+    /* ===== MIND MAP VIEW ===== */
+    #mind-chart { width: 100%; height: 640px; background: var(--surface); border-radius: 16px; }
+
+    /* ===== POSTER VIEW ===== */
+    .poster-wrap {
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    #poster-canvas {
+      border-radius: 16px;
+      max-width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+    .poster-actions {
+      display: flex; gap: 12px;
+    }
+    .btn {
+      padding: 10px 24px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .btn:hover { opacity: 0.85; }
+
+    /* ===== LOADING ===== */
+    .loading {
+      display: none; text-align: center; padding: 60px;
+    }
+    .loading.show { display: block; }
+    .spinner {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== NOT FOUND ===== */
+    .not-found {
+      display: none; text-align: center; padding: 60px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .not-found.show { display: block; }
+    .not-found-icon { font-size: 48px; margin-bottom: 16px; }
+
+    /* ===== RESULT WRAP ===== */
+    #result { display: none; }
+    #result.show { display: block; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .main { padding: 16px; }
+      .header { padding: 16px; }
+      .industry-header { padding: 20px; }
+      .chain-table td, .chain-table th { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🔗</div>
+      <div>
+        <div class="logo-text">产业链分析</div>
+        <div class="logo-sub">Industry Chain Analyzer</div>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <input class="search-input" id="search-input" type="text"
+        placeholder="输入行业名称，如：半导体、AI算力、新能源汽车..."
+        autocomplete="off" />
+      <button class="search-btn" onclick="doSearch()">分析 →</button>
+    </div>
+
+    <div class="hotkeys">
+      <span class="hotkey-label">热门：</span>
+      <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
+      <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
+      <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
+      <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
+      <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
+      <span class="hotkey-tag" onclick="quickSearch('通讯设备')">通讯设备</span>
+      <span class="hotkey-tag" onclick="quickSearch('IT服务')">IT服务</span>
+      <span class="hotkey-tag" onclick="quickSearch('元件')">元件</span>
+      <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
+      <span class="hotkey-tag" onclick="quickSearch('光伏')">光伏</span>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- WELCOME -->
+  <div id="welcome">
+    <div class="welcome">
+      <div class="welcome-icon">🏭</div>
+      <h2>产业链深度分析</h2>
+      <p>输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报</p>
+      <div class="welcome-grid">
+        <div class="welcome-card" onclick="quickSearch('半导体')">
+          <div class="welcome-card-icon">💎</div>
+          <div class="welcome-card-name">半导体</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('AI算力')">
+          <div class="welcome-card-icon">🚀</div>
+          <div class="welcome-card-name">AI算力</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('新能源汽车')">
+          <div class="welcome-card-icon">⚡</div>
+          <div class="welcome-card-name">新能源汽车</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('光伏')">
+          <div class="welcome-card-icon">☀️</div>
+          <div class="welcome-card-name">光伏</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('机器人')">
+          <div class="welcome-card-icon">🤖</div>
+          <div class="welcome-card-name">机器人</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('锂电池')">
+          <div class="welcome-card-icon">🔋</div>
+          <div class="welcome-card-name">锂电池</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('人工智能')">
+          <div class="welcome-card-icon">🧠</div>
+          <div class="welcome-card-name">人工智能</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('消费电子')">
+          <div class="welcome-card-icon">📱</div>
+          <div class="welcome-card-name">消费电子</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('AI应用')">
+          <div class="welcome-card-icon">✨</div>
+          <div class="welcome-card-name">AI应用</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('液冷')">
+          <div class="welcome-card-icon">❄️</div>
+          <div class="welcome-card-name">液冷</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('通讯设备')">
+          <div class="welcome-card-icon">📡</div>
+          <div class="welcome-card-name">通讯设备</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('IT服务')">
+          <div class="welcome-card-icon">💻</div>
+          <div class="welcome-card-name">IT服务</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('元件')">
+          <div class="welcome-card-icon">🔩</div>
+          <div class="welcome-card-name">元件</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>正在分析产业链数据...</p>
+  </div>
+
+  <!-- NOT FOUND -->
+  <div class="not-found" id="not-found">
+    <div class="not-found-icon">🔍</div>
+    <h3>暂未收录该行业</h3>
+    <p style="color:var(--text-muted);margin-top:8px;">
+      目前支持：半导体、AI算力、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人
+    </p>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result">
+    <!-- 行业标题 -->
+    <div class="industry-header" id="industry-header">
+      <div class="industry-header-content">
+        <div class="industry-title" id="industry-title"></div>
+        <div class="industry-desc" id="industry-desc"></div>
+        <div class="industry-stats" id="industry-stats"></div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('table', this)">📋 产业链表格</button>
+      <button class="tab-btn" onclick="switchTab('mindmap', this)">🗺️ 思维导图</button>
+      <button class="tab-btn" onclick="switchTab('poster', this)">🎨 可视化海报</button>
+    </div>
+
+    <!-- 表格视图 -->
+    <div id="view-table" class="view-panel active">
+      <div class="chain-table-wrap">
+        <table class="chain-table" id="chain-table">
+          <thead>
+            <tr>
+              <th style="width:80px">环节</th>
+              <th style="width:120px">细分赛道</th>
+              <th style="width:280px">龙头企业</th>
+              <th>核心业绩亮点</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 思维导图视图 -->
+    <div id="view-mindmap" class="view-panel">
+      <div id="mind-chart"></div>
+    </div>
+
+    <!-- 海报视图 -->
+    <div id="view-poster" class="view-panel">
+      <div class="poster-wrap">
+        <canvas id="poster-canvas"></canvas>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载海报</button>
+          <button class="btn btn-secondary" onclick="copyPoster()">📋 复制图片</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- DATA -->
+<script src="data.js"></script>
+
+<!-- MAIN LOGIC -->
+<script>
+let currentIndustry = null;
+let mindChartInstance = null;
+
+// ===========================
+// 搜索逻辑
+// ===========================
+document.getElementById('search-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') doSearch();
+});
+
+function quickSearch(name) {
+  document.getElementById('search-input').value = name;
+  doSearch();
+}
+
+function doSearch() {
+  const query = document.getElementById('search-input').value.trim();
+  if (!query) return;
+
+  // UI状态切换
+  document.getElementById('welcome').style.display = 'none';
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('not-found').classList.remove('show');
+  document.getElementById('loading').classList.add('show');
+
+  // 模拟分析延迟（体验更好）
+  setTimeout(() => {
+    document.getElementById('loading').classList.remove('show');
+    const data = searchIndustry(query);
+    if (!data) {
+      document.getElementById('not-found').classList.add('show');
+    } else {
+      currentIndustry = data;
+      renderResult(data);
+    }
+  }, 600);
+}
+
+// ===========================
+// 渲染结果
+// ===========================
+function renderResult(data) {
+  document.getElementById('result').classList.add('show');
+  renderHeader(data);
+  renderTable(data);
+  // 重置到表格tab
+  switchTab('table', document.querySelector('.tab-btn'));
+}
+
+function renderHeader(data) {
+  const header = document.getElementById('industry-header');
+  header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
+  header.style.borderLeft = `4px solid ${data.color}`;
+
+  document.getElementById('industry-title').textContent = `📊 ${data.name} 产业链全景图`;
+  document.getElementById('industry-desc').textContent = data.description;
+
+  // 统计
+  const totalCompanies = [
+    ...data.upstream.flatMap(s => s.companies),
+    ...data.midstream.flatMap(s => s.companies),
+    ...data.downstream.flatMap(s => s.companies)
+  ].length;
+
+  const totalSegments = data.upstream.length + data.midstream.length + data.downstream.length;
+
+  document.getElementById('industry-stats').innerHTML = `
+    <div class="stat-item">
+      <div class="stat-num">${totalCompanies}</div>
+      <div class="stat-label">龙头企业</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">${totalSegments}</div>
+      <div class="stat-label">细分赛道</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">产业层次</div>
+    </div>
+  `;
+}
+
+// ===========================
+// 表格渲染
+// ===========================
+function renderTable(data) {
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = '';
+
+  const tiers = [
+    { key: 'upstream', label: '上游', badgeClass: 'tier-up', segments: data.upstream },
+    { key: 'midstream', label: '中游', badgeClass: 'tier-mid', segments: data.midstream },
+    { key: 'downstream', label: '下游', badgeClass: 'tier-down', segments: data.downstream },
+  ];
+
+  tiers.forEach(tier => {
+    tier.segments.forEach((seg, i) => {
+      seg.companies.forEach((company, j) => {
+        const tr = document.createElement('tr');
+
+        // 环节列（只在首个赛道首行显示，合并行）
+        const tierCell = document.createElement('td');
+        if (i === 0 && j === 0) {
+          tierCell.rowSpan = tier.segments.reduce((a, s) => a + s.companies.length, 0);
+          tierCell.innerHTML = `<span class="tier-badge ${tier.badgeClass}">${tier.label}</span>`;
+          tr.appendChild(tierCell);
+        }
+
+        // 细分赛道列（只在首行显示）
+        const segCell = document.createElement('td');
+        if (j === 0) {
+          segCell.rowSpan = seg.companies.length;
+          segCell.textContent = seg.name;
+          segCell.style.fontWeight = '600';
+          segCell.style.color = '#c4c4e0';
+          tr.appendChild(segCell);
+        }
+
+        // 企业列
+        const compCell = document.createElement('td');
+        compCell.innerHTML = `
+          <span class="company-pill">
+            <span class="company-code">${company.code}</span>
+            <span class="company-name">${company.name}</span>
+          </span>
+        `;
+        tr.appendChild(compCell);
+
+        // 亮点列
+        const hlCell = document.createElement('td');
+        hlCell.innerHTML = `
+          <div class="highlight-row">
+            <span class="highlight-dot"></span>
+            <span class="highlight-text">${company.highlight}</span>
+          </div>
+        `;
+        tr.appendChild(hlCell);
+
+        tbody.appendChild(tr);
+      });
+    });
+  });
+}
+
+// ===========================
+// TAB 切换
+// ===========================
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`view-${tab}`).classList.add('active');
+
+  if (tab === 'mindmap' && currentIndustry) {
+    setTimeout(() => renderMindMap(currentIndustry), 100);
+  }
+  if (tab === 'poster' && currentIndustry) {
+    setTimeout(() => renderPoster(currentIndustry), 100);
+  }
+}
+
+// ===========================
+// 思维导图（ECharts Tree）
+// ===========================
+function renderMindMap(data) {
+  const dom = document.getElementById('mind-chart');
+  if (!mindChartInstance) {
+    mindChartInstance = echarts.init(dom, 'dark');
+  } else {
+    mindChartInstance.clear();
+  }
+
+  // 颜色配置
+  const colors = {
+    root: data.color,
+    upstream: '#10b981',
+    midstream: '#6c63ff',
+    downstream: '#ef4444',
+  };
+
+  const buildChildren = (segments, tierColor) => segments.map(seg => ({
+    name: seg.name,
+    itemStyle: { color: tierColor, opacity: 0.8 },
+    label: { color: '#fff' },
+    children: seg.companies.map(c => ({
+      name: c.name,
+      value: c.code,
+      label: {
+        formatter: (p) => `{code|${c.code}}\n{name|${c.name}}`,
+        rich: {
+          code: { color: '#aaa', fontSize: 10, lineHeight: 16 },
+          name: { color: '#fff', fontSize: 12, fontWeight: 'bold', lineHeight: 18 }
+        }
+      },
+      itemStyle: { color: lightenColor(tierColor, 40) }
+    }))
+  }));
+
+  const treeData = {
+    name: data.name + '\n产业链',
+    itemStyle: { color: colors.root },
+    label: { fontSize: 16, fontWeight: 'bold', color: '#fff' },
+    children: [
+      {
+        name: '⬆ 上游',
+        itemStyle: { color: colors.upstream },
+        label: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.upstream, colors.upstream)
+      },
+      {
+        name: '⬛ 中游',
+        itemStyle: { color: colors.midstream },
+        label: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.midstream, colors.midstream)
+      },
+      {
+        name: '⬇ 下游',
+        itemStyle: { color: colors.downstream },
+        label: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.downstream, colors.downstream)
+      }
+    ]
+  };
+
+  const option = {
+    backgroundColor: '#1a1a2e',
+    tooltip: {
+      trigger: 'item',
+      formatter: (p) => {
+        const d = p.data;
+        const company = findCompany(currentIndustry, d.name);
+        if (company) {
+          return `<b>${company.name}</b> <span style="color:#aaa">${company.code}</span><br/><span style="color:#ccc;font-size:12px">${company.highlight}</span>`;
+        }
+        return d.name;
+      }
+    },
+    series: [{
+      type: 'tree',
+      data: [treeData],
+      top: '3%', left: '8%', bottom: '3%', right: '20%',
+      symbolSize: 10,
+      orient: 'LR',
+      expandAndCollapse: true,
+      initialTreeDepth: 3,
+      label: {
+        position: 'right',
+        verticalAlign: 'middle',
+        align: 'left',
+        fontSize: 12
+      },
+      leaves: {
+        label: {
+          position: 'right',
+          verticalAlign: 'middle',
+          align: 'left'
+        }
+      },
+      lineStyle: { color: 'rgba(255,255,255,0.15)', width: 1.5, curveness: 0.5 },
+      emphasis: {
+        focus: 'descendant'
+      },
+      animationDuration: 550,
+      animationDurationUpdate: 750
+    }]
+  };
+
+  mindChartInstance.setOption(option);
+  window.addEventListener('resize', () => mindChartInstance && mindChartInstance.resize());
+}
+
+function lightenColor(hex, amount) {
+  const num = parseInt(hex.replace('#', ''), 16);
+  const r = Math.min(255, (num >> 16) + amount);
+  const g = Math.min(255, ((num >> 8) & 0xFF) + amount);
+  const b = Math.min(255, (num & 0xFF) + amount);
+  return `rgb(${r},${g},${b})`;
+}
+
+function findCompany(data, name) {
+  const all = [
+    ...data.upstream.flatMap(s => s.companies),
+    ...data.midstream.flatMap(s => s.companies),
+    ...data.downstream.flatMap(s => s.companies)
+  ];
+  return all.find(c => c.name === name);
+}
+
+// ===========================
+// 海报生成（Canvas）
+// ===========================
+function renderPoster(data) {
+  const canvas = document.getElementById('poster-canvas');
+  const dpr = window.devicePixelRatio || 1;
+  const W = 430, H = estimatePosterHeight(data);
+
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  // 让 canvas 容器水平居中自适应
+  canvas.style.maxWidth = '100%';
+
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  drawPoster(ctx, data, W, H);
+}
+
+function estimatePosterHeight(data) {
+  // 手机端：单列纵向堆叠，3 个层级分别累计
+  const COVER_H = 220;
+  const TIER_GAP = 12;
+  let bodyH = 0;
+  [data.upstream, data.midstream, data.downstream].forEach(segs => {
+    let th = 44; // 层级标题
+    segs.forEach(seg => {
+      th += 28 + seg.companies.length * 72 + 8;
+    });
+    bodyH += th + TIER_GAP;
+  });
+  return COVER_H + bodyH + 60; // 60 底部留白
+}
+
+// ===========================
+// 行业封面插图绘制
+// ===========================
+function drawCoverIllustration(ctx, data, x, y, w, h) {
+  const cx = x + w / 2, cy = y + h / 2;
+  const color = data.color;
+  const name = data.name;
+
+  // 通用：圆形渐变底座
+  const base = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * 0.48);
+  base.addColorStop(0, color + '22');
+  base.addColorStop(0.6, color + '0a');
+  base.addColorStop(1, 'transparent');
+  ctx.fillStyle = base;
+  ctx.beginPath(); ctx.arc(cx, cy, w * 0.48, 0, Math.PI * 2); ctx.fill();
+
+  if (name === '半导体') {
+    // 晶圆 + 芯片格网
+    ctx.save();
+    ctx.strokeStyle = color + 'bb'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(cx, cy, w * 0.38, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy, w * 0.28, 0, Math.PI * 2); ctx.stroke();
+    const grid = 5, gs = w * 0.56 / grid;
+    ctx.strokeStyle = color + '55'; ctx.lineWidth = 0.8;
+    for (let i = 0; i <= grid; i++) {
+      ctx.beginPath(); ctx.moveTo(cx - w*0.28 + i*gs, cy - w*0.28); ctx.lineTo(cx - w*0.28 + i*gs, cy + w*0.28); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx - w*0.28, cy - w*0.28 + i*gs); ctx.lineTo(cx + w*0.28, cy - w*0.28 + i*gs); ctx.stroke();
+    }
+    roundRect(ctx, cx - gs*1.2, cy - gs*1.2, gs*2.4, gs*2.4, 4);
+    ctx.fillStyle = color + '55'; ctx.fill();
+    ctx.strokeStyle = color; ctx.lineWidth = 1.5; ctx.stroke();
+    const pinLen = gs * 0.5, pins = 4;
+    for (let i = 0; i < pins; i++) {
+      const px = cx - gs*1.2 + i*(gs*2.4/pins) + gs*0.3;
+      ctx.beginPath(); ctx.moveTo(px, cy - gs*1.2); ctx.lineTo(px, cy - gs*1.2 - pinLen); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px, cy + gs*1.2); ctx.lineTo(px, cy + gs*1.2 + pinLen); ctx.stroke();
+    }
+    ctx.restore();
+
+  } else if (name === 'AI算力' || name === '人工智能' || name === 'AI应用') {
+    // 神经网络节点图
+    ctx.save();
+    const layers = [[0], [-0.22, 0, 0.22], [-0.28, -0.1, 0.1, 0.28], [-0.22, 0, 0.22], [0]];
+    const layerX = [-0.36, -0.18, 0, 0.18, 0.36];
+    const nodes = layers.map((ys, li) => ys.map(yOff => ({ x: cx + layerX[li]*w, y: cy + yOff*h })));
+    ctx.strokeStyle = color + '44'; ctx.lineWidth = 0.8;
+    for (let li = 0; li < nodes.length - 1; li++) {
+      nodes[li].forEach(a => nodes[li+1].forEach(b => {
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }));
+    }
+    nodes.forEach((layer, li) => layer.forEach(n => {
+      const r = li === 0 || li === 4 ? 5 : li === 2 ? 7 : 6;
+      ctx.beginPath(); ctx.arc(n.x, n.y, r, 0, Math.PI*2);
+      ctx.fillStyle = li === 2 ? color : color + 'aa'; ctx.fill();
+      ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.stroke();
+    }));
+    const gn = ctx.createRadialGradient(cx, cy, 0, cx, cy, 16);
+    gn.addColorStop(0, color + 'ff'); gn.addColorStop(1, color + '00');
+    ctx.fillStyle = gn;
+    ctx.beginPath(); ctx.arc(cx, cy, 16, 0, Math.PI*2); ctx.fill();
+    ctx.restore();
+
+  } else if (name === '新能源汽车') {
+    // 汽车剪影 + 闪电
+    ctx.save();
+    const s = w * 0.0035;
+    ctx.translate(cx - w*0.32, cy - h*0.12);
+    ctx.scale(s, s);
+    ctx.strokeStyle = color; ctx.lineWidth = 4 / s; ctx.fillStyle = color + '33';
+    ctx.beginPath();
+    ctx.moveTo(10, 60); ctx.lineTo(10, 35);
+    ctx.bezierCurveTo(10, 20, 25, 10, 45, 10);
+    ctx.lineTo(115, 10);
+    ctx.bezierCurveTo(135, 10, 150, 20, 150, 35);
+    ctx.lineTo(150, 60); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    ctx.fillStyle = color + '66';
+    ctx.beginPath(); ctx.moveTo(40, 34); ctx.lineTo(60, 14); ctx.lineTo(100, 14); ctx.lineTo(120, 34); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#1a1a2e'; ctx.strokeStyle = color; ctx.lineWidth = 3 / s;
+    [35, 125].forEach(wx => {
+      ctx.beginPath(); ctx.arc(wx, 62, 14, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); ctx.arc(wx, 62, 6, 0, Math.PI*2); ctx.fillStyle = color + '88'; ctx.fill(); ctx.fillStyle = '#1a1a2e';
+    });
+    ctx.restore();
+    ctx.save(); ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(cx + w*0.22, cy - h*0.2); ctx.lineTo(cx + w*0.12, cy); ctx.lineTo(cx + w*0.2, cy); ctx.lineTo(cx + w*0.08, cy + h*0.2);
+    ctx.lineTo(cx + w*0.2, cy - h*0.03); ctx.lineTo(cx + w*0.12, cy - h*0.03); ctx.closePath(); ctx.fill();
+    ctx.restore();
+
+  } else if (name === '光伏') {
+    // 太阳 + 光伏板
+    ctx.save();
+    ctx.strokeStyle = color; ctx.fillStyle = color + '33'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(cx - w*0.1, cy - h*0.22, w*0.14, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+    for (let i = 0; i < 8; i++) {
+      const ang = (i / 8) * Math.PI * 2, r1 = w*0.16, r2 = w*0.23;
+      ctx.beginPath(); ctx.moveTo(cx - w*0.1 + Math.cos(ang)*r1, cy - h*0.22 + Math.sin(ang)*r1);
+      ctx.lineTo(cx - w*0.1 + Math.cos(ang)*r2, cy - h*0.22 + Math.sin(ang)*r2);
+      ctx.strokeStyle = color + 'aa'; ctx.lineWidth = 1.5; ctx.stroke();
+    }
+    ctx.save(); ctx.translate(cx - w*0.1, cy + h*0.05); ctx.rotate(-0.2);
+    const pw = w * 0.55, ph = h * 0.3;
+    roundRect(ctx, -pw/2, -ph/2, pw, ph, 4);
+    ctx.fillStyle = color + '25'; ctx.fill(); ctx.strokeStyle = color + 'bb'; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.strokeStyle = color + '55'; ctx.lineWidth = 0.8;
+    for (let ci = 1; ci < 4; ci++) { ctx.beginPath(); ctx.moveTo(-pw/2 + ci*pw/4, -ph/2); ctx.lineTo(-pw/2 + ci*pw/4, ph/2); ctx.stroke(); }
+    for (let ri = 1; ri < 3; ri++) { ctx.beginPath(); ctx.moveTo(-pw/2, -ph/2 + ri*ph/3); ctx.lineTo(pw/2, -ph/2 + ri*ph/3); ctx.stroke(); }
+    ctx.restore(); ctx.restore();
+
+  } else if (name === '锂电池') {
+    // 电池形状 + 电量填充
+    ctx.save();
+    const bw = w * 0.52, bh = h * 0.62, bx = cx - bw/2, by = cy - bh/2 + h*0.04;
+    roundRect(ctx, bx, by, bw, bh, 12);
+    ctx.fillStyle = color + '22'; ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke();
+    roundRect(ctx, cx - bw*0.2, by - 10, bw*0.4, 12, [4,4,0,0]);
+    ctx.fillStyle = color + '88'; ctx.fill();
+    const fillH = bh * 0.75;
+    roundRect(ctx, bx + 6, by + bh - fillH - 6, bw - 12, fillH, [0,0,8,8]);
+    const fg = ctx.createLinearGradient(bx, by + bh, bx, by);
+    fg.addColorStop(0, color + 'dd'); fg.addColorStop(1, color + '66');
+    ctx.fillStyle = fg; ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.globalAlpha = 0.9;
+    ctx.beginPath();
+    ctx.moveTo(cx + 4, cy - h*0.12); ctx.lineTo(cx - 8, cy + 4); ctx.lineTo(cx + 1, cy + 4);
+    ctx.lineTo(cx - 4, cy + h*0.15); ctx.lineTo(cx + 10, cy - 4); ctx.lineTo(cx + 2, cy - 4);
+    ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1; ctx.restore();
+
+  } else if (name === '消费电子') {
+    // 手机 + 平板轮廓
+    ctx.save();
+    roundRect(ctx, cx - w*0.32, cy - h*0.3, w*0.46, h*0.6, 8);
+    ctx.fillStyle = color + '1a'; ctx.fill(); ctx.strokeStyle = color + '66'; ctx.lineWidth = 1.5; ctx.stroke();
+    roundRect(ctx, cx + w*0.04, cy - h*0.28, w*0.24, h*0.56, 10);
+    ctx.fillStyle = color + '33'; ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke();
+    roundRect(ctx, cx + w*0.07, cy - h*0.22, w*0.18, h*0.44, 6);
+    ctx.fillStyle = color + '22'; ctx.fill(); ctx.strokeStyle = color + '44'; ctx.lineWidth = 0.8; ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx + w*0.16, cy + h*0.23, 4, 0, Math.PI*2);
+    ctx.fillStyle = color + '88'; ctx.fill(); ctx.restore();
+
+  } else if (name === '机器人') {
+    // 人形机器人
+    ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = 2;
+    roundRect(ctx, cx - 16, cy - h*0.38, 32, 28, 8);
+    ctx.fillStyle = color + '33'; ctx.fill(); ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc(cx - 7, cy - h*0.28, 3.5, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx + 7, cy - h*0.28, 3.5, 0, Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(cx - 5, cy - h*0.1 + 6); ctx.lineTo(cx + 5, cy - h*0.1 + 6);
+    ctx.moveTo(cx, cy - h*0.1 + 6); ctx.lineTo(cx, cy - h*0.1 + 14); ctx.stroke();
+    roundRect(ctx, cx - 22, cy - h*0.1 + 14, 44, 46, 8);
+    ctx.fillStyle = color + '33'; ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy + h*0.04, 9, 0, Math.PI*2);
+    ctx.fillStyle = color + '66'; ctx.fill();
+    ctx.strokeStyle = color + 'bb'; ctx.lineWidth = 7; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(cx - 22, cy - h*0.04); ctx.lineTo(cx - 36, cy + h*0.1); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx + 22, cy - h*0.04); ctx.lineTo(cx + 36, cy + h*0.1); ctx.stroke();
+    ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(cx - 11, cy - h*0.1 + 60); ctx.lineTo(cx - 13, cy + h*0.36); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx + 11, cy - h*0.1 + 60); ctx.lineTo(cx + 13, cy + h*0.36); ctx.stroke();
+    ctx.lineCap = 'butt'; ctx.restore();
+
+  } else if (name === '液冷') {
+    // 水滴 + 流动曲线 + 服务器机柜
+    ctx.save();
+    roundRect(ctx, cx - w*0.3, cy - h*0.3, w*0.38, h*0.6, 6);
+    ctx.fillStyle = color + '1a'; ctx.fill(); ctx.strokeStyle = color + '66'; ctx.lineWidth = 1.5; ctx.stroke();
+    [0.15, 0.02, -0.1].forEach(off => {
+      roundRect(ctx, cx - w*0.26, cy + off*h, w*0.3, h*0.09, 3);
+      ctx.fillStyle = color + '33'; ctx.fill(); ctx.strokeStyle = color + '88'; ctx.lineWidth = 1; ctx.stroke();
+      ctx.fillStyle = color; ctx.beginPath(); ctx.arc(cx - w*0.26 + w*0.26, cy + off*h + h*0.045, 3, 0, Math.PI*2); ctx.fill();
+    });
+    ctx.save(); ctx.translate(cx + w*0.2, cy - h*0.1);
+    ctx.fillStyle = color + 'cc';
+    ctx.beginPath(); ctx.moveTo(0, -h*0.25);
+    ctx.bezierCurveTo(w*0.12, -h*0.1, w*0.14, h*0.06, 0, h*0.14);
+    ctx.bezierCurveTo(-w*0.14, h*0.06, -w*0.12, -h*0.1, 0, -h*0.25); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.3)';
+    ctx.beginPath(); ctx.ellipse(-w*0.03, -h*0.1, w*0.03, h*0.05, -0.3, 0, Math.PI*2); ctx.fill();
+    ctx.restore();
+    ctx.strokeStyle = color + '66'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+    ctx.beginPath(); ctx.moveTo(cx + w*0.15, cy - h*0.05);
+    ctx.bezierCurveTo(cx + w*0.08, cy + h*0.15, cx - w*0.05, cy + h*0.2, cx - w*0.15, cy + h*0.15); ctx.stroke();
+    ctx.setLineDash([]); ctx.restore();
+
+  } else if (name === '通讯设备') {
+    // 信号塔 + 无线电波
+    ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - h*0.42); ctx.lineTo(cx - w*0.18, cy + h*0.32);
+    ctx.moveTo(cx, cy - h*0.42); ctx.lineTo(cx + w*0.18, cy + h*0.32); ctx.stroke();
+    [[-0.2, 0.1], [-0.05, 0.16], [0.1, 0.24]].forEach(([yo, xw]) => {
+      ctx.beginPath(); ctx.moveTo(cx - xw*w, cy + yo*h); ctx.lineTo(cx + xw*w, cy + yo*h); ctx.stroke();
+    });
+    ctx.strokeStyle = color; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(cx, cy - h*0.42); ctx.lineTo(cx, cy - h*0.5); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy - h*0.5, 4, 0, Math.PI*2); ctx.fillStyle = color; ctx.fill();
+    [0.12, 0.22, 0.32].forEach((r, i) => {
+      ctx.beginPath(); ctx.arc(cx, cy - h*0.05, r*w, -Math.PI*0.6, Math.PI*0.6);
+      ctx.strokeStyle = color + (i === 0 ? 'ff' : i === 1 ? 'aa' : '55');
+      ctx.lineWidth = 1.5; ctx.stroke();
+    }); ctx.restore();
+
+  } else if (name === 'IT服务') {
+    // 代码窗口 + 齿轮
+    ctx.save();
+    roundRect(ctx, cx - w*0.38, cy - h*0.32, w*0.58, h*0.55, 10);
+    ctx.fillStyle = color + '18'; ctx.fill(); ctx.strokeStyle = color + '88'; ctx.lineWidth = 1.5; ctx.stroke();
+    roundRect(ctx, cx - w*0.38, cy - h*0.32, w*0.58, 18, [10,10,0,0]);
+    ctx.fillStyle = color + '44'; ctx.fill();
+    [8, 18, 28].forEach((dx, i) => {
+      ctx.beginPath(); ctx.arc(cx - w*0.38 + dx, cy - h*0.32 + 9, 3.5, 0, Math.PI*2);
+      ctx.fillStyle = [color, color+'aa', color+'55'][i]; ctx.fill();
+    });
+    [[0.12, 0.25], [0.06, 0.2], [0.09, 0.28], [0.04, 0.16]].forEach(([xo, len], i) => {
+      roundRect(ctx, cx - w*0.38 + 12 + xo*w, cy - h*0.32 + 26 + i*13, len*w, 6, 3);
+      ctx.fillStyle = i === 0 ? color + 'cc' : i === 2 ? color + '99' : color + '55'; ctx.fill();
+    });
+    ctx.save(); ctx.translate(cx + w*0.26, cy + h*0.12);
+    drawGear(ctx, 0, 0, 22, 8, 6, color); ctx.restore();
+    ctx.save(); ctx.translate(cx + w*0.32, cy - h*0.06);
+    drawGear(ctx, 0, 0, 12, 6, 5, color + 'aa'); ctx.restore(); ctx.restore();
+
+  } else if (name === '元件') {
+    // 电路板 PCB
+    ctx.save();
+    roundRect(ctx, cx - w*0.38, cy - h*0.35, w*0.76, h*0.7, 8);
+    ctx.fillStyle = color + '18'; ctx.fill(); ctx.strokeStyle = color + '66'; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.strokeStyle = color + '77'; ctx.lineWidth = 1.5;
+    [[[0.05,0.15],[0.15,0.15],[0.15,0.02],[0.3,0.02]],
+     [[-0.1,-0.1],[0,-0.1],[0,0.1],[0.18,0.1]],
+     [[-0.28,0.2],[-0.1,0.2],[-0.1,0],[0.05,0]],
+     [[0.2,-0.25],[0.2,-0.1],[0.32,-0.1]]
+    ].forEach(pts => {
+      ctx.beginPath();
+      pts.forEach(([px,py],i) => { if (i===0) ctx.moveTo(cx+px*w,cy+py*h); else ctx.lineTo(cx+px*w,cy+py*h); });
+      ctx.stroke();
+    });
+    [[0.05,0.02,0.14,0.1],[-0.12,-0.14,0.22,0.1],[0.2,-0.28,0.1,0.07],[-0.28,0.08,0.12,0.08]].forEach(([ox,oy,cw,ch]) => {
+      roundRect(ctx, cx+ox*w, cy+oy*h, cw*w, ch*h, 3);
+      ctx.fillStyle = color + '44'; ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 1; ctx.stroke();
+    });
+    [[-0.18,0.16],[0.0,0.24],[0.22,0.12],[0.34,-0.1],[-0.3,-0.08]].forEach(([ox,oy]) => {
+      ctx.beginPath(); ctx.arc(cx+ox*w, cy+oy*h, 4, 0, Math.PI*2);
+      ctx.fillStyle = color + 'cc'; ctx.fill();
+    }); ctx.restore();
+
+  } else {
+    // 默认：六边形蜂巢
+    ctx.save();
+    const hexR = w * 0.12;
+    const hexPositions = [[0,0],[-hexR*1.8,-hexR*1.04],[hexR*1.8,-hexR*1.04],[-hexR*1.8,hexR*1.04],[hexR*1.8,hexR*1.04],[0,-hexR*2.08],[0,hexR*2.08]];
+    hexPositions.forEach(([hx,hy], i) => {
+      ctx.save(); ctx.translate(cx + hx, cy + hy);
+      ctx.beginPath();
+      for (let s=0; s<6; s++) { const a=(s/6)*Math.PI*2-Math.PI/6,r=hexR*0.85; if(s===0)ctx.moveTo(Math.cos(a)*r,Math.sin(a)*r); else ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r); }
+      ctx.closePath();
+      ctx.fillStyle = i === 0 ? color + '55' : color + '22'; ctx.fill();
+      ctx.strokeStyle = color + '88'; ctx.lineWidth = 1; ctx.stroke(); ctx.restore();
+    }); ctx.restore();
+  }
+
+  // 右下角行业名称标注
+  ctx.save();
+  ctx.font = `bold 11px "PingFang SC", sans-serif`;
+  ctx.fillStyle = color + 'aa'; ctx.textAlign = 'right';
+  ctx.fillText(name + ' · 产业链', x + w - 8, y + h - 8);
+  ctx.textAlign = 'left'; ctx.restore();
+}
+
+// 辅助：绘制齿轮
+function drawGear(ctx, x, y, outerR, innerR, teeth, color) {
+  ctx.beginPath();
+  for (let i = 0; i < teeth * 2; i++) {
+    const ang = (i / (teeth * 2)) * Math.PI * 2;
+    const r = i % 2 === 0 ? outerR : innerR;
+    if (i === 0) ctx.moveTo(x + Math.cos(ang)*r, y + Math.sin(ang)*r);
+    else ctx.lineTo(x + Math.cos(ang)*r, y + Math.sin(ang)*r);
+  }
+  ctx.closePath();
+  ctx.fillStyle = color + '44'; ctx.fill();
+  ctx.strokeStyle = color; ctx.lineWidth = 1.5; ctx.stroke();
+  ctx.beginPath(); ctx.arc(x, y, innerR * 0.45, 0, Math.PI*2);
+  ctx.fillStyle = color + '88'; ctx.fill();
+}
+
+function drawPoster(ctx, data, W, H) {
+  // ---- 背景 ----
+  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+  bgGrad.addColorStop(0, '#0a0a1a');
+  bgGrad.addColorStop(0.5, '#0f0f2a');
+  bgGrad.addColorStop(1, '#0a0a1a');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // 网格背景
+  ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 30) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+  for (let y = 0; y < H; y += 30) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+
+  // ---- 顶部封面区 ----
+  const COVER_H = 220;
+  const PAD = 20; // 左右内边距
+
+  // 封面渐变背景
+  const coverGrad = ctx.createLinearGradient(0, 0, W, COVER_H);
+  coverGrad.addColorStop(0, data.color + '40');
+  coverGrad.addColorStop(0.7, data.color + '15');
+  coverGrad.addColorStop(1, 'transparent');
+  ctx.fillStyle = coverGrad;
+  ctx.fillRect(0, 0, W, COVER_H);
+
+  // 封面插图（右上角，小尺寸适配手机宽度）
+  const illSize = 110;
+  drawCoverIllustration(ctx, data, W - illSize - PAD, 10, illSize, illSize);
+
+  // 左侧竖色条
+  ctx.fillStyle = data.color;
+  roundRect(ctx, PAD, 24, 4, 80, 3);
+  ctx.fill();
+
+  // 行业名大标题
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 28px "PingFang SC", sans-serif';
+  ctx.fillText(data.name, PAD + 14, 58);
+
+  // 副标题
+  ctx.fillStyle = data.color;
+  ctx.font = 'bold 12px "PingFang SC", sans-serif';
+  ctx.fillText('产业链全景图谱', PAD + 14, 80);
+
+  // 描述文字（自动换行 2 行，宽度扣除右侧插图）
+  ctx.fillStyle = 'rgba(255,255,255,0.45)';
+  ctx.font = '11px "PingFang SC", sans-serif';
+  drawWrappedText(ctx, data.description, PAD + 14, 100, W - illSize - PAD * 2 - 20, 15, 2);
+
+  // 底部统计徽章行（3 个均分）
+  const totalC = [
+    ...data.upstream.flatMap(s => s.companies),
+    ...data.midstream.flatMap(s => s.companies),
+    ...data.downstream.flatMap(s => s.companies)
+  ].length;
+  const totalS = data.upstream.length + data.midstream.length + data.downstream.length;
+  const badges = [
+    { label: '龙头企业', val: totalC + '家' },
+    { label: '细分赛道', val: totalS + '条' },
+    { label: '产业层次', val: '3层' }
+  ];
+  const badgeW = (W - PAD * 2 - 12) / 3;
+  const badgeY = COVER_H - 58;
+  badges.forEach((b, i) => {
+    const bx = PAD + i * (badgeW + 6);
+    roundRect(ctx, bx, badgeY, badgeW, 44, 10);
+    ctx.fillStyle = 'rgba(255,255,255,0.05)'; ctx.fill();
+    ctx.strokeStyle = data.color + '55'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.fillStyle = data.color;
+    ctx.font = 'bold 16px "PingFang SC", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(b.val, bx + badgeW / 2, badgeY + 22);
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.font = '10px "PingFang SC", sans-serif';
+    ctx.fillText(b.label, bx + badgeW / 2, badgeY + 38);
+    ctx.textAlign = 'left';
+  });
+
+  // 封面区分割线
+  const lineGrad = ctx.createLinearGradient(PAD, 0, W - PAD, 0);
+  lineGrad.addColorStop(0, data.color);
+  lineGrad.addColorStop(1, 'transparent');
+  ctx.strokeStyle = lineGrad; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(PAD, COVER_H + 4); ctx.lineTo(W - PAD, COVER_H + 4); ctx.stroke();
+
+  // ---- 单列纵向布局（上游→中游→下游） ----
+  const BODY_Y = COVER_H + 16;
+  const TIER_GAP = 12;
+  const colW = W - PAD * 2;
+  const tiers = [
+    { label: '上 游', color: '#10b981', bg: 'rgba(16,185,129,0.1)', segments: data.upstream },
+    { label: '中 游', color: '#6c63ff', bg: 'rgba(108,99,255,0.1)', segments: data.midstream },
+    { label: '下 游', color: '#ef4444', bg: 'rgba(239,68,68,0.1)', segments: data.downstream },
+  ];
+
+  let curY = BODY_Y;
+
+  tiers.forEach((tier) => {
+    // 计算当前层高度
+    let tierH = 44;
+    tier.segments.forEach(seg => {
+      tierH += 28 + seg.companies.length * 72 + 8;
+    });
+
+    // 层级背景
+    roundRect(ctx, PAD, curY, colW, tierH, 14);
+    ctx.fillStyle = tier.bg;
+    ctx.fill();
+    ctx.strokeStyle = tier.color + '33';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // 层级标题
+    roundRect(ctx, PAD, curY, colW, 36, [14, 14, 0, 0]);
+    const headerGrad = ctx.createLinearGradient(PAD, curY, PAD + colW, curY);
+    headerGrad.addColorStop(0, tier.color + 'cc');
+    headerGrad.addColorStop(1, tier.color + '55');
+    ctx.fillStyle = headerGrad;
+    ctx.fill();
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 14px "PingFang SC", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(tier.label, PAD + colW / 2, curY + 23);
+    ctx.textAlign = 'left';
+
+    let y = curY + 44;
+
+    tier.segments.forEach(seg => {
+      // 赛道标签
+      ctx.fillStyle = tier.color + '33';
+      roundRect(ctx, PAD + 10, y, colW - 20, 22, 6);
+      ctx.fill();
+      ctx.fillStyle = tier.color;
+      ctx.font = 'bold 11px "PingFang SC", sans-serif';
+      ctx.fillText('▸ ' + seg.name, PAD + 18, y + 15);
+      y += 28;
+
+      seg.companies.forEach(company => {
+        // 公司卡片背景
+        roundRect(ctx, PAD + 10, y, colW - 20, 64, 10);
+        ctx.fillStyle = 'rgba(255,255,255,0.04)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // 左边色条
+        roundRect(ctx, PAD + 10, y, 3, 64, [10, 0, 0, 10]);
+        ctx.fillStyle = tier.color;
+        ctx.fill();
+
+        // 股票代码
+        ctx.fillStyle = tier.color + 'cc';
+        ctx.font = '10px monospace';
+        ctx.fillText(company.code, PAD + 22, y + 16);
+
+        // 公司名
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 13px "PingFang SC", sans-serif';
+        ctx.fillText(company.name, PAD + 22, y + 32);
+
+        // 亮点（最多 2 行）
+        ctx.fillStyle = 'rgba(255,255,255,0.45)';
+        ctx.font = '10px "PingFang SC", sans-serif';
+        drawWrappedText(ctx, company.highlight, PAD + 22, y + 48, colW - 44, 12, 1);
+
+        y += 72;
+      });
+      y += 8;
+    });
+
+    curY += tierH + TIER_GAP;
+  });
+
+  // ---- 底部信息 ----
+  ctx.fillStyle = 'rgba(255,255,255,0.2)';
+  ctx.font = '10px "PingFang SC", sans-serif';
+  ctx.textAlign = 'center';
+  const today = new Date();
+  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日`, W / 2, H - 24);
+  ctx.fillText('数据仅供参考，不构成投资建议', W / 2, H - 10);
+  ctx.textAlign = 'left';
+}
+
+// ===========================
+// Canvas 工具函数
+// ===========================
+function roundRect(ctx, x, y, w, h, r) {
+  if (typeof r === 'number') r = [r, r, r, r];
+  const [tl, tr, br, bl] = r;
+  ctx.beginPath();
+  ctx.moveTo(x + tl, y);
+  ctx.lineTo(x + w - tr, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + tr);
+  ctx.lineTo(x + w, y + h - br);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - br, y + h);
+  ctx.lineTo(x + bl, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - bl);
+  ctx.lineTo(x, y + tl);
+  ctx.quadraticCurveTo(x, y, x + tl, y);
+  ctx.closePath();
+}
+
+function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
+  const words = text.split('');
+  let line = '';
+  let lines = [];
+  for (let i = 0; i < words.length; i++) {
+    const testLine = line + words[i];
+    const metrics = ctx.measureText(testLine);
+    if (metrics.width > maxWidth && i > 0) {
+      lines.push(line);
+      line = words[i];
+    } else {
+      line = testLine;
+    }
+  }
+  lines.push(line);
+  lines.slice(0, maxLines).forEach((l, i) => {
+    ctx.fillText(l + (i === maxLines - 1 && lines.length > maxLines ? '...' : ''), x, y + i * lineHeight);
+  });
+}
+
+// ===========================
+// 下载/复制海报
+// ===========================
+function downloadPoster() {
+  const canvas = document.getElementById('poster-canvas');
+  const a = document.createElement('a');
+  a.download = `${currentIndustry.name}_产业链图谱_${new Date().toLocaleDateString('zh')}.png`;
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+
+async function copyPoster() {
+  const canvas = document.getElementById('poster-canvas');
+  try {
+    canvas.toBlob(async (blob) => {
+      const item = new ClipboardItem({ 'image/png': blob });
+      await navigator.clipboard.write([item]);
+      alert('✅ 已复制到剪贴板！');
+    });
+  } catch (e) {
+    alert('❌ 复制失败，请使用下载功能');
+  }
+}
+</script>
+</body>
+</html>
