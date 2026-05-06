@@ -329,7 +329,7 @@
 
     <div class="search-wrap">
       <input class="search-input" id="search-input" type="text"
-        placeholder="输入行业名称，如：半导体、AI算力、新能源汽车..."
+        placeholder="输入行业名称，如：半导体、AI算力、算力租赁、新能源汽车..."
         autocomplete="off" />
       <button class="search-btn" onclick="doSearch()">分析 →</button>
     </div>
@@ -338,6 +338,7 @@
       <span class="hotkey-label">热门：</span>
       <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
       <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
+      <span class="hotkey-tag" onclick="quickSearch('算力租赁')">算力租赁</span>
       <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
       <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
       <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
@@ -367,6 +368,10 @@
         <div class="welcome-card" onclick="quickSearch('AI算力')">
           <div class="welcome-card-icon">🚀</div>
           <div class="welcome-card-name">AI算力</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('算力租赁')">
+          <div class="welcome-card-icon">🖥️</div>
+          <div class="welcome-card-name">算力租赁</div>
         </div>
         <div class="welcome-card" onclick="quickSearch('新能源汽车')">
           <div class="welcome-card-icon">⚡</div>
@@ -427,7 +432,7 @@
     <div class="not-found-icon">🔍</div>
     <h3>暂未收录该行业</h3>
     <p style="color:var(--text-muted);margin-top:8px;">
-      目前支持：半导体、AI算力、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人
+      目前支持：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人
     </p>
   </div>
 
@@ -802,18 +807,22 @@ function renderPoster(data) {
 }
 
 function estimatePosterHeight(data) {
-  // 手机端：单列纵向堆叠，3 个层级分别累计
-  const COVER_H = 220;
-  const TIER_GAP = 12;
+  // 手机端：单列纵向堆叠，3 个层级分别累计（与 drawPoster 布局常量保持一致）
+  const COVER_H = 200;
+  const TIER_GAP = 8;
+  const TIER_HEADER = 38;
+  const SEG_LABEL = 24;
+  const COMPANY_ROW = 62;
+  const SEG_TAIL = 4;
   let bodyH = 0;
   [data.upstream, data.midstream, data.downstream].forEach(segs => {
-    let th = 44; // 层级标题
+    let th = TIER_HEADER;
     segs.forEach(seg => {
-      th += 28 + seg.companies.length * 72 + 8;
+      th += SEG_LABEL + seg.companies.length * COMPANY_ROW + SEG_TAIL;
     });
     bodyH += th + TIER_GAP;
   });
-  return COVER_H + bodyH + 60; // 60 底部留白
+  return COVER_H + bodyH + 36; // 底部留白
 }
 
 // ===========================
@@ -855,7 +864,7 @@ function drawCoverIllustration(ctx, data, x, y, w, h) {
     }
     ctx.restore();
 
-  } else if (name === 'AI算力' || name === '人工智能' || name === 'AI应用') {
+  } else if (name === 'AI算力' || name === '算力租赁' || name === '人工智能' || name === 'AI应用') {
     // 神经网络节点图
     ctx.save();
     const layers = [[0], [-0.22, 0, 0.22], [-0.28, -0.1, 0.1, 0.28], [-0.22, 0, 0.22], [0]];
@@ -1124,8 +1133,13 @@ function drawPoster(ctx, data, W, H) {
   }
 
   // ---- 顶部封面区 ----
-  const COVER_H = 220;
+  const COVER_H = 200;
   const PAD = 20; // 左右内边距
+  const TIER_GAP = 8;
+  const TIER_HEADER = 38;
+  const SEG_LABEL = 24;
+  const COMPANY_ROW = 62;
+  const SEG_TAIL = 4;
 
   // 封面渐变背景
   const coverGrad = ctx.createLinearGradient(0, 0, W, COVER_H);
@@ -1157,7 +1171,7 @@ function drawPoster(ctx, data, W, H) {
   // 描述文字（自动换行 2 行，宽度扣除右侧插图）
   ctx.fillStyle = 'rgba(255,255,255,0.45)';
   ctx.font = '11px "PingFang SC", sans-serif';
-  drawWrappedText(ctx, data.description, PAD + 14, 100, W - illSize - PAD * 2 - 20, 15, 2);
+  drawWrappedText(ctx, data.description, PAD + 14, 96, W - illSize - PAD * 2 - 20, 14, 2);
 
   // 底部统计徽章行（3 个均分）
   const totalC = [
@@ -1172,19 +1186,19 @@ function drawPoster(ctx, data, W, H) {
     { label: '产业层次', val: '3层' }
   ];
   const badgeW = (W - PAD * 2 - 12) / 3;
-  const badgeY = COVER_H - 58;
+  const badgeY = COVER_H - 50;
   badges.forEach((b, i) => {
     const bx = PAD + i * (badgeW + 6);
-    roundRect(ctx, bx, badgeY, badgeW, 44, 10);
+    roundRect(ctx, bx, badgeY, badgeW, 40, 10);
     ctx.fillStyle = 'rgba(255,255,255,0.05)'; ctx.fill();
     ctx.strokeStyle = data.color + '55'; ctx.lineWidth = 1; ctx.stroke();
     ctx.fillStyle = data.color;
-    ctx.font = 'bold 16px "PingFang SC", sans-serif';
+    ctx.font = 'bold 15px "PingFang SC", sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(b.val, bx + badgeW / 2, badgeY + 22);
+    ctx.fillText(b.val, bx + badgeW / 2, badgeY + 20);
     ctx.fillStyle = 'rgba(255,255,255,0.4)';
     ctx.font = '10px "PingFang SC", sans-serif';
-    ctx.fillText(b.label, bx + badgeW / 2, badgeY + 38);
+    ctx.fillText(b.label, bx + badgeW / 2, badgeY + 34);
     ctx.textAlign = 'left';
   });
 
@@ -1196,8 +1210,7 @@ function drawPoster(ctx, data, W, H) {
   ctx.beginPath(); ctx.moveTo(PAD, COVER_H + 4); ctx.lineTo(W - PAD, COVER_H + 4); ctx.stroke();
 
   // ---- 单列纵向布局（上游→中游→下游） ----
-  const BODY_Y = COVER_H + 16;
-  const TIER_GAP = 12;
+  const BODY_Y = COVER_H + 10;
   const colW = W - PAD * 2;
   const tiers = [
     { label: '上 游', color: '#10b981', bg: 'rgba(16,185,129,0.1)', segments: data.upstream },
@@ -1208,10 +1221,10 @@ function drawPoster(ctx, data, W, H) {
   let curY = BODY_Y;
 
   tiers.forEach((tier) => {
-    // 计算当前层高度
-    let tierH = 44;
+    // 计算当前层高度（与 estimatePosterHeight 一致）
+    let tierH = TIER_HEADER;
     tier.segments.forEach(seg => {
-      tierH += 28 + seg.companies.length * 72 + 8;
+      tierH += SEG_LABEL + seg.companies.length * COMPANY_ROW + SEG_TAIL;
     });
 
     // 层级背景
@@ -1223,7 +1236,7 @@ function drawPoster(ctx, data, W, H) {
     ctx.stroke();
 
     // 层级标题
-    roundRect(ctx, PAD, curY, colW, 36, [14, 14, 0, 0]);
+    roundRect(ctx, PAD, curY, colW, 32, [14, 14, 0, 0]);
     const headerGrad = ctx.createLinearGradient(PAD, curY, PAD + colW, curY);
     headerGrad.addColorStop(0, tier.color + 'cc');
     headerGrad.addColorStop(1, tier.color + '55');
@@ -1231,26 +1244,26 @@ function drawPoster(ctx, data, W, H) {
     ctx.fill();
 
     ctx.fillStyle = '#ffffff';
-    ctx.font = 'bold 14px "PingFang SC", sans-serif';
+    ctx.font = 'bold 13px "PingFang SC", sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(tier.label, PAD + colW / 2, curY + 23);
+    ctx.fillText(tier.label, PAD + colW / 2, curY + 21);
     ctx.textAlign = 'left';
 
-    let y = curY + 44;
+    let y = curY + TIER_HEADER;
 
     tier.segments.forEach(seg => {
       // 赛道标签
       ctx.fillStyle = tier.color + '33';
-      roundRect(ctx, PAD + 10, y, colW - 20, 22, 6);
+      roundRect(ctx, PAD + 10, y, colW - 20, 20, 6);
       ctx.fill();
       ctx.fillStyle = tier.color;
       ctx.font = 'bold 11px "PingFang SC", sans-serif';
-      ctx.fillText('▸ ' + seg.name, PAD + 18, y + 15);
-      y += 28;
+      ctx.fillText('▸ ' + seg.name, PAD + 18, y + 14);
+      y += SEG_LABEL;
 
       seg.companies.forEach(company => {
         // 公司卡片背景
-        roundRect(ctx, PAD + 10, y, colW - 20, 64, 10);
+        roundRect(ctx, PAD + 10, y, colW - 20, 56, 10);
         ctx.fillStyle = 'rgba(255,255,255,0.04)';
         ctx.fill();
         ctx.strokeStyle = 'rgba(255,255,255,0.07)';
@@ -1258,7 +1271,7 @@ function drawPoster(ctx, data, W, H) {
         ctx.stroke();
 
         // 左边色条
-        roundRect(ctx, PAD + 10, y, 3, 64, [10, 0, 0, 10]);
+        roundRect(ctx, PAD + 10, y, 3, 56, [10, 0, 0, 10]);
         ctx.fillStyle = tier.color;
         ctx.fill();
 
@@ -1266,22 +1279,22 @@ function drawPoster(ctx, data, W, H) {
         if (company.code) {
           ctx.fillStyle = tier.color + 'cc';
           ctx.font = '10px monospace';
-          ctx.fillText(company.code, PAD + 22, y + 16);
+          ctx.fillText(company.code, PAD + 22, y + 14);
         }
 
         // 公司名
         ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 13px "PingFang SC", sans-serif';
-        ctx.fillText(company.name, PAD + 22, y + 32);
+        ctx.font = 'bold 12px "PingFang SC", sans-serif';
+        ctx.fillText(company.name, PAD + 22, y + 28);
 
         // 亮点（最多 2 行）
         ctx.fillStyle = 'rgba(255,255,255,0.45)';
         ctx.font = '10px "PingFang SC", sans-serif';
-        drawWrappedText(ctx, company.highlight, PAD + 22, y + 48, colW - 44, 12, 1);
+        drawWrappedText(ctx, company.highlight, PAD + 22, y + 42, colW - 44, 11, 1);
 
-        y += 72;
+        y += COMPANY_ROW;
       });
-      y += 8;
+      y += SEG_TAIL;
     });
 
     curY += tierH + TIER_GAP;
@@ -1292,8 +1305,8 @@ function drawPoster(ctx, data, W, H) {
   ctx.font = '10px "PingFang SC", sans-serif';
   ctx.textAlign = 'center';
   const today = new Date();
-  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日`, W / 2, H - 24);
-  ctx.fillText('数据仅供参考，不构成投资建议', W / 2, H - 10);
+  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日`, W / 2, H - 20);
+  ctx.fillText('数据仅供参考，不构成投资建议', W / 2, H - 8);
   ctx.textAlign = 'left';
 }
 
