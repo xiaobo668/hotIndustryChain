@@ -807,22 +807,21 @@ function renderPoster(data) {
 }
 
 function estimatePosterHeight(data) {
-  // 手机端：单列纵向堆叠，3 个层级分别累计（与 drawPoster 布局常量保持一致）
-  const COVER_H = 200;
-  const TIER_GAP = 8;
-  const TIER_HEADER = 38;
-  const SEG_LABEL = 24;
-  const COMPANY_ROW = 62;
-  const SEG_TAIL = 4;
+  const TITLE_H   = 80;  // 顶部标题区
+  const ROW_H     = 38;  // 每家公司一行高度
+  const SEG_H     = 28;  // 赛道小标题行高
+  const TIER_PAD  = 12;  // 层级上下内边距
+  const TIER_GAP  = 6;   // 层级间距
+  const FOOTER_H  = 40;  // 底部版权
   let bodyH = 0;
   [data.upstream, data.midstream, data.downstream].forEach(segs => {
-    let th = TIER_HEADER;
+    let th = TIER_PAD * 2;
     segs.forEach(seg => {
-      th += SEG_LABEL + seg.companies.length * COMPANY_ROW + SEG_TAIL;
+      th += SEG_H + seg.companies.length * ROW_H;
     });
     bodyH += th + TIER_GAP;
   });
-  return COVER_H + bodyH + 36; // 底部留白
+  return TITLE_H + bodyH + FOOTER_H;
 }
 
 // ===========================
@@ -1114,200 +1113,176 @@ function drawGear(ctx, x, y, outerR, innerR, teeth, color) {
 }
 
 function drawPoster(ctx, data, W, H) {
-  // ---- 背景 ----
-  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-  bgGrad.addColorStop(0, '#0a0a1a');
-  bgGrad.addColorStop(0.5, '#0f0f2a');
-  bgGrad.addColorStop(1, '#0a0a1a');
-  ctx.fillStyle = bgGrad;
+  // ============ 布局常量 ============
+  const PAD      = 16;   // 左右外边距
+  const TITLE_H  = 80;   // 顶部标题区高度
+  const ROW_H    = 38;   // 每家企业行高
+  const SEG_H    = 28;   // 赛道小标题行高
+  const TIER_PAD = 12;   // 层级块上下内边距
+  const TIER_GAP = 6;    // 层级之间间距
+  const TAG_W    = 60;   // 左侧层级标签宽度
+  const TAG_GAP  = 10;   // 标签与右侧内容间距
+  const RIGHT_X  = PAD + TAG_W + TAG_GAP; // 右侧内容起始X
+  const RIGHT_W  = W - RIGHT_X - PAD;    // 右侧内容宽度
+
+  // ============ 白色背景 ============
+  ctx.fillStyle = '#f5f7fa';
   ctx.fillRect(0, 0, W, H);
 
-  // 网格背景
-  ctx.strokeStyle = 'rgba(255,255,255,0.03)';
-  ctx.lineWidth = 1;
-  for (let x = 0; x < W; x += 30) {
-    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
-  }
-  for (let y = 0; y < H; y += 30) {
-    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
-  }
+  // ============ 顶部标题区 ============
+  // 顶部彩色渐变条
+  const topGrad = ctx.createLinearGradient(0, 0, W, 0);
+  topGrad.addColorStop(0, data.color);
+  topGrad.addColorStop(1, data.color + 'aa');
+  ctx.fillStyle = topGrad;
+  ctx.fillRect(0, 0, W, TITLE_H);
 
-  // ---- 顶部封面区 ----
-  const COVER_H = 200;
-  const PAD = 20; // 左右内边距
-  const TIER_GAP = 8;
-  const TIER_HEADER = 38;
-  const SEG_LABEL = 24;
-  const COMPANY_ROW = 62;
-  const SEG_TAIL = 4;
-
-  // 封面渐变背景
-  const coverGrad = ctx.createLinearGradient(0, 0, W, COVER_H);
-  coverGrad.addColorStop(0, data.color + '40');
-  coverGrad.addColorStop(0.7, data.color + '15');
-  coverGrad.addColorStop(1, 'transparent');
-  ctx.fillStyle = coverGrad;
-  ctx.fillRect(0, 0, W, COVER_H);
-
-  // 封面插图（右上角，小尺寸适配手机宽度）
-  const illSize = 110;
-  drawCoverIllustration(ctx, data, W - illSize - PAD, 10, illSize, illSize);
-
-  // 左侧竖色条
-  ctx.fillStyle = data.color;
-  roundRect(ctx, PAD, 24, 4, 80, 3);
-  ctx.fill();
-
-  // 行业名大标题
+  // 标题文字
   ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 28px "PingFang SC", sans-serif';
-  ctx.fillText(data.name, PAD + 14, 58);
+  ctx.font = `bold 20px "PingFang SC", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText(`${data.name}产业链核心龙头公司总览`, W / 2, 34);
 
-  // 副标题
-  ctx.fillStyle = data.color;
-  ctx.font = 'bold 12px "PingFang SC", sans-serif';
-  ctx.fillText('产业链全景图谱', PAD + 14, 80);
+  // 副标题说明
+  ctx.fillStyle = 'rgba(255,255,255,0.85)';
+  ctx.font = `12px "PingFang SC", sans-serif`;
+  drawWrappedTextCenter(ctx, data.description, W / 2, 54, W - PAD * 4, 15, 2);
+  ctx.textAlign = 'left';
 
-  // 描述文字（自动换行 2 行，宽度扣除右侧插图）
-  ctx.fillStyle = 'rgba(255,255,255,0.45)';
-  ctx.font = '11px "PingFang SC", sans-serif';
-  drawWrappedText(ctx, data.description, PAD + 14, 96, W - illSize - PAD * 2 - 20, 14, 2);
+  // 分隔线
+  ctx.fillStyle = '#e8edf2';
+  ctx.fillRect(0, TITLE_H, W, 1);
 
-  // 底部统计徽章行（3 个均分）
-  const totalC = [
-    ...data.upstream.flatMap(s => s.companies),
-    ...data.midstream.flatMap(s => s.companies),
-    ...data.downstream.flatMap(s => s.companies)
-  ].length;
-  const totalS = data.upstream.length + data.midstream.length + data.downstream.length;
-  const badges = [
-    { label: '龙头企业', val: totalC + '家' },
-    { label: '细分赛道', val: totalS + '条' },
-    { label: '产业层次', val: '3层' }
-  ];
-  const badgeW = (W - PAD * 2 - 12) / 3;
-  const badgeY = COVER_H - 50;
-  badges.forEach((b, i) => {
-    const bx = PAD + i * (badgeW + 6);
-    roundRect(ctx, bx, badgeY, badgeW, 40, 10);
-    ctx.fillStyle = 'rgba(255,255,255,0.05)'; ctx.fill();
-    ctx.strokeStyle = data.color + '55'; ctx.lineWidth = 1; ctx.stroke();
-    ctx.fillStyle = data.color;
-    ctx.font = 'bold 15px "PingFang SC", sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(b.val, bx + badgeW / 2, badgeY + 20);
-    ctx.fillStyle = 'rgba(255,255,255,0.4)';
-    ctx.font = '10px "PingFang SC", sans-serif';
-    ctx.fillText(b.label, bx + badgeW / 2, badgeY + 34);
-    ctx.textAlign = 'left';
-  });
-
-  // 封面区分割线
-  const lineGrad = ctx.createLinearGradient(PAD, 0, W - PAD, 0);
-  lineGrad.addColorStop(0, data.color);
-  lineGrad.addColorStop(1, 'transparent');
-  ctx.strokeStyle = lineGrad; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.moveTo(PAD, COVER_H + 4); ctx.lineTo(W - PAD, COVER_H + 4); ctx.stroke();
-
-  // ---- 单列纵向布局（上游→中游→下游） ----
-  const BODY_Y = COVER_H + 10;
-  const colW = W - PAD * 2;
+  // ============ 三层内容 ============
   const tiers = [
-    { label: '上 游', color: '#10b981', bg: 'rgba(16,185,129,0.1)', segments: data.upstream },
-    { label: '中 游', color: '#6c63ff', bg: 'rgba(108,99,255,0.1)', segments: data.midstream },
-    { label: '下 游', color: '#ef4444', bg: 'rgba(239,68,68,0.1)', segments: data.downstream },
+    { label: '上游', lines: ['上游'], color: '#10b981', bg: '#e6f9f2', segments: data.upstream },
+    { label: '中游', lines: ['中游'], color: '#3b82f6', bg: '#eff6ff', segments: data.midstream },
+    { label: '下游', lines: ['下游'], color: '#f97316', bg: '#fff7ed', segments: data.downstream },
   ];
 
-  let curY = BODY_Y;
+  let curY = TITLE_H + TIER_GAP;
 
   tiers.forEach((tier) => {
-    // 计算当前层高度（与 estimatePosterHeight 一致）
-    let tierH = TIER_HEADER;
+    // 计算本层总高度
+    let innerH = TIER_PAD * 2;
     tier.segments.forEach(seg => {
-      tierH += SEG_LABEL + seg.companies.length * COMPANY_ROW + SEG_TAIL;
+      innerH += SEG_H + seg.companies.length * ROW_H;
     });
 
-    // 层级背景
-    roundRect(ctx, PAD, curY, colW, tierH, 14);
-    ctx.fillStyle = tier.bg;
+    // 层级背景卡片
+    roundRect(ctx, PAD, curY, W - PAD * 2, innerH, 10);
+    ctx.fillStyle = '#ffffff';
     ctx.fill();
-    ctx.strokeStyle = tier.color + '33';
+    ctx.strokeStyle = '#e2e8f0';
     ctx.lineWidth = 1;
     ctx.stroke();
 
-    // 层级标题
-    roundRect(ctx, PAD, curY, colW, 32, [14, 14, 0, 0]);
-    const headerGrad = ctx.createLinearGradient(PAD, curY, PAD + colW, curY);
-    headerGrad.addColorStop(0, tier.color + 'cc');
-    headerGrad.addColorStop(1, tier.color + '55');
-    ctx.fillStyle = headerGrad;
+    // 左侧彩色层级标签（垂直居中，圆角矩形）
+    const tagX = PAD + 4;
+    const tagH = innerH - 8;
+    const tagY = curY + 4;
+    roundRect(ctx, tagX, tagY, TAG_W - 8, tagH, 8);
+    ctx.fillStyle = tier.color;
     ctx.fill();
 
+    // 层级文字（垂直居中）
     ctx.fillStyle = '#ffffff';
-    ctx.font = 'bold 13px "PingFang SC", sans-serif';
+    ctx.font = `bold 14px "PingFang SC", sans-serif`;
     ctx.textAlign = 'center';
-    ctx.fillText(tier.label, PAD + colW / 2, curY + 21);
+    // 只写2个字，垂直居中
+    const labelCX = tagX + (TAG_W - 8) / 2;
+    const labelCY = tagY + tagH / 2;
+    ctx.fillText(tier.label, labelCX, labelCY + 5);
     ctx.textAlign = 'left';
 
-    let y = curY + TIER_HEADER;
+    // 右侧内容
+    let y = curY + TIER_PAD;
 
-    tier.segments.forEach(seg => {
-      // 赛道标签
-      ctx.fillStyle = tier.color + '33';
-      roundRect(ctx, PAD + 10, y, colW - 20, 20, 6);
-      ctx.fill();
-      ctx.fillStyle = tier.color;
-      ctx.font = 'bold 11px "PingFang SC", sans-serif';
-      ctx.fillText('▸ ' + seg.name, PAD + 18, y + 14);
-      y += SEG_LABEL;
-
-      seg.companies.forEach(company => {
-        // 公司卡片背景
-        roundRect(ctx, PAD + 10, y, colW - 20, 56, 10);
-        ctx.fillStyle = 'rgba(255,255,255,0.04)';
-        ctx.fill();
-        ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+    tier.segments.forEach((seg, si) => {
+      // 赛道小标题（分隔行）
+      if (si > 0) {
+        // 分段分隔线
+        ctx.strokeStyle = '#e8edf2';
         ctx.lineWidth = 1;
+        ctx.setLineDash([4, 3]);
+        ctx.beginPath();
+        ctx.moveTo(RIGHT_X, y);
+        ctx.lineTo(W - PAD, y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // 赛道名称行
+      ctx.fillStyle = tier.color + '22';
+      roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
+      ctx.fill();
+
+      ctx.fillStyle = tier.color;
+      ctx.font = `bold 11px "PingFang SC", sans-serif`;
+      ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 4);
+      y += SEG_H;
+
+      // 企业列表
+      seg.companies.forEach((company, ci) => {
+        const rowY = y + ci * ROW_H;
+        const rowBottom = rowY + ROW_H;
+
+        // 行底分隔线
+        ctx.strokeStyle = '#f0f4f8';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(RIGHT_X, rowBottom - 1);
+        ctx.lineTo(W - PAD - 4, rowBottom - 1);
         ctx.stroke();
 
-        // 左边色条
-        roundRect(ctx, PAD + 10, y, 3, 56, [10, 0, 0, 10]);
+        // 箭头点
         ctx.fillStyle = tier.color;
-        ctx.fill();
+        ctx.font = `12px "PingFang SC", sans-serif`;
+        ctx.fillText('→', RIGHT_X + 2, rowY + 22);
 
-        // 股票代码
-        if (company.code) {
-          ctx.fillStyle = tier.color + 'cc';
-          ctx.font = '10px monospace';
-          ctx.fillText(company.code, PAD + 22, y + 14);
-        }
+        // 企业名称（加粗）
+        ctx.fillStyle = '#1a202c';
+        ctx.font = `bold 12px "PingFang SC", sans-serif`;
+        ctx.fillText(company.name, RIGHT_X + 20, rowY + 16);
 
-        // 公司名
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 12px "PingFang SC", sans-serif';
-        ctx.fillText(company.name, PAD + 22, y + 28);
-
-        // 亮点（最多 2 行）
-        ctx.fillStyle = 'rgba(255,255,255,0.45)';
-        ctx.font = '10px "PingFang SC", sans-serif';
-        drawWrappedText(ctx, company.highlight, PAD + 22, y + 42, colW - 44, 11, 1);
-
-        y += COMPANY_ROW;
+        // 亮点说明（单行截断）
+        ctx.fillStyle = '#64748b';
+        ctx.font = `10px "PingFang SC", sans-serif`;
+        drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 30, RIGHT_W - 22, 12, 1);
       });
-      y += SEG_TAIL;
+
+      y += seg.companies.length * ROW_H;
     });
 
-    curY += tierH + TIER_GAP;
+    curY += innerH + TIER_GAP;
   });
 
-  // ---- 底部信息 ----
-  ctx.fillStyle = 'rgba(255,255,255,0.2)';
-  ctx.font = '10px "PingFang SC", sans-serif';
-  ctx.textAlign = 'center';
+  // ============ 底部版权区 ============
+  ctx.fillStyle = '#e8edf2';
+  ctx.fillRect(0, H - 40, W, 40);
+
   const today = new Date();
-  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日`, W / 2, H - 20);
-  ctx.fillText('数据仅供参考，不构成投资建议', W / 2, H - 8);
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = `10px "PingFang SC", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日  ·  数据仅供参考，不构成投资建议`, W / 2, H - 14);
   ctx.textAlign = 'left';
+}
+
+// 文字居中换行辅助函数
+function drawWrappedTextCenter(ctx, text, cx, y, maxWidth, lineHeight, maxLines) {
+  const words = text.split('');
+  let line = '', lines = [];
+  for (let i = 0; i < words.length; i++) {
+    const testLine = line + words[i];
+    if (ctx.measureText(testLine).width > maxWidth && i > 0) {
+      lines.push(line); line = words[i];
+    } else { line = testLine; }
+  }
+  lines.push(line);
+  lines.slice(0, maxLines).forEach((l, i) => {
+    ctx.fillText(l + (i === maxLines - 1 && lines.length > maxLines ? '...' : ''), cx, y + i * lineHeight);
+  });
 }
 
 // ===========================
