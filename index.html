@@ -490,7 +490,7 @@
       <div class="poster-wrap" id="poster-wrap">
         <div id="poster-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载全部（3张）</button>
+          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载全部（4张）</button>
           <button class="btn btn-secondary" onclick="copyPoster()">📋 复制第1张</button>
         </div>
       </div>
@@ -805,6 +805,24 @@ function renderPoster(data) {
   container.innerHTML = '';
   const dpr = window.devicePixelRatio || 1;
 
+  // ---- 封面 ----
+  const coverLabel = document.createElement('div');
+  coverLabel.className = 'poster-page-label';
+  coverLabel.textContent = '封面  （0 / 3）';
+  container.appendChild(coverLabel);
+  const coverCanvas = document.createElement('canvas');
+  coverCanvas.className = 'poster-canvas-item';
+  coverCanvas.id = 'poster-canvas-cover';
+  coverCanvas.width  = PAGE_W * dpr;
+  coverCanvas.height = PAGE_H * dpr;
+  coverCanvas.style.width  = PAGE_W + 'px';
+  coverCanvas.style.height = PAGE_H + 'px';
+  container.appendChild(coverCanvas);
+  const coverCtx = coverCanvas.getContext('2d');
+  coverCtx.scale(dpr, dpr);
+  drawCoverPage(coverCtx, data, PAGE_W, PAGE_H);
+
+  // ---- 上/中/下游 三页 ----
   const tiers = [
     { label: '① 上游', tierKey: 'upstream',  color: '#10b981', segments: data.upstream },
     { label: '② 中游', tierKey: 'midstream', color: '#3b82f6', segments: data.midstream },
@@ -812,7 +830,6 @@ function renderPoster(data) {
   ];
 
   tiers.forEach((tier, idx) => {
-    // 页码标签
     const label = document.createElement('div');
     label.className = 'poster-page-label';
     label.textContent = `${tier.label}  （${idx + 1} / 3）`;
@@ -831,6 +848,122 @@ function renderPoster(data) {
     ctx.scale(dpr, dpr);
     drawTierPage(ctx, data, tier, idx, PAGE_W, PAGE_H);
   });
+}
+
+// ===========================
+// 封面海报绘制
+// ===========================
+function drawCoverPage(ctx, data, W, H) {
+  const tiers = [
+    { label: '上游', color: '#10b981', segments: data.upstream },
+    { label: '中游', color: '#3b82f6', segments: data.midstream },
+    { label: '下游', color: '#f97316', segments: data.downstream },
+  ];
+
+  // ---- 背景：深色渐变（与内容页区别，更有封面感）----
+  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+  bgGrad.addColorStop(0,   '#0f172a');
+  bgGrad.addColorStop(0.5, '#1e293b');
+  bgGrad.addColorStop(1,   '#0f172a');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // ---- 顶部装饰光晕（用行业主色）----
+  const glowGrad = ctx.createRadialGradient(W / 2, 0, 0, W / 2, 0, W * 0.8);
+  glowGrad.addColorStop(0,   (data.color || '#3b82f6') + '55');
+  glowGrad.addColorStop(1,   'transparent');
+  ctx.fillStyle = glowGrad;
+  ctx.fillRect(0, 0, W, H * 0.5);
+
+  // ---- 顶部标签：「产业链全景图谱」----
+  const TAG_Y = 80;
+  const tagW = 160, tagH = 28;
+  const tagX = (W - tagW) / 2;
+  ctx.fillStyle = (data.color || '#3b82f6') + '33';
+  roundRect(ctx, tagX, TAG_Y, tagW, tagH, tagH / 2); ctx.fill();
+  ctx.strokeStyle = data.color || '#3b82f6';
+  ctx.lineWidth = 1;
+  roundRect(ctx, tagX, TAG_Y, tagW, tagH, tagH / 2); ctx.stroke();
+  ctx.fillStyle = data.color || '#3b82f6';
+  ctx.font = `bold 12px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText('产业链全景图谱', W / 2, TAG_Y + tagH / 2 + 4);
+
+  // ---- 主标题：行业名 ----
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold 52px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText(data.name, W / 2, TAG_Y + tagH + 72);
+
+  // ---- 副标题（最多2行，超出打点截断）----
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  ctx.font = `14px "PingFang SC", "苹方-简", sans-serif`;
+  drawWrappedTextCenter(ctx, data.description, W / 2, TAG_Y + tagH + 100, W - 64, 20, 4);
+
+  // ---- 分隔线 ----
+  const divY = TAG_Y + tagH + 155;
+  ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(32, divY); ctx.lineTo(W - 32, divY); ctx.stroke();
+
+  // ---- 三层摘要卡片 ----
+  const cardW = W - 48;
+  const cardX = 24;
+  let cardY = divY + 20;
+  const cardGap = 12;
+
+  tiers.forEach(tier => {
+    // 统计公司数
+    const companyCount = tier.segments.reduce((s, seg) => s + seg.companies.length, 0);
+    const segNames = tier.segments.map(s => s.name).join('  /  ');
+
+    // 卡片背景
+    const cardH = 90;  // 加高容纳赛道名2行
+    ctx.fillStyle = 'rgba(255,255,255,0.06)';
+    roundRect(ctx, cardX, cardY, cardW, cardH, 10); ctx.fill();
+    // 左侧色条
+    ctx.fillStyle = tier.color;
+    roundRect(ctx, cardX, cardY, 4, cardH, 2); ctx.fill();
+
+    // 层级标签
+    ctx.fillStyle = tier.color;
+    ctx.font = `bold 15px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.textAlign = 'left';
+    ctx.fillText(tier.label, cardX + 16, cardY + 24);
+
+    // 企业数量角标
+    ctx.fillStyle = tier.color + '33';
+    const countLabel = `${companyCount} 家龙头`;
+    const countW = ctx.measureText(countLabel).width + 16;
+    roundRect(ctx, cardX + cardW - countW - 8, cardY + 10, countW, 22, 11); ctx.fill();
+    ctx.fillStyle = tier.color;
+    ctx.font = `bold 11px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText(countLabel, cardX + cardW - countW / 2 - 8, cardY + 25);
+
+    // 赛道名列表（最多2行，超出打点）
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.font = `11px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.textAlign = 'left';
+    drawWrappedText(ctx, segNames, cardX + 16, cardY + 50, cardW - 32, 14, 2);
+
+    cardY += cardH + cardGap;
+  });
+
+  // ---- 底部信息栏 ----
+  const footerY = H - 60;
+  ctx.fillStyle = 'rgba(255,255,255,0.06)';
+  ctx.fillRect(0, footerY, W, 60);
+
+  const today = new Date();
+  ctx.fillStyle = 'rgba(255,255,255,0.35)';
+  ctx.font = `11px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText(
+    `${today.getFullYear()}年${today.getMonth()+1}月  ·  数据仅供参考，不构成投资建议`,
+    W / 2, footerY + 36
+  );
+  ctx.textAlign = 'left';
 }
 
 function estimatePosterHeight(data) {
@@ -1300,7 +1433,7 @@ drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 1
   ctx.font = `10px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   ctx.fillText(
-    `${data.name}产业链  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日  ·  数据仅供参考，不构成投资建议`,
+    `${data.name}产业链  ·  ${today.getFullYear()}年${today.getMonth()+1}月  ·  数据仅供参考，不构成投资建议`,
     W / 2, H - FOOTER_H / 2 + 4
   );
   ctx.textAlign = 'left';
@@ -1459,7 +1592,7 @@ function drawPoster(ctx, data, W, H) {
   ctx.fillStyle = '#94a3b8';
   ctx.font = `10px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
-  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日  ·  数据仅供参考，不构成投资建议`, W / 2, H - 14);
+  ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月  ·  数据仅供参考，不构成投资建议`, W / 2, H - 14);
   ctx.textAlign = 'left';
 }
 
@@ -1522,15 +1655,24 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
 // 下载/复制海报
 // ===========================
 function downloadPoster() {
+  const date = new Date().toLocaleDateString('zh');
+  // 封面
+  const cover = document.getElementById('poster-canvas-cover');
+  if (cover) {
+    const a = document.createElement('a');
+    a.download = `${currentIndustry.name}_产业链_封面_${date}.png`;
+    a.href = cover.toDataURL('image/png');
+    setTimeout(() => a.click(), 0);
+  }
+  // 三页内容
   const labels = ['上游', '中游', '下游'];
   [0, 1, 2].forEach(idx => {
     const canvas = document.getElementById(`poster-canvas-${idx}`);
     if (!canvas) return;
     const a = document.createElement('a');
-    a.download = `${currentIndustry.name}_产业链${labels[idx]}_${new Date().toLocaleDateString('zh')}.png`;
+    a.download = `${currentIndustry.name}_产业链${labels[idx]}_${date}.png`;
     a.href = canvas.toDataURL('image/png');
-    // 错开触发避免浏览器拦截
-    setTimeout(() => a.click(), idx * 300);
+    setTimeout(() => a.click(), (idx + 1) * 300);
   });
 }
 
