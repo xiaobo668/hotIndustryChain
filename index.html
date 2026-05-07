@@ -6,6 +6,8 @@
   <title>产业链分析工具</title>
   <!-- ECharts CDN -->
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- JSZip ：打包下载多张图 -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <style>
     :root {
       --bg: #0f0f1a;
@@ -1654,26 +1656,35 @@ function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
 // ===========================
 // 下载/复制海报
 // ===========================
-function downloadPoster() {
-  const date = new Date().toLocaleDateString('zh');
-  // 封面
-  const cover = document.getElementById('poster-canvas-cover');
-  if (cover) {
-    const a = document.createElement('a');
-    a.download = `${currentIndustry.name}_产业链_封面_${date}.png`;
-    a.href = cover.toDataURL('image/png');
-    setTimeout(() => a.click(), 0);
+async function downloadPoster() {
+  const name = currentIndustry.name;
+  const date = `${new Date().getFullYear()}年${new Date().getMonth()+1}月`;
+  const zip = new JSZip();
+
+  // 收集封面 + 三页
+  const items = [
+    { id: 'poster-canvas-cover', filename: `封面` },
+    { id: 'poster-canvas-0',     filename: `上游` },
+    { id: 'poster-canvas-1',     filename: `中游` },
+    { id: 'poster-canvas-2',     filename: `下游` },
+  ];
+
+  for (const item of items) {
+    const canvas = document.getElementById(item.id);
+    if (!canvas) continue;
+    // 将 dataURL 转为 base64 内容
+    const dataURL = canvas.toDataURL('image/png');
+    const base64 = dataURL.replace(/^data:image\/png;base64,/, '');
+    zip.file(`${name}_产业链_${item.filename}_${date}.png`, base64, { base64: true });
   }
-  // 三页内容
-  const labels = ['上游', '中游', '下游'];
-  [0, 1, 2].forEach(idx => {
-    const canvas = document.getElementById(`poster-canvas-${idx}`);
-    if (!canvas) return;
-    const a = document.createElement('a');
-    a.download = `${currentIndustry.name}_产业链${labels[idx]}_${date}.png`;
-    a.href = canvas.toDataURL('image/png');
-    setTimeout(() => a.click(), (idx + 1) * 300);
-  });
+
+  // 生成 zip 并下载
+  const blob = await zip.generateAsync({ type: 'blob' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${name}_产业链全景_${date}.zip`;
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 
 async function copyPoster() {
