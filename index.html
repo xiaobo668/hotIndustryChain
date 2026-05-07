@@ -835,8 +835,8 @@ function renderPoster(data) {
 
 function estimatePosterHeight(data) {
   const TITLE_H   = 80;  // 顶部标题区
-  const ROW_H     = 38;  // 每家公司一行高度
-  const SEG_H     = 28;  // 赛道小标题行高
+  const ROW_H     = 62;  // 每家公司一行高度（亮点最多2行）
+  const SEG_H     = 34;  // 赛道小标题行高
   const TIER_PAD  = 12;  // 层级上下内边距
   const TIER_GAP  = 6;   // 层级间距
   const FOOTER_H  = 40;  // 底部版权
@@ -1144,16 +1144,16 @@ function drawGear(ctx, x, y, outerR, innerR, teeth, color) {
 // ===========================
 function drawTierPage(ctx, data, tier, pageIdx, W, H) {
   // ---- 布局常量 ----
-  const PAD      = 16;
-  const HEADER_H = 72;   // 顶部标题区
-  const FOOTER_H = 44;   // 底部版权区
-  const ROW_H    = 38;   // 每家企业行高
-  const SEG_H    = 28;   // 赛道小标题行高
+  const PAD      = 16;   // 左侧色块内边距 / 右侧文案留白
+  const HEADER_H = 72 + 30;  // 顶部标题区（含顶部30px色块延伸）
+  const FOOTER_H = 44 + 20;  // 底部版权区（含底部20px色块延伸）
+  const ROW_H    = 62;   // 每家企业行高（亮点最多2行）
+  const SEG_H    = 34;   // 赛道小标题行高
   const TIER_PAD = 14;   // 层级卡片上下内边距
-  const TAG_W    = 58;   // 左侧层级标签宽度
+  const TAG_W    = 58 + PAD;  // 左侧色块宽度（包含左边PAD）
   const TAG_GAP  = 10;   // 标签与内容间距
-  const RIGHT_X  = PAD + TAG_W + TAG_GAP;
-  const RIGHT_W  = W - RIGHT_X - PAD;
+  const RIGHT_X  = TAG_W + TAG_GAP;  // 内容区起始X（左边无额外PAD）
+  const RIGHT_W  = W - RIGHT_X - PAD;  // 内容区宽度（右边保留PAD留白）
 
   // ---- 计算内容区真实高度 ----
   let contentH = TIER_PAD * 2;
@@ -1161,60 +1161,72 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
     contentH += SEG_H + seg.companies.length * ROW_H;
   });
   // 内容区垂直居中起始Y（在 HEADER_H 和 FOOTER_H 之间）
-  const availH = H - HEADER_H - FOOTER_H;
+  const availH  = H - HEADER_H - FOOTER_H;
   const offsetY = HEADER_H + Math.max(0, Math.floor((availH - contentH) / 2));
 
   // ---- 白色背景 ----
   ctx.fillStyle = '#f5f7fa';
   ctx.fillRect(0, 0, W, H);
 
-  // ---- 顶部标题栏 ----
+  // ---- 顶部标题栏（深色渐变，与左侧淡色色块明显区分）----
+  // 将 tier.color 加深：在原色基础上叠加半透明黑色
   const topGrad = ctx.createLinearGradient(0, 0, W, 0);
-  topGrad.addColorStop(0, tier.color);
-  topGrad.addColorStop(1, tier.color + 'aa');
+  topGrad.addColorStop(0, tier.colorDark || tier.color);
+  topGrad.addColorStop(1, tier.color);
   ctx.fillStyle = topGrad;
   ctx.fillRect(0, 0, W, HEADER_H);
+  // 叠加半透明黑色层加深
+  ctx.fillStyle = 'rgba(0,0,0,0.28)';
+  ctx.fillRect(0, 0, W, HEADER_H);
 
-  // 大标题
+  // 大标题（在整个色块内垂直居中）
+  const titleLine1Y = Math.round(HEADER_H / 2 - 10);
+  const titleLine2Y = Math.round(HEADER_H / 2 + 18);
   ctx.fillStyle = '#ffffff';
   ctx.font = `bold 19px "PingFang SC", sans-serif`;
   ctx.textAlign = 'center';
-  ctx.fillText(`${data.name}产业链核心龙头 · ${tier.label.replace(/[①②③]\s*/, '')}`, W / 2, 30);
+  ctx.fillText(`${data.name}产业链核心龙头 · ${tier.label.replace(/[①②③]\s*/, '')}`, W / 2, titleLine1Y);
 
   // 页码 + 副标题
   ctx.fillStyle = 'rgba(255,255,255,0.8)';
   ctx.font = `12px "PingFang SC", sans-serif`;
-  ctx.fillText(`第 ${pageIdx + 1} 张 / 共 3 张`, W / 2, 52);
+  ctx.fillText(`第 ${pageIdx + 1} 张 / 共 3 张`, W / 2, titleLine2Y);
   ctx.textAlign = 'left';
 
-  // 分隔线
-  ctx.fillStyle = '#e8edf2';
-  ctx.fillRect(0, HEADER_H, W, 1);
+  // 分隔线（白色加粗，明显分割标题栏与内容区）
+  ctx.fillStyle = 'rgba(255,255,255,0.9)';
+  ctx.fillRect(0, HEADER_H, W, 2);
 
   // ---- 层级卡片（内容垂直居中） ----
-  // 外层白色圆角卡片
-  roundRect(ctx, PAD, offsetY, W - PAD * 2, contentH, 12);
+  // 外层白色背景（铺满全宽，不需要圆角和边距）
   ctx.fillStyle = '#ffffff';
-  ctx.fill();
-  ctx.strokeStyle = '#e2e8f0';
-  ctx.lineWidth = 1;
-  ctx.stroke();
+  ctx.fillRect(0, offsetY, W, contentH);
 
-  // 左侧彩色标签
-  const tagX = PAD + 4;
-  const tagH = contentH - 8;
-  const tagY = offsetY + 4;
-  roundRect(ctx, tagX, tagY, TAG_W - 8, tagH, 8);
+  // 左侧彩色标签（淡色背景区分于顶部标题栏）
+  const tagX = 0;
+  const tagH = contentH;
+  const tagY = offsetY;
+  ctx.fillStyle = tier.color + '18';  // 淡色背景
+  ctx.fillRect(tagX, tagY, TAG_W, tagH);
+  // 左侧站边高亮色条
   ctx.fillStyle = tier.color;
-  ctx.fill();
+  ctx.fillRect(tagX, tagY, 4, tagH);
+  // 标签与内容区站向分隔线
+  ctx.strokeStyle = tier.color + '30';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(TAG_W, tagY);
+  ctx.lineTo(TAG_W, tagY + tagH);
+  ctx.stroke();
 
   // 标签文字（垂直居中，分两行写）
   const tierName = tier.label.replace(/[①②③]\s*/, '');
   ctx.fillStyle = '#ffffff';
   ctx.font = `bold 15px "PingFang SC", sans-serif`;
   ctx.textAlign = 'center';
-  const labelCX = tagX + (TAG_W - 8) / 2;
-  // 写"上游"/"中游"/"下游" 两个字
+  const labelCX = TAG_W / 2 + 2;  // 色块内水平居中
+  // 文字用深色（tier.color），与顶部白色文字区分
+  ctx.fillStyle = tier.color;
   ctx.fillText(tierName[0], labelCX, tagY + tagH / 2 - 8);
   ctx.fillText(tierName[1], labelCX, tagY + tagH / 2 + 12);
   ctx.textAlign = 'left';
@@ -1235,14 +1247,14 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
       ctx.setLineDash([]);
     }
 
-    // 赛道名称行（浅色背景）
-    ctx.fillStyle = tier.color + '1a';
-    roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
-    ctx.fill();
-    ctx.fillStyle = tier.color;
-    ctx.font = `bold 11px "PingFang SC", sans-serif`;
-    ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 4);
-    y += SEG_H;
+  // 赛道名称行（浅色背景）
+  ctx.fillStyle = tier.color + '1a';
+  roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
+  ctx.fill();
+  ctx.fillStyle = tier.color;
+  ctx.font = `bold 14px "PingFang SC", sans-serif`;
+  ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 5);
+  y += SEG_H;
 
     // 企业列表
     seg.companies.forEach((company, ci) => {
@@ -1253,7 +1265,7 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(RIGHT_X, rowY + ROW_H - 1);
-      ctx.lineTo(W - PAD - 4, rowY + ROW_H - 1);
+      ctx.lineTo(W - PAD, rowY + ROW_H - 1);
       ctx.stroke();
 
       // 箭头
@@ -1263,19 +1275,19 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
 
       // 企业名（加粗）
       ctx.fillStyle = '#1a202c';
-      ctx.font = `bold 12px "PingFang SC", sans-serif`;
-      ctx.fillText(company.name, RIGHT_X + 20, rowY + 16);
+      ctx.font = `bold 18px "PingFang SC", sans-serif`;
+      ctx.fillText(company.name, RIGHT_X + 20, rowY + 22);
 
-      // 亮点（单行截断）
+      // 亮点（最多2行，超出打点截断，与企业名留2px间距）
       ctx.fillStyle = '#64748b';
-      ctx.font = `10px "PingFang SC", sans-serif`;
-      drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 30, RIGHT_W - 22, 12, 1);
-    });
-
-    y += seg.companies.length * ROW_H;
+ctx.font = `13px "PingFang SC", sans-serif`;
+drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 16, 2);
   });
 
-  // ---- 底部版权栏 ----
+  y += seg.companies.length * ROW_H;
+  });
+
+  // ---- 底部版权栏
   ctx.fillStyle = '#e8edf2';
   ctx.fillRect(0, H - FOOTER_H, W, FOOTER_H);
 
@@ -1294,8 +1306,8 @@ function drawPoster(ctx, data, W, H) {
   // ============ 布局常量 ============
   const PAD      = 16;   // 左右外边距
   const TITLE_H  = 80;   // 顶部标题区高度
-  const ROW_H    = 38;   // 每家企业行高
-  const SEG_H    = 28;   // 赛道小标题行高
+  const ROW_H    = 62;   // 每家企业行高（亮点最多2行）
+  const SEG_H    = 34;   // 赛道小标题行高
   const TIER_PAD = 12;   // 层级块上下内边距
   const TIER_GAP = 6;    // 层级之间间距
   const TAG_W    = 60;   // 左侧层级标签宽度
@@ -1390,15 +1402,15 @@ function drawPoster(ctx, data, W, H) {
         ctx.setLineDash([]);
       }
 
-      // 赛道名称行
-      ctx.fillStyle = tier.color + '22';
-      roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
-      ctx.fill();
+// 赛道名称行
+  ctx.fillStyle = tier.color + '22';
+  roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
+  ctx.fill();
 
-      ctx.fillStyle = tier.color;
-      ctx.font = `bold 11px "PingFang SC", sans-serif`;
-      ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 4);
-      y += SEG_H;
+  ctx.fillStyle = tier.color;
+  ctx.font = `bold 14px "PingFang SC", sans-serif`;
+  ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 5);
+  y += SEG_H;
 
       // 企业列表
       seg.companies.forEach((company, ci) => {
@@ -1418,15 +1430,15 @@ function drawPoster(ctx, data, W, H) {
         ctx.font = `12px "PingFang SC", sans-serif`;
         ctx.fillText('→', RIGHT_X + 2, rowY + 22);
 
-        // 企业名称（加粗）
-        ctx.fillStyle = '#1a202c';
-        ctx.font = `bold 12px "PingFang SC", sans-serif`;
-        ctx.fillText(company.name, RIGHT_X + 20, rowY + 16);
+// 企业名称（加粗）
+  ctx.fillStyle = '#1a202c';
+  ctx.font = `bold 18px "PingFang SC", sans-serif`;
+  ctx.fillText(company.name, RIGHT_X + 20, rowY + 22);
 
-        // 亮点说明（单行截断）
-        ctx.fillStyle = '#64748b';
-        ctx.font = `10px "PingFang SC", sans-serif`;
-        drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 30, RIGHT_W - 22, 12, 1);
+// 亮点说明（最多2行，超出打点截断，与企业名留2px间距）
+  ctx.fillStyle = '#64748b';
+  ctx.font = `13px "PingFang SC", sans-serif`;
+  drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 16, 2);
       });
 
       y += seg.companies.length * ROW_H;
