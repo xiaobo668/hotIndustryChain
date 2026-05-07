@@ -19,7 +19,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      font-family: "PingFang SC", "苹方-简", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -1117,7 +1117,7 @@ function drawCoverIllustration(ctx, data, x, y, w, h) {
 
   // 右下角行业名称标注
   ctx.save();
-  ctx.font = `bold 11px "PingFang SC", sans-serif`;
+  ctx.font = `bold 11px "PingFang SC", "苹方-简", sans-serif`;
   ctx.fillStyle = color + 'aa'; ctx.textAlign = 'right';
   ctx.fillText(name + ' · 产业链', x + w - 8, y + h - 8);
   ctx.textAlign = 'left'; ctx.restore();
@@ -1164,8 +1164,12 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
   const availH  = H - HEADER_H - FOOTER_H;
   const offsetY = HEADER_H + Math.max(0, Math.floor((availH - contentH) / 2));
 
-  // ---- 白色背景 ----
-  ctx.fillStyle = '#f5f7fa';
+  // ---- 背景：中性暖白渐变，与主题色无关，三页统一美观 ----
+  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+  bgGrad.addColorStop(0,   '#f0f4f8');  // 顶部：蓝灰冷白
+  bgGrad.addColorStop(0.5, '#f8fafc');  // 中部：近白
+  bgGrad.addColorStop(1,   '#eef2f7');  // 底部：浅灰蓝
+  ctx.fillStyle = bgGrad;
   ctx.fillRect(0, 0, W, H);
 
   // ---- 顶部标题栏（深色渐变，与左侧淡色色块明显区分）----
@@ -1183,13 +1187,13 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
   const titleLine1Y = Math.round(HEADER_H / 2 - 10);
   const titleLine2Y = Math.round(HEADER_H / 2 + 18);
   ctx.fillStyle = '#ffffff';
-  ctx.font = `bold 19px "PingFang SC", sans-serif`;
+  ctx.font = `bold 19px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   ctx.fillText(`${data.name}产业链核心龙头 · ${tier.label.replace(/[①②③]\s*/, '')}`, W / 2, titleLine1Y);
 
   // 页码 + 副标题
   ctx.fillStyle = 'rgba(255,255,255,0.8)';
-  ctx.font = `12px "PingFang SC", sans-serif`;
+  ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
   ctx.fillText(`第 ${pageIdx + 1} 张 / 共 3 张`, W / 2, titleLine2Y);
   ctx.textAlign = 'left';
 
@@ -1222,7 +1226,7 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
   // 标签文字（垂直居中，分两行写）
   const tierName = tier.label.replace(/[①②③]\s*/, '');
   ctx.fillStyle = '#ffffff';
-  ctx.font = `bold 15px "PingFang SC", sans-serif`;
+  ctx.font = `bold 15px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   const labelCX = TAG_W / 2 + 2;  // 色块内水平居中
   // 文字用深色（tier.color），与顶部白色文字区分
@@ -1252,7 +1256,7 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
   roundRect(ctx, RIGHT_X, y + 2, RIGHT_W, SEG_H - 4, 6);
   ctx.fill();
   ctx.fillStyle = tier.color;
-  ctx.font = `bold 14px "PingFang SC", sans-serif`;
+  ctx.font = `bold 14px "PingFang SC", "苹方-简", sans-serif`;
   ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 5);
   y += SEG_H;
 
@@ -1270,17 +1274,17 @@ function drawTierPage(ctx, data, tier, pageIdx, W, H) {
 
       // 箭头
       ctx.fillStyle = tier.color;
-      ctx.font = `12px "PingFang SC", sans-serif`;
+      ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
       ctx.fillText('→', RIGHT_X + 2, rowY + 22);
 
       // 企业名（加粗）
       ctx.fillStyle = '#1a202c';
-      ctx.font = `bold 18px "PingFang SC", sans-serif`;
+      ctx.font = `bold 18px "PingFang SC", "苹方-简", sans-serif`;
       ctx.fillText(company.name, RIGHT_X + 20, rowY + 22);
 
       // 亮点（最多2行，超出打点截断，与企业名留2px间距）
       ctx.fillStyle = '#64748b';
-ctx.font = `13px "PingFang SC", sans-serif`;
+ctx.font = `13px "PingFang SC", "苹方-简", sans-serif`;
 drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 16, 2);
   });
 
@@ -1293,7 +1297,7 @@ drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 1
 
   const today = new Date();
   ctx.fillStyle = '#94a3b8';
-  ctx.font = `10px "PingFang SC", sans-serif`;
+  ctx.font = `10px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   ctx.fillText(
     `${data.name}产业链  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日  ·  数据仅供参考，不构成投资建议`,
@@ -1329,13 +1333,13 @@ function drawPoster(ctx, data, W, H) {
 
   // 标题文字
   ctx.fillStyle = '#ffffff';
-  ctx.font = `bold 20px "PingFang SC", sans-serif`;
+  ctx.font = `bold 20px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   ctx.fillText(`${data.name}产业链核心龙头公司总览`, W / 2, 34);
 
   // 副标题说明
   ctx.fillStyle = 'rgba(255,255,255,0.85)';
-  ctx.font = `12px "PingFang SC", sans-serif`;
+  ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
   drawWrappedTextCenter(ctx, data.description, W / 2, 54, W - PAD * 4, 15, 2);
   ctx.textAlign = 'left';
 
@@ -1377,7 +1381,7 @@ function drawPoster(ctx, data, W, H) {
 
     // 层级文字（垂直居中）
     ctx.fillStyle = '#ffffff';
-    ctx.font = `bold 14px "PingFang SC", sans-serif`;
+    ctx.font = `bold 14px "PingFang SC", "苹方-简", sans-serif`;
     ctx.textAlign = 'center';
     // 只写2个字，垂直居中
     const labelCX = tagX + (TAG_W - 8) / 2;
@@ -1408,7 +1412,7 @@ function drawPoster(ctx, data, W, H) {
   ctx.fill();
 
   ctx.fillStyle = tier.color;
-  ctx.font = `bold 14px "PingFang SC", sans-serif`;
+  ctx.font = `bold 14px "PingFang SC", "苹方-简", sans-serif`;
   ctx.fillText('▸ ' + seg.name, RIGHT_X + 8, y + SEG_H / 2 + 5);
   y += SEG_H;
 
@@ -1427,17 +1431,17 @@ function drawPoster(ctx, data, W, H) {
 
         // 箭头点
         ctx.fillStyle = tier.color;
-        ctx.font = `12px "PingFang SC", sans-serif`;
+        ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
         ctx.fillText('→', RIGHT_X + 2, rowY + 22);
 
 // 企业名称（加粗）
   ctx.fillStyle = '#1a202c';
-  ctx.font = `bold 18px "PingFang SC", sans-serif`;
+  ctx.font = `bold 18px "PingFang SC", "苹方-简", sans-serif`;
   ctx.fillText(company.name, RIGHT_X + 20, rowY + 22);
 
 // 亮点说明（最多2行，超出打点截断，与企业名留2px间距）
   ctx.fillStyle = '#64748b';
-  ctx.font = `13px "PingFang SC", sans-serif`;
+  ctx.font = `13px "PingFang SC", "苹方-简", sans-serif`;
   drawWrappedText(ctx, company.highlight, RIGHT_X + 20, rowY + 38, RIGHT_W - 22, 16, 2);
       });
 
@@ -1453,7 +1457,7 @@ function drawPoster(ctx, data, W, H) {
 
   const today = new Date();
   ctx.fillStyle = '#94a3b8';
-  ctx.font = `10px "PingFang SC", sans-serif`;
+  ctx.font = `10px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
   ctx.fillText(`产业链分析工具  ·  ${today.getFullYear()}年${today.getMonth()+1}月${today.getDate()}日  ·  数据仅供参考，不构成投资建议`, W / 2, H - 14);
   ctx.textAlign = 'left';
