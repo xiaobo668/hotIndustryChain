@@ -1,1 +1,0 @@
-{"name": "industry-chain-ai-api", "version": "1.0.0", "description": "产业链 AI 生成 API - 腾讯云云函数 / 本地开发", "main": "index.js", "scripts": {"start": "node index.js", "test": "node -e \"const m=require('.');m.main_handler({body:JSON.stringify({industry:'低空经济'})},{}).then(r=>console.log(r.body))\""}, "engines": {"node": ">=18.0.0"}, "license": "MIT"}

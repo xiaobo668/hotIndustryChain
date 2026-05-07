@@ -1,0 +1,9 @@
+# 依赖
+node_modules/
+
+# 部署打包
+scf-deploy.zip
+
+# 子模块目录（空目录，不需要跟踪）
+vercel-api/
+server/
