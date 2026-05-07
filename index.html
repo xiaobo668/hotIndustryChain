@@ -302,7 +302,16 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ===== NOT FOUND ===== */
+    /* ===== AI ERROR ===== */
+  .ai-error {
+    display: none; text-align: center; padding: 60px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .ai-error.show { display: block; }
+
+  /* ===== NOT FOUND ===== */
     .not-found {
       display: none; text-align: center; padding: 60px;
       background: var(--surface);
@@ -370,7 +379,7 @@
     <div class="welcome">
       <div class="welcome-icon">🏭</div>
       <h2>产业链深度分析</h2>
-      <p>输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报</p>
+      <p>输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ 内置 14 个热门行业 + AI 动态生成任意新行业</span></p>
       <div class="welcome-grid">
         <div class="welcome-card" onclick="quickSearch('半导体')">
           <div class="welcome-card-icon">💎</div>
@@ -443,8 +452,17 @@
     <div class="not-found-icon">🔍</div>
     <h3>暂未收录该行业</h3>
     <p style="color:var(--text-muted);margin-top:8px;">
-      目前支持：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人
+      目前内置：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人等<br/>
+      其他行业可尝试 AI 自动生成 ↓
     </p>
+  </div>
+
+  <!-- AI ERROR -->
+  <div class="ai-error" id="ai-error">
+    <div class="not-found-icon">⚠️</div>
+    <h3 id="ai-error-title">AI 生成失败</h3>
+    <p id="ai-error-msg" style="color:var(--text-muted);margin-top:8px;"></p>
+    <button class="btn btn-primary" style="margin-top:16px" onclick="retryAILastQuery()">🔄 重试</button>
   </div>
 
   <!-- RESULT -->
@@ -506,6 +524,20 @@
 
 <!-- MAIN LOGIC -->
 <script>
+// ==================== 配置 ====================
+const API_CONFIG = {
+  // 后端 API 地址（部署到腾讯云 SCF 后修改为实际地址）
+  // 本地开发时使用 localhost:3100
+  baseUrl: window.INDUSTRY_API_BASE_URL || 'https://1307599460-iu9hscdc7x.ap-guangzhou.tencentscf.com',
+  endpoint: '/api/industry',
+  timeout: 30000, // AI 生成超时 30 秒
+};
+
+// localStorage 缓存 key 前缀
+const CACHE_PREFIX = 'industry_ai_';
+// 缓存有效期（毫秒），默认 7 天
+const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;
+
 let currentIndustry = null;
 let mindChartInstance = null;
 
@@ -529,19 +561,49 @@ function doSearch() {
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('result').classList.remove('show');
   document.getElementById('not-found').classList.remove('show');
+  document.getElementById('ai-error').classList.remove('show');
   document.getElementById('loading').classList.add('show');
 
-  // 模拟分析延迟（体验更好）
-  setTimeout(() => {
-    document.getElementById('loading').classList.remove('show');
-    const data = searchIndustry(query);
-    if (!data) {
-      document.getElementById('not-found').classList.add('show');
-    } else {
-      currentIndustry = data;
-      renderResult(data);
-    }
-  }, 600);
+  // 先尝试本地数据
+  const localData = searchIndustry(query);
+  if (localData) {
+    setTimeout(() => {
+      document.getElementById('loading').classList.remove('show');
+      currentIndustry = localData;
+      renderResult(localData);
+    }, 400);
+    return;
+  }
+
+  // 本地未命中 → 尝试 localStorage 缓存
+  const cachedData = getCachedIndustry(query);
+  if (cachedData) {
+    setTimeout(() => {
+      document.getElementById('loading').classList.remove('show');
+      currentIndustry = cachedData;
+      renderResult(cachedData);
+    }, 400);
+    return;
+  }
+
+  // 缓存也没有 → 调用后端 AI 接口
+  fetchAIIndustry(query)
+    .then(data => {
+      document.getElementById('loading').classList.remove('show');
+      if (data) {
+        cacheIndustry(query, data); // 写入缓存
+        currentIndustry = data;
+        renderResult(data);
+      } else {
+        document.getElementById('not-found').classList.add('show');
+      }
+    })
+    .catch(err => {
+      console.error('AI 产业链生成失败:', err);
+      document.getElementById('loading').classList.remove('show');
+      // 显示错误提示
+      showAIError(err.message || 'AI 服务暂时不可用，请稍后再试');
+    });
 }
 
 // ===========================
@@ -1685,6 +1747,119 @@ async function downloadPoster() {
   a.download = `${name}_产业链全景_${date}.zip`;
   a.click();
   URL.revokeObjectURL(a.href);
+}
+
+// ==================== AI 接口调用 ====================
+let lastAIQuery = '';
+
+/**
+ * 调用后端 AI 接口生成产业链数据
+ */
+function fetchAIIndustry(industryName) {
+  lastAIQuery = industryName;
+  return new Promise((resolve, reject) => {
+    const url = API_CONFIG.baseUrl + API_CONFIG.endpoint;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ industry: industryName }),
+      signal: controller.signal,
+    })
+    .then(res => res.json())
+    .then(json => {
+      clearTimeout(timer);
+      if (json.success && json.data) {
+        resolve(json.data);
+      } else {
+        reject(new Error(json.error || 'AI 返回数据为空'));
+      }
+    })
+    .catch(err => {
+      clearTimeout(timer);
+      if (err.name === 'AbortError') {
+        reject(new Error('请求超时，AI 正在思考中，请稍后重试'));
+      } else {
+        reject(err);
+      }
+    });
+  });
+}
+
+/**
+ * 重试上次失败的 AI 请求
+ */
+function retryAILastQuery() {
+  if (!lastAIQuery) return;
+  document.getElementById('ai-error').classList.remove('show');
+  document.getElementById('loading').classList.add('show');
+  fetchAIIndustry(lastAIQuery)
+    .then(data => {
+      document.getElementById('loading').classList.remove('show');
+      if (data) {
+        cacheIndustry(lastAIQuery, data);
+        currentIndustry = data;
+        renderResult(data);
+      } else {
+        document.getElementById('not-found').classList.add('show');
+      }
+    })
+    .catch(err => showAIError(err.message));
+}
+
+/**
+ * 显示 AI 错误提示
+ */
+function showAIError(msg) {
+  document.getElementById('ai-error-msg').textContent = msg;
+  document.getElementById('ai-error').classList.add('show');
+}
+
+// ==================== localStorage 缓存 ====================
+function getCacheKey(query) {
+  return CACHE_PREFIX + query;
+}
+
+function getCachedIndustry(query) {
+  try {
+    const raw = localStorage.getItem(getCacheKey(query));
+    if (!raw) return null;
+    const { data, ts } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) {
+      localStorage.removeItem(getCacheKey(query));
+      return null;
+    }
+    console.log(`[localStorage CACHE HIT] ${query}`);
+    return data;
+  } catch (e) {
+    return null;
+  }
+}
+
+function cacheIndustry(query, data) {
+  try {
+    localStorage.setItem(getCacheKey(query), JSON.stringify({ data, ts: Date.now() }));
+    console.log(`[localStorage CACHED] ${query}`);
+  } catch (e) {
+    console.warn('[localStorage] 缓存写入失败:', e);
+  }
+}
+
+/**
+ * 清除所有 AI 缓存
+ */
+function clearAllAICache() {
+  const keysToRemove = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && key.startsWith(CACHE_PREFIX)) {
+      keysToRemove.push(key);
+    }
+  }
+  keysToRemove.forEach(k => localStorage.removeItem(k));
+  console.log(`[localStorage] 已清除 ${keysToRemove.length} 条 AI 缓存`);
 }
 
 async function copyPoster() {
