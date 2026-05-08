@@ -829,16 +829,19 @@ function doSectorSearch(query) {
     return;
   }
 
+  // 显示加载中（先显示默认文字，等 API 返回后更新模型名称）
+  updateSectorLoading('正在查询板块龙头数据...');
+
   // 调用后端 AI 接口
   fetchAISector(query)
-    .then(data => {
+    .then(({ data, source }) => {
       document.getElementById('loading').classList.remove('show');
       if (data) {
         cacheSector(query, data);
         currentSector = data;
-        renderSectorResult(data);
+        renderSectorResult(data, source);
       } else {
-        document.getElementById('not-found').classList.add('show');
+        document.getElementById('not-found').add('show');
       }
     })
     .catch(err => {
@@ -846,6 +849,12 @@ function doSectorSearch(query) {
       document.getElementById('loading').classList.remove('show');
       showAIError(err.message || 'AI 服务暂时不可用，请稍后再试');
     });
+}
+
+/** 更新板块龙头加载中的文字（显示当前使用的 AI 模型） */
+function updateSectorLoading(text) {
+  const el = document.querySelector('#loading .loading-text');
+  if (el) el.textContent = text;
 }
 
 // ===========================
@@ -1856,6 +1865,12 @@ function clearAllAICache() {
 }
 
 // ==================== 板块龙头 AI 接口调用 ====================
+const MODEL_LABELS = {
+  kimi: 'Kimi（Moonshot）',
+  deepseek: 'DeepSeek',
+  cache: '本地缓存',
+};
+
 function fetchAISector(sectorName) {
   lastAIQuery = sectorName;
   lastAIMode = 'sector';
@@ -1863,6 +1878,9 @@ function fetchAISector(sectorName) {
     const url = API_CONFIG.baseUrl + API_CONFIG.sectorEndpoint;
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+
+    // 开始加载后更新文字
+    updateSectorLoading('正在连接 AI 服务（Kimi）...');
 
     fetch(url, {
       method: 'POST',
@@ -1874,7 +1892,11 @@ function fetchAISector(sectorName) {
     .then(json => {
       clearTimeout(timer);
       if (json.success && json.data) {
-        resolve(json.data);
+        const source = json.source || 'ai';
+        const label = MODEL_LABELS[source] || source;
+        updateSectorLoading(`✨ ${label} 生成完成`);
+        // 短暂显示模型名称后 resolve
+        setTimeout(() => resolve({ data: json.data, source }), 300);
       } else {
         reject(new Error(json.error || 'AI 返回数据为空'));
       }
@@ -1891,21 +1913,25 @@ function fetchAISector(sectorName) {
 }
 
 // ==================== 板块龙头渲染 ====================
-function renderSectorResult(data) {
+function renderSectorResult(data, source) {
   document.getElementById('sector-result').classList.add('show');
-  renderSectorHeader(data);
+  renderSectorHeader(data, source);
   renderLeaderTable(data);
   // 重置到表格 tab
   switchSectorViewTab('leader', document.querySelector('#sector-tabs .tab-btn'));
 }
 
-function renderSectorHeader(data) {
+function renderSectorHeader(data, source) {
   const header = document.getElementById('sector-header');
   header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
   header.style.borderLeft = `4px solid ${data.color}`;
 
   document.getElementById('sector-title').textContent = `🐂 ${data.name} 板块龙头分析`;
   document.getElementById('sector-desc').textContent = data.description;
+
+  // 显示 AI 模型来源
+  const sourceLabel = MODEL_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : 'AI');
+  const sourceColor = source === 'kimi' ? '#ef4444' : source === 'deepseek' ? '#6c63ff' : '#94a3b8';
 
   const centerCount = data.center.companies.length;
   const vanguardCount = data.vanguard.companies.length;
@@ -1921,6 +1947,10 @@ function renderSectorHeader(data) {
     <div class="stat-item">
       <div class="stat-num">${centerCount + vanguardCount}</div>
       <div class="stat-label">总龙头数</div>
+    </div>
+    <div class="stat-item" style="min-width:100px">
+      <div class="stat-num" style="font-size:12px;color:${sourceColor}">✦ ${sourceLabel}</div>
+      <div class="stat-label" style="font-size:11px">AI 模型</div>
     </div>
   `;
 }
@@ -2048,50 +2078,84 @@ function renderSectorPoster(data) {
   const dpr = window.devicePixelRatio || 1;
   const W = SECTOR_PAGE_W;
 
-  // ===== 第1页：前锋（情绪龙头）=====
-  const vanLayout = calcSectorLayout(data.vanguard.companies.length);
-  const vanH = vanLayout.totalH;
-  const vanLabel = document.createElement('div');
-  vanLabel.className = 'poster-page-label';
-  vanLabel.textContent = '前锋（情绪龙头）';
-  container.appendChild(vanLabel);
-  const vanCanvas = document.createElement('canvas');
-  vanCanvas.className = 'poster-canvas-item';
-  vanCanvas.id = 'sector-poster-vanguard';
-  vanCanvas.width = W * dpr; vanCanvas.height = vanH * dpr;
-  vanCanvas.style.width = W + 'px'; vanCanvas.style.height = vanH + 'px';
-  container.appendChild(vanCanvas);
-  const ctxVan = vanCanvas.getContext('2d');
-  ctxVan.scale(dpr, dpr);
-  drawSectorLeaderCardPage(ctxVan, data, data.vanguard, W, vanH, '#ef4444', data.vanguard.title || `${data.name}板块前锋（情绪龙头）`, vanLayout);
+  // ===== 合并为一张图片：前锋 + 中军 =====
+  const vanCount = data.vanguard.companies.length;
+  const centerCount = data.center.companies.length;
+  const totalCount = vanCount + centerCount;
 
-  // ===== 第2页：中军（趋势龙头）=====
-  const centerLayout = calcSectorLayout(data.center.companies.length);
-  const centerH = centerLayout.totalH;
-  const centerLabel = document.createElement('div');
-  centerLabel.className = 'poster-page-label';
-  centerLabel.textContent = '中军（趋势龙头）';
-  container.appendChild(centerLabel);
-  const centerCanvas = document.createElement('canvas');
-  centerCanvas.className = 'poster-canvas-item';
-  centerCanvas.id = 'sector-poster-center';
-  centerCanvas.width = W * dpr; centerCanvas.height = centerH * dpr;
-  centerCanvas.style.width = W + 'px'; centerCanvas.style.height = centerH + 'px';
-  container.appendChild(centerCanvas);
-  const ctxCenter = centerCanvas.getContext('2d');
-  ctxCenter.scale(dpr, dpr);
-  drawSectorLeaderCardPage(ctxCenter, data, data.center, W, centerH, '#6c63ff', data.center.title || `${data.name}板块中军（趋势龙头）`, centerLayout);
+  // 计算合并后的布局：两个卡片紧密相连，中间无间隔
+  const PAD_X = 20;
+  const PAD_Y_TOP = 30;
+  const PAD_Y_BOTTOM = 30;
+  const FOOTER_H = 22;
+  const BAR_H = 24;
+  const CARD_PAD_Y = 4;
+  const CARD_RADIUS = 10;
+  const CARD_GAP = 8; // 前锋和中军卡片之间的间距
+
+  // 可用内容区高度
+  const availH = SECTOR_TARGET_H - PAD_Y_TOP - PAD_Y_BOTTOM - FOOTER_H;
+  // 每行可用高度（基于总数计算）
+  const ROW_H = Math.max(22, Math.min(36, (availH - BAR_H * 2 - CARD_PAD_Y * 4 - CARD_GAP) / totalCount));
+
+  // 前锋卡片高度
+  const vanCardH = BAR_H + CARD_PAD_Y + vanCount * ROW_H + CARD_PAD_Y;
+  // 中军卡片高度
+  const centerCardH = BAR_H + CARD_PAD_Y + centerCount * ROW_H + CARD_PAD_Y;
+  // 总高度
+  const totalH = PAD_Y_TOP + vanCardH + CARD_GAP + centerCardH + PAD_Y_BOTTOM + FOOTER_H;
+
+  // 字体大小随行高缩放
+  const scale = ROW_H / 28;
+  const titleFont = Math.max(11, Math.round(13 * scale));
+  const nameFont = Math.max(10, Math.round(12 * scale));
+  const descFont = Math.max(9, Math.round(11 * scale));
+  const footerFont = Math.max(8, Math.round(9 * scale));
+
+  const layout = { PAD_X, PAD_Y_TOP, PAD_Y_BOTTOM, FOOTER_H, BAR_H, CARD_PAD_Y, ROW_H, CARD_RADIUS, titleFont, nameFont, descFont, footerFont };
+
+  const label = document.createElement('div');
+  label.className = 'poster-page-label';
+  label.textContent = '板块龙头（前锋+中军）';
+  container.appendChild(label);
+  const canvas = document.createElement('canvas');
+  canvas.className = 'poster-canvas-item';
+  canvas.id = 'sector-poster-merged';
+  canvas.width = W * dpr; canvas.height = totalH * dpr;
+  canvas.style.width = W + 'px'; canvas.style.height = totalH + 'px';
+  container.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  // 绘制背景
+  drawMergedSectorBackground(ctx, W, totalH);
+
+  // 绘制前锋卡片（不带免责声明）
+  let offsetY = PAD_Y_TOP;
+  drawSingleSectorCard(ctx, data, data.vanguard, W, offsetY, '#ef4444', data.vanguard.title || `${data.name}板块前锋（情绪龙头）`, vanCardH, layout);
+
+  // 绘制中军卡片（带免责声明）
+  offsetY += vanCardH + CARD_GAP;
+  drawSingleSectorCard(ctx, data, data.center, W, offsetY, '#6c63ff', data.center.title || `${data.name}板块中军（趋势龙头）`, centerCardH, layout, true /* showFooter */);
+
+  // 绘制底部免责声明
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = `${footerFont}px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  const td = new Date();
+  ctx.fillText(
+    `板块龙头分析工具 · ${td.getFullYear()}年${td.getMonth()+1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`,
+    W / 2, totalH - PAD_Y_BOTTOM / 2
+  );
+  ctx.textBaseline = 'alphabetic';
+  ctx.textAlign = 'left';
 }
 
 /**
- * 板块龙头列表页 — 与产业链海报风格一致：
- * 浅蓝白渐变背景 + 圆角白色卡片 + 彩色标题栏 + 企业名+说明单行
+ * 合并海报的背景绘制（浅蓝白渐变 + 装饰斜线）
  */
-function drawSectorLeaderCardPage(ctx, data, leaderData, W, H, accentColor, titleText, layout) {
-  const { PAD_X, PAD_Y_TOP, PAD_Y_BOTTOM, FOOTER_H, BAR_H, CARD_PAD_Y, ROW_H, CARD_RADIUS, titleFont, nameFont, descFont, footerFont } = layout;
-  const innerPadX = 12;
-
-  // 浅蓝白渐变背景（与产业链海报一致）
+function drawMergedSectorBackground(ctx, W, H) {
   const bg = ctx.createLinearGradient(0, 0, 0, H);
   bg.addColorStop(0, '#cfe8fb');
   bg.addColorStop(0.4, '#e3f2fd');
@@ -2103,7 +2167,7 @@ function drawSectorLeaderCardPage(ctx, data, leaderData, W, H, accentColor, titl
   ctx.save();
   ctx.strokeStyle = 'rgba(37, 99, 235, 0.07)';
   ctx.lineWidth = 1;
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < Math.ceil(H / 35); i++) {
     const y0 = i * 40;
     ctx.beginPath();
     ctx.moveTo(0, y0);
@@ -2111,14 +2175,19 @@ function drawSectorLeaderCardPage(ctx, data, leaderData, W, H, accentColor, titl
     ctx.stroke();
   }
   ctx.restore();
+}
 
-  // 绘制卡片
+/**
+ * 绘制单个板块龙头卡片（前锋或中军），不含背景和免责声明
+ */
+function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, titleText, cardH, layout) {
+  const { PAD_X, BAR_H, CARD_PAD_Y, ROW_H, CARD_RADIUS, titleFont, nameFont, descFont } = layout;
+  const innerPadX = 12;
+
   const cardW = W - PAD_X * 2;
   const cardX = PAD_X;
-  const cardY = PAD_Y_TOP;
+  const cardY = offsetY;
   const innerW = cardW - innerPadX * 2;
-  const bodyInnerH = CARD_PAD_Y + leaderData.companies.length * ROW_H + CARD_PAD_Y;
-  const cardH = BAR_H + bodyInnerH;
 
   // 卡片阴影 + 白色背景
   ctx.save();
@@ -2196,19 +2265,6 @@ function drawSectorLeaderCardPage(ctx, data, leaderData, W, H, accentColor, titl
     ctx.fillText(desc, descX, midY);
     ctx.textBaseline = 'alphabetic';
   });
-
-  // 底部说明（居中于底部边距区域）
-  ctx.fillStyle = '#94a3b8';
-  ctx.font = `${footerFont}px "PingFang SC", "苹方-简", sans-serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  const td = new Date();
-  ctx.fillText(
-    `板块龙头分析工具 · ${td.getFullYear()}年${td.getMonth()+1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`,
-    W / 2, H - PAD_Y_BOTTOM / 2
-  );
-  ctx.textBaseline = 'alphabetic';
-  ctx.textAlign = 'left';
 }
 
 /** 颜色加深/变暗辅助函数 */
@@ -2222,16 +2278,12 @@ function shadeColor(color, percent) {
 
 function downloadSectorPoster() {
   if (!currentSector) return;
-  const canvases = document.querySelectorAll('#sector-poster-pages canvas');
-  canvases.forEach((canvas, i) => {
-    setTimeout(() => {
-      const a = document.createElement('a');
-      const labels = ['前锋', '中军'];
-      a.download = `${currentSector.name}_${labels[i] || ('page'+i)}_${new Date().toLocaleDateString('zh-CN')}.png`;
-      a.href = canvas.toDataURL('image/png');
-      a.click();
-    }, i * 300);
-  });
+  const canvas = document.getElementById('sector-poster-merged');
+  if (!canvas) return;
+  const a = document.createElement('a');
+  a.download = `${currentSector.name}_板块龙头_${new Date().toLocaleDateString('zh-CN')}.png`;
+  a.href = canvas.toDataURL('image/png');
+  a.click();
 }
 
 async function copySectorPoster() {
