@@ -782,7 +782,7 @@ function doIndustrySearch(query) {
     setTimeout(() => {
       document.getElementById('loading').classList.remove('show');
       currentIndustry = localData;
-      renderResult(localData);
+      renderResult(localData, 'local');
     }, 400);
     return;
   }
@@ -793,19 +793,22 @@ function doIndustrySearch(query) {
     setTimeout(() => {
       document.getElementById('loading').classList.remove('show');
       currentIndustry = cachedData;
-      renderResult(cachedData);
+      renderResult(cachedData, 'cache');
     }, 400);
     return;
   }
 
+  // 显示加载中（先显示默认文字，等 API 返回后更新模型名称）
+  updateIndustryLoading('正在连接 AI 服务（Kimi）...');
+
   // 缓存也没有 → 调用后端 AI 接口
   fetchAIIndustry(query)
-    .then(data => {
+    .then(({ data, source }) => {
       document.getElementById('loading').classList.remove('show');
       if (data) {
         cacheIndustry(query, data);
         currentIndustry = data;
-        renderResult(data);
+        renderResult(data, source);
       } else {
         document.getElementById('not-found').classList.add('show');
       }
@@ -857,18 +860,24 @@ function updateSectorLoading(text) {
   if (el) el.textContent = text;
 }
 
+/** 更新产业链加载中的文字（显示当前使用的 AI 模型） */
+function updateIndustryLoading(text) {
+  const el = document.querySelector('#loading .loading-text');
+  if (el) el.textContent = text;
+}
+
 // ===========================
 // 渲染结果
 // ===========================
-function renderResult(data) {
+function renderResult(data, source) {
   document.getElementById('result').classList.add('show');
-  renderHeader(data);
+  renderHeader(data, source);
   renderTable(data);
   // 重置到表格tab
   switchTab('table', document.querySelector('.tab-btn'));
 }
 
-function renderHeader(data) {
+function renderHeader(data, source) {
   const header = document.getElementById('industry-header');
   header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
   header.style.borderLeft = `4px solid ${data.color}`;
@@ -885,6 +894,10 @@ function renderHeader(data) {
 
   const totalSegments = data.upstream.length + data.midstream.length + data.downstream.length;
 
+  // 显示 AI 模型来源
+  const sourceLabel = MODEL_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : 'AI');
+  const sourceColor = source === 'kimi' ? '#ef4444' : source === 'deepseek' ? '#6c63ff' : '#94a3b8';
+
   document.getElementById('industry-stats').innerHTML = `
     <div class="stat-item">
       <div class="stat-num">${totalCompanies}</div>
@@ -897,6 +910,10 @@ function renderHeader(data) {
     <div class="stat-item">
       <div class="stat-num">3</div>
       <div class="stat-label">产业层次</div>
+    </div>
+    <div class="stat-item" style="min-width:100px">
+      <div class="stat-num" style="font-size:12px;color:${sourceColor}">✦ ${sourceLabel}</div>
+      <div class="stat-label" style="font-size:11px">AI 模型</div>
     </div>
   `;
 }
@@ -1748,6 +1765,9 @@ function fetchAIIndustry(industryName) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
+    // 开始加载后更新文字
+    updateIndustryLoading('正在连接 AI 服务（Kimi）...');
+
     fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1758,7 +1778,11 @@ function fetchAIIndustry(industryName) {
     .then(json => {
       clearTimeout(timer);
       if (json.success && json.data) {
-        resolve(json.data);
+        const source = json.source || 'ai';
+        const label = MODEL_LABELS[source] || source;
+        updateIndustryLoading(`✨ ${label} 生成完成`);
+        // 短暂显示模型名称后 resolve
+        setTimeout(() => resolve({ data: json.data, source }), 300);
       } else {
         reject(new Error(json.error || 'AI 返回数据为空'));
       }
@@ -1784,12 +1808,12 @@ function retryAILastQuery() {
   
   if (currentMode === 'industry' || lastAIMode === 'industry') {
     fetchAIIndustry(lastAIQuery)
-      .then(data => {
+      .then(({ data, source }) => {
         document.getElementById('loading').classList.remove('show');
         if (data) {
           cacheIndustry(lastAIQuery, data);
           currentIndustry = data;
-          renderResult(data);
+          renderResult(data, source);
         } else {
           document.getElementById('not-found').classList.add('show');
         }
@@ -1797,12 +1821,12 @@ function retryAILastQuery() {
       .catch(err => showAIError(err.message));
   } else {
     fetchAISector(lastAIQuery)
-      .then(data => {
+      .then(({ data, source }) => {
         document.getElementById('loading').classList.remove('show');
         if (data) {
           cacheSector(lastAIQuery, data);
           currentSector = data;
-          renderSectorResult(data);
+          renderSectorResult(data, source);
         } else {
           document.getElementById('not-found').classList.add('show');
         }
