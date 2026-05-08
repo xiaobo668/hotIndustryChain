@@ -622,8 +622,8 @@
 
     <!-- 龙头表格视图 -->
     <div id="view-sector-leader" class="view-panel active">
-      <div id="leader-center"></div>
       <div id="leader-vanguard"></div>
+      <div id="leader-center"></div>
     </div>
 
     <!-- 海报视图 -->
@@ -1926,13 +1926,13 @@ function renderSectorHeader(data) {
 }
 
 function renderLeaderTable(data) {
-  // 渲染中军
-  const centerEl = document.getElementById('leader-center');
-  centerEl.innerHTML = buildLeaderSection('🏛️', data.center.title || `${data.name}板块中军（趋势龙头）`, '中军是板块的趋势核心，市值大、走势稳健、机构青睐', data.center.companies, '#6c63ff');
-
-  // 渲染前锋
+  // 渲染前锋（情绪龙头）- 排在前面
   const vanEl = document.getElementById('leader-vanguard');
   vanEl.innerHTML = buildLeaderSection('⚔️', data.vanguard.title || `${data.name}板块前锋（情绪龙头）`, '前锋是板块的情绪先锋，弹性大、率先涨停、带动情绪', data.vanguard.companies, '#ef4444');
+
+  // 渲染中军（趋势龙头）
+  const centerEl = document.getElementById('leader-center');
+  centerEl.innerHTML = buildLeaderSection('🏛️', data.center.title || `${data.name}板块中军（趋势龙头）`, '中军是板块的趋势核心，市值大、走势稳健、机构青睐', data.center.companies, '#6c63ff');
 }
 
 function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
@@ -2031,23 +2031,7 @@ function renderSectorPoster(data) {
   ctxCover.scale(dpr, dpr);
   drawSectorCoverPage(ctxCover, data, W, coverH);
 
-  // ===== 第2页：中军 =====
-  const centerH = estimateSectorLeaderHeight(data.center.companies);
-  const centerLabel = document.createElement('div');
-  centerLabel.className = 'poster-page-label';
-  centerLabel.textContent = (data.center.title || '中军（趋势龙头）');
-  container.appendChild(centerLabel);
-  const centerCanvas = document.createElement('canvas');
-  centerCanvas.className = 'poster-canvas-item';
-  centerCanvas.id = 'sector-poster-center';
-  centerCanvas.width = W * dpr; centerCanvas.height = centerH * dpr;
-  centerCanvas.style.width = W + 'px'; centerCanvas.style.height = centerH + 'px';
-  container.appendChild(centerCanvas);
-  const ctxCenter = centerCanvas.getContext('2d');
-  ctxCenter.scale(dpr, dpr);
-  drawSectorLeaderPage(ctxCenter, data, data.center, W, centerH, '#6c63ff', '中军（趋势龙头）');
-
-  // ===== 第3页：前锋 =====
+  // ===== 第2页：前锋（情绪龙头）=====
   const vanH = estimateSectorLeaderHeight(data.vanguard.companies);
   const vanLabel = document.createElement('div');
   vanLabel.className = 'poster-page-label';
@@ -2062,6 +2046,22 @@ function renderSectorPoster(data) {
   const ctxVan = vanCanvas.getContext('2d');
   ctxVan.scale(dpr, dpr);
   drawSectorLeaderPage(ctxVan, data, data.vanguard, W, vanH, '#ef4444', '前锋（情绪龙头）');
+
+  // ===== 第3页：中军（趋势龙头）=====
+  const centerH = estimateSectorLeaderHeight(data.center.companies);
+  const centerLabel = document.createElement('div');
+  centerLabel.className = 'poster-page-label';
+  centerLabel.textContent = (data.center.title || '中军（趋势龙头）');
+  container.appendChild(centerLabel);
+  const centerCanvas = document.createElement('canvas');
+  centerCanvas.className = 'poster-canvas-item';
+  centerCanvas.id = 'sector-poster-center';
+  centerCanvas.width = W * dpr; centerCanvas.height = centerH * dpr;
+  centerCanvas.style.width = W + 'px'; centerCanvas.style.height = centerH + 'px';
+  container.appendChild(centerCanvas);
+  const ctxCenter = centerCanvas.getContext('2d');
+  ctxCenter.scale(dpr, dpr);
+  drawSectorLeaderPage(ctxCenter, data, data.center, W, centerH, '#6c63ff', '中军（趋势龙头）');
 }
 
 function estimateSectorLeaderHeight(companies) {
@@ -2278,7 +2278,7 @@ function downloadSectorPoster() {
   canvases.forEach((canvas, i) => {
     setTimeout(() => {
       const a = document.createElement('a');
-      const labels = ['封面', '中军', '前锋'];
+      const labels = ['封面', '前锋', '中军'];
       a.download = `${currentSector.name}_${labels[i] || ('page'+i)}_${new Date().toLocaleDateString('zh-CN')}.png`;
       a.href = canvas.toDataURL('image/png');
       a.click();
