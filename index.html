@@ -18,6 +18,10 @@
       --accent2: #00d4ff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
     body {
       font-family: "PingFang SC", "苹方-简", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       background: var(--bg);
@@ -339,6 +343,63 @@
     #result { display: none; }
     #result.show { display: block; }
 
+    /* ===== MODE SWITCH TABS ===== */
+    .mode-tabs {
+      display: flex; gap: 0; margin-bottom: 0;
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .mode-tab-btn {
+      padding: 8px 18px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 14px; font-weight: 500;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .mode-tab-btn.active {
+      background: rgba(108,99,255,0.15);
+      color: var(--accent2);
+    }
+    .mode-tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
+
+    /* ===== SECTOR RESULT ===== */
+    #sector-result { display: none; }
+    #sector-result.show { display: block; }
+    .leader-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .leader-header {
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .leader-icon { font-size: 22px; }
+    .leader-title { font-size: 18px; font-weight: 700; }
+    .leader-sub { font-size: 12px; color: var(--text-muted); }
+    .leader-table { width: 100%; border-collapse: collapse; }
+    .leader-table th {
+      background: rgba(255,255,255,0.04);
+      padding: 12px 18px; font-size: 13px; font-weight: 600;
+      color: var(--text-muted); text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .leader-table td {
+      padding: 14px 18px; border-bottom: 1px solid var(--border);
+      font-size: 13px; vertical-align: top;
+    }
+    .leader-table tr:last-child td { border-bottom: none; }
+    .leader-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .stock-code {
+      display: inline-block; padding: 2px 8px; border-radius: 6px;
+      background: rgba(108,99,255,0.12); color: var(--accent2);
+      font-size: 11px; font-weight: 600; font-family: 'SF Mono', Monaco, monospace;
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .main { padding: 16px; }
@@ -354,21 +415,27 @@
 <header class="header">
   <div class="header-inner">
     <div class="logo">
-      <div class="logo-icon">🔗</div>
+      <div class="logo-icon" id="mode-logo-icon">🔗</div>
       <div>
-        <div class="logo-text">产业链分析</div>
-        <div class="logo-sub">Industry Chain Analyzer</div>
+        <div class="logo-text" id="mode-logo-text">产业链分析</div>
+        <div class="logo-sub" id="mode-logo-sub">Industry Chain Analyzer</div>
       </div>
+    </div>
+
+    <!-- 模式切换 Tab -->
+    <div class="mode-tabs">
+      <button class="mode-tab-btn active" id="mode-tab-industry" onclick="switchMode('industry', this)">🔗 产业链分析</button>
+      <button class="mode-tab-btn" id="mode-tab-sector" onclick="switchMode('sector', this)">🐂 板块龙头</button>
     </div>
 
     <div class="search-wrap">
       <input class="search-input" id="search-input" type="text"
         placeholder="输入行业名称，如：半导体、AI算力、算力租赁、新能源汽车..."
         autocomplete="off" />
-      <button class="search-btn" onclick="doSearch()">分析 →</button>
+      <button class="search-btn" id="search-btn" onclick="doSearch()">分析 →</button>
     </div>
 
-    <div class="hotkeys">
+    <div class="hotkeys" id="hotkeys">
       <span class="hotkey-label">热门：</span>
       <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
       <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
@@ -388,13 +455,13 @@
 <!-- MAIN -->
 <main class="main">
 
-  <!-- WELCOME -->
+  <!-- WELCOME (产业链) -->
   <div id="welcome">
     <div class="welcome">
-      <div class="welcome-icon">🏭</div>
-      <h2>产业链深度分析</h2>
-      <p>输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ 内置 14 个热门行业 + AI 动态生成任意新行业</span></p>
-      <div class="welcome-grid">
+      <div class="welcome-icon" id="welcome-icon">🏭</div>
+      <h2 id="welcome-title">产业链深度分析</h2>
+      <p id="welcome-desc">输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ 内置 14 个热门行业 + AI 动态生成任意新行业</span></p>
+      <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="quickSearch('半导体')">
           <div class="welcome-card-icon">💎</div>
           <div class="welcome-card-name">半导体</div>
@@ -458,7 +525,7 @@
   <!-- LOADING -->
   <div class="loading" id="loading">
     <div class="spinner"></div>
-    <p>正在分析产业链数据...</p>
+    <p id="loading-text">正在分析产业链数据...</p>
   </div>
 
   <!-- NOT FOUND -->
@@ -479,7 +546,7 @@
     <button class="btn btn-primary" style="margin-top:16px" onclick="retryAILastQuery()">🔄 重试</button>
   </div>
 
-  <!-- RESULT -->
+  <!-- RESULT (产业链) -->
   <div id="result">
     <!-- 行业标题 -->
     <div class="industry-header" id="industry-header">
@@ -536,6 +603,41 @@
     </div>
   </div>
 
+  <!-- RESULT (板块龙头) -->
+  <div id="sector-result">
+    <!-- 板块标题 -->
+    <div class="industry-header" id="sector-header">
+      <div class="industry-header-content">
+        <div class="industry-title" id="sector-title"></div>
+        <div class="industry-desc" id="sector-desc"></div>
+        <div class="industry-stats" id="sector-stats"></div>
+      </div>
+    </div>
+
+    <!-- 板块龙头 TABS -->
+    <div class="tabs" id="sector-tabs">
+      <button class="tab-btn active" onclick="switchSectorViewTab('leader', this)">📋 龙头一览</button>
+      <button class="tab-btn" onclick="switchSectorViewTab('poster', this)">🎨 可视化海报</button>
+    </div>
+
+    <!-- 龙头表格视图 -->
+    <div id="view-sector-leader" class="view-panel active">
+      <div id="leader-center"></div>
+      <div id="leader-vanguard"></div>
+    </div>
+
+    <!-- 海报视图 -->
+    <div id="view-sector-poster" class="view-panel">
+      <div class="poster-wrap" id="sector-poster-wrap">
+        <div id="sector-poster-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadSectorPoster()">⬇️ 下载海报</button>
+          <button class="btn btn-secondary" onclick="copySectorPoster()">📋 复制第1张</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <!-- DATA -->
@@ -547,18 +649,100 @@
 const API_CONFIG = {
   // 后端 API 地址（部署到腾讯云 SCF 后修改为实际地址）
   // 本地开发时使用 localhost:3100
-  baseUrl: window.INDUSTRY_API_BASE_URL || 'https://1307599460-iu9hscdc7x.ap-guangzhou.tencentscf.com',
-  endpoint: '/api/industry',
+  baseUrl: window.INDUSTRY_API_BASE_URL || (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:'
+    ? 'http://localhost:3100'
+    : 'https://1307599460-iu9hscdc7x.ap-guangzhou.tencentscf.com'),
+  industryEndpoint: '/api/industry',
+  sectorEndpoint: '/api/sector',
   timeout: 30000, // AI 生成超时 30 秒
 };
 
 // localStorage 缓存 key 前缀
 const CACHE_PREFIX = 'industry_ai_';
+const SECTOR_CACHE_PREFIX = 'sector_ai_';
 // 缓存有效期（毫秒），默认 7 天
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;
 
+let currentMode = 'industry'; // 'industry' | 'sector'
 let currentIndustry = null;
+let currentSector = null;
 let mindChartInstance = null;
+
+// ===========================
+// 模式切换
+// ===========================
+const MODE_CONFIG = {
+  industry: {
+    logoIcon: '🔗',
+    logoText: '产业链分析',
+    logoSub: 'Industry Chain Analyzer',
+    placeholder: '输入行业名称，如：半导体、AI算力、算力租赁、新能源汽车...',
+    btnText: '分析 →',
+    loadingText: '正在分析产业链数据...',
+    welcomeIcon: '🏭',
+    welcomeTitle: '产业链深度分析',
+    welcomeDesc: '输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ 内置 14 个热门行业 + AI 动态生成任意新行业</span>',
+    hotkeys: ['半导体','AI算力','算力租赁','AI应用','新能源汽车','液冷','通讯设备','IT服务','元件','机器人','光伏']
+  },
+  sector: {
+    logoIcon: '🐂',
+    logoText: '板块龙头',
+    logoSub: 'Sector Leader Analyzer',
+    placeholder: '输入板块名称，如：半导体、AI算力、低空经济、机器人、华为概念...',
+    btnText: '查询 →',
+    loadingText: '正在查询板块龙头数据...',
+    welcomeIcon: '📊',
+    welcomeTitle: '板块龙头识别',
+    welcomeDesc: '输入任意 A 股板块名称，智能识别该板块的中军（趋势龙头）与前锋（情绪龙头），生成可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ AI 实时分析 + 中军/前锋双维度解读</span>',
+    hotkeys: ['半导体','AI算力','低空经济','机器人','华为概念','固态电池','商业航天','消费电子','液冷服务器','CPO','量子科技','合成生物']
+  }
+};
+
+function switchMode(mode, btn) {
+  if (currentMode === mode) return;
+  currentMode = mode;
+  
+  // 更新 Tab 状态
+  document.querySelectorAll('.mode-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  
+  const cfg = MODE_CONFIG[mode];
+  
+  // 更新 Header
+  document.getElementById('mode-logo-icon').textContent = cfg.logoIcon;
+  document.getElementById('mode-logo-text').textContent = cfg.logoText;
+  document.getElementById('mode-logo-sub').textContent = cfg.logoSub;
+  
+  // 更新搜索框
+  document.getElementById('search-input').placeholder = cfg.placeholder;
+  document.getElementById('search-btn').textContent = cfg.btnText;
+  
+  // 更新加载文字
+  document.getElementById('loading-text').textContent = cfg.loadingText;
+  
+  // 更新欢迎页
+  document.getElementById('welcome-icon').textContent = cfg.welcomeIcon;
+  document.getElementById('welcome-title').textContent = cfg.welcomeTitle;
+  document.getElementById('welcome-desc').innerHTML = cfg.welcomeDesc;
+  
+  // 更新热门标签
+  const hotkeysEl = document.getElementById('hotkeys');
+  let hkHtml = '<span class="hotkey-label">热门：</span>';
+  cfg.hotkeys.forEach(k => {
+    hkHtml += `<span class="hotkey-tag" onclick="quickSearch('${k}')">${k}</span>`;
+  });
+  hotkeysEl.innerHTML = hkHtml;
+  
+  // 切换视图：隐藏所有结果，显示对应欢迎页
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('sector-result').classList.remove('show');
+  document.getElementById('not-found').classList.remove('show');
+  document.getElementById('ai-error').classList.remove('show');
+  document.getElementById('welcome').style.display = '';
+  
+  // 清空搜索框
+  document.getElementById('search-input').value = '';
+}
 
 // ===========================
 // 搜索逻辑
@@ -579,10 +763,19 @@ function doSearch() {
   // UI状态切换
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('result').classList.remove('show');
+  document.getElementById('sector-result').classList.remove('show');
   document.getElementById('not-found').classList.remove('show');
   document.getElementById('ai-error').classList.remove('show');
   document.getElementById('loading').classList.add('show');
 
+  if (currentMode === 'industry') {
+    doIndustrySearch(query);
+  } else {
+    doSectorSearch(query);
+  }
+}
+
+function doIndustrySearch(query) {
   // 先尝试本地数据
   const localData = searchIndustry(query);
   if (localData) {
@@ -610,7 +803,7 @@ function doSearch() {
     .then(data => {
       document.getElementById('loading').classList.remove('show');
       if (data) {
-        cacheIndustry(query, data); // 写入缓存
+        cacheIndustry(query, data);
         currentIndustry = data;
         renderResult(data);
       } else {
@@ -620,7 +813,37 @@ function doSearch() {
     .catch(err => {
       console.error('AI 产业链生成失败:', err);
       document.getElementById('loading').classList.remove('show');
-      // 显示错误提示
+      showAIError(err.message || 'AI 服务暂时不可用，请稍后再试');
+    });
+}
+
+function doSectorSearch(query) {
+  // 先尝试 localStorage 缓存
+  const cachedData = getCachedSector(query);
+  if (cachedData) {
+    setTimeout(() => {
+      document.getElementById('loading').classList.remove('show');
+      currentSector = cachedData;
+      renderSectorResult(cachedData);
+    }, 400);
+    return;
+  }
+
+  // 调用后端 AI 接口
+  fetchAISector(query)
+    .then(data => {
+      document.getElementById('loading').classList.remove('show');
+      if (data) {
+        cacheSector(query, data);
+        currentSector = data;
+        renderSectorResult(data);
+      } else {
+        document.getElementById('not-found').classList.add('show');
+      }
+    })
+    .catch(err => {
+      console.error('AI 板块龙头生成失败:', err);
+      document.getElementById('loading').classList.remove('show');
       showAIError(err.message || 'AI 服务暂时不可用，请稍后再试');
     });
 }
@@ -1503,14 +1726,16 @@ function downloadPoster() {
 
 // ==================== AI 接口调用 ====================
 let lastAIQuery = '';
+let lastAIMode = 'industry';
 
 /**
  * 调用后端 AI 接口生成产业链数据
  */
 function fetchAIIndustry(industryName) {
   lastAIQuery = industryName;
+  lastAIMode = 'industry';
   return new Promise((resolve, reject) => {
-    const url = API_CONFIG.baseUrl + API_CONFIG.endpoint;
+    const url = API_CONFIG.baseUrl + API_CONFIG.industryEndpoint;
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
@@ -1547,18 +1772,34 @@ function retryAILastQuery() {
   if (!lastAIQuery) return;
   document.getElementById('ai-error').classList.remove('show');
   document.getElementById('loading').classList.add('show');
-  fetchAIIndustry(lastAIQuery)
-    .then(data => {
-      document.getElementById('loading').classList.remove('show');
-      if (data) {
-        cacheIndustry(lastAIQuery, data);
-        currentIndustry = data;
-        renderResult(data);
-      } else {
-        document.getElementById('not-found').classList.add('show');
-      }
-    })
-    .catch(err => showAIError(err.message));
+  
+  if (currentMode === 'industry' || lastAIMode === 'industry') {
+    fetchAIIndustry(lastAIQuery)
+      .then(data => {
+        document.getElementById('loading').classList.remove('show');
+        if (data) {
+          cacheIndustry(lastAIQuery, data);
+          currentIndustry = data;
+          renderResult(data);
+        } else {
+          document.getElementById('not-found').classList.add('show');
+        }
+      })
+      .catch(err => showAIError(err.message));
+  } else {
+    fetchAISector(lastAIQuery)
+      .then(data => {
+        document.getElementById('loading').classList.remove('show');
+        if (data) {
+          cacheSector(lastAIQuery, data);
+          currentSector = data;
+          renderSectorResult(data);
+        } else {
+          document.getElementById('not-found').classList.add('show');
+        }
+      })
+      .catch(err => showAIError(err.message));
+  }
 }
 
 /**
@@ -1612,6 +1853,451 @@ function clearAllAICache() {
   }
   keysToRemove.forEach(k => localStorage.removeItem(k));
   console.log(`[localStorage] 已清除 ${keysToRemove.length} 条 AI 缓存`);
+}
+
+// ==================== 板块龙头 AI 接口调用 ====================
+function fetchAISector(sectorName) {
+  lastAIQuery = sectorName;
+  lastAIMode = 'sector';
+  return new Promise((resolve, reject) => {
+    const url = API_CONFIG.baseUrl + API_CONFIG.sectorEndpoint;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+
+    fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sector: sectorName }),
+      signal: controller.signal,
+    })
+    .then(res => res.json())
+    .then(json => {
+      clearTimeout(timer);
+      if (json.success && json.data) {
+        resolve(json.data);
+      } else {
+        reject(new Error(json.error || 'AI 返回数据为空'));
+      }
+    })
+    .catch(err => {
+      clearTimeout(timer);
+      if (err.name === 'AbortError') {
+        reject(new Error('请求超时，AI 正在思考中，请稍后重试'));
+      } else {
+        reject(err);
+      }
+    });
+  });
+}
+
+// ==================== 板块龙头渲染 ====================
+function renderSectorResult(data) {
+  document.getElementById('sector-result').classList.add('show');
+  renderSectorHeader(data);
+  renderLeaderTable(data);
+  // 重置到表格 tab
+  switchSectorViewTab('leader', document.querySelector('#sector-tabs .tab-btn'));
+}
+
+function renderSectorHeader(data) {
+  const header = document.getElementById('sector-header');
+  header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
+  header.style.borderLeft = `4px solid ${data.color}`;
+
+  document.getElementById('sector-title').textContent = `🐂 ${data.name} 板块龙头分析`;
+  document.getElementById('sector-desc').textContent = data.description;
+
+  const centerCount = data.center.companies.length;
+  const vanguardCount = data.vanguard.companies.length;
+  document.getElementById('sector-stats').innerHTML = `
+    <div class="stat-item">
+      <div class="stat-num">${centerCount}</div>
+      <div class="stat-label">中军（趋势龙头）</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">${vanguardCount}</div>
+      <div class="stat-label">前锋（情绪龙头）</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">${centerCount + vanguardCount}</div>
+      <div class="stat-label">总龙头数</div>
+    </div>
+  `;
+}
+
+function renderLeaderTable(data) {
+  // 渲染中军
+  const centerEl = document.getElementById('leader-center');
+  centerEl.innerHTML = buildLeaderSection('🏛️', data.center.title || `${data.name}板块中军（趋势龙头）`, '中军是板块的趋势核心，市值大、走势稳健、机构青睐', data.center.companies, '#6c63ff');
+
+  // 渲染前锋
+  const vanEl = document.getElementById('leader-vanguard');
+  vanEl.innerHTML = buildLeaderSection('⚔️', data.vanguard.title || `${data.name}板块前锋（情绪龙头）`, '前锋是板块的情绪先锋，弹性大、率先涨停、带动情绪', data.vanguard.companies, '#ef4444');
+}
+
+function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
+  const rows = companies.map(c => `
+    <tr>
+      <td><strong style="color:var(--text)">${c.name}</strong></td>
+      <td>${c.highlight}</td>
+    </tr>`).join('');
+
+  return `
+    <div class="leader-section">
+      <div class="leader-header" style="border-left: 3px solid ${accentColor}">
+        <span class="leader-icon">${icon}</span>
+        <div>
+          <div class="leader-title" style="color:${accentColor}">${title}</div>
+          <div class="leader-sub">${subtitle}</div>
+        </div>
+      </div>
+      <table class="leader-table">
+        <thead>
+          <tr>
+            <th style="width:140px">名称</th>
+            <th>核心逻辑</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function switchSectorViewTab(tab, btn) {
+  document.querySelectorAll('#sector-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('#sector-result .view-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`view-sector-${tab}`).classList.add('active');
+
+  if (tab === 'poster' && currentSector) {
+    setTimeout(() => renderSectorPoster(currentSector), 100);
+  }
+}
+
+// ==================== 板块龙头 localStorage 缓存 ====================
+function getSectorCacheKey(query) {
+  return SECTOR_CACHE_PREFIX + query;
+}
+
+function getCachedSector(query) {
+  try {
+    const raw = localStorage.getItem(getSectorCacheKey(query));
+    if (!raw) return null;
+    const { data, ts } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) {
+      localStorage.removeItem(getSectorCacheKey(query));
+      return null;
+    }
+    console.log(`[localStorage CACHE HIT] sector:${query}`);
+    return data;
+  } catch (e) {
+    return null;
+  }
+}
+
+function cacheSector(query, data) {
+  try {
+    localStorage.setItem(getSectorCacheKey(query), JSON.stringify({ data, ts: Date.now() }));
+    console.log(`[localStorage CACHED] sector:${query}`);
+  } catch (e) {
+    console.warn('[localStorage] 板块缓存写入失败:', e);
+  }
+}
+
+// ==================== 板块龙头海报绘制 ====================
+const SECTOR_PAGE_W = 430;
+
+function renderSectorPoster(data) {
+  const container = document.getElementById('sector-poster-pages');
+  container.innerHTML = '';
+  const dpr = window.devicePixelRatio || 1;
+  const W = SECTOR_PAGE_W;
+
+  // ===== 第1页：封面 =====
+  const coverH = 540;
+  const coverLabel = document.createElement('div');
+  coverLabel.className = 'poster-page-label';
+  coverLabel.textContent = '封面';
+  container.appendChild(coverLabel);
+  const coverCanvas = document.createElement('canvas');
+  coverCanvas.className = 'poster-canvas-item';
+  coverCanvas.id = 'sector-poster-cover';
+  coverCanvas.width = W * dpr; coverCanvas.height = coverH * dpr;
+  coverCanvas.style.width = W + 'px'; coverCanvas.style.height = coverH + 'px';
+  container.appendChild(coverCanvas);
+  const ctxCover = coverCanvas.getContext('2d');
+  ctxCover.scale(dpr, dpr);
+  drawSectorCoverPage(ctxCover, data, W, coverH);
+
+  // ===== 第2页：中军 =====
+  const centerH = estimateSectorLeaderHeight(data.center.companies);
+  const centerLabel = document.createElement('div');
+  centerLabel.className = 'poster-page-label';
+  centerLabel.textContent = (data.center.title || '中军（趋势龙头）');
+  container.appendChild(centerLabel);
+  const centerCanvas = document.createElement('canvas');
+  centerCanvas.className = 'poster-canvas-item';
+  centerCanvas.id = 'sector-poster-center';
+  centerCanvas.width = W * dpr; centerCanvas.height = centerH * dpr;
+  centerCanvas.style.width = W + 'px'; centerCanvas.style.height = centerH + 'px';
+  container.appendChild(centerCanvas);
+  const ctxCenter = centerCanvas.getContext('2d');
+  ctxCenter.scale(dpr, dpr);
+  drawSectorLeaderPage(ctxCenter, data, data.center, W, centerH, '#6c63ff', '中军（趋势龙头）');
+
+  // ===== 第3页：前锋 =====
+  const vanH = estimateSectorLeaderHeight(data.vanguard.companies);
+  const vanLabel = document.createElement('div');
+  vanLabel.className = 'poster-page-label';
+  vanLabel.textContent = (data.vanguard.title || '前锋（情绪龙头）');
+  container.appendChild(vanLabel);
+  const vanCanvas = document.createElement('canvas');
+  vanCanvas.className = 'poster-canvas-item';
+  vanCanvas.id = 'sector-poster-vanguard';
+  vanCanvas.width = W * dpr; vanCanvas.height = vanH * dpr;
+  vanCanvas.style.width = W + 'px'; vanCanvas.style.height = vanH + 'px';
+  container.appendChild(vanCanvas);
+  const ctxVan = vanCanvas.getContext('2d');
+  ctxVan.scale(dpr, dpr);
+  drawSectorLeaderPage(ctxVan, data, data.vanguard, W, vanH, '#ef4444', '前锋（情绪龙头）');
+}
+
+function estimateSectorLeaderHeight(companies) {
+  const FOOTER_H = 24;
+  const TOP_H = 52;
+  const ROW_H = 56;
+  const PAD = 16;
+  return TOP_H + companies.length * ROW_H + PAD + FOOTER_H;
+}
+
+/** 封面页 */
+function drawSectorCoverPage(ctx, data, W, H) {
+  const color = data.color;
+  const g1 = data.gradient[0], g2 = data.gradient[1];
+
+  // 背景
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, g1); bg.addColorStop(1, g2);
+  ctx.fillStyle = bg;
+  roundRect(ctx, 0, 0, W, H, 0);
+  ctx.fill();
+
+  // 装饰圆
+  ctx.save();
+  ctx.globalAlpha = 0.08;
+  for (let i = 0; i < 5; i++) {
+    ctx.beginPath();
+    ctx.arc(W * 0.8 + Math.random()*W*0.3, Math.random()*H, 30 + Math.random()*80, 0, Math.PI*2);
+    ctx.fillStyle = '#fff'; ctx.fill();
+  }
+  ctx.restore();
+
+  // 标题区
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold 28px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(`${data.name}`, W/2, H * 0.22);
+  
+  ctx.font = `bold 18px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.fillText(`板块龙头分析`, W/2, H * 0.31);
+
+  // 分割线
+  ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(W*0.2, H*0.38);
+  ctx.lineTo(W*0.8, H*0.38);
+  ctx.stroke();
+
+  // 双卡片：中军 & 前锋
+  const cardW = (W - 48) / 2;
+  const cardY = H * 0.43;
+  const cardH = H * 0.36;
+  
+  // 中军卡片
+  ctx.save();
+  ctx.globalAlpha = 0.15;
+  roundRect(ctx, 16, cardY, cardW, cardH, 14);
+  ctx.fillStyle = '#ffffff'; ctx.fill();
+  ctx.restore();
+  roundRect(ctx, 16, cardY, cardW, cardH, 14);
+  ctx.strokeStyle = 'rgba(255,255,255,0.4)'; ctx.lineWidth = 1.5; ctx.stroke();
+  
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold 16px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText('🏛️ 中军', 16 + cardW/2, cardY + 36);
+  ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.globalAlpha = 0.8;
+  ctx.fillText('趋势龙头 · 机构青睐', 16 + cardW/2, cardY + 58);
+  ctx.globalAlpha = 1;
+  
+  // 列出中军公司名
+  ctx.font = `13px "PingFang SC", "苹方-简", sans-serif`;
+  let cy = cardY + 85;
+  data.center.companies.slice(0, 4).forEach((c, i) => {
+    ctx.fillText(`• ${c.name}`, 16 + cardW/2, cy + i * 28);
+  });
+  if (data.center.companies.length > 4) {
+    ctx.font = `11px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.globalAlpha = 0.6;
+    ctx.fillText(`等 ${data.center.companies.length} 家`, 16 + cardW/2, cy + 4 * 28);
+    ctx.globalAlpha = 1;
+  }
+
+  // 前锋卡片
+  ctx.save();
+  ctx.globalAlpha = 0.15;
+  roundRect(ctx, 24 + cardW, cardY, cardW, cardH, 14);
+  ctx.fillStyle = '#ffffff'; ctx.fill();
+  ctx.restore();
+  roundRect(ctx, 24 + cardW, cardY, cardW, cardH, 14);
+  ctx.strokeStyle = 'rgba(255,255,255,0.4)'; ctx.lineWidth = 1.5; ctx.stroke();
+  
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold 16px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText('⚔️ 前锋', 24 + cardW + cardW/2, cardY + 36);
+  ctx.font = `12px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.globalAlpha = 0.8;
+  ctx.fillText('情绪龙头 · 游资偏爱', 24 + cardW + cardW/2, cardY + 58);
+  ctx.globalAlpha = 1;
+  
+  ctx.font = `13px "PingFang SC", "苹方-简", sans-serif`;
+  cy = cardY + 85;
+  data.vanguard.companies.slice(0, 4).forEach((c, i) => {
+    ctx.fillText(`• ${c.name}`, 24 + cardW + cardW/2, cy + i * 28);
+  });
+  if (data.vanguard.companies.length > 4) {
+    ctx.font = `11px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.globalAlpha = 0.6;
+    ctx.fillText(`等 ${data.vanguard.companies.length} 家`, 24 + cardW + cardW/2, cy + 4 * 28);
+    ctx.globalAlpha = 1;
+  }
+
+  // 底部说明
+  ctx.font = `10px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.fillStyle = 'rgba(255,255,255,0.5)';
+  ctx.textAlign = 'center';
+  const td = new Date();
+  ctx.fillText(
+    `板块龙头分析工具 · ${td.getFullYear()}年${td.getMonth()+1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`,
+    W/2, H - 18
+  );
+  ctx.textAlign = 'left';
+}
+
+/** 龙头列表页（中军/前锋共用） */
+function drawSectorLeaderPage(ctx, data, leaderData, W, H, accentColor, titleText) {
+  const PAD = 16;
+  const FOOTER_H = 24;
+  const TOP_H = 52;
+  const ROW_H = 56;
+
+  // 浅色背景
+  const bg = ctx.createLinearGradient(0, 0, 0, H);
+  bg.addColorStop(0, '#cfe8fb');
+  bg.addColorStop(0.4, '#e3f2fd');
+  bg.addColorStop(1, '#f5fbff');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // 顶部标题栏
+  const topGrad = ctx.createLinearGradient(0, 0, W, 0);
+  topGrad.addColorStop(0, accentColor);
+  topGrad.addColorStop(1, accentColor === '#6c63ff' ? '#4f46e5' : '#dc2626');
+  ctx.fillStyle = topGrad;
+  roundRect(ctx, 0, 0, W, TOP_H, [0, 0, 14, 14]);
+  ctx.fill();
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `bold 17px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(`${data.name} · ${titleText}`, W/2, TOP_H/2);
+  ctx.textBaseline = 'alphabetic';
+  ctx.textAlign = 'left';
+
+  // 公司列表
+  let y = TOP_H + 8;
+  leaderData.companies.forEach((company, ci) => {
+    // 卡片背景
+    ctx.save();
+    ctx.shadowColor = 'rgba(15,23,42,0.06)';
+    ctx.shadowBlur = 5; ctx.shadowOffsetY = 1;
+    roundRect(ctx, PAD, y, W - PAD*2, ROW_H - 4, 10);
+    ctx.fillStyle = '#ffffff'; ctx.fill();
+    ctx.restore();
+    roundRect(ctx, PAD, y, W - PAD*2, ROW_H - 4, 10);
+    ctx.strokeStyle = '#d0d7e5'; ctx.lineWidth = 1; ctx.stroke();
+
+    // 左侧色条
+    ctx.fillStyle = accentColor;
+    roundRect(ctx, PAD, y, 4, ROW_H - 4, [10, 0, 0, 10]);
+    ctx.fill();
+
+    // 公司名称
+    const textX = PAD + 14;
+    ctx.font = `bold 13px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.fillStyle = '#0f172a';
+    ctx.textBaseline = 'middle';
+    const nameStr = company.name;
+    ctx.fillText(nameStr, textX, y + (ROW_H - 4)/2);
+    const nameW = ctx.measureText(nameStr).width;
+
+    // highlight 说明（右侧截断显示）
+    ctx.font = `11px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.fillStyle = '#64748b';
+    const maxDescX = W - PAD - 10;
+    const desc = fitOneLineWidth(ctx, company.highlight || '', maxDescX - textX - nameW - 10);
+    ctx.textBaseline = 'middle';
+    ctx.fillText(desc, textX, y + (ROW_H - 4)/2 + 17);
+    ctx.textBaseline = 'alphabetic';
+
+    y += ROW_H;
+  });
+
+  // 底部
+  ctx.fillStyle = '#64748b';
+  ctx.font = `9px "PingFang SC", "苹方-简", sans-serif`;
+  ctx.textAlign = 'center';
+  const td = new Date();
+  ctx.fillText(
+    `板块龙头分析工具 · ${td.getFullYear()}年${td.getMonth()+1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`,
+    W/2, H - FOOTER_H/2 + 2
+  );
+  ctx.textAlign = 'left';
+}
+
+function downloadSectorPoster() {
+  if (!currentSector) return;
+  const canvases = document.querySelectorAll('#sector-poster-pages canvas');
+  canvases.forEach((canvas, i) => {
+    setTimeout(() => {
+      const a = document.createElement('a');
+      const labels = ['封面', '中军', '前锋'];
+      a.download = `${currentSector.name}_${labels[i] || ('page'+i)}_${new Date().toLocaleDateString('zh-CN')}.png`;
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    }, i * 300);
+  });
+}
+
+async function copySectorPoster() {
+  const canvas = document.getElementById('sector-poster-cover');
+  if (!canvas) return;
+  try {
+    canvas.toBlob(async (blob) => {
+      const item = new ClipboardItem({ 'image/png': blob });
+      await navigator.clipboard.write([item]);
+      alert('✅ 已复制封面海报到剪贴板！');
+    });
+  } catch (e) {
+    alert('❌ 复制失败，请使用下载功能');
+  }
 }
 
 async function copyPoster() {
