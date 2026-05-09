@@ -776,18 +776,7 @@ function doSearch() {
 }
 
 function doIndustrySearch(query) {
-  // 先尝试本地数据
-  const localData = searchIndustry(query);
-  if (localData) {
-    setTimeout(() => {
-      document.getElementById('loading').classList.remove('show');
-      currentIndustry = localData;
-      renderResult(localData, 'local');
-    }, 400);
-    return;
-  }
-
-  // 本地未命中 → 尝试 localStorage 缓存
+  // 先尝试 localStorage 缓存
   const cachedData = getCachedIndustry(query);
   if (cachedData) {
     setTimeout(() => {
@@ -865,6 +854,14 @@ function updateIndustryLoading(text) {
   const el = document.querySelector('#loading .loading-text');
   if (el) el.textContent = text;
 }
+
+// AI 模型来源标签（产业链分析和板块龙头共用）
+const MODEL_LABELS = {
+  kimi: 'Kimi（Moonshot）',
+  deepseek: 'DeepSeek',
+  cache: '本地缓存',
+  local: '本地数据',
+};
 
 // ===========================
 // 渲染结果
@@ -1889,11 +1886,6 @@ function clearAllAICache() {
 }
 
 // ==================== 板块龙头 AI 接口调用 ====================
-const MODEL_LABELS = {
-  kimi: 'Kimi（Moonshot）',
-  deepseek: 'DeepSeek',
-  cache: '本地缓存',
-};
 
 function fetchAISector(sectorName) {
   lastAIQuery = sectorName;
