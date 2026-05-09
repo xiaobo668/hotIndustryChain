@@ -618,7 +618,7 @@
           <input class="search-input" id="search-input" type="text"
             placeholder="输入行业/板块名称，如：半导体、AI算力、低空经济、机器人..."
             autocomplete="off" />
-          <button class="search-btn" id="search-btn" onclick="doSearch()">分析 →</button>
+          <button class="search-btn" id="search-btn" onclick="doSearch(document.getElementById('search-input').value)">分析 →</button>
         </div>
 
         <div class="hotkeys" id="hotkeys">
