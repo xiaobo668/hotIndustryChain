@@ -160,6 +160,27 @@ function switchTab(tab, btn) {
   // tab === 'table' 时默认显示产业链头部，隐藏板块头部
   if (tab === 'table') {
     document.getElementById('sector-header').style.display = 'none';
+    document.getElementById('xhs-header').style.display = 'none';
+  }
+
+  // 小红书模块的tab处理
+  if (tab === 'xhs-preview' && currentXHSData) {
+    // 显示小红书头部，隐藏其他
+    document.getElementById('industry-header').style.display = 'none';
+    document.getElementById('sector-header').style.display = 'none';
+    document.getElementById('xhs-header').style.display = '';
+  }
+  if (tab === 'xhs-poster' && currentXHSData) {
+    // 显示小红书头部 + 渲染海报
+    document.getElementById('industry-header').style.display = 'none';
+    document.getElementById('sector-header').style.display = 'none';
+    document.getElementById('xhs-header').style.display = '';
+    setTimeout(() => renderXHSPoster(currentXHSData, window._xhsCurrentCategory || 'pet-cat'), 100);
+  }
+  // 非小红书tab时恢复产业链头部显示
+  if (tab !== 'xhs-preview' && tab !== 'xhs-poster') {
+    document.getElementById('industry-header').style.display = '';
+    document.getElementById('xhs-header').style.display = 'none';
   }
 }
 

@@ -13,9 +13,10 @@ function doSearch(query) {
   if (!query || !query.trim()) return;
   query = query.trim();
 
-  // 隐藏无关 UI
+  // 隐藏无关 UI（同时隐藏小红书结果区）
   document.getElementById('welcome').style.display = 'none';
   document.getElementById('result').classList.remove('show');
+  document.getElementById('xhs-result').classList.remove('show');
   document.getElementById('not-found').classList.remove('show');
   document.getElementById('ai-error').classList.remove('show');
   document.getElementById('loading').classList.add('show');

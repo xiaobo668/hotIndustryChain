@@ -1,0 +1,166 @@
+/**
+ * 小红书 UI 模块 (xiaohongshu/ui.js)
+ * - switchModule(module): 产业链/小红书模块切换（完全隔离，含 header）
+ * - switchXHSTab(tabId, btn): 小红书内部 tab 切换（FAQ预览 / 海报）
+ * - initXHSUI(): 初始化小红书欢迎页（领域选择器 + 选题列表）
+ * - selectXHSCategory(categoryId): 选择领域
+ * - renderXHSTopics(categoryId): 渲染选题卡片
+ *
+ * 依赖：XHS_TOPICS, getXHSCategories, getXHSTopics（topics.js）
+ *       doXHSSearch（search.js）
+ */
+
+/** 当前选中的领域 */
+let currentXHSCategory = 'pet-cat';
+
+/** 当前激活的模块 */
+let currentModule = 'industry';
+
+/**
+ * 初始化（页面加载后调用）
+ */
+function initXHSUI() {
+  renderXHSCategorySelector();
+  renderXHSTopics(currentXHSCategory);
+}
+
+/**
+ * 模块切换：产业链分析 ↔ 小红书创作
+ *
+ * 布局结构：
+ *   Header（两行）:
+ *     第一行: [🏭 产业链分析] [📕 小红书创作]  ← 模块 tab 居中
+ *     第二行: 各自的 logo + 搜索框 + 热门标签    ← 随模块切换
+ *
+ *   Main 内容区（两个完全独立的 welcome）:
+ *     #welcome-industry → 产业链欢迎页（icon+标题+描述+快捷卡片）
+ *     #welcome-xhs      → 小红书欢迎页（icon+标题+描述+领域选择+选题列表）
+ */
+function switchModule(module) {
+  if (currentModule === module) return;
+  currentModule = module;
+
+  // ===== 1. 更新 Header 模块 tab 按钮 =====
+  document.querySelectorAll('#module-tabs .module-tab-btn').forEach(b => b.classList.remove('active'));
+  const activeBtn = document.getElementById('tab-' + module);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  // ===== 2. 切换 Header 第二行内容 =====
+  const headerIndustry = document.getElementById('header-industry');
+  const headerXHS = document.getElementById('header-xhs');
+
+  if (module === 'industry') {
+    if (headerIndustry) headerIndustry.style.display = 'flex';
+    if (headerXHS) headerXHS.style.display = 'none';
+  } else {
+    if (headerIndustry) headerIndustry.style.display = 'none';
+    if (headerXHS) headerXHS.style.display = 'flex';
+  }
+
+  // ===== 3. 切换 Welcome 区域（两个完全独立的 welcome 容器）=====
+  const welcomeIndustry = document.getElementById('welcome-industry');
+  const welcomeXHS = document.getElementById('welcome-xhs');
+  const welcomeContainer = document.getElementById('welcome');
+
+  if (module === 'industry') {
+    // 显示产业链 welcome，隐藏小红书 welcome
+    if (welcomeIndustry) welcomeIndustry.style.display = '';
+    if (welcomeXHS) welcomeXHS.style.display = 'none';
+    if (welcomeContainer) welcomeContainer.style.display = '';
+
+    // 隐藏所有结果区
+    document.getElementById('result').classList.remove('show');
+    document.getElementById('xhs-result').classList.remove('show');
+    document.getElementById('loading').classList.remove('show');
+    document.getElementById('not-found').classList.remove('show');
+    document.getElementById('ai-error').classList.remove('show');
+
+  } else if (module === 'xhs') {
+    // 显示小红书 welcome，隐藏产业链 welcome
+    if (welcomeIndustry) welcomeIndustry.style.display = 'none';
+    if (welcomeXHS) welcomeXHS.style.display = '';
+    if (welcomeContainer) welcomeContainer.style.display = '';
+
+    // 隐藏所有结果区
+    document.getElementById('result').classList.remove('show');
+    document.getElementById('xhs-result').classList.remove('show');
+    document.getElementById('loading').classList.remove('show');
+    document.getElementById('not-found').classList.remove('show');
+    document.getElementById('ai-error').classList.remove('show');
+
+    // 初始化小红书 UI
+    initXHSUI();
+  }
+}
+
+/**
+ * 小红书内部 Tab 切换（FAQ预览 ↔ 海报）
+ * 独立于产业链的 switchTab，只操作 #xhs-result 内部的 view panels
+ */
+function switchXHSTab(tabId, btn) {
+  // 更新按钮状态
+  document.querySelectorAll('#xhs-tabs .xhs-tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  // 切换 view panel
+  document.querySelectorAll('#xhs-result .view-panel').forEach(p => p.classList.remove('active'));
+  const targetPanel = document.getElementById('view-' + tabId);
+  if (targetPanel) targetPanel.classList.add('active');
+
+  // 如果切到海报 tab 且还没渲染过海报，则自动渲染
+  if (tabId === 'xhs-poster' && window._xhsCurrentData) {
+    const posterContainer = document.getElementById('xhs-poster-pages');
+    if (posterContainer && posterContainer.children.length === 0) {
+      renderXHSPoster(window._xhsCurrentData, window._xhsCurrentCategory || 'pet-cat');
+    }
+  }
+}
+
+/**
+ * 渲染领域选择按钮组
+ */
+function renderXHSCategorySelector() {
+  const container = document.getElementById('xhs-category-selector');
+  if (!container) return;
+
+  const categories = getXHSCategories();
+  container.innerHTML = categories.map(cat => `
+    <button class="xhs-cat-btn ${cat.id === currentXHSCategory ? 'active' : ''}"
+      onclick="selectXHSCategory('${cat.id}')"
+      style="${cat.id === currentXHSCategory ? '' : ''}">
+      ${cat.icon} ${cat.name.replace(/\s/g, '')}
+    </button>
+  `).join('');
+}
+
+/**
+ * 选择领域
+ */
+function selectXHSCategory(categoryId) {
+  currentXHSCategory = categoryId;
+
+  // 更新按钮状态
+  document.querySelectorAll('.xhs-cat-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.includes(XHS_TOPICS[categoryId]?.name?.replace(/\s/g, '') || ''));
+  });
+
+  // 更新选题列表
+  renderXHSTopics(categoryId);
+}
+
+/**
+ * 渲染某领域的选题卡片
+ */
+function renderXHSTopics(categoryId) {
+  const container = document.getElementById('xhs-topic-list');
+  if (!container) return;
+
+  const topics = getXHSTopics(categoryId);
+
+  container.innerHTML = topics.map(topic => `
+    <div class="xhs-topic-card" onclick="doXHSSearch('${categoryId}', '${topic.id}')">
+      <div class="xhs-topic-card-title">${topic.title}</div>
+      <div class="xhs-topic-card-sub">${topic.subtitle}</div>
+    </div>
+  `).join('');
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>产业链分析工具</title>
+  <title>产业链分析 & 小红书内容生成</title>
   <!-- ECharts CDN -->
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
   <style>
@@ -33,7 +33,7 @@
     .header {
       background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
       border-bottom: 1px solid var(--border);
-      padding: 24px 32px;
+      padding: 16px 32px;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -42,6 +42,18 @@
     .header-inner {
       max-width: 1400px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    /* Header 第一行：模块切换 tab 居中 */
+    .header-top {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 4px;
+    }
+    /* Header 第二行：各模块内容（logo+搜索+标签）*/
+    .header-body {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -378,6 +390,194 @@
       font-size: 11px; font-weight: 600; font-family: 'SF Mono', Monaco, monospace;
     }
 
+    /* ===== XHS 小红书模块（完全独立） ===== */
+    /* 小红书结果区 */
+    #xhs-result { display: none; }
+    #xhs-result.show { display: block; }
+
+    /* 小红书头部 */
+    .xhs-result-header {
+      background: linear-gradient(135deg, rgba(255,107,107,0.12), rgba(255,142,142,0.06));
+      border: 1px solid rgba(255,107,107,0.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .xhs-result-header::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      opacity: 0.05;
+    }
+    .xhs-header-content { position: relative; z-index: 1; }
+    .xhs-result-title { font-size: 26px; font-weight: 800; letter-spacing: 0.5px; }
+    .xhs-result-desc { color: var(--text-muted); font-size: 14px; margin-top: 8px; line-height: 1.7; max-width: 700px; }
+    .xhs-result-stats {
+      display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .xhs-stat-num { font-size: 22px; font-weight: 700; color: #FF6B6B; }
+    .xhs-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* 小红书 Tab 系统（独立风格） */
+    .xhs-tabs {
+      display: flex; gap: 4px; margin-bottom: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 4px;
+      width: fit-content;
+    }
+    .xhs-tab-btn {
+      padding: 8px 20px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 14px; font-weight: 500;
+      border-radius: 9px; cursor: pointer; transition: all 0.2s;
+    }
+    .xhs-tab-btn.active {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      color: #fff;
+    }
+    .xhs-tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
+
+    /* 小红书 FAQ 预览区 */
+    .xhs-faq-list { padding: 8px 0; }
+    .xhs-faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+    .xhs-faq-item:hover { border-color: rgba(255,107,107,0.3); }
+    .xhs-faq-q {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 10px;
+    }
+    .xhs-q-num {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    .xhs-q-text {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      flex: 1;
+    }
+    .xhs-tag {
+      display: inline-block; padding: 2px 10px; border-radius: 12px;
+      font-size: 11px; font-weight: 600; white-space: nowrap;
+    }
+    .xhs-faq-a {
+      font-size: 14px; color: var(--text-muted); line-height: 1.7;
+      padding-left: 44px;
+    }
+
+    /* 小红书补充提醒 */
+    .xhs-tips-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+    .xhs-tips-title {
+      font-size: 16px; font-weight: 700; color: #F59E0B;
+      margin-bottom: 12px;
+    }
+    .xhs-tip-item {
+      font-size: 14px; color: var(--text-muted);
+      line-height: 1.7; margin-bottom: 6px;
+    }
+
+    /* 小红书结尾 */
+    .xhs-footer-text {
+      text-align: center; font-size: 14px; color: var(--accent2);
+      padding: 16px; margin-top: 12px;
+      background: var(--surface); border-radius: 12px;
+      border: 1px dashed var(--border);
+    }
+    .xhs-hashtags {
+      text-align: center; font-size: 13px; color: var(--text-muted);
+      padding: 12px 0; margin-top: 8px;
+    }
+
+    /* 小红书选题选择器 */
+    .xhs-topic-selector {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 24px;
+    }
+    .xhs-cat-btn {
+      padding: 8px 18px; border-radius: 20px; border: 1.5px solid var(--border);
+      background: transparent; color: var(--text-muted);
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .xhs-cat-btn:hover { border-color: var(--accent); color: var(--text); }
+    .xhs-cat-btn.active {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+      border-color: transparent; color: #fff;
+    }
+
+    /* 小红书选题列表 */
+    .xhs-topic-list {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px; margin-bottom: 24px;
+    }
+    .xhs-topic-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px;
+      cursor: pointer; transition: all 0.2s;
+      text-align: left;
+    }
+    .xhs-topic-card:hover {
+      border-color: #FF6B6B; background: rgba(255,107,107,0.08);
+      transform: translateY(-1px);
+    }
+    .xhs-topic-card-title {
+      font-size: 14px; font-weight: 600; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .xhs-topic-card-sub {
+      font-size: 12px; color: var(--text-muted);
+    }
+
+    /* 模块切换 Tab */
+    .module-tabs {
+      display: flex; gap: 4px; margin-bottom: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 4px;
+      width: fit-content; margin-left: auto; margin-right: auto;
+    }
+    .module-tab-btn {
+      padding: 8px 22px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 14px; font-weight: 600;
+      border-radius: 9px; cursor: pointer; transition: all 0.2s;
+    }
+    .module-tab-btn.active {
+      background: var(--accent); color: #fff;
+    }
+    .module-tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
+
+    /* ===== Header 模块化 ===== */
+    /* 产业链 header 内容 */
+    #header-industry { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+    /* 小红书 header 内容 */
+    #header-xhs { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+
+    /* 小红书 header 搜索框样式 */
+    .xhs-search-btn {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+    }
+    .xhs-hotkey-tag {
+      background: rgba(255,107,107,0.15);
+      border: 1px solid rgba(255,107,107,0.35);
+      color: #FF6B6B;
+    }
+    .xhs-hotkey-tag:hover { background: rgba(255,107,107,0.3); }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .main { padding: 16px; }
@@ -392,35 +592,81 @@
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-icon">🔗</div>
-      <div>
-        <div class="logo-text">产业链 & 板块龙头分析</div>
-        <div class="logo-sub">Industry Chain & Sector Leader Analyzer</div>
+
+    <!-- 第一行：模块切换 Tab（居中置顶）-->
+    <div class="header-top">
+      <div class="module-tabs" id="module-tabs">
+        <button class="module-tab-btn active" onclick="switchModule('industry')" id="tab-industry">🏭 产业链分析</button>
+        <button class="module-tab-btn" onclick="switchModule('xhs')" id="tab-xhs">📕 小红书创作</button>
       </div>
     </div>
 
-    <div class="search-wrap">
-      <input class="search-input" id="search-input" type="text"
-        placeholder="输入行业/板块名称，如：半导体、AI算力、低空经济、机器人..."
-        autocomplete="off" />
-      <button class="search-btn" id="search-btn" onclick="doSearch()">分析 →</button>
-    </div>
+    <!-- 第二行：各模块的搜索区域 -->
+    <div class="header-body">
 
-    <div class="hotkeys" id="hotkeys">
-      <span class="hotkey-label">热门：</span>
-      <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
-      <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
-      <span class="hotkey-tag" onclick="quickSearch('算力租赁')">算力租赁</span>
-      <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
-      <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
-      <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
-      <span class="hotkey-tag" onclick="quickSearch('低空经济')">低空经济</span>
-      <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
-      <span class="hotkey-tag" onclick="quickSearch('光伏')">光伏</span>
-      <span class="hotkey-tag" onclick="quickSearch('华为概念')">华为概念</span>
-      <span class="hotkey-tag" onclick="quickSearch('固态电池')">固态电池</span>
-    </div>
+      <!-- ===== 产业链模块：logo + 搜索框 + 热门标签 ===== -->
+      <div id="header-industry">
+        <div class="logo">
+          <div class="logo-icon">🔗</div>
+          <div>
+            <div class="logo-text">产业链 & 板块龙头 分析</div>
+            <div class="logo-sub">Industry Chain & Sector Leader Analyzer</div>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <input class="search-input" id="search-input" type="text"
+            placeholder="输入行业/板块名称，如：半导体、AI算力、低空经济、机器人..."
+            autocomplete="off" />
+          <button class="search-btn" id="search-btn" onclick="doSearch()">分析 →</button>
+        </div>
+
+        <div class="hotkeys" id="hotkeys">
+          <span class="hotkey-label">热门：</span>
+          <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
+          <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
+          <span class="hotkey-tag" onclick="quickSearch('算力租赁')">算力租赁</span>
+          <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
+          <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
+          <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
+          <span class="hotkey-tag" onclick="quickSearch('低空经济')">低空经济</span>
+          <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
+          <span class="hotkey-tag" onclick="quickSearch('光伏')">光伏</span>
+          <span class="hotkey-tag" onclick="quickSearch('华为概念')">华为概念</span>
+          <span class="hotkey-tag" onclick="quickSearch('固态电池')">固态电池</span>
+        </div>
+      </div>
+
+      <!-- ===== 小红书模块：logo + 搜索框 + 热门标签 ===== -->
+      <div id="header-xhs">
+        <div class="logo">
+          <div class="logo-icon" style="background:linear-gradient(135deg,#FF6B6B,#FF8E8E)">📕</div>
+          <div>
+            <div class="logo-text">小红书 FAQ 内容创作</div>
+            <div class="logo-sub">Xiaohongshu FAQ Content Creator</div>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <input class="search-input" id="xhs-search-input" type="text"
+            placeholder="选择领域和选题开始创作..."
+            autocomplete="off" />
+          <button class="search-btn xhs-search-btn" onclick="alert('请从下方选择领域和选题开始创作 ✨')">创作 →</button>
+        </div>
+
+        <div class="hotkeys" id="xhs-hotkeys">
+          <span class="hotkey-label">热门领域：</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('pet-cat')">🐱 养猫</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('pet-dog')">🐶 养狗</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('digital')">📱 数码</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('cooking')">🍳 烹饪</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('fitness')">💪 健身</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('baby')">👶 育儿</span>
+          <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('finance')">💰 理财</span>
+        </div>
+      </div>
+
+    </div><!-- /header-body -->
   </div>
 </header>
 
@@ -429,7 +675,9 @@
 
   <!-- WELCOME -->
   <div id="welcome">
-    <div class="welcome">
+
+    <!-- ===== 产业链模块 Welcome（完全独立）==== -->
+    <div id="welcome-industry" class="welcome">
       <div class="welcome-icon">🏭</div>
       <h2>产业链 & 板块龙头 深度分析</h2>
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
@@ -492,6 +740,20 @@
         </div>
       </div>
     </div>
+
+    <!-- ===== 小红书模块 Welcome（完全独立）==== -->
+    <div id="welcome-xhs" class="welcome" style="display:none">
+      <div class="welcome-icon" style="font-size:64px;margin-bottom:20px">📕</div>
+      <h2>小红书 FAQ 内容生成器</h2>
+      <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:500px;margin:0 auto">选择领域和选题，AI 自动生成<strong>高质量 FAQ 内容</strong>，一键生成小红书风格海报<br/><span style="color:#FF6B6B;font-size:13px">✨ Kimi AI 创作 · 养猫/养狗/数码/烹饪/健身/育儿/理财 · 70+ 精选选题</span></p>
+
+      <!-- 领域选择按钮组 -->
+      <div class="xhs-topic-selector" id="xhs-category-selector"></div>
+
+      <!-- 选题列表 -->
+      <div class="xhs-topic-list" id="xhs-topic-list" style="margin-top:24px;max-width:900px;margin-left:auto;margin-right:auto"></div>
+    </div>
+
   </div>
 
   <!-- LOADING -->
@@ -538,13 +800,13 @@
       </div>
     </div>
 
-    <!-- 统一 TABS（5个）-->
+    <!-- 统一 TABS（产业链5个）-->
     <div class="tabs" id="main-tabs">
-      <button class="tab-btn active" onclick="switchTab('table', this)">📋 产业链表格</button>
-      <button class="tab-btn" onclick="switchTab('mindmap', this)">🗺️ 思维导图</button>
-      <button class="tab-btn" onclick="switchTab('poster', this)">🎨 产业链海报</button>
-      <button class="tab-btn" onclick="switchTab('leader', this)">⚔️ 龙头一览</button>
-      <button class="tab-btn" onclick="switchTab('sector-poster', this)">🐂 龙头海报</button>
+      <button class="tab-btn active" data-tab="table" onclick="switchTab('table', this)">📋 产业链表格</button>
+      <button class="tab-btn" data-tab="mindmap" onclick="switchTab('mindmap', this)">🗺️ 思维导图</button>
+      <button class="tab-btn" data-tab="poster" onclick="switchTab('poster', this)">🎨 产业链海报</button>
+      <button class="tab-btn" data-tab="leader" onclick="switchTab('leader', this)">⚔️ 龙头一览</button>
+      <button class="tab-btn" data-tab="sector-poster" onclick="switchTab('sector-poster', this)">🐂 龙头海报</button>
     </div>
 
     <!-- 表格视图 -->
@@ -601,6 +863,41 @@
         </div>
       </div>
     </div>
+
+  </div>
+
+  <!-- ===== 小红书独立结果区（与产业链完全分离）==== -->
+  <div id="xhs-result">
+    <!-- 小红书头部 -->
+    <div class="xhs-result-header" id="xhs-header">
+      <div class="xhs-header-content">
+        <div class="xhs-result-title" id="xhs-title"></div>
+        <div class="xhs-result-desc" id="xhs-desc"></div>
+        <div class="xhs-result-stats" id="xhs-stats"></div>
+      </div>
+    </div>
+
+    <!-- 小红书独立 TABS -->
+    <div class="xhs-tabs" id="xhs-tabs">
+      <button class="xhs-tab-btn active" data-tab="xhs-preview" onclick="switchXHSTab('xhs-preview', this)">📝 FAQ预览</button>
+      <button class="xhs-tab-btn" data-tab="xhs-poster" onclick="switchXHSTab('xhs-poster', this)">📕 小红书海报</button>
+    </div>
+
+    <!-- 小红书 FAQ 预览视图 -->
+    <div id="view-xhs-preview" class="view-panel active">
+      <div id="xhs-preview-content"></div>
+    </div>
+
+    <!-- 小红书海报视图 -->
+    <div id="view-xhs-poster" class="view-panel">
+      <div class="poster-wrap" id="xhs-poster-wrap">
+        <div id="xhs-poster-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadXHSPoster()" style="background:linear-gradient(135deg,#FF6B6B,#FF8E8E)">⬇️ 下载小红书海报</button>
+          <button class="btn btn-secondary" onclick="copyXHSPoster()">📋 复制到剪贴板</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 </main>
@@ -628,5 +925,12 @@
 <!-- 4. 板块龙头模块 -->
 <script src="js/sector/search.js"></script>
 <script src="js/sector/render.js"></script>
+
+<!-- 5. 小红书创作模块 -->
+<script src="js/xiaohongshu/topics.js"></script>
+<script src="js/xiaohongshu/api.js"></script>
+<script src="js/xiaohongshu/search.js"></script>
+<script src="js/xiaohongshu/render.js"></script>
+<script src="js/xiaohongshu/ui.js"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@ const API_CONFIG = {
     : 'https://1307599460-iu9hscdc7x.ap-guangzhou.tencentscf.com'),
   industryEndpoint: '/api/industry',
   sectorEndpoint: '/api/sector',
+  xhsEndpoint: '/api/xhs',
   timeout: 30000,
 };
 
