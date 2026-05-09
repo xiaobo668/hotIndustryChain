@@ -1,0 +1,326 @@
+/**
+ * 产业链渲染模块 (industry/render.js)
+ * - renderResult(data, source): 结果总入口
+ * - renderHeader(data, source): 头部信息+统计+AI模型来源
+ * - renderTable(data): 表格渲染
+ * - switchTab(tab, btn): 视图Tab切换（表格/思维导图/海报）
+ * - renderMindMap(data): ECharts思维导图完整实现
+ * - downloadMindMapImage(): 下载思维导图
+ * - findCompany(data, name): 查找企业
+ *
+ * 依赖（已在其他模块中定义的全局函数/变量）：
+ *   stripMindTitleParens, mindRichSafe, wrapMindTrackLabel, lightenColor（utils 模块）
+ *   MODEL_LABELS（全局常量）
+ *   currentIndustry, mindChartInstance（全局变量）
+ *   renderPoster（poster 模块）
+ */
+
+// ===========================
+// 渲染结果
+// ===========================
+function renderResult(data, source) {
+  document.getElementById('result').classList.add('show');
+  renderHeader(data, source);
+  renderTable(data);
+  // 重置到表格tab
+  switchTab('table', document.querySelector('.tab-btn'));
+}
+
+function renderHeader(data, source) {
+  const header = document.getElementById('industry-header');
+  header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
+  header.style.borderLeft = `4px solid ${data.color}`;
+
+  document.getElementById('industry-title').textContent = `📊 ${data.name} 产业链全景图`;
+  document.getElementById('industry-desc').textContent = data.description;
+
+  // 统计
+  const totalCompanies = [
+    ...data.upstream.flatMap(s => s.companies),
+    ...data.midstream.flatMap(s => s.companies),
+    ...data.downstream.flatMap(s => s.companies)
+  ].length;
+
+  const totalSegments = data.upstream.length + data.midstream.length + data.downstream.length;
+
+  // 显示 AI 模型来源
+  const sourceLabel = MODEL_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : 'AI');
+  const sourceColor = source === 'kimi' ? '#ef4444' : source === 'deepseek' ? '#6c63ff' : '#94a3b8';
+
+  document.getElementById('industry-stats').innerHTML = `
+    <div class="stat-item">
+      <div class="stat-num">${totalCompanies}</div>
+      <div class="stat-label">龙头企业</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">${totalSegments}</div>
+      <div class="stat-label">细分赛道</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">产业层次</div>
+    </div>
+    <div class="stat-item" style="min-width:100px">
+      <div class="stat-num" style="font-size:12px;color:${sourceColor}">✦ ${sourceLabel}</div>
+      <div class="stat-label" style="font-size:11px">AI 模型</div>
+    </div>
+  `;
+}
+
+// ===========================
+// 表格渲染
+// ===========================
+function renderTable(data) {
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = '';
+
+  const tiers = [
+    { key: 'upstream', label: '上游', badgeClass: 'tier-up', segments: data.upstream },
+    { key: 'midstream', label: '中游', badgeClass: 'tier-mid', segments: data.midstream },
+    { key: 'downstream', label: '下游', badgeClass: 'tier-down', segments: data.downstream },
+  ];
+
+  tiers.forEach(tier => {
+    tier.segments.forEach((seg, i) => {
+      seg.companies.forEach((company, j) => {
+        const tr = document.createElement('tr');
+
+        // 环节列（只在首个赛道首行显示，合并行）
+        const tierCell = document.createElement('td');
+        if (i === 0 && j === 0) {
+          tierCell.rowSpan = tier.segments.reduce((a, s) => a + s.companies.length, 0);
+          tierCell.innerHTML = `<span class="tier-badge ${tier.badgeClass}">${tier.label}</span>`;
+          tr.appendChild(tierCell);
+        }
+
+        // 细分赛道列（只在首行显示）
+        const segCell = document.createElement('td');
+        if (j === 0) {
+          segCell.rowSpan = seg.companies.length;
+          segCell.textContent = seg.name;
+          segCell.style.fontWeight = '600';
+          segCell.style.color = '#c4c4e0';
+          tr.appendChild(segCell);
+        }
+
+        // 企业列
+        const compCell = document.createElement('td');
+        compCell.innerHTML = `
+          <span class="company-pill">
+            <span class="company-name">${company.name}</span>
+          </span>
+        `;
+        tr.appendChild(compCell);
+
+        // 亮点列
+        const hlCell = document.createElement('td');
+        hlCell.innerHTML = `
+          <div class="highlight-row">
+            <span class="highlight-dot"></span>
+            <span class="highlight-text">${company.highlight}</span>
+          </div>
+        `;
+        tr.appendChild(hlCell);
+
+        tbody.appendChild(tr);
+      });
+    });
+  });
+}
+
+// ===========================
+// TAB 切换
+// ===========================
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`view-${tab}`).classList.add('active');
+
+  if (tab === 'mindmap' && currentIndustry) {
+    setTimeout(() => renderMindMap(currentIndustry), 100);
+  }
+  if (tab === 'poster' && currentIndustry) {
+    setTimeout(() => renderPoster(currentIndustry), 100);
+  }
+}
+
+// ===========================
+// 思维导图（ECharts Tree）
+// ===========================
+// 注：stripMindTitleParens / mindRichSafe / wrapMindTrackLabel 已在 js/utils/text.js 中定义
+
+function renderMindMap(data) {
+  const dom = document.getElementById('mind-chart');
+  if (!mindChartInstance) {
+    mindChartInstance = echarts.init(dom, null, { renderer: 'canvas' });
+  } else {
+    mindChartInstance.clear();
+  }
+
+  // 颜色配置（企业节点黑金；根/层级/赛道横排黑字）
+  const colors = {
+    root: data.color,
+    upstream: '#10b981',
+    midstream: '#6c63ff',
+    downstream: '#ef4444',
+  };
+
+  const companyLabelRich = {
+    name: {
+      color: '#14100a',
+      fontSize: 12,
+      fontWeight: 'bold',
+      lineHeight: 18,
+      textBorderColor: '#c9a227',
+      textBorderWidth: 0.85,
+    },
+  };
+
+  const trackLabelRich = {
+    track: {
+      color: '#141414',
+      fontWeight: 'bold',
+      fontSize: 12,
+      lineHeight: 15,
+    },
+  };
+
+  const buildChildren = (segments, tierColor) => segments.map(seg => {
+    const segTitle = stripMindTitleParens(seg.name);
+    return {
+      name: segTitle,
+      itemStyle: { color: tierColor, opacity: 0.8 },
+      label: {
+        formatter: `{track|${mindRichSafe(wrapMindTrackLabel(segTitle))}}`,
+        rich: trackLabelRich,
+      },
+      children: seg.companies.map(c => ({
+        name: c.name,
+        value: c.name,
+        label: {
+          formatter: `{name|${mindRichSafe(stripMindTitleParens(c.name))}}`,
+          rich: companyLabelRich,
+        },
+        itemStyle: { color: lightenColor(tierColor, 40) }
+      }))
+    };
+  });
+
+  const treeData = {
+    name: stripMindTitleParens(data.name) + '\n产业链',
+    itemStyle: { color: colors.root },
+    label: { fontSize: 16, fontWeight: 'bold', color: '#141414' },
+    children: [
+      {
+        name: '⬆ 上游',
+        itemStyle: { color: colors.upstream },
+        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.upstream, colors.upstream)
+      },
+      {
+        name: '⬛ 中游',
+        itemStyle: { color: colors.midstream },
+        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.midstream, colors.midstream)
+      },
+      {
+        name: '⬇ 下游',
+        itemStyle: { color: colors.downstream },
+        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+        children: buildChildren(data.downstream, colors.downstream)
+      }
+    ]
+  };
+
+  const option = {
+    backgroundColor: {
+      type: 'linear',
+      x: 0, y: 0, x2: 0, y2: 1,
+      colorStops: [
+        { offset: 0, color: '#f0f9ff' },
+        { offset: 0.5, color: '#e8f4fc' },
+        { offset: 1, color: '#e0f2fe' },
+      ],
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: (p) => {
+        const d = p.data;
+        const company = findCompany(currentIndustry, d.name);
+        if (company) {
+          return `<b style="color:#1a1510">${stripMindTitleParens(company.name)}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
+        }
+        return typeof d.name === 'string' ? d.name.split('\n').map(stripMindTitleParens).join('\n') : d.name;
+      }
+    },
+    series: [{
+      type: 'tree',
+      data: [treeData],
+      top: '3%', left: '8%', bottom: '3%', right: '20%',
+      symbolSize: 10,
+      orient: 'LR',
+      expandAndCollapse: true,
+      initialTreeDepth: 3,
+      label: {
+        position: 'right',
+        verticalAlign: 'middle',
+        align: 'left',
+        fontSize: 12,
+        color: '#141414',
+      },
+      leaves: {
+        label: {
+          position: 'right',
+          verticalAlign: 'middle',
+          align: 'left',
+        }
+      },
+      lineStyle: { color: 'rgba(59, 130, 246, 0.22)', width: 1.5, curveness: 0.5 },
+      emphasis: {
+        focus: 'descendant'
+      },
+      animationDuration: 550,
+      animationDurationUpdate: 750
+    }]
+  };
+
+  mindChartInstance.setOption(option);
+  window.addEventListener('resize', () => mindChartInstance && mindChartInstance.resize());
+}
+
+function downloadMindMapImage() {
+  if (!currentIndustry) {
+    alert('请先完成行业分析');
+    return;
+  }
+  if (!mindChartInstance) {
+    alert('请切换到「思维导图」标签并稍等加载完成后再下载');
+    return;
+  }
+  try {
+    const url = mindChartInstance.getDataURL({
+      type: 'png',
+      pixelRatio: 2,
+      backgroundColor: '#e8f4fc',
+    });
+    const a = document.createElement('a');
+    a.download = `${currentIndustry.name}_思维导图_${new Date().toLocaleDateString('zh-CN')}.png`;
+    a.href = url;
+    a.click();
+  } catch (e) {
+    alert('导出失败，请重试');
+  }
+}
+
+// lightenColor 已在 js/utils/color.js 中定义
+
+function findCompany(data, name) {
+  const all = [
+    ...data.upstream.flatMap(s => s.companies),
+    ...data.midstream.flatMap(s => s.companies),
+    ...data.downstream.flatMap(s => s.companies)
+  ];
+  return all.find(c => c.name === name);
+}
