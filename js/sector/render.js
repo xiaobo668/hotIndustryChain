@@ -1,21 +1,15 @@
 /**
  * 板块龙头（Sector）- 渲染模块
- * 负责板块龙头结果渲染、表格构建、视图切换及海报绘制
+ * 负责板块龙头结果渲染、表格构建、海报绘制
+ * 注意：Tab 切换已统一到 industry/render.js 的 switchTab() 中
  *
  * 依赖：
  * - utils/canvas.js: roundRect(), fitOneLineWidth()
- * - 全局变量：currentSector, MODEL_LABELS, CACHE_TTL, SECTOR_CACHE_PREFIX
+ * - utils/color.js: shadeColor()
+ * - 全局变量：currentSector, MODEL_LABELS
  */
 
-// ==================== 板块龙头渲染 ====================
-
-function renderSectorResult(data, source) {
-  document.getElementById('sector-result').classList.add('show');
-  renderSectorHeader(data, source);
-  renderLeaderTable(data);
-  // 重置到表格 tab
-  switchSectorViewTab('leader', document.querySelector('#sector-tabs .tab-btn'));
-}
+// ==================== 板块龙头渲染（由 switchTab 调用）====================
 
 function renderSectorHeader(data, source) {
   const header = document.getElementById('sector-header');
@@ -90,17 +84,7 @@ function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
   `;
 }
 
-function switchSectorViewTab(tab, btn) {
-  document.querySelectorAll('#sector-tabs .tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  document.querySelectorAll('#sector-result .view-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById(`view-sector-${tab}`).classList.add('active');
-
-  if (tab === 'poster' && currentSector) {
-    setTimeout(() => renderSectorPoster(currentSector), 100);
-  }
-}
+// switchSectorViewTab 已合并到 industry/render.js 的统一 switchTab() 中
 
 // ==================== 板块龙头海报绘制 ====================
 

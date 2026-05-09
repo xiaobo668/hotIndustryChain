@@ -27,7 +27,7 @@ function fetchAIIndustry(industryName) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
-    updateIndustryLoading('正在连接 AI 服务（Kimi）...');
+    if (typeof updateLoading === 'function') updateLoading('🔗 正在分析产业链（Kimi）...');
 
     fetch(url, {
       method: 'POST',
@@ -41,7 +41,7 @@ function fetchAIIndustry(industryName) {
       if (json.success && json.data) {
         const source = json.source || 'ai';
         const label = MODEL_LABELS[source] || source;
-        updateIndustryLoading(`✨ ${label} 生成完成`);
+        if (typeof updateLoading === 'function') updateLoading(`✨ ${label} 产业链完成`);
         setTimeout(() => resolve({ data: json.data, source }), 300);
       } else {
         reject(new Error(json.error || 'AI 返回数据为空'));
@@ -70,7 +70,7 @@ function fetchAISector(sectorName) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
-    updateSectorLoading('正在连接 AI 服务（Kimi）...');
+    if (typeof updateLoading === 'function') updateLoading('🐂 正在查询板块龙头（Kimi）...');
 
     fetch(url, {
       method: 'POST',
@@ -84,7 +84,7 @@ function fetchAISector(sectorName) {
       if (json.success && json.data) {
         const source = json.source || 'ai';
         const label = MODEL_LABELS[source] || source;
-        updateSectorLoading(`✨ ${label} 生成完成`);
+        if (typeof updateLoading === 'function') updateLoading(`✨ ${label} 龙头完成`);
         setTimeout(() => resolve({ data: json.data, source }), 300);
       } else {
         reject(new Error(json.error || 'AI 返回数据为空'));
@@ -101,29 +101,11 @@ function fetchAISector(sectorName) {
   });
 }
 
-/** 重试上次失败的 AI 请求 */
+/** 重试上次失败的 AI 请求（重新执行完整搜索） */
 function retryAILastQuery() {
   if (!lastAIQuery) return;
   document.getElementById('ai-error').classList.remove('show');
-  document.getElementById('loading').classList.add('show');
-
-  const fetchFn = lastAIMode === 'sector' ? fetchAISector : fetchAIIndustry;
-  const renderFn = lastAIMode === 'sector'
-    ? (d, s) => { cacheSector(lastAIQuery, d); currentSector = d; renderSectorResult(d, s); }
-    : (d, s) => { cacheIndustry(lastAIQuery, d); currentIndustry = d; renderResult(d, s); };
-
-  fetchFn(lastAIQuery)
-    .then(({ data, source }) => {
-      document.getElementById('loading').classList.remove('show');
-      if (data) {
-        if (lastAIMode === 'sector') cacheSector(lastAIQuery, data);
-        else cacheIndustry(lastAIQuery, data);
-        renderFn(data, source);
-      } else {
-        document.getElementById('not-found').classList.add('show');
-      }
-    })
-    .catch(err => showAIError(err.message));
+  doSearch(lastAIQuery);
 }
 
 /** 显示 AI 错误提示 */

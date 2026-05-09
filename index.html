@@ -343,29 +343,7 @@
     #result { display: none; }
     #result.show { display: block; }
 
-    /* ===== MODE SWITCH TABS ===== */
-    .mode-tabs {
-      display: flex; gap: 0; margin-bottom: 0;
-      background: transparent;
-      border: none;
-      padding: 0;
-      width: auto;
-      flex-shrink: 0;
-    }
-    .mode-tab-btn {
-      padding: 8px 18px; border: none; background: transparent;
-      color: var(--text-muted); font-size: 14px; font-weight: 500;
-      border-radius: 8px; cursor: pointer; transition: all 0.2s;
-    }
-    .mode-tab-btn.active {
-      background: rgba(108,99,255,0.15);
-      color: var(--accent2);
-    }
-    .mode-tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
-
-    /* ===== SECTOR RESULT ===== */
-    #sector-result { display: none; }
-    #sector-result.show { display: block; }
+    /* ===== LEADER / SECTOR ===== */
     .leader-section {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -415,22 +393,16 @@
 <header class="header">
   <div class="header-inner">
     <div class="logo">
-      <div class="logo-icon" id="mode-logo-icon">🔗</div>
+      <div class="logo-icon">🔗</div>
       <div>
-        <div class="logo-text" id="mode-logo-text">产业链分析</div>
-        <div class="logo-sub" id="mode-logo-sub">Industry Chain Analyzer</div>
+        <div class="logo-text">产业链 & 板块龙头分析</div>
+        <div class="logo-sub">Industry Chain & Sector Leader Analyzer</div>
       </div>
-    </div>
-
-    <!-- 模式切换 Tab -->
-    <div class="mode-tabs">
-      <button class="mode-tab-btn active" id="mode-tab-industry" onclick="switchMode('industry', this)">🔗 产业链分析</button>
-      <button class="mode-tab-btn" id="mode-tab-sector" onclick="switchMode('sector', this)">🐂 板块龙头</button>
     </div>
 
     <div class="search-wrap">
       <input class="search-input" id="search-input" type="text"
-        placeholder="输入行业名称，如：半导体、AI算力、算力租赁、新能源汽车..."
+        placeholder="输入行业/板块名称，如：半导体、AI算力、低空经济、机器人..."
         autocomplete="off" />
       <button class="search-btn" id="search-btn" onclick="doSearch()">分析 →</button>
     </div>
@@ -443,11 +415,11 @@
       <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
       <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
       <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
-      <span class="hotkey-tag" onclick="quickSearch('通讯设备')">通讯设备</span>
-      <span class="hotkey-tag" onclick="quickSearch('IT服务')">IT服务</span>
-      <span class="hotkey-tag" onclick="quickSearch('元件')">元件</span>
+      <span class="hotkey-tag" onclick="quickSearch('低空经济')">低空经济</span>
       <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
       <span class="hotkey-tag" onclick="quickSearch('光伏')">光伏</span>
+      <span class="hotkey-tag" onclick="quickSearch('华为概念')">华为概念</span>
+      <span class="hotkey-tag" onclick="quickSearch('固态电池')">固态电池</span>
     </div>
   </div>
 </header>
@@ -455,12 +427,12 @@
 <!-- MAIN -->
 <main class="main">
 
-  <!-- WELCOME (产业链) -->
+  <!-- WELCOME -->
   <div id="welcome">
     <div class="welcome">
-      <div class="welcome-icon" id="welcome-icon">🏭</div>
-      <h2 id="welcome-title">产业链深度分析</h2>
-      <p id="welcome-desc">输入任意行业名称，智能解析上中下游龙头企业、核心业绩亮点，生成产业链图谱与可视化海报<br/><span style="color:var(--accent2);font-size:13px">✨ 内置 14 个热门行业 + AI 动态生成任意新行业</span></p>
+      <div class="welcome-icon">🏭</div>
+      <h2>产业链 & 板块龙头 深度分析</h2>
+      <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="quickSearch('半导体')">
           <div class="welcome-card-icon">💎</div>
@@ -546,9 +518,9 @@
     <button class="btn btn-primary" style="margin-top:16px" onclick="retryAILastQuery()">🔄 重试</button>
   </div>
 
-  <!-- RESULT (产业链) -->
+  <!-- RESULT（统一结果区：产业链 + 板块龙头）-->
   <div id="result">
-    <!-- 行业标题 -->
+    <!-- 产业链头部 -->
     <div class="industry-header" id="industry-header">
       <div class="industry-header-content">
         <div class="industry-title" id="industry-title"></div>
@@ -557,11 +529,22 @@
       </div>
     </div>
 
-    <!-- TABS -->
-    <div class="tabs">
+    <!-- 板块龙头头部 -->
+    <div class="industry-header" id="sector-header" style="margin-top:16px;display:none;">
+      <div class="industry-header-content">
+        <div class="industry-title" id="sector-title"></div>
+        <div class="industry-desc" id="sector-desc"></div>
+        <div class="industry-stats" id="sector-stats"></div>
+      </div>
+    </div>
+
+    <!-- 统一 TABS（5个）-->
+    <div class="tabs" id="main-tabs">
       <button class="tab-btn active" onclick="switchTab('table', this)">📋 产业链表格</button>
       <button class="tab-btn" onclick="switchTab('mindmap', this)">🗺️ 思维导图</button>
-      <button class="tab-btn" onclick="switchTab('poster', this)">🎨 可视化海报</button>
+      <button class="tab-btn" onclick="switchTab('poster', this)">🎨 产业链海报</button>
+      <button class="tab-btn" onclick="switchTab('leader', this)">⚔️ 龙头一览</button>
+      <button class="tab-btn" onclick="switchTab('sector-poster', this)">🐂 龙头海报</button>
     </div>
 
     <!-- 表格视图 -->
@@ -591,48 +574,30 @@
       </div>
     </div>
 
-    <!-- 海报视图 -->
+    <!-- 产业链海报视图 -->
     <div id="view-poster" class="view-panel">
       <div class="poster-wrap" id="poster-wrap">
         <div id="poster-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载海报</button>
+          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载产业链海报</button>
           <button class="btn btn-secondary" onclick="copyPoster()">📋 复制第1张</button>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- RESULT (板块龙头) -->
-  <div id="sector-result">
-    <!-- 板块标题 -->
-    <div class="industry-header" id="sector-header">
-      <div class="industry-header-content">
-        <div class="industry-title" id="sector-title"></div>
-        <div class="industry-desc" id="sector-desc"></div>
-        <div class="industry-stats" id="sector-stats"></div>
-      </div>
-    </div>
-
-    <!-- 板块龙头 TABS -->
-    <div class="tabs" id="sector-tabs">
-      <button class="tab-btn active" onclick="switchSectorViewTab('leader', this)">📋 龙头一览</button>
-      <button class="tab-btn" onclick="switchSectorViewTab('poster', this)">🎨 可视化海报</button>
-    </div>
-
-    <!-- 龙头表格视图 -->
-    <div id="view-sector-leader" class="view-panel active">
+    <!-- 龙头一览视图 -->
+    <div id="view-leader" class="view-panel">
       <div id="leader-vanguard"></div>
       <div id="leader-center"></div>
     </div>
 
-    <!-- 海报视图 -->
+    <!-- 龙头海报视图 -->
     <div id="view-sector-poster" class="view-panel">
       <div class="poster-wrap" id="sector-poster-wrap">
         <div id="sector-poster-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary" onclick="downloadSectorPoster()">⬇️ 下载海报</button>
-          <button class="btn btn-secondary" onclick="copySectorPoster()">📋 复制第1张</button>
+          <button class="btn btn-primary" onclick="downloadSectorPoster()">⬇️ 下载龙头海报</button>
+          <button class="btn btn-secondary" onclick="copySectorPoster()">📋 复制龙头海报</button>
         </div>
       </div>
     </div>

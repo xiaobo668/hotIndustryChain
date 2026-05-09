@@ -1,9 +1,9 @@
 /**
  * 产业链渲染模块 (industry/render.js)
- * - renderResult(data, source): 结果总入口
+ * - renderResult(data, source): 结果总入口（仅渲染产业链部分）
  * - renderHeader(data, source): 头部信息+统计+AI模型来源
  * - renderTable(data): 表格渲染
- * - switchTab(tab, btn): 视图Tab切换（表格/思维导图/海报）
+ * - switchTab(tab, btn): 统一 5-Tab 切换（表格/思维导图/产业链海报/龙头一览/龙头海报）
  * - renderMindMap(data): ECharts思维导图完整实现
  * - downloadMindMapImage(): 下载思维导图
  * - findCompany(data, name): 查找企业
@@ -11,19 +11,18 @@
  * 依赖（已在其他模块中定义的全局函数/变量）：
  *   stripMindTitleParens, mindRichSafe, wrapMindTrackLabel, lightenColor（utils 模块）
  *   MODEL_LABELS（全局常量）
- *   currentIndustry, mindChartInstance（全局变量）
+ *   currentIndustry, currentSector, mindChartInstance（全局变量）
  *   renderPoster（poster 模块）
+ *   renderSectorPoster, renderLeaderTable（sector 模块）
  */
 
 // ===========================
-// 渲染结果
+// 渲染结果（仅产业链部分）
 // ===========================
 function renderResult(data, source) {
   document.getElementById('result').classList.add('show');
   renderHeader(data, source);
   renderTable(data);
-  // 重置到表格tab
-  switchTab('table', document.querySelector('.tab-btn'));
 }
 
 function renderHeader(data, source) {
@@ -129,20 +128,38 @@ function renderTable(data) {
 }
 
 // ===========================
-// TAB 切换
+// 统一 TAB 切换（5 个视图）
 // ===========================
 function switchTab(tab, btn) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  // 更新按钮状态
+  document.querySelectorAll('#main-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
 
-  document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
-  document.getElementById(`view-${tab}`).classList.add('active');
+  // 切换视图面板
+  document.querySelectorAll('#result .view-panel').forEach(p => p.classList.remove('active'));
+  const viewEl = document.getElementById(`view-${tab}`);
+  if (viewEl) viewEl.classList.add('active');
 
+  // 根据视图类型触发对应渲染
   if (tab === 'mindmap' && currentIndustry) {
     setTimeout(() => renderMindMap(currentIndustry), 100);
   }
   if (tab === 'poster' && currentIndustry) {
     setTimeout(() => renderPoster(currentIndustry), 100);
+  }
+  if (tab === 'leader' && currentSector) {
+    // 龙头一览：显示板块龙头头部 + 渲染表格
+    document.getElementById('sector-header').style.display = '';
+    setTimeout(() => renderLeaderTable(currentSector), 50);
+  }
+  if (tab === 'sector-poster' && currentSector) {
+    // 龙头海报：显示板块龙头头部 + 渲染海报
+    document.getElementById('sector-header').style.display = '';
+    setTimeout(() => renderSectorPoster(currentSector), 100);
+  }
+  // tab === 'table' 时默认显示产业链头部，隐藏板块头部
+  if (tab === 'table') {
+    document.getElementById('sector-header').style.display = 'none';
   }
 }
 
