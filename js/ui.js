@@ -26,3 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // doSearch 和 updateLoading 已在 industry/search.js 中定义
 // switchMode 已移除（合并为单一模式）
+
+/** 清空所有本地缓存（产业链 + 板块龙头 + 文章） */
+function clearAllCache() {
+  const keys = Object.keys(localStorage).filter(k =>
+    k.startsWith('industry_ai_') || k.startsWith('sector_ai_')
+  );
+  keys.forEach(k => localStorage.removeItem(k));
+  alert(`✅ 已清空 ${keys.length} 条缓存，请重新搜索`);
+}
