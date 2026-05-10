@@ -13,7 +13,9 @@ const API_CONFIG = {
   industryEndpoint: '/api/industry',
   sectorEndpoint: '/api/sector',
   xhsEndpoint: '/api/xhs',
-  timeout: 30000,
+  articleEndpoint: '/api/article',
+  timeout: 240000,       // 默认超时 240s（豆包 Responses API 有推理过程，需要较长时间）
+  articleTimeout: 240000, // 公众号文章超时 240s
 };
 
 // ==================== 缓存配置 ====================
@@ -25,6 +27,7 @@ const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 天
 const MODEL_LABELS = {
   kimi: 'Kimi（Moonshot）',
   deepseek: 'DeepSeek',
+  doubao: '豆包（Doubao）',
   cache: '本地缓存',
   local: '本地数据',
 };

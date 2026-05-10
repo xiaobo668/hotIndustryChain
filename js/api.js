@@ -27,7 +27,7 @@ function fetchAIIndustry(industryName) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
-    if (typeof updateLoading === 'function') updateLoading('🔗 正在分析产业链（Kimi）...');
+    if (typeof updateLoading === 'function') updateLoading('🔗 豆包正在分析产业链（AI推理中，请耐心等待）...');
 
     fetch(url, {
       method: 'POST',
@@ -70,7 +70,7 @@ function fetchAISector(sectorName) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), API_CONFIG.timeout);
 
-    if (typeof updateLoading === 'function') updateLoading('🐂 正在查询板块龙头（Kimi）...');
+    if (typeof updateLoading === 'function') updateLoading('🐂 豆包正在查询板块龙头（AI推理中，请耐心等待）...');
 
     fetch(url, {
       method: 'POST',

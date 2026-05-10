@@ -132,9 +132,8 @@ function renderSectorPoster(data) {
   // ===== 合并为一张图片：前锋 + 中军 =====
   const vanCount = data.vanguard.companies.length;
   const centerCount = data.center.companies.length;
-  const totalCount = vanCount + centerCount;
 
-  // 计算合并后的布局：两个卡片紧密相连，中间无间隔
+  // 计算合并后的布局参数
   const PAD_X = 20;
   const PAD_Y_TOP = 30;
   const PAD_Y_BOTTOM = 30;
@@ -142,28 +141,51 @@ function renderSectorPoster(data) {
   const BAR_H = 24;
   const CARD_PAD_Y = 4;
   const CARD_RADIUS = 10;
-  const CARD_GAP = 8; // 前锋和中军卡片之间的间距
+  const CARD_GAP = 8;
+  const nameColW_ratio = 0.28; // 名称列占比
+  const descGap = 8;
 
-  // 可用内容区高度
-  const availH = SECTOR_TARGET_H - PAD_Y_TOP - PAD_Y_BOTTOM - FOOTER_H;
-  // 每行可用高度（基于总数计算）
-  const ROW_H = Math.max(22, Math.min(36, (availH - BAR_H * 2 - CARD_PAD_Y * 4 - CARD_GAP) / totalCount));
-
-  // 前锋卡片高度
-  const vanCardH = BAR_H + CARD_PAD_Y + vanCount * ROW_H + CARD_PAD_Y;
-  // 中军卡片高度
-  const centerCardH = BAR_H + CARD_PAD_Y + centerCount * ROW_H + CARD_PAD_Y;
-  // 总高度
-  const totalH = PAD_Y_TOP + vanCardH + CARD_GAP + centerCardH + PAD_Y_BOTTOM + FOOTER_H;
-
-  // 字体大小随行高缩放
-  const scale = ROW_H / 28;
+  // 字体大小（基于总数动态缩放）
+  const baseTotalCount = 10; // 基准总数
+  const totalCount = vanCount + centerCount;
+  const scale = Math.max(0.6, Math.min(1.2, baseTotalCount / Math.max(totalCount, baseTotalCount)));
   const titleFont = Math.max(11, Math.round(13 * scale));
   const nameFont = Math.max(10, Math.round(12 * scale));
   const descFont = Math.max(9, Math.round(11 * scale));
   const footerFont = Math.max(8, Math.round(9 * scale));
 
-  const layout = { PAD_X, PAD_Y_TOP, PAD_Y_BOTTOM, FOOTER_H, BAR_H, CARD_PAD_Y, ROW_H, CARD_RADIUS, titleFont, nameFont, descFont, footerFont };
+  // 创建临时 canvas 测量实际文字尺寸
+  const measureCanvas = document.createElement('canvas');
+  const mCtx = measureCanvas.getContext('2d');
+  mCtx.font = `${descFont}px "PingFang SC", "苹方-简", sans-serif`;
+
+  // 预估每行动态高度
+  function estimateRowH(company) {
+    const innerW = W - PAD_X * 2;
+    const ncW = innerW * nameColW_ratio;
+    const dStartX = ncW + descGap;
+    const maxDescW = Math.max(60, innerW - dStartX);
+    const descLineH = descFont * 1.45;
+    const lines = wrapTextLines(mCtx, company.highlight || '', maxDescW);
+    const descH = lines.length * descLineH;
+    const nameH = nameFont * 1.35;
+    return Math.max(28, Math.max(nameH, descH) + 10);
+  }
+
+  const vanRowHs = data.vanguard.companies.map(estimateRowH);
+  const centerRowHs = data.center.companies.map(estimateRowH);
+  const vanContentH = vanRowHs.reduce((a, b) => a + b, 0);
+  const centerContentH = centerRowHs.reduce((a, b) => a + b, 0);
+
+  // 前锋/中军卡片高度（标题栏 + 内容 + 内边距）
+  const vanCardH = BAR_H + CARD_PAD_Y + vanContentH + CARD_PAD_Y;
+  const centerCardH = BAR_H + CARD_PAD_Y + centerContentH + CARD_PAD_Y;
+  // 总高度
+  const totalH = PAD_Y_TOP + vanCardH + CARD_GAP + centerCardH + PAD_Y_BOTTOM + FOOTER_H;
+
+  const ROW_H = Math.max(22, vanContentH / Math.max(vanCount, 1)); // 给 layout 对象用的基准行高
+
+  const layout = { PAD_X, PAD_Y_TOP, PAD_Y_BOTTOM, FOOTER_H, BAR_H, CARD_PAD_Y, ROW_H, CARD_RADIUS, titleFont, nameFont, descFont, footerFont, nameColW: W - PAD_X * 2, descGap };
 
   const label = document.createElement('div');
   label.className = 'poster-page-label';
@@ -276,46 +298,76 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 
-  // 企业列表
+  // 企业列表（名称 + 说明 左右布局，说明文字多行展示不打点）
   let cy = cardY + BAR_H + CARD_PAD_Y;
-  const rowMid = (ci) => cy + ci * ROW_H + ROW_H / 2;
+  const nameColW = innerW * 0.28; // 名称列固定宽度
+  const descGap = 8;              // 名称和说明之间的间距
+
   leaderData.companies.forEach((company, ci) => {
     // 行分隔线
     if (ci > 0) {
       ctx.strokeStyle = '#e8eef5';
       ctx.lineWidth = 1;
       ctx.beginPath();
-      ctx.moveTo(cardX + innerPadX, cy + ci * ROW_H);
-      ctx.lineTo(cardX + cardW - innerPadX, cy + ci * ROW_H);
+      ctx.moveTo(cardX + innerPadX, cy);
+      ctx.lineTo(cardX + cardW - innerPadX, cy);
       ctx.stroke();
     }
 
     const baseX = cardX + innerPadX;
-    const rightX = cardX + cardW - innerPadX;
-    ctx.textBaseline = 'middle';
-    const midY = rowMid(ci);
+    const descStartX = baseX + nameColW + descGap;
+    const maxDescW = Math.max(60, cardX + cardW - innerPadX - descStartX);
 
-    // 公司名称（加粗）
+    // 公司名称（加粗，左上对齐，固定列宽内截断）
     let nameStr = company.name;
     ctx.font = `bold ${nameFont}px "PingFang SC", "苹方-简", sans-serif`;
     ctx.fillStyle = '#0f172a';
-    const gap = 5;
-    const maxName = innerW * 0.34;
-    if (ctx.measureText(nameStr).width > maxName) {
-      nameStr = fitOneLineWidth(ctx, nameStr, maxName);
+    if (ctx.measureText(nameStr).width > nameColW) {
+      nameStr = fitOneLineWidth(ctx, nameStr, nameColW);
     }
-    ctx.fillText(nameStr, baseX, midY);
-    const nameW = ctx.measureText(nameStr).width;
+    const rowTop = cy + 5;
+    ctx.textBaseline = 'top';
+    ctx.fillText(nameStr, baseX, rowTop);
+    const nameH = nameFont * 1.35;
 
-    // 说明文字
-    const descX = baseX + nameW + gap;
-    const maxDescW = Math.max(18, rightX - descX);
+    // 说明文字（自动换行，完整展示，绝对不打点）
     ctx.font = `${descFont}px "PingFang SC", "苹方-简", sans-serif`;
     ctx.fillStyle = '#64748b';
-    const desc = fitOneLineWidth(ctx, company.highlight || '', maxDescW);
-    ctx.fillText(desc, descX, midY);
+    const descText = company.highlight || '';
+    const descLineH = descFont * 1.45;
+    const descLines = wrapTextLines(ctx, descText, maxDescW);
+    descLines.forEach((line, li) => {
+      ctx.fillText(line, descStartX, rowTop + li * descLineH);
+    });
+    const descH = descLines.length * descLineH;
+
+    // 本行动态高度
+    const rowActualH = Math.max(ROW_H, Math.max(nameH, descH) + 10);
+    cy += rowActualH;
+
     ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'left';
   });
+}
+
+/**
+ * 将文本按 maxWidth 自动分行，返回行数组（不绘制）
+ */
+function wrapTextLines(ctx, text, maxWidth) {
+  if (!text) return [''];
+  const lines = [];
+  let line = '';
+  for (let i = 0; i < text.length; i++) {
+    const testLine = line + text[i];
+    if (ctx.measureText(testLine).width > maxWidth && line !== '') {
+      lines.push(line);
+      line = text[i];
+    } else {
+      line = testLine;
+    }
+  }
+  lines.push(line);
+  return lines;
 }
 
 /** 颜色加深/变暗辅助函数 */

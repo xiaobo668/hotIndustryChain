@@ -1,17 +1,26 @@
 /**
  * 统一搜索模块 (industry/search.js)
  * - doSearch(query): 主入口，同时调用产业链 + 板块龙头 API
+ * - doArticleGeneration(query, industryData, sectorData): 产业链+龙头完成后触发文章生成
  *
  * 搜索流程：
  *   1. 同时检查两个 localStorage 缓存
  *   2. 缓存未命中的并行调用 Kimi API（不再降级 DeepSeek）
- *   3. 先返回的先显示，两者都完成后隐藏加载
+ *   3. 先返回的先显示，两者都完成后隐藏加载 → 自动触发文章生成
  */
+
+/** 当前搜索关键词（用于文章生成） */
+let currentSearchQuery = '';
+
+/** 文章是否已开始生成 */
+let articleGenerating = false;
 
 /** 主搜索入口：同时触发产业链 + 板块龙头分析 */
 function doSearch(query) {
   if (!query || !query.trim()) return;
   query = query.trim();
+  currentSearchQuery = query;
+  articleGenerating = false;
 
   // 隐藏无关 UI（同时隐藏小红书结果区）
   document.getElementById('welcome').style.display = 'none';
@@ -26,6 +35,9 @@ function doSearch(query) {
   currentSector = null;
   document.getElementById('sector-header').style.display = 'none';
 
+  // 重置文章区域
+  resetArticleUI();
+
   updateLoading('正在连接 AI 服务（Kimi）...');
 
   // 检查缓存
@@ -37,17 +49,22 @@ function doSearch(query) {
 
   const checkAllDone = () => {
     if (industryDone && sectorDone) {
-      document.getElementById('loading').classList.remove('show');
-      if (currentIndustry || currentSector) {
-        document.getElementById('result').classList.add('show');
-        if (currentIndustry) {
-          switchTab('table', document.querySelector('#main-tabs .tab-btn'));
-        } else if (currentSector) {
-          switchTab('leader', document.querySelectorAll('#main-tabs .tab-btn')[3]);
+      // 延迟一点隐藏 loading，让用户看到"完成"提示
+      setTimeout(() => {
+        document.getElementById('loading').classList.remove('show');
+        if (currentIndustry || currentSector) {
+          document.getElementById('result').classList.add('show');
+          if (currentIndustry) {
+            switchTab('table', document.querySelector('#main-tabs .tab-btn'));
+          } else if (currentSector) {
+            switchTab('leader', document.querySelectorAll('#main-tabs .tab-btn')[3]);
+          }
+          // ===== 两者都完成后，自动触发公众号文章生成 =====
+          triggerArticleGeneration(query);
+        } else {
+          document.getElementById('not-found').classList.add('show');
         }
-      } else {
-        document.getElementById('not-found').classList.add('show');
-      }
+      }, 500);
     }
   };
 
@@ -100,6 +117,99 @@ function doSearch(query) {
         sectorDone = true;
         checkAllDone();
       });
+  }
+}
+
+/**
+ * 触发公众号文章生成（在产业链+龙头完成后自动调用）
+ */
+function triggerArticleGeneration(query) {
+  if (!currentIndustry && !currentSector) return;
+
+  const articleBtn = document.getElementById('tab-article-btn');
+
+  // 标记正在生成
+  articleGenerating = true;
+
+  // 更新 tab 按钮状态：显示 loading
+  if (articleBtn) {
+    articleBtn.innerHTML = '⏳ 写作中...';
+    articleBtn.style.opacity = '0.7';
+  }
+
+  fetchAIArticle(query, currentIndustry, currentSector)
+    .then(({ data, source }) => {
+        if (data) {
+          renderArticle(data, currentIndustry, currentSector);
+          showArticleContent();
+
+        // 恢复 tab 按钮
+        if (articleBtn) {
+          articleBtn.innerHTML = '📝 公众号文章';
+          articleBtn.style.opacity = '1';
+        }
+      }
+      articleGenerating = false;
+    })
+    .catch(err => {
+      console.error('[公众号文章] AI 生成失败:', err);
+      articleGenerating = false;
+
+      // 显示错误状态在文章面板中
+      showArticleError(err.message || '文章生成失败，请点击重试');
+
+      // 恢复 tab 按钮（带重试提示）
+      if (articleBtn) {
+        articleBtn.innerHTML = '📝 公众号文章(点我重试)';
+        articleBtn.onclick = function() { retryArticle(); };
+      }
+    });
+}
+
+/** 重试文章生成 */
+function retryArticle() {
+  if (!currentSearchQuery) return;
+  resetArticleUI();
+  triggerArticleGeneration(currentSearchQuery);
+
+  // 恢复按钮文字和事件
+  const articleBtn = document.getElementById('tab-article-btn');
+  if (articleBtn) {
+    articleBtn.innerHTML = '📝 公众号文章';
+    articleBtn.onclick = function() { switchTab('article', this); };
+  }
+}
+
+/** 重置文章 UI 状态 */
+function resetArticleUI() {
+  const contentEl = document.getElementById('article-content');
+  const titleEl = document.getElementById('article-title');
+  const loadingEl = document.getElementById('article-loading');
+  if (contentEl) { contentEl.innerHTML = ''; contentEl.classList.remove('show'); }
+  if (titleEl) titleEl.textContent = '';
+  if (loadingEl) loadingEl.style.display = 'block';
+}
+
+/** 显示文章内容（隐藏 loading） */
+function showArticleContent() {
+  const loadingEl = document.getElementById('article-loading');
+  const contentEl = document.getElementById('article-content');
+  if (loadingEl) loadingEl.style.display = 'none';
+  if (contentEl) contentEl.classList.add('show');
+}
+
+/** 在文章面板中显示错误 */
+function showArticleError(msg) {
+  const loadingEl = document.getElementById('article-loading');
+  const contentEl = document.getElementById('article-content');
+  if (loadingEl) loadingEl.style.display = 'none';
+  if (contentEl) {
+    contentEl.classList.add('show');
+    contentEl.innerHTML = `<div style="text-align:center;padding:40px;color:#F59E0B;">
+      <p style="font-size:18px;margin-bottom:12px;">⚠️ 文章生成失败</p>
+      <p style="color:var(--text-muted);margin-bottom:16px;">${escapeHtml(msg)}</p>
+      <button class="btn btn-primary" onclick="retryArticle()">🔄 重新生成</button>
+    </div>`;
   }
 }
 

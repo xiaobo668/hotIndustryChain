@@ -585,6 +585,154 @@
       .industry-header { padding: 20px; }
       .chain-table td, .chain-table th { padding: 10px 12px; }
     }
+
+    /* ===== 公众号文章样式 ===== */
+    .article-wrap { max-width: 720px; margin: 0 auto; }
+    .article-header-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 24px; padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-display-title {
+      font-size: 22px; font-weight: 700; color: var(--text);
+      margin: 0; background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .article-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .article-loading {
+      text-align: center; padding: 60px 20px; color: var(--text-muted);
+    }
+    .article-loading .spinner { margin: 0 auto 16px; }
+    .article-body { display: none; }
+    .article-body.show { display: block; }
+    .article-subtitle {
+      font-size: 16px; color: var(--text-muted); line-height: 1.6;
+      padding-left: 12px; border-left: 3px solid var(--accent);
+      margin-bottom: 32px; font-style: italic;
+    }
+    .article-section { margin-bottom: 36px; }
+    .article-heading {
+      font-size: 19px; font-weight: 700; color: var(--text);
+      margin: 0 0 14px 0; padding-bottom: 8px;
+      border-bottom: 2px solid rgba(108,99,255,0.15);
+      position: relative;
+    }
+    .article-heading::before {
+      content: '§'; position: absolute; left: -20px; top: -2px;
+      color: var(--accent); font-size: 18px; font-weight: 400;
+    }
+    .article-paragraph {
+      font-size: 15.5px; line-height: 1.85; color: var(--text);
+      margin: 0 0 16px 0; text-align: justify;
+      text-indent: 2em;
+    }
+    .article-conclusion {
+      margin-top: 40px; padding: 24px;
+      background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(78,205,196,0.06));
+      border-radius: 14px; border: 1px solid rgba(108,99,255,0.15);
+    }
+    .article-conclusion .article-paragraph { text-indent: 0; }
+    .article-risk {
+      margin-top: 24px; padding: 12px 18px;
+      background: rgba(245,158,11,0.1); border-radius: 10px;
+      font-size: 13.5px; color: #F59E0B; line-height: 1.5;
+    }
+    .article-word-count {
+      margin-top: 20px; text-align: right;
+      font-size: 13px; color: var(--text-muted);
+    }
+    /* 文章 tab 按钮特殊高亮 */
+    #tab-article-btn { position: relative; }
+    #tab-article-btn.active {
+      background: linear-gradient(135deg, #FF6B6B, #4ECDC4) !important;
+      color: #fff !important;
+    }
+
+    /* ===== 文末数据卡片（产业链+龙头） ===== */
+    .article-divider {
+      margin: 40px 0 28px; text-align: center;
+      position: relative; color: var(--text-muted); font-size: 13px;
+    }
+    .article-divider::before,
+    .article-divider::after {
+      content: ''; display: inline-block; width: 80px; height: 1px;
+      background: var(--border); vertical-align: middle; margin: 0 14px;
+    }
+
+    .data-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border); border-radius: 14px;
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .data-card-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+      background: rgba(108,99,255,0.06);
+    }
+    .data-card-icon { font-size: 20px; }
+    .data-card-title {
+      font-size: 17px; font-weight: 700; color: var(--text); margin: 0;
+    }
+    .data-card-body { padding: 16px 20px; }
+
+    /* 产业链阶段 */
+    .chain-stage { margin-bottom: 18px; }
+    .chain-stage:last-child { margin-bottom: 0; }
+    .chain-stage-label {
+      font-size: 14px; font-weight: 700; color: var(--accent);
+      margin-bottom: 8px; padding-left: 4px;
+    }
+    .chain-stage-list { display: flex; flex-direction: column; gap: 10px; }
+    .chain-segment {
+      background: rgba(255,255,255,0.02); border-radius: 8px;
+      padding: 10px 14px; border-left: 3px solid rgba(108,99,255,0.25);
+    }
+    .segment-name {
+      font-size: 13.5px; font-weight: 700; color: var(--text);
+      margin-bottom: 6px;
+    }
+    .company-item {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px;
+      padding: 3px 0 3px 12px; font-size: 13.5px; line-height: 1.5;
+    }
+    .company-name { color: var(--text); font-weight: 600; }
+    .company-code {
+      color: var(--accent2); font-size: 12px;
+      background: rgba(108,99,255,0.1); padding: 1px 6px; border-radius: 4px;
+    }
+    .company-hl {
+      color: var(--text-muted); font-size: 12.5px;
+    }
+
+    /* 龙头排名 */
+    .leader-group { margin-bottom: 18px; }
+    .leader-group:last-child { margin-bottom: 0; }
+    .leader-label {
+      font-size: 14.5px; font-weight: 700; color: var(--text);
+      margin-bottom: 10px; padding-bottom: 6px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .leader-list { display: flex; flex-direction: column; gap: 4px; }
+    .leader-rank-item {
+      display: flex; align-items: baseline; gap: 8px;
+      padding: 6px 10px; border-radius: 6px;
+      font-size: 13.5px; transition: background 0.15s;
+    }
+    .leader-rank-item:hover { background: rgba(255,255,255,0.04); }
+    .rank-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+      color: #fff; font-size: 12px; font-weight: 700; flex-shrink: 0;
+    }
+    .rank-name { color: var(--text); font-weight: 600; }
+    .rank-code {
+      color: var(--accent2); font-size: 12px;
+      background: rgba(108,99,255,0.1); padding: 1px 6px; border-radius: 4px;
+    }
+    .rank-reason {
+      color: var(--text-muted); font-size: 12.5px;
+    }
   </style>
 </head>
 <body>
@@ -800,13 +948,14 @@
       </div>
     </div>
 
-    <!-- 统一 TABS（产业链5个）-->
+    <!-- 统一 TABS（产业链5个 + 公众号文章）-->
     <div class="tabs" id="main-tabs">
       <button class="tab-btn active" data-tab="table" onclick="switchTab('table', this)">📋 产业链表格</button>
       <button class="tab-btn" data-tab="mindmap" onclick="switchTab('mindmap', this)">🗺️ 思维导图</button>
       <button class="tab-btn" data-tab="poster" onclick="switchTab('poster', this)">🎨 产业链海报</button>
       <button class="tab-btn" data-tab="leader" onclick="switchTab('leader', this)">⚔️ 龙头一览</button>
       <button class="tab-btn" data-tab="sector-poster" onclick="switchTab('sector-poster', this)">🐂 龙头海报</button>
+      <button class="tab-btn" data-tab="article" onclick="switchTab('article', this)" id="tab-article-btn">📝 公众号文章</button>
     </div>
 
     <!-- 表格视图 -->
@@ -861,6 +1010,23 @@
           <button class="btn btn-primary" onclick="downloadSectorPoster()">⬇️ 下载龙头海报</button>
           <button class="btn btn-secondary" onclick="copySectorPoster()">📋 复制龙头海报</button>
         </div>
+      </div>
+    </div>
+
+    <!-- 公众号文章视图 -->
+    <div id="view-article" class="view-panel">
+      <div class="article-wrap" id="article-wrap">
+        <div class="article-header-bar">
+          <h2 class="article-display-title" id="article-title"></h2>
+          <div class="article-actions">
+            <button class="btn btn-primary" id="btn-copy-article" onclick="copyArticleFull()">📋 复制全文</button>
+          </div>
+        </div>
+        <div class="article-loading" id="article-loading">
+          <div class="spinner"></div>
+          <p>AI 正在撰写公众号文章，请稍候...</p>
+        </div>
+        <div class="article-body" id="article-content"></div>
       </div>
     </div>
 
@@ -926,7 +1092,11 @@
 <script src="js/sector/search.js"></script>
 <script src="js/sector/render.js"></script>
 
-<!-- 5. 小红书创作模块 -->
+<!-- 5. 公众号文章模块 -->
+<script src="js/article/api.js"></script>
+<script src="js/article/render.js"></script>
+
+<!-- 6. 小红书创作模块 -->
 <script src="js/xiaohongshu/topics.js"></script>
 <script src="js/xiaohongshu/api.js"></script>
 <script src="js/xiaohongshu/search.js"></script>
