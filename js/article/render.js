@@ -118,7 +118,7 @@ function renderIndustryCard(data) {
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
           html += `<div class="company-item">
-            <span class="company-name">${escapeHtml(co.name)}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
+            <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
           </div>`;
         });
@@ -137,7 +137,7 @@ function renderIndustryCard(data) {
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
           html += `<div class="company-item">
-            <span class="company-name">${escapeHtml(co.name)}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
+            <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
           </div>`;
         });
@@ -156,7 +156,7 @@ function renderIndustryCard(data) {
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
           html += `<div class="company-item">
-            <span class="company-name">${escapeHtml(co.name)}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
+            <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
           </div>`;
         });

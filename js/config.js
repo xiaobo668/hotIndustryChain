@@ -40,3 +40,10 @@ let mindChartInstance = null;
 // 上次 AI 查询状态（用于重试）
 let lastAIQuery = '';
 let lastAIMode = 'industry';
+
+// ==================== 工具函数 ====================
+/** 去掉公司名中的股票代码，如 "中国巨石（600176）" → "中国巨石"，支持任意位数字 */
+function stripStockCode(name) {
+  if (!name) return name;
+  return name.replace(/[（(]\s*\d+\s*[）)]/g, '').trim();
+}

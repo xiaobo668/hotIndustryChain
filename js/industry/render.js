@@ -106,7 +106,7 @@ function renderTable(data) {
         const compCell = document.createElement('td');
         compCell.innerHTML = `
           <span class="company-pill">
-            <span class="company-name">${company.name}</span>
+            <span class="company-name">${stripStockCode(company.name)}</span>
           </span>
         `;
         tr.appendChild(compCell);
@@ -288,7 +288,7 @@ function renderMindMap(data) {
         const d = p.data;
         const company = findCompany(currentIndustry, d.name);
         if (company) {
-          return `<b style="color:#1a1510">${stripMindTitleParens(company.name)}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
+          return `<b style="color:#1a1510">${stripStockCode(stripMindTitleParens(company.name))}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
         }
         return typeof d.name === 'string' ? d.name.split('\n').map(stripMindTitleParens).join('\n') : d.name;
       }

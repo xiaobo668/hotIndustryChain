@@ -58,7 +58,7 @@ function renderLeaderTable(data) {
 function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
   const rows = companies.map(c => `
     <tr>
-      <td><strong style="color:var(--text)">${c.name}</strong></td>
+      <td><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
       <td>${c.highlight}</td>
     </tr>`).join('');
 
@@ -319,7 +319,7 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
     const maxDescW = Math.max(60, cardX + cardW - innerPadX - descStartX);
 
     // 公司名称（加粗，左上对齐，固定列宽内截断）
-    let nameStr = company.name;
+    let nameStr = stripStockCode(company.name);
     ctx.font = `bold ${nameFont}px "PingFang SC", "苹方-简", sans-serif`;
     ctx.fillStyle = '#0f172a';
     if (ctx.measureText(nameStr).width > nameColW) {
