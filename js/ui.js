@@ -29,9 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /** 清空所有本地缓存（产业链 + 板块龙头 + 文章） */
 function clearAllCache() {
-  const keys = Object.keys(localStorage).filter(k =>
-    k.startsWith('industry_ai_') || k.startsWith('sector_ai_')
-  );
+  // 使用 cache.js 的 Cache.clearAll()
+  if (typeof Cache !== 'undefined' && Cache.clearAll) {
+    Cache.clearAll();
+  }
+  // 兼容：也直接扫 localStorage
+  const keys = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && (k.startsWith('industry_ai_') || k.startsWith('sector_ai_') || k.startsWith('article:'))) {
+      keys.push(k);
+    }
+  }
   keys.forEach(k => localStorage.removeItem(k));
-  alert(`✅ 已清空 ${keys.length} 条缓存，请重新搜索`);
+  alert(`✅ 已清空 ${keys.length} 条缓存（产业链+龙头+文章），请重新搜索`);
 }

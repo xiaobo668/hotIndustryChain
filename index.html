@@ -1103,5 +1103,26 @@
 <script src="js/xiaohongshu/search.js"></script>
 <script src="js/xiaohongshu/render.js"></script>
 <script src="js/xiaohongshu/ui.js"></script>
+<script>
+// 确保 clearAllCache 全局可用（兜底）
+if (typeof clearAllCache === 'undefined') {
+  window.clearAllCache = function() {
+    var keys = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && (k.indexOf('industry_') >= 0 || k.indexOf('sector_') >= 0 || k.indexOf('article:') >= 0 || k.indexOf('xhs_') >= 0)) {
+        keys.push(k);
+      }
+    }
+    keys.forEach(function(x) { localStorage.removeItem(x); });
+    alert('✅ 已清空 ' + keys.length + ' 条缓存，请重新搜索');
+  };
+}
+// 绑定清缓存按钮事件
+document.getElementById('clear-cache-btn') && document.getElementById('clear-cache-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.clearAllCache();
+});
+</script>
 </body>
 </html>
