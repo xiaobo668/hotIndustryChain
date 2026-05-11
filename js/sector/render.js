@@ -343,7 +343,7 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
     const descH = descLines.length * descLineH;
 
     // 本行动态高度
-    const rowActualH = Math.max(ROW_H, Math.max(nameH, descH) + 10);
+    const rowActualH = Math.max(ROW_H, Math.max(nameH, descH) + 2);
     cy += rowActualH;
 
     ctx.textBaseline = 'alphabetic';
