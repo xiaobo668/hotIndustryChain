@@ -32,18 +32,22 @@ const MODEL_LABELS = {
   local: '本地数据',
 };
 
-// ==================== 全局状态 ====================
-let currentIndustry = null;
-let currentSector = null;
-let mindChartInstance = null;
-
-// 上次 AI 查询状态（用于重试）
-let lastAIQuery = '';
-let lastAIMode = 'industry';
-
 // ==================== 工具函数 ====================
-/** 去掉公司名中的股票代码，如 "中国巨石（600176）" → "中国巨石"，支持任意位数字 */
+// 注意：全局状态已迁移到 state.js，使用 AppState 对象管理
+/**
+ * 清理公司名：
+ * 1. 去掉股票代码，如 "中国巨石（600176）" → "中国巨石"
+ * 2. 去掉 ST/*ST 标记，如 "*ST左江" → ""（返回空字符串表示应过滤）
+ * 3. 去掉退市标记，如 "退市紫晶" → ""
+ * 4. 去掉科创板 U 标记，如 "中芯国际-U" → "中芯国际"
+ * 支持任意位数字的股票代码
+ */
 function stripStockCode(name) {
   if (!name) return name;
-  return name.replace(/[（(]\s*\d+\s*[）)]/g, '').trim();
+  let s = String(name).replace(/[（(]\s*\d+\s*[）)]/g, '').trim();
+  // 过滤 ST / *ST / 退市
+  if (/(^\*?ST|退市)/i.test(s)) return '';
+  // 去掉 -U / -W 等科创板后缀
+  s = s.replace(/[-_][UW]$/i, '').trim();
+  return s;
 }

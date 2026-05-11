@@ -82,6 +82,8 @@ function renderTable(data) {
   tiers.forEach(tier => {
     tier.segments.forEach((seg, i) => {
       seg.companies.forEach((company, j) => {
+        const cleanName = stripStockCode(company.name);
+        if (!cleanName) return; // 过滤 ST / 退市公司
         const tr = document.createElement('tr');
 
         // 环节列（只在首个赛道首行显示，合并行）
@@ -106,7 +108,7 @@ function renderTable(data) {
         const compCell = document.createElement('td');
         compCell.innerHTML = `
           <span class="company-pill">
-            <span class="company-name">${stripStockCode(company.name)}</span>
+            <span class="company-name">${cleanName}</span>
           </span>
         `;
         tr.appendChild(compCell);
@@ -128,7 +130,7 @@ function renderTable(data) {
 }
 
 // ===========================
-// 统一 TAB 切换（5 个视图）
+// 产业链模块 TAB 切换（仅处理产业链相关视图）
 // ===========================
 function switchTab(tab, btn) {
   // 更新按钮状态
@@ -141,46 +143,33 @@ function switchTab(tab, btn) {
   if (viewEl) viewEl.classList.add('active');
 
   // 根据视图类型触发对应渲染
-  if (tab === 'mindmap' && currentIndustry) {
-    setTimeout(() => renderMindMap(currentIndustry), 100);
-  }
-  if (tab === 'poster' && currentIndustry) {
-    setTimeout(() => renderPoster(currentIndustry), 100);
-  }
-  if (tab === 'leader' && currentSector) {
-    // 龙头一览：显示板块龙头头部 + 渲染表格
-    document.getElementById('sector-header').style.display = '';
-    setTimeout(() => renderLeaderTable(currentSector), 50);
-  }
-  if (tab === 'sector-poster' && currentSector) {
-    // 龙头海报：显示板块龙头头部 + 渲染海报
-    document.getElementById('sector-header').style.display = '';
-    setTimeout(() => renderSectorPoster(currentSector), 100);
-  }
-  // tab === 'table' 时默认显示产业链头部，隐藏板块头部
-  if (tab === 'table') {
-    document.getElementById('sector-header').style.display = 'none';
-    document.getElementById('xhs-header').style.display = 'none';
-  }
-
-  // 小红书模块的tab处理
-  if (tab === 'xhs-preview' && currentXHSData) {
-    // 显示小红书头部，隐藏其他
-    document.getElementById('industry-header').style.display = 'none';
-    document.getElementById('sector-header').style.display = 'none';
-    document.getElementById('xhs-header').style.display = '';
-  }
-  if (tab === 'xhs-poster' && currentXHSData) {
-    // 显示小红书头部 + 渲染海报
-    document.getElementById('industry-header').style.display = 'none';
-    document.getElementById('sector-header').style.display = 'none';
-    document.getElementById('xhs-header').style.display = '';
-    setTimeout(() => renderXHSPoster(currentXHSData, window._xhsCurrentCategory || 'pet-cat'), 100);
-  }
-  // 非小红书tab时恢复产业链头部显示
-  if (tab !== 'xhs-preview' && tab !== 'xhs-poster') {
-    document.getElementById('industry-header').style.display = '';
-    document.getElementById('xhs-header').style.display = 'none';
+  switch (tab) {
+    case 'mindmap':
+      if (currentIndustry) {
+        requestAnimationFrame(() => renderMindMap(currentIndustry));
+      }
+      break;
+    case 'poster':
+      if (currentIndustry) {
+        requestAnimationFrame(() => renderPoster(currentIndustry));
+      }
+      break;
+    case 'leader':
+      if (currentSector) {
+        document.getElementById('sector-header').style.display = '';
+        renderLeaderTable(currentSector);
+      }
+      break;
+    case 'sector-poster':
+      if (currentSector) {
+        document.getElementById('sector-header').style.display = '';
+        requestAnimationFrame(() => renderSectorPoster(currentSector));
+      }
+      break;
+    case 'table':
+      // 默认显示产业链头部，隐藏板块头部
+      document.getElementById('sector-header').style.display = 'none';
+      break;
   }
 }
 
@@ -288,7 +277,9 @@ function renderMindMap(data) {
         const d = p.data;
         const company = findCompany(currentIndustry, d.name);
         if (company) {
-          return `<b style="color:#1a1510">${stripStockCode(stripMindTitleParens(company.name))}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
+          const cleanName = stripStockCode(stripMindTitleParens(company.name));
+          if (!cleanName) return '';
+          return `<b style="color:#1a1510">${cleanName}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
         }
         return typeof d.name === 'string' ? d.name.split('\n').map(stripMindTitleParens).join('\n') : d.name;
       }

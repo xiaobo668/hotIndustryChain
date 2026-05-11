@@ -95,7 +95,7 @@ function switchModule(module) {
 
 /**
  * 小红书内部 Tab 切换（FAQ预览 ↔ 海报）
- * 独立于产业链的 switchTab，只操作 #xhs-result 内部的 view panels
+ * 完全独立于产业链模块，自主管理头部显示状态
  */
 function switchXHSTab(tabId, btn) {
   // 更新按钮状态
@@ -107,11 +107,15 @@ function switchXHSTab(tabId, btn) {
   const targetPanel = document.getElementById('view-' + tabId);
   if (targetPanel) targetPanel.classList.add('active');
 
+  // 控制小红书头部显示（独立管理，不依赖产业链模块）
+  const xhsHeader = document.getElementById('xhs-header');
+  if (xhsHeader) xhsHeader.style.display = '';
+
   // 如果切到海报 tab 且还没渲染过海报，则自动渲染
   if (tabId === 'xhs-poster' && window._xhsCurrentData) {
     const posterContainer = document.getElementById('xhs-poster-pages');
     if (posterContainer && posterContainer.children.length === 0) {
-      renderXHSPoster(window._xhsCurrentData, window._xhsCurrentCategory || 'pet-cat');
+      requestAnimationFrame(() => renderXHSPoster(window._xhsCurrentData, window._xhsCurrentCategory || 'pet-cat'));
     }
   }
 }

@@ -56,7 +56,7 @@ function renderLeaderTable(data) {
 }
 
 function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
-  const rows = companies.map(c => `
+  const rows = companies.filter(c => stripStockCode(c.name)).map(c => `
     <tr>
       <td><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
       <td>${c.highlight}</td>
@@ -320,6 +320,7 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
 
     // 公司名称（加粗，左上对齐，固定列宽内截断）
     let nameStr = stripStockCode(company.name);
+    if (!nameStr) return; // 过滤 ST / 退市公司
     ctx.font = `bold ${nameFont}px "PingFang SC", "苹方-简", sans-serif`;
     ctx.fillStyle = '#0f172a';
     if (ctx.measureText(nameStr).width > nameColW) {

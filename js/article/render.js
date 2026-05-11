@@ -117,6 +117,7 @@ function renderIndustryCard(data) {
         <div class="segment-name">${escapeHtml(seg.name)}</div>`;
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
+          if (!stripStockCode(co.name)) return; // 过滤 ST / 退市公司
           html += `<div class="company-item">
             <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
@@ -136,6 +137,7 @@ function renderIndustryCard(data) {
         <div class="segment-name">${escapeHtml(seg.name)}</div>`;
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
+          if (!stripStockCode(co.name)) return; // 过滤 ST / 退市公司
           html += `<div class="company-item">
             <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
@@ -155,6 +157,7 @@ function renderIndustryCard(data) {
         <div class="segment-name">${escapeHtml(seg.name)}</div>`;
       if (Array.isArray(seg.companies)) {
         seg.companies.forEach(co => {
+          if (!stripStockCode(co.name)) return; // 过滤 ST / 退市公司
           html += `<div class="company-item">
             <span class="company-name">${escapeHtml(stripStockCode(co.name))}</span>${co.code ? `<span class="company-code">${escapeHtml(co.code)}</span>` : ''}
             ${co.highlight ? `<span class="company-hl">${escapeHtml(co.highlight)}</span>` : ''}
