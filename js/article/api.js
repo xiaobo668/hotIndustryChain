@@ -7,8 +7,8 @@
 
 console.log('[article/api.js] 开始加载');
 
-/** 当前文章数据 */
-let currentArticleData = null;
+// 注意：currentArticleData 是全局变量，在 state.js 中定义
+// 本地不使用 let/const 声明，直接使用全局变量
 
 /**
  * 调用后端 AI 接口生成公众号文章

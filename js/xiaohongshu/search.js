@@ -9,8 +9,8 @@
  *   3. 渲染结果到独立的小红书结果区（#xhs-result）
  */
 
-/** 当前小红书数据 */
-let currentXHSData = null;
+// 注意：currentXHSData 是全局变量，在 state.js 中定义
+// 本地不使用 let/const 声明，直接使用全局变量
 
 /** 小红书缓存前缀 */
 const XHS_CACHE_PREFIX = 'xhs_faq_';
