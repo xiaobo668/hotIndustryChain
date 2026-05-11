@@ -14,8 +14,8 @@ const API_CONFIG = {
   sectorEndpoint: '/api/sector',
   xhsEndpoint: '/api/xhs',
   articleEndpoint: '/api/article',
-  timeout: 240000,       // 默认超时 240s（豆包 Responses API 有推理过程，需要较长时间）
-  articleTimeout: 240000, // 公众号文章超时 240s
+  timeout: 240000,       // 默认超时 240s
+  articleTimeout: 300000, // 公众号文章超时 300s（5分钟）
 };
 
 // ==================== 缓存配置 ====================
@@ -31,6 +31,10 @@ const MODEL_LABELS = {
   cache: '本地缓存',
   local: '本地数据',
 };
+
+// ==================== 全局变量（搜索状态）====================
+let lastAIQuery = '';
+let lastAIMode = '';
 
 // ==================== 工具函数 ====================
 // 注意：全局状态已迁移到 state.js，使用 AppState 对象管理
