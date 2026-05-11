@@ -58,7 +58,7 @@ function renderLeaderTable(data) {
 function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
   const rows = companies.filter(c => stripStockCode(c.name)).map(c => `
     <tr>
-      <td><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
+      <td style="width:auto;white-space:nowrap;padding-right:12px"><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
       <td>${c.highlight}</td>
     </tr>`).join('');
 
@@ -74,7 +74,7 @@ function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
       <table class="leader-table">
         <thead>
           <tr>
-            <th style="width:140px">名称</th>
+            <th style="width:auto;white-space:nowrap">名称</th>
             <th>核心逻辑</th>
           </tr>
         </thead>
