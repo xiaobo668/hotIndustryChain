@@ -170,6 +170,15 @@ function switchTab(tab, btn) {
       // 默认显示产业链头部，隐藏板块头部
       document.getElementById('sector-header').style.display = 'none';
       break;
+    case 'article':
+      // 点击公众号 Tab 时触发文章生成（如果尚未生成）
+      if (!articleGenerating && currentSearchQuery) {
+        const hasArticle = document.getElementById('article-content')?.innerHTML?.trim().length > 0;
+        if (!hasArticle) {
+          triggerArticleGeneration(currentSearchQuery);
+        }
+      }
+      break;
   }
 }
 

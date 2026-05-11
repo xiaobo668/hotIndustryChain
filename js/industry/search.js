@@ -9,11 +9,7 @@
  *   3. 先返回的先显示，两者都完成后隐藏加载 → 自动触发文章生成
  */
 
-/** 当前搜索关键词（用于文章生成） */
-let currentSearchQuery = '';
-
-/** 文章是否已开始生成 */
-let articleGenerating = false;
+// 注：currentSearchQuery 和 articleGenerating 是全局变量，定义在 state.js 中
 
 /** 主搜索入口：同时触发产业链 + 板块龙头分析 */
 function doSearch(query) {
@@ -59,8 +55,7 @@ function doSearch(query) {
           } else if (currentSector) {
             switchTab('leader', document.querySelectorAll('#main-tabs .tab-btn')[3]);
           }
-          // ===== 两者都完成后，自动触发公众号文章生成 =====
-          triggerArticleGeneration(query);
+          // 注：公众号文章不再自动生成，改为点击 Tab 时生成
         } else {
           document.getElementById('not-found').classList.add('show');
         }

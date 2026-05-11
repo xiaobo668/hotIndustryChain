@@ -172,3 +172,13 @@ Object.defineProperty(window, 'lastAIMode', {
   get() { return AppState.search.lastMode; },
   set(v) { AppState.search.lastMode = v; },
 });
+
+Object.defineProperty(window, 'articleGenerating', {
+  get() { return AppState.article.generating; },
+  set(v) { AppState.article.generating = v; },
+});
+
+Object.defineProperty(window, 'currentSearchQuery', {
+  get() { return AppState.search.lastQuery; },
+  set(v) { AppState.search.lastQuery = v; },
+});
