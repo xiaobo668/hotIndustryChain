@@ -142,7 +142,7 @@ function renderSectorPoster(data) {
   const CARD_PAD_Y = 4;
   const CARD_RADIUS = 10;
   const CARD_GAP = 8;
-  const nameColW_ratio = 0.28; // 名称列占比
+  const nameColW_ratio = 0.15; // 名称列占比
   const descGap = 8;
 
   // 字体大小（基于总数动态缩放）
@@ -301,7 +301,7 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
   // 企业列表（名称 + 说明 左右布局，说明文字多行展示不打点）
   let cy = cardY + BAR_H + CARD_PAD_Y;
   const nameColW = innerW * 0.15; // 名称列固定宽度（15%）
-  const descGap = 8;              // 名称和说明之间的间距
+  const descGap = 4;              // 名称和说明之间的间距（缩小）
 
   leaderData.companies.forEach((company, ci) => {
     // 行分隔线
