@@ -1085,18 +1085,18 @@
 <script src="js/api.js"></script>
 <script src="js/ui.js"></script>
 
-<!-- 3. 产业链分析模块 -->
+<!-- 3. 公众号文章模块（需要在产业链模块之前加载，因为 search.js 依赖 fetchAIArticle） -->
+<script src="js/article/api.js"></script>
+<script src="js/article/render.js"></script>
+
+<!-- 4. 产业链分析模块 -->
 <script src="js/industry/search.js"></script>
 <script src="js/industry/render.js"></script>
 <script src="js/industry/poster.js"></script>
 
-<!-- 4. 板块龙头模块 -->
+<!-- 5. 板块龙头模块 -->
 <script src="js/sector/search.js"></script>
 <script src="js/sector/render.js"></script>
-
-<!-- 5. 公众号文章模块 -->
-<script src="js/article/api.js"></script>
-<script src="js/article/render.js"></script>
 
 <!-- 6. 小红书创作模块 -->
 <script src="js/xiaohongshu/topics.js"></script>
