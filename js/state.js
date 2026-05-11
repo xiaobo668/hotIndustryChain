@@ -136,6 +136,7 @@ const AppState = {
 
 // 全局暴露（兼容旧代码）
 window.AppState = AppState;
+console.log('[state.js] 加载完成');
 
 // 便捷访问器（保持向后兼容）
 Object.defineProperty(window, 'currentIndustry', {

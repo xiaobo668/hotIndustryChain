@@ -36,6 +36,8 @@ const MODEL_LABELS = {
 let lastAIQuery = '';
 let lastAIMode = '';
 
+console.log('[config.js] 加载完成');
+
 // ==================== 工具函数 ====================
 // 注意：全局状态已迁移到 state.js，使用 AppState 对象管理
 /**
