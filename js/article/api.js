@@ -1,4 +1,3 @@
-
 /**
  * 公众号文章 API 调用 (article/api.js)
  * - fetchAIArticle(query, industryData, sectorData): 调用后端生成公众号文章
@@ -23,10 +22,14 @@ function fetchAIArticle(query, industryData, sectorData) {
   return new Promise((resolve, reject) => {
     const url = API_CONFIG.baseUrl + '/api/article';
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), API_CONFIG.articleTimeout || 180000);
+    const timeout = API_CONFIG.articleTimeout || 300000; // 默认 5 分钟超时
+    const timer = setTimeout(() => controller.abort(), timeout);
+
+    console.log(`[文章生成] 开始请求，超时设置: ${timeout}ms`);
+    console.log(`[文章生成] 数据状态: industry=${!!industryData}, sector=${!!sectorData}`);
 
     if (typeof updateLoading === 'function') {
-      updateLoading('✍️ 豆包正在撰写文章（AI推理+写作中，预计1-2分钟）...');
+      updateLoading('✍️ 豆包正在撰写文章（AI推理+写作中，预计1-3分钟）...');
     }
 
     fetch(url, {
@@ -39,7 +42,13 @@ function fetchAIArticle(query, industryData, sectorData) {
       }),
       signal: controller.signal,
     })
-    .then(res => res.json())
+    .then(res => {
+      console.log(`[文章生成] 响应状态: ${res.status}`);
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      }
+      return res.json();
+    })
     .then(json => {
       clearTimeout(timer);
       if (json.success && json.data) {
@@ -50,11 +59,13 @@ function fetchAIArticle(query, industryData, sectorData) {
         }
         setTimeout(() => resolve({ data: json.data, source }), 300);
       } else {
+        console.error('[文章生成] 后端返回错误:', json.error);
         reject(new Error(json.error || 'AI 返回数据为空'));
       }
     })
     .catch(err => {
       clearTimeout(timer);
+      console.error('[文章生成] 请求失败:', err);
       if (err.name === 'AbortError') {
         reject(new Error('请求超时，AI 正在写作中，请稍后重试'));
       } else {

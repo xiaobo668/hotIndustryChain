@@ -124,7 +124,10 @@ function doSearch(query) {
  * 触发公众号文章生成（在产业链+龙头完成后自动调用）
  */
 function triggerArticleGeneration(query) {
-  if (!currentIndustry && !currentSector) return;
+  if (!currentIndustry && !currentSector) {
+    console.warn('[文章生成] 跳过：产业链和龙头数据都为空');
+    return;
+  }
 
   const articleBtn = document.getElementById('tab-article-btn');
 
@@ -137,17 +140,23 @@ function triggerArticleGeneration(query) {
     articleBtn.style.opacity = '0.7';
   }
 
-  fetchAIArticle(query, currentIndustry, currentSector)
+  // 确保数据是有效的再发送给后端
+  const industryData = currentIndustry || null;
+  const sectorData = currentSector || null;
+
+  fetchAIArticle(query, industryData, sectorData)
     .then(({ data, source }) => {
-        if (data) {
-          renderArticle(data, currentIndustry, currentSector);
-          showArticleContent();
+      if (data) {
+        renderArticle(data, industryData, sectorData);
+        showArticleContent();
 
         // 恢复 tab 按钮
         if (articleBtn) {
           articleBtn.innerHTML = '📝 公众号文章';
           articleBtn.style.opacity = '1';
         }
+      } else {
+        throw new Error('AI 返回数据为空');
       }
       articleGenerating = false;
     })
