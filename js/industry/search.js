@@ -119,6 +119,7 @@ function doSearch(query) {
  * 触发公众号文章生成（在产业链+龙头完成后自动调用）
  */
 function triggerArticleGeneration(query) {
+  console.log('[triggerArticleGeneration] 被调用, query=', query, 'articleGenerating=', articleGenerating);
   if (!currentIndustry && !currentSector) {
     console.warn('[文章生成] 跳过：产业链和龙头数据都为空');
     return;

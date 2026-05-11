@@ -172,8 +172,10 @@ function switchTab(tab, btn) {
       break;
     case 'article':
       // 点击公众号 Tab 时触发文章生成（如果尚未生成）
+      console.log('[switchTab article] articleGenerating=', articleGenerating, 'currentSearchQuery=', currentSearchQuery);
       if (!articleGenerating && currentSearchQuery) {
         const hasArticle = document.getElementById('article-content')?.innerHTML?.trim().length > 0;
+        console.log('[switchTab article] hasArticle=', hasArticle);
         if (!hasArticle) {
           triggerArticleGeneration(currentSearchQuery);
         }
