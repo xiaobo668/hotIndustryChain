@@ -5,6 +5,8 @@
  * 依赖：API_CONFIG（全局配置）
  */
 
+console.log('[article/api.js] 开始加载');
+
 /** 当前文章数据 */
 let currentArticleData = null;
 
@@ -74,3 +76,5 @@ function fetchAIArticle(query, industryData, sectorData) {
     });
   });
 }
+
+console.log('[article/api.js] 加载完成, fetchAIArticle=', typeof fetchAIArticle);
