@@ -58,7 +58,7 @@ function renderLeaderTable(data) {
 function buildLeaderSection(icon, title, subtitle, companies, accentColor) {
   const rows = companies.filter(c => stripStockCode(c.name)).map(c => `
     <tr>
-      <td style="width:auto;white-space:nowrap;padding-right:12px"><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
+      <td><strong style="color:var(--text)">${stripStockCode(c.name)}</strong></td>
       <td>${c.highlight}</td>
     </tr>`).join('');
 
@@ -300,7 +300,7 @@ function drawSingleSectorCard(ctx, data, leaderData, W, offsetY, accentColor, ti
 
   // 企业列表（名称 + 说明 左右布局，说明文字多行展示不打点）
   let cy = cardY + BAR_H + CARD_PAD_Y;
-  const nameColW = innerW * 0.28; // 名称列固定宽度
+  const nameColW = innerW * 0.15; // 名称列固定宽度（15%）
   const descGap = 8;              // 名称和说明之间的间距
 
   leaderData.companies.forEach((company, ci) => {
