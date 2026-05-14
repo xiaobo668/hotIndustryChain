@@ -6,23 +6,13 @@
 
 /** 快速搜索（热门标签点击） */
 function quickSearch(keyword) {
-  const input = document.getElementById('search-input');
-  input.value = keyword;
+  const input = document.getElementById('industry-select-input');
+  if (input) input.value = keyword;
   doSearch(keyword);
 }
 
 // ===== 搜索框回车键绑定 =====
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    searchInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        doSearch(searchInput.value);
-      }
-    });
-  }
-});
+// 已移至 index.html 中的自定义 Select 组件内处理
 
 // doSearch 和 updateLoading 已在 industry/search.js 中定义
 // switchMode 已移除（合并为单一模式）

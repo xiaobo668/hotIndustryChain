@@ -44,7 +44,7 @@ function renderHeader(data, source) {
 
   // 显示 AI 模型来源
   const sourceLabel = MODEL_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : 'AI');
-  const sourceColor = source === 'kimi' ? '#ef4444' : source === 'deepseek' ? '#6c63ff' : '#94a3b8';
+  const sourceColor = source === 'local' ? '#10b981' : source === 'kimi' ? '#ef4444' : source === 'deepseek' ? '#6c63ff' : source === 'cache' ? '#f59e0b' : '#94a3b8';
 
   document.getElementById('industry-stats').innerHTML = `
     <div class="stat-item">

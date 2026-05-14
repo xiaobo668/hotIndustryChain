@@ -75,37 +75,133 @@
     .logo-text { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
     .logo-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-    /* ===== SEARCH BOX ===== */
-    .search-wrap {
-      flex: 1;
-      min-width: 260px;
-      max-width: 600px;
-      position: relative;
-    }
-    .search-input {
-      width: 100%;
-      padding: 12px 52px 12px 18px;
-      border-radius: 12px;
-      border: 1.5px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      font-size: 15px;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .search-input::placeholder { color: var(--text-muted); }
-    .search-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(108,99,255,0.2);
-    }
-    .search-btn {
-      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      border: none; color: #fff; cursor: pointer;
-      border-radius: 8px; padding: 6px 14px; font-size: 14px; font-weight: 600;
-      transition: opacity 0.2s;
-    }
-    .search-btn:hover { opacity: 0.85; }
+/* ===== SEARCH BOX ===== */
+.search-wrap {
+flex: 1;
+min-width: 260px;
+max-width: 600px;
+position: relative;
+}
+.search-input {
+width: 100%;
+padding: 12px 52px 12px 18px;
+border-radius: 12px;
+border: 1.5px solid var(--border);
+background: rgba(255,255,255,0.05);
+color: var(--text);
+font-size: 15px;
+outline: none;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input::placeholder { color: var(--text-muted); }
+.search-input:focus {
+border-color: var(--accent);
+box-shadow: 0 0 0 3px rgba(108,99,255,0.2);
+}
+/* ===== 自定义可搜索 Select ===== */
+.custom-select-wrap {
+  position: relative;
+  width: 100%;
+}
+.custom-select-input {
+  width: 100%;
+  padding: 12px 52px 12px 18px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.custom-select-input::placeholder { color: var(--text-muted); }
+.custom-select-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108,99,255,0.2);
+}
+.custom-select-arrow {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+.custom-select-wrap.open .custom-select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+.custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  background: #1e293b;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  z-index: 9999;
+  display: none;
+  padding: 6px 0;
+}
+.custom-select-wrap.open .custom-select-dropdown {
+  display: block;
+}
+.custom-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-select-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(108,99,255,0.3);
+  border-radius: 3px;
+}
+.custom-select-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(108,99,255,0.5);
+}
+.custom-select-group-label {
+  padding: 8px 16px 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  background: #1e293b;
+  z-index: 1;
+}
+.custom-select-option {
+  padding: 9px 16px 9px 24px;
+  font-size: 14px;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.custom-select-option:hover,
+.custom-select-option.active {
+  background: rgba(108,99,255,0.15);
+  color: #fff;
+}
+.custom-select-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.search-btn {
+position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+background: linear-gradient(135deg, var(--accent), var(--accent2));
+border: none; color: #fff; cursor: pointer;
+border-radius: 8px; padding: 6px 14px; font-size: 14px; font-weight: 600;
+transition: opacity 0.2s;
+}
+.search-btn:hover { opacity: 0.85; }
 
     /* ===== HOTKEYS ===== */
     .hotkeys {
@@ -762,13 +858,14 @@
           </div>
         </div>
 
-        <div class="search-wrap">
-          <input class="search-input" id="search-input" type="text"
-            placeholder="输入行业/板块名称，如：半导体、AI算力、低空经济、机器人..."
-            autocomplete="off" />
-          <button class="search-btn" id="search-btn" onclick="doSearch(document.getElementById('search-input').value)">分析 →</button>
-          <button class="search-btn" id="clear-cache-btn" onclick="clearAllCache()" style="background:#f59e0b;font-size:11px;padding:8px 8px;min-width:auto;white-space:nowrap;margin-left:4px" title="清空所有本地缓存，重新生成">🗑️清</button>
-        </div>
+<div class="search-wrap">
+  <div class="custom-select-wrap" id="industry-select-wrap">
+    <input class="custom-select-input" id="industry-select-input" type="text" placeholder="📌 输入或选择行业/板块..." autocomplete="off" />
+    <span class="custom-select-arrow">▼</span>
+    <div class="custom-select-dropdown" id="industry-select-dropdown"></div>
+  </div>
+  <button class="search-btn" id="clear-cache-btn" onclick="clearAllCache()" style="background:#f59e0b;font-size:11px;padding:8px 8px;min-width:auto;white-space:nowrap;margin-left:4px" title="清空所有本地缓存，重新生成">🗑️清</button>
+</div>
 
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
@@ -777,12 +874,22 @@
           <span class="hotkey-tag" onclick="quickSearch('算力租赁')">算力租赁</span>
           <span class="hotkey-tag" onclick="quickSearch('AI应用')">AI应用</span>
           <span class="hotkey-tag" onclick="quickSearch('新能源汽车')">新能源汽车</span>
-          <span class="hotkey-tag" onclick="quickSearch('液冷')">液冷</span>
+          <span class="hotkey-tag" onclick="quickSearch('军工')">军工</span>
+          <span class="hotkey-tag" onclick="quickSearch('商业航天')">商业航天</span>
           <span class="hotkey-tag" onclick="quickSearch('低空经济')">低空经济</span>
           <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
-          <span class="hotkey-tag" onclick="quickSearch('光伏')">光伏</span>
+          <span class="hotkey-tag" onclick="quickSearch('创新药')">创新药</span>
+          <span class="hotkey-tag" onclick="quickSearch('PCB')">PCB</span>
+          <span class="hotkey-tag" onclick="quickSearch('量子科技')">量子科技</span>
+          <span class="hotkey-tag" onclick="quickSearch('稀土永磁')">稀土永磁</span>
+          <span class="hotkey-tag" onclick="quickSearch('脑机接口')">脑机接口</span>
+          <span class="hotkey-tag" onclick="quickSearch('数字货币')">数字货币</span>
+          <span class="hotkey-tag" onclick="quickSearch('有色金属')">有色金属</span>
           <span class="hotkey-tag" onclick="quickSearch('华为概念')">华为概念</span>
           <span class="hotkey-tag" onclick="quickSearch('固态电池')">固态电池</span>
+          <span class="hotkey-tag" onclick="quickSearch('AIDC')">AIDC</span>
+          <span class="hotkey-tag" onclick="quickSearch('核聚变')">核聚变</span>
+          <span class="hotkey-tag" onclick="quickSearch('数据要素')">数据要素</span>
         </div>
       </div>
 
@@ -871,6 +978,30 @@
           <div class="welcome-card-icon">✨</div>
           <div class="welcome-card-name">AI应用</div>
         </div>
+        <div class="welcome-card" onclick="quickSearch('低空经济')">
+          <div class="welcome-card-icon">🛸</div>
+          <div class="welcome-card-name">低空经济</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('固态电池')">
+          <div class="welcome-card-icon">🔋</div>
+          <div class="welcome-card-name">固态电池</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('华为概念')">
+          <div class="welcome-card-icon">📱</div>
+          <div class="welcome-card-name">华为概念</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('AIDC')">
+          <div class="welcome-card-icon">🏢</div>
+          <div class="welcome-card-name">AIDC</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('核聚变')">
+          <div class="welcome-card-icon">☀️</div>
+          <div class="welcome-card-name">核聚变</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('数据要素')">
+          <div class="welcome-card-icon">📊</div>
+          <div class="welcome-card-name">数据要素</div>
+        </div>
         <div class="welcome-card" onclick="quickSearch('液冷')">
           <div class="welcome-card-icon">❄️</div>
           <div class="welcome-card-name">液冷</div>
@@ -879,13 +1010,41 @@
           <div class="welcome-card-icon">📡</div>
           <div class="welcome-card-name">通讯设备</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('IT服务')">
-          <div class="welcome-card-icon">💻</div>
-          <div class="welcome-card-name">IT服务</div>
+        <div class="welcome-card" onclick="quickSearch('军工')">
+          <div class="welcome-card-icon">⚔️</div>
+          <div class="welcome-card-name">军工</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('元件')">
-          <div class="welcome-card-icon">🔩</div>
-          <div class="welcome-card-name">元件</div>
+        <div class="welcome-card" onclick="quickSearch('商业航天')">
+          <div class="welcome-card-icon">🛰️</div>
+          <div class="welcome-card-name">商业航天</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('量子科技')">
+          <div class="welcome-card-icon">⚛️</div>
+          <div class="welcome-card-name">量子科技</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('脑机接口')">
+          <div class="welcome-card-icon">🧬</div>
+          <div class="welcome-card-name">脑机接口</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('稀土永磁')">
+          <div class="welcome-card-icon">🔴</div>
+          <div class="welcome-card-name">稀土永磁</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('创新药')">
+          <div class="welcome-card-icon">💊</div>
+          <div class="welcome-card-name">创新药</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('有色金属')">
+          <div class="welcome-card-icon">⛏️</div>
+          <div class="welcome-card-name">有色金属</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('PCB')">
+          <div class="welcome-card-icon">🔌</div>
+          <div class="welcome-card-name">PCB</div>
+        </div>
+        <div class="welcome-card" onclick="quickSearch('数字货币')">
+          <div class="welcome-card-icon">💰</div>
+          <div class="welcome-card-name">数字货币</div>
         </div>
       </div>
     </div>
@@ -1105,6 +1264,167 @@
 <script src="js/xiaohongshu/render.js"></script>
 <script src="js/xiaohongshu/ui.js"></script>
 <script>
+// 初始化自定义可搜索 Select
+function initIndustrySelect() {
+  var wrap = document.getElementById('industry-select-wrap');
+  var input = document.getElementById('industry-select-input');
+  var dropdown = document.getElementById('industry-select-dropdown');
+  if (!wrap || !input || !dropdown || typeof INDUSTRY_DATA === 'undefined') return;
+
+  // 分类配置
+  var categories = {
+    '⚡ 核心产业': ['半导体', 'AI算力', '人工智能', 'AI应用', '算力租赁', '芯片'],
+    '🚗 新能源': ['新能源汽车', '新能源', '锂电池', '光伏', '固态电池'],
+    '❄️ 基础设施': ['液冷', '通讯设备', 'IT服务', 'AIDC', 'PCB'],
+    '🚀 航天军工': ['军工', '商业航天'],
+    '🌐 创新领域': ['低空经济', '华为概念', '核聚变', '数据要素', '量子科技', '脑机接口'],
+    '💊 医药': ['创新药', '医疗器械'],
+    '⛏️ 资源材料': ['稀土永磁', '有色金属', '钢铁', '油气开采'],
+    '💰 金融': ['数字货币'],
+    '💼 传统产业': ['白酒', '农业'],
+    '🔧 其他': ['消费电子', '机器人', '电动车', '元件']
+  };
+
+  // 构建所有选项数据
+  var allOptions = [];
+  Object.keys(categories).forEach(function(groupName) {
+    var groupIndustries = categories[groupName];
+    groupIndustries.forEach(function(industry) {
+      if (INDUSTRY_DATA[industry]) {
+        allOptions.push({ group: groupName, value: industry });
+      }
+    });
+  });
+  // 添加未分类的行业
+  var categorized = {};
+  Object.keys(categories).forEach(function(g) {
+    categories[g].forEach(function(v) { categorized[v] = true; });
+  });
+  Object.keys(INDUSTRY_DATA).sort().forEach(function(name) {
+    if (!categorized[name]) {
+      allOptions.push({ group: '🔧 其他', value: name });
+    }
+  });
+
+  // 渲染下拉列表
+  function renderDropdown(filter) {
+    dropdown.innerHTML = '';
+    var keyword = (filter || '').toLowerCase();
+    var currentGroup = '';
+    var hasResult = false;
+
+    allOptions.forEach(function(opt) {
+      if (keyword && opt.value.toLowerCase().indexOf(keyword) < 0) return;
+      hasResult = true;
+      if (opt.group !== currentGroup) {
+        currentGroup = opt.group;
+        var groupLabel = document.createElement('div');
+        groupLabel.className = 'custom-select-group-label';
+        groupLabel.textContent = currentGroup;
+        dropdown.appendChild(groupLabel);
+      }
+      var optEl = document.createElement('div');
+      optEl.className = 'custom-select-option';
+      optEl.setAttribute('data-value', opt.value);
+      optEl.textContent = opt.value;
+      optEl.addEventListener('click', function(e) {
+        e.stopPropagation();
+        selectOption(opt.value);
+      });
+      optEl.addEventListener('mouseenter', function() {
+        var prev = dropdown.querySelector('.custom-select-option.active');
+        if (prev) prev.classList.remove('active');
+        optEl.classList.add('active');
+      });
+      dropdown.appendChild(optEl);
+    });
+
+    if (!hasResult) {
+      var emptyEl = document.createElement('div');
+      emptyEl.className = 'custom-select-empty';
+      emptyEl.textContent = '未找到匹配的行业';
+      dropdown.appendChild(emptyEl);
+    }
+  }
+
+  // 选择某个选项
+  function selectOption(value) {
+    input.value = '';
+    closeDropdown();
+    if (value && typeof window.doSearch === 'function') {
+      window.doSearch(value);
+    }
+  }
+
+  // 打开下拉
+  function openDropdown() {
+    renderDropdown(input.value);
+    wrap.classList.add('open');
+  }
+
+  // 关闭下拉
+  function closeDropdown() {
+    wrap.classList.remove('open');
+  }
+
+  // 输入框聚焦时打开
+  input.addEventListener('focus', function() {
+    openDropdown();
+  });
+
+  // 输入框内容变化时过滤
+  input.addEventListener('input', function() {
+    renderDropdown(input.value);
+    if (!wrap.classList.contains('open')) wrap.classList.add('open');
+  });
+
+  // 键盘导航
+  input.addEventListener('keydown', function(e) {
+    var options = dropdown.querySelectorAll('.custom-select-option');
+    var activeEl = dropdown.querySelector('.custom-select-option.active');
+    var idx = -1;
+    options.forEach(function(o, i) { if (o === activeEl) idx = i; });
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (!wrap.classList.contains('open')) { openDropdown(); return; }
+      if (idx < options.length - 1) {
+        if (activeEl) activeEl.classList.remove('active');
+        options[idx + 1].classList.add('active');
+        options[idx + 1].scrollIntoView({ block: 'nearest' });
+      }
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (idx > 0) {
+        if (activeEl) activeEl.classList.remove('active');
+        options[idx - 1].classList.add('active');
+        options[idx - 1].scrollIntoView({ block: 'nearest' });
+      }
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeEl) {
+        selectOption(activeEl.getAttribute('data-value'));
+      } else if (input.value.trim()) {
+        // 回车搜索输入的内容
+        selectOption(input.value.trim());
+      }
+    } else if (e.key === 'Escape') {
+      closeDropdown();
+      input.blur();
+    }
+  });
+
+  // 点击外部关闭
+  document.addEventListener('click', function(e) {
+    if (!wrap.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+
+  // 初始渲染
+  renderDropdown('');
+}
+
 // 确保 clearAllCache 全局可用（兜底）
 if (typeof clearAllCache === 'undefined') {
   window.clearAllCache = function() {
@@ -1123,6 +1443,11 @@ if (typeof clearAllCache === 'undefined') {
 document.getElementById('clear-cache-btn') && document.getElementById('clear-cache-btn').addEventListener('click', function(e) {
   e.preventDefault();
   window.clearAllCache();
+});
+
+// 页面加载完成后初始化 Select
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(initIndustrySelect, 100);
 });
 </script>
 </body>

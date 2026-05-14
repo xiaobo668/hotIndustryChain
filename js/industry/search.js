@@ -34,7 +34,15 @@ function doSearch(query) {
   // 重置文章区域
   resetArticleUI();
 
-  updateLoading('正在连接 AI 服务（Kimi）...');
+  // 检查本地数据库（data.js 中的预定义数据）
+  const localIndustry = searchIndustry(query);
+  
+  // 根据是否有本地数据调整加载文本
+  if (localIndustry) {
+    updateLoading('📦 正在加载本地产业链数据...');
+  } else {
+    updateLoading('正在连接 AI 服务（Kimi）...');
+  }
 
   // 检查缓存
   const industryCached = getCachedIndustry(query);
@@ -64,7 +72,14 @@ function doSearch(query) {
   };
 
   // ---- 产业链 ----
-  if (industryCached) {
+  // 优先级：本地数据 > 缓存 > API
+  if (localIndustry) {
+    currentIndustry = localIndustry;
+    renderResult(localIndustry, 'local');
+    cacheIndustry(query, localIndustry);  // 缓存本地数据
+    industryDone = true;
+    checkAllDone();
+  } else if (industryCached) {
     currentIndustry = industryCached;
     renderResult(industryCached, 'cache');
     industryDone = true;
@@ -91,6 +106,7 @@ function doSearch(query) {
   }
 
   // ---- 板块龙头 ----
+  // 板块龙头目前仅依赖 API，没有本地数据
   if (sectorCached) {
     currentSector = sectorCached;
     renderSectorHeader(sectorCached, 'cache');

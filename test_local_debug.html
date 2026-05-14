@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本地调试测试 - 产业链系统</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: #60a5fa;
+      margin-bottom: 30px;
+    }
+    .test-section {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .test-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      background: #0f172a;
+    }
+    .status {
+      margin-right: 10px;
+      font-weight: bold;
+      min-width: 30px;
+    }
+    .status.ok {
+      color: #10b981;
+    }
+    .status.error {
+      color: #ef4444;
+    }
+    .test-input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #475569;
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .test-btn {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .test-btn:hover {
+      background: #2563eb;
+    }
+    .test-result {
+      background: #0f172a;
+      border-left: 3px solid #3b82f6;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .test-result.error {
+      border-left-color: #ef4444;
+      color: #fca5a5;
+    }
+    .test-result.success {
+      border-left-color: #10b981;
+      color: #86efac;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 本地调试测试 - 产业链数据加载</h1>
+    
+    <div class="test-section">
+      <h2>📦 数据加载测试</h2>
+      <div id="test-status"></div>
+    </div>
+    
+    <div class="test-section">
+      <h2>🔍 快速搜索测试</h2>
+      <input type="text" class="test-input" id="search-input" placeholder="输入产业名称，如：低空经济、固态电池等">
+      <button class="test-btn" onclick="testSearch()">搜索</button>
+      <div id="search-result"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>🎯 新产业快速测试</h2>
+      <div id="quick-test-buttons"></div>
+    </div>
+  </div>
+
+  <!-- 加载数据 -->
+  <script src="data.js"></script>
+  
+  <script>
+    const testStatus = document.getElementById('test-status');
+    
+    // 测试1：检查 INDUSTRY_DATA
+    function testIndustryData() {
+      let html = '';
+      
+      // 检查 INDUSTRY_DATA 是否存在
+      if (typeof INDUSTRY_DATA === 'object') {
+        html += `<div class="test-item"><span class="status ok">✓</span> INDUSTRY_DATA 已加载，共 ${Object.keys(INDUSTRY_DATA).length} 个产业</div>`;
+      } else {
+        html += `<div class="test-item"><span class="status error">✗</span> INDUSTRY_DATA 加载失败</div>`;
+        testStatus.innerHTML = html;
+        return;
+      }
+      
+      // 检查 KEYWORD_MAP 是否存在
+      if (typeof KEYWORD_MAP === 'object') {
+        html += `<div class="test-item"><span class="status ok">✓</span> KEYWORD_MAP 已加载，共 ${Object.keys(KEYWORD_MAP).length} 个关键词</div>`;
+      } else {
+        html += `<div class="test-item"><span class="status error">✗</span> KEYWORD_MAP 加载失败</div>`;
+        testStatus.innerHTML = html;
+        return;
+      }
+      
+      // 检查 searchIndustry 函数是否存在
+      if (typeof searchIndustry === 'function') {
+        html += `<div class="test-item"><span class="status ok">✓</span> searchIndustry 函数已加载</div>`;
+      } else {
+        html += `<div class="test-item"><span class="status error">✗</span> searchIndustry 函数加载失败</div>`;
+        testStatus.innerHTML = html;
+        return;
+      }
+      
+      // 测试新产业
+      const newIndustries = ['低空经济', '固态电池', '华为概念', 'AIDC', '核聚变', '数据要素'];
+      html += '<div style="margin-top: 20px; border-top: 1px solid #475569; padding-top: 10px;"><strong>新产业检测：</strong></div>';
+      
+      newIndustries.forEach(ind => {
+        const result = searchIndustry(ind);
+        if (result) {
+          const upstream = result.upstream?.length || 0;
+          const midstream = result.midstream?.length || 0;
+          const downstream = result.downstream?.length || 0;
+          html += `<div class="test-item"><span class="status ok">✓</span> <strong>${ind}</strong> (上游: ${upstream}, 中游: ${midstream}, 下游: ${downstream})</div>`;
+        } else {
+          html += `<div class="test-item"><span class="status error">✗</span> <strong>${ind}</strong> 未找到</div>`;
+        }
+      });
+      
+      testStatus.innerHTML = html;
+    }
+    
+    // 测试2：搜索功能
+    function testSearch() {
+      const input = document.getElementById('search-input');
+      const query = input.value.trim();
+      const resultDiv = document.getElementById('search-result');
+      
+      if (!query) {
+        resultDiv.innerHTML = '<div class="test-result error">请输入搜索关键词</div>';
+        return;
+      }
+      
+      try {
+        const result = searchIndustry(query);
+        if (result) {
+          const upstream = result.upstream.map(s => `${s.name} (${s.companies.length})`).join(', ');
+          const midstream = result.midstream.map(s => `${s.name} (${s.companies.length})`).join(', ');
+          const downstream = result.downstream.map(s => `${s.name} (${s.companies.length})`).join(', ');
+          
+          const html = `
+            <div class="test-result success">
+              <strong>✓ 找到：${result.name}</strong><br>
+              <strong>描述：</strong> ${result.description}<br>
+              <strong>上游：</strong> ${upstream}<br>
+              <strong>中游：</strong> ${midstream}<br>
+              <strong>下游：</strong> ${downstream}
+            </div>
+          `;
+          resultDiv.innerHTML = html;
+        } else {
+          resultDiv.innerHTML = '<div class="test-result error">✗ 未找到该产业</div>';
+        }
+      } catch (e) {
+        resultDiv.innerHTML = `<div class="test-result error">✗ 错误：${e.message}</div>`;
+      }
+    }
+    
+    // 初始化快速测试按钮
+    function initQuickTestButtons() {
+      const buttonsDiv = document.getElementById('quick-test-buttons');
+      const industries = ['低空经济', '固态电池', '华为概念', 'AIDC', '核聚变', '数据要素'];
+      let html = '';
+      
+      industries.forEach(ind => {
+        html += `<button class="test-btn" onclick="quickTest('${ind}')">${ind}</button>`;
+      });
+      
+      buttonsDiv.innerHTML = html;
+    }
+    
+    function quickTest(industry) {
+      document.getElementById('search-input').value = industry;
+      testSearch();
+    }
+    
+    // 回车键提交
+    document.getElementById('search-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        testSearch();
+      }
+    });
+    
+    // 初始化
+    window.addEventListener('DOMContentLoaded', () => {
+      testIndustryData();
+      initQuickTestButtons();
+    });
+  </script>
+</body>
+</html>
