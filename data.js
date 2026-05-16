@@ -13,19 +13,19 @@ const INDUSTRY_DATA = {
       {
         name: "硅片/材料",
         companies: [
-          { name: "鼎龙股份", highlight: "CMP抛光垫国内市占率第一，半导体IC封装用干膜持续放量" },
-          { name: "新易盛", highlight: "光电子材料+半导体光学器件，下游覆盖主流晶圆厂" },
-          { name: "北摩高科", highlight: "电子特气关键原材料，CVD/ALD工艺用高纯气体国产化" },
-          { name: "生益科技", highlight: "覆铜板龙头，半导体封装基板核心材料，国内市占率第一" }
+          { name: "沪硅产业", highlight: "300mm大硅片国产化龙头，12英寸硅片量产并导入主流晶圆厂" },
+          { name: "立昂微", highlight: "6-8英寸硅片+功率器件外延，半导体硅材料国内领先" },
+          { name: "雅克科技", highlight: "电子特气+前驱体，CVD/ALD工艺用高纯材料国产替代核心" },
+          { name: "神工股份", highlight: "半导体级硅材料，大硅片用硅部件与刻蚀耗材" }
         ]
       },
       {
         name: "半导体设备",
         companies: [
           { name: "北方华创", highlight: "刻蚀机+CVD设备龙头，国内半导体设备市占率第一，先进制程攻关领先" },
-          { name: "卓胜微", highlight: "射频前端芯片，5G手机滤波器+LNA国产替代领军" },
-          { name: "汇川技术", highlight: "运动控制设备，半导体设备核心驱控零部件供应商" },
-          { name: "拓尔思", highlight: "刻蚀机配套零部件，半导体设备国产化受益标的" }
+          { name: "中微公司", highlight: "等离子刻蚀机龙头，CCP介质刻蚀设备进入主流晶圆产线" },
+          { name: "盛美上海", highlight: "单片清洗设备龙头，电镀/湿法工艺设备国产替代领先" },
+          { name: "拓荆科技", highlight: "PECVD/ALD薄膜沉积设备，先进制程关键设备国产供应商" }
         ]
       }
     ],
@@ -35,16 +35,16 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "紫光国微", highlight: "安全芯片+FPGA龙头，国密芯片市场份额第一，军工信创双赛道" },
           { name: "卓胜微", highlight: "射频芯片龙头，5G手机渗透率快速提升，海外出货量高增" },
-          { name: "深南电路", highlight: "高密度封装基板，芯片设计配套先进封装基板龙头" },
-          { name: "士兰微", highlight: "IDM模式功率+射频+MEMS，碳化硅器件加速放量，车规认证完成" }
+          { name: "韦尔股份", highlight: "CIS图像传感器龙头，手机/车载摄像头芯片国产替代领军" },
+          { name: "兆易创新", highlight: "Nor Flash+MCU龙头，存储与控制芯片设计国内市占领先" }
         ]
       },
       {
         name: "晶圆制造（IDM/Foundry）",
         companies: [
-          { name: "士兰微", highlight: "IDM模式，功率+射频+MEMS多元布局，车规级产品放量" },
-          { name: "京东方A", highlight: "半导体显示晶圆级制造，OLED+Mini LED产能全球第一" },
-          { name: "通富微电", highlight: "Chiplet先进封装，承接AMD/英特尔晶圆级封装订单" }
+          { name: "中芯国际", highlight: "国内晶圆代工龙头，14nm制程商用量产，国产先进制程核心平台" },
+          { name: "华虹公司", highlight: "特色工艺晶圆代工龙头，功率器件+模拟芯片代工领先" },
+          { name: "士兰微", highlight: "IDM模式，功率+射频+MEMS多元布局，车规级产品放量" }
         ]
       }
     ],
@@ -52,16 +52,16 @@ const INDUSTRY_DATA = {
       {
         name: "封装测试",
         companies: [
+          { name: "长电科技", highlight: "全球第三大封测厂，Chiplet/2.5D先进封装技术领先" },
           { name: "通富微电", highlight: "Chiplet先进封装，AMD重要合作伙伴，营收超百亿" },
-          { name: "华天科技", highlight: "传统封测+先进封装，车规级封测需求旺盛" },
-          { name: "上海贝岭", highlight: "模拟芯片+混合信号IC，工控与汽车电子双轮驱动" }
+          { name: "华天科技", highlight: "传统封测+先进封装，车规级封测需求旺盛" }
         ]
       },
       {
         name: "终端应用",
         companies: [
           { name: "京东方A", highlight: "面板龙头，半导体显示+传感器全面布局" },
-          { name: "紫光国微", highlight: "安全芯片+FPGA，国密芯片市场份额领先，军工信创双赛道" },
+          { name: "兆威机电", highlight: "微型传动与模组，智能终端与汽车电子应用端配套" },
           { name: "海康威视", highlight: "AI推理芯片应用龙头，云端+边缘端AI视觉芯片大规模部署" }
         ]
       }
@@ -78,10 +78,10 @@ const INDUSTRY_DATA = {
       {
         name: "AI芯片",
         companies: [
-          { name: "紫光国微", highlight: "国产FPGA+AI加速芯片，可编程算力芯片国产替代领军" },
-          { name: "卓胜微", highlight: "高速射频芯片，AI服务器前端信号处理核心器件" },
-          { name: "中国软件", highlight: "国产操作系统麒麟/统信生态核心，AI算力国产化软件栈" },
-          { name: "领益智造", highlight: "英伟达AI服务器散热组件核心供应商，液冷+风冷双方案覆盖" }
+          { name: "寒武纪", highlight: "云端AI训练/推理芯片龙头，思元系列大模型算力芯片量产出货" },
+          { name: "海光信息", highlight: "国产x86+DCU协处理器，深算系列GPU适配国产智算生态" },
+          { name: "景嘉微", highlight: "国产GPU芯片，JM系列图形/通用计算芯片信创与AI场景拓展" },
+          { name: "芯原股份", highlight: "芯片IP与定制服务，AI SoC与算力芯片设计平台" }
         ]
       },
       {
@@ -89,7 +89,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中际旭创", highlight: "800G光模块全球龙头，AI数据中心光互联核心，1.6T产品已送样" },
           { name: "顺络电子", highlight: "高频电感磁性元件龙头，AI服务器磁性器件需求激增" },
-          { name: "辰奕智能", highlight: "高速连接器+背板互联，AI服务器机柜级互联核心供应商" }
+          { name: "华丰科技", highlight: "高速背板连接器，AI服务器与交换机组网互连核心器件" }
         ]
       }
     ],
@@ -98,8 +98,8 @@ const INDUSTRY_DATA = {
         name: "服务器/整机",
         companies: [
           { name: "浪潮信息", highlight: "AI服务器出货量全球前三，英伟达H100/H800主要ODM合作方" },
-          { name: "荣联科技", highlight: "AI整机柜交付能力，国内头部云厂商核心供应商" },
-          { name: "许继电气", highlight: "数据中心配电方案，大功率AI机柜供电及液冷配电整合" }
+          { name: "工业富联", highlight: "AI服务器代工龙头，云厂商与租赁商整机柜采购核心供应商" },
+          { name: "中科曙光", highlight: "国产高端服务器+液冷整机，政务与行业智算项目常见底座" }
         ]
       },
       {
@@ -115,15 +115,15 @@ const INDUSTRY_DATA = {
       {
         name: "数据中心/IDC",
         companies: [
+          { name: "润泽科技", highlight: "超大规模智算园区运营，批发型云客户上架率与算力租赁景气绑定" },
           { name: "光环新网", highlight: "北京核心数据中心运营商，AI算力租赁业务快速扩张" },
-          { name: "大华股份", highlight: "AIoT端侧算力，智慧城市+AI视频分析" },
-          { name: "中孚实业", highlight: "绿电+IDC战略布局，算力租赁切入AI基础设施赛道" }
+          { name: "数据港", highlight: "阿里云核心数据中心合作方，上架率与云侧算力扩张同步" }
         ]
       },
       {
         name: "大模型/AI应用",
         companies: [
-          { name: "闻泰科技", highlight: "AI手机ODM龙头，端侧AI推理芯片集成方案" },
+          { name: "三六零", highlight: "360智脑大模型，安全与搜索场景AI应用落地" },
           { name: "科大讯飞", highlight: "星火大模型，教育+医疗+办公AI应用商业化落地" },
           { name: "华宇软件", highlight: "AI大模型行业落地，司法+政务AI辅助系统商业化领先" }
         ]
@@ -151,7 +151,7 @@ const INDUSTRY_DATA = {
         name: "电芯/动力电池",
         companies: [
           { name: "宁德时代", highlight: "全球动力电池装机量第一，麒麟电池+钠离子电池技术引领" },
-          { name: "TCL中环", highlight: "光伏硅片+车规级功率器件，新能源双赛道布局" },
+          { name: "国轩高科", highlight: "磷酸铁锂电芯，大众持股加持，动力电池装机量居前" },
           { name: "亿纬锂能", highlight: "大圆柱+软包电池海外订单充沛，储能市场快速增长" }
         ]
       }
@@ -161,17 +161,17 @@ const INDUSTRY_DATA = {
         name: "核心零部件",
         companies: [
           { name: "汇川技术", highlight: "新能源汽车电机驱动+电控龙头，市占率国内第一" },
-          { name: "美亚光电", highlight: "锂电分选+色选机，电芯品质检测设备领先" },
+          { name: "拓普集团", highlight: "底盘+热管理+轻量化，特斯拉与新势力核心零部件供应商" },
           { name: "华域汽车", highlight: "汽车零部件龙头，电动化+智能化转型加速" },
-          { name: "比亚迪", highlight: "整车+电池+芯片一体化，全球新能源汽车销量冠军" }
+          { name: "三花智控", highlight: "热管理阀件龙头，新能源车热管理系统核心供应商" }
         ]
       },
       {
         name: "智能驾驶/座舱",
         companies: [
           { name: "德赛西威", highlight: "智能座舱域控制器龙头，舱驾一体化方案规模量产" },
-          { name: "豪迈科技", highlight: "车载传感器精密制造，自动驾驶感知系统配套能力强" },
-          { name: "新易盛", highlight: "激光雷达用光模块及组件，自动驾驶光学方案供应商" }
+          { name: "华阳集团", highlight: "智能座舱+HUD龙头，主流车企座舱方案核心供应商" },
+          { name: "万集科技", highlight: "激光雷达+ETC，车载与路侧激光雷达量产装车" }
         ]
       }
     ],
@@ -187,9 +187,9 @@ const INDUSTRY_DATA = {
       {
         name: "充电桩/服务",
         companies: [
-          { name: "台基股份", highlight: "大功率充电桩模块，液冷超充技术领先，高压快充核心器件" },
-          { name: "亿纬锂能", highlight: "动力+储能双轮驱动，大圆柱电池海外出货放量" },
-          { name: "宁德时代", highlight: "换电服务+大储系统，新能源出行配套完整生态" }
+          { name: "特锐德", highlight: "充电桩运营龙头，特来电公共桩保有量国内第一" },
+          { name: "万马股份", highlight: "充电设备+电缆龙头，小区与公共场站充电网络覆盖广" },
+          { name: "盛弘股份", highlight: "大功率充电模块龙头，液冷超充模块批量供货主流桩企" }
         ]
       }
     ]
@@ -205,17 +205,17 @@ const INDUSTRY_DATA = {
       {
         name: "多晶硅/硅料",
         companies: [
-          { name: "隆基绿能", highlight: "全球最大单晶硅片+电池组件厂商，BC电池引领下一代技术" },
-          { name: "TCL中环", highlight: "N型硅片出货量快速提升，单晶炉设备持续扩产" },
-          { name: "通威股份", highlight: "多晶硅产能全球第一，兼具电池片龙头地位，一体化优势显著" }
+          { name: "通威股份", highlight: "多晶硅产能全球第一，硅料+电池片一体化成本优势显著" },
+          { name: "大全能源", highlight: "高纯多晶硅龙头，N型硅料产能扩张，成本控制能力领先" },
+          { name: "特变电工", highlight: "多晶硅+特高压设备龙头，硅料与新能源电站一体化布局" }
         ]
       },
       {
         name: "辅材/设备",
         companies: [
-          { name: "欣旺达", highlight: "储能电池+光伏配储，光储一体化解决方案" },
+          { name: "福斯特", highlight: "光伏胶膜全球龙头，EVA/POE胶膜市占率国内第一" },
           { name: "捷佳伟创", highlight: "TOPCon/HJT电池设备龙头，N型电池设备市占率居前" },
-          { name: "TCL中环", highlight: "大尺寸单晶硅片，光伏电池效率持续提升的核心原材料" }
+          { name: "奥特维", highlight: "串焊机+叠焊设备龙头，组件端自动化设备市占领先" }
         ]
       }
     ],
@@ -225,7 +225,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "晶澳科技", highlight: "TOPCon电池全球出货量前三，海外市场持续开拓" },
           { name: "天合光能", highlight: "组件出货量全球前三，分布式光伏+储能系统加速布局" },
-          { name: "TCL中环", highlight: "N型大尺寸硅片龙头，单晶硅片全球市占率前二" }
+          { name: "隆基绿能", highlight: "单晶组件龙头，BC电池技术产业化推进" }
         ]
       },
       {
@@ -241,7 +241,7 @@ const INDUSTRY_DATA = {
       {
         name: "光伏电站/EPC",
         companies: [
-          { name: "节能风电", highlight: "风光储一体电站运营商，清洁能源资产持续扩张" },
+          { name: "晶科能源", highlight: "光伏组件与电站开发，全球光伏电站EPC与运营" },
           { name: "太阳能", highlight: "集中式光伏电站运营龙头，装机量持续创新高" },
           { name: "三峡能源", highlight: "海上风电+光伏电站，清洁能源央企龙头" }
         ]
@@ -249,9 +249,9 @@ const INDUSTRY_DATA = {
       {
         name: "储能/配套",
         companies: [
-          { name: "宁德时代", highlight: "大储系统全球市占率第一，天合储能+天弈储能双品牌" },
+          { name: "宁德时代", highlight: "储能电池系统全球领先，大储与工商业储能装机居前" },
           { name: "欣旺达", highlight: "储能电芯+PACK，工商业储能快速放量" },
-          { name: "协鑫科技", highlight: "颗粒硅低成本优势突出，光伏电站配套储能布局加速" }
+          { name: "协鑫集成", highlight: "光伏组件+电站开发，光储一体化系统集成与运营" }
         ]
       }
     ]
@@ -275,9 +275,9 @@ const INDUSTRY_DATA = {
       {
         name: "AI框架/工具链",
         companies: [
-          { name: "四维图新", highlight: "高精地图+车路协同数据，L4自动驾驶AI训练数据底座" },
-          { name: "用友网络", highlight: "企业AI大模型BIP平台，数字化转型深度受益" },
-          { name: "汇川技术", highlight: "工业AI+运动控制，机器人+工控场景AI渗透率快速提升" }
+          { name: "中科创达", highlight: "AI操作系统+边缘计算框架，端侧大模型部署工具链领先" },
+          { name: "拓尔思", highlight: "NLP与知识图谱平台，政务/media大模型训练工具链" },
+          { name: "金山办公", highlight: "WPS AI办公助手，文档生成与协作AI工具链商业化领先" }
         ]
       }
     ],
@@ -312,7 +312,7 @@ const INDUSTRY_DATA = {
         name: "AIGC/生成式AI",
         companies: [
           { name: "昆仑万维", highlight: "天工AI搜索日活突破百万，AIGC商业化路径最清晰" },
-          { name: "奥飞数据", highlight: "IDC算力+AIGC内容基础设施，AI内容消费基础设施运营商" },
+          { name: "万兴科技", highlight: "AIGC数字创意软件龙头，视频/文档AI生成工具全球化" },
           { name: "蓝色光标", highlight: "全面拥抱AI营销，AIGC内容生产成本降低60%，营销自动化快速增长" }
         ]
       }
@@ -331,7 +331,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "天齐锂业", highlight: "锂矿资产全球顶级，参股SQM，碳酸锂价格回升弹性极大" },
           { name: "赣锋锂业", highlight: "固态锂电池全球量产进程最快，海外矿山资产丰富" },
-          { name: "北方稀土", highlight: "稀土永磁材料龙头，钕铁硼永磁体新能源汽车电机核心供应商" }
+          { name: "华友钴业", highlight: "钴镍锂资源与三元前驱体，新能源金属一体化布局" }
         ]
       },
       {
@@ -355,9 +355,9 @@ const INDUSTRY_DATA = {
       {
         name: "BMS/热管理",
         companies: [
-          { name: "北方华创", highlight: "真空镀膜设备+刻蚀机，电池极片制造核心装备" },
-          { name: "星源材质", highlight: "锂电池隔膜+铜箔，干法隔膜技术全球领先，盈利稳健" },
-          { name: "立讯精密", highlight: "精密连接器+热管理部件，新能源汽车电池包配套能力强" }
+          { name: "均胜电子", highlight: "汽车电子+BMS，动力电池管理系统与智能座舱配套" },
+          { name: "欣旺达", highlight: "BMS+PACK系统集成，储能与小动力BMS出货量快速增长" },
+          { name: "银轮股份", highlight: "新能源车热管理龙头，电池液冷板+热泵系统核心供应商" }
         ]
       }
     ],
@@ -373,7 +373,7 @@ const INDUSTRY_DATA = {
       {
         name: "储能应用",
         companies: [
-          { name: "宁德时代", highlight: "天合储能+天弈储能，全球大储系统市占率第一" },
+          { name: "宁德时代", highlight: "储能电芯与系统全球装机领先，大储与工商业场景覆盖广" },
           { name: "欣旺达", highlight: "工商业储能PACK+BMS，装机量快速提升" },
           { name: "比亚迪", highlight: "储能系统BYD-ESS，光储一体方案全球销售" }
         ]
@@ -392,8 +392,8 @@ const INDUSTRY_DATA = {
         name: "芯片/核心部件",
         companies: [
           { name: "紫光国微", highlight: "安全芯片+FPGA，手机SIM卡芯片国内市占超60%" },
-          { name: "蓝思科技", highlight: "玻璃+金属盖板，苹果+华为双核心供应链" },
-          { name: "歌尔股份", highlight: "TWS耳机+VR头显，苹果Vision Pro核心声学供应商" }
+          { name: "卓胜微", highlight: "射频前端芯片龙头，5G手机滤波器+LNA核心供应商" },
+          { name: "圣邦股份", highlight: "模拟芯片龙头，消费电子电源管理与信号链芯片" }
         ]
       },
       {
@@ -409,15 +409,15 @@ const INDUSTRY_DATA = {
       {
         name: "ODM/代工制造",
         companies: [
-          { name: "闻泰科技", highlight: "手机ODM龙头+功率半导体，AI手机整合解决方案" },
+          { name: "华勤技术", highlight: "手机ODM龙头，AI手机与智能硬件整机设计制造出货量行业前三" },
           { name: "歌尔股份", highlight: "苹果核心供应商，AirPods出货量全球第一供应商" },
-          { name: "蓝思科技", highlight: "苹果+华为+小米全覆盖，折叠屏铰链量产能力行业第一" }
+          { name: "龙旗科技", highlight: "智能手机ODM，小米/荣耀等品牌整机设计制造" }
         ]
       },
       {
         name: "结构件/精密制造",
         companies: [
-          { name: "海天精工", highlight: "精密机床，消费电子外壳CNC加工核心装备" },
+          { name: "长盈精密", highlight: "消费电子精密结构件，金属/CNC件核心供应商" },
           { name: "立讯精密", highlight: "连接器+声学+无线，苹果核心供应商，AirPods/Watch核心制造" },
           { name: "歌尔股份", highlight: "精密声学+VR光学结构件，苹果/Meta核心供应链" }
         ]
@@ -427,17 +427,17 @@ const INDUSTRY_DATA = {
       {
         name: "整机品牌",
         companies: [
-          { name: "海康威视", highlight: "安防摄像头+智能门锁，消费级AIoT硬件市占领先" },
-          { name: "世纪华通", highlight: "游戏+智能手机应用生态，消费电子软硬联动" },
-          { name: "福耀玻璃", highlight: "AR眼镜光学镜片+车载HUD，新形态消费电子光学布局" }
+          { name: "传音控股", highlight: "非洲及新兴市场手机龙头，多品牌矩阵出货量全球前列" },
+          { name: "TCL科技", highlight: "显示面板+智能终端品牌，电视与商显全球出货量前列" },
+          { name: "漫步者", highlight: "音频设备品牌龙头，TWS耳机与智能音箱消费级市占领先" }
         ]
       },
       {
         name: "零售渠道/电商",
         companies: [
-          { name: "小商品城", highlight: "跨境电商平台+消费电子出口，义乌消费电子外贸枢纽" },
-          { name: "光线传媒", highlight: "消费电子内容营销+IP联名，品牌推广核心渠道" },
-          { name: "富瀚微", highlight: "视频安防SoC芯片龙头，智能摄像头AI芯片领域第一" }
+          { name: "王府井", highlight: "百货与免税渠道，高端消费品线下零售网络" },
+          { name: "神州数码", highlight: "IT分销与数码零售渠道，消费电子供应链与门店网络覆盖广" },
+          { name: "南极电商", highlight: "品牌电商运营，消费电子品类线上渠道与品牌授权" }
         ]
       }
     ]
@@ -454,16 +454,16 @@ const INDUSTRY_DATA = {
         name: "核心零部件",
         companies: [
           { name: "汇川技术", highlight: "伺服驱动+运动控制龙头，人形机器人关节电机核心供应商" },
-          { name: "埃斯顿", highlight: "减速器+伺服系统，国内工业机器人核心零部件龙头" },
+          { name: "绿的谐波", highlight: "谐波减速器龙头，工业机器人关节核心零部件" },
           { name: "双环传动", highlight: "精密减速器，特斯拉人形机器人供应商认证" }
         ]
       },
       {
         name: "传感器/感知",
         companies: [
-          { name: "立讯精密", highlight: "力觉+触觉传感器精密组件，机器人感知系统关键配套" },
-          { name: "春兴精工", highlight: "精密结构件+MEMS传感器封装，机器人末端执行器配套" },
-          { name: "合力科技", highlight: "工业视觉检测系统，机器人3D视觉引导定位方案" }
+          { name: "敏芯股份", highlight: "MEMS传感器，压力/惯性传感器机器人感知配套" },
+          { name: "奥比中光", highlight: "3D视觉传感器龙头，机器人与环境感知核心器件" },
+          { name: "汉威科技", highlight: "气体/压力传感器，工业机器人安全与环境感知" }
         ]
       }
     ],
@@ -472,16 +472,16 @@ const INDUSTRY_DATA = {
         name: "控制系统/算法",
         companies: [
           { name: "汇川技术", highlight: "PLC+运动控制，机器人大脑核心，AI化运动规划领先" },
-          { name: "中科曙光", highlight: "机器人操作系统+高性能计算，工业AI一体化算法平台" },
+          { name: "柏楚电子", highlight: "运动控制系统，激光切割与工业机器人控制算法" },
           { name: "埃斯顿", highlight: "自主运动控制算法，焊接+搬运+装配机器人全场景覆盖" }
         ]
       },
       {
         name: "本体制造/集成",
         companies: [
-          { name: "机器人（新松）", highlight: "国内工业机器人整机龙头，特种+服务机器人全赛道布局" },
+          { name: "机器人", highlight: "国内工业机器人整机龙头，特种+服务机器人全赛道布局" },
           { name: "埃斯顿", highlight: "国产工业机器人出货量前三，汽车+3C行业应用居前" },
-          { name: "玉禾田", highlight: "环卫机器人+服务机器人，室外场景自主作业商业化落地" }
+          { name: "拓斯达", highlight: "工业机器人+注塑辅机，3C与新能源产线集成方案" }
         ]
       }
     ],
@@ -489,17 +489,17 @@ const INDUSTRY_DATA = {
       {
         name: "工业应用",
         companies: [
-          { name: "协鑫集成", highlight: "光伏电池智能制造，机器人应用深度场景实践" },
+          { name: "埃斯顿", highlight: "工业机器人本体+系统集成，汽车与3C产线应用居前" },
           { name: "三一重工", highlight: "工程机械+挖掘机器人，建筑+矿山自动化深度布局" },
-          { name: "隆基绿能", highlight: "光伏灯塔工厂，工业机器人应用量全国前列" }
+          { name: "汇川技术", highlight: "工业机器人+伺服系统，产线自动化解决方案龙头" }
         ]
       },
       {
         name: "服务/人形机器人",
         companies: [
-          { name: "机器人（新松）", highlight: "服务机器人+AGV，医院+酒店场景商业化落地" },
-          { name: "金力永磁", highlight: "高性能钕铁硼永磁体，人形机器人电机磁材核心供应商" },
-          { name: "山河智能", highlight: "特种机器人+工程机械，应急救援+非开挖机器人" }
+          { name: "机器人", highlight: "服务机器人+AGV，医院+酒店场景商业化落地" },
+          { name: "埃夫特", highlight: "工业机器人本体，焊接与装配场景国产化领先" },
+          { name: "鸣志电器", highlight: "空心杯电机+步进电机，人形机器人关节驱动核心供应商" }
         ]
       }
     ]
@@ -516,17 +516,17 @@ const INDUSTRY_DATA = {
         name: "冷却液/导热材料",
         companies: [
           { name: "巨化股份", highlight: "氟化工龙头，氟化液和氟化冷却介质生产，浸没液冷冷却剂核心供应商" },
-          { name: "双良节能", highlight: "工业换热器龙头，数据中心液冷CDU换热核心设备供应商" },
-          { name: "立昂技术", highlight: "导热硅脂+导热界面材料，GPU封装热管理关键辅材" },
-          { name: "璞泰来", highlight: "导热石墨膜，高功率芯片散热界面材料国产化领先" }
+          { name: "三美股份", highlight: "电子级氟化液供应商，数据中心浸没与两相液冷介质" },
+          { name: "飞荣达", highlight: "导热界面材料+石墨散热，AI服务器芯片热管理核心辅材" },
+          { name: "中石科技", highlight: "导热垫片+均热板，GPU/CPU高功率散热界面材料龙头" }
         ]
       },
       {
         name: "泵/阀/管路",
         companies: [
-          { name: "华东重机", highlight: "精密微型泵，液冷循环系统动力核心部件" },
-          { name: "西部建设", highlight: "高精密铜铝管路，液冷管路配套加工能力" },
-          { name: "泰尔股份", highlight: "工业级耐腐蚀阀门，数据中心液冷管路控制部件" }
+          { name: "大元泵业", highlight: "屏蔽泵/循环泵龙头，液冷CDU循环泵核心供应商" },
+          { name: "川环科技", highlight: "汽车与工业橡胶管路，液冷软管与密封系统配套" },
+          { name: "银轮股份", highlight: "液冷板+换热系统，数据中心液冷管路换热组件" }
         ]
       }
     ],
@@ -534,18 +534,18 @@ const INDUSTRY_DATA = {
       {
         name: "冷板/散热模组",
         companies: [
-          { name: "华中数控", highlight: "精密CNC加工设备，AI服务器液冷冷板加工核心装备" },
-          { name: "新雷能", highlight: "高效电源模块+热管理方案，AI服务器配套电源散热一体化" },
-          { name: "亿田智能", highlight: "精密铜铝热管理器件，液冷冷板冲压成形核心供应商" },
-          { name: "永福股份", highlight: "铜铝精密管道+冷板加工，液冷散热组件批量供货云厂商" }
+          { name: "英维克", highlight: "液冷冷板+温控模组，AI服务器机柜级散热方案龙头" },
+          { name: "高澜股份", highlight: "液冷设备+冷板系统，数据中心液冷换热解决方案" },
+          { name: "申菱环境", highlight: "精密空调+液冷CDU，高密度机柜散热系统核心供应商" },
+          { name: "佳力图", highlight: "机房精密空调+液冷配套，运营商与IDC温控设备" }
         ]
       },
       {
         name: "浸没式/CDU系统",
         companies: [
-          { name: "浩云科技", highlight: "机柜级浸没液冷整体方案，交付能力行业领先" },
-          { name: "许继电气", highlight: "液冷供配电一体化方案，CDU+PDU整合交付大功率机柜" },
-          { name: "金风科技", highlight: "大型冷却系统集成，工业级液冷系统技术积累深厚" }
+          { name: "曙光数创", highlight: "浸没液冷整体方案龙头，相变浸没技术批量交付智算中心" },
+          { name: "英维克", highlight: "CDU+液冷机柜系统，GPU集群液冷交付能力行业领先" },
+          { name: "依米康", highlight: "数据中心温控+液冷工程，浸没与冷板式方案EPC能力" }
         ]
       }
     ],
@@ -554,16 +554,16 @@ const INDUSTRY_DATA = {
         name: "液冷服务器/整机",
         companies: [
           { name: "浪潮信息", highlight: "液冷AI服务器G7系列，支持H100/H800满负荷液冷散热，头部客户大批量发货" },
-          { name: "郑煤机", highlight: "液冷机柜+高密度算力方案，矿用与数据中心双赛道布局" },
-          { name: "中际旭创", highlight: "液冷光模块方案，800G高速光模块散热性能达行业最优" }
+          { name: "中科曙光", highlight: "液冷整机柜+国产算力服务器，政务智算液冷方案批量交付" },
+          { name: "工业富联", highlight: "液冷AI服务器代工，云厂商液冷机柜整机供应核心" }
         ]
       },
       {
         name: "数据中心/IDC运营",
         companies: [
+          { name: "润泽科技", highlight: "液冷智算园区运营，高密度GPU机柜上架与PUE优化领先" },
           { name: "光环新网", highlight: "液冷数据中心改造，PUE降至1.15以下，节能效益显著" },
-          { name: "中孚实业", highlight: "绿电+液冷IDC，算力租赁业务切入AI基础设施赛道" },
-          { name: "天融信", highlight: "数据中心安全运维+液冷环境监控，IDC全栈管理服务商" }
+          { name: "奥飞数据", highlight: "华南智算节点扩张，液冷机柜与带宽资源弹性供给" }
         ]
       }
     ]
@@ -580,9 +580,9 @@ const INDUSTRY_DATA = {
         name: "通信芯片",
         companies: [
           { name: "卓胜微", highlight: "5G射频前端芯片龙头，滤波器+PA国产替代持续突破" },
-          { name: "广和通", highlight: "通信模组龙头，NB-IoT/Cat.1/5G模组出货量行业领先" },
+          { name: "翱捷科技", highlight: "蜂窝基带芯片，5G/物联网通信芯片国产替代" },
           { name: "全志科技", highlight: "IoT处理芯片，无线通信终端SoC出货量行业领先" },
-          { name: "生益科技", highlight: "高频高速覆铜板，5G基站天线及毫米波天线核心材料" }
+          { name: "唯捷创芯", highlight: "射频前端芯片，5G PA与射频模组核心供应商" }
         ]
       },
       {
@@ -590,8 +590,8 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中际旭创", highlight: "800G相干光模块出货全球第一，已向头部云厂商批量交付" },
           { name: "华工科技", highlight: "光芯片+激光器垂直整合，25G/100G DFB激光芯片国产替代" },
-          { name: "歌尔股份", highlight: "射频天线+声学模块，5G终端射频前端配套能力强" },
-          { name: "展鹏科技", highlight: "滤波器/腔体器件，5G基站滤波器国产供应链重要一环" }
+          { name: "天孚通信", highlight: "光器件封装龙头，光模块上游无源器件核心供应商" },
+          { name: "武汉凡谷", highlight: "射频滤波器龙头，5G基站介质滤波器核心供应商" }
         ]
       }
     ],
@@ -607,8 +607,8 @@ const INDUSTRY_DATA = {
       {
         name: "网络设备/交换机",
         companies: [
-          { name: "中际旭创", highlight: "400G/800G数通光模块，超大规模数据中心组网核心" },
-          { name: "许继电气", highlight: "电力通信设备+电网数字化，电力系统5G专网配套" },
+          { name: "紫光股份", highlight: "新华三交换机与网络设备，数据中心组网核心供应商" },
+          { name: "锐捷网络", highlight: "数据中心交换机，企业网与运营商数通设备" },
           { name: "共进股份", highlight: "运营商家庭网关+光猫，5G CPE出货量国内居前" }
         ]
       }
@@ -619,13 +619,13 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中国电信", highlight: "5G-A商用启动，算网融合战略，IDC+云收入增速超30%" },
           { name: "中国联通", highlight: "5G共建共享节省资本开支，算力网络布局加速" },
-          { name: "建设银行", highlight: "金融机构5G专网+金融科技，数字化网点5G覆盖深度推进" }
+          { name: "中国移动", highlight: "5G基站规模最大，算力网络与云网一体战略核心运营商" }
         ]
       },
       {
         name: "卫星通信/行业应用",
         companies: [
-          { name: "中国软件", highlight: "卫星互联网地面系统软件，北斗+低轨卫星核心配套" },
+          { name: "海格通信", highlight: "卫星通信终端与北斗导航，低轨卫星地面应用配套" },
           { name: "欧比特", highlight: "微纳卫星制造+对地遥感，商业航天通信布局先行" },
           { name: "中航光电", highlight: "星载连接器+军民两用光电互联，卫星通信关键器件" }
         ]
@@ -645,16 +645,16 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中国软件", highlight: "麒麟操作系统+中间件，央企信创核心供应商，政府装机率第一" },
           { name: "中科曙光", highlight: "高性能计算+国产操作系统，科研+政务信创整体方案" },
-          { name: "双星新材", highlight: "国产化IT基础设施，信创替代受益标的" },
-          { name: "达实智能", highlight: "楼宇操作系统+智慧建筑，AI物联网平台软件收入高增" }
+          { name: "诚迈科技", highlight: "操作系统与移动软件，鸿蒙/安卓底层软件与信创适配" },
+          { name: "麒麟信安", highlight: "国产操作系统与安全软件，政务与关键行业信创装机" }
         ]
       },
       {
         name: "数据库/中间件",
         companies: [
-          { name: "同花顺", highlight: "金融数据库+AI大模型，iFinD金融数据平台国内市占第一" },
-          { name: "中科创达", highlight: "智能操作系统+中间件，国产化IT基础设施智能OS核心供应商" },
-          { name: "纳思达", highlight: "打印机芯片+国产办公软件，信创国产化替代整体解决方案" }
+          { name: "东方通", highlight: "应用服务器与中间件龙头，政务与金融信创核心" },
+          { name: "达梦数据", highlight: "国产数据库龙头，政务与金融核心系统数据库" },
+          { name: "普元信息", highlight: "企业级中间件与低代码，分布式架构基础软件" }
         ]
       }
     ],
@@ -671,7 +671,7 @@ const INDUSTRY_DATA = {
       {
         name: "云计算/SaaS",
         companies: [
-          { name: "元道通信", highlight: "云联网+SD-WAN，政企混合云接入服务商" },
+          { name: "用友网络", highlight: "企业云与SaaS，BIP平台订阅与行业云化" },
           { name: "同花顺", highlight: "金融SAAS+AI大模型，iFinD数据终端月活超百万用户" },
           { name: "东华软件", highlight: "医疗+政务信息化，医院HIS系统市占率国内前三" }
         ]
@@ -681,17 +681,17 @@ const INDUSTRY_DATA = {
       {
         name: "数字政府/智慧城市",
         companies: [
-          { name: "维宏股份", highlight: "工业软件+数控系统，制造业信创化替代进程加速" },
           { name: "万达信息", highlight: "智慧医疗+城市云平台，地方政府数字化大客户壁垒深" },
-          { name: "龙洲股份", highlight: "智慧城市IT运营服务，政务云+数字城管整体解决方案" }
+          { name: "数字政通", highlight: "城市管理+政务信息化，数字城管与一网通办核心供应商" },
+          { name: "太极股份", highlight: "政务云+数字政府，央企政务信息化与信创集成龙头" }
         ]
       },
       {
         name: "金融科技/企服",
         companies: [
-          { name: "东方财富", highlight: "金融互联网平台+基金代销，金融科技核心入口，用户超1亿" },
-          { name: "信维通信", highlight: "金融终端+POS机天线，银行数字化终端核心供应商" },
-          { name: "荣联科技", highlight: "金融行业IT外包，保险+银行核心系统实施运维龙头" }
+          { name: "恒生电子", highlight: "金融核心系统龙头，证券基金银行IT解决方案市占领先" },
+          { name: "宇信科技", highlight: "银行IT解决方案，信贷/核心/渠道系统大行客户覆盖广" },
+          { name: "长亮科技", highlight: "银行核心系统+数字人民币，商业银行系统市占率居前" }
         ]
       }
     ]
@@ -707,18 +707,18 @@ const INDUSTRY_DATA = {
       {
         name: "基础原材料",
         companies: [
-          { name: "兴森科技", highlight: "PCB用铜箔基板核心材料，AI服务器高频高速PCB配套" },
+          { name: "博迁新材", highlight: "镍粉与金属粉体材料，MLCC内电极浆料核心原材料" },
+          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉体龙头，中高端被动元件粉体国产替代" },
           { name: "生益科技", highlight: "覆铜板龙头，AI/5G用高频高速覆铜板市占率国内第一" },
-          { name: "朗特智能", highlight: "MLCC介质陶瓷粉体，中高端MLCC国产化核心材料" },
           { name: "晶瑞电材", highlight: "电子级硅烷+湿电子化学品，元件生产精密清洗及蚀刻配套" }
         ]
       },
       {
         name: "MLCC/电容材料",
         companies: [
-          { name: "璞泰来", highlight: "PVDF压电薄膜，MLCC及功率器件封装用导热材料" },
-          { name: "四方达", highlight: "陶瓷基板，MLCC与功率模块衬底材料国产化进展加速" },
-          { name: "兴森科技", highlight: "高频高速PCB基材，MLCC载板配套生产能力领先" }
+          { name: "火炬电子", highlight: "陶瓷电容器+特种陶瓷材料，军工与高端MLCC配套" },
+          { name: "洁美科技", highlight: "电子封装离型膜，MLCC与被动元件封装辅材龙头" },
+          { name: "三环集团", highlight: "陶瓷封装与电子浆料，MLCC用陶瓷材料龙头" }
         ]
       }
     ],
@@ -728,16 +728,16 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "风华高科", highlight: "国内MLCC龙头，AI服务器用高压MLCC份额快速提升" },
           { name: "顺络电子", highlight: "片式电感+功率电感龙头，AI服务器单台用量大幅增加" },
-          { name: "鼎龙股份", highlight: "MLCC用抛光材料，AI算力+储能双赛道受益标的" }
+          { name: "三环集团", highlight: "MLCC+陶瓷封装，车规与高端消费电子被动元件龙头" }
         ]
       },
       {
         name: "连接器/PCB",
         companies: [
-          { name: "信邦智能", highlight: "高速连接器精密端子，AI服务器背板连接器核心供应商" },
+          { name: "电连技术", highlight: "高速连接器龙头，汽车与消费电子射频连接器" },
           { name: "深南电路", highlight: "高端PCB龙头，AI服务器HDI+高速背板PCB旗舰产品" },
-          { name: "生益科技", highlight: "覆铜板龙头，AI/5G用高频高速覆铜板市占率国内第一" },
-          { name: "新亚制程", highlight: "精密连接器，消费电子+汽车电子连接器出货量高增" }
+          { name: "中航光电", highlight: "军用与民用连接器龙头，高速互连组件核心供应商" },
+          { name: "瑞可达", highlight: "高压连接器龙头，新能源车与储能互连系统" }
         ]
       }
     ],
@@ -774,7 +774,7 @@ const INDUSTRY_DATA = {
           { name: "科大讯飞", highlight: "星火大模型V4.0，语音识别准确率全球第一，教育+医疗垂直落地最快" },
           { name: "昆仑万维", highlight: "天工大模型+天工AI搜索日活超百万，海外AGI布局走在A股前列" },
           { name: "海量数据", highlight: "AI训练数据标注与清洗，大模型数据供应商营收高增超50%" },
-          { name: "北方华创", highlight: "国产半导体设备为大模型训练芯片制造提供算力底座，替代英伟达核心标的" }
+          { name: "云从科技", highlight: "计算机视觉大模型，人机协同操作系统与行业大模型" }
         ]
       },
       {
@@ -813,7 +813,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "科大讯飞", highlight: "讯飞AI Agent在教育场景实现自主出题-批改-辅导闭环，日活用户超500万" },
           { name: "同花顺", highlight: "AI投研Agent，自动生成研报+个股分析报告，机构客户渗透率快速提升" },
-          { name: "奥飞数据", highlight: "AI运维Agent，数据中心自动化运营决策，人工干预率降低70%" },
+          { name: "汉得信息", highlight: "企业数字化+AI Agent，ERP与供应链智能决策落地" },
           { name: "软通动力", highlight: "企业级AI Agent开发部署，头部客户自动化流程RPA+AI一体化" }
         ]
       },
@@ -821,9 +821,9 @@ const INDUSTRY_DATA = {
         name: "AI营销/办公/教育",
         companies: [
           { name: "每日互动", highlight: "AI营销数据平台，精准推送模型迭代，广告主ROI提升30%以上" },
-          { name: "云图控股", highlight: "AI+数字营销，大模型赋能广告创意生成，投放效率行业领先" },
+          { name: "引力传媒", highlight: "AI+数字营销，大模型赋能广告创意与投放优化" },
           { name: "蓝色光标", highlight: "全面拥抱AI营销，AIGC内容生产成本降低60%，营销自动化客户快速增长" },
-          { name: "川大智胜", highlight: "AI教育+人脸识别，智慧校园AI解决方案收入持续高增" }
+          { name: "佳发教育", highlight: "智慧教育信息化龙头，考试阅卷与校园AI解决方案" }
         ]
       }
     ]
@@ -930,7 +930,7 @@ const INDUSTRY_DATA = {
       {
         name: "核心零部件/材料",
         companies: [
-          { name: "卧龙电驱", highlight: "低空经济电机龙头，eVTOL电驱系统已获多家整机厂定点，适配2-6座机型，2026Q1订单同比+200%" },
+          { name: "卧龙电驱", highlight: "驱动电机与电控龙头，新能源汽车与工业驱动主业扎实，低空电机延伸布局" },
           { name: "长源东谷", highlight: "低空飞行器电驱壳体核心供应商，高压铸造+精密加工一体化，已进入亿航/峰飞供应链" },
           { name: "森麒麟", highlight: "航空轮胎国产替代龙头，eVTOL专用轮胎已获适航认证，全球市占快速提升" },
           { name: "光威复材", highlight: "碳纤维复合材料龙头，低空飞行器机身/旋翼碳纤维主材核心供应商" }
@@ -950,7 +950,7 @@ const INDUSTRY_DATA = {
         name: "eVTOL整机制造",
         companies: [
           { name: "万丰奥威", highlight: "万丰飞机eDA40电动通航飞机已获FAA认证，eVTOL机型2026年首飞" },
-          { name: "万丰奥威", highlight: "万丰飞机eDA40电动通航飞机已获FAA认证，eVTOL机型2026年首飞" },
+          { name: "宗申动力", highlight: "航空发动机与通航动力，eVTOL与无人机动力系统配套" },
           { name: "纵横股份", highlight: "工业无人机龙头，大载重无人机+eVTOL双赛道布局，油气巡检市占率第一" }
         ]
       },
@@ -995,7 +995,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "上海洗霸", highlight: "氧化物固态电解质LLZT粉体已吨级出货，宁德时代/卫蓝新能源核心供应商" },
           { name: "三祥新材", highlight: "锆基固态电解质材料龙头，氧化物路线核心原料市占率超60%" },
-          { name: "当升科技", highlight: "固态电池正极材料龙头，高镍/富锂锰基正极适配固态体系，2026Q1出货量同比+150%" }
+          { name: "瑞泰新材", highlight: "锂电材料与电解质，固态电池用电解质材料研发推进" }
         ]
       },
       {
@@ -1020,7 +1020,7 @@ const INDUSTRY_DATA = {
         name: "半固态电池（量产先行）",
         companies: [
           { name: "珠海冠宇", highlight: "半固态电池研发领先，消费电池+固态电池双赛道布局，能量密度360Wh/kg" },
-          { name: "国轩高科", highlight: "半固态电池已装车蔚来ET7，2026年产能规划10GWh，大众集团深度绑定" },
+          { name: "国轩高科", highlight: "磷酸铁锂与半固态电池研发，大众集团战略合作" },
           { name: "孚能科技", highlight: "半固态电池能量密度330Wh/kg，广汽/吉利装车验证，海外订单突破" }
         ]
       }
@@ -1029,8 +1029,8 @@ const INDUSTRY_DATA = {
       {
         name: "新能源汽车应用",
         companies: [
-          { name: "赛力斯", highlight: "问界M9固态版2026年上市，赣锋锂业固态电池独家供应，续航突破1200km" },
-          { name: "赛力斯", highlight: "问界M9固态版2026年上市，赣锋锂业固态电池独家供应，续航突破1200km" },
+          { name: "赛力斯", highlight: "问界系列车型，与赣锋等固态电池装车验证合作推进" },
+          { name: "东风汽车", highlight: "赣锋固态电池装车验证，E70等车型固态电芯示范应用" },
           { name: "广汽集团", highlight: "全固态电池2026年装车规划，昊铂SSR固态版率先量产" }
         ]
       },
@@ -1055,7 +1055,7 @@ const INDUSTRY_DATA = {
       {
         name: "芯片/算力底座",
         companies: [
-          { name: "中芯国际", highlight: "华为昇腾/麒麟芯片核心代工方，N+2工艺量产，国产先进制程唯一路径" },
+          { name: "海光信息", highlight: "国产x86与DCU，昇腾生态协同的国产化算力底座" },
           { name: "北方华创", highlight: "半导体设备龙头，华为芯片产线刻蚀/沉积设备核心供应商" },
           { name: "卓胜微", highlight: "华为射频前端核心供应商，5.5G射频芯片批量出货" }
         ]
@@ -1074,7 +1074,7 @@ const INDUSTRY_DATA = {
         name: "昇腾算力/AI服务器",
         companies: [
           { name: "拓维信息", highlight: "华为昇腾生态核心伙伴，兆瀚AI服务器出货量前三，鲲鹏+昇腾双赛道" },
-          { name: "神州数码", highlight: "华为全线产品总代，昇腾服务器分销+自研方案，2026Q1营收同比+80%" },
+          { name: "神州数码", highlight: "华为全线产品总代，昇腾服务器分销与神州鲲泰信创交付" },
           { name: "华丰科技", highlight: "华为高速连接器核心供应商，昇腾910C集群互联关键器件" }
         ]
       },
@@ -1082,8 +1082,8 @@ const INDUSTRY_DATA = {
         name: "华为汽车/智选车",
         companies: [
           { name: "赛力斯", highlight: "问界M9/M8爆款车型，2026年销量目标60万辆，华为智选车标杆" },
-          { name: "江淮汽车", highlight: "享界S9华为合作车型，高端MPV+轿车双线布局，2026年产能释放" },
-          { name: "北汽蓝谷", highlight: "智界S7华为合作车型，高端纯电+增程双动力，华为智驾方案全面搭载" }
+          { name: "江淮汽车", highlight: "尊界MAEXTRO华为合作，江淮制造与供应链配套" },
+          { name: "北汽蓝谷", highlight: "极狐品牌华为智能化合作，纯电与增程车型布局" }
         ]
       }
     ],
@@ -1117,9 +1117,9 @@ const INDUSTRY_DATA = {
       {
         name: "AI服务器与算力整机",
         companies: [
-          { name: "工业富联", highlight: "AI服务器代工全球龙头，英伟达H100/H800核心ODM，2026Q1 AI服务器营收同比+180%" },
-          { name: "浪潮信息", highlight: "国内AI服务器市占率52.3%，液冷G7系列支持H100满载，在手订单350亿+" },
-          { name: "中科曙光", highlight: "国产AI服务器龙头，海光芯片+液冷方案，覆盖80%政务智算中心" }
+          { name: "工业富联", highlight: "AI服务器代工规模领先，云厂商ODM订单饱满" },
+          { name: "浪潮信息", highlight: "国内AI服务器头部厂商，液冷G7系列支持高密度GPU集群" },
+          { name: "中科曙光", highlight: "国产AI服务器龙头，海光芯片+液冷方案，政务智算项目供货居前" }
         ]
       },
       {
@@ -1135,7 +1135,7 @@ const INDUSTRY_DATA = {
       {
         name: "IDC/智算中心运营",
         companies: [
-          { name: "润泽科技", highlight: "AIDC第一股，投产3万P+，7大智算集群，液冷PUE1.15，绑定字节（收入占比60%+），长单排至2028年" },
+          { name: "润泽科技", highlight: "超大规模智算园区运营，批发型云客户上架率与液冷PUE优化领先" },
           { name: "数据港", highlight: "阿里云核心数据中心合作方，上架率与云侧算力扩张同步" },
           { name: "光环新网", highlight: "京津冀IDC+云服务龙头，企业与大模型客户托管需求稳定，AIDC改造项目推进中" }
         ]
@@ -1144,8 +1144,8 @@ const INDUSTRY_DATA = {
         name: "GPU云/弹性算力",
         companies: [
           { name: "首都在线", highlight: "公有云GPU与裸金属实例产品线明确，中小客户与出海弹性算力代表" },
-          { name: "利通电子", highlight: "3.3万P高端算力（H100/H800），出租率100%，腾讯50亿长单锁定" },
-          { name: "鸿博股份", highlight: "英伟达DGX核心，7000P高端算力，签约23亿+，北京AI创新中心满负荷" }
+          { name: "拓维信息", highlight: "昇腾生态伙伴，国产智算建设与行业算力服务" },
+          { name: "网宿科技", highlight: "边缘计算与算力调度，近端算力与CDN协同" }
         ]
       }
     ],
@@ -1259,7 +1259,7 @@ const INDUSTRY_DATA = {
       {
         name: "数据交易所/平台",
         companies: [
-          { name: "易华录", highlight: "数据湖+数据交易所核心建设方，北京/山东数据交易平台技术提供方" },
+          { name: "太极股份", highlight: "政务大数据+数据交易所建设，北京等地数据交易平台技术提供方" },
           { name: "零点有数", highlight: "数据分析+决策智能，数据要素评估/定价方法论领先" },
           { name: "广电运通", highlight: "广州数据交易所参股方，数据交易平台+数据资产管理系统核心建设方" }
         ]
@@ -1303,7 +1303,7 @@ const INDUSTRY_DATA = {
       {
         name: "原料/辅料供应",
         companies: [
-          { name: "青岛啤酒", highlight: "高端白酒包装材料供应商，酒用玻璃瓶+铝盖龙头" },
+          { name: "中粮糖业", highlight: "酿酒原料与辅料供应，食用酒精及淀粉糖产业链配套" },
           { name: "裕同科技", highlight: "高端白酒包装龙头，酒类礼盒+防伪包装全国市占率第一" },
           { name: "劲嘉股份", highlight: "烟酒包装印刷龙头，高端白酒纸质包装全国市占率最高" }
         ]
@@ -1311,9 +1311,9 @@ const INDUSTRY_DATA = {
       {
         name: "酿造设备",
         companies: [
-          { name: "浪潮信息", highlight: "白酒生产管理系统，产业数字化升级核心IT基础设施" },
+          { name: "乐惠国际", highlight: "啤酒/白酒酿造装备龙头，发酵罐与灌装线设备出口领先" },
           { name: "科远智慧", highlight: "酿造自动化控制系统，白酒智能生产线核心设备供应商" },
-          { name: "三环集团", highlight: "白酒窖池陶瓷材料，传统工艺与现代产能融合" }
+          { name: "永创智能", highlight: "酒类灌装与包装设备，白酒生产线自动化装备" }
         ]
       }
     ],
@@ -1331,7 +1331,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "洋河股份", highlight: "梦之蓝高端定位，年轻化消费者拓展成效显著" },
           { name: "山西汾酒", highlight: "清香型白酒龙头，杏花村品牌复兴战略稳步推进" },
-          { name: "山西汾酒", highlight: "清香型白酒A股上市主体，杏花村品牌复兴战略稳步推进" }
+          { name: "古井贡酒", highlight: "浓香型区域龙头，年份原浆系列全国化扩张" }
         ]
       }
     ],
@@ -1348,8 +1348,8 @@ const INDUSTRY_DATA = {
         name: "消费终端",
         companies: [
           { name: "同庆楼", highlight: "A股餐饮龙头，婚宴+商务宴请白酒消费场景核心渠道" },
-          { name: "百润股份", highlight: "预调酒龙头，RIO微醺系列年轻人低度酒消费新场景" },
-          { name: "元祖股份", highlight: "高端礼品消费龙头，节庆白酒+月饼礼盒组合销售渠道" }
+          { name: "今世缘", highlight: "浓香型白酒龙头，江苏市场宴席与礼品消费强势" },
+          { name: "酒鬼酒", highlight: "馥郁香型白酒，内参系列高端化与全国化扩张" }
         ]
       }
     ]
@@ -1365,16 +1365,16 @@ const INDUSTRY_DATA = {
       {
         name: "材料/零部件",
         companies: [
-          { name: "三环集团", highlight: "生物陶瓷+医疗陶瓷龙头，骨科植入物基体材料国产化" },
-          { name: "迪安诊断", highlight: "体外诊断龙头，第三方医学检验服务全国市占率前三" },
-          { name: "威孚高科", highlight: "精密铸造件和高端零部件，医疗器械关键部件国产供应商" }
+          { name: "正海生物", highlight: "生物再生材料，口腔膜与软组织修复材料龙头" },
+          { name: "奥精医疗", highlight: "人工骨修复材料，生物陶瓷骨缺损修复产品" },
+          { name: "佰仁医疗", highlight: "动物源性植介入材料，心脏瓣膜与补片材料" }
         ]
       },
       {
         name: "芯片/传感器",
         companies: [
-          { name: "乐普医疗", highlight: "心血管医疗器械龙头，心脏支架+AI心电诊断芯片国产替代领先" },
-          { name: "长川科技", highlight: "芯片测试设备，医疗芯片筛选和认证核心工具" },
+          { name: "理邦仪器", highlight: "医疗监护与心电设备，多参数监护传感器与模块" },
+          { name: "奕瑞科技", highlight: "医学影像探测器，DR/CT核心X光传感器龙头" },
           { name: "中航光电", highlight: "医疗连接器/传感器，手术机器人和微创器械关键部件" }
         ]
       }
@@ -1384,8 +1384,8 @@ const INDUSTRY_DATA = {
         name: "医学影像设备",
         companies: [
           { name: "联影医疗", highlight: "国产医学影像设备龙头，CT/MRI/PET-CT市占率国内前三，AI影像诊断领先" },
-          { name: "心脉医疗", highlight: "血管介入器械龙头，主动脉覆膜支架市场份额第一" },
-          { name: "蓝帆医疗", highlight: "一次性医疗用品龙头，手术手套全球产能第一" }
+          { name: "万东医疗", highlight: "医用X射线设备龙头，DR/DSA国产替代核心厂商" },
+          { name: "迈瑞医疗", highlight: "医疗器械平台龙头，超声与监护影像设备全球领先" }
         ]
       },
       {
@@ -1402,15 +1402,15 @@ const INDUSTRY_DATA = {
         name: "医院采购",
         companies: [
           { name: "鱼跃医疗", highlight: "家用医疗器械龙头，呼吸机+血压计+血糖仪线上销售市占率第一" },
-          { name: "爱尔眼科", highlight: "民营眼科医疗龙头，全国眼科医院超800家，AI辅助诊断率先落地" },
-          { name: "金域医学", highlight: "第三方医学检验龙头，检测样本量全国第一，AI辅助病理诊断领先" }
+          { name: "国药一致", highlight: "医药流通龙头，医院器械与药品集中采购渠道" },
+          { name: "山东药玻", highlight: "药用玻璃包装龙头，注射剂瓶与预灌封封装" }
         ]
       },
       {
         name: "康复/家用",
         companies: [
           { name: "可孚健康", highlight: "康复护理器械龙头，家用医疗+养老康复设备线上市占率领先" },
-          { name: "卫宁健康", highlight: "医疗信息化龙头，互联网医院+AI辅助诊疗平台覆盖超6000家医院" },
+          { name: "三诺生物", highlight: "血糖监测龙头，家用慢病管理设备与耗材" },
           { name: "九安医疗", highlight: "家用医疗器械龙头，血压计+血氧仪+体温计全球出货量领先" }
         ]
       }
@@ -1429,15 +1429,15 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "隆平高科", highlight: "水稻+玉米种子龙头，杂交水稻年推广面积超2亿亩" },
           { name: "扬农化工", highlight: "农药龙头，菊酯类杀虫剂全球市占率第一，先正达集团A股核心资产" },
-          { name: "金发科技", highlight: "生物肥料和生物农药，绿色农业和有机肥新赛道" }
+          { name: "盐湖股份", highlight: "钾肥龙头，农用氯化钾国内供给核心，化肥产业链上游" }
         ]
       },
       {
         name: "农机设备",
         companies: [
           { name: "一拖股份", highlight: "农业装备龙头，大中马力拖拉机市占率全国第一" },
-          { name: "中国一拖", highlight: "农业装备龙头，智能化拖拉机和精准农业解决方案" },
-          { name: "隆华节能", highlight: "节水灌溉和精准农业装备，水肥一体化管理系统" }
+          { name: "吉峰科技", highlight: "农机流通与服务，拖拉机与收获机械销售渠道覆盖广" },
+          { name: "大禹节水", highlight: "节水灌溉装备，农田水利与滴灌系统龙头" }
         ]
       }
     ],
@@ -1489,17 +1489,17 @@ const INDUSTRY_DATA = {
       {
         name: "铁矿采选",
         companies: [
-          { name: "中国铁建", highlight: "铁矿采选龙头之一，国内铁矿资源储量第一档" },
-          { name: "紫金矿业", highlight: "有色+铁矿双轮驱动，海外大型铁矿投资运营" },
-          { name: "河钢资源", highlight: "铁矿采选龙头，南非PMC铁矿资源储量丰富，海外铁矿开发领先" }
+          { name: "河钢资源", highlight: "铁矿采选龙头，南非PMC铁矿资源储量丰富，海外铁矿开发领先" },
+          { name: "金岭矿业", highlight: "铁矿石开采，山东地区铁矿资源主力供应商" },
+          { name: "大中矿业", highlight: "铁矿采选+钢铁，国内铁矿资源储备与采选一体化" }
         ]
       },
       {
         name: "冶炼辅材",
         companies: [
-          { name: "盛和资源", highlight: "稀土冶炼和稀有金属材料，高端钢铁合金添加剂" },
+          { name: "洛阳钼业", highlight: "钼铁合金原料，高端特种钢添加剂" },
           { name: "驰宏锌锗", highlight: "铅锌冶炼，钢铁脱硫和合金化关键原料" },
-          { name: "驰宏锌锗", highlight: "铅锌冶炼+锗产品龙头，钢铁脱硫和合金化关键原料供应" }
+          { name: "方大炭素", highlight: "石墨电极龙头，电弧炉炼钢核心耗材" }
         ]
       }
     ],
@@ -1614,8 +1614,8 @@ const INDUSTRY_DATA = {
         name: "光刻机/材料",
         companies: [
           { name: "张江高科", highlight: "参股上海微电子，国产光刻机核心投资平台，28nm光刻机国产化突破" },
-          { name: "中芯国际", highlight: "国内晶圆代工龙头，14nm制程商用量产全国领先" },
-          { name: "华虹公司", highlight: "特色工艺晶圆代工龙头，模拟芯片和功率芯片A股唯一标的" }
+          { name: "南大光电", highlight: "ArF光刻胶龙头，先进制程光刻胶国产突破核心" },
+          { name: "晶瑞电材", highlight: "湿电子化学品+光刻胶，晶圆制造关键材料国产替代" }
         ]
       },
       {
@@ -1631,7 +1631,7 @@ const INDUSTRY_DATA = {
       {
         name: "芯片设计",
         companies: [
-          { name: "深圳华强", highlight: "海思芯片分销龙头，华为芯片生态核心渠道商" },
+          { name: "澜起科技", highlight: "内存接口芯片龙头，DDR5 RCD/DB芯片全球市占领先" },
           { name: "瑞芯微", highlight: "SOC芯片龙头，平板和安卓电视芯片市占率全球前三" },
           { name: "紫光国微", highlight: "安全芯片+FPGA龙头，移动通信+安全芯片双赛道国产替代" }
         ]
@@ -1641,7 +1641,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中芯国际", highlight: "国内晶圆代工龙头，14nm量产和28nm稳定供应" },
           { name: "华虹公司", highlight: "特色工艺代工A股龙头，模拟芯片和功率芯片全球竞争力" },
-          { name: "中芯国际", highlight: "A股晶圆代工龙头，14nm量产和28nm稳定供应，国产替代核心" }
+          { name: "华润微", highlight: "IDM功率半导体代工，8英寸晶圆产线成熟" }
         ]
       }
     ],
@@ -1657,9 +1657,9 @@ const INDUSTRY_DATA = {
       {
         name: "终端应用",
         companies: [
-          { name: "华天科技", highlight: "封测龙头，华为海思先进封装核心伙伴，Chiplet封装技术领先" },
-          { name: "韦尔股份", highlight: "手机CIS芯片龙头，小米/OPPO/vivo核心摄像头芯片供应商" },
-          { name: "国科微", highlight: "车载芯片+存储芯片龙头，自动驾驶+车规级芯片国产替代先锋" }
+          { name: "传音控股", highlight: "智能手机出海龙头，主控与影像芯片采购量大" },
+          { name: "工业富联", highlight: "AI服务器与智能终端代工，芯片封装与应用端放量" },
+          { name: "海信视像", highlight: "显示终端龙头，SoC与面板驱动芯片需求旺盛" }
         ]
       }
     ]
@@ -1713,15 +1713,15 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "大众交通", highlight: "出行服务A股龙头，网约车+出租车运营，新能源汽车替换率提升" },
           { name: "永安行", highlight: "共享出行A股龙头，共享单车+氢能自行车双赛道布局" },
-          { name: "中路股份", highlight: "共享出行A股标的，自行车制造+共享单车运营" }
+          { name: "信隆健康", highlight: "自行车零配件龙头，两轮出行零部件与运动器材配套" },
         ]
       },
       {
         name: "物流配送",
         companies: [
           { name: "顺丰控股", highlight: "快递A股龙头，新能源末端配送车大规模采购，绿色物流领先" },
-          { name: "传化智联", highlight: "智能物流平台A股龙头，公路港+数字化物流网络覆盖全国" },
-          { name: "达嘉维康", highlight: "医药配送+社区服务A股龙头，末端配送网络覆盖广泛" }
+          { name: "德邦股份", highlight: "大件快递+快运，新能源物流车队替换加速" },
+          { name: "韵达股份", highlight: "快递网络龙头，末端配送电动两轮与四轮车采购" }
         ]
       }
     ]
@@ -1757,7 +1757,7 @@ const INDUSTRY_DATA = {
          companies: [
            { name: "中国石油", highlight: "国内原油生产龙头，年原油产量占国内总产量60%+" },
            { name: "中国海油", highlight: "海上油气生产A股龙头，深水油气技术全球领先" },
-           { name: "陕建股份", highlight: "陕西能源建设A股龙头，延长石油体系A股上市平台" }
+           { name: "广汇能源", highlight: "油气勘探开发+LNG，页岩油与天然气产销规模领先" },
          ]
        },
        {
@@ -1820,7 +1820,7 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "航发动力", highlight: "航空发动机总装龙头，涡扇/涡喷发动机国产化唯一平台" },
           { name: "中航沈飞", highlight: "歼击机总装龙头，歼-15/歼-16主力机型唯一制造商" },
-          { name: "中航西飞", highlight: "大飞机+运输机总装，运-20/轰-20核心制造平台" }
+          { name: "中航西飞", highlight: "运输机与轰炸机等整机总装，运-20等型号核心平台" }
         ]
       },
       {
@@ -1837,7 +1837,7 @@ const INDUSTRY_DATA = {
         name: "军工信息化",
         companies: [
           { name: "中科星图", highlight: "军用数字地球+战场态势感知，GEOVIS平台军方订单高增" },
-          { name: "航天宏图", highlight: "遥感卫星数据处理+军事测绘，PIE平台军方市占率第一" },
+          { name: "四创电子", highlight: "雷达与空管系统，军用气象与低空监视装备核心配套" },
           { name: "佳缘科技", highlight: "军用网络安全+数据加密，军队信息化安全核心供应商" }
         ]
       },
@@ -1871,8 +1871,8 @@ const INDUSTRY_DATA = {
         name: "卫星核心部件",
         companies: [
           { name: "航天电子", highlight: "星载计算机+测控设备，卫星电子系统核心配套市占率第一" },
-          { name: "臻镭科技", highlight: "星载相控阵TR芯片，低轨卫星通信载荷核心器件" },
-          { name: "铖昌科技", highlight: "相控阵芯片，卫星通信波束成形芯片国产替代先锋" }
+          { name: "国博电子", highlight: "有源相控阵T/R组件，星载微波射频前端核心供应商" },
+          { name: "雷电微力", highlight: "毫米波微系统，卫星通信相控阵芯片与组件" },
         ]
       }
     ],
@@ -1880,17 +1880,17 @@ const INDUSTRY_DATA = {
       {
         name: "火箭制造/发射",
         companies: [
-          { name: "中国卫通", highlight: "卫星运营龙头，通信广播卫星在轨运营量全国第一" },
-          { name: "航天电子", highlight: "航天电子设备A股龙头，火箭测控+卫星电子核心配套市占率第一" },
-          { name: "斯瑞新材", highlight: "火箭发动机铜合金推力室A股龙头，蓝箭/天兵等民营火箭核心配套" }
+          { name: "航天动力", highlight: "液体火箭发动机核心供应商，航天推进系统技术积累深厚" },
+          { name: "中天火箭", highlight: "固体火箭+小型运载火箭，商业航天发射服务" },
+          { name: "斯瑞新材", highlight: "火箭发动机铜合金推力室，民营火箭核心配套" }
         ]
       },
       {
         name: "卫星制造/组网",
         companies: [
           { name: "中国卫星", highlight: "小卫星总装龙头，低轨卫星星座组网核心制造平台" },
-          { name: "中国卫星", highlight: "小卫星总装A股龙头，低轨卫星星座组网核心制造平台" },
-          { name: "奥普特", highlight: "机器视觉+遥感图像处理A股龙头，商业遥感数据应用市占率领先" }
+          { name: "四维图新", highlight: "高精地图+遥感数据，卫星应用与车联网数据服务" },
+          { name: "上海瀚讯", highlight: "宽带通信设备，卫星互联网地面站与特种通信" },
         ]
       }
     ],
@@ -1907,7 +1907,7 @@ const INDUSTRY_DATA = {
         name: "遥感/导航应用",
         companies: [
           { name: "中科星图", highlight: "数字地球+遥感数据服务，商业遥感应用市占率第一" },
-          { name: "航天宏图", highlight: "遥感数据处理+行业应用，PIE平台覆盖应急/气象/农业" },
+          { name: "四维图新", highlight: "遥感数据处理+高精地图，应急/气象/农业行业应用" },
           { name: "北斗星通", highlight: "北斗高精度定位，厘米级定位模组市占率行业领先" }
         ]
       }
@@ -1925,8 +1925,8 @@ const INDUSTRY_DATA = {
         name: "量子芯片/核心器件",
         companies: [
           { name: "国盾量子", highlight: "量子通信设备龙头，量子密钥分发设备市占率全国第一" },
-          { name: "国盾量子", highlight: "量子计算+量子通信双赛道A股龙头，本源悟空量子计算机合作方" },
-          { name: "寒武纪", highlight: "AI芯片+量子计算协处理器，量子-经典混合计算架构研发" }
+          { name: "光库科技", highlight: "量子通信光学器件，光纤偏振/调制器件核心供应商" },
+          { name: "华工科技", highlight: "量子通信激光器与光器件，QKD系统光模块配套" }
         ]
       },
       {
@@ -1943,8 +1943,8 @@ const INDUSTRY_DATA = {
         name: "量子计算整机",
         companies: [
           { name: "国盾量子", highlight: "量子计算整机+量子计算云平台，国内量子计算商业化领先" },
-          { name: "国盾量子", highlight: "量子计算整机+云平台A股龙头，量子操作系统自主可控" },
-          { name: "科大国创", highlight: "量子计算软件+算法A股龙头，光量子计算软件平台研发领先" }
+          { name: "科大国创", highlight: "量子计算软件+算法，光量子计算软件平台研发领先" },
+          { name: "神州信息", highlight: "量子通信与金融IT，量子加密与行业应用集成" }
         ]
       },
       {
@@ -1961,14 +1961,14 @@ const INDUSTRY_DATA = {
         name: "量子通信应用",
         companies: [
           { name: "中国电信", highlight: "量子安全通话+量子密钥分发，天翼量子密话商用推广" },
-          { name: "工商银行", highlight: "量子金融加密，银行间量子保密通信试点应用" },
-          { name: "国网信通", highlight: "国家电网A股平台，电力量子加密通信+电网调度安全防护" }
+          { name: "格尔软件", highlight: "密码与PKI安全，量子加密与金融政务安全配套" },
+          { name: "吉大正元", highlight: "商用密码产品，量子保密通信安全网关与认证" }
         ]
       },
       {
         name: "量子测量/传感",
         companies: [
-          { name: "中航沈飞", highlight: "量子陀螺+惯性导航，量子测量军用前景广阔" },
+          { name: "航天电子", highlight: "惯性导航与测控，量子精密测量器件配套探索" },
           { name: "科大国创", highlight: "量子精密测量，量子重力仪+量子磁力计应用探索" },
           { name: "飞利信", highlight: "量子随机数发生器，量子加密+安全认证场景落地" }
         ]
@@ -1987,16 +1987,16 @@ const INDUSTRY_DATA = {
         name: "电极/传感器",
         companies: [
           { name: "爱朋医疗", highlight: "脑电监测+神经调控，脑机接口核心电极及信号采集" },
-          { name: "诺诚健华", highlight: "神经科学药物+脑电信号分析，脑机接口生物信号前端" },
-          { name: "微导纳米", highlight: "微纳加工技术，脑机接口微电极阵列制造工艺核心" }
+          { name: "翔宇医疗", highlight: "康复脑电采集设备，非侵入式脑电信号监测" },
+          { name: "冠昊生物", highlight: "神经修复生物材料，植入式电极生物相容性材料" }
         ]
       },
       {
         name: "芯片/信号处理",
         companies: [
-          { name: "汉威科技", highlight: "生物传感+神经信号处理，脑电信号采集芯片" },
-          { name: "森霸传感", highlight: "红外传感+生物电信号，非侵入式脑机接口传感器" },
-          { name: "赛微电子", highlight: "MEMS工艺代工，脑机接口微电极MEMS加工能力" }
+          { name: "汉威科技", highlight: "生物传感器+信号处理，脑电与环境多模态信号采集" },
+          { name: "狄耐克", highlight: "医疗信息化+脑电监测，神经康复场景信号处理" },
+          { name: "赛微电子", highlight: "MEMS工艺代工，脑机接口微电极MEMS加工能力" },
         ]
       }
     ],
@@ -2056,7 +2056,7 @@ const INDUSTRY_DATA = {
       {
         name: "稀土加工/分离",
         companies: [
-          { name: "五矿稀土", highlight: "稀土分离提纯技术领先，高纯稀土氧化物产能国内前三" },
+          { name: "中国稀土", highlight: "中重稀土分离与加工，央企稀土平台" },
           { name: "广晟有色", highlight: "南方中重稀土分离+深加工，铽镝等重稀土产量领先" },
           { name: "厦门钨业", highlight: "稀土+钨双主业，稀土发光材料和催化材料深加工" }
         ]
@@ -2092,9 +2092,9 @@ const INDUSTRY_DATA = {
       {
         name: "机器人/精密设备",
         companies: [
-          { name: "绿的谐波", highlight: "谐波减速器+永磁电机，人形机器人关节驱动核心" },
-          { name: "绿的谐波", highlight: "谐波减速器+永磁电机A股龙头，人形机器人关节驱动核心" },
-          { name: "大族激光", highlight: "精密激光设备+直线电机，稀土永磁直线电机高端应用" }
+          { name: "绿的谐波", highlight: "谐波减速器龙头，人形机器人关节减速器核心供应商" },
+          { name: "中大力德", highlight: "精密减速器+电机，机器人关节驱动配套" },
+          { name: "鸣志电器", highlight: "空心杯电机，人形机器人灵巧手与关节驱动" }
         ]
       }
     ]
@@ -2147,7 +2147,7 @@ const INDUSTRY_DATA = {
       {
         name: "GLP-1/代谢药",
         companies: [
-          { name: "荣昌生物", highlight: "ADC+GLP-1双赛道A股龙头，泰它西普自免+维迪西妥单抗ADC双核心" },
+          { name: "信达生物", highlight: "GLP-1/GCG双靶点减重药，玛仕度肽临床数据优异" },
           { name: "恒瑞医药", highlight: "GLP-1+胰岛素双布局，HRS9531减重临床数据优异" },
           { name: "华东医药", highlight: "利拉鲁肽+司美格鲁肽类似药，减肥药商业化领先" }
         ]
@@ -2156,8 +2156,8 @@ const INDUSTRY_DATA = {
         name: "创新药销售/渠道",
         companies: [
           { name: "恒瑞医药", highlight: "国内处方药销售团队最大，创新药收入占比超50%" },
-          { name: "恒瑞医药", highlight: "创新药A股一哥，抗肿瘤+肝病+呼吸全领域，创新药放量加速" },
-          { name: "华东医药", highlight: "创新药+医美A股龙头，利拉鲁肽+司美格鲁肽减肥药商业化领先" }
+          { name: "上海医药", highlight: "医药商业龙头，创新药分销与医院渠道覆盖最广" },
+          { name: "华东医药", highlight: "创新药+医美龙头，GLP-1类似药商业化领先" }
         ]
       }
     ]
