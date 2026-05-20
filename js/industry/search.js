@@ -4,9 +4,10 @@
  * - doArticleGeneration(query, industryData, sectorData): 产业链+龙头完成后触发文章生成
  *
  * 搜索流程：
- *   1. 同时检查两个 localStorage 缓存
- *   2. 缓存未命中的并行调用 Kimi API（不再降级 DeepSeek）
- *   3. 先返回的先显示，两者都完成后隐藏加载 → 自动触发文章生成
+ *   1. 本地 data.js / sector-data.js 优先
+ *   2. 同时检查两个 localStorage 缓存
+ *   3. 缓存未命中的并行调用 Kimi API
+ *   4. 两者都完成后隐藏加载
  */
 
 // 注：currentSearchQuery 和 articleGenerating 是全局变量，定义在 state.js 中
@@ -34,12 +35,17 @@ function doSearch(query) {
   // 重置文章区域
   resetArticleUI();
 
-  // 检查本地数据库（data.js 中的预定义数据）
+  // 检查本地数据库（data.js / sector-data.js 中的预定义数据）
   const localIndustry = searchIndustry(query);
-  
+  const localSector = typeof searchSector === 'function' ? searchSector(query) : null;
+
   // 根据是否有本地数据调整加载文本
-  if (localIndustry) {
+  if (localIndustry && localSector) {
+    updateLoading('📦 正在加载本地产业链与板块龙头...');
+  } else if (localIndustry) {
     updateLoading('📦 正在加载本地产业链数据...');
+  } else if (localSector) {
+    updateLoading('📦 正在加载本地板块龙头数据...');
   } else {
     updateLoading('正在连接 AI 服务（Kimi）...');
   }
@@ -106,8 +112,14 @@ function doSearch(query) {
   }
 
   // ---- 板块龙头 ----
-  // 板块龙头目前仅依赖 API，没有本地数据
-  if (sectorCached) {
+  // 优先级：本地数据 > 缓存 > API
+  if (localSector) {
+    currentSector = localSector;
+    renderSectorHeader(localSector, 'local');
+    cacheSector(query, localSector);
+    sectorDone = true;
+    checkAllDone();
+  } else if (sectorCached) {
     currentSector = sectorCached;
     renderSectorHeader(sectorCached, 'cache');
     sectorDone = true;

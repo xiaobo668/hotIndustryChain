@@ -1,6 +1,6 @@
 /**
  * 产业链数据库
- * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、AI应用、无人驾驶、长鑫存储、先进封装、2022世界杯、2026世界杯
+ * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、AI应用、无人驾驶、长鑫存储、先进封装、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
  */
 const INDUSTRY_DATA = {
   // ========== 半导体 ==========
@@ -2434,18 +2434,17 @@ const INDUSTRY_DATA = {
         name: "晶圆制造设备",
         companies: [
           { name: "北方华创", highlight: "刻蚀/沉积/CVD等设备龙头，DRAM产线扩产与技改核心国产设备商" },
-          { name: "中微公司", highlight: "等离子刻蚀机龙头，存储器产线介质/金属刻蚀设备持续导入" },
-          { name: "精智达", highlight: "DRAM晶圆/颗粒电测设备主力供应商，主要客户含长鑫科技" },
-          { name: "华海清科", highlight: "CMP抛光设备龙头，存储晶圆厂平坦化工艺国产替代核心" }
+          { name: "长川科技", highlight: "存储器封测与晶圆电测设备，DRAM 产线后道测试扩产直接受益" },
+          { name: "至纯科技", highlight: "高纯工艺系统与湿法设备，存储产线洁净与清洗环节扩产配套" }
         ]
       },
       {
         name: "材料/特气/厂建",
         companies: [
-          { name: "沪硅产业", highlight: "12英寸大硅片龙头，先进存储晶圆厂硅片国产化关键供应商" },
           { name: "雅克科技", highlight: "电子特气与前驱体，DRAM产线CVD/刻蚀用高纯材料配套" },
-          { name: "正帆科技", highlight: "早期投资长鑫科技，特气与化学品供应系统覆盖合肥/北京/上海基地" },
-          { name: "太极实业", highlight: "子公司十一科技承担长鑫存储合肥及北京扩产工程总包，厂建订单直接受益" }
+          { name: "太极实业", highlight: "子公司十一科技承担长鑫存储合肥及北京扩产工程总包，厂建订单直接受益" },
+          { name: "晶瑞电材", highlight: "湿电子化学品与光刻胶，存储产线清洗/蚀刻配套，创业板材料供应商" },
+          { name: "立昂微", highlight: "12英寸硅片与外延片，存储晶圆厂硅材扩产关键供应商" }
         ]
       }
     ],
@@ -2470,13 +2469,13 @@ const INDUSTRY_DATA = {
         name: "存储模组/渠道",
         companies: [
           { name: "江波龙", highlight: "存储模组龙头，国产DRAM颗粒导入与渠道放量，长鑫产能扩张直接受益" },
-          { name: "佰维存储", highlight: "嵌入式与消费级存储模组，国产颗粒替代带来成本与供应安全优势" }
+          { name: "深科技", highlight: "沛顿存储模组与封测制造，国产 DRAM 颗粒配套出货直接受益" }
         ]
       },
       {
         name: "接口芯片/服务器",
         companies: [
-          { name: "澜起科技", highlight: "DDR5 RCD/PMIC等内存接口芯片龙头，国产DRAM生态放量带动配套需求" },
+          { name: "兆易创新", highlight: "持股长鑫科技并协同研发，国产 DRAM 生态放量带动配套需求" },
           { name: "浪潮信息", highlight: "服务器龙头，国产内存供给改善有利于整机成本与供应链安全" }
         ]
       }
@@ -2494,10 +2493,10 @@ const INDUSTRY_DATA = {
       {
         name: "封装材料",
         companies: [
-          { name: "华海诚科", highlight: "环氧塑封料（EMC）龙头，先进封装低介电/低应力塑封材料国产替代核心" },
           { name: "飞凯材料", highlight: "封装用光刻胶与湿制程材料，凸块与 RDL 工艺化学品配套封测产线" },
-          { name: "艾森股份", highlight: "先进封装电镀液与凸块工艺化学品，TSV/铜柱电镀材料导入封测厂" },
-          { name: "联瑞新材", highlight: "球形硅微粉填料龙头，EMC 与先进封装封装料关键填料供应商" }
+          { name: "联瑞新材", highlight: "球形硅微粉填料龙头，EMC 与先进封装封装料关键填料供应商" },
+          { name: "洁美科技", highlight: "电子封装离型膜与载带，MLCC/封测封装辅材龙头，创业板" },
+          { name: "三环集团", highlight: "陶瓷封装外壳与电子浆料，先进封装被动件与封装外壳配套" }
         ]
       },
       {
@@ -2511,10 +2510,9 @@ const INDUSTRY_DATA = {
       {
         name: "封测设备",
         companies: [
-          { name: "新益昌", highlight: "半导体固晶机龙头，先进封装贴片/固晶设备导入 OSAT 产线" },
-          { name: "芯碁微装", highlight: "IC 载板与封测 RDL 直写光刻设备，2.5D/Fan-out 互连图形化核心装备" },
-          { name: "耐科装备", highlight: "封装切筋成型与塑封模具设备，传统封测向先进封装产线升级配套" },
-          { name: "长川科技", highlight: "封测分选测试机龙头，先进封装后道电性测试与产能扩张直接受益" }
+          { name: "长川科技", highlight: "封测分选测试机龙头，先进封装后道电性测试与产能扩张直接受益" },
+          { name: "大族数控", highlight: "PCB/载板钻孔与成型设备，封装基板与载板扩产配套" },
+          { name: "劲拓股份", highlight: "半导体封装回流焊/贴合设备，OSAT 产线扩产受益" }
         ]
       }
     ],
@@ -2530,25 +2528,25 @@ const INDUSTRY_DATA = {
       {
         name: "特色先进封装",
         companies: [
-          { name: "甬矽电子", highlight: "Fan-out 晶圆级封装专精，消费电子与车规芯片 WLP 产能快速爬坡" },
           { name: "晶方科技", highlight: "CIS 晶圆级封装（WLCSP）龙头，图像传感器 WLP 与 TSV 技术领先" },
-          { name: "颀中科技", highlight: "显示驱动金凸块/CoF 先进凸块工艺，封测前道凸块与 WLP 配套" }
+          { name: "通富微电", highlight: "Fan-out/2.5D 规模封测，AMD 等大客户先进封装产能持续扩张" },
+          { name: "华天科技", highlight: "车规与消费电子 WLP/3D 封装，先进封装订单放量" }
         ]
       }
     ],
     downstream: [
       {
-        name: "AI/HPC 芯片（先进封装刚需）",
+        name: "封测产能映射",
         companies: [
-          { name: "海光信息", highlight: "国产 DCU 放量依赖 2.5D/Chiplet 封测产能，OSAT 先进封装订单弹性大" },
-          { name: "寒武纪", highlight: "云端 AI 推理/训练芯片出货增长，先进封装产能紧缺映射设计端标的" }
+          { name: "深科技", highlight: "沛顿存储封测与模组制造，DRAM/HBM 堆叠封装与国内存储厂配套" },
+          { name: "江波龙", highlight: "存储模组龙头，先进封装产能释放带动国产颗粒导入与出货" }
         ]
       },
       {
-        name: "存储/HBM 堆叠封装",
+        name: "封装基板需求",
         companies: [
-          { name: "澜起科技", highlight: "DDR5/HBM 内存接口芯片龙头，堆叠封装生态放量带动封测与载板需求" },
-          { name: "深科技", highlight: "沛顿等存储封测与模组制造，DRAM/HBM 堆叠封装产线与国内存储厂配套" }
+          { name: "工业富联", highlight: "AI 服务器代工龙头，高端封装基板与整机柜需求拉动载板/OSAT" },
+          { name: "浪潮信息", highlight: "AI 服务器出货龙头，算力芯片先进封装与基板订单间接受益" }
         ]
       }
     ]

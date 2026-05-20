@@ -115,6 +115,7 @@
 
   <!-- 加载数据 -->
   <script src="data.js"></script>
+  <script src="sector-data.js"></script>
   
   <script>
     const testStatus = document.getElementById('test-status');
@@ -148,6 +149,15 @@
         html += `<div class="test-item"><span class="status error">✗</span> searchIndustry 函数加载失败</div>`;
         testStatus.innerHTML = html;
         return;
+      }
+
+      if (typeof SECTOR_DATA === 'object') {
+        html += `<div class="test-item"><span class="status ok">✓</span> SECTOR_DATA 已加载，共 ${Object.keys(SECTOR_DATA).length} 个板块龙头</div>`;
+      } else {
+        html += `<div class="test-item"><span class="status error">✗</span> SECTOR_DATA 加载失败（需 sector-data.js）</div>`;
+      }
+      if (typeof searchSector === 'function') {
+        html += `<div class="test-item"><span class="status ok">✓</span> searchSector 函数已加载</div>`;
       }
       
       // 测试新产业
