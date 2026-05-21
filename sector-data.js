@@ -798,6 +798,27 @@ const SECTOR_DATA = {
       ]
     }
   },
+  "特斯拉FSD入华": {
+    name: "特斯拉FSD入华",
+    color: "#dc2626",
+    gradient: ["#dc2626", "#991b1b"],
+    description: "基于特斯拉FSD入华产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    vanguard: {
+      title: "特斯拉FSD入华板块前锋（情绪龙头）",
+      companies: [
+        { name: "联创电子", highlight: "车载光学镜头纯度标的，FSD 视觉路线催化，板块活跃时弹性与辨识度高" },
+        { name: "豪恩汽电", highlight: "车载摄像头+APA 传感器专精，智驾感知套件情绪博弈强，先锋特征明显" },
+      ]
+    },
+    center: {
+      title: "特斯拉FSD入华板块中军（趋势龙头）",
+      companies: [
+        { name: "德赛西威", highlight: "智驾域控龙头，FSD 入华倒逼主机厂高阶智驾订单，机构趋势配置核心" },
+        { name: "四维图新", highlight: "高精地图与数据合规龙头，外资 FSD 在华运营关键环节，趋势中军" },
+        { name: "拓普集团", highlight: "特斯拉中国区核心 Tier1，FSD 主题与在华放量双逻辑，业绩可跟踪" },
+      ]
+    }
+  },
   "长鑫存储": {
     name: "长鑫存储",
     color: "#0e7490",
