@@ -252,6 +252,27 @@ const SECTOR_DATA = {
       ]
     }
   },
+  "MLCC": {
+    name: "MLCC",
+    color: "#c2410c",
+    gradient: ["#ea580c", "#9a3412"],
+    description: "基于MLCC产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    vanguard: {
+      title: "MLCC板块前锋（情绪龙头）",
+      companies: [
+        { name: "洁美科技", highlight: "MLCC离型膜/载带纯度较高，扩产预期博弈强，被动元件情绪先锋（非科创）" },
+        { name: "博迁新材", highlight: "MLCC镍粉弹性标的，粉体涨价与扩产预期敏感，适合情绪端" },
+      ]
+    },
+    center: {
+      title: "MLCC板块中军（趋势龙头）",
+      companies: [
+        { name: "风华高科", highlight: "国内MLCC制造龙头，车规+AI高压MLCC订单放量，趋势中军" },
+        { name: "三环集团", highlight: "MLCC+陶瓷材料垂直一体化，高端消费电子与车规份额提升，机构趋势配置" },
+        { name: "国瓷材料", highlight: "MLCC介质粉龙头，粉体国产替代逻辑清晰，走势偏趋势（非科创）" },
+      ]
+    }
+  },
   "AI应用": {
     name: "AI应用",
     color: "#f59e0b",

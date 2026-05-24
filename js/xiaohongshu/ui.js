@@ -25,71 +25,69 @@ function initXHSUI() {
 }
 
 /**
- * 模块切换：产业链分析 ↔ 小红书创作
- *
- * 布局结构：
- *   Header（两行）:
- *     第一行: [🏭 产业链分析] [📕 小红书创作]  ← 模块 tab 居中
- *     第二行: 各自的 logo + 搜索框 + 热门标签    ← 随模块切换
- *
- *   Main 内容区（两个完全独立的 welcome）:
- *     #welcome-industry → 产业链欢迎页（icon+标题+描述+快捷卡片）
- *     #welcome-xhs      → 小红书欢迎页（icon+标题+描述+领域选择+选题列表）
+ * 模块切换：产业链分析 ↔ 小红书创作 ↔ K线教学
  */
 function switchModule(module) {
   if (currentModule === module) return;
   currentModule = module;
 
-  // ===== 1. 更新 Header 模块 tab 按钮 =====
   document.querySelectorAll('#module-tabs .module-tab-btn').forEach(b => b.classList.remove('active'));
   const activeBtn = document.getElementById('tab-' + module);
   if (activeBtn) activeBtn.classList.add('active');
 
-  // ===== 2. 切换 Header 第二行内容 =====
   const headerIndustry = document.getElementById('header-industry');
   const headerXHS = document.getElementById('header-xhs');
+  const headerKline = document.getElementById('header-kline');
 
-  if (module === 'industry') {
-    if (headerIndustry) headerIndustry.style.display = 'flex';
-    if (headerXHS) headerXHS.style.display = 'none';
-  } else {
-    if (headerIndustry) headerIndustry.style.display = 'none';
-    if (headerXHS) headerXHS.style.display = 'flex';
-  }
+  if (headerIndustry) headerIndustry.style.display = module === 'industry' ? 'flex' : 'none';
+  if (headerXHS) headerXHS.style.display = module === 'xhs' ? 'flex' : 'none';
+  if (headerKline) headerKline.style.display = module === 'kline' ? 'flex' : 'none';
 
-  // ===== 3. 切换 Welcome 区域（两个完全独立的 welcome 容器）=====
   const welcomeIndustry = document.getElementById('welcome-industry');
   const welcomeXHS = document.getElementById('welcome-xhs');
+  const welcomeKline = document.getElementById('welcome-kline');
   const welcomeContainer = document.getElementById('welcome');
 
+  function hideAllResults() {
+    document.getElementById('result').classList.remove('show');
+    document.getElementById('xhs-result').classList.remove('show');
+    const klineResult = document.getElementById('kline-result');
+    if (klineResult) klineResult.classList.remove('show');
+    document.getElementById('loading').classList.remove('show');
+    document.getElementById('not-found').classList.remove('show');
+    document.getElementById('ai-error').classList.remove('show');
+  }
+
   if (module === 'industry') {
-    // 显示产业链 welcome，隐藏小红书 welcome
     if (welcomeIndustry) welcomeIndustry.style.display = '';
     if (welcomeXHS) welcomeXHS.style.display = 'none';
+    if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
-
-    // 隐藏所有结果区
-    document.getElementById('result').classList.remove('show');
-    document.getElementById('xhs-result').classList.remove('show');
-    document.getElementById('loading').classList.remove('show');
-    document.getElementById('not-found').classList.remove('show');
-    document.getElementById('ai-error').classList.remove('show');
+    hideAllResults();
 
   } else if (module === 'xhs') {
-    // 显示小红书 welcome，隐藏产业链 welcome
     if (welcomeIndustry) welcomeIndustry.style.display = 'none';
     if (welcomeXHS) welcomeXHS.style.display = '';
+    if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
-
-    // 隐藏所有结果区
-    document.getElementById('result').classList.remove('show');
-    document.getElementById('xhs-result').classList.remove('show');
-    document.getElementById('loading').classList.remove('show');
-    document.getElementById('not-found').classList.remove('show');
-    document.getElementById('ai-error').classList.remove('show');
-
-    // 初始化小红书 UI
+    hideAllResults();
     initXHSUI();
+
+  } else if (module === 'kline') {
+    if (welcomeIndustry) welcomeIndustry.style.display = 'none';
+    if (welcomeXHS) welcomeXHS.style.display = 'none';
+    if (welcomeKline) welcomeKline.style.display = '';
+    if (welcomeContainer) welcomeContainer.style.display = '';
+    const spaceWrap = document.getElementById('kline-space-wrap');
+    if (spaceWrap) spaceWrap.style.display = 'none';
+    hideAllResults();
+    window._klineCurrentPartId = null;
+    if (typeof initKlineUI === 'function') initKlineUI();
+    if (typeof isKlineSpaceHash === 'function' && isKlineSpaceHash() && typeof showKlineSpaceView === 'function') {
+      showKlineSpaceView();
+    } else {
+      window.location.hash = 'kline';
+    }
   }
 }
 

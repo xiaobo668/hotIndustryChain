@@ -1,6 +1,6 @@
 /**
  * 产业链数据库
- * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
+ * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、MLCC、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
  */
 const INDUSTRY_DATA = {
   // ========== 半导体 ==========
@@ -756,6 +756,67 @@ const INDUSTRY_DATA = {
           { name: "比亚迪", highlight: "新能源汽车每辆用MLCC超3000颗，带动车规级元件需求飙升" },
           { name: "宁德时代", highlight: "BMS+电池管理电路大量采购车规级电容电感，用量行业最大" },
           { name: "华域汽车", highlight: "汽车电子PCBA集成，车规连接器+元件集成供应能力强" }
+        ]
+      }
+    ]
+  },
+
+  // ========== MLCC ==========
+  // 口径：MLCC介质粉/镍粉/离型膜载带、瓷介电容制造主业；下游仅保留 MLCC 用量机制明确的 AI 服务器与汽车电子映射
+  "MLCC": {
+    name: "MLCC",
+    color: "#c2410c",
+    gradient: ["#ea580c", "#9a3412"],
+    description: "MLCC（片式多层陶瓷电容）是被动元件核心品类，上游为陶瓷介质粉、镍粉/内电极材料与封装离型膜载带，中游为瓷介电容制造与扩产。AI 服务器与新能源车单车 MLCC 用量数倍增长，驱动国产替代。口径：主业或核心收入与 MLCC 材料/制造强相关；不含 PCB、连接器、纯电感及泛泛整车标的。",
+    upstream: [
+      {
+        name: "介质粉与电极材料",
+        companies: [
+          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉体龙头，中高端粉体国产替代直供风华、三环等MLCC厂" },
+          { name: "博迁新材", highlight: "MLCC内电极超细镍粉龙头，全球被动元件巨头镍粉核心供应商" },
+          { name: "三环集团", highlight: "MLCC陶瓷基体与电子浆料自供，粉体到器件垂直一体化" }
+        ]
+      },
+      {
+        name: "MLCC封装辅材",
+        companies: [
+          { name: "洁美科技", highlight: "MLCC生产用离型膜与纸质载带龙头，被动元件扩产直接拉动订单" },
+          { name: "福莱新材", highlight: "功能性涂布薄膜，MLCC离型膜与电子胶粘保护膜配套供应" }
+        ]
+      }
+    ],
+    midstream: [
+      {
+        name: "MLCC制造龙头",
+        companies: [
+          { name: "风华高科", highlight: "国内MLCC出货龙头，车规与AI用高压高容MLCC国产替代主力" },
+          { name: "三环集团", highlight: "MLCC+陶瓷封装一体化，高端消费电子与车规MLCC份额持续提升" },
+          { name: "火炬电子", highlight: "特种陶瓷电容器+MLCC，军工宇航与高可靠MLCC核心供应商" },
+          { name: "鸿远电子", highlight: "军用高可靠MLCC龙头，宇航级瓷介电容市占率行业前列" }
+        ]
+      },
+      {
+        name: "瓷介电容/配套",
+        companies: [
+          { name: "宏达电子", highlight: "钽电容+瓷介电容，MLCC与特种被动元件配套军民用电子设备" },
+          { name: "振华科技", highlight: "高新电子+瓷介电容器，MLCC与特种被动元件国产化核心企业" },
+          { name: "麦捷科技", highlight: "片式MLCC与电感量产，被动元件一体化供应消费电子与汽车电子" }
+        ]
+      }
+    ],
+    downstream: [
+      {
+        name: "AI服务器（MLCC用量）",
+        companies: [
+          { name: "工业富联", highlight: "AI服务器代工龙头，单机MLCC用量较通用服务器数倍，拉动国产MLCC备货" },
+          { name: "浪潮信息", highlight: "AI服务器出货龙头，算力硬件MLCC采购向国产龙头集中" }
+        ]
+      },
+      {
+        name: "汽车电子（车规MLCC）",
+        companies: [
+          { name: "均胜电子", highlight: "汽车安全与电子总成，车规MLCC与被动元件采购规模大、国产替代空间大" },
+          { name: "华阳集团", highlight: "汽车电子与智能座舱，单车MLCC用量随电气化快速提升" }
         ]
       }
     ]
@@ -2776,7 +2837,12 @@ const KEYWORD_MAP = {
   "SaaS": "IT服务",
   "元件": "元件",
   "电子元件": "元件",
-  "MLCC": "元件",
+  "MLCC": "MLCC",
+  "mlcc": "MLCC",
+  "片式电容": "MLCC",
+  "陶瓷电容": "MLCC",
+  "瓷介电容": "MLCC",
+  "多层陶瓷电容": "MLCC",
   "电容": "元件",
   "连接器": "元件",
   "PCB": "元件",
