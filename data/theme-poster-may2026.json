@@ -1,0 +1,380 @@
+{
+  "title": "六大科技主题 · 核心技术龙头涨幅榜",
+  "period": "2026.5.6–5.28",
+  "periodNote": "统计区间：2026-05-06（节后首日）至 2026-05-28 收盘；五一假期休市。",
+  "generatedAt": "2026-05-28",
+  "themes": [
+    {
+      "name": "PCB",
+      "coreTech": "高频高速覆铜板、HDI/高多层PCB、AI服务器与交换机用板",
+      "industryKey": "PCB",
+      "companies": [
+        {
+          "name": "生益科技",
+          "pct": 67.85,
+          "pctLabel": "+67.85%",
+          "highlight": "覆铜板龙头，高频高速CCL国内市占率第一，AI服务器CCL认证领先",
+          "verify": {
+            "start": "2026-05-06 收80.81",
+            "end": "2026-05-28 收135.64",
+            "inChain": true
+          }
+        },
+        {
+          "name": "大族数控",
+          "pct": 60.2,
+          "pctLabel": "+60.20%",
+          "highlight": "PCB钻孔+成型设备，PCB专用设备国产化率提升",
+          "verify": {
+            "start": "2026-05-06 收184.14",
+            "end": "2026-05-28 收294.99",
+            "inChain": true
+          }
+        },
+        {
+          "name": "博敏电子",
+          "pct": 49.09,
+          "pctLabel": "+49.09%",
+          "highlight": "高密度PCB+HDI/高频板，汽车电子与消费电子印制电路板主业",
+          "verify": {
+            "start": "2026-05-06 收17.05",
+            "end": "2026-05-28 收25.42",
+            "inChain": false
+          }
+        },
+        {
+          "name": "鹏鼎控股",
+          "pct": 41.09,
+          "pctLabel": "+41.09%",
+          "highlight": "全球PCB产值第一，FPC+HDI苹果核心供应商",
+          "verify": {
+            "start": "2026-05-06 收75.13",
+            "end": "2026-05-28 收106",
+            "inChain": true
+          }
+        },
+        {
+          "name": "沪电股份",
+          "pct": 27.59,
+          "pctLabel": "+27.59%",
+          "highlight": "AI服务器+交换机PCB龙头，800G交换机高多层板全球前三",
+          "verify": {
+            "start": "2026-05-06 收104.29",
+            "end": "2026-05-28 收133.06",
+            "inChain": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "CPO",
+      "coreTech": "共封装光学（CPO）、800G/1.6T光模块、硅光/光引擎、MPO与光纤连接器",
+      "industryKey": null,
+      "companies": [
+        {
+          "name": "光迅科技",
+          "pct": 42.49,
+          "pctLabel": "+42.49%",
+          "highlight": "光器件+光模块龙头，10G/100G/400G数通模块批量供货云计算客户",
+          "verify": {
+            "start": "2026-05-06 收150.82",
+            "end": "2026-05-28 收214.9",
+            "inChain": true
+          }
+        },
+        {
+          "name": "天孚通信",
+          "pct": 41.56,
+          "pctLabel": "+41.56%",
+          "highlight": "光器件封装龙头，光模块上游无源器件核心供应商",
+          "verify": {
+            "start": "2026-05-06 收316.16",
+            "end": "2026-05-28 收447.56",
+            "inChain": true
+          }
+        },
+        {
+          "name": "中际旭创",
+          "pct": 39.95,
+          "pctLabel": "+39.95%",
+          "highlight": "800G光模块全球龙头，AI数据中心光互联核心，1.6T产品已送样",
+          "verify": {
+            "start": "2026-05-06 收856",
+            "end": "2026-05-28 收1197.99",
+            "inChain": true
+          }
+        },
+        {
+          "name": "新易盛",
+          "pct": 37.49,
+          "pctLabel": "+37.49%",
+          "highlight": "数通光模块高增，800G产品批量出货云厂商",
+          "verify": {
+            "start": "2026-05-06 收522.48",
+            "end": "2026-05-28 收718.34",
+            "inChain": true
+          }
+        },
+        {
+          "name": "罗博特科",
+          "pct": 35.26,
+          "pctLabel": "+35.26%",
+          "highlight": "CPO封装设备与硅光产线装备，光模块先进封装产线受益",
+          "verify": {
+            "start": "2026-05-06 收480.55",
+            "end": "2026-05-28 收650.01",
+            "inChain": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "存储芯片",
+      "coreTech": "DRAM/HBM、存储封测、模组与长鑫产业链设备材料",
+      "industryKey": "长鑫存储",
+      "companies": [
+        {
+          "name": "兆易创新",
+          "pct": 40.59,
+          "pctLabel": "+40.59%",
+          "highlight": "直接持股长鑫科技，董事长朱一明兼任长鑫科技董事长，DRAM研发与代工销售深度协同",
+          "verify": {
+            "start": "2026-05-06 收343.54",
+            "end": "2026-05-28 收483",
+            "inChain": true
+          }
+        },
+        {
+          "name": "深科技",
+          "pct": 38.83,
+          "pctLabel": "+38.83%",
+          "highlight": "存储封测与模组制造龙头，沛顿科技等子公司与长鑫等国内存储厂配套紧密",
+          "verify": {
+            "start": "2026-05-06 收30.72",
+            "end": "2026-05-28 收42.65",
+            "inChain": true
+          }
+        },
+        {
+          "name": "太极实业",
+          "pct": 34.15,
+          "pctLabel": "+34.15%",
+          "highlight": "子公司十一科技承担长鑫存储合肥及北京扩产工程总包，厂建订单直接受益",
+          "verify": {
+            "start": "2026-05-06 收10.16",
+            "end": "2026-05-28 收13.63",
+            "inChain": true
+          }
+        },
+        {
+          "name": "长川科技",
+          "pct": 24.31,
+          "pctLabel": "+24.31%",
+          "highlight": "存储器封测与晶圆电测设备，DRAM 产线后道测试扩产直接受益",
+          "verify": {
+            "start": "2026-05-06 收176.2",
+            "end": "2026-05-28 收219.03",
+            "inChain": true
+          }
+        },
+        {
+          "name": "通富微电",
+          "pct": 21.86,
+          "pctLabel": "+21.86%",
+          "highlight": "DRAM/NAND封测布局完善，与主流存储合作伙伴深化协同",
+          "verify": {
+            "start": "2026-05-06 收56.869",
+            "end": "2026-05-28 收69.3",
+            "inChain": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "先进封装",
+      "coreTech": "2.5D/3D、Chiplet、Fan-out、WLP、封装基板与封测 OSAT",
+      "industryKey": "先进封装",
+      "companies": [
+        {
+          "name": "长电科技",
+          "pct": 75.81,
+          "pctLabel": "+75.81%",
+          "highlight": "全球第三大 OSAT，XDFOI 2.5D/3D 与 Chiplet 先进封装技术国内领先",
+          "verify": {
+            "start": "2026-05-06 收48.2",
+            "end": "2026-05-28 收84.74",
+            "inChain": true
+          }
+        },
+        {
+          "name": "华天科技",
+          "pct": 57.78,
+          "pctLabel": "+57.78%",
+          "highlight": "2.5D/3D、Fan-out 规模封测，车规与 AI 芯片先进封装订单放量",
+          "verify": {
+            "start": "2026-05-06 收13.62",
+            "end": "2026-05-28 收21.49",
+            "inChain": true
+          }
+        },
+        {
+          "name": "晶方科技",
+          "pct": 44.99,
+          "pctLabel": "+44.99%",
+          "highlight": "CIS 晶圆级封装（WLCSP）龙头，图像传感器 WLP 与 TSV 技术领先",
+          "verify": {
+            "start": "2026-05-06 收31.45",
+            "end": "2026-05-28 收45.6",
+            "inChain": true
+          }
+        },
+        {
+          "name": "飞凯材料",
+          "pct": 26.2,
+          "pctLabel": "+26.20%",
+          "highlight": "封装用光刻胶与湿制程材料，凸块与 RDL 工艺化学品配套封测产线",
+          "verify": {
+            "start": "2026-05-06 收31.57",
+            "end": "2026-05-28 收39.84",
+            "inChain": true
+          }
+        },
+        {
+          "name": "深南电路",
+          "pct": 24.95,
+          "pctLabel": "+24.95%",
+          "highlight": "ABF 封装基板龙头，FC-BGA 载板直供 OSAT 与 AI 芯片先进封装",
+          "verify": {
+            "start": "2026-05-06 收318.75",
+            "end": "2026-05-28 收398.28",
+            "inChain": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "算力租赁",
+      "coreTech": "智算中心运营、GPU/裸金属算力出租、IDC上架与算力调度",
+      "industryKey": "算力租赁",
+      "companies": [
+        {
+          "name": "利通电子",
+          "pct": 38.51,
+          "pctLabel": "+38.51%",
+          "highlight": "财经报道中高频出现的算力租赁转型标的，智算资源投放与市场关注度居前",
+          "verify": {
+            "start": "2026-05-06 收158.85",
+            "end": "2026-05-28 收220.03",
+            "inChain": true
+          }
+        },
+        {
+          "name": "亚康股份",
+          "pct": -1.21,
+          "pctLabel": "-1.21%",
+          "highlight": "算力基础设施运维与交付，头部互联网及云客户算力集群配套服务",
+          "verify": {
+            "start": "2026-05-06 收78.23",
+            "end": "2026-05-28 收77.28",
+            "inChain": true
+          }
+        },
+        {
+          "name": "数据港",
+          "pct": -3.56,
+          "pctLabel": "-3.56%",
+          "highlight": "阿里云核心数据中心合作方，上架率与云侧算力扩张同步",
+          "verify": {
+            "start": "2026-05-06 收38.5",
+            "end": "2026-05-28 收37.13",
+            "inChain": true
+          }
+        },
+        {
+          "name": "科华数据",
+          "pct": -3.77,
+          "pctLabel": "-3.77%",
+          "highlight": "UPS+数据中心+智算液冷，IDC与算力基础设施运营相关",
+          "verify": {
+            "start": "2026-05-06 收62.87",
+            "end": "2026-05-28 收60.5",
+            "inChain": false
+          }
+        },
+        {
+          "name": "网宿科技",
+          "pct": -9.42,
+          "pctLabel": "-9.42%",
+          "highlight": "边缘计算与分发能力叠加，算力租赁主题下近端成交与算力调度关注度较高",
+          "verify": {
+            "start": "2026-05-06 收17.3",
+            "end": "2026-05-28 收15.67",
+            "inChain": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "液冷",
+      "coreTech": "液冷冷板、CDU、浸没液冷、氟化冷却液与液冷服务器",
+      "industryKey": "液冷",
+      "companies": [
+        {
+          "name": "申菱环境",
+          "pct": 29.53,
+          "pctLabel": "+29.53%",
+          "highlight": "精密空调+液冷CDU，高密度机柜散热系统核心供应商",
+          "verify": {
+            "start": "2026-05-06 收119.55",
+            "end": "2026-05-28 收154.85",
+            "inChain": true
+          }
+        },
+        {
+          "name": "银轮股份",
+          "pct": 9.84,
+          "pctLabel": "+9.84%",
+          "highlight": "液冷板+换热系统，数据中心液冷管路换热组件",
+          "verify": {
+            "start": "2026-05-06 收48.252",
+            "end": "2026-05-28 收53",
+            "inChain": true
+          }
+        },
+        {
+          "name": "同飞股份",
+          "pct": 4.25,
+          "pctLabel": "+4.25%",
+          "highlight": "液冷冷板代表标的",
+          "verify": {
+            "start": "2026-05-06 收85.55",
+            "end": "2026-05-28 收89.19",
+            "inChain": false
+          }
+        },
+        {
+          "name": "高澜股份",
+          "pct": 3.78,
+          "pctLabel": "+3.78%",
+          "highlight": "液冷设备+冷板系统，数据中心液冷换热解决方案",
+          "verify": {
+            "start": "2026-05-06 收40.48",
+            "end": "2026-05-28 收42.01",
+            "inChain": true
+          }
+        },
+        {
+          "name": "英维克",
+          "pct": -0.26,
+          "pctLabel": "-0.26%",
+          "highlight": "液冷冷板+温控模组，AI服务器机柜级散热方案龙头",
+          "verify": {
+            "start": "2026-05-06 收97.77",
+            "end": "2026-05-28 收97.52",
+            "inChain": true
+          }
+        }
+      ]
+    }
+  ]
+}
