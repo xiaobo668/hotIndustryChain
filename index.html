@@ -1480,6 +1480,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyPoster()">📋 复制第1张</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-poster-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-poster-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster()">⬇️ 下载订单榜海报</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster()">📋 复制订单榜</button>
+        </div>
+      </div>
     </div>
 
     <!-- 龙头一览视图 -->
@@ -1614,7 +1621,9 @@ transition: opacity 0.2s;
 <!-- 4. 产业链分析模块 -->
 <script src="js/industry/search.js"></script>
 <script src="js/industry/render.js"></script>
+<script src="data/order-rank-computing2026.js"></script>
 <script src="js/industry/poster.js"></script>
+<script src="js/industry/order-rank-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->
 <script src="js/sector/search.js"></script>

@@ -55,15 +55,31 @@
     <div class="poster-wrap" id="theme-poster-wrap">
       <div id="theme-poster-pages"></div>
       <div class="actions">
-        <button class="btn btn-primary" type="button" onclick="downloadThemePoster()">⬇️ 下载海报</button>
-        <button class="btn btn-secondary" type="button" onclick="copyThemePoster()">📋 复制海报</button>
+        <button class="btn btn-primary" type="button" onclick="downloadThemePoster()">⬇️ 下载涨幅榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyThemePoster()">📋 复制涨幅榜</button>
         <button class="btn btn-secondary" type="button" onclick="initThemePosterPage()">🔄 刷新</button>
+      </div>
+    </div>
+    <h1 style="margin-top:36px;font-size:20px">算力租赁 · 订单规模 Top15</h1>
+    <p class="sub">按公开财经报道口径整理，样式与产业链海报一致；可与涨幅榜搭配发布。</p>
+    <div class="poster-wrap" id="order-rank-poster-wrap">
+      <div id="order-rank-poster-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster()">⬇️ 下载订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster()">📋 复制订单榜</button>
       </div>
     </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
+  <script src="data/order-rank-computing2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', initThemePosterPage);</script>
+  <script src="js/industry/order-rank-poster.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initThemePosterPage();
+      initOrderRankPosterPage();
+    });
+  </script>
 </body>
 </html>

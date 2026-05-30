@@ -151,7 +151,10 @@ function switchTab(tab, btn) {
       break;
     case 'poster':
       if (currentIndustry) {
-        requestAnimationFrame(() => renderPoster(currentIndustry));
+        requestAnimationFrame(() => {
+          renderPoster(currentIndustry);
+          maybeRenderOrderRankPoster(currentIndustry);
+        });
       }
       break;
     case 'leader':
