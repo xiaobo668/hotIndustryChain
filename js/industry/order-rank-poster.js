@@ -211,6 +211,9 @@ function getOrderRankData(industryName) {
   if (industryName === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') {
     return ORDER_RANK_ADVANCED_PACKAGING2026;
   }
+  if (industryName === '液冷' && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') {
+    return ORDER_RANK_LIQUID_COOLING2026;
+  }
   return null;
 }
 
@@ -219,6 +222,7 @@ function maybeRenderOrderRankPoster(industry) {
   const computingWrap = document.getElementById('order-rank-computing-wrap');
   const pcbWrap = document.getElementById('order-rank-pcb-wrap');
   const apWrap = document.getElementById('order-rank-advanced-wrap');
+  const lcWrap = document.getElementById('order-rank-liquid-cooling-wrap');
   const legacyWrap = document.getElementById('order-rank-poster-wrap');
 
   if (computingWrap) {
@@ -248,7 +252,16 @@ function maybeRenderOrderRankPoster(industry) {
       ));
     }
   }
-  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap) {
+  if (lcWrap) {
+    const show = name === '液冷';
+    lcWrap.style.display = show ? '' : 'none';
+    if (show && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') {
+      requestAnimationFrame(() => initOrderRankPosterPage(
+        ORDER_RANK_LIQUID_COOLING2026, 'order-rank-liquid-cooling-pages', 'order-rank-liquid-cooling-canvas'
+      ));
+    }
+  }
+  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap && !lcWrap) {
     const data = getOrderRankData(name);
     legacyWrap.style.display = data ? '' : 'none';
     if (data) requestAnimationFrame(() => renderOrderRankPoster(data));
