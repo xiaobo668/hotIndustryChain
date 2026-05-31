@@ -23,6 +23,12 @@ function renderResult(data, source) {
   document.getElementById('result').classList.add('show');
   renderHeader(data, source);
   renderTable(data);
+  if (document.getElementById('view-poster')?.classList.contains('active')) {
+    requestAnimationFrame(() => {
+      renderPoster(data);
+      maybeRenderOrderRankPoster(data);
+    });
+  }
 }
 
 function renderHeader(data, source) {

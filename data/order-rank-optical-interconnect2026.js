@@ -1,5 +1,5 @@
 /** 2026 光互联订单规模排行 · 由 scripts/build-order-rank-optical-interconnect2026.js 生成 */
-const ORDER_RANK_OPTICAL_INTERCONNECT2026 = {
+var ORDER_RANK_OPTICAL_INTERCONNECT2026 = {
   "key": "光互联",
   "title": "2026年光互联订单规模前10家公司",
   "subtitle": "1-6：公开报道2026年在手/预计订单（800G/1.6T光模块与光器件）；7-10：产业链节点以2025年报营收或媒体订单作参考",
@@ -173,3 +173,4 @@ const ORDER_RANK_OPTICAL_INTERCONNECT2026 = {
     }
   ]
 };
+if (typeof window !== 'undefined') window.ORDER_RANK_OPTICAL_INTERCONNECT2026 = ORDER_RANK_OPTICAL_INTERCONNECT2026;

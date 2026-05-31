@@ -106,7 +106,7 @@ const payload = {
 };
 
 const outDir = path.join(__dirname, '..', 'data');
-const js = `/** 2026 光互联订单规模排行 · 由 scripts/build-order-rank-optical-interconnect2026.js 生成 */\nconst ORDER_RANK_OPTICAL_INTERCONNECT2026 = ${JSON.stringify(payload, null, 2)};\n`;
+const js = `/** 2026 光互联订单规模排行 · 由 scripts/build-order-rank-optical-interconnect2026.js 生成 */\nvar ORDER_RANK_OPTICAL_INTERCONNECT2026 = ${JSON.stringify(payload, null, 2)};\nif (typeof window !== 'undefined') window.ORDER_RANK_OPTICAL_INTERCONNECT2026 = ORDER_RANK_OPTICAL_INTERCONNECT2026;\n`;
 fs.writeFileSync(path.join(outDir, 'order-rank-optical-interconnect2026.js'), js, 'utf8');
 fs.writeFileSync(path.join(outDir, 'order-rank-optical-interconnect2026.json'), JSON.stringify(payload, null, 2), 'utf8');
 console.log('OK 写入 order-rank-optical-interconnect2026.js / .json 共', payload.companies.length, '家');

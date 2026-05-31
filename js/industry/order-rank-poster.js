@@ -201,81 +201,62 @@ function initOrderRankPosterPage(data, containerId, canvasId) {
   if (data) renderOrderRankPoster(data, containerId, canvasId);
 }
 
-function getOrderRankData(industryName) {
-  if (industryName === '算力租赁' && typeof ORDER_RANK_COMPUTING2026 !== 'undefined') {
-    return ORDER_RANK_COMPUTING2026;
-  }
-  if (industryName === 'PCB' && typeof ORDER_RANK_PCB2026 !== 'undefined') {
-    return ORDER_RANK_PCB2026;
-  }
-  if (industryName === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') {
-    return ORDER_RANK_ADVANCED_PACKAGING2026;
-  }
-  if (industryName === '液冷' && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') {
-    return ORDER_RANK_LIQUID_COOLING2026;
-  }
-  if (industryName === '光互联' && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') {
-    return ORDER_RANK_OPTICAL_INTERCONNECT2026;
-  }
+/** 各产业链订单榜配置（key 与 data/*.js 中 payload.key 一致） */
+const ORDER_RANK_POSTER_CONFIG = [
+  { key: '算力租赁', wrapId: 'order-rank-computing-wrap', pagesId: 'order-rank-computing-pages', canvasId: 'order-rank-computing-canvas' },
+  { key: 'PCB', wrapId: 'order-rank-pcb-wrap', pagesId: 'order-rank-pcb-pages', canvasId: 'order-rank-pcb-canvas' },
+  { key: '先进封装', wrapId: 'order-rank-advanced-wrap', pagesId: 'order-rank-advanced-pages', canvasId: 'order-rank-advanced-canvas' },
+  { key: '液冷', wrapId: 'order-rank-liquid-cooling-wrap', pagesId: 'order-rank-liquid-cooling-pages', canvasId: 'order-rank-liquid-cooling-canvas' },
+  { key: '光互联', wrapId: 'order-rank-optical-interconnect-wrap', pagesId: 'order-rank-optical-interconnect-pages', canvasId: 'order-rank-optical-interconnect-canvas' },
+];
+
+function getOrderRankDatasetByKey(key) {
+  if (!key) return null;
+  if (key === '算力租赁' && typeof ORDER_RANK_COMPUTING2026 !== 'undefined') return ORDER_RANK_COMPUTING2026;
+  if (key === 'PCB' && typeof ORDER_RANK_PCB2026 !== 'undefined') return ORDER_RANK_PCB2026;
+  if (key === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') return ORDER_RANK_ADVANCED_PACKAGING2026;
+  if (key === '液冷' && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') return ORDER_RANK_LIQUID_COOLING2026;
+  if (key === '光互联' && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') return ORDER_RANK_OPTICAL_INTERCONNECT2026;
   return null;
 }
 
-function maybeRenderOrderRankPoster(industry) {
-  const name = industry && industry.name;
-  const computingWrap = document.getElementById('order-rank-computing-wrap');
-  const pcbWrap = document.getElementById('order-rank-pcb-wrap');
-  const apWrap = document.getElementById('order-rank-advanced-wrap');
-  const lcWrap = document.getElementById('order-rank-liquid-cooling-wrap');
-  const oiWrap = document.getElementById('order-rank-optical-interconnect-wrap');
-  const legacyWrap = document.getElementById('order-rank-poster-wrap');
+/** 解析订单榜产业链 key（支持「光学链接」等别名 → 光互联） */
+function resolveOrderRankIndustryKey(industry) {
+  let key = industry && industry.name;
+  const query = typeof currentSearchQuery !== 'undefined' ? currentSearchQuery : '';
+  if (typeof searchIndustry === 'function' && query) {
+    const resolved = searchIndustry(query);
+    if (resolved && resolved.name) key = resolved.name;
+  }
+  return key || null;
+}
 
-  if (computingWrap) {
-    const show = name === '算力租赁';
-    computingWrap.style.display = show ? '' : 'none';
+function getOrderRankData(industryName) {
+  const key = resolveOrderRankIndustryKey({ name: industryName });
+  return getOrderRankDatasetByKey(key);
+}
+
+function maybeRenderOrderRankPoster(industry) {
+  const industryKey = resolveOrderRankIndustryKey(industry);
+  const legacyWrap = document.getElementById('order-rank-poster-wrap');
+  let matchedConfig = false;
+
+  ORDER_RANK_POSTER_CONFIG.forEach((cfg) => {
+    const wrap = document.getElementById(cfg.wrapId);
+    if (!wrap) return;
+    const show = industryKey === cfg.key;
+    wrap.style.display = show ? '' : 'none';
     if (show) {
-      requestAnimationFrame(() => initOrderRankPosterPage(
-        ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas'
-      ));
+      matchedConfig = true;
+      const data = getOrderRankDatasetByKey(cfg.key);
+      if (data) {
+        requestAnimationFrame(() => initOrderRankPosterPage(data, cfg.pagesId, cfg.canvasId));
+      }
     }
-  }
-  if (pcbWrap) {
-    const show = name === 'PCB';
-    pcbWrap.style.display = show ? '' : 'none';
-    if (show) {
-      requestAnimationFrame(() => initOrderRankPosterPage(
-        ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas'
-      ));
-    }
-  }
-  if (apWrap) {
-    const show = name === '先进封装';
-    apWrap.style.display = show ? '' : 'none';
-    if (show && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') {
-      requestAnimationFrame(() => initOrderRankPosterPage(
-        ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas'
-      ));
-    }
-  }
-  if (lcWrap) {
-    const show = name === '液冷';
-    lcWrap.style.display = show ? '' : 'none';
-    if (show && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') {
-      requestAnimationFrame(() => initOrderRankPosterPage(
-        ORDER_RANK_LIQUID_COOLING2026, 'order-rank-liquid-cooling-pages', 'order-rank-liquid-cooling-canvas'
-      ));
-    }
-  }
-  if (oiWrap) {
-    const show = name === '光互联';
-    oiWrap.style.display = show ? '' : 'none';
-    if (show && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') {
-      requestAnimationFrame(() => initOrderRankPosterPage(
-        ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas'
-      ));
-    }
-  }
-  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap && !lcWrap && !oiWrap) {
-    const data = getOrderRankData(name);
+  });
+
+  if (legacyWrap && !matchedConfig) {
+    const data = getOrderRankDatasetByKey(industryKey);
     legacyWrap.style.display = data ? '' : 'none';
     if (data) requestAnimationFrame(() => renderOrderRankPoster(data));
   }
