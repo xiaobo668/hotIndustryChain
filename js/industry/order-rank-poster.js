@@ -115,7 +115,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   ctx.font = 'bold 11px "PingFang SC", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('算力租赁 · 订单规模排行', cardX + cardW / 2, y + CARD_HEAD / 2);
+  ctx.fillText((data.key || '订单') + ' · 订单规模排行', cardX + cardW / 2, y + CARD_HEAD / 2);
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 
@@ -197,18 +197,60 @@ async function copyOrderRankPoster(canvasId) {
   }
 }
 
-function initOrderRankPosterPage(containerId, canvasId) {
-  if (typeof ORDER_RANK_COMPUTING2026 !== 'undefined') {
-    renderOrderRankPoster(ORDER_RANK_COMPUTING2026, containerId, canvasId);
+function initOrderRankPosterPage(data, containerId, canvasId) {
+  if (data) renderOrderRankPoster(data, containerId, canvasId);
+}
+
+function getOrderRankData(industryName) {
+  if (industryName === '算力租赁' && typeof ORDER_RANK_COMPUTING2026 !== 'undefined') {
+    return ORDER_RANK_COMPUTING2026;
   }
+  if (industryName === 'PCB' && typeof ORDER_RANK_PCB2026 !== 'undefined') {
+    return ORDER_RANK_PCB2026;
+  }
+  if (industryName === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') {
+    return ORDER_RANK_ADVANCED_PACKAGING2026;
+  }
+  return null;
 }
 
 function maybeRenderOrderRankPoster(industry) {
-  const wrap = document.getElementById('order-rank-poster-wrap');
-  if (!wrap) return;
-  const isComputing = industry && industry.name === '算力租赁';
-  wrap.style.display = isComputing ? '' : 'none';
-  if (isComputing && typeof ORDER_RANK_COMPUTING2026 !== 'undefined') {
-    requestAnimationFrame(() => renderOrderRankPoster(ORDER_RANK_COMPUTING2026));
+  const name = industry && industry.name;
+  const computingWrap = document.getElementById('order-rank-computing-wrap');
+  const pcbWrap = document.getElementById('order-rank-pcb-wrap');
+  const apWrap = document.getElementById('order-rank-advanced-wrap');
+  const legacyWrap = document.getElementById('order-rank-poster-wrap');
+
+  if (computingWrap) {
+    const show = name === '算力租赁';
+    computingWrap.style.display = show ? '' : 'none';
+    if (show) {
+      requestAnimationFrame(() => initOrderRankPosterPage(
+        ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas'
+      ));
+    }
+  }
+  if (pcbWrap) {
+    const show = name === 'PCB';
+    pcbWrap.style.display = show ? '' : 'none';
+    if (show) {
+      requestAnimationFrame(() => initOrderRankPosterPage(
+        ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas'
+      ));
+    }
+  }
+  if (apWrap) {
+    const show = name === '先进封装';
+    apWrap.style.display = show ? '' : 'none';
+    if (show && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') {
+      requestAnimationFrame(() => initOrderRankPosterPage(
+        ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas'
+      ));
+    }
+  }
+  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap) {
+    const data = getOrderRankData(name);
+    legacyWrap.style.display = data ? '' : 'none';
+    if (data) requestAnimationFrame(() => renderOrderRankPoster(data));
   }
 }

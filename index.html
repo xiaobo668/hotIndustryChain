@@ -1480,11 +1480,25 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyPoster()">📋 复制第1张</button>
         </div>
       </div>
-      <div class="poster-wrap" id="order-rank-poster-wrap" style="display:none;margin-top:20px">
-        <div id="order-rank-poster-pages"></div>
+      <div class="poster-wrap" id="order-rank-computing-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-computing-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary" onclick="downloadOrderRankPoster()">⬇️ 下载订单榜海报</button>
-          <button class="btn btn-secondary" onclick="copyOrderRankPoster()">📋 复制订单榜</button>
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-computing-canvas','算力租赁订单榜-2026.png')">⬇️ 下载算力租赁订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-computing-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="order-rank-pcb-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-pcb-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-pcb-canvas','PCB订单榜-2026.png')">⬇️ 下载PCB订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-pcb-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="order-rank-advanced-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-advanced-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-advanced-canvas','先进封装订单榜-2026.png')">⬇️ 下载先进封装订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-advanced-canvas')">📋 复制</button>
         </div>
       </div>
     </div>
@@ -1622,6 +1636,8 @@ transition: opacity 0.2s;
 <script src="js/industry/search.js"></script>
 <script src="js/industry/render.js"></script>
 <script src="data/order-rank-computing2026.js"></script>
+<script src="data/order-rank-pcb2026.js"></script>
+<script src="data/order-rank-advanced-packaging2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
 

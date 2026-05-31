@@ -61,24 +61,46 @@
       </div>
     </div>
     <h1 style="margin-top:36px;font-size:20px">算力租赁 · 订单规模 Top15</h1>
-    <p class="sub">按公开财经报道口径整理，样式与产业链海报一致；可与涨幅榜搭配发布。</p>
-    <div class="poster-wrap" id="order-rank-poster-wrap">
-      <div id="order-rank-poster-pages"></div>
+    <p class="sub">公开财经报道与产业链梳理；可与涨幅榜搭配发布。</p>
+    <div class="poster-wrap" id="order-rank-computing-wrap">
+      <div id="order-rank-computing-pages"></div>
       <div class="actions">
-        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster()">⬇️ 下载订单榜</button>
-        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster()">📋 复制订单榜</button>
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-computing-canvas','算力租赁订单榜-2026.png')">⬇️ 下载算力租赁订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-computing-canvas')">📋 复制</button>
+      </div>
+    </div>
+    <h1 style="margin-top:36px;font-size:20px">PCB · 2026年订单规模 Top15</h1>
+    <p class="sub">Top10 为公开财经报道 2026 年订单/预计订单；11 名起为公司公告在手订单（注明日期），已通过 scripts/verify-order-rank-pcb2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-pcb-wrap">
+      <div id="order-rank-pcb-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-pcb-canvas','PCB订单榜-2026.png')">⬇️ 下载PCB订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-pcb-canvas')">📋 复制</button>
+      </div>
+    </div>
+    <h1 style="margin-top:36px;font-size:20px">先进封装 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-6 名为公开报道在手/预计订单；7-10 名为产业链 OSAT/特色封测，以 2025 年报营收作规模参考（未披露在手订单），已通过 scripts/verify-order-rank-advanced-packaging2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-advanced-wrap">
+      <div id="order-rank-advanced-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-advanced-canvas','先进封装订单榜-2026.png')">⬇️ 下载先进封装订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-advanced-canvas')">📋 复制</button>
       </div>
     </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
   <script src="data/order-rank-computing2026.js"></script>
+  <script src="data/order-rank-pcb2026.js"></script>
+  <script src="data/order-rank-advanced-packaging2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initThemePosterPage();
-      initOrderRankPosterPage();
+      initOrderRankPosterPage(ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas');
+      initOrderRankPosterPage(ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas');
+      initOrderRankPosterPage(ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas');
     });
   </script>
 </body>
