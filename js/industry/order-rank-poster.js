@@ -214,6 +214,9 @@ function getOrderRankData(industryName) {
   if (industryName === '液冷' && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') {
     return ORDER_RANK_LIQUID_COOLING2026;
   }
+  if (industryName === '光互联' && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') {
+    return ORDER_RANK_OPTICAL_INTERCONNECT2026;
+  }
   return null;
 }
 
@@ -223,6 +226,7 @@ function maybeRenderOrderRankPoster(industry) {
   const pcbWrap = document.getElementById('order-rank-pcb-wrap');
   const apWrap = document.getElementById('order-rank-advanced-wrap');
   const lcWrap = document.getElementById('order-rank-liquid-cooling-wrap');
+  const oiWrap = document.getElementById('order-rank-optical-interconnect-wrap');
   const legacyWrap = document.getElementById('order-rank-poster-wrap');
 
   if (computingWrap) {
@@ -261,7 +265,16 @@ function maybeRenderOrderRankPoster(industry) {
       ));
     }
   }
-  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap && !lcWrap) {
+  if (oiWrap) {
+    const show = name === '光互联';
+    oiWrap.style.display = show ? '' : 'none';
+    if (show && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') {
+      requestAnimationFrame(() => initOrderRankPosterPage(
+        ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas'
+      ));
+    }
+  }
+  if (legacyWrap && !computingWrap && !pcbWrap && !apWrap && !lcWrap && !oiWrap) {
     const data = getOrderRankData(name);
     legacyWrap.style.display = data ? '' : 'none';
     if (data) requestAnimationFrame(() => renderOrderRankPoster(data));
