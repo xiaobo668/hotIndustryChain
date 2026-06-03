@@ -36,7 +36,10 @@ function renderHeader(data, source) {
   header.style.setProperty('--ind-gradient', `linear-gradient(135deg, ${data.gradient[0]}, ${data.gradient[1]})`);
   header.style.borderLeft = `4px solid ${data.color}`;
 
-  document.getElementById('industry-title').textContent = `📊 ${data.name} 产业链全景图`;
+  const displayTitle = data.posterTitle || data.name;
+  document.getElementById('industry-title').textContent = data.mindLayout === 'sixMainlines'
+    ? `📊 ${displayTitle}`
+    : `📊 ${data.name} 产业链全景图`;
   document.getElementById('industry-desc').textContent = data.description;
 
   // 统计
@@ -47,6 +50,9 @@ function renderHeader(data, source) {
   ].length;
 
   const totalSegments = data.upstream.length + data.midstream.length + data.downstream.length;
+  const isSix = data.mindLayout === 'sixMainlines';
+  const tierCount = isSix ? (data.themeGroups ? data.themeGroups.length : 6) : 3;
+  const tierLabel = isSix ? '科技主线' : '产业层次';
 
   // 显示 AI 模型来源
   const sourceLabel = MODEL_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : 'AI');
@@ -62,8 +68,8 @@ function renderHeader(data, source) {
       <div class="stat-label">细分赛道</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">3</div>
-      <div class="stat-label">产业层次</div>
+      <div class="stat-num">${tierCount}</div>
+      <div class="stat-label">${tierLabel}</div>
     </div>
     <div class="stat-item" style="min-width:100px">
       <div class="stat-num" style="font-size:12px;color:${sourceColor}">✦ ${sourceLabel}</div>
@@ -78,6 +84,43 @@ function renderHeader(data, source) {
 function renderTable(data) {
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
+
+  const segShortName = (name) => (name.includes('·') ? name.split('·').pop() : name);
+
+  if (data.mindLayout === 'sixMainlines' && data.themeGroups) {
+    data.themeGroups.forEach((theme) => {
+      theme.segments.forEach((seg) => {
+        const names = seg.companies
+          .map((c) => stripStockCode(c.name))
+          .filter(Boolean);
+        if (!names.length) return;
+        const tr = document.createElement('tr');
+
+        const tierCell = document.createElement('td');
+        tierCell.innerHTML = `<span class="tier-badge" style="background:${theme.color}22;color:${theme.color}">${theme.title}</span>`;
+        tr.appendChild(tierCell);
+
+        const segCell = document.createElement('td');
+        segCell.textContent = segShortName(seg.name);
+        segCell.style.fontWeight = '600';
+        segCell.style.color = '#c4c4e0';
+        tr.appendChild(segCell);
+
+        const compCell = document.createElement('td');
+        compCell.innerHTML = names
+          .map((n) => `<span class="company-pill"><span class="company-name">${n}</span></span>`)
+          .join(' ');
+        tr.appendChild(compCell);
+
+        const hlCell = document.createElement('td');
+        hlCell.innerHTML = '<span class="highlight-text" style="color:#64748b">—</span>';
+        tr.appendChild(hlCell);
+
+        tbody.appendChild(tr);
+      });
+    });
+    return;
+  }
 
   const tiers = [
     { key: 'upstream', label: '上游', badgeClass: 'tier-up', segments: data.upstream },
@@ -121,12 +164,10 @@ function renderTable(data) {
 
         // 亮点列
         const hlCell = document.createElement('td');
-        hlCell.innerHTML = `
-          <div class="highlight-row">
-            <span class="highlight-dot"></span>
-            <span class="highlight-text">${company.highlight}</span>
-          </div>
-        `;
+        const hl = (company.highlight || '').trim();
+        hlCell.innerHTML = hl
+          ? `<div class="highlight-row"><span class="highlight-dot"></span><span class="highlight-text">${hl}</span></div>`
+          : '<span class="highlight-text" style="color:#64748b">—</span>';
         tr.appendChild(hlCell);
 
         tbody.appendChild(tr);
@@ -206,14 +247,6 @@ function renderMindMap(data) {
     mindChartInstance.clear();
   }
 
-  // 颜色配置（企业节点黑金；根/层级/赛道横排黑字）
-  const colors = {
-    root: data.color,
-    upstream: '#10b981',
-    midstream: '#6c63ff',
-    downstream: '#ef4444',
-  };
-
   const companyLabelRich = {
     name: {
       color: '#14100a',
@@ -235,7 +268,8 @@ function renderMindMap(data) {
   };
 
   const buildChildren = (segments, tierColor) => segments.map(seg => {
-    const segTitle = stripMindTitleParens(seg.name);
+    const rawName = seg.name.includes('·') ? seg.name.split('·').pop() : seg.name;
+    const segTitle = stripMindTitleParens(rawName);
     return {
       name: segTitle,
       itemStyle: { color: tierColor, opacity: 0.8 },
@@ -255,31 +289,54 @@ function renderMindMap(data) {
     };
   });
 
-  const treeData = {
-    name: stripMindTitleParens(data.name) + '\n产业链',
-    itemStyle: { color: colors.root },
-    label: { fontSize: 16, fontWeight: 'bold', color: '#141414' },
-    children: [
-      {
-        name: '⬆ 上游',
-        itemStyle: { color: colors.upstream },
-        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
-        children: buildChildren(data.upstream, colors.upstream)
-      },
-      {
-        name: '⬛ 中游',
-        itemStyle: { color: colors.midstream },
-        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
-        children: buildChildren(data.midstream, colors.midstream)
-      },
-      {
-        name: '⬇ 下游',
-        itemStyle: { color: colors.downstream },
-        label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
-        children: buildChildren(data.downstream, colors.downstream)
-      }
-    ]
-  };
+  const buildThemeBranch = (theme) => ({
+    name: theme.title,
+    itemStyle: { color: theme.color },
+    label: { color: '#141414', fontWeight: 'bold', fontSize: 13 },
+    children: buildChildren(theme.segments, theme.color),
+  });
+
+  let treeData;
+  if (data.mindLayout === 'sixMainlines' && data.themeGroups && data.themeGroups.length) {
+    treeData = {
+      name: data.posterTitle || '2026年值得关注的六大主线',
+      itemStyle: { color: data.color },
+      label: { fontSize: 15, fontWeight: 'bold', color: '#141414' },
+      children: data.themeGroups.map(buildThemeBranch),
+    };
+  } else {
+    const colors = {
+      root: data.color,
+      upstream: '#10b981',
+      midstream: '#6c63ff',
+      downstream: '#ef4444',
+    };
+    treeData = {
+      name: stripMindTitleParens(data.name) + '\n产业链',
+      itemStyle: { color: colors.root },
+      label: { fontSize: 16, fontWeight: 'bold', color: '#141414' },
+      children: [
+        {
+          name: '⬆ 上游',
+          itemStyle: { color: colors.upstream },
+          label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+          children: buildChildren(data.upstream, colors.upstream)
+        },
+        {
+          name: '⬛ 中游',
+          itemStyle: { color: colors.midstream },
+          label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+          children: buildChildren(data.midstream, colors.midstream)
+        },
+        {
+          name: '⬇ 下游',
+          itemStyle: { color: colors.downstream },
+          label: { color: '#141414', fontWeight: 'bold', fontSize: 14 },
+          children: buildChildren(data.downstream, colors.downstream)
+        }
+      ]
+    };
+  }
 
   const option = {
     backgroundColor: {
@@ -299,7 +356,10 @@ function renderMindMap(data) {
         if (company) {
           const cleanName = stripStockCode(stripMindTitleParens(company.name));
           if (!cleanName) return '';
-          return `<b style="color:#1a1510">${cleanName}</b><br/><span style="color:#475569;font-size:12px">${company.highlight}</span>`;
+          const hl = (company.highlight || '').trim();
+          return hl
+            ? `<b style="color:#1a1510">${cleanName}</b><br/><span style="color:#475569;font-size:12px">${hl}</span>`
+            : `<b style="color:#1a1510">${cleanName}</b>`;
         }
         return typeof d.name === 'string' ? d.name.split('\n').map(stripMindTitleParens).join('\n') : d.name;
       }
@@ -311,7 +371,7 @@ function renderMindMap(data) {
       symbolSize: 10,
       orient: 'LR',
       expandAndCollapse: true,
-      initialTreeDepth: 3,
+      initialTreeDepth: data.mindLayout === 'sixMainlines' ? 2 : 3,
       label: {
         position: 'right',
         verticalAlign: 'middle',

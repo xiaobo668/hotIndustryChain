@@ -33,20 +33,90 @@ function flattenIndustrySegments(data) {
   return list;
 }
 
+/** 海报排版参数（posterFontScale=2 时字号与行距同步放大） */
+function getPosterLayout(data) {
+  const s =
+    data.posterFontScale ||
+    (data.posterNameOnly && data.themeGroups && data.themeGroups.length ? 2 : 1);
+  return {
+    s,
+    PAD: Math.round(12 * s),
+    FOOTER_H: Math.round(24 * s),
+    TOP_BODY: Math.round(8 * s),
+    TITLE_H: data.posterTitle ? Math.round(52 * s) : 0,
+    TITLE_INNER_H: data.posterTitle ? Math.round(44 * s) : 0,
+    FONT_TITLE: Math.round(16 * s),
+    FONT_SUB: Math.round(11 * s),
+    FONT_FOOTER: Math.round(9 * s),
+    COMPACT_ROW_H: Math.round(17 * s),
+    THEME_HEAD_H: Math.round(20 * s),
+    THEME_CARD_PAD: Math.round(8 * s),
+    LINE_GAP: Math.max(1, Math.round(1 * s)),
+    THEME_GAP: Math.round(8 * s),
+    FONT_THEME: Math.round(13 * s),
+    FONT_LABEL: Math.round(11 * s),
+    FONT_NAMES: Math.round(11 * s),
+    innerPadX: Math.round(10 * s),
+    CARD_RADIUS: Math.round(10 * s),
+  };
+}
+
+function getPosterThemePages(data) {
+  const groups = data.themeGroups;
+  if (!groups || !groups.length) return [null];
+  const split = data.posterSplitPages > 1 && data.posterThemesPerPage > 0;
+  if (!split) return [groups];
+  const pages = [];
+  const chunk = data.posterThemesPerPage;
+  for (let i = 0; i < groups.length; i += chunk) {
+    pages.push(groups.slice(i, i + chunk));
+  }
+  return pages;
+}
+
 function estimateBlueprintPosterHeight(data) {
-  const FOOTER_H = 24;
-  const TOP_BODY = 8;
+  const L = getPosterLayout(data);
+  const FOOTER_H = L.FOOTER_H;
+  const TOP_BODY = L.TOP_BODY;
+  const TITLE_H = L.TITLE_H;
   const BLUE_BAR_H = 22;
+  const THEME_BAR_H = 26;
   const CARD_PAD_Y = 3;
   const ROW_H = 20;
   const CARD_GAP = 4;
+  const THEME_GAP = L.THEME_GAP;
+  let body = TOP_BODY + TITLE_H;
+  const themeGroups = data.themeGroups;
+  if (data.posterNameOnly && themeGroups && themeGroups.length) {
+    themeGroups.forEach((theme, ti) => {
+      const n = theme.segments.length;
+      body +=
+        L.THEME_CARD_PAD * 2 +
+        L.THEME_HEAD_H +
+        n * L.COMPACT_ROW_H +
+        Math.max(0, n - 1) * L.LINE_GAP;
+      if (ti < themeGroups.length - 1) body += THEME_GAP;
+    });
+    return body + FOOTER_H;
+  }
+  const segRows = (seg) => (data.posterNameOnly ? 1 : seg.companies.length);
+  if (themeGroups && themeGroups.length) {
+    themeGroups.forEach((theme, ti) => {
+      body += THEME_BAR_H + THEME_GAP;
+      theme.segments.forEach((seg, si) => {
+        body += BLUE_BAR_H + CARD_PAD_Y + segRows(seg) * ROW_H + CARD_PAD_Y;
+        if (si < theme.segments.length - 1) body += CARD_GAP;
+      });
+      if (ti < themeGroups.length - 1) body += THEME_GAP;
+    });
+    return body + FOOTER_H;
+  }
   const segs = flattenIndustrySegments(data);
-  let body = TOP_BODY;
   segs.forEach((seg, si) => {
     body += BLUE_BAR_H + CARD_PAD_Y + seg.companies.length * ROW_H + CARD_PAD_Y;
     if (si < segs.length - 1) body += CARD_GAP;
   });
-  return TOP_BODY + body + FOOTER_H;
+  return body + FOOTER_H;
 }
 
 function renderPoster(data) {
@@ -54,42 +124,74 @@ function renderPoster(data) {
   container.innerHTML = '';
   const dpr = window.devicePixelRatio || 1;
   const W = PAGE_W;
-  const H = estimateBlueprintPosterHeight(data);
+  const themePages = getPosterThemePages(data);
+  const multi = themePages.length > 1;
 
-  const label = document.createElement('div');
-  label.className = 'poster-page-label';
-  label.textContent = '行业龙头企业图谱';
-  container.appendChild(label);
+  themePages.forEach((pageThemes, idx) => {
+    const pageData = pageThemes
+      ? {
+          ...data,
+          themeGroups: pageThemes,
+          posterPageIndex: idx + 1,
+          posterPageTotal: themePages.length,
+          posterPageSubtitle: pageThemes
+            .map((t) => t.title.replace(/^[一二三四五六]、/, ''))
+            .join(' · '),
+        }
+      : data;
 
-  const canvas = document.createElement('canvas');
-  canvas.className = 'poster-canvas-item';
-  canvas.id = 'poster-canvas-main';
-  canvas.width = W * dpr;
-  canvas.height = H * dpr;
-  canvas.style.width = W + 'px';
-  canvas.style.height = H + 'px';
-  container.appendChild(canvas);
+    const H = estimateBlueprintPosterHeight(pageData);
 
-  const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
-  drawBlueprintPoster(ctx, data, W, H);
+    const label = document.createElement('div');
+    label.className = 'poster-page-label';
+    if (multi) {
+      label.textContent = `第 ${idx + 1}/${themePages.length} 张 · ${pageData.posterPageSubtitle}`;
+    } else {
+      label.textContent = data.posterLabel || '行业龙头企业图谱';
+    }
+    container.appendChild(label);
+
+    const canvas = document.createElement('canvas');
+    canvas.className = 'poster-canvas-item';
+    canvas.id = multi ? `poster-canvas-${idx}` : 'poster-canvas-main';
+    canvas.dataset.pageIndex = String(idx + 1);
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    container.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    drawBlueprintPoster(ctx, pageData, W, H);
+  });
+
+  const dlBtn = document.getElementById('poster-download-btn');
+  if (dlBtn) {
+    dlBtn.textContent = multi
+      ? `⬇️ 下载海报（${themePages.length}张）`
+      : '⬇️ 下载产业链海报';
+  }
 }
 
 // fitOneLineWidth 已在 js/utils/canvas.js 中定义
 
-/** 浅蓝白信息图风格：无顶栏大标题，白卡片 + 蓝色条小标题 */
+/** 浅蓝白信息图风格：白卡片 + 蓝色条小标题 */
 function drawBlueprintPoster(ctx, data, W, H) {
-  const segs = flattenIndustrySegments(data);
-  const PAD = 12;
-  const FOOTER_H = 24;
-  const TOP_BODY = 8;
+  const L = getPosterLayout(data);
+  const PAD = L.PAD;
+  const FOOTER_H = L.FOOTER_H;
+  const TOP_BODY = L.TOP_BODY;
+  const TITLE_H = L.TITLE_H;
   const BLUE_BAR_H = 22;
+  const THEME_BAR_H = 26;
   const CARD_PAD_Y = 3;
   const ROW_H = 20;
   const CARD_GAP = 4;
-  const CARD_RADIUS = 10;
+  const THEME_GAP = L.THEME_GAP;
+  const CARD_RADIUS = L.CARD_RADIUS;
   const borderBlue = '#4a90c8';
-  const innerPadX = 10;
+  const innerPadX = L.innerPadX;
 
   const bg = ctx.createLinearGradient(0, 0, 0, H);
   bg.addColorStop(0, '#cfe8fb');
@@ -114,9 +216,37 @@ function drawBlueprintPoster(ctx, data, W, H) {
   const cardW = W - PAD * 2;
   const cardX = PAD;
 
-  segs.forEach((seg, si) => {
+  if (data.posterTitle) {
+    const barH = L.TITLE_INNER_H;
+    const tg = ctx.createLinearGradient(PAD, y, W - PAD, y);
+    tg.addColorStop(0, '#1e40af');
+    tg.addColorStop(0.5, '#2563eb');
+    tg.addColorStop(1, '#3b82f6');
+    roundRect(ctx, PAD, y, cardW, barH, CARD_RADIUS);
+    ctx.fillStyle = tg;
+    ctx.fill();
+    ctx.fillStyle = '#ffffff';
+    ctx.font = `bold ${L.FONT_TITLE}px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(data.posterTitle, W / 2, y + barH * 0.38);
+    ctx.font = `${L.FONT_SUB}px "PingFang SC", "苹方-简", sans-serif`;
+    ctx.fillStyle = 'rgba(255,255,255,0.9)';
+    const subLine =
+      data.posterPageTotal > 1
+        ? `第 ${data.posterPageIndex}/${data.posterPageTotal} 张 · ${data.posterPageSubtitle || ''}`
+        : '六大科技主线 · 产业链代表公司';
+    ctx.fillText(subLine, W / 2, y + barH * 0.72);
+    ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'left';
+    y += TITLE_H;
+  }
+
+  const drawSegmentCard = (seg, barColor) => {
     const innerW = cardW - innerPadX * 2;
-    const bodyInnerH = CARD_PAD_Y + seg.companies.length * ROW_H + CARD_PAD_Y;
+    const nameOnly = !!data.posterNameOnly;
+    const bodyRows = nameOnly ? 1 : seg.companies.length;
+    const bodyInnerH = CARD_PAD_Y + bodyRows * ROW_H + CARD_PAD_Y;
     const cardH = BLUE_BAR_H + bodyInnerH;
 
     ctx.save();
@@ -137,7 +267,7 @@ function drawBlueprintPoster(ctx, data, W, H) {
     roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
     ctx.clip();
     const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + BLUE_BAR_H);
-    bgrad.addColorStop(0, seg.barColor);
+    bgrad.addColorStop(0, barColor || '#2563eb');
     bgrad.addColorStop(1, '#1e3a8a');
     ctx.fillStyle = bgrad;
     ctx.fillRect(cardX, y, cardW, BLUE_BAR_H);
@@ -147,59 +277,171 @@ function drawBlueprintPoster(ctx, data, W, H) {
     ctx.font = 'bold 11px "PingFang SC", "苹方-简", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(seg.name, cardX + cardW / 2, y + BLUE_BAR_H / 2);
+    const barLabel = seg.name.includes('·') ? seg.name.split('·').pop() : seg.name;
+    ctx.fillText(barLabel, cardX + cardW / 2, y + BLUE_BAR_H / 2);
     ctx.textBaseline = 'alphabetic';
     ctx.textAlign = 'left';
 
     let cy = y + BLUE_BAR_H + CARD_PAD_Y;
     const rowMid = (ci) => cy + ci * ROW_H + ROW_H / 2;
-    seg.companies.forEach((company, ci) => {
-      if (ci > 0) {
-        ctx.strokeStyle = '#e8eef5';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(cardX + innerPadX, cy + ci * ROW_H);
-        ctx.lineTo(cardX + cardW - innerPadX, cy + ci * ROW_H);
-        ctx.stroke();
-      }
 
-      const baseX = cardX + innerPadX;
-      const rightX = cardX + cardW - innerPadX;
+    if (nameOnly) {
+      const midY = rowMid(0);
+      const names = seg.companies.map((c) => c.name);
+      const sep = '  ';
       ctx.textBaseline = 'middle';
-      const midY = rowMid(ci);
-
-      let nameStr = company.name;
       ctx.font = 'bold 11px "PingFang SC", "苹方-简", sans-serif';
       ctx.fillStyle = '#0f172a';
-      const gap = 5;
-      const maxName = innerW * 0.34;
-      if (ctx.measureText(nameStr).width > maxName) {
-        nameStr = fitOneLineWidth(ctx, nameStr, maxName);
+      let line = names.join(sep);
+      if (ctx.measureText(line).width > innerW) {
+        line = names.map((n) => fitOneLineWidth(ctx, n, innerW / names.length - ctx.measureText(sep).width)).join(sep);
       }
-      ctx.fillText(nameStr, baseX, midY);
-      const nameW = ctx.measureText(nameStr).width;
-
-      const descX = baseX + nameW + gap;
-      const maxDescW = Math.max(18, rightX - descX);
-      ctx.font = '10px "PingFang SC", "苹方-简", sans-serif';
-      ctx.fillStyle = '#64748b';
-      const desc = fitOneLineWidth(ctx, company.highlight || '', maxDescW);
-      ctx.fillText(desc, descX, midY);
+      ctx.textAlign = 'center';
+      ctx.fillText(line, cardX + cardW / 2, midY);
+      ctx.textAlign = 'left';
       ctx.textBaseline = 'alphabetic';
-    });
+    } else {
+      seg.companies.forEach((company, ci) => {
+        if (ci > 0) {
+          ctx.strokeStyle = '#e8eef5';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(cardX + innerPadX, cy + ci * ROW_H);
+          ctx.lineTo(cardX + cardW - innerPadX, cy + ci * ROW_H);
+          ctx.stroke();
+        }
 
-    y += cardH + (si < segs.length - 1 ? CARD_GAP : 0);
-  });
+        const baseX = cardX + innerPadX;
+        const rightX = cardX + cardW - innerPadX;
+        ctx.textBaseline = 'middle';
+        const midY = rowMid(ci);
+
+        let nameStr = company.name;
+        ctx.font = 'bold 11px "PingFang SC", "苹方-简", sans-serif';
+        ctx.fillStyle = '#0f172a';
+        const gap = 5;
+        const maxName = innerW * 0.34;
+        if (ctx.measureText(nameStr).width > maxName) {
+          nameStr = fitOneLineWidth(ctx, nameStr, maxName);
+        }
+        ctx.fillText(nameStr, baseX, midY);
+        const nameW = ctx.measureText(nameStr).width;
+
+        const hl = (company.highlight || '').trim();
+        if (hl) {
+          const descX = baseX + nameW + gap;
+          const maxDescW = Math.max(18, rightX - descX);
+          ctx.font = '10px "PingFang SC", "苹方-简", sans-serif';
+          ctx.fillStyle = '#64748b';
+          const desc = fitOneLineWidth(ctx, hl, maxDescW);
+          ctx.fillText(desc, descX, midY);
+        }
+        ctx.textBaseline = 'alphabetic';
+      });
+    }
+
+    y += cardH + CARD_GAP;
+  };
+
+  if (data.posterNameOnly && data.themeGroups && data.themeGroups.length) {
+    const innerW = cardW - innerPadX * 2;
+
+    data.themeGroups.forEach((theme, ti) => {
+      const n = theme.segments.length;
+      const cardInnerH =
+        L.THEME_HEAD_H + n * L.COMPACT_ROW_H + Math.max(0, n - 1) * L.LINE_GAP;
+      const cardH = L.THEME_CARD_PAD * 2 + cardInnerH;
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(15, 23, 42, 0.05)';
+      ctx.shadowBlur = 4;
+      ctx.shadowOffsetY = 1;
+      roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+      ctx.restore();
+      roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
+      ctx.strokeStyle = borderBlue;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      let cy = y + L.THEME_CARD_PAD;
+      ctx.fillStyle = theme.color || '#2563eb';
+      ctx.font = `bold ${L.FONT_THEME}px "PingFang SC", "苹方-简", sans-serif`;
+      ctx.textBaseline = 'middle';
+      ctx.fillText(theme.title, cardX + innerPadX, cy + L.THEME_HEAD_H / 2);
+      cy += L.THEME_HEAD_H;
+
+      theme.segments.forEach((seg, si) => {
+        const label = seg.name.includes('·') ? seg.name.split('·').pop() : seg.name;
+        const names = seg.companies.map((c) => c.name).join('  ');
+        const midY = cy + L.COMPACT_ROW_H / 2;
+        const baseX = cardX + innerPadX;
+
+        ctx.font = `bold ${L.FONT_LABEL}px "PingFang SC", "苹方-简", sans-serif`;
+        ctx.fillStyle = theme.color || '#1e40af';
+        const prefix = label + '：';
+        ctx.fillText(prefix, baseX, midY);
+        const prefixW = ctx.measureText(prefix).width;
+
+        ctx.font = `${L.FONT_NAMES}px "PingFang SC", "苹方-简", sans-serif`;
+        ctx.fillStyle = '#0f172a';
+        let namesText = names;
+        const maxNamesW = innerW - prefixW;
+        if (ctx.measureText(namesText).width > maxNamesW) {
+          namesText = fitOneLineWidth(ctx, namesText, maxNamesW);
+        }
+        ctx.fillText(namesText, baseX + prefixW, midY);
+
+        if (si < n - 1) {
+          ctx.strokeStyle = '#eef2f7';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(baseX, cy + L.COMPACT_ROW_H);
+          ctx.lineTo(cardX + cardW - innerPadX, cy + L.COMPACT_ROW_H);
+          ctx.stroke();
+        }
+        cy += L.COMPACT_ROW_H + (si < n - 1 ? L.LINE_GAP : 0);
+      });
+
+      ctx.textBaseline = 'alphabetic';
+      y += cardH + (ti < data.themeGroups.length - 1 ? THEME_GAP : 0);
+    });
+  } else if (data.themeGroups && data.themeGroups.length) {
+    data.themeGroups.forEach((theme, ti) => {
+      roundRect(ctx, cardX, y, cardW, THEME_BAR_H, 8);
+      const tg = ctx.createLinearGradient(cardX, y, cardX + cardW, y);
+      tg.addColorStop(0, theme.color || '#2563eb');
+      tg.addColorStop(1, '#1e3a8a');
+      ctx.fillStyle = tg;
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 13px "PingFang SC", "苹方-简", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(theme.title, cardX + cardW / 2, y + THEME_BAR_H / 2 + 1);
+      ctx.textAlign = 'left';
+      y += THEME_BAR_H + THEME_GAP;
+
+      theme.segments.forEach((seg) => drawSegmentCard(seg, theme.color));
+      if (ti < data.themeGroups.length - 1) y += THEME_GAP - CARD_GAP;
+    });
+  } else {
+    const segs = flattenIndustrySegments(data);
+    segs.forEach((seg) => drawSegmentCard(seg, seg.barColor));
+    if (segs.length) y -= CARD_GAP;
+  }
 
   ctx.fillStyle = '#64748b';
-  ctx.font = '9px "PingFang SC", "苹方-简", sans-serif';
+  ctx.font = `${L.FONT_FOOTER}px "PingFang SC", "苹方-简", sans-serif`;
   ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
   const td = new Date();
-  ctx.fillText(
-    `产业链分析工具 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`,
-    W / 2,
-    H - FOOTER_H / 2 + 2
-  );
+  const footerText = `产业链分析工具 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 数据仅供参考，不构成投资建议`;
+  if (L.s > 1 && ctx.measureText(footerText).width > W - PAD * 2) {
+    ctx.font = `${Math.max(10, L.FONT_FOOTER - 2)}px "PingFang SC", "苹方-简", sans-serif`;
+  }
+  ctx.fillText(footerText, W / 2, H - FOOTER_H / 2);
+  ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 }
 
@@ -497,23 +739,31 @@ function drawGear(ctx, x, y, outerR, innerR, teeth, color) {
 // 下载/复制海报
 // ===========================
 function downloadPoster() {
-  const name = currentIndustry.name;
-  const canvas = document.getElementById('poster-canvas-main');
-  if (!canvas) return;
-  const a = document.createElement('a');
-  a.download = `${name}_行业龙头企业图谱_${new Date().toLocaleDateString('zh-CN')}.png`;
-  a.href = canvas.toDataURL('image/png');
-  a.click();
+  const name = currentIndustry?.name || '产业链';
+  const canvases = document.querySelectorAll('#poster-pages .poster-canvas-item');
+  if (!canvases.length) return;
+  const date = new Date().toLocaleDateString('zh-CN');
+  canvases.forEach((canvas, idx) => {
+    setTimeout(() => {
+      const a = document.createElement('a');
+      const suffix = canvases.length > 1 ? `_第${idx + 1}张` : '';
+      a.download = `${name}_产业链海报${suffix}_${date}.png`;
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    }, idx * 280);
+  });
 }
 
 async function copyPoster() {
-  const canvas = document.getElementById('poster-canvas-main');
-  if (!canvas) return;
+  const canvases = document.querySelectorAll('#poster-pages .poster-canvas-item');
+  if (!canvases.length) return;
+  const canvas = canvases[0];
   try {
     canvas.toBlob(async (blob) => {
       const item = new ClipboardItem({ 'image/png': blob });
       await navigator.clipboard.write([item]);
-      alert('✅ 已复制海报到剪贴板！');
+      const tip = canvases.length > 1 ? '（已复制第 1 张，共 ' + canvases.length + ' 张）' : '';
+      alert('✅ 已复制海报到剪贴板！' + tip);
     });
   } catch (e) {
     alert('❌ 复制失败，请使用下载功能');
