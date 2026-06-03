@@ -142,6 +142,9 @@ function renderPoster(data) {
 
     const H = estimateBlueprintPosterHeight(pageData);
 
+    const block = document.createElement('div');
+    block.className = 'poster-page-block';
+
     const label = document.createElement('div');
     label.className = 'poster-page-label';
     if (multi) {
@@ -149,7 +152,7 @@ function renderPoster(data) {
     } else {
       label.textContent = data.posterLabel || '行业龙头企业图谱';
     }
-    container.appendChild(label);
+    block.appendChild(label);
 
     const canvas = document.createElement('canvas');
     canvas.className = 'poster-canvas-item';
@@ -159,19 +162,21 @@ function renderPoster(data) {
     canvas.height = H * dpr;
     canvas.style.width = W + 'px';
     canvas.style.height = H + 'px';
-    container.appendChild(canvas);
+    block.appendChild(canvas);
 
-    if (multi) {
-      const row = document.createElement('div');
-      row.className = 'poster-page-actions';
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'btn btn-secondary poster-page-dl-btn';
-      btn.textContent = `⬇️ 下载本张（第${idx + 1}张）`;
-      btn.onclick = () => downloadPosterPage(idx);
-      row.appendChild(btn);
-      container.appendChild(row);
-    }
+    const row = document.createElement('div');
+    row.className = 'poster-page-actions';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-primary poster-page-dl-btn';
+    btn.textContent = multi
+      ? `⬇️ 下载第 ${idx + 1} 张`
+      : '⬇️ 下载当前图';
+    btn.onclick = () => downloadPosterPage(idx);
+    row.appendChild(btn);
+    block.appendChild(row);
+
+    container.appendChild(block);
 
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
