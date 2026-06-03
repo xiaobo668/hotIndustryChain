@@ -168,11 +168,15 @@ function renderPoster(data) {
     row.className = 'poster-page-actions';
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'btn btn-primary poster-page-dl-btn';
+    btn.className = 'btn btn-secondary poster-page-dl-btn';
     btn.textContent = multi
       ? `⬇️ 下载第 ${idx + 1} 张`
       : '⬇️ 下载当前图';
-    btn.onclick = () => downloadPosterPage(idx);
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      downloadPosterCanvas(canvas, idx, themePages.length);
+    });
     row.appendChild(btn);
     block.appendChild(row);
 
@@ -185,9 +189,12 @@ function renderPoster(data) {
 
   const dlBtn = document.getElementById('poster-download-btn');
   if (dlBtn) {
-    dlBtn.textContent = multi
-      ? `⬇️ 下载全部（${themePages.length}张）`
-      : '⬇️ 下载产业链海报';
+    if (multi) {
+      dlBtn.style.display = 'none';
+    } else {
+      dlBtn.style.display = '';
+      dlBtn.textContent = '⬇️ 下载产业链海报';
+    }
   }
   let hint = document.getElementById('poster-multi-dl-hint');
   if (multi) {
@@ -199,8 +206,7 @@ function renderPoster(data) {
       if (actions) actions.insertBefore(hint, actions.firstChild);
     }
     hint.style.display = 'block';
-    hint.textContent =
-      '提示：若「下载全部」只保存一张，请点每张海报下方的「下载本张」。';
+    hint.textContent = `共 ${themePages.length} 张海报，请使用每张图下方的「下载第 x 张」按钮分别保存。`;
   } else if (hint) {
     hint.style.display = 'none';
   }
@@ -770,62 +776,49 @@ function drawGear(ctx, x, y, outerR, innerR, teeth, color) {
 // ===========================
 // 下载/复制海报
 // ===========================
-function triggerPosterDownload(canvas, idx, total) {
+let _posterCanvasDownloading = false;
+
+/** 仅下载指定 canvas（同步导出，一次只触发一个文件） */
+function downloadPosterCanvas(canvas, idx, total) {
+  if (!canvas || typeof canvas.toDataURL !== 'function') return;
+  if (_posterCanvasDownloading) return;
+  _posterCanvasDownloading = true;
+
   const name = currentIndustry?.name || '产业链';
   const date = new Date().toLocaleDateString('zh-CN');
   const suffix = total > 1 ? `_第${idx + 1}张` : '';
   const filename = `${name}_产业链海报${suffix}_${date}.png`;
 
-  canvas.toBlob((blob) => {
-    if (!blob) return;
-    const url = URL.createObjectURL(blob);
+  try {
     const a = document.createElement('a');
     a.style.display = 'none';
     a.download = filename;
-    a.href = url;
+    a.href = canvas.toDataURL('image/png');
     document.body.appendChild(a);
     a.click();
+    setTimeout(() => a.remove(), 100);
+  } finally {
     setTimeout(() => {
-      URL.revokeObjectURL(url);
-      a.remove();
-    }, 200);
-  }, 'image/png');
-}
-
-function downloadPosterPage(pageIndex) {
-  const canvases = document.querySelectorAll('#poster-pages .poster-canvas-item');
-  const canvas = canvases[pageIndex];
-  if (!canvas) return;
-  triggerPosterDownload(canvas, pageIndex, canvases.length);
+      _posterCanvasDownloading = false;
+    }, 400);
+  }
 }
 
 function downloadPoster() {
-  const canvases = [...document.querySelectorAll('#poster-pages .poster-canvas-item')];
-  if (!canvases.length) return;
-  if (canvases.length === 1) {
-    triggerPosterDownload(canvases[0], 0, 1);
+  const canvases = [...document.querySelectorAll('#poster-pages > .poster-page-block .poster-canvas-item')];
+  if (!canvases.length) {
+    const fallback = document.getElementById('poster-canvas-main');
+    if (fallback) downloadPosterCanvas(fallback, 0, 1);
     return;
   }
-
-  // 多图：同一次点击内同步触发（避免仅下到最后一张）
-  const name = currentIndustry?.name || '产业链';
-  const date = new Date().toLocaleDateString('zh-CN');
-  const links = [];
-  canvases.forEach((canvas, idx) => {
-    const suffix = `_第${idx + 1}张`;
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.download = `${name}_产业链海报${suffix}_${date}.png`;
-    a.href = canvas.toDataURL('image/png');
-    document.body.appendChild(a);
-    links.push(a);
-  });
-  links.forEach((a) => a.click());
-  setTimeout(() => links.forEach((a) => a.remove()), 500);
+  if (canvases.length > 1) {
+    return;
+  }
+  downloadPosterCanvas(canvases[0], 0, 1);
 }
 
 async function copyPoster() {
-  const canvases = document.querySelectorAll('#poster-pages .poster-canvas-item');
+  const canvases = document.querySelectorAll('#poster-pages > .poster-page-block .poster-canvas-item');
   if (!canvases.length) return;
   const canvas = canvases[0];
   try {
