@@ -903,6 +903,27 @@ const SECTOR_DATA = {
       ]
     }
   },
+  "物理AI": {
+    name: "物理AI",
+    color: "#6366f1",
+    gradient: ["#6366f1", "#4338ca"],
+    description: "基于物理AI（具身智能）产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    vanguard: {
+      title: "物理AI板块前锋（情绪龙头）",
+      companies: [
+        { name: "双环传动", highlight: "精密减速器弹性标的，人形/具身关节预期博弈强，Physical AI 情绪先锋" },
+        { name: "鸣志电器", highlight: "空心杯电机纯度标的，灵巧手驱动催化时率先反应（非科创）" },
+      ]
+    },
+    center: {
+      title: "物理AI板块中军（趋势龙头）",
+      companies: [
+        { name: "汇川技术", highlight: "伺服+运动控制龙头，具身机器人零部件订单可跟踪，趋势中军" },
+        { name: "埃斯顿", highlight: "国产机器人龙头，运动控制+本体一体化，Physical AI 趋势核心" },
+        { name: "机器人", highlight: "机器人整机国家队，产业链布局完整，具身落地趋势标的" },
+      ]
+    }
+  },
   "2022世界杯": {
     name: "2022世界杯",
     color: "#16a34a",
@@ -952,7 +973,8 @@ function searchSector(query) {
   if (SECTOR_DATA[trimmed]) return SECTOR_DATA[trimmed];
   const industry = searchIndustry(query);
   if (industry && SECTOR_DATA[industry.name]) return SECTOR_DATA[industry.name];
-  for (const [keyword, industryKey] of Object.entries(KEYWORD_MAP)) {
+  const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
+  for (const [keyword, industryKey] of entries) {
     if (trimmed.includes(keyword) || keyword.includes(trimmed)) {
       if (SECTOR_DATA[industryKey]) return SECTOR_DATA[industryKey];
     }

@@ -1,6 +1,6 @@
 /**
  * 产业链数据库
- * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、电力、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、MLCC、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
+ * 包含：半导体、AI算力、算力租赁、新能源汽车、光伏、电力、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、MLCC、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、光互联、物理AI、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
  */
 const INDUSTRY_DATA = {
   // ========== 半导体 ==========
@@ -2812,6 +2812,69 @@ const INDUSTRY_DATA = {
     ]
   },
 
+  // ========== 物理AI（具身智能 / Physical AI）==========
+  "物理AI": {
+    name: "物理AI",
+    color: "#6366f1",
+    gradient: ["#6366f1", "#4338ca"],
+    description: "物理AI（Physical AI/具身智能）指在真实物理世界中感知、推理并执行动作的 AI 系统，架构为「具身大脑（多模态模型+仿真）— 具身小脑（运动控制）— 本体（传感+执行器）」。A股主线：力觉/视觉感知、数字孪生仿真、关节执行器、运动控制与机器人本体落地。",
+    upstream: [
+      {
+        name: "力觉/触觉/多模态感知",
+        companies: [
+          { name: "柯力传感", highlight: "六维力/力矩传感器，人形机器人灵巧手与关节力控，Physical AI 闭环感知核心" },
+          { name: "汉威科技", highlight: "柔性压力/触觉传感，具身机器人抓取与环境交互感知" },
+          { name: "凌云光", highlight: "机器视觉+具身数据采集，物理AI训练与真机验证数据闭环" }
+        ]
+      },
+      {
+        name: "仿真/数字孪生/世界模型",
+        companies: [
+          { name: "能科科技", highlight: "工业数字孪生与仿真平台，具身策略训练与物理场景验证" },
+          { name: "中科创达", highlight: "端侧AI OS与具身智能机器人软件栈，边缘部署多模态模型" },
+          { name: "瑞芯微", highlight: "端侧AI芯片，机器人视觉与控制在设备侧低时延推理" }
+        ]
+      }
+    ],
+    midstream: [
+      {
+        name: "关节执行器（减速器/电机）",
+        companies: [
+          { name: "绿的谐波", highlight: "谐波减速器龙头，具身机器人旋转关节核心执行器" },
+          { name: "双环传动", highlight: "精密减速器，人形机器人关节模组供应链" },
+          { name: "鸣志电器", highlight: "空心杯电机+步进电机，灵巧手与关节驱动执行末端" },
+          { name: "中大力德", highlight: "微型精密减速器，小型具身机器人关节模组" }
+        ]
+      },
+      {
+        name: "运动控制/具身小脑",
+        companies: [
+          { name: "汇川技术", highlight: "伺服驱动+运动控制，具身机器人实时力控与轨迹规划" },
+          { name: "埃斯顿", highlight: "自主运动控制+机器人本体，具身小脑与执行一体化" },
+          { name: "雷赛智能", highlight: "伺服/步进+运动控制卡，具身设备运动控制与驱动" }
+        ]
+      }
+    ],
+    downstream: [
+      {
+        name: "具身机器人本体/集成",
+        companies: [
+          { name: "机器人", highlight: "工业机器人+服务机器人本体，Physical AI 产线落地国家队" },
+          { name: "拓斯达", highlight: "工业机器人系统集成，具身机器人产线物理自动化落地" },
+          { name: "东方精工", highlight: "智能包装装备+机器人产线，乐聚人形机器人组装线合资落地" }
+        ]
+      },
+      {
+        name: "Physical AI 场景落地",
+        companies: [
+          { name: "三丰智能", highlight: "AGV/物流机器人，仓储与工厂物理世界智能搬运" },
+          { name: "今天国际", highlight: "智慧物流+AMR/AGV，物理空间物料自动配送" },
+          { name: "亿嘉和", highlight: "特种具身机器人，电力巡检与安防物理世界作业自动化" }
+        ]
+      }
+    ]
+  },
+
   // ========== 2022卡塔尔世界杯 ==========
   // 口径：2022年11-12月卡塔尔世界杯期间A股反复活跃的赞助、营销、啤酒、彩票、游戏版权等主题
   "2022世界杯": {
@@ -3216,6 +3279,20 @@ const KEYWORD_MAP = {
    "800G": "光互联",
    "1.6T": "光互联",
    "硅光": "光互联",
+
+   // ---- 物理AI ----
+   "物理AI": "物理AI",
+   "Physical AI": "物理AI",
+   "physical ai": "物理AI",
+   "PhysicalAI": "物理AI",
+   "具身智能": "物理AI",
+   "具身": "物理AI",
+   "embodied": "物理AI",
+   "Embodied AI": "物理AI",
+   "世界模型": "物理AI",
+   "具身大脑": "物理AI",
+   "具身小脑": "物理AI",
+
    // ---- 特斯拉FSD入华 ----
    "特斯拉FSD入华": "特斯拉FSD入华",
    "特斯拉FSD": "特斯拉FSD入华",
@@ -3253,8 +3330,9 @@ function searchIndustry(query) {
   const trimmed = query.trim();
   // 精确匹配
   if (INDUSTRY_DATA[trimmed]) return INDUSTRY_DATA[trimmed];
-  // 关键词映射
-  for (const [keyword, industryKey] of Object.entries(KEYWORD_MAP)) {
+  // 关键词映射（最长关键词优先，避免「Physical AI」被「AI」截胡）
+  const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
+  for (const [keyword, industryKey] of entries) {
     if (trimmed.includes(keyword) || keyword.includes(trimmed)) {
       return INDUSTRY_DATA[industryKey];
     }
