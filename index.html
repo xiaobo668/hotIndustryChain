@@ -384,22 +384,48 @@ transition: opacity 0.2s;
       display: flex; flex-direction: column; align-items: center; gap: 24px;
     }
     #poster-pages {
-      display: flex; flex-direction: column; align-items: center; gap: 24px;
+      display: flex; flex-direction: column; align-items: center; gap: 32px;
+      width: 100%;
+    }
+    .poster-page-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
       width: 100%;
     }
     .poster-page-label {
       font-size: 12px; color: var(--text-muted); letter-spacing: 1px;
-      text-align: center; margin-bottom: -16px;
+      text-align: center; margin-bottom: 0;
     }
     .poster-canvas-item {
       border-radius: 16px;
       max-width: 100%;
       box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      cursor: pointer;
+      cursor: default;
       display: block;
     }
     .poster-actions {
       display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .poster-multi-dl-hint {
+      width: 100%;
+      margin: 0 0 4px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .poster-page-actions {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 4px 0 0;
+    }
+    .poster-page-dl-btn {
+      min-width: 160px;
+      padding: 10px 20px;
+      font-size: 14px;
     }
     .btn {
       padding: 10px 24px;
@@ -1151,6 +1177,7 @@ transition: opacity 0.2s;
 
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
+          <span class="hotkey-tag" onclick="quickSearch('2026六大主线')">2026六大主线</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
           <span class="hotkey-tag" onclick="quickSearch('先进封装')">先进封装</span>
           <span class="hotkey-tag" onclick="quickSearch('特斯拉FSD入华')">特斯拉FSD入华</span>
@@ -1245,6 +1272,10 @@ transition: opacity 0.2s;
       <h2>产业链 & 板块龙头 深度分析</h2>
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="welcome-grid" id="welcome-grid">
+        <div class="welcome-card" onclick="quickSearch('2026六大主线')">
+          <div class="welcome-card-icon">📅</div>
+          <div class="welcome-card-name">2026六大主线</div>
+        </div>
         <div class="welcome-card" onclick="quickSearch('半导体')">
           <div class="welcome-card-icon">💎</div>
           <div class="welcome-card-name">半导体</div>
@@ -1482,7 +1513,7 @@ transition: opacity 0.2s;
       <div class="poster-wrap" id="poster-wrap">
         <div id="poster-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary" onclick="downloadPoster()">⬇️ 下载产业链海报</button>
+          <button class="btn btn-primary" id="poster-download-btn" onclick="downloadPoster()">⬇️ 下载产业链海报</button>
           <button class="btn btn-secondary" onclick="copyPoster()">📋 复制第1张</button>
         </div>
       </div>
@@ -1633,6 +1664,7 @@ transition: opacity 0.2s;
 
 <!-- DATA -->
 <script src="data.js"></script>
+<script src="js/industry/themes2026-data.js"></script>
 <script src="sector-data.js"></script>
 
 <!-- ==================== 模块化 JS（按依赖顺序加载）==================== -->
