@@ -1,40 +1,55 @@
 /**
- * 食疗汇总海报 Canvas 绘制
+ * 食疗汇总海报 Canvas 绘制（紧凑双列）
  */
 function getShiliaoSummaryPosterLayout() {
   return {
-    PAD: 12,
-    FOOTER: 22,
+    PAD: 10,
+    FOOTER: 18,
     TOP: 30,
-    HEADER_H: 56,
-    HEADER_INNER: 48,
-    FONT_TITLE: 18,
-    FONT_SUB: 11,
-    SEC_GAP: 5,
-    SEC_BAR: 20,
-    SEC_BODY_PAD: 6,
+    HEADER_PAD: 10,
+    HEADER_TITLE_GAP: 6,
+    HEADER_AFTER: 4,
+    FONT_TITLE: 20,
+    FONT_SUB: 12,
+    SEC_GAP: 4,
+    SEC_BAR: 18,
+    SEC_BODY_PAD: 5,
     FONT_SEC: 14,
-    PRINCIPLE_LH: 15,
-    PRINCIPLE_MAX: 2,
-    ITEM_HEAD_ROW: 18,
-    BOOK_ROW: 14,
-    QUOTE_LH: 12,
-    QUOTE_MAX: 2,
-    ITEM_GAP: 7,
+    PRINCIPLE_LH: 17,
+    PRINCIPLE_MAX: 3,
+    DESC_MAX: 3,
+    DESC_LH: 16,
+    NAME_GAP: 5,
+    ITEM_GAP: 10,
+    ITEM_BOTTOM_PAD: 4,
+    COL_GAP: 10,
     FONT_NAME: 15,
-    FONT_EFFECT: 11,
-    FONT_ITEM: 12,
-    FONT_BOOK: 11,
-    FONT_QUOTE: 10,
-    FONT_FOOTER: 10,
-    INNER_X: 8,
+    NAME_COLOR: '#0f172a',
+    NAME_EFFECT_GAP: 6,
+    FONT_EFFECT: 12,
+    FONT_BOOK: 12,
+    FONT_ITEM: 13,
+    FONT_FOOTER: 11,
+    INNER_X: 6,
+    RANK_SIZE: 18,
+    FONT_RANK: 11,
+    SUB_MAX: 3,
+    SUB_LH: 15,
   };
 }
 
-function measureSummaryItemHeight(ctx, item, innerW, L) {
-  ctx.font = `${L.FONT_QUOTE}px "PingFang SC", sans-serif`;
-  const lines = Math.min(L.QUOTE_MAX, countWrapLines(ctx, '「' + item.quote + '」', innerW));
-  return L.ITEM_HEAD_ROW + L.BOOK_ROW + L.FONT_QUOTE + lines * L.QUOTE_LH;
+/** 与 drawSummaryItemCompact 逐行对齐的高度测算，避免双列行距不足导致重叠 */
+function measureSummaryItemH(ctx, item, w, L) {
+  const tw = w - L.RANK_SIZE - 6;
+  let h = measureInlineNameEffectH(ctx, item.name, item.effect, tw, L) + L.NAME_GAP + L.FONT_BOOK;
+
+  if (item.quote) {
+    ctx.font = `${L.FONT_BOOK}px "PingFang SC", sans-serif`;
+    const quoteLines = clampWrapLines(ctx, '「' + item.quote + '」', tw, L.DESC_MAX);
+    if (quoteLines) h += L.NAME_GAP + L.FONT_BOOK + measureWrappedBlockH(quoteLines, L.DESC_LH);
+  }
+
+  return h + L.ITEM_BOTTOM_PAD;
 }
 
 function measureSummaryPosterSections(ctx, data, innerW) {
@@ -44,11 +59,8 @@ function measureSummaryPosterSections(ctx, data, innerW) {
     ctx.font = `${L.FONT_ITEM}px "PingFang SC", sans-serif`;
     principleH = Math.min(L.PRINCIPLE_MAX, countWrapLines(ctx, data.principle, innerW)) * L.PRINCIPLE_LH;
   }
-  let listH = 0;
-  (data.items || []).forEach((item, i) => {
-    listH += measureSummaryItemHeight(ctx, item, innerW, L);
-    if (i < data.items.length - 1) listH += L.ITEM_GAP;
-  });
+  const colW = (innerW - L.COL_GAP) / 2;
+  const listH = measureTwoColVariable(ctx, data.items || [], colW, L.ITEM_GAP, measureSummaryItemH, L, null);
   return { principleH, listH };
 }
 
@@ -59,11 +71,56 @@ function estimateShiliaoSummaryPosterHeight(data) {
   const ctx = canvas.getContext('2d');
   const { principleH, listH } = measureSummaryPosterSections(ctx, data, innerW);
   const sectionH = (bodyH) =>
-    bodyH > 0 ? L.SEC_BAR + L.SEC_BODY_PAD + bodyH + L.SEC_BODY_PAD : 0;
-  let h = L.TOP + L.HEADER_H;
+    bodyH > 0 ? L.SEC_BAR + L.SEC_BODY_PAD * 2 + bodyH : 0;
+  const cardW = SHILIAO_POSTER_W - L.PAD * 2;
+  const { advance: headerH } = measureShiliaoPosterHeaderH(ctx, data.summary || '', cardW - 20, L);
+  let h = L.TOP + headerH;
   if (principleH) h += L.SEC_GAP + sectionH(principleH);
   if (listH) h += L.SEC_GAP + sectionH(listH);
-  return h + 10 + L.FOOTER;
+  return h + 6 + L.FOOTER;
+}
+
+function drawSummaryItemCompact(ctx, item, x, topY, w, L, accent) {
+  const itemH = measureSummaryItemH(ctx, item, w, L);
+  const r = L.RANK_SIZE;
+  const tx = x + r + 6;
+  const tw = w - r - 6;
+
+  ctx.fillStyle = 'rgba(255,255,255,0.72)';
+  roundRect(ctx, x, topY, w, itemH, 5);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(21,128,61,0.12)';
+  ctx.lineWidth = 0.5;
+  roundRect(ctx, x, topY, w, itemH, 5);
+  ctx.stroke();
+
+  ctx.fillStyle = accent;
+  roundRect(ctx, x + 4, topY + 4, r, r, 4);
+  ctx.fill();
+  ctx.fillStyle = '#fff';
+  ctx.font = `bold ${L.FONT_RANK}px "PingFang SC", sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(String(item.rank), x + 4 + r / 2, topY + 4 + r / 2);
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'alphabetic';
+
+  let cy = drawInlineNameEffect(ctx, item.name, item.effect, tx, topY, tw, L);
+  cy += L.NAME_GAP;
+  if (item.book) {
+    ctx.font = `bold ${L.FONT_BOOK}px "PingFang SC", sans-serif`;
+    ctx.fillStyle = accent;
+    ctx.fillText(item.book, tx, cy + L.FONT_BOOK);
+  }
+
+  if (item.quote) {
+    ctx.font = `${L.FONT_BOOK}px "PingFang SC", sans-serif`;
+    ctx.fillStyle = '#475569';
+    const quoteY = item.book
+      ? cy + L.FONT_BOOK + L.NAME_GAP + L.FONT_BOOK
+      : cy + L.FONT_BOOK;
+    drawWrappedText(ctx, '「' + item.quote + '」', tx, quoteY, tw, L.DESC_LH, L.DESC_MAX);
+  }
 }
 
 function renderShiliaoSummaryPoster(data) {
@@ -109,79 +166,44 @@ function drawShiliaoSummaryPoster(ctx, data, W, H) {
   ctx.fillRect(0, 0, W, H);
 
   let y = L.TOP;
-  const tg = ctx.createLinearGradient(L.PAD, y, W - L.PAD, y);
-  tg.addColorStop(0, accent);
-  tg.addColorStop(1, '#15803d');
-  roundRect(ctx, L.PAD, y, cardW, L.HEADER_INNER, 10);
-  ctx.fillStyle = tg;
-  ctx.fill();
-  ctx.fillStyle = '#fff';
-  ctx.font = `bold ${L.FONT_TITLE}px "PingFang SC", sans-serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
   const title = data.listTitle || data.name;
-  ctx.fillText(`${data.icon || ''} ${title}`, W / 2, y + L.HEADER_INNER * 0.38);
-  ctx.font = `${L.FONT_SUB}px "PingFang SC", sans-serif`;
-  ctx.fillStyle = 'rgba(255,255,255,0.95)';
-  ctx.fillText(fitOneLineWidth(ctx, data.summary || '', cardW - 20), W / 2, y + L.HEADER_INNER * 0.72);
-  ctx.textBaseline = 'alphabetic';
-  ctx.textAlign = 'left';
-  y += L.HEADER_H;
+  y = drawShiliaoPosterHeader(
+    ctx,
+    y,
+    `${data.icon || ''} ${title}`,
+    data.summary,
+    W,
+    cardW,
+    L.PAD,
+    L,
+    accent,
+    8,
+    cardW - 20
+  );
 
-  const drawSection = (title, bodyH, drawBody) => {
-    if (!bodyH) return;
-    y += L.SEC_GAP;
-    const boxH = L.SEC_BAR + L.SEC_BODY_PAD + bodyH + L.SEC_BODY_PAD;
-    roundRect(ctx, L.PAD, y, cardW, boxH, 8);
-    ctx.fillStyle = '#fff';
-    ctx.fill();
-    ctx.strokeStyle = accent + '55';
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    ctx.fillStyle = accent;
-    ctx.font = `bold ${L.FONT_SEC}px "PingFang SC", sans-serif`;
-    ctx.fillText(title, L.PAD + L.INNER_X, y + 15);
-    ctx.save();
-    ctx.translate(L.PAD + L.INNER_X, y + L.SEC_BAR + L.SEC_BODY_PAD);
-    drawBody(innerW);
-    ctx.restore();
-    y += boxH;
-  };
+  const secOpts = { L, accent, cardW, pad: L.PAD, innerW };
 
-  drawSection('选用原则', principleH, (w) => {
+  y = drawShiliaoPosterSection(ctx, y, '选用原则', principleH, (w) => {
     if (!data.principle) return;
     ctx.font = `${L.FONT_ITEM}px "PingFang SC", sans-serif`;
     ctx.fillStyle = '#334155';
     drawWrappedText(ctx, data.principle, 0, L.FONT_ITEM, w, L.PRINCIPLE_LH, L.PRINCIPLE_MAX);
-  });
+  }, secOpts);
 
-  drawSection('食材与古籍', listH, (w) => {
-    let cy = 0;
-    (data.items || []).forEach((item, i) => {
-      const rowTop = cy;
-      const prefix = `${item.rank}. ${item.name} — `;
-      ctx.font = `bold ${L.FONT_NAME}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#15803d';
-      const prefixText = fitOneLineWidth(ctx, prefix, w);
-      const prefixW = ctx.measureText(prefixText).width;
-      ctx.fillText(prefixText, 0, rowTop + L.FONT_NAME);
-      ctx.font = `${L.FONT_EFFECT}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#94a3b8';
-      const effectText = fitOneLineWidth(ctx, item.effect, Math.max(0, w - prefixW));
-      ctx.fillText(effectText, prefixW, rowTop + L.FONT_NAME);
-      cy = rowTop + L.ITEM_HEAD_ROW;
-      ctx.font = `bold ${L.FONT_BOOK}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = accent;
-      cy = drawTextInRow(ctx, item.book, 0, cy, L.FONT_BOOK, L.BOOK_ROW);
-      ctx.font = `${L.FONT_QUOTE}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#64748b';
-      const quoteBaseline = cy + L.FONT_QUOTE;
-      cy = drawWrappedText(ctx, '「' + item.quote + '」', 0, quoteBaseline, w, L.QUOTE_LH, L.QUOTE_MAX);
-      if (i < data.items.length - 1) cy += L.ITEM_GAP;
-    });
-  });
+  drawShiliaoPosterSection(ctx, y, '食材与古籍', listH, (w) => {
+    drawTwoColVariable(
+      ctx,
+      data.items || [],
+      w,
+      L,
+      drawSummaryItemCompact,
+      measureSummaryItemH,
+      L.ITEM_GAP,
+      accent
+    );
+  }, secOpts);
 
-  ctx.fillStyle = '#64748b';
+  ctx.fillStyle = '#94a3b8';
   ctx.font = `${L.FONT_FOOTER}px "PingFang SC", sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';

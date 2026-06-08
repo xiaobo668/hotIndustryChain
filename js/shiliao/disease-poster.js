@@ -1,33 +1,36 @@
 /**
- * 对症食疗海报 Canvas 绘制
+ * 对症食疗 / 器官食补海报 Canvas 绘制（紧凑双列排版）
  */
 function getShiliaoDiseasePosterLayout() {
   return {
-    PAD: 12,
-    FOOTER: 22,
+    PAD: 10,
+    FOOTER: 18,
     TOP: 30,
-    HEADER_H: 56,
-    HEADER_INNER: 48,
-    FONT_TITLE: 20,
-    FONT_SUB: 12,
-    SEC_GAP: 5,
-    SEC_BAR: 20,
-    SEC_BODY_PAD: 6,
+    HEADER_PAD: 10,
+    HEADER_TITLE_GAP: 6,
+    HEADER_AFTER: 4,
+    FONT_TITLE: 21,
+    FONT_SUB: 13,
+    SEC_GAP: 4,
+    SEC_BAR: 18,
+    SEC_BODY_PAD: 5,
     FONT_SEC: 14,
-    PRINCIPLE_LH: 16,
+    PRINCIPLE_LH: 18,
     PRINCIPLE_MAX: 3,
-    ING_NAME_ROW: 18,
-    ING_ROLE_ROW: 16,
-    ING_GAP: 6,
-    DISH_NAME_ROW: 18,
-    DISH_LINE_ROW: 15,
-    DISH_GAP: 7,
-    FONT_ING: 13,
-    FONT_ING_ROLE: 11,
-    FONT_DISH: 13,
-    FONT_DISH_SUB: 11,
-    FONT_FOOTER: 10,
-    INNER_X: 8,
+    DESC_MAX: 3,
+    DESC_LH: 15,
+    NAME_GAP: 4,
+    ING_GAP: 4,
+    COL_GAP: 10,
+    DISH_GAP: 5,
+    SUB_MAX: 3,
+    SUB_LH: 15,
+    FONT_ING: 14,
+    FONT_ING_ROLE: 12,
+    FONT_DISH: 14,
+    FONT_DISH_SUB: 12,
+    FONT_FOOTER: 11,
+    INNER_X: 6,
   };
 }
 
@@ -41,17 +44,25 @@ function measureDiseasePosterSections(ctx, data, innerW) {
     principleH = lines * L.PRINCIPLE_LH;
   }
 
-  let ingredientsH = 0;
-  (data.ingredients || []).forEach((ing, i) => {
-    ingredientsH += L.ING_NAME_ROW + L.ING_ROLE_ROW;
-    if (i < data.ingredients.length - 1) ingredientsH += L.ING_GAP;
-  });
-
-  let dishesH = 0;
-  (data.dishes || []).forEach((d, i) => {
-    dishesH += L.DISH_NAME_ROW + L.DISH_LINE_ROW * 2;
-    if (i < data.dishes.length - 1) dishesH += L.DISH_GAP;
-  });
+  const colW = (innerW - L.COL_GAP) / 2;
+  const ingredientsH = measureTwoColVariable(
+    ctx,
+    data.ingredients || [],
+    colW,
+    L.ING_GAP,
+    measureIngItemH,
+    L,
+    null
+  );
+  const dishesH = measureTwoColVariable(
+    ctx,
+    data.dishes || [],
+    colW,
+    L.DISH_GAP,
+    measureDishCompactH,
+    L,
+    'therapy'
+  );
 
   return { principleH, ingredientsH, dishesH };
 }
@@ -64,16 +75,22 @@ function estimateShiliaoDiseasePosterHeight(data) {
   const { principleH, ingredientsH, dishesH } = measureDiseasePosterSections(ctx, data, innerW);
 
   const sectionH = (bodyH) =>
-    bodyH > 0 ? L.SEC_BAR + L.SEC_BODY_PAD + bodyH + L.SEC_BODY_PAD : 0;
+    bodyH > 0 ? L.SEC_BAR + L.SEC_BODY_PAD * 2 + bodyH : 0;
 
-  let h = L.TOP + L.HEADER_H;
+  const cardW = SHILIAO_POSTER_W - L.PAD * 2;
+  const { advance: headerH } = measureShiliaoPosterHeaderH(ctx, data.summary || '', cardW - 20, L);
+  let h = L.TOP + headerH;
   if (principleH) h += L.SEC_GAP + sectionH(principleH);
   if (ingredientsH) h += L.SEC_GAP + sectionH(ingredientsH);
   if (dishesH) h += L.SEC_GAP + sectionH(dishesH);
-  return h + 10 + L.FOOTER;
+  return h + 6 + L.FOOTER;
 }
 
 function renderShiliaoDiseasePoster(data) {
+  renderShiliaoTherapyPoster(data, 'disease');
+}
+
+function renderShiliaoTherapyPoster(data, kind) {
   const container = document.getElementById('shiliao-poster-pages');
   if (!container || !data) return;
   container.innerHTML = '';
@@ -84,7 +101,8 @@ function renderShiliaoDiseasePoster(data) {
 
   const label = document.createElement('div');
   label.className = 'poster-page-label';
-  label.textContent = `${data.name} · 对症食疗海报`;
+  label.textContent =
+    kind === 'organ' ? `${data.name} · 器官食补海报` : `${data.name} · 对症食疗海报`;
   container.appendChild(label);
 
   const canvas = document.createElement('canvas');
@@ -98,109 +116,65 @@ function renderShiliaoDiseasePoster(data) {
 
   const ctx = canvas.getContext('2d');
   ctx.scale(dpr, dpr);
-  drawShiliaoDiseasePoster(ctx, data, W, H);
+  drawShiliaoTherapyPoster(ctx, data, W, H, kind);
 }
 
-function drawShiliaoDiseasePoster(ctx, data, W, H) {
+function drawShiliaoTherapyPoster(ctx, data, W, H, kind) {
   const L = getShiliaoDiseasePosterLayout();
   const accent = data.color || '#65a30d';
   const cardW = W - L.PAD * 2;
   const innerW = cardW - L.INNER_X * 2;
   const { principleH, ingredientsH, dishesH } = measureDiseasePosterSections(ctx, data, innerW);
+  const isOrgan = kind === 'organ';
 
   const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, '#eff6ff');
-  bg.addColorStop(0.45, '#f0fdf4');
-  bg.addColorStop(1, '#fefce8');
+  if (isOrgan) {
+    bg.addColorStop(0, '#fdf4ff');
+    bg.addColorStop(0.45, '#f0fdf4');
+    bg.addColorStop(1, '#eff6ff');
+  } else {
+    bg.addColorStop(0, '#eff6ff');
+    bg.addColorStop(0.45, '#f0fdf4');
+    bg.addColorStop(1, '#fefce8');
+  }
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
   let y = L.TOP;
-  const tg = ctx.createLinearGradient(L.PAD, y, W - L.PAD, y);
-  tg.addColorStop(0, accent);
-  tg.addColorStop(1, '#15803d');
-  roundRect(ctx, L.PAD, y, cardW, L.HEADER_INNER, 10);
-  ctx.fillStyle = tg;
-  ctx.fill();
-  ctx.fillStyle = '#fff';
-  ctx.font = `bold ${L.FONT_TITLE}px "PingFang SC", sans-serif`;
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(`${data.icon || ''} ${data.name} · 对症食疗`, W / 2, y + L.HEADER_INNER * 0.36);
-  ctx.font = `${L.FONT_SUB}px "PingFang SC", sans-serif`;
-  ctx.fillStyle = 'rgba(255,255,255,0.95)';
-  const sub = fitOneLineWidth(ctx, data.summary || '', cardW - 24);
-  ctx.fillText(sub, W / 2, y + L.HEADER_INNER * 0.72);
-  ctx.textBaseline = 'alphabetic';
-  ctx.textAlign = 'left';
-  y += L.HEADER_H;
+  const headTitle = isOrgan
+    ? `${data.icon || ''} ${data.name} · 器官食补`
+    : `${data.icon || ''} ${data.name} · 对症食疗`;
+  y = drawShiliaoPosterHeader(ctx, y, headTitle, data.summary, W, cardW, L.PAD, L, accent, 8, cardW - 20);
 
-  const drawSection = (title, bodyH, drawBody) => {
-    if (!bodyH) return;
-    y += L.SEC_GAP;
-    const boxH = L.SEC_BAR + L.SEC_BODY_PAD + bodyH + L.SEC_BODY_PAD;
-    roundRect(ctx, L.PAD, y, cardW, boxH, 8);
-    ctx.fillStyle = '#fff';
-    ctx.fill();
-    ctx.strokeStyle = accent + '55';
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    ctx.fillStyle = accent;
-    ctx.font = `bold ${L.FONT_SEC}px "PingFang SC", sans-serif`;
-    ctx.textBaseline = 'alphabetic';
-    ctx.fillText(title, L.PAD + L.INNER_X, y + 15);
-    ctx.save();
-    ctx.translate(L.PAD + L.INNER_X, y + L.SEC_BAR + L.SEC_BODY_PAD);
-    drawBody(innerW);
-    ctx.restore();
-    y += boxH;
-  };
+  const secOpts = { L, accent, cardW, pad: L.PAD, innerW };
+  const principleTitle = isOrgan ? '调养要点' : '调理原则';
+  const ingTitle = isOrgan ? '偏爱食材' : '推荐食材';
+  const dishTitle = isOrgan ? '推荐菜品' : '食疗菜品';
 
-  drawSection('调理原则', principleH, (w) => {
+  y = drawShiliaoPosterSection(ctx, y, principleTitle, principleH, (w) => {
     if (!data.principle) return;
     ctx.font = `${L.FONT_ING}px "PingFang SC", sans-serif`;
     ctx.fillStyle = '#334155';
     drawWrappedText(ctx, data.principle, 0, L.FONT_ING, w, L.PRINCIPLE_LH, L.PRINCIPLE_MAX);
-  });
+  }, secOpts);
 
-  drawSection('推荐食材', ingredientsH, (w) => {
-    let cy = 0;
-    (data.ingredients || []).forEach((ing, i) => {
-      ctx.font = `bold ${L.FONT_ING}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = accent;
-      cy = drawTextInRow(ctx, ing.name, 0, cy, L.FONT_ING, L.ING_NAME_ROW);
-      ctx.font = `${L.FONT_ING_ROLE}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#64748b';
-      cy = drawTextInRow(ctx, fitOneLineWidth(ctx, ing.role, w), 0, cy, L.FONT_ING_ROLE, L.ING_ROLE_ROW);
-      if (i < data.ingredients.length - 1) cy += L.ING_GAP;
-    });
-  });
+  y = drawShiliaoPosterSection(ctx, y, ingTitle, ingredientsH, (w) => {
+    drawTwoColIngs(ctx, data.ingredients || [], w, L, accent);
+  }, secOpts);
 
-  drawSection('食疗菜品', dishesH, (w) => {
-    let cy = 0;
-    (data.dishes || []).forEach((d, i) => {
-      ctx.font = `bold ${L.FONT_DISH}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#0f172a';
-      cy = drawTextInRow(ctx, d.name, 0, cy, L.FONT_DISH, L.DISH_NAME_ROW);
-      ctx.font = `${L.FONT_DISH_SUB}px "PingFang SC", sans-serif`;
-      ctx.fillStyle = '#64748b';
-      const ingLine = fitOneLineWidth(ctx, '食材：' + (d.ingredients || ''), w);
-      cy = drawTextInRow(ctx, ingLine, 0, cy, L.FONT_DISH_SUB, L.DISH_LINE_ROW);
-      cy = drawTextInRow(ctx, fitOneLineWidth(ctx, d.note || '', w), 0, cy, L.FONT_DISH_SUB, L.DISH_LINE_ROW);
-      if (i < data.dishes.length - 1) cy += L.DISH_GAP;
-    });
-  });
+  y = drawShiliaoPosterSection(ctx, y, dishTitle, dishesH, (w) => {
+    drawTwoColDishes(ctx, data.dishes || [], w, L, 'therapy');
+  }, secOpts);
 
-  ctx.fillStyle = '#64748b';
+  ctx.fillStyle = '#94a3b8';
   ctx.font = `${L.FONT_FOOTER}px "PingFang SC", sans-serif`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   const td = new Date();
-  ctx.fillText(
-    `对症食疗 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，请及时就医`,
-    W / 2,
-    H - L.FOOTER / 2
-  );
+  const footer = isOrgan
+    ? `器官食补 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，请及时就医`
+    : `对症食疗 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，请及时就医`;
+  ctx.fillText(footer, W / 2, H - L.FOOTER / 2);
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';
 }

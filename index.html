@@ -859,12 +859,12 @@ transition: opacity 0.2s;
       box-shadow: 0 4px 14px rgba(101,163,13,0.12);
     }
     .shiliao-summary-item--clickable:hover .shiliao-summary-name {
-      color: #4d7c0f;
+      color: #15803d;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
     .shiliao-summary-head {
-      display: flex; align-items: baseline; gap: 10px; flex-wrap: nowrap;
+      display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
       margin-bottom: 10px; min-width: 0;
     }
     .shiliao-summary-rank {
@@ -875,14 +875,14 @@ transition: opacity 0.2s;
       box-shadow: 0 2px 6px rgba(101,163,13,0.25);
     }
     .shiliao-summary-name {
-      font-size: 22px; font-weight: 800; color: #15803d;
+      font-size: 22px; font-weight: 800; color: #0f172a;
       letter-spacing: 0.02em; line-height: 1.2; flex-shrink: 0;
     }
     .shiliao-summary-effect {
-      font-size: 12px; font-weight: 400; color: #94a3b8;
+      font-size: 12px; font-weight: 400; color: #64748b;
       line-height: 1.4; flex: 1; min-width: 0;
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
+    .shiliao-summary-effect::before { content: '·'; margin-right: 4px; color: #cbd5e1; }
     .shiliao-summary-classic {
       margin: 0; border-left-color: rgba(101,163,13,0.45);
     }
@@ -2046,7 +2046,7 @@ function initIndustrySelect() {
   var categories = {
     '⚡ 核心产业': ['半导体', 'AI算力', '人工智能', 'AI应用', '算力租赁', '芯片'],
     '🚗 新能源': ['新能源汽车', '新能源', '锂电池', '光伏', '固态电池'],
-    '❄️ 基础设施': ['液冷', '通讯设备', 'IT服务', 'AIDC', 'PCB'],
+    '❄️ 基础设施': ['液冷', '通讯设备', 'IT服务', 'AIDC', '预制算力中心底座', 'PCB'],
     '🚀 航天军工': ['军工', '商业航天'],
     '🌐 创新领域': ['低空经济', '华为概念', '核聚变', '数据要素', '量子科技', '脑机接口'],
     '💊 医药': ['创新药', '医疗器械'],
