@@ -689,6 +689,199 @@ transition: opacity 0.2s;
     /* 小红书 header 内容 */
     #header-xhs { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
     #header-kline { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+    #header-shiliao { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+
+    /* ===== 食疗模块 ===== */
+    #shiliao-result { display: none; }
+    #shiliao-result.show { display: block; }
+    .shiliao-result-header {
+      background: linear-gradient(135deg, rgba(101,163,13,0.12), rgba(21,128,61,0.06));
+      border: 1px solid rgba(101,163,13,0.25);
+      border-radius: 16px; padding: 28px 32px; margin-bottom: 24px;
+      position: relative; overflow: hidden;
+    }
+    .shiliao-result-header::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, #65a30d, #15803d); opacity: 0.05;
+    }
+    .shiliao-header-content { position: relative; z-index: 1; }
+    .shiliao-result-title { font-size: 26px; font-weight: 800; }
+    .shiliao-result-desc { color: var(--text-muted); font-size: 14px; margin-top: 8px; line-height: 1.7; max-width: 700px; }
+    .shiliao-result-stats { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+    .shiliao-stat-num { font-size: 22px; font-weight: 700; color: #65a30d; }
+    .shiliao-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .shiliao-tabs {
+      display: flex; gap: 4px; margin-bottom: 24px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 4px; width: fit-content;
+    }
+    .shiliao-tab-btn {
+      padding: 8px 20px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 14px; font-weight: 500;
+      border-radius: 9px; cursor: pointer; transition: all 0.2s;
+    }
+    .shiliao-tab-btn.active {
+      background: linear-gradient(135deg, #65a30d, #15803d); color: #fff;
+    }
+    .shiliao-tab-btn:hover:not(.active) { background: rgba(255,255,255,0.05); color: var(--text); }
+    .shiliao-section { margin-bottom: 24px; }
+    .shiliao-section-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .shiliao-effect-list { list-style: none; padding: 0; margin: 0; }
+    .shiliao-effect-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;
+      font-size: 14px; line-height: 1.6; color: var(--text-muted);
+    }
+    .shiliao-classic-list { display: flex; flex-direction: column; gap: 12px; }
+    .shiliao-classic-card {
+      background: var(--surface); border-left: 3px solid #65a30d;
+      border-radius: 10px; padding: 14px 18px;
+    }
+    .shiliao-classic-book { font-size: 14px; font-weight: 700; color: #65a30d; margin-bottom: 6px; }
+    .shiliao-classic-quote { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+    .shiliao-dish-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+    .shiliao-dish-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .shiliao-dish-name { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .shiliao-dish-symptom { font-size: 13px; color: #65a30d; margin-bottom: 4px; }
+    .shiliao-dish-symptom span { color: var(--text-muted); }
+    .shiliao-dish-note { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .shiliao-caution {
+      background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 12px; padding: 16px 18px;
+    }
+    .shiliao-caution p { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .shiliao-disclaimer {
+      font-size: 12px; color: var(--text-muted); text-align: center;
+      padding: 16px; margin-top: 8px; border-top: 1px dashed var(--border);
+    }
+    .shiliao-voice-summary {
+      background: linear-gradient(135deg, rgba(101,163,13,0.1), rgba(21,128,61,0.05));
+      border: 1px solid rgba(101,163,13,0.28);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+    .shiliao-voice-summary-title {
+      font-size: 18px; font-weight: 800; color: #65a30d;
+      line-height: 1.5; margin-bottom: 10px;
+    }
+    .shiliao-voice-summary-body {
+      font-size: 14px; color: var(--text-muted);
+      line-height: 1.85;
+    }
+    .shiliao-voice-section-label {
+      font-size: 14px; font-weight: 700; color: var(--text);
+      margin-bottom: 10px;
+    }
+    .shiliao-voice-meta {
+      display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px;
+      color: var(--text-muted); margin-bottom: 12px;
+    }
+    .shiliao-voice-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px 28px;
+      font-size: 16px; line-height: 2; color: var(--text);
+      letter-spacing: 0.3px;
+    }
+    .shiliao-search-btn { background: linear-gradient(135deg, #65a30d, #15803d) !important; }
+    .shiliao-hotkey-tag {
+      border-color: rgba(101,163,13,0.35) !important;
+      color: #65a30d !important; background: rgba(101,163,13,0.1) !important;
+    }
+    .shiliao-hotkey-tag:hover { background: rgba(101,163,13,0.22) !important; }
+    .shiliao-welcome-card:hover { border-color: #65a30d !important; }
+    .shiliao-dl-btn { background: linear-gradient(135deg, #65a30d, #15803d) !important; }
+    .shiliao-mode-tabs {
+      display: flex; gap: 4px; margin-bottom: 8px;
+      background: rgba(101,163,13,0.08); border: 1px solid rgba(101,163,13,0.2);
+      border-radius: 10px; padding: 3px; width: fit-content;
+    }
+    .shiliao-mode-btn {
+      padding: 6px 14px; border: none; background: transparent;
+      color: var(--text-muted); font-size: 13px; font-weight: 600;
+      border-radius: 8px; cursor: pointer; transition: all 0.2s;
+    }
+    .shiliao-mode-btn.active {
+      background: linear-gradient(135deg, #65a30d, #15803d); color: #fff;
+    }
+    .shiliao-mode-btn:hover:not(.active) { color: #65a30d; }
+    .shiliao-card-sub {
+      font-size: 11px; color: var(--text-muted); margin-top: 4px;
+    }
+    .shiliao-disease-principle {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 18px;
+      font-size: 14px; line-height: 1.7; color: var(--text-muted);
+    }
+    .shiliao-ingredient-list {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px;
+    }
+    .shiliao-ingredient-card {
+      background: var(--surface); border: 1px solid rgba(101,163,13,0.25);
+      border-radius: 10px; padding: 12px 14px; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .shiliao-ingredient-card:hover {
+      border-color: #65a30d; background: rgba(101,163,13,0.06);
+    }
+    .shiliao-ingredient-name { font-size: 14px; font-weight: 700; color: #65a30d; }
+    .shiliao-ingredient-role { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+    .shiliao-section-hint { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-left: 8px; }
+    .shiliao-back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-bottom: 14px; padding: 8px 14px;
+      border: 1px solid rgba(101,163,13,0.35); border-radius: 9px;
+      background: rgba(101,163,13,0.08); color: #65a30d;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .shiliao-back-btn:hover {
+      background: rgba(101,163,13,0.18); border-color: #65a30d;
+    }
+    .shiliao-summary-list { display: flex; flex-direction: column; gap: 14px; }
+    .shiliao-summary-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 16px 18px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .shiliao-summary-item--clickable { cursor: pointer; }
+    .shiliao-summary-item--clickable:hover {
+      border-color: #65a30d;
+      box-shadow: 0 4px 14px rgba(101,163,13,0.12);
+    }
+    .shiliao-summary-item--clickable:hover .shiliao-summary-name {
+      color: #4d7c0f;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .shiliao-summary-head {
+      display: flex; align-items: baseline; gap: 10px; flex-wrap: nowrap;
+      margin-bottom: 10px; min-width: 0;
+    }
+    .shiliao-summary-rank {
+      font-size: 14px; font-weight: 800; color: #fff;
+      background: linear-gradient(135deg, #65a30d, #15803d);
+      min-width: 28px; height: 28px; border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(101,163,13,0.25);
+    }
+    .shiliao-summary-name {
+      font-size: 22px; font-weight: 800; color: #15803d;
+      letter-spacing: 0.02em; line-height: 1.2; flex-shrink: 0;
+    }
+    .shiliao-summary-effect {
+      font-size: 12px; font-weight: 400; color: #94a3b8;
+      line-height: 1.4; flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .shiliao-summary-classic {
+      margin: 0; border-left-color: rgba(101,163,13,0.45);
+    }
+    .shiliao-summary-classic .shiliao-classic-book { font-size: 13px; color: #65a30d; }
+    .shiliao-summary-classic .shiliao-classic-quote { font-size: 12px; color: var(--text-muted); }
 
     /* ===== K线教学 ===== */
     .kline-chapter-list {
@@ -1150,6 +1343,7 @@ transition: opacity 0.2s;
         <button class="module-tab-btn active" onclick="switchModule('industry')" id="tab-industry">🏭 产业链分析</button>
         <button class="module-tab-btn" onclick="switchModule('xhs')" id="tab-xhs">📕 小红书创作</button>
         <button class="module-tab-btn kline-active" onclick="switchModule('kline')" id="tab-kline">📊 K线教学</button>
+        <button class="module-tab-btn" onclick="switchModule('shiliao')" id="tab-shiliao">🥗 食疗</button>
       </div>
     </div>
 
@@ -1232,6 +1426,38 @@ transition: opacity 0.2s;
           <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('fitness')">💪 健身</span>
           <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('baby')">👶 育儿</span>
           <span class="hotkey-tag xhs-hotkey-tag" onclick="selectXHSCategory('finance')">💰 理财</span>
+        </div>
+      </div>
+
+      <!-- ===== 食疗模块 Header ===== -->
+      <div id="header-shiliao" style="display:none">
+        <div class="logo">
+          <div class="logo-icon" style="background:linear-gradient(135deg,#65a30d,#15803d)">🥗</div>
+          <div>
+            <div class="logo-text">食疗养生 · 食材百科</div>
+            <div class="logo-sub">Food Therapy & Ingredient Wellness</div>
+            <div class="shiliao-mode-tabs" style="margin-top:10px">
+              <button class="shiliao-mode-btn active" data-mode="ingredient" onclick="switchShiliaoMode('ingredient')">🥬 食材百科</button>
+              <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🏥 对症食疗</button>
+              <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🫀 器官食补</button>
+              <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 食疗汇总</button>
+            </div>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <input class="search-input" id="shiliao-search-input" type="text"
+            placeholder="搜索常用食材，如：生姜、山药、红枣..."
+            autocomplete="off"
+            onkeydown="if(event.key==='Enter')doShiliaoSearchFromInput()" />
+          <button class="search-btn shiliao-search-btn" onclick="doShiliaoSearchFromInput()">食疗 →</button>
+        </div>
+        <div class="hotkeys" id="shiliao-hotkeys">
+          <span class="hotkey-label">常用食材：</span>
+          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('生姜')">🫚 生姜</span>
+          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('山药')">🍠 山药</span>
+          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('红枣')">🍒 红枣</span>
+          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('薏米')">🌾 薏米</span>
+          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('白萝卜')">🥕 白萝卜</span>
         </div>
       </div>
 
@@ -1402,6 +1628,23 @@ transition: opacity 0.2s;
 
       <!-- 选题列表 -->
       <div class="xhs-topic-list" id="xhs-topic-list" style="margin-top:24px;max-width:900px;margin-left:auto;margin-right:auto"></div>
+    </div>
+
+    <!-- ===== 食疗模块 Welcome ===== -->
+    <div id="welcome-shiliao" class="welcome" style="display:none">
+      <div class="welcome-icon" style="font-size:64px;margin-bottom:20px">🥗</div>
+      <h2>食疗养生 · 食材百科</h2>
+      <div class="shiliao-mode-tabs" style="margin:16px auto 0">
+        <button class="shiliao-mode-btn active" data-mode="ingredient" onclick="switchShiliaoMode('ingredient')">🥬 食材百科（60种）</button>
+        <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🏥 对症食疗（39种）</button>
+        <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🫀 器官食补（12个）</button>
+        <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 食疗汇总</button>
+      </div>
+      <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:520px;margin:16px auto 0">
+        搜索常用食材，查看<strong>养生作用</strong>、<strong>古籍记载</strong>、<strong>对症食疗菜</strong><br/>
+        <span style="color:#65a30d;font-size:13px">✨ 食疗海报可下载 · 60秒口播稿可直接朗读</span>
+      </p>
+      <div class="welcome-grid" id="shiliao-welcome-grid" style="margin-top:28px"></div>
     </div>
 
     <!-- ===== K线教学 Welcome ===== -->
@@ -1660,6 +1903,42 @@ transition: opacity 0.2s;
     </div>
   </div>
 
+  <!-- ===== 食疗结果区（完全独立）===== -->
+  <div id="shiliao-result">
+    <button type="button" class="shiliao-back-btn" onclick="backToShiliaoOverview()">← 返回总览</button>
+    <div class="shiliao-result-header" id="shiliao-header">
+      <div class="shiliao-header-content">
+        <div class="shiliao-result-title" id="shiliao-title"></div>
+        <div class="shiliao-result-desc" id="shiliao-desc"></div>
+        <div class="shiliao-result-stats" id="shiliao-stats"></div>
+      </div>
+    </div>
+
+    <div class="shiliao-tabs" id="shiliao-tabs">
+      <button class="shiliao-tab-btn active" data-tab="shiliao-detail" onclick="switchShiliaoTab('shiliao-detail', this)">📋 食疗详情</button>
+      <button class="shiliao-tab-btn" data-tab="shiliao-poster" onclick="switchShiliaoTab('shiliao-poster', this)">🎨 食疗海报</button>
+      <button class="shiliao-tab-btn" data-tab="shiliao-voice" onclick="switchShiliaoTab('shiliao-voice', this)">🎙️ 60s口播</button>
+    </div>
+
+    <div id="view-shiliao-detail" class="view-panel active">
+      <div id="shiliao-detail-content"></div>
+    </div>
+
+    <div id="view-shiliao-poster" class="view-panel">
+      <div class="poster-wrap" id="shiliao-poster-wrap">
+        <div id="shiliao-poster-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary shiliao-dl-btn" onclick="downloadShiliaoPoster()">⬇️ 下载食疗海报</button>
+          <button class="btn btn-secondary" onclick="copyShiliaoPoster()">📋 复制海报</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-shiliao-voice" class="view-panel">
+      <div id="shiliao-voiceover-content"></div>
+    </div>
+  </div>
+
 </main>
 
 <!-- DATA -->
@@ -1715,6 +1994,27 @@ transition: opacity 0.2s;
 <script src="js/kline/share.js"></script>
 <script src="js/kline/render.js"></script>
 <script src="js/kline/ui.js"></script>
+
+<!-- 8. 食疗模块 -->
+<script src="js/shiliao/data-extra.js"></script>
+<script src="js/shiliao/data-household.js"></script>
+<script src="js/shiliao/data.js"></script>
+<script src="js/shiliao/disease-data.js"></script>
+<script src="js/shiliao/organ-data.js"></script>
+<script src="js/shiliao/summary-data.js"></script>
+<script src="js/shiliao/search.js"></script>
+<script src="js/shiliao/disease-search.js"></script>
+<script src="js/shiliao/organ-search.js"></script>
+<script src="js/shiliao/summary-search.js"></script>
+<script src="js/shiliao/render.js"></script>
+<script src="js/shiliao/disease-render.js"></script>
+<script src="js/shiliao/organ-render.js"></script>
+<script src="js/shiliao/summary-render.js"></script>
+<script src="js/shiliao/poster.js"></script>
+<script src="js/shiliao/disease-poster.js"></script>
+<script src="js/shiliao/organ-poster.js"></script>
+<script src="js/shiliao/summary-poster.js"></script>
+<script src="js/shiliao/ui.js"></script>
 <script>
 // 初始化自定义可搜索 Select
 function initIndustrySelect() {

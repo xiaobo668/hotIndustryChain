@@ -38,14 +38,17 @@ function switchModule(module) {
   const headerIndustry = document.getElementById('header-industry');
   const headerXHS = document.getElementById('header-xhs');
   const headerKline = document.getElementById('header-kline');
+  const headerShiliao = document.getElementById('header-shiliao');
 
   if (headerIndustry) headerIndustry.style.display = module === 'industry' ? 'flex' : 'none';
   if (headerXHS) headerXHS.style.display = module === 'xhs' ? 'flex' : 'none';
   if (headerKline) headerKline.style.display = module === 'kline' ? 'flex' : 'none';
+  if (headerShiliao) headerShiliao.style.display = module === 'shiliao' ? 'flex' : 'none';
 
   const welcomeIndustry = document.getElementById('welcome-industry');
   const welcomeXHS = document.getElementById('welcome-xhs');
   const welcomeKline = document.getElementById('welcome-kline');
+  const welcomeShiliao = document.getElementById('welcome-shiliao');
   const welcomeContainer = document.getElementById('welcome');
 
   function hideAllResults() {
@@ -53,6 +56,8 @@ function switchModule(module) {
     document.getElementById('xhs-result').classList.remove('show');
     const klineResult = document.getElementById('kline-result');
     if (klineResult) klineResult.classList.remove('show');
+    const shiliaoResult = document.getElementById('shiliao-result');
+    if (shiliaoResult) shiliaoResult.classList.remove('show');
     document.getElementById('loading').classList.remove('show');
     document.getElementById('not-found').classList.remove('show');
     document.getElementById('ai-error').classList.remove('show');
@@ -62,6 +67,7 @@ function switchModule(module) {
     if (welcomeIndustry) welcomeIndustry.style.display = '';
     if (welcomeXHS) welcomeXHS.style.display = 'none';
     if (welcomeKline) welcomeKline.style.display = 'none';
+    if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     hideAllResults();
 
@@ -69,6 +75,7 @@ function switchModule(module) {
     if (welcomeIndustry) welcomeIndustry.style.display = 'none';
     if (welcomeXHS) welcomeXHS.style.display = '';
     if (welcomeKline) welcomeKline.style.display = 'none';
+    if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     hideAllResults();
     initXHSUI();
@@ -77,6 +84,7 @@ function switchModule(module) {
     if (welcomeIndustry) welcomeIndustry.style.display = 'none';
     if (welcomeXHS) welcomeXHS.style.display = 'none';
     if (welcomeKline) welcomeKline.style.display = '';
+    if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     const spaceWrap = document.getElementById('kline-space-wrap');
     if (spaceWrap) spaceWrap.style.display = 'none';
@@ -88,6 +96,15 @@ function switchModule(module) {
     } else {
       window.location.hash = 'kline';
     }
+
+  } else if (module === 'shiliao') {
+    if (welcomeIndustry) welcomeIndustry.style.display = 'none';
+    if (welcomeXHS) welcomeXHS.style.display = 'none';
+    if (welcomeKline) welcomeKline.style.display = 'none';
+    if (welcomeShiliao) welcomeShiliao.style.display = '';
+    if (welcomeContainer) welcomeContainer.style.display = '';
+    hideAllResults();
+    if (typeof initShiliaoUI === 'function') initShiliaoUI();
   }
 }
 
