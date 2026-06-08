@@ -5,7 +5,7 @@ function getShiliaoSummaryPosterLayout() {
   return {
     PAD: 12,
     FOOTER: 22,
-    TOP: 10,
+    TOP: 30,
     HEADER_H: 56,
     HEADER_INNER: 48,
     FONT_TITLE: 18,

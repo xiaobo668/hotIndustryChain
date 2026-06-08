@@ -59,7 +59,7 @@ function updateShiliaoModeUI() {
     if (welcomeTitle) welcomeTitle.textContent = '食疗汇总 · 典籍与营养清单';
     if (welcomeDesc) {
       welcomeDesc.innerHTML =
-        '汇总<strong>增强免疫力</strong>、<strong>延年益寿</strong>、<strong>40岁养生</strong>、<strong>维C/蛋白排行</strong>等，附典籍出处<br/>' +
+        '汇总<strong>增强免疫力</strong>、<strong>小儿脾胃</strong>、<strong>抗衰老</strong>、<strong>维C/蛋白排行</strong>等，附典籍出处<br/>' +
         '<span style="color:#65a30d;font-size:13px">✨ 汇总海报可下载 · 已收录食材可跳转百科 · 60秒口播</span>';
     }
     if (hotkeys) {
@@ -70,6 +70,9 @@ function updateShiliaoModeUI() {
         <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('四十养生')">🧓 40岁+</span>
         <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('维C水果')">🍊 维C水果</span>
         <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('高蛋白食材')">🥩 高蛋白</span>
+        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('幼儿少食')">👶 幼儿少食</span>
+        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('抗衰老')">✨ 抗衰老</span>
+        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('小儿脾胃')">🍚 小儿脾胃</span>
       `;
     }
   } else if (mode === 'organ') {
