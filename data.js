@@ -702,60 +702,124 @@ const INDUSTRY_DATA = {
     name: "元件",
     color: "#ea580c",
     gradient: ["#ea580c", "#7c2d12"],
-    description: "电子元件产业链包括电阻电容电感等被动元件、连接器、PCB印刷电路板及MLCC等核心基础器件，是电子信息产业的基石，AI服务器与新能源汽车需求双驱动，国产替代空间巨大。",
+    description: "电子元件按功能与形态分为三大类：①无源元件（电阻、电容、电感、变压器、晶振、连接器/开关/保险丝等被动件）；②有源元件（二极管、三极管、MOS管、晶闸管、模拟/数字IC、传感器等）；③其他分立/机电元件（电位器、蜂鸣器/喇叭/电机、光耦、排针/线束等）。以下为各细分品类核心A股制造企业。",
     upstream: [
       {
-        name: "基础原材料",
+        name: "电阻/电位器",
         companies: [
-          { name: "博迁新材", highlight: "镍粉与金属粉体材料，MLCC内电极浆料核心原材料" },
-          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉体龙头，中高端被动元件粉体国产替代" },
-          { name: "生益科技", highlight: "覆铜板龙头，AI/5G用高频高速覆铜板市占率国内第一" },
-          { name: "晶瑞电材", highlight: "电子级硅烷+湿电子化学品，元件生产精密清洗及蚀刻配套" }
+          { name: "振华科技", highlight: "片式电阻器+瓷介电容龙头，高可靠被动元件核心供应商" },
+          { name: "三环集团", highlight: "陶瓷电阻/电容一体化，消费电子与车规被动元件" }
         ]
       },
       {
-        name: "MLCC/电容材料",
+        name: "电容",
         companies: [
-          { name: "火炬电子", highlight: "陶瓷电容器+特种陶瓷材料，军工与高端MLCC配套" },
-          { name: "洁美科技", highlight: "电子封装离型膜，MLCC与被动元件封装辅材龙头" },
-          { name: "三环集团", highlight: "陶瓷封装与电子浆料，MLCC用陶瓷材料龙头" }
+          { name: "风华高科", highlight: "MLCC国内龙头，储能滤波隔直耦合，AI/车规高压电容放量" },
+          { name: "江海股份", highlight: "铝电解电容龙头，工控/新能源储能滤波电容" },
+          { name: "艾华集团", highlight: "铝电解电容，消费电子与照明电源滤波" },
+          { name: "火炬电子", highlight: "特种陶瓷电容器，军工高可靠电容滤波耦合" }
+        ]
+      },
+      {
+        name: "电感",
+        companies: [
+          { name: "顺络电子", highlight: "片式电感龙头，储能滤波、阻交流通直流，AI服务器用量倍增" },
+          { name: "麦捷科技", highlight: "片式电感+MLCC，消费电子与汽车电子被动元件" }
+        ]
+      },
+      {
+        name: "变压器",
+        companies: [
+          { name: "可立克", highlight: "磁性元件与变压器，开关电源变压、隔离与阻抗匹配" },
+          { name: "伊戈尔", highlight: "电力/照明变压器，新能源与工控电源变压隔离" }
+        ]
+      },
+      {
+        name: "晶振/谐振器",
+        companies: [
+          { name: "泰晶科技", highlight: "石英晶振龙头，产生固定频率时钟，5G/汽车电子需求高增" },
+          { name: "惠伦晶体", highlight: "MHz/TCXO晶振，通信与IoT时钟谐振器" }
+        ]
+      },
+      {
+        name: "连接器/开关/保险丝",
+        companies: [
+          { name: "中航光电", highlight: "连接器龙头，接线互连+军工高可靠开关连接器" },
+          { name: "电连技术", highlight: "射频/高速连接器，消费电子与汽车接线通断" },
+          { name: "中熔电气", highlight: "电力熔断器/保险丝龙头，过流保护核心元件" }
         ]
       }
     ],
     midstream: [
       {
-        name: "MLCC/电容电感",
+        name: "二极管/整流/LED",
         companies: [
-          { name: "风华高科", highlight: "国内MLCC龙头，AI服务器用高压MLCC份额快速提升" },
-          { name: "顺络电子", highlight: "片式电感+功率电感龙头，AI服务器单台用量大幅增加" },
-          { name: "三环集团", highlight: "MLCC+陶瓷封装，车规与高端消费电子被动元件龙头" }
+          { name: "扬杰科技", highlight: "二极管+MOS分立器件，整流稳压与功率开关" },
+          { name: "苏州固锝", highlight: "二极管/整流桥龙头，光伏与电源单向导电器件" }
         ]
       },
       {
-        name: "连接器/PCB",
+        name: "三极管（晶体管）",
         companies: [
-          { name: "电连技术", highlight: "高速连接器龙头，汽车与消费电子射频连接器" },
-          { name: "深南电路", highlight: "高端PCB龙头，AI服务器HDI+高速背板PCB旗舰产品" },
-          { name: "中航光电", highlight: "军用与民用连接器龙头，高速互连组件核心供应商" },
-          { name: "瑞可达", highlight: "高压连接器龙头，新能源车与储能互连系统" }
+          { name: "华微电子", highlight: "功率三极管与BJT，放大信号与开关控制" }
+        ]
+      },
+      {
+        name: "场效应管/MOS管",
+        companies: [
+          { name: "新洁能", highlight: "MOSFET分立器件龙头，大功率开关与放大" },
+          { name: "士兰微", highlight: "IDM模式MOS/IGBT，功率开关与驱动芯片" }
+        ]
+      },
+      {
+        name: "晶闸管/可控硅",
+        companies: [
+          { name: "捷捷微电", highlight: "晶闸管+防护器件，大功率开关与调压" },
+          { name: "台基股份", highlight: "大功率晶闸管模块，工业调压与软启动" }
+        ]
+      },
+      {
+        name: "模拟IC（运放/电源）",
+        companies: [
+          { name: "圣邦股份", highlight: "模拟IC龙头，运放/电源管理芯片" },
+          { name: "芯朋微", highlight: "AC-DC电源芯片，家电与工控二次电源" }
+        ]
+      },
+      {
+        name: "数字IC（MCU/存储/逻辑）",
+        companies: [
+          { name: "兆易创新", highlight: "NOR Flash+MCU，存储芯片与单片机" },
+          { name: "北京君正", highlight: "MCU与存储控制器，智能硬件主控芯片" }
+        ]
+      },
+      {
+        name: "传感器",
+        companies: [
+          { name: "汉威科技", highlight: "气体/压力/温湿度传感器，多物理量感知" },
+          { name: "森霸传感", highlight: "PIR红外/光敏传感器，安防与照明感知" }
         ]
       }
     ],
     downstream: [
       {
-        name: "AI服务器/通信",
+        name: "蜂鸣器/喇叭/电机",
         companies: [
-          { name: "浪潮信息", highlight: "AI服务器单台MLCC/电感用量是普通服务器3-5倍，带动元件需求暴增" },
-          { name: "中兴通讯", highlight: "5G基站用高频MLCC+连接器，国产元件替代比例持续提升" },
-          { name: "歌尔股份", highlight: "消费电子元件精密组装，MLCC+连接器一体化供应链管理" }
+          { name: "国光电器", highlight: "喇叭/声学器件，电声换能与扬声器" },
+          { name: "鸣志电器", highlight: "步进/空心杯电机，机电执行与驱动元件" }
         ]
       },
       {
-        name: "新能源/汽车电子",
+        name: "光电耦合器（光耦）",
         companies: [
-          { name: "比亚迪", highlight: "新能源汽车每辆用MLCC超3000颗，带动车规级元件需求飙升" },
-          { name: "宁德时代", highlight: "BMS+电池管理电路大量采购车规级电容电感，用量行业最大" },
-          { name: "华域汽车", highlight: "汽车电子PCBA集成，车规连接器+元件集成供应能力强" }
+          { name: "旭光电子", highlight: "光耦+晶闸管，信号隔离与功率控制" },
+          { name: "士兰微", highlight: "光耦与功率器件，电气隔离与驱动" }
+        ]
+      },
+      {
+        name: "排针/排母/线束",
+        companies: [
+          { name: "得润电子", highlight: "连接器+线束，排针排母与汽车线束" },
+          { name: "意华股份", highlight: "通信/光伏连接器，排针排母与接线端子" }
         ]
       }
     ]
@@ -3095,6 +3159,30 @@ const KEYWORD_MAP = {
   "SaaS": "IT服务",
   "元件": "元件",
   "电子元件": "元件",
+  "无源元件": "元件",
+  "有源元件": "元件",
+  "被动元件": "元件",
+  "主动元件": "元件",
+  "电阻": "元件",
+  "电位器": "元件",
+  "电感": "元件",
+  "变压器": "元件",
+  "晶振": "元件",
+  "谐振器": "元件",
+  "保险丝": "元件",
+  "熔断器": "元件",
+  "二极管": "元件",
+  "三极管": "元件",
+  "MOS管": "元件",
+  "MOS": "元件",
+  "晶闸管": "元件",
+  "可控硅": "元件",
+  "模拟IC": "元件",
+  "数字IC": "元件",
+  "MCU": "元件",
+  "传感器": "元件",
+  "光耦": "元件",
+  "线束": "元件",
   "MLCC": "MLCC",
   "mlcc": "MLCC",
   "片式电容": "MLCC",
@@ -3103,8 +3191,7 @@ const KEYWORD_MAP = {
   "多层陶瓷电容": "MLCC",
   "电容": "元件",
   "连接器": "元件",
-  "PCB": "元件",
-  "被动元件": "元件",
+  "PCB": "PCB",
   "AI应用": "AI应用",
   "AIGC": "AI应用",
   "AI Agent": "AI应用",
@@ -3399,6 +3486,7 @@ function searchIndustry(query) {
   const trimmed = query.trim();
   // 精确匹配
   if (INDUSTRY_DATA[trimmed]) return INDUSTRY_DATA[trimmed];
+  if (KEYWORD_MAP[trimmed]) return INDUSTRY_DATA[KEYWORD_MAP[trimmed]];
   // 关键词映射（最长关键词优先，避免「Physical AI」被「AI」截胡）
   const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
   for (const [keyword, industryKey] of entries) {

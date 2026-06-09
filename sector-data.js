@@ -235,20 +235,20 @@ const SECTOR_DATA = {
     name: "元件",
     color: "#ea580c",
     gradient: ["#ea580c", "#7c2d12"],
-    description: "基于元件产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    description: "基于元件产业链（无源/有源/机电三大类功能分类）梳理：前锋与中军均选自产业链节点、且为非科创板（688/689）标的。",
     vanguard: {
       title: "元件板块前锋（情绪龙头）",
       companies: [
-        { name: "火炬电子", highlight: "特种被动元件弹性标的，军工+电子双题材，情绪敏感度高" },
-        { name: "洁美科技", highlight: "封装离型膜纯度较高，MLCC扩产预期博弈，适合情绪端" },
+        { name: "泰晶科技", highlight: "晶振弹性标的，时钟元件涨价与扩产预期博弈强，情绪先锋" },
+        { name: "火炬电子", highlight: "特种被动元件弹性，军工+电容题材活跃时辨识度高（非科创）" },
       ]
     },
     center: {
       title: "元件板块中军（趋势龙头）",
       companies: [
-        { name: "三环集团", highlight: "MLCC+陶瓷封装龙头，车规与高端消费电子订单放量，趋势中军" },
-        { name: "深南电路", highlight: "高端PCB+载板龙头，AI服务器拉动明确，机构趋势配置" },
-        { name: "顺络电子", highlight: "电感龙头，AI/汽车电子需求稳健，元件板块趋势核心" },
+        { name: "三环集团", highlight: "陶瓷被动元件龙头，电阻电容一体化，趋势中军" },
+        { name: "风华高科", highlight: "MLCC/电容龙头，车规与AI订单可跟踪，机构趋势配置" },
+        { name: "顺络电子", highlight: "电感龙头，AI/汽车电子被动元件需求稳健，趋势核心" },
       ]
     }
   },
@@ -992,6 +992,9 @@ const SECTOR_DATA = {
 function searchSector(query) {
   const trimmed = query.trim();
   if (SECTOR_DATA[trimmed]) return SECTOR_DATA[trimmed];
+  if (KEYWORD_MAP[trimmed] && SECTOR_DATA[KEYWORD_MAP[trimmed]]) {
+    return SECTOR_DATA[KEYWORD_MAP[trimmed]];
+  }
   const industry = searchIndustry(query);
   if (industry && SECTOR_DATA[industry.name]) return SECTOR_DATA[industry.name];
   const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
