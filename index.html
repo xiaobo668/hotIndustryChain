@@ -1807,6 +1807,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-liquid-cooling-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-mlcc-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-mlcc-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-mlcc-canvas','MLCC订单榜-2026.png')">⬇️ 下载MLCC订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-mlcc-canvas')">📋 复制</button>
+        </div>
+      </div>
       <div class="poster-wrap" id="order-rank-optical-interconnect-wrap" style="display:none;margin-top:20px">
         <div id="order-rank-optical-interconnect-pages"></div>
         <div class="poster-actions">
@@ -1989,6 +1996,7 @@ transition: opacity 0.2s;
 <script src="data/order-rank-pcb2026.js"></script>
 <script src="data/order-rank-advanced-packaging2026.js"></script>
 <script src="data/order-rank-liquid-cooling2026.js"></script>
+<script src="data/order-rank-mlcc2026.js"></script>
 <script src="data/order-rank-optical-interconnect2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
