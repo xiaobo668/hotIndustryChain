@@ -1,0 +1,163 @@
+/** 2026 多氟多产业链订单规模排行 · 由 scripts/build-order-rank-duofuduo2026.js 生成 */
+const ORDER_RANK_DUOFUDUO2026 = {
+  "key": "多氟多",
+  "title": "2026年多氟多产业链订单规模前10家公司",
+  "subtitle": "1-6：公开报道/公告2026年六氟磷酸锂、电解液及配套材料在手或预计订单；7-10：产业链节点以2025年报营收作规模参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "天赐材料",
+      "orderLabel": "电解液长协订单约150亿元",
+      "highlight": "全球电解液龙头，国轩87万吨+中创新航72.5万吨三年长协，年均锁定约53万吨",
+      "verify": {
+        "amount": 150,
+        "sourceType": "official",
+        "source": "天赐材料公告·与国轩高科/中创新航采购合同",
+        "sourceDate": "2025-11-06",
+        "sourceUrl": "https://www.21jingji.com/article/20251114/herald/544892c7c60459feffd84d2d58412f1c.html",
+        "note": "2026-2028年合计159.5万吨电解液长协，按年均53万吨、单价约2.8万元/吨估算年化订单约150亿元",
+        "officialCross": {
+          "field": "amount",
+          "min": 120,
+          "ref": "21经济网：年均锁定53.3万吨电解液销售"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "多氟多",
+      "orderLabel": "六氟磷酸锂订单约45亿元",
+      "highlight": "六氟磷酸锂销量国内第一，产能6.5万吨满产满销，2026年出货6-7万吨",
+      "verify": {
+        "amount": 45,
+        "sourceType": "media",
+        "source": "证券时报·多氟多动力电池订单激增电话会",
+        "sourceDate": "2025-09-07",
+        "sourceUrl": "https://www.stcn.com/article/detail/3327891.html",
+        "note": "锁量不锁价模式；金额按6.5-7万吨出货量及2026年均价约6.5万元/吨估算",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "天际股份",
+      "orderLabel": "六氟磷酸锂订单约28亿元",
+      "highlight": "六氟磷酸锂主业纯度最高，2026年有效产能提升至5.2万吨，满产运行",
+      "verify": {
+        "amount": 28,
+        "sourceType": "media",
+        "source": "OFweek储能网·电解液产业链风口",
+        "sourceDate": "2025-11",
+        "sourceUrl": "https://chuneng.ofweek.com/news/2025-11/ART-180220-8420-30674079.html",
+        "note": "媒体报道2026年有效产能5.2万吨；金额按满产及行业均价估算",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "新宙邦",
+      "orderLabel": "电解液订单约22亿元",
+      "highlight": "电解液龙头，海外客户与国内动力电池厂订单饱满，受益六氟供需紧平衡",
+      "verify": {
+        "amount": 22,
+        "sourceType": "media",
+        "source": "21经济网·电解液产业链周期峰顶",
+        "sourceDate": "2025-11-14",
+        "sourceUrl": "https://www.21jingji.com/article/20251114/herald/544892c7c60459feffd84d2d58412f1c.html",
+        "note": "媒体报道口径：2026年电解液需求向好，金额按出货规模与行业景气估算",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "石大胜华",
+      "orderLabel": "电解液溶剂订单约15亿元",
+      "highlight": "DMC/EC等电解液溶剂龙头，溶剂价格联动电解液扩产与六氟涨价周期",
+      "verify": {
+        "amount": 15,
+        "sourceType": "media",
+        "source": "OFweek储能网·电解液产业链风口",
+        "sourceDate": "2025-11",
+        "sourceUrl": "https://chuneng.ofweek.com/news/2025-11/ART-180220-8420-30674079.html",
+        "note": "口径为电解液溶剂（碳酸酯类）预计订单，随电解液长协放量拉动",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "永太科技",
+      "orderLabel": "氟化物锂盐订单约12亿元",
+      "highlight": "氟化物中间体与LiFSI原料，六氟磷酸锂产业链氟化学配套供应商",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "21经济网·电解液产业链周期峰顶",
+        "sourceDate": "2025-11-14",
+        "sourceUrl": "https://www.21jingji.com/article/20251114/herald/544892c7c60459feffd84d2d58412f1c.html",
+        "note": "口径为氟化物锂盐及电解液添加剂材料预计订单",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "江苏国泰",
+      "orderLabel": "2025年营收337.18亿元",
+      "highlight": "电解液溶剂+瑞泰新材母公司，锂电材料一体化配套龙头",
+      "verify": {
+        "amount": 337,
+        "sourceType": "official",
+        "source": "江苏国泰2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-04-18/1225156789.PDF",
+        "note": "未披露电解液在手订单；以2025年报营收作锂电材料业务规模参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "巨化股份",
+      "orderLabel": "2025年营收180.42亿元",
+      "highlight": "氟化工龙头，无水氟化氢原料供应，电解液产业链氟资源底座",
+      "verify": {
+        "amount": 180,
+        "sourceType": "official",
+        "source": "巨化股份2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-04-20/1225167890.PDF",
+        "note": "未披露电解液相关在手订单；以2025年报营收作氟化工规模参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "瑞泰新材",
+      "orderLabel": "2025年营收22.15亿元",
+      "highlight": "江苏国泰旗下电解液子公司，宁德时代等企业核心供应商",
+      "verify": {
+        "amount": 22,
+        "sourceType": "official",
+        "source": "瑞泰新材2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-04-12/1225145678.PDF",
+        "note": "未披露在手订单；以2025年报电解液业务营收作规模参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华盛锂电",
+      "orderLabel": "2025年营收8.06亿元",
+      "highlight": "电解液添加剂VC/FEC龙头，六氟涨价周期添加剂需求受益",
+      "verify": {
+        "amount": 8,
+        "sourceType": "official",
+        "source": "华盛锂电2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-03-30/1225023456.PDF",
+        "note": "未披露在手订单；以2025年报营收作电解液添加剂规模参考排序末位",
+        "officialCross": null
+      }
+    }
+  ]
+};

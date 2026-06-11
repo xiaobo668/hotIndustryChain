@@ -60,8 +60,9 @@
         <button class="btn btn-secondary" type="button" onclick="initThemePosterPage()">🔄 刷新</button>
       </div>
     </div>
-    <h1 style="margin-top:36px;font-size:20px">算力租赁 · 订单规模 Top15</h1>
-    <p class="sub">公开财经报道与产业链梳理；可与涨幅榜搭配发布。</p>
+    <h1 id="order-ranks" style="margin-top:36px;font-size:22px">2026 产业链订单排行榜</h1>
+    <p class="sub">公开财经报道与产业链梳理；各赛道 Top10/Top15 订单规模海报，支持下载与复制。</p>
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">算力租赁 · 订单规模 Top15</h2>
     <div class="poster-wrap" id="order-rank-computing-wrap">
       <div id="order-rank-computing-pages"></div>
       <div class="actions">
@@ -105,6 +106,15 @@
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-mlcc-canvas')">📋 复制</button>
       </div>
     </div>
+    <h1 style="margin-top:36px;font-size:20px">多氟多 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-6 名为公开报道/公告六氟磷酸锂、电解液及配套材料订单；7-10 名为产业链节点以 2025 年报营收作参考，已通过 scripts/verify-order-rank-duofuduo2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-duofuduo-wrap">
+      <div id="order-rank-duofuduo-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-duofuduo-canvas','多氟多订单榜-2026.png')">⬇️ 下载多氟多订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-duofuduo-canvas')">📋 复制</button>
+      </div>
+    </div>
     <h1 style="margin-top:36px;font-size:20px">光互联 · 2026年订单规模 Top10</h1>
     <p class="sub">1-6 名为公开报道 800G/1.6T 光模块在手或预计订单；7-10 名为产业链节点以 2025 年报营收或媒体订单作参考，已通过 scripts/verify-order-rank-optical-interconnect2026.js 复验。</p>
     <div class="poster-wrap" id="order-rank-optical-interconnect-wrap">
@@ -122,6 +132,7 @@
   <script src="data/order-rank-advanced-packaging2026.js"></script>
   <script src="data/order-rank-liquid-cooling2026.js"></script>
   <script src="data/order-rank-mlcc2026.js"></script>
+  <script src="data/order-rank-duofuduo2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
   <script>
@@ -132,6 +143,7 @@
       initOrderRankPosterPage(ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas');
       initOrderRankPosterPage(ORDER_RANK_LIQUID_COOLING2026, 'order-rank-liquid-cooling-pages', 'order-rank-liquid-cooling-canvas');
       initOrderRankPosterPage(ORDER_RANK_MLCC2026, 'order-rank-mlcc-pages', 'order-rank-mlcc-canvas');
+      initOrderRankPosterPage(ORDER_RANK_DUOFUDUO2026, 'order-rank-duofuduo-pages', 'order-rank-duofuduo-canvas');
       initOrderRankPosterPage(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas');
     });
   </script>

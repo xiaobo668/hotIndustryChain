@@ -208,6 +208,7 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '先进封装', wrapId: 'order-rank-advanced-wrap', pagesId: 'order-rank-advanced-pages', canvasId: 'order-rank-advanced-canvas' },
   { key: '液冷', wrapId: 'order-rank-liquid-cooling-wrap', pagesId: 'order-rank-liquid-cooling-pages', canvasId: 'order-rank-liquid-cooling-canvas' },
   { key: 'MLCC', wrapId: 'order-rank-mlcc-wrap', pagesId: 'order-rank-mlcc-pages', canvasId: 'order-rank-mlcc-canvas' },
+  { key: '多氟多', wrapId: 'order-rank-duofuduo-wrap', pagesId: 'order-rank-duofuduo-pages', canvasId: 'order-rank-duofuduo-canvas' },
   { key: '光互联', wrapId: 'order-rank-optical-interconnect-wrap', pagesId: 'order-rank-optical-interconnect-pages', canvasId: 'order-rank-optical-interconnect-canvas' },
 ];
 
@@ -218,6 +219,7 @@ function getOrderRankDatasetByKey(key) {
   if (key === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') return ORDER_RANK_ADVANCED_PACKAGING2026;
   if (key === '液冷' && typeof ORDER_RANK_LIQUID_COOLING2026 !== 'undefined') return ORDER_RANK_LIQUID_COOLING2026;
   if (key === 'MLCC' && typeof ORDER_RANK_MLCC2026 !== 'undefined') return ORDER_RANK_MLCC2026;
+  if (key === '多氟多' && typeof ORDER_RANK_DUOFUDUO2026 !== 'undefined') return ORDER_RANK_DUOFUDUO2026;
   if (key === '光互联' && typeof ORDER_RANK_OPTICAL_INTERCONNECT2026 !== 'undefined') return ORDER_RANK_OPTICAL_INTERCONNECT2026;
   return null;
 }
