@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>半导体12大稀缺材料 · 分享海报</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --text: #e8e8f0;
+      --text-muted: #8888aa;
+      --accent: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    h1 { font-size: 20px; margin-bottom: 8px; }
+    h2 { font-size: 18px; margin-top: 36px; margin-bottom: 8px; color: var(--text); }
+    .sub { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
+    .poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 8px; }
+    .poster-page-label { font-size: 13px; color: var(--text-muted); text-align: center; }
+    .poster-canvas-item { border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .poster-page-block { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .poster-page-actions { margin-bottom: 8px; }
+    .poster-multi-dl-hint {
+      font-size: 12px; color: var(--text-muted); text-align: center;
+      margin-bottom: 8px; line-height: 1.5;
+    }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+    .btn {
+      padding: 10px 18px; border-radius: 10px; border: none;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    a.back { color: var(--accent); font-size: 13px; display: inline-block; margin-bottom: 16px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tag {
+      font-size: 11px; padding: 4px 10px; border-radius: 999px;
+      border: 1px solid rgba(99,102,241,0.35); color: #a5b4fc;
+      background: rgba(99,102,241,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链分析</a>
+    <h1>半导体12大稀缺材料</h1>
+    <p class="sub">12 类高壁垒半导体关键材料产业链图谱（非科创板口径）。原同花顺图错配标的已替换，已通过 scripts/verify-semiconductor-scarce-materials2026.js 复验。数据仅供参考，不构成投资建议。</p>
+    <div class="tag-row">
+      <span class="tag">磷化铟</span>
+      <span class="tag">光刻胶</span>
+      <span class="tag">碳化硅</span>
+      <span class="tag">ABF载板</span>
+      <span class="tag">钽电容</span>
+      <span class="tag">高端PCB</span>
+      <span class="tag">电子级硫酸</span>
+      <span class="tag">MLCC</span>
+      <span class="tag">铜箔</span>
+      <span class="tag">电子布</span>
+      <span class="tag">钽靶材</span>
+      <span class="tag">高纯氦气</span>
+    </div>
+
+    <h2>🔗 产业链海报</h2>
+    <p class="sub">紧凑名-only 排版，共 2 张：上游+中游 / 下游。可在首页搜索「半导体稀缺材料」查看完整表格与思维导图。</p>
+    <div class="poster-wrap" id="chain-poster-wrap">
+      <div id="poster-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="poster-download-btn" onclick="downloadPoster()">⬇️ 下载产业链海报</button>
+        <button class="btn btn-secondary" type="button" onclick="copyPoster()">📋 复制产业链海报</button>
+        <button class="btn btn-secondary" type="button" onclick="initScarceMaterialsPosters()">🔄 刷新</button>
+      </div>
+    </div>
+
+    <h2>🐂 板块龙头海报</h2>
+    <p class="sub">前锋（情绪龙头）+ 中军（趋势龙头），均选自产业链节点、非科创板标的。</p>
+    <div class="poster-wrap" id="sector-poster-wrap">
+      <div id="sector-poster-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadSectorPoster()">⬇️ 下载龙头海报</button>
+        <button class="btn btn-secondary" type="button" onclick="copySectorPoster()">📋 复制龙头海报</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="sector-data.js"></script>
+  <script src="js/utils/canvas.js"></script>
+  <script src="js/utils/text.js"></script>
+  <script src="js/utils/color.js"></script>
+  <script src="js/industry/poster.js"></script>
+  <script src="js/sector/render.js"></script>
+  <script>
+    function initScarceMaterialsPosters() {
+      const chainData = INDUSTRY_DATA['半导体稀缺材料'];
+      const sectorData = SECTOR_DATA['半导体稀缺材料'];
+      if (!chainData || !sectorData) {
+        alert('数据未加载，请检查 data.js / sector-data.js');
+        return;
+      }
+      window.currentIndustry = chainData;
+      window.currentSector = sectorData;
+      renderPoster(chainData);
+      renderSectorPoster(sectorData);
+    }
+    document.addEventListener('DOMContentLoaded', initScarceMaterialsPosters);
+  </script>
+</body>
+</html>

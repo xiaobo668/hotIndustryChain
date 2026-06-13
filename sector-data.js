@@ -1008,6 +1008,27 @@ const SECTOR_DATA = {
       ]
     }
   },
+  "半导体稀缺材料": {
+    name: "半导体12大稀缺材料",
+    color: "#4338ca",
+    gradient: ["#6366f1", "#312e81"],
+    description: "基于12类半导体稀缺材料产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    vanguard: {
+      title: "稀缺材料板块前锋（情绪龙头）",
+      companies: [
+        { name: "凯美特气", highlight: "氦气/特气弹性标的，材料缺口预期下情绪先锋（非科创）" },
+        { name: "露笑科技", highlight: "SiC衬底建设预期博弈强，碳化硅材料情绪端" },
+      ]
+    },
+    center: {
+      title: "稀缺材料板块中军（趋势龙头）",
+      companies: [
+        { name: "南大光电", highlight: "ArF/KrF光刻胶国产龙头，晶圆厂导入趋势明确" },
+        { name: "深南电路", highlight: "ABF载板+高端PCB双龙头，算力封装基板趋势中军" },
+        { name: "风华高科", highlight: "MLCC制造龙头，AI/车规被动元件紧缺，机构趋势配置" },
+      ]
+    }
+  },
 };
 
 function searchSector(query) {

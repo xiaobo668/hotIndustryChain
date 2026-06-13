@@ -1,6 +1,6 @@
 /**
  * 产业链数据库
- * 包含：半导体、AI算力、算力租赁、预制算力中心底座、新能源汽车、光伏、电力、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、MLCC、多氟多、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、光互联、物理AI、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
+ * 包含：半导体、AI算力、算力租赁、预制算力中心底座、新能源汽车、光伏、电力、人工智能、锂电池、消费电子、机器人、液冷、通讯设备、IT服务、元件、MLCC、半导体稀缺材料、多氟多、AI应用、无人驾驶、特斯拉FSD入华、长鑫存储、先进封装、光互联、物理AI、2022世界杯、2026世界杯 等（产业链见 INDUSTRY_DATA；板块龙头见 sector-data.js 的 SECTOR_DATA）
  */
 const INDUSTRY_DATA = {
   // ========== 半导体 ==========
@@ -3164,9 +3164,160 @@ const INDUSTRY_DATA = {
         ]
       }
     ]
+  },
+
+  // ========== 半导体12大稀缺材料 ==========
+  // 口径：12类关键半导体材料节点；剔除688；原同花顺图错配已替换（见 verify-semiconductor-scarce-materials2026.js）
+  "半导体稀缺材料": {
+    name: "半导体12大稀缺材料",
+    color: "#4338ca",
+    gradient: ["#6366f1", "#312e81"],
+    description: "梳理光刻机产业链之外的12类高壁垒半导体关键材料：磷化铟、光刻胶、碳化硅、ABF载板、钽电容、高端PCB、电子级硫酸、MLCC、铜箔、电子布、钽靶材、高纯氦气。口径：主业或核心收入与对应材料强相关；剔除科创板(688/689)；涨价/缺口描述来自自媒体梳理，仅供产业链学习，不构成投资建议。",
+    upstream: [
+      {
+        name: "① 磷化铟衬底",
+        companies: [
+          { name: "云南锗业", highlight: "锗/砷化镓/磷化铟衬底，光通信与毫米波雷达用InP外延片国产主力" },
+          { name: "有研新材", highlight: "化合物半导体材料与靶材，磷化铟等高端衬底材料布局" },
+          { name: "三安光电", highlight: "III-V族化合物外延，磷化铟相关光芯片材料能力" },
+          { name: "海特高新", highlight: "化合物半导体产线，磷化铟外延片小批量供货（航空+半导体双主业）" },
+          { name: "株冶集团", highlight: "锌冶炼副产精铟，为InP产业链提供铟原料（替换原图锡业股份）" }
+        ]
+      },
+      {
+        name: "② 光刻胶",
+        companies: [
+          { name: "南大光电", highlight: "ArF/KrF光刻胶国产突破，晶圆厂验证与导入加速" },
+          { name: "彤程新材", highlight: "参股北京科华，G线/I线及KrF光刻胶树脂与成品布局" },
+          { name: "上海新阳", highlight: "KrF/ArF光刻胶与电镀液，晶圆制造材料平台型公司" },
+          { name: "晶瑞电材", highlight: "i线光刻胶+湿电子化学品，半导体材料双轮（300655）" },
+          { name: "鼎龙股份", highlight: "CMP垫+光刻胶树脂/PI浆料，半导体材料国产替代" }
+        ]
+      },
+      {
+        name: "③ 碳化硅",
+        companies: [
+          { name: "三安光电", highlight: "6英寸SiC衬底+外延+器件IDM，800V快充与电驱核心材料" },
+          { name: "晶盛机电", highlight: "SiC长晶炉与衬底设备，碳化硅扩产直接受益" },
+          { name: "斯达半导", highlight: "SiC功率模块龙头，衬底紧缺下模块环节高景气" },
+          { name: "东尼电子", highlight: "SiC切割线/耗材与器件配套（替换原图天岳先进688）" },
+          { name: "露笑科技", highlight: "SiC衬底产线建设，弹性标的但量产兑现需跟踪" }
+        ]
+      },
+      {
+        name: "④ ABF载板/上游",
+        companies: [
+          { name: "深南电路", highlight: "ABF载板国内龙头，CPU/GPU封装基板核心供应商" },
+          { name: "兴森科技", highlight: "IC载板+ABF布局，AI算力封装基板扩产" },
+          { name: "鹏鼎控股", highlight: "全球PCB龙头，高端HDI/类载板能力向ABF延伸" },
+          { name: "生益科技", highlight: "覆铜板/CCL龙头，ABF载板上游关键基材（替换崇达技术）" },
+          { name: "东材科技", highlight: "高速树脂与膜材料，ABF上游国产替代（替换东山精密）" }
+        ]
+      }
+    ],
+    midstream: [
+      {
+        name: "⑤ 钽电容",
+        companies: [
+          { name: "宏达电子", highlight: "钽电容军工+民用龙头，AI服务器高可靠电容供应商" },
+          { name: "振华科技", highlight: "钽电容与混合集成电路，特种被动元件核心央企平台" },
+          { name: "东方钽业", highlight: "钽粉-钽丝-钽电容产业链一体化，上游资源可控" },
+          { name: "火炬电子", highlight: "钽电容+陶瓷电容，特种被动元件双主线" },
+          { name: "鸿远电子", highlight: "高可靠瓷介/钽相关特种电容（替换原图风华高科）" }
+        ]
+      },
+      {
+        name: "⑥ 高端PCB载板",
+        companies: [
+          { name: "沪电股份", highlight: "AI服务器/交换机高端PCB龙头，算力硬件核心供应商" },
+          { name: "胜宏科技", highlight: "GPU/AI服务器PCB，高层数HDI与高速板放量" },
+          { name: "深南电路", highlight: "高端PCB+IC载板双龙头，算力与通信双线" },
+          { name: "景旺电子", highlight: "汽车+服务器PCB，高端多层板国产替代" },
+          { name: "广合科技", highlight: "AI服务器PCB新锐，算力板订单放量（替换生益科技/生益电子688）" }
+        ]
+      },
+      {
+        name: "⑦ 电子级硫酸",
+        companies: [
+          { name: "晶瑞电材", highlight: "电子级硫酸/双氧水等湿法清洗液，晶圆厂认证供应商" },
+          { name: "江化微", highlight: "湿电子化学品，蚀刻/清洗用电子级酸液" },
+          { name: "格林达", highlight: "TMAH显影液等湿电子化学品（替换原图兴福电子未上市）" },
+          { name: "巨化股份", highlight: "电子级氢氟酸/氟化工（替换原图中巨芯688）" },
+          { name: "多氟多", highlight: "电子级氢氟酸与氟化盐，半导体湿法清洗材料配套" }
+        ]
+      },
+      {
+        name: "⑧ MLCC电容",
+        companies: [
+          { name: "风华高科", highlight: "国内MLCC出货龙头，AI/车规高容MLCC紧缺受益" },
+          { name: "三环集团", highlight: "MLCC+粉体垂直一体化，高端被动元件国产替代" },
+          { name: "火炬电子", highlight: "特种MLCC+瓷介电容，高可靠场景份额高" },
+          { name: "鸿远电子", highlight: "军用高可靠MLCC，宇航级瓷介电容龙头" },
+          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉龙头，粉体涨价周期核心受益" }
+        ]
+      }
+    ],
+    downstream: [
+      {
+        name: "⑨ 铜箔",
+        companies: [
+          { name: "铜冠铜箔", highlight: "锂电铜箔+电子电路铜箔，AI服务器PCB与电池双需求" },
+          { name: "逸豪新材", highlight: "电子电路/锂电铜箔（替换原图嘉元科技688）" },
+          { name: "德福科技", highlight: "锂电铜箔快速扩产，电子电路铜箔第二曲线" },
+          { name: "诺德股份", highlight: "铜箔老牌企业，锂电+电子铜箔双线" },
+          { name: "中一科技", highlight: "铜箔新贵，高端锂电与标准铜箔同步扩产" }
+        ]
+      },
+      {
+        name: "⑩ 电子布",
+        companies: [
+          { name: "中国巨石", highlight: "电子纱/电子布龙头，高端Low-DK电子布供给紧张" },
+          { name: "宏和科技", highlight: "超薄电子布与特种玻璃纤维布，高端CCL reinforcing材料" },
+          { name: "中材科技", highlight: "玻纤+隔膜双主业，电子布/特种纤维材料" },
+          { name: "长海股份", highlight: "玻纤制品，电子布与复合材料配套" },
+          { name: "山东玻纤", highlight: "玻纤纱线，电子布上游原纱弹性标的" }
+        ]
+      },
+      {
+        name: "⑪ 半导体钽靶材",
+        companies: [
+          { name: "江丰电子", highlight: "高纯溅射靶材龙头，钽/钛/铝靶核心供应商（替换金钼股份）" },
+          { name: "阿石创", highlight: "PVD靶材，钽/铝/铜等薄膜沉积材料（替换洛阳钼业）" },
+          { name: "有研新材", highlight: "稀有金属靶材与半导体材料，钽靶布局" },
+          { name: "隆华科技", highlight: "钼/钨/钽等难熔金属靶材与材料" },
+          { name: "东方钽业", highlight: "钽粉到靶材一体化，钽靶上游资源+材料" }
+        ]
+      },
+      {
+        name: "⑫ 高纯氦气",
+        companies: [
+          { name: "凯美特气", highlight: "工业气体+稀有气体，半导体刻蚀/清洗用氦气布局" },
+          { name: "杭氧股份", highlight: "空分与特种气体龙头，高纯气体供应能力" },
+          { name: "和远气体", highlight: "华中气体供应商，电子特气与氦气储运" },
+          { name: "雅克科技", highlight: "LNG/湿法特气与半导体材料（替换华特气体/金宏气体688）" },
+          { name: "侨源股份", highlight: "高纯工业气体，半导体厂务气体配套（替换正帆科技688）" }
+        ]
+      }
+    ]
   }
 
 };
+
+// 半导体12大稀缺材料 — 海报分页（紧凑名-only，2张：上游+中游 / 下游）
+(function patchScarceMaterialsPoster() {
+  const d = INDUSTRY_DATA["半导体稀缺材料"];
+  if (!d) return;
+  d.posterTitle = "半导体12大稀缺材料";
+  d.posterNameOnly = true;
+  d.posterSplitPages = 2;
+  d.posterThemesPerPage = 2;
+  d.posterLabel = "半导体12大稀缺材料 · 产业链代表公司";
+  d.themeGroups = [
+    { title: "一、材料上游（①–④）", color: "#4338ca", segments: d.upstream },
+    { title: "二、材料中游（⑤–⑧）", color: "#4f46e5", segments: d.midstream },
+    { title: "三、材料下游（⑨–⑫）", color: "#6366f1", segments: d.downstream },
+  ];
+})();
 
 // ========== 关键词映射（支持模糊匹配）==========
 const KEYWORD_MAP = {
@@ -3250,6 +3401,22 @@ const KEYWORD_MAP = {
   "mlcc": "MLCC",
   "片式电容": "MLCC",
   "陶瓷电容": "MLCC",
+  "半导体稀缺材料": "半导体稀缺材料",
+  "半导体12大稀缺材料": "半导体稀缺材料",
+  "稀缺材料": "半导体稀缺材料",
+  "磷化铟": "半导体稀缺材料",
+  "光刻胶": "半导体稀缺材料",
+  "碳化硅": "半导体稀缺材料",
+  "ABF载板": "半导体稀缺材料",
+  "ABF": "半导体稀缺材料",
+  "钽电容": "半导体稀缺材料",
+  "电子级硫酸": "半导体稀缺材料",
+  "湿电子化学品": "半导体稀缺材料",
+  "铜箔": "半导体稀缺材料",
+  "电子布": "半导体稀缺材料",
+  "钽靶材": "半导体稀缺材料",
+  "高纯氦气": "半导体稀缺材料",
+  "电子特气": "半导体稀缺材料",
   "瓷介电容": "MLCC",
   "多层陶瓷电容": "MLCC",
   // ---- 多氟多 ----

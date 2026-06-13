@@ -1410,6 +1410,7 @@ transition: opacity 0.2s;
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
           <span class="hotkey-tag" onclick="quickSearch('2026六大主线')">2026六大主线</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
+          <span class="hotkey-tag" style="border-color:rgba(99,102,241,0.4);color:#a5b4fc;background:rgba(99,102,241,0.12)" onclick="openScarceMaterialsPosterPage()">半导体稀缺材料</span>
           <span class="hotkey-tag" onclick="quickSearch('先进封装')">先进封装</span>
           <span class="hotkey-tag" onclick="quickSearch('特斯拉FSD入华')">特斯拉FSD入华</span>
           <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
@@ -1538,6 +1539,10 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
         <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 多氟多 · 光互联 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
+      <div class="order-rank-entry" onclick="openScarceMaterialsPosterPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openScarceMaterialsPosterPage()" style="border-color:rgba(99,102,241,0.35);background:rgba(99,102,241,0.06);margin-top:12px">
+        <div class="order-rank-entry-title" style="color:#a5b4fc">💎 半导体12大稀缺材料</div>
+        <div class="order-rank-entry-desc">磷化铟 · 光刻胶 · 碳化硅 · ABF · 钽电容 · MLCC · 钽靶 · 高纯氦气等 12 节点 — 产业链 + 龙头分享海报，支持下载与复制</div>
+      </div>
       <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="openOrderRankPage()" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06)">
           <div class="welcome-card-icon">🏆</div>
@@ -1550,6 +1555,10 @@ transition: opacity 0.2s;
         <div class="welcome-card" onclick="quickSearch('半导体')">
           <div class="welcome-card-icon">💎</div>
           <div class="welcome-card-name">半导体</div>
+        </div>
+        <div class="welcome-card" onclick="openScarceMaterialsPosterPage()" style="border-color:rgba(99,102,241,0.35);background:rgba(99,102,241,0.06)">
+          <div class="welcome-card-icon">🔬</div>
+          <div class="welcome-card-name">稀缺材料</div>
         </div>
         <div class="welcome-card" onclick="quickSearch('AI算力')">
           <div class="welcome-card-icon">🚀</div>
@@ -2260,6 +2269,10 @@ document.getElementById('clear-cache-btn') && document.getElementById('clear-cac
 
 function openOrderRankPage() {
   window.location.href = 'theme-poster.html#order-ranks';
+}
+
+function openScarceMaterialsPosterPage() {
+  window.location.href = 'semiconductor-scarce-materials-poster.html';
 }
 
 // 页面加载完成后初始化 Select
