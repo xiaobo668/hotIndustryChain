@@ -945,6 +945,27 @@ const SECTOR_DATA = {
       ]
     }
   },
+  "CPO": {
+    name: "共封装光学",
+    color: "#7c3aed",
+    gradient: ["#8b5cf6", "#6d28d9"],
+    description: "基于共封装光学（CPO）产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
+    vanguard: {
+      title: "CPO板块前锋（情绪龙头）",
+      companies: [
+        { name: "罗博特科", highlight: "CPO 光纤耦合封装设备纯度最高，ficonTEC 收购催化强，情绪先锋" },
+        { name: "太辰光", highlight: "MPO/柔性光路弹性标的，CPO 交换机互连预期博弈时率先反应" },
+      ]
+    },
+    center: {
+      title: "CPO板块中军（趋势龙头）",
+      companies: [
+        { name: "天孚通信", highlight: "FAU/光引擎无源器件龙头，CPO 共封装核心供应商，趋势中军" },
+        { name: "中际旭创", highlight: "1.6T/CPO 全球龙头，云厂商共封装光学导入订单可跟踪" },
+        { name: "长电科技", highlight: "先进封测 OSAT 龙头，CPO 共封装代工产能与订单兑现" },
+      ]
+    }
+  },
   "物理AI": {
     name: "物理AI",
     color: "#6366f1",
@@ -1009,9 +1030,9 @@ const SECTOR_DATA = {
     }
   },
   "半导体稀缺材料": {
-    name: "半导体12大稀缺材料",
-    color: "#4338ca",
-    gradient: ["#6366f1", "#312e81"],
+    name: "半导体稀缺材料",
+    color: "#6366f1",
+    gradient: ["#6366f1", "#4338ca"],
     description: "基于12类半导体稀缺材料产业链梳理：前锋（情绪龙头）与中军（趋势龙头）均选自产业链节点、且为非科创板（688/689）标的。",
     vanguard: {
       title: "稀缺材料板块前锋（情绪龙头）",

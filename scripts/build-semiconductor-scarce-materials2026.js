@@ -8,9 +8,9 @@ const path = require('path');
 /** @type {import('../data.js').INDUSTRY_DATA[string]} */
 const CHAIN = {
   key: '半导体稀缺材料',
-  name: '半导体12大稀缺材料',
-  color: '#4338ca',
-  gradient: ['#6366f1', '#312e81'],
+  name: '半导体稀缺材料',
+  color: '#6366f1',
+  gradient: ['#6366f1', '#4338ca'],
   description:
     '梳理光刻机产业链之外的12类高壁垒半导体关键材料：磷化铟、光刻胶、碳化硅、ABF载板、钽电容、高端PCB、电子级硫酸、MLCC、铜箔、电子布、钽靶材、高纯氦气。' +
     '口径：主业或核心收入与对应材料强相关；剔除科创板(688/689)；原同花顺图中有错配标的已替换（见 scripts/verify-semiconductor-scarce-materials2026.js）。' +
@@ -18,7 +18,7 @@ const CHAIN = {
   upstream: [
     {
       material: '磷化铟',
-      name: '① 磷化铟衬底',
+      name: '磷化铟衬底',
       companies: [
         { name: '云南锗业', highlight: '锗/砷化镓/磷化铟衬底，光通信与毫米波雷达用InP外延片国产主力' },
         { name: '有研新材', highlight: '化合物半导体材料与靶材，磷化铟等高端衬底材料布局' },
@@ -30,7 +30,7 @@ const CHAIN = {
     },
     {
       material: '光刻胶',
-      name: '② 光刻胶',
+      name: '光刻胶',
       companies: [
         { name: '南大光电', highlight: 'ArF/KrF光刻胶国产突破，晶圆厂验证与导入加速' },
         { name: '彤程新材', highlight: '参股北京科华，G线/I线及KrF光刻胶树脂与成品布局' },
@@ -42,7 +42,7 @@ const CHAIN = {
     },
     {
       material: '碳化硅',
-      name: '③ 碳化硅',
+      name: '碳化硅',
       companies: [
         { name: '三安光电', highlight: '6英寸SiC衬底+外延+器件IDM，800V快充与电驱核心材料' },
         { name: '晶盛机电', highlight: 'SiC长晶炉与衬底设备，碳化硅扩产直接受益' },
@@ -54,7 +54,7 @@ const CHAIN = {
     },
     {
       material: 'ABF',
-      name: '④ ABF载板/上游',
+      name: 'ABF载板/上游',
       companies: [
         { name: '深南电路', highlight: 'ABF载板国内龙头，CPU/GPU封装基板核心供应商' },
         { name: '兴森科技', highlight: 'IC载板+ABF布局，AI算力封装基板扩产' },
@@ -71,7 +71,7 @@ const CHAIN = {
   midstream: [
     {
       material: '钽电容',
-      name: '⑤ 钽电容',
+      name: '钽电容',
       companies: [
         { name: '宏达电子', highlight: '钽电容军工+民用龙头，AI服务器高可靠电容供应商' },
         { name: '振华科技', highlight: '钽电容与混合集成电路，特种被动元件核心央企平台' },
@@ -83,7 +83,7 @@ const CHAIN = {
     },
     {
       material: '高端PCB',
-      name: '⑥ 高端PCB载板',
+      name: '高端PCB载板',
       companies: [
         { name: '沪电股份', highlight: 'AI服务器/交换机高端PCB龙头，算力硬件核心供应商' },
         { name: '胜宏科技', highlight: 'GPU/AI服务器PCB，高层数HDI与高速板放量' },
@@ -95,7 +95,7 @@ const CHAIN = {
     },
     {
       material: '电子级硫酸',
-      name: '⑦ 电子级硫酸',
+      name: '电子级硫酸',
       companies: [
         { name: '晶瑞电材', highlight: '电子级硫酸/双氧水等湿法清洗液，晶圆厂认证供应商' },
         { name: '江化微', highlight: '湿电子化学品，蚀刻/清洗用电子级酸液' },
@@ -110,7 +110,7 @@ const CHAIN = {
     },
     {
       material: 'MLCC',
-      name: '⑧ MLCC电容',
+      name: 'MLCC电容',
       companies: [
         { name: '风华高科', highlight: '国内MLCC出货龙头，AI/车规高容MLCC紧缺受益' },
         { name: '三环集团', highlight: 'MLCC+粉体垂直一体化，高端被动元件国产替代' },
@@ -124,7 +124,7 @@ const CHAIN = {
   downstream: [
     {
       material: '铜箔',
-      name: '⑨ 铜箔',
+      name: '铜箔',
       companies: [
         { name: '铜冠铜箔', highlight: '锂电铜箔+电子电路铜箔，AI服务器PCB与电池双需求' },
         { name: '逸豪新材', highlight: '替换原图「嘉元科技(688)」：电子电路/锂电铜箔，高端铜箔扩产' },
@@ -136,7 +136,7 @@ const CHAIN = {
     },
     {
       material: '电子布',
-      name: '⑩ 电子布',
+      name: '电子布',
       companies: [
         { name: '中国巨石', highlight: '电子纱/电子布龙头，高端Low-DK电子布供给紧张' },
         { name: '宏和科技', highlight: '超薄电子布与特种玻璃纤维布，高端CCL reinforcing材料' },
@@ -148,7 +148,7 @@ const CHAIN = {
     },
     {
       material: '钽靶材',
-      name: '⑪ 半导体钽靶材',
+      name: '半导体钽靶材',
       companies: [
         { name: '江丰电子', highlight: '替换原图「金钼股份」：高纯溅射靶材龙头，钽/钛/铝靶核心供应商' },
         { name: '阿石创', highlight: '替换原图「洛阳钼业」：PVD靶材，钽/铝/铜等薄膜沉积材料' },
@@ -163,7 +163,7 @@ const CHAIN = {
     },
     {
       material: '高纯氦气',
-      name: '⑫ 高纯氦气',
+      name: '高纯氦气',
       companies: [
         { name: '凯美特气', highlight: '工业气体+稀有气体，半导体刻蚀/清洗用氦气布局' },
         { name: '杭氧股份', highlight: '空分与特种气体龙头，高纯气体供应能力' },

@@ -1,11 +1,11 @@
 /**
- * 半导体12大稀缺材料 — 产业链复验
- * 运行: node scripts/verify-semiconductor-scarce-materials2026.js
+ * 共封装光学（CPO）— 产业链复验
+ * 运行: node scripts/verify-cpo2026.js
  */
 const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
-const { CHAIN, payload } = require('./build-semiconductor-scarce-materials2026');
+const { CHAIN, payload } = require('./build-cpo2026');
 const { isStarBoard } = require('./star-board-names');
 
 const root = path.join(__dirname, '..');
@@ -24,24 +24,15 @@ const ind = sandbox.exports.INDUSTRY_DATA[KEY];
 const sec = sandbox.exports.SECTOR_DATA[KEY];
 
 const STRONG = {
-  '磷化铟衬底': /磷化铟|InP|砷化镓|锗|铟|化合物半导体|光通信.*衬底/i,
-  '光刻胶': /光刻胶|KrF|ArF|G线|I线|树脂|感光/i,
-  '碳化硅': /碳化硅|SiC|衬底|外延|长晶|800V|功率模块/i,
-  'ABF载板/上游': /ABF|载板|封装基板|IC载板|覆铜板|CCL|高速树脂/i,
-  '钽电容': /钽电容|钽粉|钽/i,
-  '高端PCB载板': /PCB|算力|服务器|HDI|高层数|AI.*板/i,
-  '电子级硫酸': /硫酸|湿电子|清洗|蚀刻|氢氟酸|显影|TMAH/i,
-  'MLCC电容': /MLCC|瓷介电容|介质粉|陶瓷电容|被动元件/i,
-  '铜箔': /铜箔/i,
-  '电子布': /电子布|电子纱|玻纤|Low.?DK|玻璃纤维/i,
-  '半导体钽靶材': /靶材|溅射|钽靶|PVD/i,
-  '高纯氦气': /氦|特气|电子气|工业气体|空分/i,
+  '硅光芯片/激光器源': /硅光|激光|DFB|EML|光芯片|III-V|化合物|AWG|分路器/i,
+  '光无源器件/FAU': /FAU|无源|MPO|光引擎|光路|连接器|PLC|耦合/i,
+  'CPO封装/先进封测': /封测|封装|OSAT|2\.5D|Chiplet|WLP|TGV|共封装/i,
+  'CPO光模块/光引擎': /CPO|光模块|1\.6T|800G|硅光|光引擎|共封装/i,
+  '封装设备/基板': /设备|耦合|基板|载板|IC载板|ficonTEC|封装设备/i,
+  '交换机/算力应用': /交换机|服务器|智算|ODM|组网|算力|光互连/i,
 };
 
-const BAD_ORIGINAL = [
-  '锡业股份', '天岳先进', '金钼股份', '洛阳钼业', '兴福电子', '中巨芯',
-  '华特气体', '正帆科技', '嘉元科技', '金宏气体', '生益电子',
-];
+const WEAK_NAMES = ['亨通光电', '中天科技', '源杰科技', '仕佳光子', '长光华芯'];
 
 if (!ind) errors.push(`缺少 INDUSTRY_DATA.${KEY}`);
 if (!sec) errors.push(`缺少 SECTOR_DATA.${KEY}`);
@@ -58,14 +49,14 @@ const segments = [];
         errors.push(`弱相关: [${seg.name}] ${co.name} — ${co.highlight}`);
       }
       if (isStarBoard(co.name)) errors.push(`含科创板: ${co.name}`);
-      if (BAD_ORIGINAL.includes(co.name)) {
-        errors.push(`原图错配标的未替换: ${co.name}`);
+      if (WEAK_NAMES.includes(co.name)) {
+        errors.push(`错配/科创标的: ${co.name}`);
       }
     });
   });
 });
 
-if (segments.length !== 12) errors.push(`产业链节点应为12个，实际${segments.length}`);
+if (segments.length !== 6) errors.push(`产业链节点应为6个，实际${segments.length}`);
 
 payload.issuesFixed.forEach((fix) => {
   const hit = [...chainNames].some((n) => fix.replace && n === fix.replace);
@@ -77,18 +68,16 @@ payload.issuesFixed.forEach((fix) => {
   if (isStarBoard(co.name)) errors.push(`龙头为科创板: ${co.name}`);
 });
 
-['半导体稀缺材料', '稀缺材料', '磷化铟', '光刻胶', 'ABF载板', '钽靶材', '高纯氦气'].forEach((q) => {
+['CPO', 'cpo', '共封装光学', '共封装', '公共光学封装'].forEach((q) => {
   const r = sandbox.exports.searchIndustry(q);
   if (!r || r.name !== CHAIN.name) errors.push(`searchIndustry(${q}) 应指向 ${CHAIN.name}`);
 });
 
-console.log('=== 半导体12大稀缺材料 复验 ===');
+console.log('=== 共封装光学（CPO）复验 ===');
 console.log('节点:', segments.join(' | '));
 console.log('公司数:', chainNames.size);
-console.log('原图修正:', payload.issuesFixed.length, '处');
 if (payload.issuesFixed.length) {
-  console.log('\n已修正:');
-  payload.issuesFixed.forEach((f) => console.log(` - [${f.segment}] ${f.bad} → ${f.replace} (${f.reason})`));
+  console.log('原图修正:', payload.issuesFixed.length, '处');
 }
 if (warnings.length) {
   console.log('\nWARN:');

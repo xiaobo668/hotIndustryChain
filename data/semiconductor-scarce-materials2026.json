@@ -1,111 +1,111 @@
 {
   "key": "半导体稀缺材料",
-  "title": "半导体12大稀缺材料",
+  "title": "半导体稀缺材料",
   "generatedAt": "2026-06",
   "segmentCount": 12,
   "issuesFixed": [
     {
-      "segment": "① 磷化铟衬底",
+      "segment": "磷化铟衬底",
       "bad": "锡业股份",
       "reason": "主业为锡，与磷化铟衬底关联弱",
       "replace": "株冶集团"
     },
     {
-      "segment": "② 光刻胶",
+      "segment": "光刻胶",
       "bad": "晶瑞电材代码300037",
       "reason": "300037为新宙邦",
       "replace": "晶瑞电材300655"
     },
     {
-      "segment": "③ 碳化硅",
+      "segment": "碳化硅",
       "bad": "天岳先进",
       "reason": "科创板688，本项目产业链口径排除",
       "replace": "东尼电子"
     },
     {
-      "segment": "④ ABF载板/上游",
+      "segment": "ABF载板/上游",
       "bad": "崇达技术",
       "reason": "通用PCB为主，ABF纯度不足",
       "replace": "生益科技"
     },
     {
-      "segment": "④ ABF载板/上游",
+      "segment": "ABF载板/上游",
       "bad": "东山精密",
       "reason": "组装/通用PCB，ABF载板关联弱",
       "replace": "东材科技"
     },
     {
-      "segment": "⑤ 钽电容",
+      "segment": "钽电容",
       "bad": "风华高科",
       "reason": "主业MLCC非钽电容",
       "replace": "鸿远电子"
     },
     {
-      "segment": "⑥ 高端PCB载板",
+      "segment": "高端PCB载板",
       "bad": "生益科技",
       "reason": "覆铜板材料商非PCB制造",
       "replace": "广合科技"
     },
     {
-      "segment": "⑦ 电子级硫酸",
+      "segment": "电子级硫酸",
       "bad": "兴福电子",
       "reason": "A股未上市，无法作为链上标的",
       "replace": "格林达"
     },
     {
-      "segment": "⑦ 电子级硫酸",
+      "segment": "电子级硫酸",
       "bad": "中巨芯",
       "reason": "科创板688",
       "replace": "巨化股份"
     },
     {
-      "segment": "⑨ 铜箔",
+      "segment": "铜箔",
       "bad": "嘉元科技",
       "reason": "科创板688",
       "replace": "逸豪新材"
     },
     {
-      "segment": "⑪ 半导体钽靶材",
+      "segment": "半导体钽靶材",
       "bad": "金钼股份",
       "reason": "主业钼靶/钼化工，非钽靶",
       "replace": "江丰电子"
     },
     {
-      "segment": "⑪ 半导体钽靶材",
+      "segment": "半导体钽靶材",
       "bad": "洛阳钼业",
       "reason": "矿业公司，非半导体靶材制造商",
       "replace": "阿石创"
     },
     {
-      "segment": "⑫ 高纯氦气",
+      "segment": "高纯氦气",
       "bad": "华特气体",
       "reason": "科创板688",
       "replace": "雅克科技"
     },
     {
-      "segment": "⑫ 高纯氦气",
+      "segment": "高纯氦气",
       "bad": "金宏气体",
       "reason": "科创板688",
       "replace": "雅克科技"
     },
     {
-      "segment": "⑫ 高纯氦气",
+      "segment": "高纯氦气",
       "bad": "正帆科技",
       "reason": "科创板688",
       "replace": "侨源股份"
     }
   ],
   "chain": {
-    "name": "半导体12大稀缺材料",
-    "color": "#4338ca",
+    "name": "半导体稀缺材料",
+    "color": "#6366f1",
     "gradient": [
       "#6366f1",
-      "#312e81"
+      "#4338ca"
     ],
     "description": "梳理光刻机产业链之外的12类高壁垒半导体关键材料：磷化铟、光刻胶、碳化硅、ABF载板、钽电容、高端PCB、电子级硫酸、MLCC、铜箔、电子布、钽靶材、高纯氦气。口径：主业或核心收入与对应材料强相关；剔除科创板(688/689)；原同花顺图中有错配标的已替换（见 scripts/verify-semiconductor-scarce-materials2026.js）。涨价/缺口描述来自自媒体梳理，仅供产业链学习，不构成投资建议。",
     "upstream": [
       {
-        "name": "① 磷化铟衬底",
+        "name": "磷化铟衬底",
         "companies": [
           {
             "name": "云南锗业",
@@ -130,7 +130,7 @@
         ]
       },
       {
-        "name": "② 光刻胶",
+        "name": "光刻胶",
         "companies": [
           {
             "name": "南大光电",
@@ -155,7 +155,7 @@
         ]
       },
       {
-        "name": "③ 碳化硅",
+        "name": "碳化硅",
         "companies": [
           {
             "name": "三安光电",
@@ -180,7 +180,7 @@
         ]
       },
       {
-        "name": "④ ABF载板/上游",
+        "name": "ABF载板/上游",
         "companies": [
           {
             "name": "深南电路",
@@ -207,7 +207,7 @@
     ],
     "midstream": [
       {
-        "name": "⑤ 钽电容",
+        "name": "钽电容",
         "companies": [
           {
             "name": "宏达电子",
@@ -232,7 +232,7 @@
         ]
       },
       {
-        "name": "⑥ 高端PCB载板",
+        "name": "高端PCB载板",
         "companies": [
           {
             "name": "沪电股份",
@@ -257,7 +257,7 @@
         ]
       },
       {
-        "name": "⑦ 电子级硫酸",
+        "name": "电子级硫酸",
         "companies": [
           {
             "name": "晶瑞电材",
@@ -282,7 +282,7 @@
         ]
       },
       {
-        "name": "⑧ MLCC电容",
+        "name": "MLCC电容",
         "companies": [
           {
             "name": "风华高科",
@@ -309,7 +309,7 @@
     ],
     "downstream": [
       {
-        "name": "⑨ 铜箔",
+        "name": "铜箔",
         "companies": [
           {
             "name": "铜冠铜箔",
@@ -334,7 +334,7 @@
         ]
       },
       {
-        "name": "⑩ 电子布",
+        "name": "电子布",
         "companies": [
           {
             "name": "中国巨石",
@@ -359,7 +359,7 @@
         ]
       },
       {
-        "name": "⑪ 半导体钽靶材",
+        "name": "半导体钽靶材",
         "companies": [
           {
             "name": "江丰电子",
@@ -384,7 +384,7 @@
         ]
       },
       {
-        "name": "⑫ 高纯氦气",
+        "name": "高纯氦气",
         "companies": [
           {
             "name": "凯美特气",
