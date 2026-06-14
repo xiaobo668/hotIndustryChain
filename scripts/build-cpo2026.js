@@ -118,6 +118,7 @@ const js = `/** 共封装光学（CPO）— 由 scripts/build-cpo2026.js 生成 
 fs.writeFileSync(path.join(outDir, 'cpo2026.js'), js, 'utf8');
 
 console.log('OK -> data/cpo2026.json');
+console.log('提示: 运行 node scripts/build-all-analysis-docs.js 生成/更新分析过程文档');
 console.log('6 segments, issues fixed:', payload.issuesFixed.length);
 
 module.exports = { CHAIN, toIndustryDataEntry, payload };

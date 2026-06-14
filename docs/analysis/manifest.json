@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "fiber-concept2026",
+    "title": "光纤概念2026",
+    "generatedAt": "2026-06",
+    "chainKey": "光纤概念",
+    "md": "docs/analysis/fiber-concept2026.md",
+    "html": "docs/analysis/fiber-concept2026.html",
+    "hasOrderRank": true,
+    "verifyScripts": [
+      "verify-fiber-concept2026.js",
+      "verify-order-rank-fiber-concept2026.js"
+    ]
+  },
+  {
+    "slug": "cpo2026",
+    "title": "共封装光学（CPO）2026",
+    "generatedAt": "2026-06",
+    "chainKey": "CPO",
+    "md": "docs/analysis/cpo2026.md",
+    "html": "docs/analysis/cpo2026.html",
+    "hasOrderRank": false,
+    "verifyScripts": [
+      "verify-cpo2026.js"
+    ]
+  },
+  {
+    "slug": "semiconductor-scarce-materials2026",
+    "title": "半导体12大稀缺材料2026",
+    "generatedAt": "2026-06",
+    "chainKey": "半导体稀缺材料",
+    "md": "docs/analysis/semiconductor-scarce-materials2026.md",
+    "html": "docs/analysis/semiconductor-scarce-materials2026.html",
+    "hasOrderRank": false,
+    "verifyScripts": [
+      "verify-semiconductor-scarce-materials2026.js"
+    ]
+  }
+]

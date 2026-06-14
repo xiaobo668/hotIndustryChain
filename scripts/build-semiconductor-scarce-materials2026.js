@@ -217,6 +217,7 @@ const js = `/** 半导体12大稀缺材料 — 由 scripts/build-semiconductor-s
 fs.writeFileSync(path.join(outDir, 'semiconductor-scarce-materials2026.js'), js, 'utf8');
 
 console.log('OK -> data/semiconductor-scarce-materials2026.json');
+console.log('提示: 运行 node scripts/build-all-analysis-docs.js 生成/更新分析过程文档');
 console.log('12 segments, issues fixed:', payload.issuesFixed.length);
 
 module.exports = { CHAIN, toIndustryDataEntry, payload };

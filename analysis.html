@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产业链分析过程文档</title>
+  <style>
+    :root { --bg:#0f0f1a; --text:#e8e8f0; --muted:#8888aa; --accent:#6c63ff; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"PingFang SC",sans-serif; background:var(--bg); color:var(--text); padding:24px; }
+    .wrap { max-width:720px; margin:0 auto; }
+    h1 { font-size:22px; margin-bottom:8px; }
+    .sub { color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:24px; }
+    .card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
+    .card h2 { font-size:17px; margin-bottom:6px; }
+    .card h2 a { color:#c4b5fd; text-decoration:none; }
+    .card h2 a:hover { text-decoration:underline; }
+    .meta, .verify { font-size:12px; color:var(--muted); margin-top:6px; }
+    .links { display:flex; gap:14px; margin-top:10px; font-size:13px; }
+    a { color:var(--accent); }
+    code { background:rgba(255,255,255,0.08); padding:1px 5px; border-radius:4px; font-size:11px; }
+    .back { display:inline-block; margin-bottom:16px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链分析首页</a>
+    <h1>📋 产业链分析过程文档</h1>
+    <p class="sub">每次发布新产业链/订单榜后，由构建脚本自动生成分析过程、来源核验与复验说明，便于发布后回溯查阅。</p>
+    
+    <article class="card">
+      <h2><a href="docs/analysis/fiber-concept2026.html">光纤概念2026</a></h2>
+      <p class="meta">2026-06 · 含订单榜核验 · 链键：<code>光纤概念</code></p>
+      <div class="links">
+        <a href="docs/analysis/fiber-concept2026.html">📄 在线阅读</a>
+        <a href="docs/analysis/fiber-concept2026.md">📝 Markdown</a>
+      </div>
+      <p class="verify">复验：<code>verify-fiber-concept2026.js</code> · <code>verify-order-rank-fiber-concept2026.js</code></p>
+    </article>
+
+    <article class="card">
+      <h2><a href="docs/analysis/cpo2026.html">共封装光学（CPO）2026</a></h2>
+      <p class="meta">2026-06 · 产业链梳理 · 链键：<code>CPO</code></p>
+      <div class="links">
+        <a href="docs/analysis/cpo2026.html">📄 在线阅读</a>
+        <a href="docs/analysis/cpo2026.md">📝 Markdown</a>
+      </div>
+      <p class="verify">复验：<code>verify-cpo2026.js</code></p>
+    </article>
+
+    <article class="card">
+      <h2><a href="docs/analysis/semiconductor-scarce-materials2026.html">半导体12大稀缺材料2026</a></h2>
+      <p class="meta">2026-06 · 产业链梳理 · 链键：<code>半导体稀缺材料</code></p>
+      <div class="links">
+        <a href="docs/analysis/semiconductor-scarce-materials2026.html">📄 在线阅读</a>
+        <a href="docs/analysis/semiconductor-scarce-materials2026.md">📝 Markdown</a>
+      </div>
+      <p class="verify">复验：<code>verify-semiconductor-scarce-materials2026.js</code></p>
+    </article>
+  </div>
+</body>
+</html>

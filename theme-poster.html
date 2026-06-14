@@ -124,6 +124,15 @@
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-optical-interconnect-canvas')">📋 复制</button>
       </div>
     </div>
+    <h1 style="margin-top:36px;font-size:20px">光纤概念 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-6 名为公开报道2026年光纤/海缆/特种光缆在手或预计订单；7-8 为媒体估算订单；9-10 为2025年报营收作规模参考，已通过 scripts/verify-order-rank-fiber-concept2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-fiber-concept-wrap">
+      <div id="order-rank-fiber-concept-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-fiber-concept-canvas','光纤概念订单榜-2026.png')">⬇️ 下载光纤概念订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-fiber-concept-canvas')">📋 复制</button>
+      </div>
+    </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
@@ -133,6 +142,8 @@
   <script src="data/order-rank-liquid-cooling2026.js"></script>
   <script src="data/order-rank-mlcc2026.js"></script>
   <script src="data/order-rank-duofuduo2026.js"></script>
+  <script src="data/order-rank-optical-interconnect2026.js"></script>
+  <script src="data/order-rank-fiber-concept2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
   <script>
@@ -145,6 +156,7 @@
       initOrderRankPosterPage(ORDER_RANK_MLCC2026, 'order-rank-mlcc-pages', 'order-rank-mlcc-canvas');
       initOrderRankPosterPage(ORDER_RANK_DUOFUDUO2026, 'order-rank-duofuduo-pages', 'order-rank-duofuduo-canvas');
       initOrderRankPosterPage(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas');
+      initOrderRankPosterPage(ORDER_RANK_FIBER_CONCEPT2026, 'order-rank-fiber-concept-pages', 'order-rank-fiber-concept-canvas');
     });
   </script>
 </body>

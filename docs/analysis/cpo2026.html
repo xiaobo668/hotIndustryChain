@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>共封装光学（CPO）2026 · 分析过程</title>
+  <style>
+    :root { --bg:#0f0f1a; --text:#e8e8f0; --muted:#8888aa; --accent:#6c63ff; --border:rgba(255,255,255,0.1); }
+    * { box-sizing:border-box; }
+    body { font-family:"PingFang SC",sans-serif; background:var(--bg); color:var(--text); line-height:1.7; margin:0; padding:24px; }
+    .wrap { max-width:920px; margin:0 auto; }
+    a { color:var(--accent); }
+    h1 { font-size:24px; margin:0 0 16px; }
+    h2 { font-size:18px; margin:28px 0 12px; color:#c4b5fd; border-left:3px solid var(--accent); padding-left:10px; }
+    h3 { font-size:15px; margin:20px 0 8px; }
+    blockquote { margin:12px 0; padding:10px 14px; border-left:3px solid var(--accent); background:rgba(108,99,255,0.08); color:var(--muted); font-size:13px; }
+    table { width:100%; border-collapse:collapse; font-size:12px; margin:12px 0; }
+    th,td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:rgba(108,99,255,0.15); }
+    tr:nth-child(even) td { background:rgba(255,255,255,0.02); }
+    pre { background:#1a1a2e; padding:14px; border-radius:8px; overflow-x:auto; font-size:12px; }
+    code { background:rgba(255,255,255,0.08); padding:1px 5px; border-radius:4px; font-size:12px; }
+    ul { padding-left:20px; }
+    li { margin:6px 0; }
+    hr { border:none; border-top:1px solid var(--border); margin:24px 0; }
+    .footer-note { color:var(--muted); font-size:12px; }
+    .nav { margin-bottom:20px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="../../analysis.html">← 分析文档目录</a> · <a href="../../index.html">产业链首页</a></div>
+    <h1>共封装光学（CPO）2026 · 分析过程文档</h1>
+<blockquote>生成时间：2026-06 · 文档 ID：<code>cpo2026</code></blockquote>
+<blockquote>免责声明：以下内容仅供产业链学习研究，不构成投资建议。</blockquote>
+<h2>一、分析概述</h2>
+<p>共封装光学（Co-Packaged Optics）将交换芯片与光引擎封装级集成，是 1.6T/3.2T 智算互连关键方案。产业链按硅光芯片→FAU 无源器件→先进封测→CPO 模块→设备基板→交换机落地六节点梳理。</p>
+<h2>二、分析流程</h2>
+<p>1. 明确主题边界与 A 股口径（剔除科创板 688/689，非上市标的不入链）。</p>
+<p>2. 按上/中/下游拆分节点，每节点选取 3–5 家主业强相关公司，撰写 highlight 说明关联逻辑。</p>
+<p>3. 对照同花顺/自媒体原图或公开报道，登记错配标的并替换，写入 issuesFixed。</p>
+<p>4. 编写 verify-*.js 复验脚本：节点数、弱相关 regex、龙头是否在链、关键词映射。</p>
+<p>5. 运行 build + verify 脚本，PASS 后写入 data.js / sector-data.js 并生成本分析文档。</p>
+<h2>三、产业链梳理</h2>
+<h3>3.1 结构说明</h3>
+<p>共 <strong>6</strong> 个细分节点（上/中/下游），口径：CPO相关 A 股标的，剔除科创板 688/689。</p>
+<h3>3.2 节点与公司</h3>
+<table><thead><tr><th>层次</th><th>节点</th><th>公司</th><th>核心逻辑</th></tr></thead><tbody>
+<tr><td>上游</td><td>硅光芯片/激光器源</td><td>光迅科技</td><td>25G/100G DFB/EML 光芯片自研，硅光+CPO 全链条布局</td></tr>
+<tr><td>上游</td><td>硅光芯片/激光器源</td><td>华工科技</td><td>DFB 激光芯片+硅光垂直整合，CPO 光引擎核心能力</td></tr>
+<tr><td>上游</td><td>硅光芯片/激光器源</td><td>三安光电</td><td>III-V 化合物激光器外延，硅光/CPO 上游光源材料</td></tr>
+<tr><td>上游</td><td>硅光芯片/激光器源</td><td>博创科技</td><td>硅光分路器/AWG 与 CPO 无源集成器件，数据中心互连</td></tr>
+<tr><td>上游</td><td>光无源器件/FAU</td><td>天孚通信</td><td>FAU/光引擎无源器件龙头，CPO 共封装核心供应商</td></tr>
+<tr><td>上游</td><td>光无源器件/FAU</td><td>太辰光</td><td>MPO 连接器与柔性光路，CPO 交换机高密度光互连</td></tr>
+<tr><td>上游</td><td>光无源器件/FAU</td><td>博创科技</td><td>PLC 分路器与硅光无源器件，CPO 光路集成配套</td></tr>
+<tr><td>中游</td><td>CPO封装/先进封测</td><td>长电科技</td><td>2.5D/Chiplet 先进封测龙头，CPO 共封装代工核心 OSAT</td></tr>
+<tr><td>中游</td><td>CPO封装/先进封测</td><td>通富微电</td><td>AMD 等大客户封测伙伴，先进封装产能绑定 CPO 导入</td></tr>
+<tr><td>中游</td><td>CPO封装/先进封测</td><td>晶方科技</td><td>WLP/TGV 玻璃基板封装，CPO 近芯片光学封装技术</td></tr>
+<tr><td>中游</td><td>CPO封装/先进封测</td><td>华天科技</td><td>先进封测扩产，Chiplet/CPO 后道封测能力</td></tr>
+<tr><td>中游</td><td>CPO光模块/光引擎</td><td>中际旭创</td><td>1.6T/CPO 全球龙头，共封装光学方案领先云厂商导入</td></tr>
+<tr><td>中游</td><td>CPO光模块/光引擎</td><td>新易盛</td><td>800G/1.6T 硅光模块，CPO 样品与北美大客户验证</td></tr>
+<tr><td>中游</td><td>CPO光模块/光引擎</td><td>剑桥科技</td><td>硅光 CPO 模块量产，800G/1.6T 产能满负荷</td></tr>
+<tr><td>中游</td><td>CPO光模块/光引擎</td><td>光迅科技</td><td>CPO 光模块批量交付能力，芯片到模块垂直整合</td></tr>
+<tr><td>下游</td><td>封装设备/基板</td><td>罗博特科</td><td>收购 ficonTEC，CPO 光纤耦合与自动化封装设备龙头</td></tr>
+<tr><td>下游</td><td>封装设备/基板</td><td>深南电路</td><td>封装基板/类载板，CPO 交换机与 ASIC 基板核心</td></tr>
+<tr><td>下游</td><td>封装设备/基板</td><td>兴森科技</td><td>IC 载板扩产，CPO 共封装基板与测试板配套</td></tr>
+<tr><td>下游</td><td>交换机/算力应用</td><td>中兴通讯</td><td>智算中心交换机+CPO 组网方案，大集群光互连核心</td></tr>
+<tr><td>下游</td><td>交换机/算力应用</td><td>烽火通信</td><td>光传输与交换设备，CPO 交换机系统级落地</td></tr>
+<tr><td>下游</td><td>交换机/算力应用</td><td>工业富联</td><td>AI 服务器/交换机 ODM，CPO 整机代工间接受益</td></tr>
+<tr><td>下游</td><td>交换机/算力应用</td><td>浪潮信息</td><td>AI 服务器出货龙头，高密度 GPU 集群 CPO 光互连需求</td></tr>
+</tbody></table>
+<h2>四、板块龙头（前锋 / 中军）</h2>
+<h3>前锋（情绪龙头）</h3>
+<ul>
+<li><strong>罗博特科</strong>：CPO 光纤耦合封装设备纯度最高，ficonTEC 收购催化强，情绪先锋</li>
+<li><strong>太辰光</strong>：MPO/柔性光路弹性标的，CPO 交换机互连预期博弈时率先反应</li>
+</ul>
+<h3>中军（趋势龙头）</h3>
+<ul>
+<li><strong>天孚通信</strong>：FAU/光引擎无源器件龙头，CPO 共封装核心供应商，趋势中军</li>
+<li><strong>中际旭创</strong>：1.6T/CPO 全球龙头，云厂商共封装光学导入订单可跟踪</li>
+<li><strong>长电科技</strong>：先进封测 OSAT 龙头，CPO 共封装代工产能与订单兑现</li>
+</ul>
+<h2>五、复验脚本</h2>
+<pre><code>cd hotIndustryChain
+node scripts/verify-cpo2026.js
+</code></pre>
+<h2>风险提示与数据局限</h2>
+<ul>
+<li>1–6 名订单榜多为<strong>媒体/行业梳理口径</strong>，与公司公告可能存在差异；已尽量登记 <code>officialCross</code> 交叉验证项。</li>
+<li>7–10 名若无在手订单披露，以 <strong>2025 年报营收</strong>作规模参考，不可与在手订单直接比较。</li>
+<li>部分公司为平台型（跨多个节点出现），highlight 已标注主业关联度。</li>
+<li>CPO 关键词已从「光互联」独立成链，与 800G 光模块订单榜区分。</li>
+</ul>
+<hr>
+<p class="footer-note">由 scripts/lib/analysis-report.js 自动生成 · 与 data.js / sector-data.js 同步</p>
+
+  </div>
+</body>
+</html>

@@ -1424,6 +1424,7 @@ transition: opacity 0.2s;
           <span class="hotkey-tag" onclick="quickSearch('创新药')">创新药</span>
           <span class="hotkey-tag" onclick="quickSearch('PCB')">PCB</span>
           <span class="hotkey-tag" onclick="quickSearch('光学链接')">光学链接</span>
+          <span class="hotkey-tag" onclick="quickSearch('光纤概念')">光纤概念</span>
           <span class="hotkey-tag" onclick="quickSearch('CPO')">CPO</span>
           <span class="hotkey-tag" onclick="quickSearch('物理AI')">物理AI</span>
           <span class="hotkey-tag" onclick="quickSearch('量子科技')">量子科技</span>
@@ -1538,7 +1539,11 @@ transition: opacity 0.2s;
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
-        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 多氟多 · 光互联 — 查看 Top10 订单规模海报，支持下载与复制</div>
+        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 多氟多 · 光互联 · 光纤概念 — 查看 Top10 订单规模海报，支持下载与复制</div>
+      </div>
+      <div class="order-rank-entry" onclick="window.location.href='analysis.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='analysis.html'" style="margin-top:12px;border-color:rgba(108,99,255,0.35);background:rgba(108,99,255,0.06)">
+        <div class="order-rank-entry-title" style="color:#c4b5fd">📋 分析过程文档</div>
+        <div class="order-rank-entry-desc">产业链梳理流程、来源核验、错配修正与复验脚本说明 — 发布后可持续查阅</div>
       </div>
       <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="openOrderRankPage()" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06)">
@@ -1860,6 +1865,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-optical-interconnect-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-fiber-concept-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-fiber-concept-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-fiber-concept-canvas','光纤概念订单榜-2026.png')">⬇️ 下载光纤概念订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-fiber-concept-canvas')">📋 复制</button>
+        </div>
+      </div>
     </div>
 
     <!-- 龙头一览视图 -->
@@ -2038,6 +2050,7 @@ transition: opacity 0.2s;
 <script src="data/order-rank-mlcc2026.js"></script>
 <script src="data/order-rank-duofuduo2026.js"></script>
 <script src="data/order-rank-optical-interconnect2026.js"></script>
+<script src="data/order-rank-fiber-concept2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
 
