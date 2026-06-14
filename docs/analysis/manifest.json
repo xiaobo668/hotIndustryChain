@@ -25,6 +25,18 @@
     ]
   },
   {
+    "slug": "optical-interconnect2026",
+    "title": "光互联2026",
+    "generatedAt": "2026-06",
+    "chainKey": "光互联",
+    "md": "docs/analysis/optical-interconnect2026.md",
+    "html": "docs/analysis/optical-interconnect2026.html",
+    "hasOrderRank": true,
+    "verifyScripts": [
+      "verify-order-rank-optical-interconnect2026.js"
+    ]
+  },
+  {
     "slug": "semiconductor-scarce-materials2026",
     "title": "半导体12大稀缺材料2026",
     "generatedAt": "2026-06",

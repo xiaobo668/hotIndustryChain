@@ -45,6 +45,25 @@
       border: 1px solid rgba(255,255,255,0.12);
     }
     a.back { color: var(--accent); font-size: 13px; display: inline-block; margin-bottom: 16px; }
+    .order-rank-sources-panel {
+      max-width: 560px; width: 100%; margin: 16px auto 0; padding: 16px 18px;
+      background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(8, 145, 178, 0.35);
+      border-radius: 12px; text-align: left;
+    }
+    .order-rank-sources-panel h3 { font-size: 14px; font-weight: 700; color: #67e8f9; margin: 0 0 6px; }
+    .order-rank-sources-panel .sources-sub { font-size: 12px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }
+    .order-rank-sources-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-bottom: 12px; }
+    .order-rank-sources-table th, .order-rank-sources-table td {
+      border: 1px solid rgba(255,255,255,0.08); padding: 6px 8px; vertical-align: top; text-align: left;
+    }
+    .order-rank-sources-table th { background: rgba(8,145,178,0.15); color: #a5f3fc; font-weight: 600; }
+    .order-rank-sources-table a { color: #67e8f9; word-break: break-all; }
+    .order-rank-sources-table .type-official { color: #34d399; }
+    .order-rank-sources-table .type-media { color: #fbbf24; }
+    .order-rank-sources-links { font-size: 12px; line-height: 1.7; }
+    .order-rank-sources-links a { color: #67e8f9; }
+    .order-rank-sources-footer { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+    .order-rank-sources-panel .doc-link { display: inline-block; margin-top: 8px; font-size: 12px; color: #c4b5fd; }
   </style>
 </head>
 <body>
@@ -122,7 +141,9 @@
       <div class="actions">
         <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-optical-interconnect-canvas','光互联订单榜-2026.png')">⬇️ 下载光互联订单榜</button>
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-optical-interconnect-canvas')">📋 复制</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankSourcesText('order-rank-optical-interconnect-sources')">📎 复制来源说明</button>
       </div>
+      <div id="order-rank-optical-interconnect-sources" class="order-rank-sources-panel"></div>
     </div>
     <h1 style="margin-top:36px;font-size:20px">光纤概念 · 2026年订单规模 Top10</h1>
     <p class="sub">1-6 名为公开报道2026年光纤/海缆/特种光缆在手或预计订单；7-8 为媒体估算订单；9-10 为2025年报营收作规模参考，已通过 scripts/verify-order-rank-fiber-concept2026.js 复验。</p>
@@ -156,6 +177,7 @@
       initOrderRankPosterPage(ORDER_RANK_MLCC2026, 'order-rank-mlcc-pages', 'order-rank-mlcc-canvas');
       initOrderRankPosterPage(ORDER_RANK_DUOFUDUO2026, 'order-rank-duofuduo-pages', 'order-rank-duofuduo-canvas');
       initOrderRankPosterPage(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas');
+      renderOrderRankSourcesPanel(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-sources', { analysisDoc: 'docs/analysis/optical-interconnect2026.html' });
       initOrderRankPosterPage(ORDER_RANK_FIBER_CONCEPT2026, 'order-rank-fiber-concept-pages', 'order-rank-fiber-concept-canvas');
     });
   </script>

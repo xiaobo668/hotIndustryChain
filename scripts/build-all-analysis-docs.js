@@ -2,12 +2,38 @@
  * 汇总生成所有产业链分析过程文档 + 目录页
  * 运行: node scripts/build-all-analysis-docs.js
  */
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
 const { writeAnalysisReport, writeAnalysisIndex } = require('./lib/analysis-report');
 
 const { CHAIN: FIBER_CHAIN } = require('./build-fiber-concept2026');
 const { payload: FIBER_ORDER } = require('./build-order-rank-fiber-concept2026');
 const { CHAIN: CPO_CHAIN } = require('./build-cpo2026');
 const { CHAIN: SCARCE_CHAIN, payload: SCARCE_PAYLOAD } = require('./build-semiconductor-scarce-materials2026');
+const { payload: OPTICAL_ORDER } = require('./build-order-rank-optical-interconnect2026');
+
+function loadIndustryChainFromDataJs(key) {
+  let code = fs.readFileSync(path.join(__dirname, '..', 'data.js'), 'utf8');
+  code = code
+    .replace(/\bconst INDUSTRY_DATA\b/, 'var INDUSTRY_DATA')
+    .replace(/\bconst KEYWORD_MAP\b/, 'var KEYWORD_MAP');
+  const INDUSTRY_DATA = vm.runInNewContext(`${code}\nINDUSTRY_DATA;`);
+  const d = INDUSTRY_DATA[key];
+  if (!d) throw new Error(`INDUSTRY_DATA 缺少 ${key}`);
+  const withReplaced = (segments) =>
+    (segments || []).map((seg) => ({ ...seg, replaced: seg.replaced || [] }));
+  return {
+    key,
+    name: d.name,
+    description: d.description,
+    upstream: withReplaced(d.upstream),
+    midstream: withReplaced(d.midstream),
+    downstream: withReplaced(d.downstream),
+  };
+}
+
+const OPTICAL_CHAIN = loadIndustryChainFromDataJs('光互联');
 
 const SECTOR = {
   光纤概念: {
@@ -52,6 +78,21 @@ const SECTOR = {
         { name: '南大光电', highlight: 'ArF/KrF光刻胶国产龙头，晶圆厂导入趋势明确' },
         { name: '深南电路', highlight: 'ABF载板+高端PCB双龙头，算力封装基板趋势中军' },
         { name: '风华高科', highlight: 'MLCC制造龙头，AI/车规被动元件紧缺，机构趋势配置' },
+      ],
+    },
+  },
+  光互联: {
+    vanguard: {
+      companies: [
+        { name: '剑桥科技', highlight: '800G/1.6T硅光模块放量，Q1净利高增，情绪弹性标的' },
+        { name: '联特科技', highlight: '800G/1.6T高速光模块，订单排至2027，小盘博弈强' },
+      ],
+    },
+    center: {
+      companies: [
+        { name: '中际旭创', highlight: '800G/1.6T全球龙头，云厂商核心供应商，趋势中军' },
+        { name: '新易盛', highlight: '数通光模块高增，北美订单占比超94%，机构趋势配置' },
+        { name: '天孚通信', highlight: 'FAU/CPO无源器件龙头，英伟达供应链，毛利率领先' },
       ],
     },
   },
@@ -100,6 +141,27 @@ entries.push(
     sector: SECTOR.CPO,
     verifyScripts: ['verify-cpo2026.js'],
     extraWarnings: ['CPO 关键词已从「光互联」独立成链，与 800G 光模块订单榜区分。'],
+  }).manifestEntry
+);
+
+entries.push(
+  writeAnalysisReport({
+    slug: 'optical-interconnect2026',
+    title: '光互联2026',
+    generatedAt: '2026-06',
+    summary:
+      '光互联是 AI 智算集群东西向带宽核心，涵盖 800G/1.6T 光模块、硅光/CPO 光引擎与 MPO/AOC 器件。产业链按光芯片→光器件封装→数通光模块→光纤光缆/CPO→智算落地五节点梳理，并编制 2026 订单 Top10。订单 1–6 位来自东方财富/新浪 2026-04 光模块订单梳理，已与业绩说明会/一季报合同负债等交叉登记。',
+    methodology: COMMON_METHODOLOGY,
+    chain: OPTICAL_CHAIN,
+    orderRank: OPTICAL_ORDER,
+    sector: SECTOR['光互联'],
+    verifyScripts: ['verify-order-rank-optical-interconnect2026.js'],
+    extraWarnings: [
+      '1–6 位为媒体报道在手/预计订单口径，公司多数未单独披露光模块在手订单总额。',
+      '剑桥科技第 7 位以 2025 年报营收作规模参考，非在手订单。',
+      '光迅科技：媒体约 65 亿 vs 一季报合同负债 10.95 亿，口径差异已在 verify 中登记。',
+      'CPO 已从「光互联」独立成链，本榜聚焦 800G/1.6T 数通光模块与光器件订单。',
+    ],
   }).manifestEntry
 );
 

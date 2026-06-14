@@ -201,6 +201,74 @@ function initOrderRankPosterPage(data, containerId, canvasId) {
   if (data) renderOrderRankPoster(data, containerId, canvasId);
 }
 
+/** 订单榜底部：可信信息来源（视频号/平台审核补充材料） */
+function renderOrderRankSourcesPanel(data, sourcesElId, options) {
+  const el = document.getElementById(sourcesElId);
+  if (!el || !data || !data.companies?.length) {
+    if (el) el.style.display = 'none';
+    return;
+  }
+
+  const opts = options || {};
+  const docHref = opts.analysisDoc || '';
+  const uniqueUrls = [];
+  const seen = new Set();
+  data.companies.forEach((co) => {
+    const url = co.verify?.sourceUrl;
+    if (url && !seen.has(url)) {
+      seen.add(url);
+      uniqueUrls.push({ label: co.verify.source || co.name, url });
+    }
+  });
+
+  const rows = data.companies
+    .map((co) => {
+      const v = co.verify || {};
+      const typeCls = v.sourceType === 'official' ? 'type-official' : 'type-media';
+      const typeLabel = v.sourceType === 'official' ? '公告/年报' : '媒体报道';
+      const link = v.sourceUrl
+        ? `<a href="${v.sourceUrl}" target="_blank" rel="noopener">${v.sourceUrl.replace(/^https?:\/\//, '').slice(0, 48)}…</a>`
+        : '—';
+      const cross = v.officialCross?.ref ? `<br><span style="color:#94a3b8">${v.officialCross.ref}</span>` : '';
+      return `<tr>
+        <td>${co.rank}</td>
+        <td><strong>${co.name}</strong><br>${co.orderLabel || ''}</td>
+        <td class="${typeCls}">${typeLabel}</td>
+        <td>${v.source || '—'}<br>${v.sourceDate || ''}${cross}</td>
+        <td>${link}</td>
+        <td>${v.note || '—'}</td>
+      </tr>`;
+    })
+    .join('');
+
+  el.innerHTML = `
+    <h3>📎 可信信息来源 · ${data.key || ''}订单榜</h3>
+    <p class="sources-sub">${data.subtitle || ''}。以下内容供视频号/平台「补充可信信息来源」使用；1–6 位为媒体报道口径，已与公告/业绩说明会等交叉登记。</p>
+    <table class="order-rank-sources-table">
+      <thead><tr>
+        <th>#</th><th>公司</th><th>类型</th><th>来源</th><th>链接</th><th>备注</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="order-rank-sources-links"><strong>主要来源链接：</strong><br>
+      ${uniqueUrls.map((u) => `· <a href="${u.url}" target="_blank" rel="noopener">${u.label}</a>`).join('<br>')}
+    </div>
+    ${docHref ? `<a class="doc-link" href="${docHref}" target="_blank" rel="noopener">📋 查看完整分析过程文档 →</a>` : ''}
+    <p class="order-rank-sources-footer">免责声明：订单规模为公开报道或年报营收参考，不构成投资建议。内容含 AI 辅助整理，请以公司公告为准。</p>
+  `;
+  el.style.display = '';
+}
+
+function copyOrderRankSourcesText(sourcesElId) {
+  const el = document.getElementById(sourcesElId);
+  if (!el) return;
+  const text = el.innerText || el.textContent;
+  navigator.clipboard.writeText(text).then(
+    () => alert('✅ 来源说明已复制，可粘贴至视频号补充材料'),
+    () => alert('复制失败，请手动选择文本复制')
+  );
+}
+
 /** 各产业链订单榜配置（key 与 data/*.js 中 payload.key 一致） */
 const ORDER_RANK_POSTER_CONFIG = [
   { key: '算力租赁', wrapId: 'order-rank-computing-wrap', pagesId: 'order-rank-computing-pages', canvasId: 'order-rank-computing-canvas' },
@@ -209,7 +277,7 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '液冷', wrapId: 'order-rank-liquid-cooling-wrap', pagesId: 'order-rank-liquid-cooling-pages', canvasId: 'order-rank-liquid-cooling-canvas' },
   { key: 'MLCC', wrapId: 'order-rank-mlcc-wrap', pagesId: 'order-rank-mlcc-pages', canvasId: 'order-rank-mlcc-canvas' },
   { key: '多氟多', wrapId: 'order-rank-duofuduo-wrap', pagesId: 'order-rank-duofuduo-pages', canvasId: 'order-rank-duofuduo-canvas' },
-  { key: '光互联', wrapId: 'order-rank-optical-interconnect-wrap', pagesId: 'order-rank-optical-interconnect-pages', canvasId: 'order-rank-optical-interconnect-canvas' },
+  { key: '光互联', wrapId: 'order-rank-optical-interconnect-wrap', pagesId: 'order-rank-optical-interconnect-pages', canvasId: 'order-rank-optical-interconnect-canvas', sourcesId: 'order-rank-optical-interconnect-sources', analysisDoc: 'docs/analysis/optical-interconnect2026.html' },
   { key: '光纤概念', wrapId: 'order-rank-fiber-concept-wrap', pagesId: 'order-rank-fiber-concept-pages', canvasId: 'order-rank-fiber-concept-canvas' },
 ];
 
@@ -256,8 +324,16 @@ function maybeRenderOrderRankPoster(industry) {
       matchedConfig = true;
       const data = getOrderRankDatasetByKey(cfg.key);
       if (data) {
-        requestAnimationFrame(() => initOrderRankPosterPage(data, cfg.pagesId, cfg.canvasId));
+        requestAnimationFrame(() => {
+          initOrderRankPosterPage(data, cfg.pagesId, cfg.canvasId);
+          if (cfg.sourcesId) {
+            renderOrderRankSourcesPanel(data, cfg.sourcesId, { analysisDoc: cfg.analysisDoc });
+          }
+        });
       }
+    } else if (cfg.sourcesId) {
+      const srcEl = document.getElementById(cfg.sourcesId);
+      if (srcEl) srcEl.style.display = 'none';
     }
   });
 
