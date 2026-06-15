@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "fiber-concept2026",
+    "title": "光纤概念2026",
+    "articleTitle": "2026光纤概念产业链全梳理：订单Top10来了",
+    "generatedAt": "2026-06",
+    "chainKey": "光纤概念",
+    "md": "docs/wechat/fiber-concept2026.md",
+    "html": "docs/wechat/fiber-concept2026.html",
+    "hasOrderRank": true,
+    "hasChain": true
+  },
+  {
+    "slug": "cpo2026",
+    "title": "共封装光学（CPO）2026",
+    "articleTitle": "共封装光学产业链全梳理（2026）",
+    "generatedAt": "2026-06",
+    "chainKey": "CPO",
+    "md": "docs/wechat/cpo2026.md",
+    "html": "docs/wechat/cpo2026.html",
+    "hasOrderRank": false,
+    "hasChain": true
+  },
+  {
+    "slug": "optical-interconnect2026",
+    "title": "光互联2026",
+    "articleTitle": "2026光互联产业链全梳理：订单Top10来了",
+    "generatedAt": "2026-06",
+    "chainKey": "光互联",
+    "md": "docs/wechat/optical-interconnect2026.md",
+    "html": "docs/wechat/optical-interconnect2026.html",
+    "hasOrderRank": true,
+    "hasChain": true
+  },
+  {
+    "slug": "semiconductor-scarce-materials2026",
+    "title": "半导体12大稀缺材料2026",
+    "articleTitle": "半导体稀缺材料产业链全梳理（2026）",
+    "generatedAt": "2026-06",
+    "chainKey": "半导体稀缺材料",
+    "md": "docs/wechat/semiconductor-scarce-materials2026.md",
+    "html": "docs/wechat/semiconductor-scarce-materials2026.html",
+    "hasOrderRank": false,
+    "hasChain": true
+  }
+]

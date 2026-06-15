@@ -217,7 +217,17 @@ const js = `/** 半导体12大稀缺材料 — 由 scripts/build-semiconductor-s
 fs.writeFileSync(path.join(outDir, 'semiconductor-scarce-materials2026.js'), js, 'utf8');
 
 console.log('OK -> data/semiconductor-scarce-materials2026.json');
-console.log('提示: 运行 node scripts/build-all-analysis-docs.js 生成/更新分析过程文档');
+const { writeWechatArticle } = require('./lib/wechat-article');
+writeWechatArticle({
+  slug: 'semiconductor-scarce-materials2026',
+  title: '半导体12大稀缺材料2026',
+  generatedAt: '2026-06',
+  chain: CHAIN,
+  summary: CHAIN.description,
+  extraWarnings: ['涨价/缺口描述来自自媒体梳理，未逐条官方核实。'],
+  tags: ['半导体', '稀缺材料', '国产替代'],
+});
+console.log('OK -> docs/wechat/semiconductor-scarce-materials2026.md（公众号文稿，完整版请运行 build-all-analysis-docs.js）');
 console.log('12 segments, issues fixed:', payload.issuesFixed.length);
 
 module.exports = { CHAIN, toIndustryDataEntry, payload };

@@ -118,6 +118,15 @@ const js = `/** 2026 光纤概念订单规模排行 · 由 scripts/build-order-r
 fs.writeFileSync(path.join(outDir, 'order-rank-fiber-concept2026.js'), js, 'utf8');
 fs.writeFileSync(path.join(outDir, 'order-rank-fiber-concept2026.json'), JSON.stringify(payload, null, 2), 'utf8');
 console.log('OK 写入 order-rank-fiber-concept2026.js / .json 共', payload.companies.length, '家');
-console.log('提示: 运行 node scripts/build-all-analysis-docs.js 生成/更新分析过程文档');
+const { writeWechatArticle } = require('./lib/wechat-article');
+writeWechatArticle({
+  slug: 'fiber-concept2026',
+  title: '光纤概念2026',
+  generatedAt: '2026-06',
+  orderRank: payload,
+  summary: payload.subtitle,
+  tags: ['光纤概念', '订单榜', '光缆'],
+});
+console.log('OK -> docs/wechat/fiber-concept2026.md（订单榜公众号文稿）');
 
 module.exports = { ENTRIES, payload };

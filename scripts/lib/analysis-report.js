@@ -4,6 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { writeWechatArticle } = require('./wechat-article');
 
 const DOCS_DIR = path.join(__dirname, '..', '..', 'docs', 'analysis');
 
@@ -340,6 +341,8 @@ function writeAnalysisReport(config) {
   fs.writeFileSync(mdPath, md, 'utf8');
   fs.writeFileSync(htmlPath, buildHtmlPage(config.title, mdToSimpleHtml(md)), 'utf8');
 
+  const wechat = writeWechatArticle(config);
+
   const manifestEntry = {
     slug,
     title: config.title,
@@ -347,11 +350,13 @@ function writeAnalysisReport(config) {
     chainKey: config.chain?.key || config.chainKey || '',
     md: `docs/analysis/${slug}.md`,
     html: `docs/analysis/${slug}.html`,
+    wechatMd: wechat.manifestEntry.md,
+    wechatHtml: wechat.manifestEntry.html,
     hasOrderRank: !!(config.orderRank && config.orderRank.companies?.length),
     verifyScripts: config.verifyScripts || [],
   };
 
-  return { slug, mdPath, htmlPath, manifestEntry };
+  return { slug, mdPath, htmlPath, manifestEntry, wechatManifestEntry: wechat.manifestEntry };
 }
 
 function writeManifest(entries) {
@@ -373,6 +378,7 @@ function buildAnalysisIndexHtml(entries) {
       <div class="links">
         <a href="docs/analysis/${e.slug}.html">📄 在线阅读</a>
         <a href="docs/analysis/${e.slug}.md">📝 Markdown</a>
+        ${e.wechatHtml ? `<a href="${e.wechatHtml}">📱 公众号文稿</a>` : ''}
       </div>
       <p class="verify">复验：<code>${(e.verifyScripts || []).join('</code> · <code>') || '—'}</code></p>
     </article>`

@@ -6,6 +6,8 @@
     "chainKey": "光纤概念",
     "md": "docs/analysis/fiber-concept2026.md",
     "html": "docs/analysis/fiber-concept2026.html",
+    "wechatMd": "docs/wechat/fiber-concept2026.md",
+    "wechatHtml": "docs/wechat/fiber-concept2026.html",
     "hasOrderRank": true,
     "verifyScripts": [
       "verify-fiber-concept2026.js",
@@ -19,6 +21,8 @@
     "chainKey": "CPO",
     "md": "docs/analysis/cpo2026.md",
     "html": "docs/analysis/cpo2026.html",
+    "wechatMd": "docs/wechat/cpo2026.md",
+    "wechatHtml": "docs/wechat/cpo2026.html",
     "hasOrderRank": false,
     "verifyScripts": [
       "verify-cpo2026.js"
@@ -31,6 +35,8 @@
     "chainKey": "光互联",
     "md": "docs/analysis/optical-interconnect2026.md",
     "html": "docs/analysis/optical-interconnect2026.html",
+    "wechatMd": "docs/wechat/optical-interconnect2026.md",
+    "wechatHtml": "docs/wechat/optical-interconnect2026.html",
     "hasOrderRank": true,
     "verifyScripts": [
       "verify-order-rank-optical-interconnect2026.js"
@@ -43,6 +49,8 @@
     "chainKey": "半导体稀缺材料",
     "md": "docs/analysis/semiconductor-scarce-materials2026.md",
     "html": "docs/analysis/semiconductor-scarce-materials2026.html",
+    "wechatMd": "docs/wechat/semiconductor-scarce-materials2026.md",
+    "wechatHtml": "docs/wechat/semiconductor-scarce-materials2026.html",
     "hasOrderRank": false,
     "verifyScripts": [
       "verify-semiconductor-scarce-materials2026.js"

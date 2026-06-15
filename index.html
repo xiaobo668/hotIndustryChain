@@ -1471,6 +1471,8 @@ transition: opacity 0.2s;
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
+          <span class="hotkey-tag" style="border-color:rgba(7,193,96,0.35);color:#6ee7b7;background:rgba(7,193,96,0.12)" onclick="window.location.href='wechat.html'">📱 公众号文稿</span>
+          <span class="hotkey-tag" style="border-color:rgba(108,99,255,0.35);color:#c4b5fd;background:rgba(108,99,255,0.12)" onclick="window.location.href='analysis.html'">📋 分析文档</span>
           <span class="hotkey-tag" onclick="quickSearch('2026六大主线')">2026六大主线</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体稀缺材料')">半导体稀缺材料</span>
@@ -1608,10 +1610,22 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-title" style="color:#c4b5fd">📋 分析过程文档</div>
         <div class="order-rank-entry-desc">产业链梳理流程、来源核验、错配修正与复验脚本说明 — 发布后可持续查阅</div>
       </div>
+      <div class="order-rank-entry" onclick="window.location.href='wechat.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='wechat.html'" style="margin-top:12px;border-color:rgba(7,193,96,0.35);background:rgba(7,193,96,0.06)">
+        <div class="order-rank-entry-title" style="color:#6ee7b7">📱 公众号文稿</div>
+        <div class="order-rank-entry-desc">生成产业链/订单榜时同步产出，支持一键复制粘贴至微信公众号编辑器</div>
+      </div>
       <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="openOrderRankPage()" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06)">
           <div class="welcome-card-icon">🏆</div>
           <div class="welcome-card-name">订单排行榜</div>
+        </div>
+        <div class="welcome-card" onclick="window.location.href='wechat.html'" style="border-color:rgba(7,193,96,0.35);background:rgba(7,193,96,0.06)">
+          <div class="welcome-card-icon">📱</div>
+          <div class="welcome-card-name">公众号文稿</div>
+        </div>
+        <div class="welcome-card" onclick="window.location.href='analysis.html'" style="border-color:rgba(108,99,255,0.35);background:rgba(108,99,255,0.06)">
+          <div class="welcome-card-icon">📋</div>
+          <div class="welcome-card-name">分析文档</div>
         </div>
         <div class="welcome-card" onclick="quickSearch('2026六大主线')">
           <div class="welcome-card-icon">📅</div>

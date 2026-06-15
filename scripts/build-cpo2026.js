@@ -118,7 +118,16 @@ const js = `/** 共封装光学（CPO）— 由 scripts/build-cpo2026.js 生成 
 fs.writeFileSync(path.join(outDir, 'cpo2026.js'), js, 'utf8');
 
 console.log('OK -> data/cpo2026.json');
-console.log('提示: 运行 node scripts/build-all-analysis-docs.js 生成/更新分析过程文档');
+const { writeWechatArticle } = require('./lib/wechat-article');
+writeWechatArticle({
+  slug: 'cpo2026',
+  title: '共封装光学（CPO）2026',
+  generatedAt: '2026-06',
+  chain: CHAIN,
+  summary: CHAIN.description,
+  tags: ['CPO', '共封装光学', '硅光'],
+});
+console.log('OK -> docs/wechat/cpo2026.md（公众号文稿，完整版请运行 build-all-analysis-docs.js）');
 console.log('6 segments, issues fixed:', payload.issuesFixed.length);
 
 module.exports = { CHAIN, toIndustryDataEntry, payload };

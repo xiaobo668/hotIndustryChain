@@ -110,5 +110,15 @@ const js = `/** 2026 光互联订单规模排行 · 由 scripts/build-order-rank
 fs.writeFileSync(path.join(outDir, 'order-rank-optical-interconnect2026.js'), js, 'utf8');
 fs.writeFileSync(path.join(outDir, 'order-rank-optical-interconnect2026.json'), JSON.stringify(payload, null, 2), 'utf8');
 console.log('OK 写入 order-rank-optical-interconnect2026.js / .json 共', payload.companies.length, '家');
+const { writeWechatArticle } = require('./lib/wechat-article');
+writeWechatArticle({
+  slug: 'optical-interconnect2026',
+  title: '光互联2026',
+  generatedAt: '2026-05',
+  orderRank: payload,
+  summary: payload.subtitle,
+  tags: ['光互联', '800G', '光模块', '订单榜'],
+});
+console.log('OK -> docs/wechat/optical-interconnect2026.md（订单榜公众号文稿）');
 
 module.exports = { ENTRIES, payload };
