@@ -154,6 +154,15 @@
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-fiber-concept-canvas')">📋 复制</button>
       </div>
     </div>
+    <h1 style="margin-top:36px;font-size:20px">电力 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-6 名为公开报道2026年电网设备/发电装备在手或预计订单；7-10 名为发电运营节点以 2025 年报营收作参考，已通过 scripts/verify-order-rank-power2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-power-wrap">
+      <div id="order-rank-power-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-power-canvas','电力订单榜-2026.png')">⬇️ 下载电力订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-power-canvas')">📋 复制</button>
+      </div>
+    </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
@@ -165,6 +174,7 @@
   <script src="data/order-rank-duofuduo2026.js"></script>
   <script src="data/order-rank-optical-interconnect2026.js"></script>
   <script src="data/order-rank-fiber-concept2026.js"></script>
+  <script src="data/order-rank-power2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
   <script>
@@ -179,6 +189,7 @@
       initOrderRankPosterPage(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas');
       renderOrderRankSourcesPanel(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-sources', { analysisDoc: 'docs/analysis/optical-interconnect2026.html' });
       initOrderRankPosterPage(ORDER_RANK_FIBER_CONCEPT2026, 'order-rank-fiber-concept-pages', 'order-rank-fiber-concept-canvas');
+      initOrderRankPosterPage(ORDER_RANK_POWER2026, 'order-rank-power-pages', 'order-rank-power-canvas');
     });
   </script>
 </body>
