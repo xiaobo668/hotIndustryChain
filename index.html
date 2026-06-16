@@ -1095,6 +1095,19 @@ transition: opacity 0.2s;
       font-size: 12px;
       color: #c4b5fd;
     }
+    .ytd-gainers-table-wrap { max-width: 720px; margin: 20px auto 0; overflow-x: auto; }
+    .ytd-gainers-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .ytd-gainers-table th, .ytd-gainers-table td {
+      border: 1px solid rgba(255,255,255,0.1); padding: 8px 10px; text-align: left; vertical-align: top;
+    }
+    .ytd-gainers-table th { background: rgba(220,38,38,0.15); color: #fca5a5; }
+    .ytd-gainers-table .pct { color: #f87171; font-weight: 700; white-space: nowrap; }
+    .ytd-gainers-table .code { font-size: 10px; color: var(--text-muted); }
+    .rise-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .rise-tag.type-official { background: rgba(52,211,153,0.15); color: #34d399; }
+    .rise-tag.type-media { background: rgba(96,165,250,0.15); color: #60a5fa; }
+    .rise-tag.type-hype { background: rgba(251,146,60,0.15); color: #fb923c; }
+    .ytd-gainers-note { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
     .kline-space-back {
       margin-bottom: 16px;
     }
@@ -1471,6 +1484,7 @@ transition: opacity 0.2s;
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
+          <span class="hotkey-tag" style="border-color:rgba(220,38,38,0.35);color:#fca5a5;background:rgba(220,38,38,0.12)" onclick="quickSearch('年初涨幅')">📈 年初涨幅Top15</span>
           <span class="hotkey-tag" style="border-color:rgba(7,193,96,0.35);color:#6ee7b7;background:rgba(7,193,96,0.12)" onclick="window.location.href='wechat.html'">📱 公众号文稿</span>
           <span class="hotkey-tag" style="border-color:rgba(108,99,255,0.35);color:#c4b5fd;background:rgba(108,99,255,0.12)" onclick="window.location.href='analysis.html'">📋 分析文档</span>
           <span class="hotkey-tag" onclick="quickSearch('2026六大主线')">2026六大主线</span>
@@ -1606,6 +1620,10 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
         <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 多氟多 · 光互联 · 光纤概念 · 电力 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
+      <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
+        <div class="order-rank-entry-title" style="color:#fca5a5">📈 2026年初涨幅 Top15</div>
+        <div class="order-rank-entry-desc">1月至今涨幅最大的15家公司 · 含涨幅、上涨原因、业绩/情绪/炒作归因 · 支持海报下载</div>
+      </div>
       <div class="order-rank-entry" onclick="window.location.href='analysis.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='analysis.html'" style="margin-top:12px;border-color:rgba(108,99,255,0.35);background:rgba(108,99,255,0.06)">
         <div class="order-rank-entry-title" style="color:#c4b5fd">📋 分析过程文档</div>
         <div class="order-rank-entry-desc">产业链梳理流程、来源核验、错配修正与复验脚本说明 — 发布后可持续查阅</div>
@@ -1615,6 +1633,10 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-desc">生成产业链/订单榜时同步产出，支持一键复制粘贴至微信公众号编辑器</div>
       </div>
       <div class="welcome-grid" id="welcome-grid">
+        <div class="welcome-card" onclick="window.location.href='theme-poster.html#ytd-gainers'" style="border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
+          <div class="welcome-card-icon">📈</div>
+          <div class="welcome-card-name">年初涨幅Top15</div>
+        </div>
         <div class="welcome-card" onclick="openOrderRankPage()" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06)">
           <div class="welcome-card-icon">🏆</div>
           <div class="welcome-card-name">订单排行榜</div>
@@ -1886,6 +1908,14 @@ transition: opacity 0.2s;
 
     <!-- 产业链海报视图 -->
     <div id="view-poster" class="view-panel">
+      <div class="poster-wrap" id="ytd-gainers-wrap" style="display:none;margin-bottom:20px">
+        <div id="ytd-gainers-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadYtdGainersPoster('ytd-gainers-canvas','2026年初涨幅Top15.png')">⬇️ 下载涨幅榜</button>
+          <button class="btn btn-secondary" onclick="copyYtdGainersPoster('ytd-gainers-canvas')">📋 复制</button>
+        </div>
+        <div class="ytd-gainers-table-wrap" id="ytd-gainers-table"></div>
+      </div>
       <div class="poster-wrap" id="poster-wrap">
         <div id="poster-pages"></div>
         <div class="poster-actions">
@@ -2137,8 +2167,10 @@ transition: opacity 0.2s;
 <script src="data/order-rank-duofuduo2026.js"></script>
 <script src="data/order-rank-optical-interconnect2026.js"></script>
 <script src="data/order-rank-fiber-concept2026.js"></script>
+<script src="data/ytd-gainers2026.js"></script>
 <script src="data/order-rank-power2026.js"></script>
 <script src="js/industry/poster.js"></script>
+<script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->

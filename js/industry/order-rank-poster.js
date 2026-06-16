@@ -317,6 +317,19 @@ function maybeRenderOrderRankPoster(industry) {
   const legacyWrap = document.getElementById('order-rank-poster-wrap');
   let matchedConfig = false;
 
+  const ytdWrap = document.getElementById('ytd-gainers-wrap');
+  if (ytdWrap) {
+    const showYtd = industryKey === '2026年初涨幅榜';
+    ytdWrap.style.display = showYtd ? '' : 'none';
+    if (showYtd && typeof YTD_GAINERS2026 !== 'undefined') {
+      matchedConfig = true;
+      requestAnimationFrame(() => {
+        initYtdGainersPosterPage(YTD_GAINERS2026, 'ytd-gainers-pages', 'ytd-gainers-canvas');
+        renderYtdGainersTable(YTD_GAINERS2026, 'ytd-gainers-table');
+      });
+    }
+  }
+
   ORDER_RANK_POSTER_CONFIG.forEach((cfg) => {
     const wrap = document.getElementById(cfg.wrapId);
     if (!wrap) return;

@@ -64,12 +64,35 @@
     .order-rank-sources-links a { color: #67e8f9; }
     .order-rank-sources-footer { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
     .order-rank-sources-panel .doc-link { display: inline-block; margin-top: 8px; font-size: 12px; color: #c4b5fd; }
+    .ytd-gainers-table-wrap { max-width: 560px; width: 100%; margin: 16px auto 0; overflow-x: auto; }
+    .ytd-gainers-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .ytd-gainers-table th, .ytd-gainers-table td {
+      border: 1px solid rgba(255,255,255,0.08); padding: 6px 8px; text-align: left; vertical-align: top;
+    }
+    .ytd-gainers-table th { background: rgba(220,38,38,0.15); color: #fca5a5; }
+    .ytd-gainers-table .pct { color: #f87171; font-weight: 700; }
+    .ytd-gainers-table .code { font-size: 10px; color: var(--text-muted); }
+    .rise-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+    .rise-tag.type-official { background: rgba(52,211,153,0.15); color: #34d399; }
+    .rise-tag.type-media { background: rgba(96,165,250,0.15); color: #60a5fa; }
+    .rise-tag.type-hype { background: rgba(251,146,60,0.15); color: #fb923c; }
+    .ytd-gainers-note { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <a class="back" href="index.html">← 返回产业链分析</a>
-    <h1>六大主题 · 核心技术龙头涨幅榜</h1>
+    <h1 id="ytd-gainers">2026年初至今涨幅 Top15</h1>
+    <p class="sub">统计区间：2026年首个交易日至最近收盘（东方财富年初至今涨跌幅）；口径：沪深主板+创业板，剔除科创板/北交所/ST。每家公司标注上涨原因及归因：业绩 / 情绪 / 炒作。</p>
+    <div class="poster-wrap" id="ytd-gainers-wrap">
+      <div id="ytd-gainers-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadYtdGainersPoster('ytd-gainers-canvas','2026年初涨幅Top15.png')">⬇️ 下载涨幅榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyYtdGainersPoster('ytd-gainers-canvas')">📋 复制</button>
+      </div>
+      <div class="ytd-gainers-table-wrap" id="ytd-gainers-table"></div>
+    </div>
+    <h1 style="margin-top:36px;font-size:20px">六大主题 · 核心技术龙头涨幅榜</h1>
     <p class="sub">统计区间：2026-05-06（五一后首个交易日）至 2026-05-28 收盘。按区间内前复权涨幅排序取前五；行情来源腾讯财经。</p>
     <div class="poster-wrap" id="theme-poster-wrap">
       <div id="theme-poster-pages"></div>
@@ -174,11 +197,17 @@
   <script src="data/order-rank-duofuduo2026.js"></script>
   <script src="data/order-rank-optical-interconnect2026.js"></script>
   <script src="data/order-rank-fiber-concept2026.js"></script>
+  <script src="data/ytd-gainers2026.js"></script>
   <script src="data/order-rank-power2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
+  <script src="js/industry/ytd-gainers-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      if (typeof YTD_GAINERS2026 !== 'undefined') {
+        initYtdGainersPosterPage(YTD_GAINERS2026, 'ytd-gainers-pages', 'ytd-gainers-canvas');
+        renderYtdGainersTable(YTD_GAINERS2026, 'ytd-gainers-table');
+      }
       initThemePosterPage();
       initOrderRankPosterPage(ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas');
       initOrderRankPosterPage(ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas');

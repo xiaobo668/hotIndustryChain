@@ -1,0 +1,281 @@
+/** 2026 年初至今涨幅 Top15 · 由 scripts/build-ytd-gainers2026.js 生成 */
+var YTD_GAINERS2026 = {
+  "key": "2026年初涨幅榜",
+  "title": "2026年初至今涨幅 Top15",
+  "subtitle": "统计区间：2026年首个交易日至最近收盘（东方财富 f25 年初至今涨跌幅，前复权）；口径：沪深主板+创业板，剔除科创板/北交所/ST/*ST/-UW。",
+  "period": "2026.1–至今",
+  "generatedAt": "2026-06-16",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "民爆光电",
+      "code": "301362",
+      "secid": "0.301362",
+      "pct": 707.36,
+      "pctLabel": "+707.36%",
+      "riseType": "炒作",
+      "whyUp": "LED 户外照明小市值标的，智慧照明/光学题材跟风，涨幅与基本面脱节",
+      "theme": "光学照明",
+      "highlight": "LED 户外照明小市值标的，智慧照明/光学题材跟风，涨幅与基本面脱节",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301362"
+      }
+    },
+    {
+      "rank": 2,
+      "name": "宏和科技",
+      "code": "603256",
+      "secid": "1.603256",
+      "pct": 584.68,
+      "pctLabel": "+584.68%",
+      "riseType": "业绩",
+      "whyUp": "高端电子布（PTFE）供给偏紧，AI 服务器高频覆铜板需求拉动，2025 业绩高增兑现",
+      "theme": "PCB上游",
+      "highlight": "高端电子布（PTFE）供给偏紧，AI 服务器高频覆铜板需求拉动，2025 业绩高增兑现",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.603256"
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华电辽能",
+      "code": "600396",
+      "secid": "1.600396",
+      "pct": 550.88,
+      "pctLabel": "+550.88%",
+      "riseType": "情绪",
+      "whyUp": "辽宁地方电力平台，电力改革+区域电价预期+煤价回落改善盈利，资金博弈重组预期",
+      "theme": "电力",
+      "highlight": "辽宁地方电力平台，电力改革+区域电价预期+煤价回落改善盈利，资金博弈重组预期",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.600396"
+      }
+    },
+    {
+      "rank": 4,
+      "name": "泰坦股份",
+      "code": "003036",
+      "secid": "0.003036",
+      "pct": 537.31,
+      "pctLabel": "+537.31%",
+      "riseType": "炒作",
+      "whyUp": "纺织机械主业平淡，市场炒作轮胎模具/机器人跨界预期，题材驱动大于订单",
+      "theme": "高端装备",
+      "highlight": "纺织机械主业平淡，市场炒作轮胎模具/机器人跨界预期，题材驱动大于订单",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.003036"
+      }
+    },
+    {
+      "rank": 5,
+      "name": "利通电子",
+      "code": "603629",
+      "secid": "1.603629",
+      "pct": 512.01,
+      "pctLabel": "+512.01%",
+      "riseType": "业绩",
+      "whyUp": "算力租赁转型落地，英伟达 GPU 租赁与上架收入放量，业绩与 AI 算力题材共振",
+      "theme": "算力租赁",
+      "highlight": "算力租赁转型落地，英伟达 GPU 租赁与上架收入放量，业绩与 AI 算力题材共振",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.603629"
+      }
+    },
+    {
+      "rank": 6,
+      "name": "金安国纪",
+      "code": "002636",
+      "secid": "0.002636",
+      "pct": 511.75,
+      "pctLabel": "+511.75%",
+      "riseType": "业绩",
+      "whyUp": "覆铜板（CCL）涨价周期，AI 服务器用高频材料需求旺盛，产品提价带动利润弹性",
+      "theme": "PCB上游",
+      "highlight": "覆铜板（CCL）涨价周期，AI 服务器用高频材料需求旺盛，产品提价带动利润弹性",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.002636"
+      }
+    },
+    {
+      "rank": 7,
+      "name": "杭电股份",
+      "code": "603618",
+      "secid": "1.603618",
+      "pct": 483.5,
+      "pctLabel": "+483.50%",
+      "riseType": "情绪",
+      "whyUp": "光纤光缆+电力电缆，光通信/算力传输板块情绪带动，订单预期先于财报兑现",
+      "theme": "光纤概念",
+      "highlight": "光纤光缆+电力电缆，光通信/算力传输板块情绪带动，订单预期先于财报兑现",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.603618"
+      }
+    },
+    {
+      "rank": 8,
+      "name": "海星股份",
+      "code": "603115",
+      "secid": "1.603115",
+      "pct": 482.79,
+      "pctLabel": "+482.79%",
+      "riseType": "情绪",
+      "whyUp": "电极箔（铝电解电容上游），新能源+涨价预期驱动，板块情绪大于单季业绩",
+      "theme": "被动元件",
+      "highlight": "电极箔（铝电解电容上游），新能源+涨价预期驱动，板块情绪大于单季业绩",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.603115"
+      }
+    },
+    {
+      "rank": 9,
+      "name": "华盛昌",
+      "code": "002980",
+      "secid": "0.002980",
+      "pct": 481.87,
+      "pctLabel": "+481.87%",
+      "riseType": "炒作",
+      "whyUp": "检测仪器小盘股，AI 检测/机器人/智能装备概念蹭热点，缺乏对应订单与利润支撑",
+      "theme": "仪器仪表",
+      "highlight": "检测仪器小盘股，AI 检测/机器人/智能装备概念蹭热点，缺乏对应订单与利润支撑",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.002980"
+      }
+    },
+    {
+      "rank": 10,
+      "name": "国际复材",
+      "code": "301526",
+      "secid": "0.301526",
+      "pct": 452.57,
+      "pctLabel": "+452.57%",
+      "riseType": "业绩",
+      "whyUp": "风电/电子玻璃纤维材料，风电装机回暖+电子纱提价，2025 营收与毛利改善",
+      "theme": "新材料",
+      "highlight": "风电/电子玻璃纤维材料，风电装机回暖+电子纱提价，2025 营收与毛利改善",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301526"
+      }
+    },
+    {
+      "rank": 11,
+      "name": "高特电子",
+      "code": "301669",
+      "secid": "0.301669",
+      "pct": 441.1,
+      "pctLabel": "+441.10%",
+      "riseType": "炒作",
+      "whyUp": "新能源车 BMS/均衡管理次新标的，赛道叙事+小市值资金博弈，估值波动大",
+      "theme": "新能源车",
+      "highlight": "新能源车 BMS/均衡管理次新标的，赛道叙事+小市值资金博弈，估值波动大",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301669"
+      }
+    },
+    {
+      "rank": 12,
+      "name": "春光集团",
+      "code": "301531",
+      "secid": "0.301531",
+      "pct": 438.27,
+      "pctLabel": "+438.27%",
+      "riseType": "情绪",
+      "whyUp": "汽车流体管路零部件，新能源车产业链情绪回暖，订单预期带动估值修复",
+      "theme": "汽车零部件",
+      "highlight": "汽车流体管路零部件，新能源车产业链情绪回暖，订单预期带动估值修复",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301531"
+      }
+    },
+    {
+      "rank": 13,
+      "name": "凌玮科技",
+      "code": "301373",
+      "secid": "0.301373",
+      "pct": 437.77,
+      "pctLabel": "+437.77%",
+      "riseType": "炒作",
+      "whyUp": "纳米二氧化硅涂料助剂，新材料标签+小盘流动性，题材炒作成分偏高",
+      "theme": "化工新材料",
+      "highlight": "纳米二氧化硅涂料助剂，新材料标签+小盘流动性，题材炒作成分偏高",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301373"
+      }
+    },
+    {
+      "rank": 14,
+      "name": "铜冠铜箔",
+      "code": "301217",
+      "secid": "0.301217",
+      "pct": 419.75,
+      "pctLabel": "+419.75%",
+      "riseType": "业绩",
+      "whyUp": "锂电/PCB 铜箔，AI 服务器高频铜箔与储能需求双轮，产能利用率提升",
+      "theme": "PCB/铜箔",
+      "highlight": "锂电/PCB 铜箔，AI 服务器高频铜箔与储能需求双轮，产能利用率提升",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "0.301217"
+      }
+    },
+    {
+      "rank": 15,
+      "name": "红板科技",
+      "code": "603459",
+      "secid": "1.603459",
+      "pct": 385.82,
+      "pctLabel": "+385.82%",
+      "riseType": "炒作",
+      "whyUp": "医药包装/印刷次新，主业与当前热点关联弱，资金短炒次新流动性",
+      "theme": "包装印刷",
+      "highlight": "医药包装/印刷次新，主业与当前热点关联弱，资金短炒次新流动性",
+      "verify": {
+        "source": "东方财富 push2delay f25",
+        "sourceType": "market",
+        "field": "f25",
+        "secid": "1.603459"
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.YTD_GAINERS2026 = YTD_GAINERS2026;
