@@ -104,6 +104,15 @@
     </div>
     <h1 id="order-ranks" style="margin-top:36px;font-size:22px">2026 产业链订单排行榜</h1>
     <p class="sub">公开财经报道与产业链梳理；各赛道 Top10/Top15 订单规模海报，支持下载与复制。</p>
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">电子布 · 2026年订单规模 Top10</h2>
+    <p class="sub">1-6 名为公开报道2026年电子布/电子纱/特种纤维布在手或预计订单；7-10 名为产业链节点以2025年报营收作规模参考，已通过 scripts/verify-order-rank-e-glass-fabric2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-e-glass-fabric-wrap">
+      <div id="order-rank-e-glass-fabric-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-e-glass-fabric-canvas','电子布订单榜-2026.png')">⬇️ 下载电子布订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-e-glass-fabric-canvas')">📋 复制</button>
+      </div>
+    </div>
     <h2 style="margin-top:28px;font-size:18px;color:var(--text)">算力租赁 · 订单规模 Top15</h2>
     <div class="poster-wrap" id="order-rank-computing-wrap">
       <div id="order-rank-computing-pages"></div>
@@ -189,6 +198,7 @@
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
+  <script src="data/order-rank-e-glass-fabric2026.js"></script>
   <script src="data/order-rank-computing2026.js"></script>
   <script src="data/order-rank-pcb2026.js"></script>
   <script src="data/order-rank-advanced-packaging2026.js"></script>
@@ -209,6 +219,7 @@
         renderYtdGainersTable(YTD_GAINERS2026, 'ytd-gainers-table');
       }
       initThemePosterPage();
+      initOrderRankPosterPage(ORDER_RANK_E_GLASS_FABRIC2026, 'order-rank-e-glass-fabric-pages', 'order-rank-e-glass-fabric-canvas');
       initOrderRankPosterPage(ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas');
       initOrderRankPosterPage(ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas');
       initOrderRankPosterPage(ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas');

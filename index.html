@@ -1502,6 +1502,7 @@ transition: opacity 0.2s;
           <span class="hotkey-tag" onclick="quickSearch('机器人')">机器人</span>
           <span class="hotkey-tag" onclick="quickSearch('创新药')">创新药</span>
           <span class="hotkey-tag" onclick="quickSearch('PCB')">PCB</span>
+          <span class="hotkey-tag" onclick="quickSearch('电子布')">电子布</span>
           <span class="hotkey-tag" onclick="quickSearch('光学链接')">光学链接</span>
           <span class="hotkey-tag" onclick="quickSearch('光纤概念')">光纤概念</span>
           <span class="hotkey-tag" onclick="quickSearch('CPO')">CPO</span>
@@ -1618,7 +1619,7 @@ transition: opacity 0.2s;
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
-        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 多氟多 · 光互联 · 光纤概念 · 电力 — 查看 Top10 订单规模海报，支持下载与复制</div>
+        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 多氟多 · 光互联 · 光纤概念 · 电力 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
       <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
         <div class="order-rank-entry-title" style="color:#fca5a5">📈 2026年初涨幅 Top15</div>
@@ -1951,6 +1952,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-liquid-cooling-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-e-glass-fabric-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-e-glass-fabric-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-e-glass-fabric-canvas','电子布订单榜-2026.png')">⬇️ 下载电子布订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-e-glass-fabric-canvas')">📋 复制</button>
+        </div>
+      </div>
       <div class="poster-wrap" id="order-rank-mlcc-wrap" style="display:none;margin-top:20px">
         <div id="order-rank-mlcc-pages"></div>
         <div class="poster-actions">
@@ -2163,6 +2171,7 @@ transition: opacity 0.2s;
 <script src="data/order-rank-pcb2026.js"></script>
 <script src="data/order-rank-advanced-packaging2026.js"></script>
 <script src="data/order-rank-liquid-cooling2026.js"></script>
+<script src="data/order-rank-e-glass-fabric2026.js"></script>
 <script src="data/order-rank-mlcc2026.js"></script>
 <script src="data/order-rank-duofuduo2026.js"></script>
 <script src="data/order-rank-optical-interconnect2026.js"></script>
