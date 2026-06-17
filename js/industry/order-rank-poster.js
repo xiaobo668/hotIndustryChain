@@ -282,6 +282,7 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '光纤概念', wrapId: 'order-rank-fiber-concept-wrap', pagesId: 'order-rank-fiber-concept-pages', canvasId: 'order-rank-fiber-concept-canvas' },
   { key: '电力', wrapId: 'order-rank-power-wrap', pagesId: 'order-rank-power-pages', canvasId: 'order-rank-power-canvas' },
   { key: '存储芯片', wrapId: 'order-rank-storage-chip-wrap', pagesId: 'order-rank-storage-chip-pages', canvasId: 'order-rank-storage-chip-canvas' },
+  { key: '电子纸', wrapId: 'order-rank-e-paper-wrap', pagesId: 'order-rank-e-paper-pages', canvasId: 'order-rank-e-paper-canvas' },
 ];
 
 function getOrderRankDatasetByKey(key) {
@@ -297,6 +298,7 @@ function getOrderRankDatasetByKey(key) {
   if (key === '光纤概念' && typeof ORDER_RANK_FIBER_CONCEPT2026 !== 'undefined') return ORDER_RANK_FIBER_CONCEPT2026;
   if (key === '电力' && typeof ORDER_RANK_POWER2026 !== 'undefined') return ORDER_RANK_POWER2026;
   if (key === '存储芯片' && typeof ORDER_RANK_STORAGE_CHIP2026 !== 'undefined') return ORDER_RANK_STORAGE_CHIP2026;
+  if (key === '电子纸' && typeof ORDER_RANK_E_PAPER2026 !== 'undefined') return ORDER_RANK_E_PAPER2026;
   return null;
 }
 

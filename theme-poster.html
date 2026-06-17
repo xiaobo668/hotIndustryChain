@@ -204,6 +204,16 @@
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-storage-chip-canvas')">📋 复制</button>
       </div>
     </div>
+
+    <h1 style="margin-top:36px;font-size:20px">电子纸 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-7 名为公开报道 2026 年电子纸模组/终端/价签在手或预计订单；8-10 名为产业链材料/触控节点以 2025 年报营收作规模参考。未纳入：清越科技（科创板）、元太科技（台股）。已通过 scripts/verify-order-rank-e-paper2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-e-paper-wrap">
+      <div id="order-rank-e-paper-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-e-paper-canvas','电子纸订单榜-2026.png')">⬇️ 下载电子纸订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-e-paper-canvas')">📋 复制</button>
+      </div>
+    </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
@@ -219,6 +229,7 @@
   <script src="data/ytd-gainers2026.js"></script>
   <script src="data/order-rank-power2026.js"></script>
   <script src="data/order-rank-storage-chip2026.js"></script>
+  <script src="data/order-rank-e-paper2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/ytd-gainers-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
@@ -241,6 +252,7 @@
       initOrderRankPosterPage(ORDER_RANK_FIBER_CONCEPT2026, 'order-rank-fiber-concept-pages', 'order-rank-fiber-concept-canvas');
       initOrderRankPosterPage(ORDER_RANK_POWER2026, 'order-rank-power-pages', 'order-rank-power-canvas');
       initOrderRankPosterPage(ORDER_RANK_STORAGE_CHIP2026, 'order-rank-storage-chip-pages', 'order-rank-storage-chip-canvas');
+      initOrderRankPosterPage(ORDER_RANK_E_PAPER2026, 'order-rank-e-paper-pages', 'order-rank-e-paper-canvas');
     });
   </script>
 </body>
