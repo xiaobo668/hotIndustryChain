@@ -2849,7 +2849,10 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "长电科技", highlight: "全球 OSAT 前三，存储/HBM/Chiplet 先进封测，订单排至 2028 年" },
           { name: "深科技", highlight: "沛顿科技存储封测与模组制造，绑定长鑫/长江存储等国内存储厂" },
-          { name: "通富微电", highlight: "DRAM/NAND 封测布局完善，与主流存储合作伙伴深化协同" }
+          { name: "通富微电", highlight: "DRAM/NAND 封测布局完善，与主流存储合作伙伴深化协同" },
+          { name: "华天科技", highlight: "南京存储封测基地扩产，DRAM/NAND封测产能持续爬坡" },
+          { name: "气派科技", highlight: "集成电路封测，存储芯片BGA/DFN等先进封测产能扩张" },
+          { name: "大港股份", highlight: "集成电路封测与测试，存储芯片封测产能配套国内存储厂" }
         ]
       }
     ],
@@ -2979,7 +2982,9 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "晶方科技", highlight: "CIS 晶圆级封装（WLCSP）龙头，图像传感器 WLP 与 TSV 技术领先" },
           { name: "通富微电", highlight: "Fan-out/2.5D 规模封测，AMD 等大客户先进封装产能持续扩张" },
-          { name: "华天科技", highlight: "车规与消费电子 WLP/3D 封装，先进封装订单放量" }
+          { name: "华天科技", highlight: "车规与消费电子 WLP/3D 封装，先进封装订单放量" },
+          { name: "气派科技", highlight: "FC/BGA/DFN等先进封装量产，2.5D/3D封测产能扩张" },
+          { name: "大港股份", highlight: "集成电路封测与测试，先进封装与存储封测双线布局" }
         ]
       }
     ],
@@ -3076,7 +3081,10 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "中国巨石", highlight: "全球电子纱/电子布产能第一，2025年电子布销量10.62亿米" },
           { name: "山东玻纤", highlight: "玻纤纱线，电子纱转产电子布供给紧张" },
-          { name: "国际复材", highlight: "电子纱名义产能16万吨，Low-Dk二代布国内龙头" }
+          { name: "国际复材", highlight: "电子纱名义产能16万吨，Low-Dk二代布国内龙头" },
+          { name: "九鼎新材", highlight: "玻纤粗纱/风电纱与复合材料，原丝制品一体化产能" },
+          { name: "再升科技", highlight: "玻纤微纤维+原丝制品，粗纱滤材与风电材料配套" },
+          { name: "正威新材", highlight: "玻纤增强复合材料，粗纱/风电纱制品与风电叶片配套" }
         ]
       }
     ],
@@ -3098,7 +3106,11 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "生益科技", highlight: "覆铜板龙头，电子布为核心原材料，AI服务器CCL认证领先" },
           { name: "金安国纪", highlight: "覆铜板涨价周期，电子布成本传导与备货需求" },
-          { name: "华正新材", highlight: "高频高速覆铜板，Low-Dk电子布用量提升" }
+          { name: "华正新材", highlight: "高频高速覆铜板，Low-Dk电子布用量提升" },
+          { name: "超声电子", highlight: "覆铜板+PCB综合厂商，高频高速CCL与多层板一体化产能" },
+          { name: "威华股份", highlight: "覆铜板基材与印制电路板，AI服务器用CCL产能扩张" },
+          { name: "奥士康", highlight: "覆铜板+PCB制造，高多层/HDI与高频CCL认证推进" },
+          { name: "骏亚科技", highlight: "覆铜板+PCB一体化，产能扩张带动CCL出货" }
         ]
       }
     ]
@@ -3436,6 +3448,11 @@ const INDUSTRY_DATA = {
           { name: "有研新材", highlight: "化合物半导体材料与靶材，磷化铟等高端衬底材料布局" },
           { name: "三安光电", highlight: "III-V族化合物外延，磷化铟相关光芯片材料能力" },
           { name: "海特高新", highlight: "化合物半导体产线，磷化铟外延片小批量供货（航空+半导体双主业）" },
+          { name: "乾照光电", highlight: "砷化镓/磷化铟外延片与化合物半导体芯片，光通信与显示外延产能" },
+          { name: "华灿光电", highlight: "GaAs/InP基LED外延片与芯片，化合物半导体衬底材料配套" },
+          { name: "聚灿光电", highlight: "GaAs基LED外延片量产，化合物半导体衬底与外延产能扩张" },
+          { name: "兆驰股份", highlight: "化合物半导体外延与光芯片，砷化镓/InP衬底材料产能布局" },
+          { name: "华工科技", highlight: "化合物半导体激光芯片外延，磷化铟/砷化镓光芯片材料配套" },
           { name: "株冶集团", highlight: "锌冶炼副产精铟，为InP产业链提供铟原料（替换原图锡业股份）" }
         ]
       },

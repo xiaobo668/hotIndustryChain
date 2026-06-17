@@ -1,0 +1,175 @@
+{
+  "key": "存储封测",
+  "industryKeys": [
+    "存储芯片",
+    "长鑫存储",
+    "先进封装",
+    "半导体"
+  ],
+  "title": "DRAM/NAND封测产能TOP10",
+  "subtitle": "口径：DRAM/NAND存储芯片封测年化产能（亿颗/年）；8-10含模组一体化或嵌入式存储封测配套",
+  "capacityUnit": "亿颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "长电科技",
+      "capacityLabel": "年产能约28亿颗",
+      "highlight": "全球OSAT前三，DRAM/NAND/HBM存储先进封测，订单排至2028年",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·国产存储芯片订单TOP10",
+        "sourceDate": "2026-03-22",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：DRAM/NAND存储封测年化产能约28亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通富微电",
+      "capacityLabel": "年产能约22亿颗",
+      "highlight": "DRAM/NAND封测布局完善，与主流存储合作伙伴深化协同",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "official",
+        "source": "通富微电2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225256789.PDF",
+        "note": "未单独披露存储封测产能；以DRAM/NAND封测业务规模折算约22亿颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "深科技",
+      "capacityLabel": "年产能约18亿颗",
+      "highlight": "沛顿科技存储封测与模组制造，绑定长鑫/长江存储等国内存储厂",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·深科技14.7亿加码高端封测产能",
+        "sourceDate": "2026-05-28",
+        "sourceUrl": "https://finance.sina.com.cn/roll/2026-05-28/doc-inhzmayt1136737.shtml",
+        "note": "媒体报道口径：沛顿存储封测年化产能约18亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "华天科技",
+      "capacityLabel": "年产能约15亿颗",
+      "highlight": "南京存储封测基地扩产，DRAM/NAND封测产能持续爬坡",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "official",
+        "source": "华天科技2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12239945&stockid=002185",
+        "note": "未单独披露存储封测产能；以南京基地规模折算约15亿颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "大港股份",
+      "capacityLabel": "年产能约8.5亿颗",
+      "highlight": "集成电路封测与测试，存储芯片封测产能配套国内存储厂",
+      "verify": {
+        "capacity": 8.5,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·存储封测产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储芯片封测年化产能约8.5亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "江波龙",
+      "capacityLabel": "年产能约6.8亿颗",
+      "highlight": "存储模组龙头，国产DRAM/NAND颗粒导入与封测一体化产能",
+      "verify": {
+        "capacity": 6.8,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·国产存储芯片订单TOP10",
+        "sourceDate": "2026-03-22",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：存储模组+封测一体化产能约6.8亿颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "深南电路",
+      "capacityLabel": "年产能约5.2亿颗",
+      "highlight": "存储配套封装基板龙头，FC-BGA载板直供OSAT与存储封测",
+      "verify": {
+        "capacity": 5.2,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·国产存储芯片订单TOP10",
+        "sourceDate": "2026-03-22",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：存储封装基板配套封测产能折算约5.2亿颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "晶方科技",
+      "capacityLabel": "年产能约3.8亿颗",
+      "highlight": "CIS晶圆级封装龙头，存储相关WLP/TSV封测产能",
+      "verify": {
+        "capacity": 3.8,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "official",
+        "source": "晶方科技2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF",
+        "note": "未单独披露存储封测产能；以WLCSP规模折算约3.8亿颗/年，关联度偏弱",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "德明利",
+      "capacityLabel": "年产能约3.2亿颗",
+      "highlight": "存储控制芯片+模组一体化，国产NAND颗粒导入放量",
+      "verify": {
+        "capacity": 3.2,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·国产存储芯片订单TOP10",
+        "sourceDate": "2026-03-22",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：存储模组封测一体化产能约3.2亿颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "北京君正",
+      "capacityLabel": "年产能约2.5亿颗",
+      "highlight": "嵌入式存储+MCU，低功耗存储芯片封测配套产能",
+      "verify": {
+        "capacity": 2.5,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "新浪财经·国产存储芯片订单TOP10",
+        "sourceDate": "2026-03-22",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：嵌入式存储封测配套产能约2.5亿颗/年，关联度偏弱",
+        "officialCross": null
+      }
+    }
+  ]
+}

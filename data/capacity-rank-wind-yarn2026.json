@@ -1,0 +1,175 @@
+{
+  "key": "风电纱",
+  "industryKeys": [
+    "电子布",
+    "半导体稀缺材料",
+    "光纤概念",
+    "新能源"
+  ],
+  "title": "风电纱产能TOP10",
+  "subtitle": "口径：风电叶片用玻纤纱年化产能（万吨/年）；均为媒体报道或年报规模折算",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国巨石",
+      "capacityLabel": "年产能约95万吨",
+      "highlight": "全球风电纱产能龙头，海上风电与大功率叶片用纱核心供应商",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "证券时报·中国巨石风电纱产能报道",
+        "sourceDate": "2026-03",
+        "sourceUrl": "https://egs.stcn.com/news/detail/2254556.html",
+        "note": "媒体报道口径：风电纱年化产能约95万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "中材科技",
+      "capacityLabel": "年产能约78万吨",
+      "highlight": "泰山玻纤风电纱+风电叶片，中材叶片全球龙头协同",
+      "verify": {
+        "capacity": 78,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "证券时报·中材科技2025年报分析",
+        "sourceDate": "2026-04",
+        "sourceUrl": "https://www.stcn.com/article/detail/3687431.html",
+        "note": "媒体报道口径：风电纱年化产能约78万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "国际复材",
+      "capacityLabel": "年产能约52万吨",
+      "highlight": "风电纱与粗纱多品类，海外风电客户长期合作",
+      "verify": {
+        "capacity": 52,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "长江证券·国际复材公司调研（慧博）",
+        "sourceDate": "2026-05",
+        "sourceUrl": "http://www.hibor.com.cn/data/d21beecaff40d713afb88c005f61f434.html",
+        "note": "媒体报道口径：风电纱年化产能约52万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "山东玻纤",
+      "capacityLabel": "年产能约38万吨",
+      "highlight": "玻纤纱线主业，风电纱与粗纱产能弹性调配",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：风电纱年化产能约38万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "长海股份",
+      "capacityLabel": "年产能约28万吨",
+      "highlight": "玻纤制品+复合材料，风电纱与叶片材料配套",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：风电纱年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "九鼎新材",
+      "capacityLabel": "年产能约18万吨",
+      "highlight": "玻纤粗纱/风电纱与复合材料，风电叶片增强材料",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：风电纱年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "正威新材",
+      "capacityLabel": "年产能约14万吨",
+      "highlight": "玻纤增强复合材料，风电叶片与风电纱制品配套",
+      "verify": {
+        "capacity": 14,
+        "capacityUnit": "万吨/年",
+        "sourceType": "official",
+        "source": "正威新材2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201",
+        "note": "未单独披露风电纱产能；以玻纤风电制品规模折算约14万吨参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "再升科技",
+      "capacityLabel": "年产能约10万吨",
+      "highlight": "玻纤微纤维+原丝制品，风电滤材与增强材料配套",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "official",
+        "source": "再升科技2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601",
+        "note": "未单独披露风电纱产能；以玻纤制品规模折算约10万吨参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "宏和科技",
+      "capacityLabel": "年产能约8万吨",
+      "highlight": "特种玻纤制品，风电增强材料与原丝配套产能",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：风电纱配套产能约8万吨/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "菲利华",
+      "capacityLabel": "年产能约6万吨",
+      "highlight": "石英纤维增强材料，风电绝缘与增强基材配套",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "official",
+        "source": "菲利华2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395",
+        "note": "主营石英纤维非风电纱；以增强材料规模折算约6万吨参考，关联度偏弱",
+        "officialCross": null
+      }
+    }
+  ]
+}

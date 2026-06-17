@@ -1,0 +1,173 @@
+{
+  "key": "光芯片",
+  "industryKeys": [
+    "光互联",
+    "CPO"
+  ],
+  "title": "光芯片（DFB/VCSEL）量产+在建扩产产能TOP10",
+  "subtitle": "口径：DFB/VCSEL及硅光激光器芯片量产产能+在建扩产合计（万颗/年）；未纳入科创板光芯片标的",
+  "capacityUnit": "万颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "光迅科技",
+      "capacityLabel": "量产+在建约8800万颗/年",
+      "highlight": "25G/100G DFB/EML光芯片自研量产，硅光+CPO全链条，扩产项目2026年陆续投产",
+      "verify": {
+        "capacity": 8800,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：现有量产约6800万颗/年+在建扩产约2000万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "华工科技",
+      "capacityLabel": "量产+在建约7500万颗/年",
+      "highlight": "25G/100G DFB激光芯片垂直整合，硅光芯片+光模块双轮扩产",
+      "verify": {
+        "capacity": 7500,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "新浪·光通信龙头产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://www.sina.cn/news/detail/5288801220171777.html",
+        "note": "媒体报道口径：DFB/VCSEL芯片量产约5500万颗/年+在建约2000万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "三安光电",
+      "capacityLabel": "量产+在建约6200万颗/年",
+      "highlight": "III-V化合物激光器外延，硅光/CPO上游VCSEL与DFB光源材料",
+      "verify": {
+        "capacity": 6200,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体激光器产能",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：光通信激光器芯片外延+后道产能约6200万颗/年（含在建）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "博创科技",
+      "capacityLabel": "量产+在建约4100万颗/年",
+      "highlight": "硅光分路器/AWG与CPO无源集成器件，数据中心互连芯片扩产",
+      "verify": {
+        "capacity": 4100,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：硅光无源芯片+集成器件产能约4100万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "烽火通信",
+      "capacityLabel": "量产+在建约3400万颗/年",
+      "highlight": "央企光芯片自主可控，25G DFB批量自供，算力传输光芯片扩产",
+      "verify": {
+        "capacity": 3400,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光芯片量产约2600万颗/年+在建约800万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "联特科技",
+      "capacityLabel": "量产+在建约2900万颗/年",
+      "highlight": "800G/1.6T光模块配套DFB芯片，设计到制造一体化扩产",
+      "verify": {
+        "capacity": 2900,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：自研光芯片量产约2200万颗/年+在建约700万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中际旭创",
+      "capacityLabel": "量产+在建约2500万颗/年",
+      "highlight": "硅光芯片+1.6T/CPO全球龙头，共封装光学方案领先云厂商导入",
+      "verify": {
+        "capacity": 2500,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：硅光芯片及激光器配套产能约2500万颗/年（含在建）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "剑桥科技",
+      "capacityLabel": "量产+在建约2100万颗/年",
+      "highlight": "硅光芯片+800G/1.6T模块垂直整合，CPO样品验证中",
+      "verify": {
+        "capacity": 2100,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：硅光芯片量产约1600万颗/年+在建约500万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "长芯博创",
+      "capacityLabel": "量产+在建约1600万颗/年",
+      "highlight": "MPO/AOC/硅光互连芯片器件，海外云厂商长期合作扩产",
+      "verify": {
+        "capacity": 1600,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：硅光互连芯片器件产能约1600万颗/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "永鼎股份",
+      "capacityLabel": "量产+在建约1100万颗/年",
+      "highlight": "DFB/硅光芯片配套+1.6T光模块+CPO，算力光互联芯片产能扩张",
+      "verify": {
+        "capacity": 1100,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·光芯片国产替代产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光芯片及器件配套产能约1100万颗/年",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "key": "覆铜板",
+  "industryKeys": [
+    "电子布",
+    "PCB",
+    "半导体稀缺材料",
+    "存储芯片"
+  ],
+  "title": "覆铜板（CCL）年产能排行TOP10",
+  "subtitle": "口径：覆铜板年化产能（万㎡/年）；1-7为覆铜板主业或一体化厂商，8-10含CCL上游材料/PCB配套产能折算",
+  "capacityUnit": "万㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "生益科技",
+      "capacityLabel": "年产能约12000万㎡",
+      "highlight": "覆铜板龙头，高频高速CCL国内市占率第一，AI服务器CCL认证领先",
+      "verify": {
+        "capacity": 12000,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板年化产能约12000万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "华正新材",
+      "capacityLabel": "年产能约3800万㎡",
+      "highlight": "高频高速覆铜板，Low-Dk电子布用量提升，AI服务器CCL认证推进",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板年化产能约3800万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "金安国纪",
+      "capacityLabel": "年产能约3200万㎡",
+      "highlight": "覆铜板+PCB一体化，涨价周期下CCL产能满产，产品提价带动利润弹性",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板年化产能约3200万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "超声电子",
+      "capacityLabel": "年产能约2600万㎡",
+      "highlight": "覆铜板+PCB综合厂商，高性能HDI与高频CCL扩产10亿元项目推进",
+      "verify": {
+        "capacity": 2600,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB赛道十大龙头订单超千亿",
+        "sourceDate": "2026-03-16",
+        "sourceUrl": "https://www.sina.cn/news/detail/5276981690106989.html",
+        "note": "媒体报道口径：覆铜板年化产能约2600万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "威华股份",
+      "capacityLabel": "年产能约1900万㎡",
+      "highlight": "覆铜板基材与印制电路板，AI服务器用CCL产能扩张",
+      "verify": {
+        "capacity": 1900,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·覆铜板产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：覆铜板年化产能约1900万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "奥士康",
+      "capacityLabel": "年产能约1100万㎡",
+      "highlight": "覆铜板+PCB制造，高多层/HDI与高频CCL认证推进",
+      "verify": {
+        "capacity": 1100,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板年化产能约1100万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "骏亚科技",
+      "capacityLabel": "年产能约950万㎡",
+      "highlight": "覆铜板+PCB一体化，产能扩张带动CCL出货",
+      "verify": {
+        "capacity": 950,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "official",
+        "source": "骏亚科技年报问询函回复",
+        "sourceDate": "2024-12末",
+        "sourceUrl": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11224165&stockid=603386",
+        "note": "未单独披露CCL产能；以PCB+覆铜板一体化规模折算约950万㎡/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "东材科技",
+      "capacityLabel": "年产能约720万㎡",
+      "highlight": "高速树脂与膜材料，ABF/CCL上游粘结片与基材国产替代",
+      "verify": {
+        "capacity": 720,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·覆铜板产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "媒体报道口径：CCL上游膜材料折算年化配套约720万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "崇达技术",
+      "capacityLabel": "年产能约680万㎡",
+      "highlight": "高端小批量PCB定制龙头，覆铜板+PCB一体化产能配套",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板配套产能约680万㎡/年",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "景旺电子",
+      "capacityLabel": "年产能约620万㎡",
+      "highlight": "汽车+服务器PCB，高端多层板国产替代，覆铜板基材配套产能",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·PCB十大龙头产能梳理",
+        "sourceDate": "2026-04-09",
+        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
+        "note": "媒体报道口径：覆铜板配套产能约620万㎡/年",
+        "officialCross": null
+      }
+    }
+  ]
+}

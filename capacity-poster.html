@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 热门产业链产能排行榜</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --text: #e8e8f0;
+      --text-muted: #8888aa;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    h1 { font-size: 22px; margin-bottom: 8px; }
+    h2 { margin-top: 28px; font-size: 18px; color: var(--text); }
+    .sub { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
+    .poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 8px; }
+    .poster-page-label { font-size: 13px; color: var(--text-muted); text-align: center; }
+    .poster-canvas-item { border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; margin-bottom: 24px; }
+    .btn {
+      padding: 10px 18px; border-radius: 10px; border: none;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    a.back { color: #fbbf24; font-size: 13px; display: inline-block; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回首页</a>
+    <h1 id="capacity-ranks">2026 热门产业链产能排行榜</h1>
+    <p class="sub">公开财经报道与产业链梳理；共十六大赛道 Top10 产能海报，支持下载与复制。已通过 <code>scripts/verify-capacity-rank2026.js</code> 复验。</p>
+
+    <h2 id="cap-optical-module">高速光模块（800G/1.6T）</h2>
+    <p class="sub">现有年化产能（万支/年）；第5位剑桥科技为年报披露350万支满负荷。</p>
+    <div class="poster-wrap" id="capacity-rank-optical-module-wrap">
+      <div id="capacity-rank-optical-module-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-optical-module-canvas','高速光模块产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-optical-module-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-optical-chip">光芯片（DFB/VCSEL）</h2>
+    <p class="sub">量产产能+在建扩产合计（万颗/年）；未纳入科创板光芯片标的。</p>
+    <div class="poster-wrap" id="capacity-rank-optical-chip-wrap">
+      <div id="capacity-rank-optical-chip-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-optical-chip-canvas','光芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-optical-chip-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-fiber-preform">光纤预制棒</h2>
+    <p class="sub">光棒/预制棒年化产能（吨/年），算力特种光纤核心上游。</p>
+    <div class="poster-wrap" id="capacity-rank-fiber-preform-wrap">
+      <div id="capacity-rank-fiber-preform-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-fiber-preform-canvas','光纤预制棒产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-fiber-preform-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-cpo-engine">CPO光引擎</h2>
+    <p class="sub">量产规划产能（万套/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-cpo-engine-wrap">
+      <div id="capacity-rank-cpo-engine-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-cpo-engine-canvas','CPO光引擎产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-cpo-engine-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-liquid-cooling">液冷设备（冷板/浸没式）</h2>
+    <p class="sub">年化散热供货能力（MW/年）；第9位银轮股份为公告订单折算。</p>
+    <div class="poster-wrap" id="capacity-rank-liquid-cooling-wrap">
+      <div id="capacity-rank-liquid-cooling-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-liquid-cooling-canvas','液冷设备产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-liquid-cooling-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ai-server">算力服务器整机</h2>
+    <p class="sub">AI/智算服务器整机年化产能（万台/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-ai-server-wrap">
+      <div id="capacity-rank-ai-server-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ai-server-canvas','算力服务器产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ai-server-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-e-glass-fabric">高端电子布</h2>
+    <p class="sub">薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石对齐2025年销量10.62亿米。</p>
+    <div class="poster-wrap" id="capacity-rank-e-glass-fabric-highend-wrap">
+      <div id="capacity-rank-e-glass-fabric-highend-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-e-glass-fabric-highend-canvas','高端电子布产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-e-glass-fabric-highend-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-low-dk-yarn">低介电子纱</h2>
+    <p class="sub">Low-Dk/低介电电子纱年化产能（万吨/年）；第2位国际复材为研报名义产能16万吨。</p>
+    <div class="poster-wrap" id="capacity-rank-low-dk-yarn-wrap">
+      <div id="capacity-rank-low-dk-yarn-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-low-dk-yarn-canvas','低介电子纱产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-low-dk-yarn-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ccl">覆铜板（CCL）</h2>
+    <p class="sub">覆铜板年化产能（万㎡/年）；8-10位含CCL上游材料/PCB配套产能折算。</p>
+    <div class="poster-wrap" id="capacity-rank-ccl-wrap">
+      <div id="capacity-rank-ccl-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ccl-canvas','覆铜板产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ccl-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-abf">ABF载板</h2>
+    <p class="sub">ABF/FC-BGA封装基板量产年化产能（万片/年）；9-10位为ABF上游基材配套折算。</p>
+    <div class="poster-wrap" id="capacity-rank-abf-substrate-wrap">
+      <div id="capacity-rank-abf-substrate-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-abf-substrate-canvas','ABF载板产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-abf-substrate-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-glass-roving">玻纤粗纱</h2>
+    <p class="sub">玻纤粗纱年化产能（万吨/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-glass-roving-wrap">
+      <div id="capacity-rank-glass-roving-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-glass-roving-canvas','玻纤粗纱产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-glass-roving-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-wind-yarn">风电纱</h2>
+    <p class="sub">风电叶片用玻纤纱年化产能（万吨/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-wind-yarn-wrap">
+      <div id="capacity-rank-wind-yarn-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-wind-yarn-canvas','风电纱产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-wind-yarn-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-mlcc">MLCC高端车规/算力</h2>
+    <p class="sub">高端车规/算力MLCC年化产能（亿颗/年）；8-10位为粉体/辅材折算。</p>
+    <div class="poster-wrap" id="capacity-rank-mlcc-auto-compute-wrap">
+      <div id="capacity-rank-mlcc-auto-compute-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-mlcc-auto-compute-canvas','MLCC车规算力产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-mlcc-auto-compute-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-inp-gaas">磷化铟/砷化镓衬底</h2>
+    <p class="sub">衬底及外延片年量产产能（万片/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-inp-gaas-substrate-wrap">
+      <div id="capacity-rank-inp-gaas-substrate-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-inp-gaas-substrate-canvas','磷化铟砷化镓衬底产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-inp-gaas-substrate-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-advanced-packaging">先进封装（2.5D/3D）</h2>
+    <p class="sub">2.5D/3D/Chiplet先进封装年化产能（万片/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-advanced-packaging-25d-wrap">
+      <div id="capacity-rank-advanced-packaging-25d-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-advanced-packaging-25d-canvas','先进封装2.5D产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-advanced-packaging-25d-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-storage-dram-nand">DRAM/NAND封测</h2>
+    <p class="sub">DRAM/NAND存储芯片封测年化产能（亿颗/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-storage-dram-nand-wrap">
+      <div id="capacity-rank-storage-dram-nand-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-storage-dram-nand-canvas','DRAM-NAND封测产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-storage-dram-nand-canvas')">📋 复制</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/capacity-rank2026.js"></script>
+  <script src="js/industry/capacity-rank-poster.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAllCapacityRankPosters();
+    });
+  </script>
+</body>
+</html>

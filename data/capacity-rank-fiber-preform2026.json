@@ -1,0 +1,172 @@
+{
+  "key": "光纤预制棒",
+  "industryKeys": [
+    "光纤概念"
+  ],
+  "title": "光纤预制棒年产能排名TOP10",
+  "subtitle": "口径：光棒/预制棒年化产能（吨/年），算力特种光纤核心上游；均为媒体报道口径",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "长飞光纤",
+      "capacityLabel": "年产能约4800吨",
+      "highlight": "全球光棒产能第一，预制棒自给率高，空芯光纤技术领先",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "新浪财经·光纤光缆产能排名",
+        "sourceDate": "2026-03-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：光棒年化产能约4800吨，全球龙头",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "亨通光电",
+      "capacityLabel": "年产能约3600吨",
+      "highlight": "光棒自给90%+，AI光纤批量出海，运营商集采份额领先",
+      "verify": {
+        "capacity": 3600,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "新浪财经·光纤光缆产能排名",
+        "sourceDate": "2026-03-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：预制棒年化产能约3600吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中天科技",
+      "capacityLabel": "年产能约3200吨",
+      "highlight": "光纤光缆+海缆+特种电缆，算力配套光缆高增，光棒自给提升",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "新浪财经·光纤光缆产能排名",
+        "sourceDate": "2026-03-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：光棒年化产能约3200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "烽火通信",
+      "capacityLabel": "年产能约2400吨",
+      "highlight": "央企光通信全产业链，光棒+光纤制造+光芯片自主可控",
+      "verify": {
+        "capacity": 2400,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "新浪财经·光纤光缆产能排名",
+        "sourceDate": "2026-03-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
+        "note": "媒体报道口径：预制棒年化产能约2400吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "通鼎互联",
+      "capacityLabel": "年产能约1650吨",
+      "highlight": "光纤光缆+特种光缆，运营商集采中标份额领先",
+      "verify": {
+        "capacity": 1650,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光棒年化产能约1650吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "永鼎股份",
+      "capacityLabel": "年产能约1450吨",
+      "highlight": "特种光缆+光纤+光模块，算力光互联与海外供应链",
+      "verify": {
+        "capacity": 1450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：预制棒年化产能约1450吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "特发信息",
+      "capacityLabel": "年产能约1150吨",
+      "highlight": "东数西算/算力配套支线光缆，区域算力网络供应商",
+      "verify": {
+        "capacity": 1150,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光棒年化产能约1150吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "汇源通信",
+      "capacityLabel": "年产能约680吨",
+      "highlight": "光缆制造+通信工程，光纤概念链工程配套",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：预制棒年化产能约680吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "华脉科技",
+      "capacityLabel": "年产能约450吨",
+      "highlight": "通信网络物理连接，光缆/配线/机柜算力机房配套",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光棒年化产能约450吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "通光线缆",
+      "capacityLabel": "年产能约380吨",
+      "highlight": "电力特种光缆/OPGW龙头，预制棒外协自给+算力特种光纤配套",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·光纤概念产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：预制棒年化产能约380吨（含外协自给）",
+        "officialCross": null
+      }
+    }
+  ]
+}

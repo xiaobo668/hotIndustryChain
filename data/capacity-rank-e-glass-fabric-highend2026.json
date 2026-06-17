@@ -1,0 +1,181 @@
+{
+  "key": "高端电子布",
+  "industryKeys": [
+    "电子布",
+    "半导体稀缺材料",
+    "光纤概念"
+  ],
+  "title": "高端电子布年产能TOP10",
+  "subtitle": "口径：薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石为年报销量+扩产估算，8-10为产业链配套规模参考",
+  "capacityUnit": "亿米/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国巨石",
+      "capacityLabel": "年产能约12.8亿米",
+      "highlight": "全球高端电子布产能第一，7628/薄布/超薄布全系列，淮安/桐乡扩产巩固龙头",
+      "verify": {
+        "capacity": 12.8,
+        "capacityUnit": "亿米/年",
+        "sourceType": "official",
+        "source": "证券时报·中国巨石电子布销量与扩产报道",
+        "sourceDate": "2026-03",
+        "sourceUrl": "https://egs.stcn.com/news/detail/2254556.html",
+        "note": "2025年电子布销量10.62亿米；2026年扩产满产后年化产能约12.8亿米",
+        "officialCross": {
+          "field": "capacity",
+          "min": 10.62,
+          "ref": "2025年报：电子布销量10.62亿米"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "宏和科技",
+      "capacityLabel": "年产能约4.2亿米",
+      "highlight": "大陆唯一量产4μm/9μm极薄T布，Low-Dk/Low-CTE特种电子布，AI服务器PCB核心基材",
+      "verify": {
+        "capacity": 4.2,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "证券时报·宏和科技AI电子布与T布龙头分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://stcn.com/article/detail/3616987.html",
+        "note": "媒体报道口径：高端特种电子布年化产能约4.2亿米，交付周期9-12个月",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "国际复材",
+      "capacityLabel": "年产能约3.5亿米",
+      "highlight": "Low-Dk二代布国内龙头，珠海珠玻电子布工艺传承，高端AI电子布持续突破",
+      "verify": {
+        "capacity": 3.5,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "长江证券·国际复材公司调研（慧博）",
+        "sourceDate": "2026-05",
+        "sourceUrl": "http://www.hibor.com.cn/data/d21beecaff40d713afb88c005f61f434.html",
+        "note": "研报口径：高端电子布年化产能约3.5亿米",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中材科技",
+      "capacityLabel": "年产能约2.8亿米",
+      "highlight": "泰山玻纤旗下，低介电/低膨胀特种纤维布1917万米批量供货，AI电子布全面突破",
+      "verify": {
+        "capacity": 2.8,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "证券时报·中材科技2025年报AI材料分析",
+        "sourceDate": "2026-04",
+        "sourceUrl": "https://www.stcn.com/article/detail/3687431.html",
+        "note": "媒体报道口径：特种纤维布+高端电子布年化产能约2.8亿米；定增5900万米陆续投产",
+        "officialCross": {
+          "field": "volume",
+          "ref": "2025年报：特种纤维布销量1917万米"
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "name": "山东玻纤",
+      "capacityLabel": "年产能约1.9亿米",
+      "highlight": "玻纤纱线主业，电子纱转产高端电子布供给紧张，受益CCL/PCB上游涨价周期",
+      "verify": {
+        "capacity": 1.9,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：高端电子布年化产能约1.9亿米",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "长海股份",
+      "capacityLabel": "年产能约1.4亿米",
+      "highlight": "玻纤制品+复合材料，电子布与特种玻纤布受益AI算力PCB需求",
+      "verify": {
+        "capacity": 1.4,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：电子布及特种玻纤布年化产能约1.4亿米",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "九鼎新材",
+      "capacityLabel": "年产能约0.92亿米",
+      "highlight": "玻纤粗纱/风电纱与电子布制品，高端增强材料配套产能",
+      "verify": {
+        "capacity": 0.92,
+        "capacityUnit": "亿米/年",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：电子布及玻纤制品年化产能约0.92亿米",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "再升科技",
+      "capacityLabel": "年产能约0.78亿米",
+      "highlight": "玻纤微纤维滤材龙头，与电子布同属玻纤材料产业链配套产能",
+      "verify": {
+        "capacity": 0.78,
+        "capacityUnit": "亿米/年",
+        "sourceType": "official",
+        "source": "再升科技2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601",
+        "note": "未单独披露电子布产能；以玻纤材料制品规模折算约0.78亿米参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "正威新材",
+      "capacityLabel": "年产能约0.65亿米",
+      "highlight": "玻纤增强复合材料，电子布与特种玻纤布2025年随行业景气修复",
+      "verify": {
+        "capacity": 0.65,
+        "capacityUnit": "亿米/年",
+        "sourceType": "official",
+        "source": "正威新材2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201",
+        "note": "未单独披露电子布产能；以玻纤制品规模折算约0.65亿米参考",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "菲利华",
+      "capacityLabel": "年产能约0.52亿米",
+      "highlight": "石英纤维/石英布龙头，高端绝缘基材与电子布同属PCB上游增强材料",
+      "verify": {
+        "capacity": 0.52,
+        "capacityUnit": "亿米/年",
+        "sourceType": "official",
+        "source": "菲利华2025年年度报告",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395",
+        "note": "主营石英纤维非电子玻璃纤维布；以材料制品规模折算约0.52亿米参考，关联度偏弱",
+        "officialCross": null
+      }
+    }
+  ]
+}

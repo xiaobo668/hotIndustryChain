@@ -1,0 +1,180 @@
+{
+  "key": "液冷设备",
+  "industryKeys": [
+    "液冷"
+  ],
+  "title": "液冷设备（冷板/浸没式）年供货产能TOP10",
+  "subtitle": "口径：冷板/浸没式液冷设备年化散热供货能力（MW/年）；第9位银轮股份为公告订单折算",
+  "capacityUnit": "MW/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "英维克",
+      "capacityLabel": "年供货约1200MW",
+      "highlight": "全链条液冷龙头，Coolinside累计交付超1.16GW，谷歌TPU CDU、英伟达UQD/CDU",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "国际液冷产业大会·行业调研纪要",
+        "sourceDate": "2026-01-16",
+        "sourceUrl": "https://lctexpo.com/news/684.html",
+        "note": "行业调研口径：年化液冷散热供货能力约1200MW；累计交付超1.16GW",
+        "officialCross": {
+          "field": "capacity",
+          "min": 1160,
+          "ref": "调研纪要：Coolinside累计交付超1.16GW"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "申菱环境",
+      "capacityLabel": "年供货约950MW",
+      "highlight": "CDU国内市占第一，华为昇腾液冷核心供应商，冷板+浸没双路线",
+      "verify": {
+        "capacity": 950,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "搜狐·液冷服务器潜力分析",
+        "sourceDate": "2026-02-15",
+        "sourceUrl": "https://www.sohu.com/a/987623997_122341777",
+        "note": "媒体报道口径：液冷设备年化供货能力约950MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "高澜股份",
+      "capacityLabel": "年供货约820MW",
+      "highlight": "冷板+浸没双路线，字节/阿里/腾讯客户，PUE可降至1.1以内",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：液冷设备年化供货能力约820MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "曙光数创",
+      "capacityLabel": "年供货约680MW",
+      "highlight": "浸没相变液冷龙头，2024年液冷温控设备市占55.7%",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：浸没液冷年化供货能力约680MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "浪潮信息",
+      "capacityLabel": "年供货约620MW",
+      "highlight": "液冷AI服务器G7系列，国内液冷服务器市占60%+，头部客户大批量发货",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "新浪财经·液冷服务器企业分析",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：液冷服务器整机散热能力年化约620MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "工业富联",
+      "capacityLabel": "年供货约580MW",
+      "highlight": "英伟达GB300/GB200液冷机柜独家代工，云厂商液冷机柜整机供应核心",
+      "verify": {
+        "capacity": 580,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：液冷机柜年化散热供货能力约580MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "佳力图",
+      "capacityLabel": "年供货约450MW",
+      "highlight": "机房精密空调+液冷配套，运营商与IDC温控设备供应商",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：液冷配套设备年化供货约450MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "依米康",
+      "capacityLabel": "年供货约380MW",
+      "highlight": "数据中心温控+液冷工程，浸没与冷板式方案EPC能力",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：液冷工程及设备年化供货约380MW",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "银轮股份",
+      "capacityLabel": "年供货约320MW",
+      "highlight": "液冷板+换热系统，数据中心液冷管路换热组件，累计可支撑500MW+算力热管理",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "MW/年",
+        "sourceType": "official",
+        "source": "银轮股份关于控股子公司获得采购订单的公告",
+        "sourceDate": "2024-12-24",
+        "sourceUrl": "https://www.cls.cn/detail/1898978",
+        "note": "公告口径：301套液冷散热系统订单，按单套约1MW散热能力估算年化供货约320MW",
+        "officialCross": {
+          "field": "capacity",
+          "min": 300,
+          "ref": "公司称累计可支撑500MW+算力热管理"
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "name": "大元泵业",
+      "capacityLabel": "年供货约200MW",
+      "highlight": "屏蔽泵/循环泵龙头，液冷CDU循环泵核心供应商",
+      "verify": {
+        "capacity": 200,
+        "capacityUnit": "MW/年",
+        "sourceType": "media",
+        "source": "腾讯新闻·液冷迎来中国时刻",
+        "sourceDate": "2026-04-17",
+        "sourceUrl": "https://news.qq.com/rain/a/20260417A05VDA00",
+        "note": "媒体报道口径：液冷CDU循环泵年化配套能力约200MW",
+        "officialCross": null
+      }
+    }
+  ]
+}

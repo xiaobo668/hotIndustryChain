@@ -1484,6 +1484,7 @@ transition: opacity 0.2s;
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
+          <span class="hotkey-tag" style="border-color:rgba(245,158,11,0.35);color:#fbbf24;background:rgba(245,158,11,0.12)" onclick="openCapacityRankPage()">📊 产能排行榜</span>
           <span class="hotkey-tag" style="border-color:rgba(220,38,38,0.35);color:#fca5a5;background:rgba(220,38,38,0.12)" onclick="quickSearch('年初涨幅')">📈 年初涨幅Top15</span>
           <span class="hotkey-tag" style="border-color:rgba(7,193,96,0.35);color:#6ee7b7;background:rgba(7,193,96,0.12)" onclick="window.location.href='wechat.html'">📱 公众号文稿</span>
           <span class="hotkey-tag" style="border-color:rgba(108,99,255,0.35);color:#c4b5fd;background:rgba(108,99,255,0.12)" onclick="window.location.href='analysis.html'">📋 分析文档</span>
@@ -1621,6 +1622,10 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
         <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
+      <div class="order-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px;border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06)">
+        <div class="order-rank-entry-title" style="color:#fbbf24">📊 2026 热门产业链产能排行榜</div>
+        <div class="order-rank-entry-desc">高速光模块 · 光芯片 · 液冷 · 算力服务器 · 高端电子布 · 覆铜板 · ABF载板 · MLCC车规算力 · 磷化铟砷化镓衬底 · 先进封装2.5D · DRAM/NAND封测等 — 查看 Top10 产能海报</div>
+      </div>
       <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
         <div class="order-rank-entry-title" style="color:#fca5a5">📈 2026年初涨幅 Top15</div>
         <div class="order-rank-entry-desc">1月至今涨幅最大的15家公司 · 含涨幅、上涨原因、业绩/情绪/炒作归因 · 支持海报下载</div>
@@ -1641,6 +1646,10 @@ transition: opacity 0.2s;
         <div class="welcome-card" onclick="openOrderRankPage()" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06)">
           <div class="welcome-card-icon">🏆</div>
           <div class="welcome-card-name">订单排行榜</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankPage()" style="border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06)">
+          <div class="welcome-card-icon">📊</div>
+          <div class="welcome-card-name">产能排行榜</div>
         </div>
         <div class="welcome-card" onclick="window.location.href='wechat.html'" style="border-color:rgba(7,193,96,0.35);background:rgba(7,193,96,0.06)">
           <div class="welcome-card-icon">📱</div>
@@ -2003,6 +2012,118 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-storage-chip-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="capacity-rank-optical-module-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-optical-module-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-optical-module-canvas','高速光模块产能榜-2026.png')">⬇️ 下载高速光模块产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-optical-module-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-optical-chip-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-optical-chip-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-optical-chip-canvas','光芯片产能榜-2026.png')">⬇️ 下载光芯片产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-optical-chip-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-fiber-preform-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-fiber-preform-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-fiber-preform-canvas','光纤预制棒产能榜-2026.png')">⬇️ 下载光纤预制棒产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-fiber-preform-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-cpo-engine-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-cpo-engine-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-cpo-engine-canvas','CPO光引擎产能榜-2026.png')">⬇️ 下载CPO光引擎产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-cpo-engine-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-liquid-cooling-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-liquid-cooling-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-liquid-cooling-canvas','液冷设备产能榜-2026.png')">⬇️ 下载液冷设备产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-liquid-cooling-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-ai-server-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-ai-server-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-ai-server-canvas','算力服务器产能榜-2026.png')">⬇️ 下载算力服务器产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-ai-server-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-e-glass-fabric-highend-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-e-glass-fabric-highend-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-e-glass-fabric-highend-canvas','高端电子布产能榜-2026.png')">⬇️ 下载高端电子布产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-e-glass-fabric-highend-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-low-dk-yarn-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-low-dk-yarn-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-low-dk-yarn-canvas','低介电子纱产能榜-2026.png')">⬇️ 下载低介电子纱产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-low-dk-yarn-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-ccl-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-ccl-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-ccl-canvas','覆铜板产能榜-2026.png')">⬇️ 下载覆铜板产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-ccl-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-abf-substrate-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-abf-substrate-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-abf-substrate-canvas','ABF载板产能榜-2026.png')">⬇️ 下载ABF载板产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-abf-substrate-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-glass-roving-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-glass-roving-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-glass-roving-canvas','玻纤粗纱产能榜-2026.png')">⬇️ 下载玻纤粗纱产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-glass-roving-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-wind-yarn-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-wind-yarn-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-wind-yarn-canvas','风电纱产能榜-2026.png')">⬇️ 下载风电纱产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-wind-yarn-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-mlcc-auto-compute-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-mlcc-auto-compute-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-mlcc-auto-compute-canvas','MLCC车规算力产能榜-2026.png')">⬇️ 下载MLCC车规算力产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-mlcc-auto-compute-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-inp-gaas-substrate-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-inp-gaas-substrate-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-inp-gaas-substrate-canvas','磷化铟砷化镓衬底产能榜-2026.png')">⬇️ 下载磷化铟砷化镓衬底产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-inp-gaas-substrate-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-advanced-packaging-25d-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-advanced-packaging-25d-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-advanced-packaging-25d-canvas','先进封装2.5D产能榜-2026.png')">⬇️ 下载先进封装2.5D产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-advanced-packaging-25d-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-storage-dram-nand-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-storage-dram-nand-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-storage-dram-nand-canvas','DRAM-NAND封测产能榜-2026.png')">⬇️ 下载DRAM/NAND封测产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-storage-dram-nand-canvas')">📋 复制</button>
+        </div>
+      </div>
     </div>
 
     <!-- 龙头一览视图 -->
@@ -2186,9 +2307,11 @@ transition: opacity 0.2s;
 <script src="data/ytd-gainers2026.js"></script>
 <script src="data/order-rank-power2026.js"></script>
 <script src="data/order-rank-storage-chip2026.js"></script>
+<script src="data/capacity-rank2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
+<script src="js/industry/capacity-rank-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->
 <script src="js/sector/search.js"></script>
@@ -2415,6 +2538,10 @@ document.getElementById('clear-cache-btn') && document.getElementById('clear-cac
 
 function openOrderRankPage() {
   window.location.href = 'theme-poster.html#order-ranks';
+}
+
+function openCapacityRankPage() {
+  window.location.href = 'capacity-poster.html#capacity-ranks';
 }
 
 // 页面加载完成后初始化 Select

@@ -1,0 +1,180 @@
+{
+  "key": "高速光模块",
+  "industryKeys": [
+    "光互联"
+  ],
+  "title": "2026高速光模块（800G/1.6T）现有年产能TOP10",
+  "subtitle": "口径：800G/1.6T数通光模块现有年化产能（万支/年）；1-4、6-10为媒体报道，第5位剑桥科技为年报披露",
+  "capacityUnit": "万支/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中际旭创",
+      "capacityLabel": "年产能约920万支",
+      "highlight": "800G/1.6T光模块全球龙头，泰国+苏州双基地满产，AI数据中心光互联市占率第一",
+      "verify": {
+        "capacity": 920,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：800G/1.6T现有产线年化产能约900万支级；公司未单独披露分产品产能",
+        "officialCross": {
+          "field": "capacity",
+          "min": 900,
+          "ref": "2025年度业绩说明会：产能持续扩张，重点客户已下2026全年订单"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "name": "新易盛",
+      "capacityLabel": "年产能约780万支",
+      "highlight": "800G/1.6T数通光模块高增，四川+泰国基地扩产，北美云厂商核心供应商",
+      "verify": {
+        "capacity": 780,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：高速光模块年化产能约750-800万支；以780万支中值登记",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华工科技",
+      "capacityLabel": "年产能约550万支",
+      "highlight": "硅光+800G/1.6T光模块，DFB芯片垂直整合，3.2T液冷CPO光引擎量产爬坡",
+      "verify": {
+        "capacity": 550,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "新浪·光通信龙头产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://www.sina.cn/news/detail/5288801220171777.html",
+        "note": "媒体报道口径：光模块+光器件合计年化产能约550万支级",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "光迅科技",
+      "capacityLabel": "年产能约450万支",
+      "highlight": "光芯片-光模块垂直整合，800G批量出货、1.6T具备批量交付能力",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：数通光模块年化产能约450万支；含部分自研光芯片配套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "剑桥科技",
+      "capacityLabel": "年化产能350万支",
+      "highlight": "800G/1.6T硅光模块满负荷生产，2025年高速光模块业务同比+240.85%",
+      "verify": {
+        "capacity": 350,
+        "capacityUnit": "万支/年",
+        "sourceType": "official",
+        "source": "剑桥科技2025年年度报告/业绩说明",
+        "sourceDate": "2025全年",
+        "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhwaavz1602411.shtml",
+        "note": "年报/业绩说明口径：高速光模块年化产能350万支满负荷",
+        "officialCross": {
+          "field": "capacity",
+          "exact": 350,
+          "ref": "年报披露：年化产能350万支满负荷"
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "name": "联特科技",
+      "capacityLabel": "年产能约320万支",
+      "highlight": "800G/1.6T高速光模块，光芯片到模块设计制造一体化",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：现有产线年化产能约320万支，港股IPO支撑扩产",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "烽火通信",
+      "capacityLabel": "年产能约280万支",
+      "highlight": "光传输系统设备龙头，光芯片自主可控，数通光模块+算力传输双线",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光通信产业产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：含光模块与光器件合计年化产能约280万支级",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "永鼎股份",
+      "capacityLabel": "年产能约220万支",
+      "highlight": "光纤+1.6T光模块+CPO布局，算力光互联与特种光缆双轮驱动",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：高速光模块年化产能约220万支",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "长芯博创",
+      "capacityLabel": "年产能约180万支",
+      "highlight": "MPO/AOC/硅光互连器件，海外云厂商长期合作，高速互连产能扩张",
+      "verify": {
+        "capacity": 180,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光模块产能与订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：高速互连器件+模块年化产能约180万支级",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "中兴通讯",
+      "capacityLabel": "年产能约150万支",
+      "highlight": "智算中心交换机+光网络方案，自研光模块配套大集群组网",
+      "verify": {
+        "capacity": 150,
+        "capacityUnit": "万支/年",
+        "sourceType": "media",
+        "source": "东方财富·光通信产业产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：数通光模块年化产能约150万支，以自供+外协为主",
+        "officialCross": null
+      }
+    }
+  ]
+}

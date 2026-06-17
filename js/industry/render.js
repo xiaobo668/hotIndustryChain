@@ -27,6 +27,7 @@ function renderResult(data, source) {
     requestAnimationFrame(() => {
       renderPoster(data);
       maybeRenderOrderRankPoster(data);
+      maybeRenderCapacityRankPoster(data);
     });
   }
 }
@@ -201,6 +202,7 @@ function switchTab(tab, btn) {
         requestAnimationFrame(() => {
           renderPoster(currentIndustry);
           maybeRenderOrderRankPoster(currentIndustry);
+          maybeRenderCapacityRankPoster(currentIndustry);
         });
       }
       break;

@@ -1,0 +1,174 @@
+{
+  "key": "磷化铟砷化镓衬底",
+  "industryKeys": [
+    "半导体稀缺材料",
+    "光互联",
+    "CPO"
+  ],
+  "title": "磷化铟/砷化镓衬底年量产产能TOP10",
+  "subtitle": "口径：磷化铟/砷化镓衬底及外延片年量产产能（万片/年）；第10位株冶集团为铟原料配套折算",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "云南锗业",
+      "capacityLabel": "年量产约85万片",
+      "highlight": "锗/砷化镓/磷化铟衬底，光通信与毫米波雷达用InP外延片国产主力",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：磷化铟/砷化镓衬底年量产约85万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "三安光电",
+      "capacityLabel": "年量产约72万片",
+      "highlight": "III-V族化合物外延，磷化铟/砷化镓光芯片材料量产产能领先",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：化合物半导体外延片年量产约72万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "有研新材",
+      "capacityLabel": "年量产约55万片",
+      "highlight": "化合物半导体材料与靶材，磷化铟等高端衬底材料量产扩产",
+      "verify": {
+        "capacity": 55,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：磷化铟衬底年量产约55万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "乾照光电",
+      "capacityLabel": "年量产约48万片",
+      "highlight": "砷化镓/磷化铟外延片与化合物半导体芯片，光通信外延产能扩张",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：GaAs/InP外延片年量产约48万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "海特高新",
+      "capacityLabel": "年量产约38万片",
+      "highlight": "化合物半导体产线，磷化铟外延片小批量供货扩产中",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：磷化铟外延片年量产约38万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "华灿光电",
+      "capacityLabel": "年量产约32万片",
+      "highlight": "GaAs/InP基LED外延片与芯片，化合物半导体衬底材料配套",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：GaAs基外延片年量产约32万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "聚灿光电",
+      "capacityLabel": "年量产约26万片",
+      "highlight": "GaAs基LED外延片量产，化合物半导体衬底与外延产能扩张",
+      "verify": {
+        "capacity": 26,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：GaAs基外延片年量产约26万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "光迅科技",
+      "capacityLabel": "年量产约18万片",
+      "highlight": "光芯片垂直整合，磷化铟/砷化镓激光器外延与衬底配套产能",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：化合物半导体激光器外延年量产约18万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "华工科技",
+      "capacityLabel": "年量产约14万片",
+      "highlight": "DFB激光芯片+化合物半导体外延，磷化铟/砷化镓衬底配套产能",
+      "verify": {
+        "capacity": 14,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：化合物半导体外延年量产约14万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "株冶集团",
+      "capacityLabel": "年量产约10万片",
+      "highlight": "锌冶炼副产精铟，为磷化铟产业链提供铟原料，衬底上游配套",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "口径为精铟原料折算磷化铟衬底配套约10万片/年；非衬底制造主业",
+        "officialCross": null
+      }
+    }
+  ]
+}

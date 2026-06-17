@@ -1,0 +1,179 @@
+{
+  "key": "算力服务器",
+  "industryKeys": [
+    "算力租赁",
+    "AI算力",
+    "AIDC",
+    "预制算力中心底座",
+    "华为概念",
+    "消费电子",
+    "光互联",
+    "光纤概念"
+  ],
+  "title": "算力服务器整机年产能排行榜TOP10",
+  "subtitle": "口径：AI/智算服务器整机年化产能（万台/年）；均为媒体报道口径",
+  "capacityUnit": "万台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "工业富联",
+      "capacityLabel": "年产能约155万台",
+      "highlight": "AI服务器代工龙头，云厂商与租赁商整机柜采购核心供应商",
+      "verify": {
+        "capacity": 155,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：AI服务器整机年化产能约155万台（含ODM）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "浪潮信息",
+      "capacityLabel": "年产能约88万台",
+      "highlight": "AI服务器出货量全球前三，英伟达H100/H800主要ODM合作方",
+      "verify": {
+        "capacity": 88,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：AI服务器整机年化产能约88万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中科曙光",
+      "capacityLabel": "年产能约42万台",
+      "highlight": "国产高端服务器+液冷整机，政务与行业智算项目常见底座",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：高端AI服务器年化产能约42万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "紫光股份",
+      "capacityLabel": "年产能约38万台",
+      "highlight": "新华三服务器与网络设备，数据中心与智算网络一体化交付能力强",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：新华三AI服务器年化产能约38万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "拓维信息",
+      "capacityLabel": "年产能约22万台",
+      "highlight": "华为昇腾生态核心伙伴，兆瀚AI服务器出货量前三，鲲鹏+昇腾双赛道",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：兆瀚AI服务器年化产能约22万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "协创数据",
+      "capacityLabel": "年产能约18万台",
+      "highlight": "智算服务器、存储与物联网硬件，公开报道中与头部云及互联网客户供应链绑定紧",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：智算服务器年化产能约18万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "神州数码",
+      "capacityLabel": "年产能约16万台",
+      "highlight": "IT分销与神州鲲泰信创服务器，云与行业客户算力硬件渠道与交付",
+      "verify": {
+        "capacity": 16,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：神州鲲泰AI服务器年化产能约16万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华勤技术",
+      "capacityLabel": "年产能约14万台",
+      "highlight": "AI服务器ODM扩产，手机ODM龙头向智算硬件整机延伸",
+      "verify": {
+        "capacity": 14,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：AI服务器ODM年化产能约14万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "龙旗科技",
+      "capacityLabel": "年产能约12万台",
+      "highlight": "智能硬件ODM龙头，AI服务器与智算硬件代工产能扩张",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：智算硬件ODM年化产能约12万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "烽火通信",
+      "capacityLabel": "年产能约11万台",
+      "highlight": "央企光通信全产业链，算力传输设备与智算服务器集成供货",
+      "verify": {
+        "capacity": 11,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI服务器产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：智算服务器集成年化产能约11万台",
+        "officialCross": null
+      }
+    }
+  ]
+}
