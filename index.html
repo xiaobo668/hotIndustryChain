@@ -1619,7 +1619,7 @@ transition: opacity 0.2s;
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
-        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 多氟多 · 光互联 · 光纤概念 · 电力 — 查看 Top10 订单规模海报，支持下载与复制</div>
+        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
       <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
         <div class="order-rank-entry-title" style="color:#fca5a5">📈 2026年初涨幅 Top15</div>
@@ -1996,6 +1996,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-power-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-storage-chip-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-storage-chip-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-storage-chip-canvas','存储芯片订单榜-2026.png')">⬇️ 下载存储芯片订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-storage-chip-canvas')">📋 复制</button>
+        </div>
+      </div>
     </div>
 
     <!-- 龙头一览视图 -->
@@ -2178,6 +2185,7 @@ transition: opacity 0.2s;
 <script src="data/order-rank-fiber-concept2026.js"></script>
 <script src="data/ytd-gainers2026.js"></script>
 <script src="data/order-rank-power2026.js"></script>
+<script src="data/order-rank-storage-chip2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
