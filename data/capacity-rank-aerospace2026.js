@@ -5,7 +5,7 @@ var CAPACITY_RANK_AEROSPACE_ROCKET_ENGINE2026 = {
     "商业航天"
   ],
   "title": "2026火箭发动机产能TOP10",
-  "subtitle": "口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商",
   "capacityUnit": "台/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -524,7 +524,7 @@ var CAPACITY_RANK_AEROSPACE_ROCKET_MFG2026 = {
     "商业航天"
   ],
   "title": "2026运载火箭制造产能TOP10",
-  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商",
   "capacityUnit": "枚/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -1043,7 +1043,7 @@ var CAPACITY_RANK_AEROSPACE_CONSTELLATION2026 = {
     "商业航天"
   ],
   "title": "2026星座运营规模TOP10",
-  "subtitle": "口径：低轨/高轨星座在轨运营服务能力（颗在轨当量）；均为星座运营与数据服务规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：低轨/高轨星座在轨运营服务能力（颗在轨当量）；均为星座运营与数据服务规模靠前厂商",
   "capacityUnit": "颗在轨",
   "generatedAt": "2026-06",
   "companies": [
@@ -1217,7 +1217,7 @@ var CAPACITY_RANK_AEROSPACE_SPACE_COMPUTING2026 = {
     "AI算力"
   ],
   "title": "2026太空算力规模TOP10",
-  "subtitle": "口径：卫星在轨/地面遥感云计算算力（PFlops）；均为太空算力与遥感数据处理规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：卫星在轨/地面遥感云计算算力（PFlops）；均为太空算力与遥感数据处理规模靠前厂商",
   "capacityUnit": "PFlops",
   "generatedAt": "2026-06",
   "companies": [
@@ -1390,7 +1390,7 @@ var CAPACITY_RANK_AEROSPACE_MATERIALS2026 = {
     "商业航天"
   ],
   "title": "2026航天材料产能TOP10",
-  "subtitle": "口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商",
   "capacityUnit": "吨/年",
   "generatedAt": "2026-06",
   "companies": [

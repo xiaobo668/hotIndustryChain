@@ -1,10 +1,36 @@
 /**
  * 产能榜分行业独立页面配置与动态渲染
  */
-const CAPACITY_COMPLIANCE_HTML =
-  '<strong>付费合集合规提示（必读）</strong><br/>'
-  + '本合集仅整理光通信、存储、电子材料等赛道企业公开产能、扩产、产线工艺数据，属于半导体行业产业资料工具书，'
-  + '无证券投资分析、无个股价值研判，不构成任何股票买卖操作建议。本人无证券投资咨询执业资质，不提供任何行情、选股相关指导。';
+const CAPACITY_COMPLIANCE_TAIL =
+  '无证券投资分析、无个股价值研判，不构成任何股票买卖操作建议。本人无证券投资咨询执业资质，不提供任何行情、选股相关指导。';
+
+const CAPACITY_COMPLIANCE_BY_GROUP = {
+  'optical-electronics':
+    '本合集仅整理高速光模块、光芯片、电子布/覆铜板、MLCC、先进封装、存储封测等赛道企业公开产能、扩产、产线工艺数据，属于光互联与电子材料产业资料工具书，',
+  'consumer-electronics':
+    '本合集仅整理显示面板、TWS耳机音箱、智能手机ODM、可穿戴设备、充电设备、摄像头模组等赛道企业公开产能、出货量与制造规模数据，属于消费电子产业资料工具书，',
+  compute:
+    '本合集仅整理算力芯片、AI服务器、算力租赁、液冷技术、云计算、边缘计算等赛道企业公开产能、算力规模与产线工艺数据，属于AI算力产业资料工具书，',
+  semiconductor:
+    '本合集仅整理晶圆代工、半导体设备、封装测试、半导体材料、CPU/GPU/模拟/功率芯片等赛道企业公开产能、扩产与制造规模数据，属于半导体产业资料工具书，',
+  battery:
+    '本合集仅整理动力电池、正负极材料、电解液、隔膜、铜箔、储能电池、电池回收等赛道企业公开产能、扩产与产线工艺数据，属于锂电池新能源产业资料工具书，',
+  aerospace:
+    '本合集仅整理火箭发动机、卫星制造、星座运营、航天材料、测控系统等赛道企业公开产能、在轨规模与制造交付数据，属于商业航天产业资料工具书，',
+};
+
+const CAPACITY_COMPLIANCE_HUB_INTRO =
+  '本合集按六大产业板块（光互联与电子材料、消费电子、算力、半导体、锂电池、商业航天）整理各细分赛道企业公开产能、扩产、产线工艺数据，属于产业链产业资料工具书，';
+
+function getCapacityComplianceHtml(groupId) {
+  const intro = groupId
+    ? (CAPACITY_COMPLIANCE_BY_GROUP[groupId] || CAPACITY_COMPLIANCE_HUB_INTRO)
+    : CAPACITY_COMPLIANCE_HUB_INTRO;
+  return '<strong>付费合集合规提示（必读）</strong><br/>' + intro + CAPACITY_COMPLIANCE_TAIL;
+}
+
+/** @deprecated 请使用 getCapacityComplianceHtml(groupId) */
+const CAPACITY_COMPLIANCE_HTML = getCapacityComplianceHtml();
 
 const CAPACITY_RANK_PAGE_GROUPS = {
   'optical-electronics': {
@@ -136,7 +162,7 @@ const CAPACITY_SECTION_HINTS = {
   可穿戴设备: '可穿戴设备年化出货量（万台/年）。',
   充电设备: '充电器/移动电源年化出货量（万台/年）。',
   摄像头模组: '摄像头模组/光学组件年化出货量（万套/年）。',
-  算力芯片: '算力/GPU/AI芯片年化出货量（万片/年）；未纳入科创板标的。',
+  算力芯片: '算力/GPU/AI芯片年化出货量（万片/年）。',
   AI服务器: 'AI/智算服务器整机年化产能（万台/年）。',
   量子计算: '量子计算/量子通信系统年化交付（套/年）。',
   算力租赁: '在运智算算力规模（PFlops）。',
@@ -146,35 +172,35 @@ const CAPACITY_SECTION_HINTS = {
   边缘计算: '边缘计算/IoT节点规模（万节点）。',
   算力算法: '大模型/AI算法API年化调用量（亿次/年）。',
   PCB算力板: 'AI服务器/交换机算力PCB年化产能（万㎡/年）。',
-  晶圆代工: 'IDM/特色工艺晶圆年化产能（万片/年）；未纳入科创板代工标的。',
+  晶圆代工: 'IDM/特色工艺晶圆年化产能（万片/年）。',
   半导体设备: '半导体工艺/检测/封测设备年化交付（台/年）。',
   封装测试: '集成电路封测年化产能（亿颗/年）。',
   半导体材料: '光刻胶/特气/靶材/硅片等年化产能。',
   CPU芯片: 'CPU/MCU/应用处理器年化出货量（万片/年）。',
-  GPU芯片: 'GPU/端侧算力芯片年化出货量（万片/年）；未纳入科创板标的。',
+  GPU芯片: 'GPU/端侧算力芯片年化出货量（万片/年）。',
   模拟芯片: '模拟/电源管理/信号链芯片年化出货量（万片/年）。',
   功率半导体: 'IGBT/MOSFET/功率模块年化出货量（万片/年）。',
   EDA工具: 'EDA软件授权+产线信息化年化交付（套/年）；第1-2位为EDA工具，3-10位为产线配套软件。',
   传感器芯片: 'CIS/MEMS/光学/环境传感芯片年化出货量（万颗/年）。',
-  动力电池: '动力电池电芯年化产能（GWh/年）；未纳入科创板标的。',
+  动力电池: '动力电池电芯年化产能（GWh/年）。',
   正极材料: '三元/磷酸铁锂正极及前驱体年化产能（万吨/年）。',
   负极材料: '人造石墨等负极材料年化产能（万吨/年）。',
   电解液: '电解液及锂盐溶剂年化产能（万吨/年）。',
   隔膜: '湿法/干法/涂覆隔膜年化产能（亿㎡/年）。',
-  铜箔: '锂电用铜箔年化产能（万吨/年）；未纳入科创板标的。',
+  铜箔: '锂电用铜箔年化产能（万吨/年）。',
   固态电池: '固态/半固态电芯及电解质中试与小批量产能（MWh/年）。',
   电池设备: '涂布/卷绕/叠片/检测等锂电设备年化交付（台/年）。',
-  储能电池: '储能电芯与系统年化产能（GWh/年）；未纳入科创板标的。',
+  储能电池: '储能电芯与系统年化产能（GWh/年）。',
   电池回收: '废旧动力电池回收与资源化年化处理量（万吨/年）。',
-  火箭发动机: '液体/固体火箭发动机及核心部件年化交付（台/年）；未纳入科创板标的。',
+  火箭发动机: '液体/固体火箭发动机及核心部件年化交付（台/年）。',
   箭体结构: '火箭箭体结构件/紧固件/贮箱年化交付（套/年）。',
   卫星制造: '商业卫星年化总装交付（颗/年）。',
-  火箭制造: '运载火箭整箭及动力系统年化交付（枚/年）；未纳入科创板标的。',
+  火箭制造: '运载火箭整箭及动力系统年化交付（枚/年）。',
   卫星通信: '卫星通信终端/天线/芯片年化交付（万套/年）。',
   卫星姿态控制: '星敏感器/惯性器件/姿控电子年化交付（万套/年）。',
-  星座运营: '低轨/高轨星座在轨运营服务能力（颗在轨当量）；未纳入科创板标的。',
-  太空算力: '卫星在轨/地面遥感云计算算力（PFlops）；未纳入科创板标的。',
-  航天材料: '钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；未纳入科创板标的。',
+  星座运营: '低轨/高轨星座在轨运营服务能力（颗在轨当量）。',
+  太空算力: '卫星在轨/地面遥感云计算算力（PFlops）。',
+  航天材料: '钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）。',
   航天测控: '航天测控地面站/终端/雷达年化交付（套/年）。',
 };
 
@@ -262,6 +288,9 @@ function initCapacityRankGroupPage(groupId) {
 
   document.title = group.title + ' · 2026';
 
+  const compliance = document.getElementById('capacity-compliance-box');
+  if (compliance) compliance.innerHTML = getCapacityComplianceHtml(groupId);
+
   renderCapacityRankToc(container, group.keys);
 
   group.keys.forEach((key) => {
@@ -292,6 +321,6 @@ function renderCapacityRankHub(containerId) {
 
 function initCapacityRankHub() {
   const compliance = document.getElementById('capacity-compliance-box');
-  if (compliance) compliance.innerHTML = CAPACITY_COMPLIANCE_HTML;
+  if (compliance) compliance.innerHTML = getCapacityComplianceHtml();
   renderCapacityRankHub('capacity-industry-grid');
 }

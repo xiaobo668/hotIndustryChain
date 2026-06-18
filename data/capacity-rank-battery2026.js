@@ -5,7 +5,7 @@ var CAPACITY_RANK_BATTERY_POWER2026 = {
     "锂电池"
   ],
   "title": "2026动力电池产能TOP10",
-  "subtitle": "口径：动力电池电芯年化产能（GWh/年）；均为动力电池制造规模靠前厂商；未纳入科创板(688/689)标的",
+  "subtitle": "口径：动力电池电芯年化产能（GWh/年）；均为动力电池制造规模靠前厂商",
   "capacityUnit": "GWh/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -871,7 +871,7 @@ var CAPACITY_RANK_BATTERY_COPPER_FOIL2026 = {
     "锂电池"
   ],
   "title": "2026锂电铜箔产能TOP10",
-  "subtitle": "口径：锂电用铜箔年化产能（万吨/年）；均为锂电铜箔制造规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：锂电用铜箔年化产能（万吨/年）；均为锂电铜箔制造规模靠前厂商",
   "capacityUnit": "万吨/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -1390,7 +1390,7 @@ var CAPACITY_RANK_BATTERY_STORAGE2026 = {
     "锂电池"
   ],
   "title": "2026储能电池产能TOP10",
-  "subtitle": "口径：储能电芯与系统年化产能（GWh/年）；均为储能电池制造规模靠前厂商；未纳入科创板标的",
+  "subtitle": "口径：储能电芯与系统年化产能（GWh/年）；均为储能电池制造规模靠前厂商",
   "capacityUnit": "GWh/年",
   "generatedAt": "2026-06",
   "companies": [

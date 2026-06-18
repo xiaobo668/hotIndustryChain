@@ -330,7 +330,7 @@ const RANKINGS = [
     industryKeys: ['AI算力', '半导体'],
     key: '算力芯片',
     title: '2026算力芯片出货量TOP10',
-    subtitle: '口径：算力/GPU/AI芯片年化出货量（万片/年）；均为国产算力芯片设计制造龙头；未纳入科创板标的',
+    subtitle: '口径：算力/GPU/AI芯片年化出货量（万片/年）；均为国产算力芯片设计制造规模靠前厂商',
     capacityUnit: '万片/年',
     ENTRIES: COMPUTE_CHIP,
   },

@@ -187,7 +187,7 @@ var CAPACITY_RANK_OPTICAL_CHIP2026 = {
     "CPO"
   ],
   "title": "光芯片（DFB/VCSEL）量产+在建扩产产能TOP10",
-  "subtitle": "口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；均为光芯片/化合物半导体外延制造规模靠前厂商；未纳入科创板光芯片标的",
+  "subtitle": "口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；均为光芯片/化合物半导体外延制造规模靠前厂商",
   "capacityUnit": "万颗/年",
   "generatedAt": "2026-06",
   "companies": [
