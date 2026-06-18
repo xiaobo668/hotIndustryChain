@@ -99,7 +99,9 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "浪潮信息", highlight: "AI服务器出货量全球前三，英伟达H100/H800主要ODM合作方" },
           { name: "工业富联", highlight: "AI服务器代工龙头，云厂商与租赁商整机柜采购核心供应商" },
-          { name: "中科曙光", highlight: "国产高端服务器+液冷整机，政务与行业智算项目常见底座" }
+          { name: "中科曙光", highlight: "国产高端服务器+液冷整机，政务与行业智算项目常见底座" },
+          { name: "闻泰科技", highlight: "AI服务器与智能终端ODM，头部云厂商服务器代工产能扩张" },
+          { name: "中国长城", highlight: "信创服务器与国产算力整机，鲲鹏/飞腾生态服务器量产" }
         ]
       },
       {
@@ -864,7 +866,8 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "宏达电子", highlight: "钽电容+瓷介电容，MLCC与特种被动元件配套军民用电子设备" },
           { name: "振华科技", highlight: "高新电子+瓷介电容器，MLCC与特种被动元件国产化核心企业" },
-          { name: "麦捷科技", highlight: "片式MLCC与电感量产，被动元件一体化供应消费电子与汽车电子" }
+          { name: "麦捷科技", highlight: "片式MLCC与电感量产，被动元件一体化供应消费电子与汽车电子" },
+          { name: "宇顺电子", highlight: "MLCC与被动元件配套，消费电子及特种陶瓷电容产能" }
         ]
       }
     ],
@@ -3079,7 +3082,10 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "源杰科技", highlight: "EML/CW 激光器芯片，100G EML 量产，绑定中际旭创等模块龙头" },
           { name: "华工科技", highlight: "25G/100G DFB 激光芯片垂直整合，硅光+光模块双轮" },
-          { name: "光迅科技", highlight: "光芯片-器件-模块全产业链，25G DFB 批量自供" }
+          { name: "光迅科技", highlight: "光芯片-器件-模块全产业链，25G DFB 批量自供" },
+          { name: "乾照光电", highlight: "砷化镓/磷化铟外延片，光通信激光器芯片材料量产" },
+          { name: "海特高新", highlight: "化合物半导体产线，磷化铟/砷化镓外延片小批量供货" },
+          { name: "兆驰股份", highlight: "化合物半导体外延与光芯片，砷化镓/InP 激光器材料" }
         ]
       },
       {
@@ -3100,7 +3106,9 @@ const INDUSTRY_DATA = {
           { name: "光迅科技", highlight: "800G 批量出货，1.6T 具备批量交付能力" },
           { name: "华工科技", highlight: "800G/1.6T 硅光模块，3.2T 液冷 CPO 光引擎" },
           { name: "剑桥科技", highlight: "800G/1.6T 硅光模块，350 万支年化产能满负荷" },
-          { name: "联特科技", highlight: "800G/1.6T 高速光模块，光芯片到模块设计制造" }
+          { name: "联特科技", highlight: "800G/1.6T 高速光模块，光芯片到模块设计制造" },
+          { name: "铭普光磁", highlight: "光通信磁性元器件与数通光模块，800G/1.6T 产能扩张" },
+          { name: "亨通光电", highlight: "光纤+光模块一体化，数通光模块与特种光纤协同出货" }
         ]
       },
       {

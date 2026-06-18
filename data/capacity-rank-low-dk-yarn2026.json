@@ -97,8 +97,8 @@
     {
       "rank": 6,
       "name": "宏和科技",
-      "capacityLabel": "年产能约4.2万吨",
-      "highlight": "极薄T布/Low-Dk/Low-CTE特种电子布，配套低介电电子纱自供+外购",
+      "capacityLabel": "原丝需求折算约4.2万吨",
+      "highlight": "极薄T布/Low-Dk特种电子布龙头，配套低介电原丝外购+自供；非电子纱产线产能",
       "verify": {
         "capacity": 4.2,
         "capacityUnit": "万吨/年",
@@ -106,7 +106,7 @@
         "source": "证券时报·宏和科技AI电子布与T布龙头分析",
         "sourceDate": "2026-02",
         "sourceUrl": "https://stcn.com/article/detail/3616987.html",
-        "note": "媒体报道口径：配套低介电电子纱年化产能约4.2万吨",
+        "note": "主营电子布织造非电子纱制造；4.2万吨为织造原丝需求折算参考",
         "officialCross": null
       }
     },

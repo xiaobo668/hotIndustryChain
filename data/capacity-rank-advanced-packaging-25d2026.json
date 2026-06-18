@@ -9,7 +9,7 @@
     "长鑫存储"
   ],
   "title": "先进封装（2.5D/3D）封装产能排行TOP10",
-  "subtitle": "口径：2.5D/3D/Chiplet先进封装年化产能（万片/年）；9-10含载板配套先进封装产能折算",
+  "subtitle": "口径：2.5D/3D/Chiplet先进封装年化产能（万片/年）；5-10含WLCSP/封装材料/载板/模组配套折算，非纯OSAT封测产能",
   "capacityUnit": "万片/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -80,8 +80,8 @@
     {
       "rank": 5,
       "name": "晶方科技",
-      "capacityLabel": "年产能约95万片",
-      "highlight": "CIS晶圆级封装（WLCSP）龙头，TSV/3D封装技术领先",
+      "capacityLabel": "WLCSP约95万片",
+      "highlight": "CIS晶圆级封装（WLCSP）龙头，TSV/3D封装技术领先；以CIS为主、非通用2.5D/3D OSAT",
       "verify": {
         "capacity": 95,
         "capacityUnit": "万片/年",
@@ -89,7 +89,7 @@
         "source": "晶方科技2025年年度报告",
         "sourceDate": "2025全年",
         "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF",
-        "note": "未单独披露2.5D/3D产能；以WLCSP/TSV规模折算约95万片/年",
+        "note": "主营CIS晶圆级封装，非通用2.5D/3D Chiplet OSAT；95万片为WLCSP/TSV规模折算",
         "officialCross": null
       }
     },
@@ -112,8 +112,8 @@
     {
       "rank": 7,
       "name": "联瑞新材",
-      "capacityLabel": "年产能约58万片",
-      "highlight": "球形硅微粉填料龙头，EMC与先进封装封装料关键填料，2.5D配套",
+      "capacityLabel": "封装料折算约58万片",
+      "highlight": "球形硅微粉填料龙头，EMC与先进封装封装料关键填料；非OSAT封测产能",
       "verify": {
         "capacity": 58,
         "capacityUnit": "万片/年",
@@ -121,15 +121,15 @@
         "source": "东方财富·先进封装产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：先进封装封装料配套产能折算约58万片/年",
+        "note": "主营封装材料填料，非OSAT封测制造；58万片为封装料配套折算产能",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "江波龙",
-      "capacityLabel": "年产能约45万片",
-      "highlight": "存储模组龙头，先进封装产能释放带动国产颗粒导入与出货",
+      "capacityLabel": "模组折算约45万片",
+      "highlight": "存储模组龙头，先进封装产能释放带动国产颗粒导入；非OSAT封测厂",
       "verify": {
         "capacity": 45,
         "capacityUnit": "万片/年",
@@ -137,15 +137,15 @@
         "source": "新浪财经·国产存储芯片订单TOP10",
         "sourceDate": "2026-03-22",
         "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
-        "note": "媒体报道口径：存储模组+先进封测一体化产能约45万片/年",
+        "note": "主营存储模组制造，非OSAT先进封装厂；45万片为模组一体化折算参考",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "兴森科技",
-      "capacityLabel": "年产能约38万片",
-      "highlight": "IC载板+FCBGA量产爬坡，Chiplet互连载板配套2.5D先进封装",
+      "capacityLabel": "载板配套约38万片",
+      "highlight": "IC载板+FCBGA量产爬坡，Chiplet互连载板配套2.5D先进封装；非OSAT封测产能",
       "verify": {
         "capacity": 38,
         "capacityUnit": "万片/年",
@@ -153,7 +153,7 @@
         "source": "东方财富·高景气赛道龙头订单梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：载板配套先进封装产能约38万片/年",
+        "note": "主营封装基板制造，非OSAT封测产能；38万片为载板配套折算",
         "officialCross": null
       }
     },

@@ -5,7 +5,7 @@
     "光互联"
   ],
   "title": "CPO光引擎量产规划产能榜单TOP10",
-  "subtitle": "口径：CPO光引擎及核心组件量产规划产能（万套/年）；均为媒体报道口径",
+  "subtitle": "口径：CPO光引擎量产规划产能（万套/年），非现有量产；7-10含无源器件/互连组件/系统组网配套折算",
   "capacityUnit": "万套/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -108,8 +108,8 @@
     {
       "rank": 7,
       "name": "博创科技",
-      "capacityLabel": "规划产能约6万套/年",
-      "highlight": "PLC分路器与硅光无源器件，CPO光路集成配套",
+      "capacityLabel": "无源器件规划约6万套/年",
+      "highlight": "PLC分路器与硅光无源器件，CPO光路集成配套；非CPO光引擎整机",
       "verify": {
         "capacity": 6,
         "capacityUnit": "万套/年",
@@ -117,15 +117,15 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：CPO光引擎及无源集成规划约6万套/年",
+        "note": "主营硅光无源器件，非CPO光引擎整机制造；6万套为光路集成配套规划折算",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "太辰光",
-      "capacityLabel": "规划产能约5.5万套/年",
-      "highlight": "MPO连接器与柔性光路，CPO交换机高密度光互连",
+      "capacityLabel": "互连组件规划约5.5万套/年",
+      "highlight": "MPO连接器与柔性光路，CPO交换机高密度互连；非CPO光引擎整机",
       "verify": {
         "capacity": 5.5,
         "capacityUnit": "万套/年",
@@ -133,15 +133,15 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：CPO互连组件规划产能约5.5万套/年",
+        "note": "主营MPO连接器与柔性光路，非CPO光引擎制造；5.5万套为互连组件规划折算",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "烽火通信",
-      "capacityLabel": "规划产能约4.5万套/年",
-      "highlight": "光传输与交换设备，CPO交换机系统级落地与光引擎配套",
+      "capacityLabel": "系统配套规划约4.5万套/年",
+      "highlight": "光传输与交换设备系统级落地，CPO组网方案配套；非光引擎制造主业",
       "verify": {
         "capacity": 4.5,
         "capacityUnit": "万套/年",
@@ -149,15 +149,15 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：CPO光引擎及系统配套规划约4.5万套/年",
+        "note": "CPO系统级配套规划产能，非独立光引擎制造产线",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "中兴通讯",
-      "capacityLabel": "规划产能约4万套/年",
-      "highlight": "智算中心交换机+CPO组网方案，大集群光互连核心",
+      "capacityLabel": "组网配套规划约4万套/年",
+      "highlight": "智算中心交换机+CPO组网方案，光引擎以系统配套为主、非独立外销产能",
       "verify": {
         "capacity": 4,
         "capacityUnit": "万套/年",
@@ -165,7 +165,7 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：CPO光引擎系统配套规划约4万套/年",
+        "note": "CPO光互连以自有交换机组网配套为主，非光引擎整机外销产能",
         "officialCross": null
       }
     }

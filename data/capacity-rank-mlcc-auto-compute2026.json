@@ -4,15 +4,15 @@
     "MLCC"
   ],
   "title": "MLCC高端车规/算力产能排名TOP10",
-  "subtitle": "口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-7为MLCC制造龙头，8-10为粉体/辅材折算配套产能",
+  "subtitle": "口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；8-10为粉体/辅材折算配套产能",
   "capacityUnit": "亿颗/年",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "三环集团",
-      "capacityLabel": "年产能约1800亿颗",
-      "highlight": "AI+车规高容MLCC满产满销，自主粉体垂直一体化，排产至2026年Q3",
+      "capacityLabel": "MLCC总产能约1800亿颗",
+      "highlight": "AI+车规高容MLCC满产满销，自主粉体垂直一体化；车规/算力高容为出货主力但非全部产能",
       "verify": {
         "capacity": 1800,
         "capacityUnit": "亿颗/年",
@@ -20,15 +20,15 @@
         "source": "今日头条·MLCC三强2025成绩单",
         "sourceDate": "2026-05",
         "sourceUrl": "https://www.toutiao.com/article/7644551146699047474/",
-        "note": "媒体报道口径：车规、AI服务器高端MLCC年化产能约1800亿颗",
+        "note": "1800亿颗为MLCC总成产能，非仅车规/算力型号；高端车规/算力高容约占出货主力",
         "officialCross": null
       }
     },
     {
       "rank": 2,
       "name": "风华高科",
-      "capacityLabel": "年产能约1600亿颗",
-      "highlight": "国内月产能冠军，0402/0603 MLCC暂停接单，稼动率98%-100%",
+      "capacityLabel": "MLCC总产能约1600亿颗",
+      "highlight": "国内月产能冠军，0402/0603 MLCC暂停接单，稼动率98%-100%；车规/算力为高端品类主力",
       "verify": {
         "capacity": 1600,
         "capacityUnit": "亿颗/年",
@@ -36,7 +36,7 @@
         "source": "工商时报·风华高科暂停接单报道",
         "sourceDate": "2026-05-27",
         "sourceUrl": "https://www.ctee.com.tw/news/20260527700061-439901",
-        "note": "媒体报道口径：高端车规/算力MLCC年化产能约1600亿颗",
+        "note": "1600亿颗为MLCC总成产能，非仅车规/算力型号；暂停接单反映高端品类紧缺",
         "officialCross": null
       }
     },
@@ -123,8 +123,8 @@
     {
       "rank": 8,
       "name": "国瓷材料",
-      "capacityLabel": "年产能约180亿颗",
-      "highlight": "MLCC介质陶瓷粉龙头，中高端粉体国产替代，绑定风华/三环车规扩产",
+      "capacityLabel": "粉体折算约180亿颗",
+      "highlight": "MLCC介质陶瓷粉龙头，中高端粉体国产替代，绑定风华/三环车规扩产；非MLCC制造产能",
       "verify": {
         "capacity": 180,
         "capacityUnit": "亿颗/年",
@@ -139,8 +139,8 @@
     {
       "rank": 9,
       "name": "博迁新材",
-      "capacityLabel": "年产能约120亿颗",
-      "highlight": "MLCC内电极超细镍粉龙头，全球被动元件巨头镍粉核心供应商",
+      "capacityLabel": "镍粉折算约120亿颗",
+      "highlight": "MLCC内电极超细镍粉龙头，全球被动元件巨头镍粉核心供应商；非MLCC制造产能",
       "verify": {
         "capacity": 120,
         "capacityUnit": "亿颗/年",
@@ -155,8 +155,8 @@
     {
       "rank": 10,
       "name": "洁美科技",
-      "capacityLabel": "年产能约95亿颗",
-      "highlight": "MLCC离型膜/纸质载带龙头，被动元件扩产直接拉动车规MLCC辅材",
+      "capacityLabel": "辅材折算约95亿颗",
+      "highlight": "MLCC离型膜/纸质载带龙头，被动元件扩产直接拉动车规MLCC辅材；非MLCC制造产能",
       "verify": {
         "capacity": 95,
         "capacityUnit": "亿颗/年",

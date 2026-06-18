@@ -4,7 +4,7 @@
     "光纤概念"
   ],
   "title": "光纤预制棒年产能排名TOP10",
-  "subtitle": "口径：光棒/预制棒年化产能（吨/年），算力特种光纤核心上游；均为媒体报道口径",
+  "subtitle": "口径：光棒/预制棒年化产能（吨/年）；1-7为光棒制造龙头，8-10为光缆/工程企业外协或产业链配套折算",
   "capacityUnit": "吨/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -123,8 +123,8 @@
     {
       "rank": 8,
       "name": "汇源通信",
-      "capacityLabel": "年产能约680吨",
-      "highlight": "光缆制造+通信工程，光纤概念链工程配套",
+      "capacityLabel": "外协配套约680吨",
+      "highlight": "光缆制造+通信工程，无自主光棒产线，预制棒以外协/采购为主",
       "verify": {
         "capacity": 680,
         "capacityUnit": "吨/年",
@@ -132,15 +132,15 @@
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：预制棒年化产能约680吨",
+        "note": "主营光缆与工程服务，非光棒制造厂商；680吨为产业链外协配套折算参考",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "华脉科技",
-      "capacityLabel": "年产能约450吨",
-      "highlight": "通信网络物理连接，光缆/配线/机柜算力机房配套",
+      "capacityLabel": "配套折算约450吨",
+      "highlight": "通信网络物理连接器件，光缆/配线/机柜配套；非预制棒制造主业",
       "verify": {
         "capacity": 450,
         "capacityUnit": "吨/年",
@@ -148,15 +148,15 @@
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：光棒年化产能约450吨",
+        "note": "主营光缆配线与机房配套，无自主光棒产线；450吨为产业链配套折算参考",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "通光线缆",
-      "capacityLabel": "年产能约380吨",
-      "highlight": "电力特种光缆/OPGW龙头，预制棒外协自给+算力特种光纤配套",
+      "capacityLabel": "外协自给约380吨",
+      "highlight": "电力特种光缆/OPGW龙头，预制棒以外协自给为主、非光棒制造厂商",
       "verify": {
         "capacity": 380,
         "capacityUnit": "吨/年",
@@ -164,7 +164,7 @@
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：预制棒年化产能约380吨（含外协自给）",
+        "note": "主营特种光缆，预制棒依赖外协；380吨为外协自给折算产能参考",
         "officialCross": null
       }
     }

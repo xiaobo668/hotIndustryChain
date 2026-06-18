@@ -11,7 +11,7 @@
     "光纤概念"
   ],
   "title": "算力服务器整机年产能排行榜TOP10",
-  "subtitle": "口径：AI/智算服务器整机年化产能（万台/年）；均为媒体报道口径",
+  "subtitle": "口径：AI/智算服务器整机年化产能（万台/年）；第7位神州数码为渠道集成交付、第10位烽火为方案集成供货",
   "capacityUnit": "万台/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -114,8 +114,8 @@
     {
       "rank": 7,
       "name": "神州数码",
-      "capacityLabel": "年产能约16万台",
-      "highlight": "IT分销与神州鲲泰信创服务器，云与行业客户算力硬件渠道与交付",
+      "capacityLabel": "渠道交付约16万台",
+      "highlight": "IT分销与神州鲲泰信创服务器，云与行业客户算力硬件渠道与集成交付；非自有工厂制造产能",
       "verify": {
         "capacity": 16,
         "capacityUnit": "万台/年",
@@ -123,7 +123,7 @@
         "source": "新浪财经·AI服务器产能梳理",
         "sourceDate": "2026-04-18",
         "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
-        "note": "媒体报道口径：神州鲲泰AI服务器年化产能约16万台",
+        "note": "口径为渠道与集成交付能力，非自有工厂AI服务器制造产能",
         "officialCross": null
       }
     },
@@ -162,8 +162,8 @@
     {
       "rank": 10,
       "name": "烽火通信",
-      "capacityLabel": "年产能约11万台",
-      "highlight": "央企光通信全产业链，算力传输设备与智算服务器集成供货",
+      "capacityLabel": "集成供货约11万台",
+      "highlight": "央企光通信全产业链，算力传输设备与智算方案集成供货；整机制造产能偏小",
       "verify": {
         "capacity": 11,
         "capacityUnit": "万台/年",
@@ -171,7 +171,7 @@
         "source": "新浪财经·AI服务器产能梳理",
         "sourceDate": "2026-04-18",
         "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
-        "note": "媒体报道口径：智算服务器集成年化产能约11万台",
+        "note": "口径为智算方案集成供货能力，非AI服务器整机制造龙头产能",
         "officialCross": null
       }
     }
