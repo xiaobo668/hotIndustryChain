@@ -329,6 +329,27 @@ function maybeRenderCapacityRankPoster(industry) {
   const industryKey = resolveCapacityRankIndustryKey(industry);
   let matched = false;
 
+  const pageLink = document.getElementById('capacity-industry-page-link');
+  if (pageLink && typeof getCapacityPageUrlForIndustry === 'function') {
+    const url = getCapacityPageUrlForIndustry(industryKey);
+    if (url) {
+      pageLink.style.display = '';
+      pageLink.onclick = () => { window.location.href = url; };
+      const groupId = typeof INDUSTRY_TO_CAPACITY_PAGE !== 'undefined'
+        ? INDUSTRY_TO_CAPACITY_PAGE[industryKey]
+        : null;
+      const group = groupId && typeof getCapacityPageGroup === 'function'
+        ? getCapacityPageGroup(groupId)
+        : null;
+      const titleEl = pageLink.querySelector('.capacity-industry-page-link-title');
+      const descEl = pageLink.querySelector('.capacity-industry-page-link-desc');
+      if (titleEl) titleEl.textContent = '📊 查看「' + (group ? group.title : industryKey) + '」全部产能榜';
+      if (descEl && group) descEl.textContent = group.subtitle + ' — 共 ' + group.keys.length + ' 个赛道 Top10';
+    } else {
+      pageLink.style.display = 'none';
+    }
+  }
+
   CAPACITY_RANK_POSTER_CONFIG.forEach((cfg) => {
     const wrap = document.getElementById(cfg.wrapId);
     if (!wrap) return;

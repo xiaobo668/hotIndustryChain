@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>算力板块产能榜 · 2026</title>
+  <link rel="stylesheet" href="capacity-common.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../capacity-poster.html">← 返回产能首页</a>
+    <a class="back" href="../index.html" style="margin-left:12px">返回产业链首页</a>
+    <h1 id="capacity-page-title">算力板块产能榜</h1>
+    <div class="compliance-box" id="capacity-compliance-box"></div>
+    <p class="sub" id="capacity-page-subtitle"></p>
+    <div id="capacity-rank-sections"></div>
+  </div>
+  <script src="../js/utils/canvas.js"></script>
+  <script src="../data/capacity-rank-compute2026.js"></script>
+  <script src="../js/industry/capacity-rank-poster.js"></script>
+  <script src="../js/industry/capacity-rank-pages.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const box = document.getElementById('capacity-compliance-box');
+      if (box) box.innerHTML = CAPACITY_COMPLIANCE_HTML;
+      initCapacityRankGroupPage('compute');
+    });
+  </script>
+</body>
+</html>

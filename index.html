@@ -1623,8 +1623,26 @@ transition: opacity 0.2s;
         <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 电子纸 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
       <div class="order-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px;border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06)">
-        <div class="order-rank-entry-title" style="color:#fbbf24">📊 2026 热门产业链产能排行榜</div>
-        <div class="order-rank-entry-desc">高速光模块 · 光芯片 · 液冷 · 算力服务器 · 高端电子布 · 覆铜板 · ABF载板 · MLCC车规算力 · 磷化铟砷化镓衬底 · 先进封装2.5D · DRAM/NAND封测 · 消费电子（显示面板/TWS/手机ODM/可穿戴/充电/摄像头）等 — 查看 Top10 产能海报</div>
+        <div class="order-rank-entry-title" style="color:#fbbf24">📊 2026 产业链产能排行榜</div>
+        <div class="order-rank-entry-desc">按行业拆分：光互联与电子材料（16）· 消费电子（6）· 算力板块（10）· 半导体（10）— 共 42 个细分赛道 Top10 产能海报</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px" id="welcome-capacity-grid">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('optical-electronics')" style="border-color:rgba(59,130,246,0.35);background:rgba(59,130,246,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">🔗</div>
+          <div class="welcome-card-name" style="font-size:13px">光互联与电子材料</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('consumer-electronics')" style="border-color:rgba(168,85,247,0.35);background:rgba(168,85,247,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">📱</div>
+          <div class="welcome-card-name" style="font-size:13px">消费电子</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('compute')" style="border-color:rgba(124,58,237,0.35);background:rgba(124,58,237,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">🚀</div>
+          <div class="welcome-card-name" style="font-size:13px">算力板块</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('semiconductor')" style="border-color:rgba(26,115,232,0.35);background:rgba(26,115,232,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">💎</div>
+          <div class="welcome-card-name" style="font-size:13px">半导体</div>
+        </div>
       </div>
       <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
         <div class="order-rank-entry-title" style="color:#fca5a5">📈 2026年初涨幅 Top15</div>
@@ -1663,7 +1681,7 @@ transition: opacity 0.2s;
           <div class="welcome-card-icon">📅</div>
           <div class="welcome-card-name">2026六大主线</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('半导体')">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('semiconductor')" style="border-color:rgba(26,115,232,0.35);background:rgba(26,115,232,0.06)">
           <div class="welcome-card-icon">💎</div>
           <div class="welcome-card-name">半导体</div>
         </div>
@@ -1671,7 +1689,7 @@ transition: opacity 0.2s;
           <div class="welcome-card-icon">🔬</div>
           <div class="welcome-card-name">稀缺材料</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('AI算力')">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('compute')" style="border-color:rgba(124,58,237,0.35);background:rgba(124,58,237,0.06)">
           <div class="welcome-card-icon">🚀</div>
           <div class="welcome-card-name">AI算力</div>
         </div>
@@ -1699,7 +1717,7 @@ transition: opacity 0.2s;
           <div class="welcome-card-icon">🧠</div>
           <div class="welcome-card-name">人工智能</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('消费电子')">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('consumer-electronics')" style="border-color:rgba(168,85,247,0.35);background:rgba(168,85,247,0.06)">
           <div class="welcome-card-icon">📱</div>
           <div class="welcome-card-name">消费电子</div>
         </div>
@@ -1918,6 +1936,10 @@ transition: opacity 0.2s;
 
     <!-- 产业链海报视图 -->
     <div id="view-poster" class="view-panel">
+      <div id="capacity-industry-page-link" class="order-rank-entry" style="display:none;margin-bottom:16px;border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06);cursor:pointer" role="button" tabindex="0">
+        <div class="capacity-industry-page-link-title order-rank-entry-title" style="color:#fbbf24">📊 查看行业全部产能榜</div>
+        <div class="capacity-industry-page-link-desc order-rank-entry-desc">点击进入该行业细分赛道产能 Top10 合集页</div>
+      </div>
       <div class="poster-wrap" id="ytd-gainers-wrap" style="display:none;margin-bottom:20px">
         <div id="ytd-gainers-pages"></div>
         <div class="poster-actions">
@@ -2322,6 +2344,7 @@ transition: opacity 0.2s;
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
+<script src="js/industry/capacity-rank-pages.js"></script>
 <script src="js/industry/capacity-rank-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->
@@ -2552,7 +2575,7 @@ function openOrderRankPage() {
 }
 
 function openCapacityRankPage() {
-  window.location.href = 'capacity-poster.html#capacity-ranks';
+  window.location.href = 'capacity-poster.html';
 }
 
 // 页面加载完成后初始化 Select
