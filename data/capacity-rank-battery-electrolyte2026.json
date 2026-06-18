@@ -1,0 +1,173 @@
+{
+  "key": "电解液",
+  "industryKeys": [
+    "锂电池",
+    "多氟多"
+  ],
+  "title": "2026电解液产能TOP10",
+  "subtitle": "口径：电解液及锂盐溶剂年化产能（万吨/年）；均为电解液制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "天赐材料",
+      "capacityLabel": "产能约42万吨",
+      "highlight": "电解液出货量规模居前，LiFSI添加剂与六氟磷酸锂自供",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约42万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "新宙邦",
+      "capacityLabel": "产能约35万吨",
+      "highlight": "电解液规模靠前厂商，海外动力电池客户与国内头部电芯厂订单饱满",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约35万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "多氟多",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "六氟磷酸锂+电解液一体化，氟化工锂盐与电解液产线满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "瑞泰新材",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "电解液与锂盐添加剂，动力电池电解液出货量行业前列",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "天际股份",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "六氟磷酸锂+LiFSI锂盐，电解液上游锂盐产线扩产",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂盐年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "胜华新材",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "碳酸酯溶剂+电解液，溶剂与电解液一体化产线",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "江苏国泰",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "外贸+电解液子公司，电解液产能与锂盐配套",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "永太科技",
+      "capacityLabel": "产能约10万吨",
+      "highlight": "氟化工中间体+电解液锂盐，LiFSI与电解液添加剂产线",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液锂盐年化产能约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "海科新源",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "碳酸酯溶剂规模靠前，电解液溶剂与添加剂产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "奥克股份",
+      "capacityLabel": "产能约6万吨",
+      "highlight": "环氧乙烷衍生物+电解液溶剂，碳酸酯溶剂产线配套",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约6万吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

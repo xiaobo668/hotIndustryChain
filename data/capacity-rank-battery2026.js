@@ -1,0 +1,1746 @@
+/** 2026 锂电池板块产能排行榜 · 由 scripts/build-capacity-rank-battery2026.js 生成 */
+var CAPACITY_RANK_BATTERY_POWER2026 = {
+  "key": "动力电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026动力电池产能TOP10",
+  "subtitle": "口径：动力电池电芯年化产能（GWh/年）；均为动力电池制造规模靠前厂商；未纳入科创板(688/689)标的",
+  "capacityUnit": "GWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "capacityLabel": "产能约385GWh",
+      "highlight": "动力电池装机规模居前，麒麟/神行超充电池产线满产，大圆柱与储能电芯协同扩产",
+      "verify": {
+        "capacity": 385,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约385GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "比亚迪",
+      "capacityLabel": "产能约320GWh",
+      "highlight": "刀片电池自供+外供双线，磷酸铁锂动力电池产线持续爬坡",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约320GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约185GWh",
+      "highlight": "大圆柱+软包动力电池产线，动力与储能电芯双线满产",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约185GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国轩高科",
+      "capacityLabel": "产能约142GWh",
+      "highlight": "磷酸铁锂动力电池产能扩张，大众合资产线与海外基地同步放量",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约142GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欣旺达",
+      "capacityLabel": "产能约98GWh",
+      "highlight": "动力电池PACK+电芯一体化，混动与纯电客户订单饱满",
+      "verify": {
+        "capacity": 98,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约98GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "中创新航",
+      "capacityLabel": "产能约85GWh",
+      "highlight": "三元+磷酸铁锂动力电池产线，乘用车与储能客户双线供货",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约85GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约72GWh",
+      "highlight": "动力+储能电芯制造，大储与轻型动力电池产线扩产",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约72GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "多氟多",
+      "capacityLabel": "产能约58GWh",
+      "highlight": "大圆柱动力电池+储能电芯，氟化工锂盐与电芯垂直一体化",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约58GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "雄韬股份",
+      "capacityLabel": "产能约42GWh",
+      "highlight": "铅酸+锂电双主业，氢燃料电池与动力电池产线协同",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约42GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "蔚蓝锂芯",
+      "capacityLabel": "产能约35GWh",
+      "highlight": "小型动力+工具电池电芯，高倍率锂电池产线满产",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约35GWh",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_POWER2026 = CAPACITY_RANK_BATTERY_POWER2026;
+var CAPACITY_RANK_BATTERY_CATHODE2026 = {
+  "key": "正极材料",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026正极材料产能TOP10",
+  "subtitle": "口径：三元/磷酸铁锂正极及前驱体年化产能（万吨/年）；均为正极材料制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "湖南裕能",
+      "capacityLabel": "产能约85万吨",
+      "highlight": "磷酸铁锂正极材料出货量规模居前，磷酸铁锂产线满产满销",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：磷酸铁锂正极年化产能约85万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "当升科技",
+      "capacityLabel": "产能约42万吨",
+      "highlight": "高镍NCM正极材料规模靠前，海外动力电池客户订单饱满",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：三元正极年化产能约42万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中伟新材",
+      "capacityLabel": "产能约38万吨",
+      "highlight": "三元前驱体+正极材料一体化，前驱体产线规模国内领先",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极前驱体年化产能约38万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "德方纳米",
+      "capacityLabel": "产能约32万吨",
+      "highlight": "纳米磷酸铁锂正极材料，磷酸铁锂产线持续扩产",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：磷酸铁锂正极年化产能约32万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "丰元股份",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "磷酸铁锂+草酸锂盐，正极材料与锂盐原料协同布局",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "龙蟠科技",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "磷酸铁锂正极材料扩产，车用润滑油与锂电材料双主业",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "盟固利",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "钴酸锂+三元正极材料，消费电子与动力电池正极双线",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华友钴业",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "钴镍锂资源+三元前驱体，正极前驱体产线一体化",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极前驱体年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "杉杉股份",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "人造石墨负极+正极材料，锂电材料双产品线协同",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科恒股份",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "稀土发光材料+锂电正极，钴酸锂与三元正极产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约8万吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_CATHODE2026 = CAPACITY_RANK_BATTERY_CATHODE2026;
+var CAPACITY_RANK_BATTERY_ANODE2026 = {
+  "key": "负极材料",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026负极材料产能TOP10",
+  "subtitle": "口径：人造石墨等负极材料年化产能（万吨/年）；均为负极材料制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "贝特瑞",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "人造石墨负极材料出货量规模居前，硅基负极产线持续导入",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "璞泰来",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "人造石墨负极+涂覆隔膜，负极材料产线满产",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "杉杉股份",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "人造石墨负极材料规模靠前，负极产线与正极材料协同",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "尚太科技",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "人造石墨负极材料，一体化石墨化产线成本优势突出",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中科电气",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "电磁冶金设备+负极材料，石墨化与负极产线垂直整合",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "翔丰华",
+      "capacityLabel": "产能约10万吨",
+      "highlight": "人造石墨负极材料，快充负极产线扩产",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "方大炭素",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "石墨电极+锂电负极石墨化，负极石墨化代工产能扩张",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极石墨化年化产能约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "道氏技术",
+      "capacityLabel": "产能约6万吨",
+      "highlight": "陶瓷釉面+锂电正极/负极材料，三元前驱体与负极协同",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "百川股份",
+      "capacityLabel": "产能约5万吨",
+      "highlight": "精细化工+锂电负极石墨化，负极材料产线配套",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约5万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "永东股份",
+      "capacityLabel": "产能约4万吨",
+      "highlight": "炭黑+针状焦原料，负极材料上游原料与石墨化配套",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极原料配套年化产能约4万吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_ANODE2026 = CAPACITY_RANK_BATTERY_ANODE2026;
+var CAPACITY_RANK_BATTERY_ELECTROLYTE2026 = {
+  "key": "电解液",
+  "industryKeys": [
+    "锂电池",
+    "多氟多"
+  ],
+  "title": "2026电解液产能TOP10",
+  "subtitle": "口径：电解液及锂盐溶剂年化产能（万吨/年）；均为电解液制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "天赐材料",
+      "capacityLabel": "产能约42万吨",
+      "highlight": "电解液出货量规模居前，LiFSI添加剂与六氟磷酸锂自供",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约42万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "新宙邦",
+      "capacityLabel": "产能约35万吨",
+      "highlight": "电解液规模靠前厂商，海外动力电池客户与国内头部电芯厂订单饱满",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约35万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "多氟多",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "六氟磷酸锂+电解液一体化，氟化工锂盐与电解液产线满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "瑞泰新材",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "电解液与锂盐添加剂，动力电池电解液出货量行业前列",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "天际股份",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "六氟磷酸锂+LiFSI锂盐，电解液上游锂盐产线扩产",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂盐年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "胜华新材",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "碳酸酯溶剂+电解液，溶剂与电解液一体化产线",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "江苏国泰",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "外贸+电解液子公司，电解液产能与锂盐配套",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "永太科技",
+      "capacityLabel": "产能约10万吨",
+      "highlight": "氟化工中间体+电解液锂盐，LiFSI与电解液添加剂产线",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液锂盐年化产能约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "海科新源",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "碳酸酯溶剂规模靠前，电解液溶剂与添加剂产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "奥克股份",
+      "capacityLabel": "产能约6万吨",
+      "highlight": "环氧乙烷衍生物+电解液溶剂，碳酸酯溶剂产线配套",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电解液溶剂年化产能约6万吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_ELECTROLYTE2026 = CAPACITY_RANK_BATTERY_ELECTROLYTE2026;
+var CAPACITY_RANK_BATTERY_SEPARATOR2026 = {
+  "key": "隔膜",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026锂电隔膜产能TOP10",
+  "subtitle": "口径：湿法/干法/涂覆隔膜年化产能（亿㎡/年）；均为隔膜制造规模靠前厂商",
+  "capacityUnit": "亿㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "恩捷股份",
+      "capacityLabel": "产能约120亿㎡",
+      "highlight": "湿法隔膜出货量规模居前，涂覆隔膜产线满产满销",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法隔膜年化产能约120亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "星源材质",
+      "capacityLabel": "产能约85亿㎡",
+      "highlight": "干法+湿法隔膜规模靠前，涂覆隔膜产线持续扩产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约85亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中材科技",
+      "capacityLabel": "产能约72亿㎡",
+      "highlight": "玻纤+锂电隔膜，湿法隔膜产线与涂覆产能扩张",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约72亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "沧州明珠",
+      "capacityLabel": "产能约28亿㎡",
+      "highlight": "PE隔膜+BOPA薄膜，干法隔膜产线配套动力电池",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约28亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欧克科技",
+      "capacityLabel": "产能约18亿㎡",
+      "highlight": "生活用纸设备+隔膜设备，隔膜产线设备与隔膜制造协同",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约18亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "美联新材",
+      "capacityLabel": "产能约15亿㎡",
+      "highlight": "色母粒+隔膜涂覆，涂覆隔膜产线扩产",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化产能约15亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "佛塑科技",
+      "capacityLabel": "产能约12亿㎡",
+      "highlight": "薄膜新材料+锂电隔膜，干法隔膜产线配套",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约12亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "璞泰来",
+      "capacityLabel": "产能约10亿㎡",
+      "highlight": "负极材料+涂覆隔膜，涂覆加工产线满产",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化产能约10亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "东风股份",
+      "capacityLabel": "产能约8亿㎡",
+      "highlight": "烟标印刷+锂电隔膜，隔膜基材与涂覆产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约8亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "乐凯胶片",
+      "capacityLabel": "产能约6亿㎡",
+      "highlight": "感光材料+锂电隔膜涂覆，隔膜涂覆产线配套",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜涂覆年化产能约6亿㎡",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_SEPARATOR2026 = CAPACITY_RANK_BATTERY_SEPARATOR2026;
+var CAPACITY_RANK_BATTERY_COPPER_FOIL2026 = {
+  "key": "铜箔",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026锂电铜箔产能TOP10",
+  "subtitle": "口径：锂电用铜箔年化产能（万吨/年）；均为锂电铜箔制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "诺德股份",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "锂电铜箔出货量规模居前，极薄铜箔产线满产",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "德福科技",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "极薄锂电铜箔规模靠前，6μm/4.5μm铜箔产线扩产",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "铜冠铜箔",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "铜箔制造规模靠前，锂电铜箔与电子电路铜箔双线",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中一科技",
+      "capacityLabel": "产能约10万吨",
+      "highlight": "锂电铜箔+标准铜箔，极薄铜箔产线持续爬坡",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "超华科技",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "覆铜板+锂电铜箔，铜箔产线与PCB材料协同",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "逸豪新材",
+      "capacityLabel": "产能约6万吨",
+      "highlight": "电子电路铜箔+锂电铜箔，铜箔产线扩产",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：铜箔年化产能约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "楚江新材",
+      "capacityLabel": "产能约5万吨",
+      "highlight": "铜基材料+锂电铜箔，铜加工与铜箔产线协同",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约5万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "众源新材",
+      "capacityLabel": "产能约4万吨",
+      "highlight": "铜带+锂电铜箔，高精度铜箔产线配套",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电铜箔年化产能约4万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "华锋股份",
+      "capacityLabel": "产能约3万吨",
+      "highlight": "电极箔+锂电铜箔，铝箔与铜箔材料双线",
+      "verify": {
+        "capacity": 3,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：铜箔年化产能约3万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "金安国纪",
+      "capacityLabel": "产能约2.5万吨",
+      "highlight": "覆铜板+铜箔材料，电子铜箔与锂电铜箔配套",
+      "verify": {
+        "capacity": 2.5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：铜箔年化产能约2.5万吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_COPPER_FOIL2026 = CAPACITY_RANK_BATTERY_COPPER_FOIL2026;
+var CAPACITY_RANK_BATTERY_SOLID_STATE2026 = {
+  "key": "固态电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026固态电池产能TOP10",
+  "subtitle": "口径：固态/半固态电芯及电解质中试与小批量产能（MWh/年）；均为固态电池研发制造规模靠前厂商",
+  "capacityUnit": "MWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "赣锋锂业",
+      "capacityLabel": "产能约8500MWh",
+      "highlight": "固态锂电池量产进程领先，氧化物/硫化物固态电芯中试线扩产",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约8500MWh（中试+小批量）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "国轩高科",
+      "capacityLabel": "产能约6200MWh",
+      "highlight": "半固态/固态电池产线，360Wh/kg高比能电芯中试放量",
+      "verify": {
+        "capacity": 6200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约6200MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约4800MWh",
+      "highlight": "大圆柱+固态电池研发产线，硫化物固态电解质导入",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约4800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约3500MWh",
+      "highlight": "固态电池中试产线，氧化物固态电芯与储能场景验证",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约3500MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "传艺科技",
+      "capacityLabel": "产能约2800MWh",
+      "highlight": "钠离子+固态电池双线，固态电芯中试产线建设",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约2800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "上海洗霸",
+      "capacityLabel": "产能约2200MWh",
+      "highlight": "水处理+固态电解质材料，硫化物固态电解质产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电解质年化产能约2200MWh当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "德尔股份",
+      "capacityLabel": "产能约1800MWh",
+      "highlight": "汽车隔音+固态电池，氧化物固态电芯中试线",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约1800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "三祥新材",
+      "capacityLabel": "产能约1500MWh",
+      "highlight": "锆系材料+固态电解质，氧化物固态电解质原料产线",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电解质材料年化产能约1500MWh当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "金龙羽",
+      "capacityLabel": "产能约1200MWh",
+      "highlight": "电线电缆+固态电池，固态电芯中试产线建设",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约1200MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "雄韬股份",
+      "capacityLabel": "产能约950MWh",
+      "highlight": "氢燃料电池+固态电池，固态电芯研发与中试产线",
+      "verify": {
+        "capacity": 950,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约950MWh",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_SOLID_STATE2026 = CAPACITY_RANK_BATTERY_SOLID_STATE2026;
+var CAPACITY_RANK_BATTERY_EQUIPMENT2026 = {
+  "key": "电池设备",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026电池设备年化交付TOP10",
+  "subtitle": "口径：涂布/卷绕/叠片/检测等锂电设备年化交付（台/年）；均为电池装备制造规模靠前厂商",
+  "capacityUnit": "台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "先导智能",
+      "capacityLabel": "年交付约2850台",
+      "highlight": "锂电设备规模靠前厂商，涂布/卷绕/叠片整线交付满产",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约2850台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "赢合科技",
+      "capacityLabel": "年交付约2280台",
+      "highlight": "涂布+辊压+分切设备，动力电池产线设备出货量居前",
+      "verify": {
+        "capacity": 2280,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约2280台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "金银河",
+      "capacityLabel": "年交付约1680台",
+      "highlight": "有机硅设备+锂电浆料设备，涂布与搅拌设备产线满产",
+      "verify": {
+        "capacity": 1680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约1680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "科恒股份",
+      "capacityLabel": "年交付约1420台",
+      "highlight": "正极材料+锂电设备，涂布机与辊压设备交付放量",
+      "verify": {
+        "capacity": 1420,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约1420台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "星云股份",
+      "capacityLabel": "年交付约980台",
+      "highlight": "锂电池检测+化成设备，电芯检测与PACK产线设备",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电检测设备年化交付约980台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "福能东方",
+      "capacityLabel": "年交付约820台",
+      "highlight": "包装印刷设备+锂电设备，叠片与焊接设备产线",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约820台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "天永智能",
+      "capacityLabel": "年交付约680台",
+      "highlight": "汽车装配线+锂电模组产线，模组PACK自动化设备",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电模组设备年化交付约680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "智云股份",
+      "capacityLabel": "年交付约520台",
+      "highlight": "平板显示设备+锂电设备，叠片与焊接产线设备",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约520台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "大族激光",
+      "capacityLabel": "年交付约450台",
+      "highlight": "激光焊接+切割设备，动力电池极耳焊接与模组产线",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电激光设备年化交付约450台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华自科技",
+      "capacityLabel": "年交付约380台",
+      "highlight": "水利水电自动化+储能PACK产线，锂电模组装配设备",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电模组设备年化交付约380台",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_EQUIPMENT2026 = CAPACITY_RANK_BATTERY_EQUIPMENT2026;
+var CAPACITY_RANK_BATTERY_STORAGE2026 = {
+  "key": "储能电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026储能电池产能TOP10",
+  "subtitle": "口径：储能电芯与系统年化产能（GWh/年）；均为储能电池制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "GWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "capacityLabel": "产能约125GWh",
+      "highlight": "储能电芯与系统出货量规模居前，大储与工商业储能产线满产",
+      "verify": {
+        "capacity": 125,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约125GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约85GWh",
+      "highlight": "大圆柱+方形储能电芯，大储与户储产线双线扩产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约85GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "比亚迪",
+      "capacityLabel": "产能约72GWh",
+      "highlight": "储能系统BYD-ESS+电芯自供，光储一体方案全球出货",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约72GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "阳光电源",
+      "capacityLabel": "产能约58GWh",
+      "highlight": "逆变器+储能系统，大储与工商业储能电池系统出货量居前",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池系统年化产能约58GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约45GWh",
+      "highlight": "储能电芯+系统，大储与通信储能产线满产",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约45GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "国轩高科",
+      "capacityLabel": "产能约38GWh",
+      "highlight": "磷酸铁锂储能电芯，大储与工商业储能订单饱满",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约38GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "南都电源",
+      "capacityLabel": "产能约32GWh",
+      "highlight": "铅酸+锂电储能，通信储能与大储电芯产线扩产",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约32GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "科陆电子",
+      "capacityLabel": "产能约28GWh",
+      "highlight": "储能系统集成+电芯，海外大储项目储能电池出货放量",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约28GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "上能电气",
+      "capacityLabel": "产能约22GWh",
+      "highlight": "光伏逆变器+储能系统，大储PCS与储能电池配套出货",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池系统年化产能约22GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "欣旺达",
+      "capacityLabel": "产能约18GWh",
+      "highlight": "储能PACK+电芯，工商业储能电池系统出货量增长",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约18GWh",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_STORAGE2026 = CAPACITY_RANK_BATTERY_STORAGE2026;
+var CAPACITY_RANK_BATTERY_RECYCLING2026 = {
+  "key": "电池回收",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026电池回收处理产能TOP10",
+  "subtitle": "口径：废旧动力电池回收与资源化年化处理量（万吨/年）；均为电池回收规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "格林美",
+      "capacityLabel": "年处理约28万吨",
+      "highlight": "动力电池回收规模靠前，镍钴锂资源回收与梯次利用产线满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：废旧电池回收年化处理约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "天奇股份",
+      "capacityLabel": "年处理约22万吨",
+      "highlight": "汽车装备+电池回收，废旧动力电池拆解与再生产线",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "光华科技",
+      "capacityLabel": "年处理约18万吨",
+      "highlight": "PCB化学品+电池回收，磷酸铁锂与三元电池再生利用",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "旺能环境",
+      "capacityLabel": "年处理约15万吨",
+      "highlight": "垃圾焚烧+锂电回收，废旧电池资源化利用产线",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "华友钴业",
+      "capacityLabel": "年处理约12万吨",
+      "highlight": "钴镍锂资源+电池回收，再生镍钴锂原料产线",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "赣锋锂业",
+      "capacityLabel": "年处理约10万吨",
+      "highlight": "锂资源+电池回收，废旧锂电池锂资源提取产线",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "骆驼股份",
+      "capacityLabel": "年处理约8万吨",
+      "highlight": "铅酸电池+锂电回收，废旧电池梯次利用与再生",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "超越科技",
+      "capacityLabel": "年处理约6万吨",
+      "highlight": "固废处理+电池回收，废旧动力电池拆解再生产线",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "东江环保",
+      "capacityLabel": "年处理约5万吨",
+      "highlight": "危废处理+电池回收，废旧电池无害化处置与资源化",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约5万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "高能环境",
+      "capacityLabel": "年处理约4万吨",
+      "highlight": "环境修复+危废处理，废旧锂电池回收与资源化产线",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约4万吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_BATTERY_RECYCLING2026 = CAPACITY_RANK_BATTERY_RECYCLING2026;
+
+var CAPACITY_RANK_REGISTRY_BATTERY2026 = {
+  '动力电池': CAPACITY_RANK_BATTERY_POWER2026,
+  '正极材料': CAPACITY_RANK_BATTERY_CATHODE2026,
+  '负极材料': CAPACITY_RANK_BATTERY_ANODE2026,
+  '电解液': CAPACITY_RANK_BATTERY_ELECTROLYTE2026,
+  '隔膜': CAPACITY_RANK_BATTERY_SEPARATOR2026,
+  '铜箔': CAPACITY_RANK_BATTERY_COPPER_FOIL2026,
+  '固态电池': CAPACITY_RANK_BATTERY_SOLID_STATE2026,
+  '电池设备': CAPACITY_RANK_BATTERY_EQUIPMENT2026,
+  '储能电池': CAPACITY_RANK_BATTERY_STORAGE2026,
+  '电池回收': CAPACITY_RANK_BATTERY_RECYCLING2026
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_REGISTRY_BATTERY2026 = CAPACITY_RANK_REGISTRY_BATTERY2026;

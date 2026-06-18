@@ -286,6 +286,26 @@ const CAPACITY_RANK_POSTER_CONFIG = [
   { key: '功率半导体', industryKeys: ['半导体', '芯片'], wrapId: 'capacity-rank-semi-power-wrap', pagesId: 'capacity-rank-semi-power-pages', canvasId: 'capacity-rank-semi-power-canvas' },
   { key: 'EDA工具', industryKeys: ['半导体', 'IT服务'], wrapId: 'capacity-rank-semi-eda-wrap', pagesId: 'capacity-rank-semi-eda-pages', canvasId: 'capacity-rank-semi-eda-canvas' },
   { key: '传感器芯片', industryKeys: ['半导体', '芯片', '元件'], wrapId: 'capacity-rank-semi-sensor-wrap', pagesId: 'capacity-rank-semi-sensor-pages', canvasId: 'capacity-rank-semi-sensor-canvas' },
+  { key: '动力电池', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-power-wrap', pagesId: 'capacity-rank-battery-power-pages', canvasId: 'capacity-rank-battery-power-canvas' },
+  { key: '正极材料', industryKeys: ['锂电池', '多氟多'], wrapId: 'capacity-rank-battery-cathode-wrap', pagesId: 'capacity-rank-battery-cathode-pages', canvasId: 'capacity-rank-battery-cathode-canvas' },
+  { key: '负极材料', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-anode-wrap', pagesId: 'capacity-rank-battery-anode-pages', canvasId: 'capacity-rank-battery-anode-canvas' },
+  { key: '电解液', industryKeys: ['锂电池', '多氟多'], wrapId: 'capacity-rank-battery-electrolyte-wrap', pagesId: 'capacity-rank-battery-electrolyte-pages', canvasId: 'capacity-rank-battery-electrolyte-canvas' },
+  { key: '隔膜', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-separator-wrap', pagesId: 'capacity-rank-battery-separator-pages', canvasId: 'capacity-rank-battery-separator-canvas' },
+  { key: '铜箔', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-copper-foil-wrap', pagesId: 'capacity-rank-battery-copper-foil-pages', canvasId: 'capacity-rank-battery-copper-foil-canvas' },
+  { key: '固态电池', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-solid-state-wrap', pagesId: 'capacity-rank-battery-solid-state-pages', canvasId: 'capacity-rank-battery-solid-state-canvas' },
+  { key: '电池设备', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-equipment-wrap', pagesId: 'capacity-rank-battery-equipment-pages', canvasId: 'capacity-rank-battery-equipment-canvas' },
+  { key: '储能电池', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-storage-wrap', pagesId: 'capacity-rank-battery-storage-pages', canvasId: 'capacity-rank-battery-storage-canvas' },
+  { key: '电池回收', industryKeys: ['锂电池'], wrapId: 'capacity-rank-battery-recycling-wrap', pagesId: 'capacity-rank-battery-recycling-pages', canvasId: 'capacity-rank-battery-recycling-canvas' },
+  { key: '火箭发动机', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-rocket-engine-wrap', pagesId: 'capacity-rank-aerospace-rocket-engine-pages', canvasId: 'capacity-rank-aerospace-rocket-engine-canvas' },
+  { key: '箭体结构', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-rocket-structure-wrap', pagesId: 'capacity-rank-aerospace-rocket-structure-pages', canvasId: 'capacity-rank-aerospace-rocket-structure-canvas' },
+  { key: '卫星制造', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-satellite-mfg-wrap', pagesId: 'capacity-rank-aerospace-satellite-mfg-pages', canvasId: 'capacity-rank-aerospace-satellite-mfg-canvas' },
+  { key: '火箭制造', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-rocket-mfg-wrap', pagesId: 'capacity-rank-aerospace-rocket-mfg-pages', canvasId: 'capacity-rank-aerospace-rocket-mfg-canvas' },
+  { key: '卫星通信', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-satellite-comm-wrap', pagesId: 'capacity-rank-aerospace-satellite-comm-pages', canvasId: 'capacity-rank-aerospace-satellite-comm-canvas' },
+  { key: '卫星姿态控制', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-satellite-attitude-wrap', pagesId: 'capacity-rank-aerospace-satellite-attitude-pages', canvasId: 'capacity-rank-aerospace-satellite-attitude-canvas' },
+  { key: '星座运营', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-constellation-wrap', pagesId: 'capacity-rank-aerospace-constellation-pages', canvasId: 'capacity-rank-aerospace-constellation-canvas' },
+  { key: '太空算力', industryKeys: ['商业航天', 'AI算力'], wrapId: 'capacity-rank-aerospace-space-computing-wrap', pagesId: 'capacity-rank-aerospace-space-computing-pages', canvasId: 'capacity-rank-aerospace-space-computing-canvas' },
+  { key: '航天材料', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-materials-wrap', pagesId: 'capacity-rank-aerospace-materials-pages', canvasId: 'capacity-rank-aerospace-materials-canvas' },
+  { key: '航天测控', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-ttc-wrap', pagesId: 'capacity-rank-aerospace-ttc-pages', canvasId: 'capacity-rank-aerospace-ttc-canvas' },
 ];
 
 function getCapacityRankRegistry() {
@@ -299,7 +319,13 @@ function getCapacityRankRegistry() {
   const semi = typeof CAPACITY_RANK_REGISTRY_SEMICONDUCTOR2026 !== 'undefined'
     ? CAPACITY_RANK_REGISTRY_SEMICONDUCTOR2026
     : {};
-  return Object.assign({}, main, ce, compute, semi);
+  const battery = typeof CAPACITY_RANK_REGISTRY_BATTERY2026 !== 'undefined'
+    ? CAPACITY_RANK_REGISTRY_BATTERY2026
+    : {};
+  const aerospace = typeof CAPACITY_RANK_REGISTRY_AEROSPACE2026 !== 'undefined'
+    ? CAPACITY_RANK_REGISTRY_AEROSPACE2026
+    : {};
+  return Object.assign({}, main, ce, compute, semi, battery, aerospace);
 }
 
 function getCapacityRankDatasetByKey(key) {

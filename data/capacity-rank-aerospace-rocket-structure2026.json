@@ -1,0 +1,172 @@
+{
+  "key": "箭体结构",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026箭体结构件产能TOP10",
+  "subtitle": "口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商",
+  "capacityUnit": "套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超捷股份",
+      "capacityLabel": "年交付约4200套",
+      "highlight": "紧固件+箭体结构件，商业火箭箭体连接与结构配套出货量居前",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构件年化交付约4200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "飞沃科技",
+      "capacityLabel": "年交付约3500套",
+      "highlight": "高强度紧固件规模靠前，火箭箭体结构连接件产线满产",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体紧固件年化交付约3500套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约2800套",
+      "highlight": "焊接装备+航天结构制造，火箭贮箱与箭体结构焊接产线",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构件年化交付约2800套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "爱乐达",
+      "capacityLabel": "年交付约2200套",
+      "highlight": "航空零部件精密加工，火箭箭体结构件数控加工产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构加工件年化交付约2200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "三角防务",
+      "capacityLabel": "年交付约1850套",
+      "highlight": "大型锻件+结构件，火箭箭体段部结构锻件产线",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体锻件年化交付约1850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天晨光",
+      "capacityLabel": "年交付约1520套",
+      "highlight": "特种装备+压力容器，火箭燃料贮箱与管路结构产线",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体贮箱结构年化交付约1520套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中天火箭",
+      "capacityLabel": "年交付约1280套",
+      "highlight": "固体火箭+小型运载火箭，箭体结构总装与发射服务配套",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构年化交付约1280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约980套",
+      "highlight": "安保+航天配套，火箭测发控与箭体地面支持结构",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体地面配套年化交付约980套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "光威复材",
+      "capacityLabel": "年交付约820套",
+      "highlight": "碳纤维复合材料规模靠前，火箭箭体复合材料结构件产线",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体复合材料年化交付约820套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "新晨科技",
+      "capacityLabel": "年交付约650套",
+      "highlight": "金融信息化+军工配套，火箭地面测控与结构信息化配套",
+      "verify": {
+        "capacity": 650,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体信息化配套年化交付约650套",
+        "officialCross": null
+      }
+    }
+  ]
+}

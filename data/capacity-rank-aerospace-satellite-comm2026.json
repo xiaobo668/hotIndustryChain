@@ -1,0 +1,172 @@
+{
+  "key": "卫星通信",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星通信产能TOP10",
+  "subtitle": "口径：卫星通信终端/天线/芯片年化交付（万套/年）；均为卫星通信制造规模靠前厂商",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫通",
+      "capacityLabel": "年交付约12500万套",
+      "highlight": "高轨卫星通信运营+终端配套，Ka宽带卫星通信服务能力规模居前",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信服务年化覆盖约12500万套当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通宇通讯",
+      "capacityLabel": "年交付约8200万套",
+      "highlight": "基站天线+卫星通信天线，卫星互联网地面天线产线满产",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信天线年化交付约8200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华力创通",
+      "capacityLabel": "年交付约6800万套",
+      "highlight": "卫星通信终端+基带芯片，天通卫星手机直连核心配套",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信终端年化交付约6800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "海格通信",
+      "capacityLabel": "年交付约5500万套",
+      "highlight": "北斗+卫星通信双模终端，军用与民用卫星通信出货量居前",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信终端年化交付约5500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "振芯科技",
+      "capacityLabel": "年交付约4200万套",
+      "highlight": "北斗导航+卫星通信芯片，卫星通信基带与射频芯片产线",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信芯片年化交付约4200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "上海瀚讯",
+      "capacityLabel": "年交付约3500万套",
+      "highlight": "宽带通信设备，卫星互联网地面站与特种通信系统",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信设备年化交付约3500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "盛路通信",
+      "capacityLabel": "年交付约2800万套",
+      "highlight": "通信天线+卫星通信，卫星通信射频与天线组件产线",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信组件年化交付约2800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "信维通信",
+      "capacityLabel": "年交付约2200万套",
+      "highlight": "移动终端天线+卫星通信，卫星通信终端天线与射频模组",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信天线年化交付约2200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天箭科技",
+      "capacityLabel": "年交付约1800万套",
+      "highlight": "高波段微波前端，卫星通信微波组件与功放产线",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信微波组件年化交付约1800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "铖昌科技",
+      "capacityLabel": "年交付约1500万套",
+      "highlight": "微波毫米波T/R芯片，卫星通信相控阵射频前端产线",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信射频芯片年化交付约1500万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "key": "航天材料",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026航天材料产能TOP10",
+  "subtitle": "口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "上大股份",
+      "capacityLabel": "产能约12500吨",
+      "highlight": "高温合金锻件规模靠前，火箭发动机涡轮盘与航天结构材料产线",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金年化产能约12500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "西部材料",
+      "capacityLabel": "产能约9800吨",
+      "highlight": "钛合金+难熔金属，航天结构件与发动机材料产线满产",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天钛合金年化产能约9800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "宝钛股份",
+      "capacityLabel": "产能约8500吨",
+      "highlight": "钛材规模靠前厂商，航天钛合金板材与锻件产线",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天钛材年化产能约8500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "钢研高纳",
+      "capacityLabel": "产能约7200吨",
+      "highlight": "高温合金铸件，火箭发动机涡轮盘与燃烧室材料产线",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金年化产能约7200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "光威复材",
+      "capacityLabel": "产能约5800吨",
+      "highlight": "碳纤维复合材料规模靠前，火箭箭体与卫星结构复合材料",
+      "verify": {
+        "capacity": 5800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天碳纤维年化产能约5800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "中简科技",
+      "capacityLabel": "产能约4500吨",
+      "highlight": "高性能碳纤维，航天航空结构用碳纤维产线",
+      "verify": {
+        "capacity": 4500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天碳纤维年化产能约4500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "博云新材",
+      "capacityLabel": "产能约3800吨",
+      "highlight": "炭/炭复合材料，航天热端材料与刹车材料产线",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天复合材料年化产能约3800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "派克新材",
+      "capacityLabel": "产能约3200吨",
+      "highlight": "航空航天锻件，火箭与卫星结构锻件产线满产",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天锻件年化产能约3200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "火炬电子",
+      "capacityLabel": "产能约2800吨",
+      "highlight": "特种陶瓷+高温材料，航天电子陶瓷与热端材料",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天陶瓷材料年化产能约2800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "图南股份",
+      "capacityLabel": "产能约2200吨",
+      "highlight": "高温合金精密铸件，航空发动机与航天热端铸件产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金铸件年化产能约2200吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

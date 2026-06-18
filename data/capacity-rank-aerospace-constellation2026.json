@@ -1,0 +1,172 @@
+{
+  "key": "星座运营",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026星座运营规模TOP10",
+  "subtitle": "口径：低轨/高轨星座在轨运营服务能力（颗在轨当量）；均为星座运营与数据服务规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "颗在轨",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫通",
+      "capacityLabel": "在轨约680颗当量",
+      "highlight": "高轨卫星通信运营规模靠前，Ka宽带与广播通信星座服务能力",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信运营在轨服务能力约680颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "四维图新",
+      "capacityLabel": "在轨约520颗当量",
+      "highlight": "高精地图+遥感数据服务，低轨星座数据应用与运营平台",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座数据运营服务约520颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航宇微",
+      "capacityLabel": "在轨约450颗当量",
+      "highlight": "微纳卫星星座+宇航芯片，遥感星座在轨运营与数据服务",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座在轨运营约450颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中国卫星",
+      "capacityLabel": "在轨约380颗当量",
+      "highlight": "小卫星总装+星座组网，低轨卫星星座在轨制造与运营配套",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座组网在轨服务约380颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北斗星通",
+      "capacityLabel": "在轨约320颗当量",
+      "highlight": "北斗高精度定位运营，导航增强与星座数据服务",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导航星座运营服务约320颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "超图软件",
+      "capacityLabel": "在轨约280颗当量",
+      "highlight": "GIS数字地球+遥感平台，星座遥感数据运营与应用服务",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座数据平台运营约280颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "普天科技",
+      "capacityLabel": "在轨约240颗当量",
+      "highlight": "通信网络+卫星应用，低轨星座通信运营与系统集成",
+      "verify": {
+        "capacity": 240,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座通信运营约240颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "欧比特",
+      "capacityLabel": "在轨约195颗当量",
+      "highlight": "遥感卫星星座运营，珠海一号星座数据服务与在轨管理",
+      "verify": {
+        "capacity": 195,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座在轨运营约195颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "海格通信",
+      "capacityLabel": "在轨约165颗当量",
+      "highlight": "卫星通信运营终端+系统集成，星座地面站与运营服务",
+      "verify": {
+        "capacity": 165,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座地面运营服务约165颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "信维通信",
+      "capacityLabel": "在轨约135颗当量",
+      "highlight": "卫星通信终端天线，星座用户终端与运营配套",
+      "verify": {
+        "capacity": 135,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座终端运营配套约135颗当量",
+        "officialCross": null
+      }
+    }
+  ]
+}

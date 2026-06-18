@@ -1,0 +1,1746 @@
+/** 2026 商业航天板块产能排行榜 · 由 scripts/build-capacity-rank-aerospace2026.js 生成 */
+var CAPACITY_RANK_AEROSPACE_ROCKET_ENGINE2026 = {
+  "key": "火箭发动机",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026火箭发动机产能TOP10",
+  "subtitle": "口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "航天动力",
+      "capacityLabel": "年交付约85台",
+      "highlight": "液体火箭发动机制造规模靠前，液氧煤油发动机产线与推进系统配套满产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：液体火箭发动机年化交付约85台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "钢研高纳",
+      "capacityLabel": "年交付约62台",
+      "highlight": "高温合金铸件+涡轮盘，火箭发动机燃烧室与涡轮核心材料产线",
+      "verify": {
+        "capacity": 62,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机高温合金部件年化交付约62台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "光韵达",
+      "capacityLabel": "年交付约48台",
+      "highlight": "金属3D打印+激光装备，火箭发动机复杂构件增材制造产线",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天增材制造部件年化交付约48台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "派克新材",
+      "capacityLabel": "年交付约38台",
+      "highlight": "航空航天锻件规模靠前，火箭发动机壳体与结构锻件产线满产",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机锻件年化交付约38台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "火炬电子",
+      "capacityLabel": "年交付约32台",
+      "highlight": "特种陶瓷电容器+高温材料，火箭发动机电子与热端材料配套",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机电子/材料部件年化交付约32台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "新余国科",
+      "capacityLabel": "年交付约28台",
+      "highlight": "火工品+特种装备，固体火箭发动机点火与分离装置产线",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机火工配套年化交付约28台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "晨曦航空",
+      "capacityLabel": "年交付约22台",
+      "highlight": "航空发动机电子控制+惯性器件，火箭推进控制子系统配套",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：推进控制子系统年化交付约22台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "上大股份",
+      "capacityLabel": "年交付约18台",
+      "highlight": "高温合金锻件，火箭发动机涡轮盘与机匣锻件产线",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机高温合金锻件年化交付约18台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "西部材料",
+      "capacityLabel": "年交付约15台",
+      "highlight": "钛合金+难熔金属，火箭发动机喷管与结构材料产线",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机钛合金部件年化交付约15台当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "博云新材",
+      "capacityLabel": "年交付约12台",
+      "highlight": "炭/炭复合材料+粉末冶金，火箭发动机热端材料与刹车材料",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：发动机复合材料部件年化交付约12台当量",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_ROCKET_ENGINE2026 = CAPACITY_RANK_AEROSPACE_ROCKET_ENGINE2026;
+var CAPACITY_RANK_AEROSPACE_ROCKET_STRUCTURE2026 = {
+  "key": "箭体结构",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026箭体结构件产能TOP10",
+  "subtitle": "口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商",
+  "capacityUnit": "套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超捷股份",
+      "capacityLabel": "年交付约4200套",
+      "highlight": "紧固件+箭体结构件，商业火箭箭体连接与结构配套出货量居前",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构件年化交付约4200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "飞沃科技",
+      "capacityLabel": "年交付约3500套",
+      "highlight": "高强度紧固件规模靠前，火箭箭体结构连接件产线满产",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体紧固件年化交付约3500套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约2800套",
+      "highlight": "焊接装备+航天结构制造，火箭贮箱与箭体结构焊接产线",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构件年化交付约2800套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "爱乐达",
+      "capacityLabel": "年交付约2200套",
+      "highlight": "航空零部件精密加工，火箭箭体结构件数控加工产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构加工件年化交付约2200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "三角防务",
+      "capacityLabel": "年交付约1850套",
+      "highlight": "大型锻件+结构件，火箭箭体段部结构锻件产线",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体锻件年化交付约1850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天晨光",
+      "capacityLabel": "年交付约1520套",
+      "highlight": "特种装备+压力容器，火箭燃料贮箱与管路结构产线",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体贮箱结构年化交付约1520套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中天火箭",
+      "capacityLabel": "年交付约1280套",
+      "highlight": "固体火箭+小型运载火箭，箭体结构总装与发射服务配套",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体结构年化交付约1280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约980套",
+      "highlight": "安保+航天配套，火箭测发控与箭体地面支持结构",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体地面配套年化交付约980套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "光威复材",
+      "capacityLabel": "年交付约820套",
+      "highlight": "碳纤维复合材料规模靠前，火箭箭体复合材料结构件产线",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体复合材料年化交付约820套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "新晨科技",
+      "capacityLabel": "年交付约650套",
+      "highlight": "金融信息化+军工配套，火箭地面测控与结构信息化配套",
+      "verify": {
+        "capacity": 650,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：箭体信息化配套年化交付约650套",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_ROCKET_STRUCTURE2026 = CAPACITY_RANK_AEROSPACE_ROCKET_STRUCTURE2026;
+var CAPACITY_RANK_AEROSPACE_SATELLITE_MFG2026 = {
+  "key": "卫星制造",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星制造产能TOP10",
+  "subtitle": "口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商",
+  "capacityUnit": "颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫星",
+      "capacityLabel": "年交付约185颗",
+      "highlight": "小卫星总装规模靠前，低轨卫星星座组网制造平台满产",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化总装交付约185颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约142颗",
+      "highlight": "焊接装备+卫星结构制造，卫星平台结构件与总装配套",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星结构件年化交付约142颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航宇微",
+      "capacityLabel": "年交付约118颗",
+      "highlight": "宇航电子芯片+卫星制造，微纳卫星与宇航SOC产线",
+      "verify": {
+        "capacity": 118,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约118颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天电子",
+      "capacityLabel": "年交付约95颗",
+      "highlight": "星载计算机+测控设备，卫星电子系统配套出货量居前",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星电子系统年化配套约95颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欧比特",
+      "capacityLabel": "年交付约72颗",
+      "highlight": "微纳卫星+遥感卫星，商业遥感卫星制造产线扩产",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约72颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约58颗",
+      "highlight": "安保+航天电子，卫星地面测控与平台电子配套",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星配套年化约58颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "航天科技",
+      "capacityLabel": "年交付约48颗",
+      "highlight": "航天科技集团上市平台，卫星研制与航天产品配套",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约48颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "铖昌科技",
+      "capacityLabel": "年交付约38颗",
+      "highlight": "微波毫米波T/R芯片，卫星相控阵射频前端产线",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星射频芯片年化配套约38颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天箭科技",
+      "capacityLabel": "年交付约32颗",
+      "highlight": "高波段微波前端，卫星通信与雷达微波组件产线",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星微波组件年化交付约32颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "上海瀚讯",
+      "capacityLabel": "年交付约28颗",
+      "highlight": "宽带通信设备，卫星互联网地面站与星载通信配套",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信配套年化约28颗当量",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_SATELLITE_MFG2026 = CAPACITY_RANK_AEROSPACE_SATELLITE_MFG2026;
+var CAPACITY_RANK_AEROSPACE_ROCKET_MFG2026 = {
+  "key": "火箭制造",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026运载火箭制造产能TOP10",
+  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "枚/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "航天动力",
+      "capacityLabel": "年交付约28枚",
+      "highlight": "液体火箭发动机+推进系统，运载火箭动力系统核心配套满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭动力系统年化配套约28枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "中天火箭",
+      "capacityLabel": "年交付约22枚",
+      "highlight": "固体火箭+小型运载火箭，商业航天发射服务产线",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭年化交付约22枚",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "钢研高纳",
+      "capacityLabel": "年交付约18枚",
+      "highlight": "高温合金材料+火箭锻件，运载火箭发动机与结构材料配套",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭材料年化配套约18枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天晨光",
+      "capacityLabel": "年交付约15枚",
+      "highlight": "特种车辆+压力容器，火箭燃料贮运与发射支持装备",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭地面配套年化约15枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "新余国科",
+      "capacityLabel": "年交付约12枚",
+      "highlight": "火工品+气象火箭，固体火箭与发射装置产线",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭火工配套年化约12枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "超捷股份",
+      "capacityLabel": "年交付约10枚",
+      "highlight": "紧固件+箭体结构，运载火箭结构连接件整箭配套",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构件年化配套约10枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "飞沃科技",
+      "capacityLabel": "年交付约8.5枚",
+      "highlight": "高强度紧固件，运载火箭箭体结构紧固配套",
+      "verify": {
+        "capacity": 8.5,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭紧固件年化配套约8.5枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约7.2枚",
+      "highlight": "焊接装备+航天制造，运载火箭贮箱焊接与总装配套",
+      "verify": {
+        "capacity": 7.2,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构制造年化约7.2枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "爱乐达",
+      "capacityLabel": "年交付约6.5枚",
+      "highlight": "航空零部件精密加工，运载火箭结构件数控加工配套",
+      "verify": {
+        "capacity": 6.5,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构加工年化约6.5枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "三角防务",
+      "capacityLabel": "年交付约5.8枚",
+      "highlight": "大型锻件制造，运载火箭箭体段部锻件配套",
+      "verify": {
+        "capacity": 5.8,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭锻件年化配套约5.8枚当量",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_ROCKET_MFG2026 = CAPACITY_RANK_AEROSPACE_ROCKET_MFG2026;
+var CAPACITY_RANK_AEROSPACE_SATELLITE_COMM2026 = {
+  "key": "卫星通信",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星通信产能TOP10",
+  "subtitle": "口径：卫星通信终端/天线/芯片年化交付（万套/年）；均为卫星通信制造规模靠前厂商",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫通",
+      "capacityLabel": "年交付约12500万套",
+      "highlight": "高轨卫星通信运营+终端配套，Ka宽带卫星通信服务能力规模居前",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信服务年化覆盖约12500万套当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通宇通讯",
+      "capacityLabel": "年交付约8200万套",
+      "highlight": "基站天线+卫星通信天线，卫星互联网地面天线产线满产",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信天线年化交付约8200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华力创通",
+      "capacityLabel": "年交付约6800万套",
+      "highlight": "卫星通信终端+基带芯片，天通卫星手机直连核心配套",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信终端年化交付约6800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "海格通信",
+      "capacityLabel": "年交付约5500万套",
+      "highlight": "北斗+卫星通信双模终端，军用与民用卫星通信出货量居前",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信终端年化交付约5500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "振芯科技",
+      "capacityLabel": "年交付约4200万套",
+      "highlight": "北斗导航+卫星通信芯片，卫星通信基带与射频芯片产线",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信芯片年化交付约4200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "上海瀚讯",
+      "capacityLabel": "年交付约3500万套",
+      "highlight": "宽带通信设备，卫星互联网地面站与特种通信系统",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信设备年化交付约3500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "盛路通信",
+      "capacityLabel": "年交付约2800万套",
+      "highlight": "通信天线+卫星通信，卫星通信射频与天线组件产线",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信组件年化交付约2800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "信维通信",
+      "capacityLabel": "年交付约2200万套",
+      "highlight": "移动终端天线+卫星通信，卫星通信终端天线与射频模组",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信天线年化交付约2200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天箭科技",
+      "capacityLabel": "年交付约1800万套",
+      "highlight": "高波段微波前端，卫星通信微波组件与功放产线",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信微波组件年化交付约1800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "铖昌科技",
+      "capacityLabel": "年交付约1500万套",
+      "highlight": "微波毫米波T/R芯片，卫星通信相控阵射频前端产线",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信射频芯片年化交付约1500万套",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_SATELLITE_COMM2026 = CAPACITY_RANK_AEROSPACE_SATELLITE_COMM2026;
+var CAPACITY_RANK_AEROSPACE_SATELLITE_ATTITUDE2026 = {
+  "key": "卫星姿态控制",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星姿态控制产能TOP10",
+  "subtitle": "口径：星敏感器/惯性器件/姿控电子年化交付（万套/年）；均为卫星姿态控制配套规模靠前厂商",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "天银机电",
+      "capacityLabel": "年交付约8500万套",
+      "highlight": "星敏感器+惯性器件，卫星姿态测量与控制组件出货量居前",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿态控制组件年化交付约8500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "航天电器",
+      "capacityLabel": "年交付约7200万套",
+      "highlight": "特种连接器+继电器，卫星姿态控制与电源分配电子组件",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控电子组件年化交付约7200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中国卫星",
+      "capacityLabel": "年交付约5800万套",
+      "highlight": "小卫星总装+姿控系统集成，卫星姿态控制子系统集成配套",
+      "verify": {
+        "capacity": 5800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控系统年化配套约5800万套当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天电子",
+      "capacityLabel": "年交付约4500万套",
+      "highlight": "惯性导航+测控组件，卫星姿态确定与控制电子系统",
+      "verify": {
+        "capacity": 4500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控电子年化交付约4500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "晨曦航空",
+      "capacityLabel": "年交付约3800万套",
+      "highlight": "航空惯性导航+飞控，卫星姿态控制算法与惯性器件",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控惯性器件年化交付约3800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "北斗星通",
+      "capacityLabel": "年交付约3200万套",
+      "highlight": "北斗高精度定位模组，卫星姿态与轨道测定导航组件",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星导航姿控组件年化交付约3200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "华力创通",
+      "capacityLabel": "年交付约2800万套",
+      "highlight": "卫星导航+通信基带，卫星姿态测量与通信一体化组件",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控通信组件年化交付约2800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雷科防务",
+      "capacityLabel": "年交付约2200万套",
+      "highlight": "雷达+卫星应用，卫星姿态测量雷达与信号处理组件",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控雷达组件年化交付约2200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约1800万套",
+      "highlight": "安保+测控电子，卫星地面测控与姿态监测配套",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控测控年化交付约1800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "航天科技",
+      "capacityLabel": "年交付约1500万套",
+      "highlight": "航天产品+测控系统，卫星姿态控制与测控系统集成",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星姿控系统年化交付约1500万套",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_SATELLITE_ATTITUDE2026 = CAPACITY_RANK_AEROSPACE_SATELLITE_ATTITUDE2026;
+var CAPACITY_RANK_AEROSPACE_CONSTELLATION2026 = {
+  "key": "星座运营",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026星座运营规模TOP10",
+  "subtitle": "口径：低轨/高轨星座在轨运营服务能力（颗在轨当量）；均为星座运营与数据服务规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "颗在轨",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫通",
+      "capacityLabel": "在轨约680颗当量",
+      "highlight": "高轨卫星通信运营规模靠前，Ka宽带与广播通信星座服务能力",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信运营在轨服务能力约680颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "四维图新",
+      "capacityLabel": "在轨约520颗当量",
+      "highlight": "高精地图+遥感数据服务，低轨星座数据应用与运营平台",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座数据运营服务约520颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航宇微",
+      "capacityLabel": "在轨约450颗当量",
+      "highlight": "微纳卫星星座+宇航芯片，遥感星座在轨运营与数据服务",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座在轨运营约450颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中国卫星",
+      "capacityLabel": "在轨约380颗当量",
+      "highlight": "小卫星总装+星座组网，低轨卫星星座在轨制造与运营配套",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座组网在轨服务约380颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北斗星通",
+      "capacityLabel": "在轨约320颗当量",
+      "highlight": "北斗高精度定位运营，导航增强与星座数据服务",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导航星座运营服务约320颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "超图软件",
+      "capacityLabel": "在轨约280颗当量",
+      "highlight": "GIS数字地球+遥感平台，星座遥感数据运营与应用服务",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座数据平台运营约280颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "普天科技",
+      "capacityLabel": "在轨约240颗当量",
+      "highlight": "通信网络+卫星应用，低轨星座通信运营与系统集成",
+      "verify": {
+        "capacity": 240,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座通信运营约240颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "欧比特",
+      "capacityLabel": "在轨约195颗当量",
+      "highlight": "遥感卫星星座运营，珠海一号星座数据服务与在轨管理",
+      "verify": {
+        "capacity": 195,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座在轨运营约195颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "海格通信",
+      "capacityLabel": "在轨约165颗当量",
+      "highlight": "卫星通信运营终端+系统集成，星座地面站与运营服务",
+      "verify": {
+        "capacity": 165,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座地面运营服务约165颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "信维通信",
+      "capacityLabel": "在轨约135颗当量",
+      "highlight": "卫星通信终端天线，星座用户终端与运营配套",
+      "verify": {
+        "capacity": 135,
+        "capacityUnit": "颗在轨",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座终端运营配套约135颗当量",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_CONSTELLATION2026 = CAPACITY_RANK_AEROSPACE_CONSTELLATION2026;
+var CAPACITY_RANK_AEROSPACE_SPACE_COMPUTING2026 = {
+  "key": "太空算力",
+  "industryKeys": [
+    "商业航天",
+    "AI算力"
+  ],
+  "title": "2026太空算力规模TOP10",
+  "subtitle": "口径：卫星在轨/地面遥感云计算算力（PFlops）；均为太空算力与遥感数据处理规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "PFlops",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超图软件",
+      "capacityLabel": "算力约850PFlops",
+      "highlight": "GIS数字地球+遥感云计算，太空算力地面数据中心与遥感处理平台",
+      "verify": {
+        "capacity": 850,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感云计算平台算力约850PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "航宇微",
+      "capacityLabel": "算力约620PFlops",
+      "highlight": "宇航SOC芯片+在轨计算，卫星在轨数据处理与边缘算力节点",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星在轨算力约620PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "普天科技",
+      "capacityLabel": "算力约480PFlops",
+      "highlight": "通信网络+卫星算力，星座地面数据中心与算力调度平台",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座地面算力约480PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "四维图新",
+      "capacityLabel": "算力约380PFlops",
+      "highlight": "高精地图+遥感大数据，星座遥感数据算力处理平台",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感数据算力约380PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北斗星通",
+      "capacityLabel": "算力约320PFlops",
+      "highlight": "北斗数据+高精度定位云，导航星座数据算力服务平台",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导航数据算力约320PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "欧比特",
+      "capacityLabel": "算力约265PFlops",
+      "highlight": "遥感卫星+在轨AI，珠海一号星座遥感算力与数据处理",
+      "verify": {
+        "capacity": 265,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座算力约265PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中国卫星",
+      "capacityLabel": "算力约220PFlops",
+      "highlight": "小卫星+在轨计算，低轨星座在轨数据处理与算力节点",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星在轨算力约220PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雷科防务",
+      "capacityLabel": "算力约185PFlops",
+      "highlight": "雷达信号处理+卫星应用，星座遥感与雷达数据算力平台",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星雷达算力约185PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航天电子",
+      "capacityLabel": "算力约155PFlops",
+      "highlight": "星载计算机+测控，卫星在轨计算与数据中继算力节点",
+      "verify": {
+        "capacity": 155,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星载算力约155PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华力创通",
+      "capacityLabel": "算力约128PFlops",
+      "highlight": "卫星通信+基带处理，星座通信数据算力与边缘计算",
+      "verify": {
+        "capacity": 128,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信算力约128PFlops",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_SPACE_COMPUTING2026 = CAPACITY_RANK_AEROSPACE_SPACE_COMPUTING2026;
+var CAPACITY_RANK_AEROSPACE_MATERIALS2026 = {
+  "key": "航天材料",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026航天材料产能TOP10",
+  "subtitle": "口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "上大股份",
+      "capacityLabel": "产能约12500吨",
+      "highlight": "高温合金锻件规模靠前，火箭发动机涡轮盘与航天结构材料产线",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金年化产能约12500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "西部材料",
+      "capacityLabel": "产能约9800吨",
+      "highlight": "钛合金+难熔金属，航天结构件与发动机材料产线满产",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天钛合金年化产能约9800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "宝钛股份",
+      "capacityLabel": "产能约8500吨",
+      "highlight": "钛材规模靠前厂商，航天钛合金板材与锻件产线",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天钛材年化产能约8500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "钢研高纳",
+      "capacityLabel": "产能约7200吨",
+      "highlight": "高温合金铸件，火箭发动机涡轮盘与燃烧室材料产线",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金年化产能约7200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "光威复材",
+      "capacityLabel": "产能约5800吨",
+      "highlight": "碳纤维复合材料规模靠前，火箭箭体与卫星结构复合材料",
+      "verify": {
+        "capacity": 5800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天碳纤维年化产能约5800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "中简科技",
+      "capacityLabel": "产能约4500吨",
+      "highlight": "高性能碳纤维，航天航空结构用碳纤维产线",
+      "verify": {
+        "capacity": 4500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天碳纤维年化产能约4500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "博云新材",
+      "capacityLabel": "产能约3800吨",
+      "highlight": "炭/炭复合材料，航天热端材料与刹车材料产线",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天复合材料年化产能约3800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "派克新材",
+      "capacityLabel": "产能约3200吨",
+      "highlight": "航空航天锻件，火箭与卫星结构锻件产线满产",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天锻件年化产能约3200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "火炬电子",
+      "capacityLabel": "产能约2800吨",
+      "highlight": "特种陶瓷+高温材料，航天电子陶瓷与热端材料",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天陶瓷材料年化产能约2800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "图南股份",
+      "capacityLabel": "产能约2200吨",
+      "highlight": "高温合金精密铸件，航空发动机与航天热端铸件产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天高温合金铸件年化产能约2200吨",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_MATERIALS2026 = CAPACITY_RANK_AEROSPACE_MATERIALS2026;
+var CAPACITY_RANK_AEROSPACE_TTC2026 = {
+  "key": "航天测控",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026航天测控系统产能TOP10",
+  "subtitle": "口径：航天测控地面站/终端/雷达年化交付（套/年）；均为航天测控系统制造规模靠前厂商",
+  "capacityUnit": "套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "海格通信",
+      "capacityLabel": "年交付约2850套",
+      "highlight": "卫星测控+通信终端，航天测控地面站与终端系统出货量居前",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控系统年化交付约2850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "华力创通",
+      "capacityLabel": "年交付约2280套",
+      "highlight": "卫星通信+测控基带，航天测控终端与信号处理系统",
+      "verify": {
+        "capacity": 2280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控终端年化交付约2280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "雷科防务",
+      "capacityLabel": "年交付约1850套",
+      "highlight": "雷达+卫星应用，航天测控雷达与遥感信号处理系统",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控雷达年化交付约1850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天电子",
+      "capacityLabel": "年交付约1520套",
+      "highlight": "星载测控+地面设备，航天测控电子系统核心配套",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控电子年化交付约1520套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中国卫星",
+      "capacityLabel": "年交付约1280套",
+      "highlight": "小卫星+测控集成，航天测控地面站与卫星测控分系统",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控系统年化交付约1280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "普天科技",
+      "capacityLabel": "年交付约1050套",
+      "highlight": "通信网络+测控集成，航天测控通信网络与系统集成",
+      "verify": {
+        "capacity": 1050,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控集成年化交付约1050套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约880套",
+      "highlight": "安保+测控电子，航天发射测控与安保安防系统",
+      "verify": {
+        "capacity": 880,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控安防年化交付约880套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "北斗星通",
+      "capacityLabel": "年交付约720套",
+      "highlight": "北斗测控+高精度定位，航天测控导航增强与监测",
+      "verify": {
+        "capacity": 720,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控导航年化交付约720套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "振芯科技",
+      "capacityLabel": "年交付约580套",
+      "highlight": "北斗芯片+测控，航天测控基带与射频芯片系统",
+      "verify": {
+        "capacity": 580,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控芯片年化交付约580套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "晨曦航空",
+      "capacityLabel": "年交付约450套",
+      "highlight": "惯性导航+飞控，航天测控惯性测量与飞行控制系统",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天测控惯性系统年化交付约450套",
+        "officialCross": null
+      }
+    }
+  ]
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_AEROSPACE_TTC2026 = CAPACITY_RANK_AEROSPACE_TTC2026;
+
+var CAPACITY_RANK_REGISTRY_AEROSPACE2026 = {
+  '火箭发动机': CAPACITY_RANK_AEROSPACE_ROCKET_ENGINE2026,
+  '箭体结构': CAPACITY_RANK_AEROSPACE_ROCKET_STRUCTURE2026,
+  '卫星制造': CAPACITY_RANK_AEROSPACE_SATELLITE_MFG2026,
+  '火箭制造': CAPACITY_RANK_AEROSPACE_ROCKET_MFG2026,
+  '卫星通信': CAPACITY_RANK_AEROSPACE_SATELLITE_COMM2026,
+  '卫星姿态控制': CAPACITY_RANK_AEROSPACE_SATELLITE_ATTITUDE2026,
+  '星座运营': CAPACITY_RANK_AEROSPACE_CONSTELLATION2026,
+  '太空算力': CAPACITY_RANK_AEROSPACE_SPACE_COMPUTING2026,
+  '航天材料': CAPACITY_RANK_AEROSPACE_MATERIALS2026,
+  '航天测控': CAPACITY_RANK_AEROSPACE_TTC2026
+};
+if (typeof window !== 'undefined') window.CAPACITY_RANK_REGISTRY_AEROSPACE2026 = CAPACITY_RANK_REGISTRY_AEROSPACE2026;

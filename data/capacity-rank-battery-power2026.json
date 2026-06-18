@@ -1,0 +1,172 @@
+{
+  "key": "动力电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026动力电池产能TOP10",
+  "subtitle": "口径：动力电池电芯年化产能（GWh/年）；均为动力电池制造规模靠前厂商；未纳入科创板(688/689)标的",
+  "capacityUnit": "GWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "capacityLabel": "产能约385GWh",
+      "highlight": "动力电池装机规模居前，麒麟/神行超充电池产线满产，大圆柱与储能电芯协同扩产",
+      "verify": {
+        "capacity": 385,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约385GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "比亚迪",
+      "capacityLabel": "产能约320GWh",
+      "highlight": "刀片电池自供+外供双线，磷酸铁锂动力电池产线持续爬坡",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约320GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约185GWh",
+      "highlight": "大圆柱+软包动力电池产线，动力与储能电芯双线满产",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约185GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国轩高科",
+      "capacityLabel": "产能约142GWh",
+      "highlight": "磷酸铁锂动力电池产能扩张，大众合资产线与海外基地同步放量",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约142GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欣旺达",
+      "capacityLabel": "产能约98GWh",
+      "highlight": "动力电池PACK+电芯一体化，混动与纯电客户订单饱满",
+      "verify": {
+        "capacity": 98,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约98GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "中创新航",
+      "capacityLabel": "产能约85GWh",
+      "highlight": "三元+磷酸铁锂动力电池产线，乘用车与储能客户双线供货",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约85GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约72GWh",
+      "highlight": "动力+储能电芯制造，大储与轻型动力电池产线扩产",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约72GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "多氟多",
+      "capacityLabel": "产能约58GWh",
+      "highlight": "大圆柱动力电池+储能电芯，氟化工锂盐与电芯垂直一体化",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约58GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "雄韬股份",
+      "capacityLabel": "产能约42GWh",
+      "highlight": "铅酸+锂电双主业，氢燃料电池与动力电池产线协同",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约42GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "蔚蓝锂芯",
+      "capacityLabel": "产能约35GWh",
+      "highlight": "小型动力+工具电池电芯，高倍率锂电池产线满产",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：动力电池年化产能约35GWh",
+        "officialCross": null
+      }
+    }
+  ]
+}

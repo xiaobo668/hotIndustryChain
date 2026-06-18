@@ -1,0 +1,172 @@
+{
+  "key": "正极材料",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026正极材料产能TOP10",
+  "subtitle": "口径：三元/磷酸铁锂正极及前驱体年化产能（万吨/年）；均为正极材料制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "湖南裕能",
+      "capacityLabel": "产能约85万吨",
+      "highlight": "磷酸铁锂正极材料出货量规模居前，磷酸铁锂产线满产满销",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：磷酸铁锂正极年化产能约85万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "当升科技",
+      "capacityLabel": "产能约42万吨",
+      "highlight": "高镍NCM正极材料规模靠前，海外动力电池客户订单饱满",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：三元正极年化产能约42万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中伟新材",
+      "capacityLabel": "产能约38万吨",
+      "highlight": "三元前驱体+正极材料一体化，前驱体产线规模国内领先",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极前驱体年化产能约38万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "德方纳米",
+      "capacityLabel": "产能约32万吨",
+      "highlight": "纳米磷酸铁锂正极材料，磷酸铁锂产线持续扩产",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：磷酸铁锂正极年化产能约32万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "丰元股份",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "磷酸铁锂+草酸锂盐，正极材料与锂盐原料协同布局",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "龙蟠科技",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "磷酸铁锂正极材料扩产，车用润滑油与锂电材料双主业",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "盟固利",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "钴酸锂+三元正极材料，消费电子与动力电池正极双线",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华友钴业",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "钴镍锂资源+三元前驱体，正极前驱体产线一体化",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极前驱体年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "杉杉股份",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "人造石墨负极+正极材料，锂电材料双产品线协同",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科恒股份",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "稀土发光材料+锂电正极，钴酸锂与三元正极产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：正极材料年化产能约8万吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

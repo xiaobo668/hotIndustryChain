@@ -1,0 +1,172 @@
+{
+  "key": "固态电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026固态电池产能TOP10",
+  "subtitle": "口径：固态/半固态电芯及电解质中试与小批量产能（MWh/年）；均为固态电池研发制造规模靠前厂商",
+  "capacityUnit": "MWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "赣锋锂业",
+      "capacityLabel": "产能约8500MWh",
+      "highlight": "固态锂电池量产进程领先，氧化物/硫化物固态电芯中试线扩产",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约8500MWh（中试+小批量）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "国轩高科",
+      "capacityLabel": "产能约6200MWh",
+      "highlight": "半固态/固态电池产线，360Wh/kg高比能电芯中试放量",
+      "verify": {
+        "capacity": 6200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约6200MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约4800MWh",
+      "highlight": "大圆柱+固态电池研发产线，硫化物固态电解质导入",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约4800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约3500MWh",
+      "highlight": "固态电池中试产线，氧化物固态电芯与储能场景验证",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约3500MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "传艺科技",
+      "capacityLabel": "产能约2800MWh",
+      "highlight": "钠离子+固态电池双线，固态电芯中试产线建设",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约2800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "上海洗霸",
+      "capacityLabel": "产能约2200MWh",
+      "highlight": "水处理+固态电解质材料，硫化物固态电解质产线",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电解质年化产能约2200MWh当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "德尔股份",
+      "capacityLabel": "产能约1800MWh",
+      "highlight": "汽车隔音+固态电池，氧化物固态电芯中试线",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约1800MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "三祥新材",
+      "capacityLabel": "产能约1500MWh",
+      "highlight": "锆系材料+固态电解质，氧化物固态电解质原料产线",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电解质材料年化产能约1500MWh当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "金龙羽",
+      "capacityLabel": "产能约1200MWh",
+      "highlight": "电线电缆+固态电池，固态电芯中试产线建设",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约1200MWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "雄韬股份",
+      "capacityLabel": "产能约950MWh",
+      "highlight": "氢燃料电池+固态电池，固态电芯研发与中试产线",
+      "verify": {
+        "capacity": 950,
+        "capacityUnit": "MWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：固态电池年化产能约950MWh",
+        "officialCross": null
+      }
+    }
+  ]
+}

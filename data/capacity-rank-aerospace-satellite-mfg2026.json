@@ -1,0 +1,172 @@
+{
+  "key": "卫星制造",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星制造产能TOP10",
+  "subtitle": "口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商",
+  "capacityUnit": "颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫星",
+      "capacityLabel": "年交付约185颗",
+      "highlight": "小卫星总装规模靠前，低轨卫星星座组网制造平台满产",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化总装交付约185颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约142颗",
+      "highlight": "焊接装备+卫星结构制造，卫星平台结构件与总装配套",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星结构件年化交付约142颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航宇微",
+      "capacityLabel": "年交付约118颗",
+      "highlight": "宇航电子芯片+卫星制造，微纳卫星与宇航SOC产线",
+      "verify": {
+        "capacity": 118,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约118颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天电子",
+      "capacityLabel": "年交付约95颗",
+      "highlight": "星载计算机+测控设备，卫星电子系统配套出货量居前",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星电子系统年化配套约95颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欧比特",
+      "capacityLabel": "年交付约72颗",
+      "highlight": "微纳卫星+遥感卫星，商业遥感卫星制造产线扩产",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约72颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天长峰",
+      "capacityLabel": "年交付约58颗",
+      "highlight": "安保+航天电子，卫星地面测控与平台电子配套",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星配套年化约58颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "航天科技",
+      "capacityLabel": "年交付约48颗",
+      "highlight": "航天科技集团上市平台，卫星研制与航天产品配套",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星年化交付约48颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "铖昌科技",
+      "capacityLabel": "年交付约38颗",
+      "highlight": "微波毫米波T/R芯片，卫星相控阵射频前端产线",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星射频芯片年化配套约38颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天箭科技",
+      "capacityLabel": "年交付约32颗",
+      "highlight": "高波段微波前端，卫星通信与雷达微波组件产线",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星微波组件年化交付约32颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "上海瀚讯",
+      "capacityLabel": "年交付约28颗",
+      "highlight": "宽带通信设备，卫星互联网地面站与星载通信配套",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "颗/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信配套年化约28颗当量",
+        "officialCross": null
+      }
+    }
+  ]
+}

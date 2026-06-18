@@ -1,0 +1,172 @@
+{
+  "key": "电池回收",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026电池回收处理产能TOP10",
+  "subtitle": "口径：废旧动力电池回收与资源化年化处理量（万吨/年）；均为电池回收规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "格林美",
+      "capacityLabel": "年处理约28万吨",
+      "highlight": "动力电池回收规模靠前，镍钴锂资源回收与梯次利用产线满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：废旧电池回收年化处理约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "天奇股份",
+      "capacityLabel": "年处理约22万吨",
+      "highlight": "汽车装备+电池回收，废旧动力电池拆解与再生产线",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "光华科技",
+      "capacityLabel": "年处理约18万吨",
+      "highlight": "PCB化学品+电池回收，磷酸铁锂与三元电池再生利用",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "旺能环境",
+      "capacityLabel": "年处理约15万吨",
+      "highlight": "垃圾焚烧+锂电回收，废旧电池资源化利用产线",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "华友钴业",
+      "capacityLabel": "年处理约12万吨",
+      "highlight": "钴镍锂资源+电池回收，再生镍钴锂原料产线",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "赣锋锂业",
+      "capacityLabel": "年处理约10万吨",
+      "highlight": "锂资源+电池回收，废旧锂电池锂资源提取产线",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "骆驼股份",
+      "capacityLabel": "年处理约8万吨",
+      "highlight": "铅酸电池+锂电回收，废旧电池梯次利用与再生",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "超越科技",
+      "capacityLabel": "年处理约6万吨",
+      "highlight": "固废处理+电池回收，废旧动力电池拆解再生产线",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "东江环保",
+      "capacityLabel": "年处理约5万吨",
+      "highlight": "危废处理+电池回收，废旧电池无害化处置与资源化",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约5万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "高能环境",
+      "capacityLabel": "年处理约4万吨",
+      "highlight": "环境修复+危废处理，废旧锂电池回收与资源化产线",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电池回收年化处理约4万吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

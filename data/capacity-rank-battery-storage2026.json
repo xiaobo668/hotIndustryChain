@@ -1,0 +1,172 @@
+{
+  "key": "储能电池",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026储能电池产能TOP10",
+  "subtitle": "口径：储能电芯与系统年化产能（GWh/年）；均为储能电池制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "GWh/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "capacityLabel": "产能约125GWh",
+      "highlight": "储能电芯与系统出货量规模居前，大储与工商业储能产线满产",
+      "verify": {
+        "capacity": 125,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约125GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "亿纬锂能",
+      "capacityLabel": "产能约85GWh",
+      "highlight": "大圆柱+方形储能电芯，大储与户储产线双线扩产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约85GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "比亚迪",
+      "capacityLabel": "产能约72GWh",
+      "highlight": "储能系统BYD-ESS+电芯自供，光储一体方案全球出货",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约72GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "阳光电源",
+      "capacityLabel": "产能约58GWh",
+      "highlight": "逆变器+储能系统，大储与工商业储能电池系统出货量居前",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池系统年化产能约58GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鹏辉能源",
+      "capacityLabel": "产能约45GWh",
+      "highlight": "储能电芯+系统，大储与通信储能产线满产",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约45GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "国轩高科",
+      "capacityLabel": "产能约38GWh",
+      "highlight": "磷酸铁锂储能电芯，大储与工商业储能订单饱满",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约38GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "南都电源",
+      "capacityLabel": "产能约32GWh",
+      "highlight": "铅酸+锂电储能，通信储能与大储电芯产线扩产",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约32GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "科陆电子",
+      "capacityLabel": "产能约28GWh",
+      "highlight": "储能系统集成+电芯，海外大储项目储能电池出货放量",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约28GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "上能电气",
+      "capacityLabel": "产能约22GWh",
+      "highlight": "光伏逆变器+储能系统，大储PCS与储能电池配套出货",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池系统年化产能约22GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "欣旺达",
+      "capacityLabel": "产能约18GWh",
+      "highlight": "储能PACK+电芯，工商业储能电池系统出货量增长",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "GWh/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：储能电池年化产能约18GWh",
+        "officialCross": null
+      }
+    }
+  ]
+}

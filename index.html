@@ -1624,9 +1624,9 @@ transition: opacity 0.2s;
       </div>
       <div class="order-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px;border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06)">
         <div class="order-rank-entry-title" style="color:#fbbf24">📊 2026 产业链产能排行榜</div>
-        <div class="order-rank-entry-desc">按行业拆分：光互联与电子材料（16）· 消费电子（6）· 算力板块（10）· 半导体（10）— 共 42 个细分赛道 Top10 产能海报</div>
+        <div class="order-rank-entry-desc">按行业拆分：光互联与电子材料（16）· 消费电子（6）· 算力板块（10）· 半导体（10）· 锂电池（10）· 商业航天（10）— 共 62 个细分赛道 Top10 产能海报</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px" id="welcome-capacity-grid">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px" id="welcome-capacity-grid">
         <div class="welcome-card" onclick="openCapacityRankGroupPage('optical-electronics')" style="border-color:rgba(59,130,246,0.35);background:rgba(59,130,246,0.06);padding:14px">
           <div class="welcome-card-icon" style="font-size:22px">🔗</div>
           <div class="welcome-card-name" style="font-size:13px">光互联与电子材料</div>
@@ -1642,6 +1642,14 @@ transition: opacity 0.2s;
         <div class="welcome-card" onclick="openCapacityRankGroupPage('semiconductor')" style="border-color:rgba(26,115,232,0.35);background:rgba(26,115,232,0.06);padding:14px">
           <div class="welcome-card-icon" style="font-size:22px">💎</div>
           <div class="welcome-card-name" style="font-size:13px">半导体</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('battery')" style="border-color:rgba(8,145,178,0.35);background:rgba(8,145,178,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">🔋</div>
+          <div class="welcome-card-name" style="font-size:13px">锂电池</div>
+        </div>
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('aerospace')" style="border-color:rgba(29,78,216,0.35);background:rgba(29,78,216,0.06);padding:14px">
+          <div class="welcome-card-icon" style="font-size:22px">🛰️</div>
+          <div class="welcome-card-name" style="font-size:13px">商业航天</div>
         </div>
       </div>
       <div class="order-rank-entry" onclick="window.location.href='theme-poster.html#ytd-gainers'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='theme-poster.html#ytd-gainers'" style="margin-top:12px;border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
@@ -1709,7 +1717,7 @@ transition: opacity 0.2s;
           <div class="welcome-card-icon">🤖</div>
           <div class="welcome-card-name">机器人</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('锂电池')">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('battery')" style="border-color:rgba(8,145,178,0.35);background:rgba(8,145,178,0.06)">
           <div class="welcome-card-icon">🔋</div>
           <div class="welcome-card-name">锂电池</div>
         </div>
@@ -1765,7 +1773,7 @@ transition: opacity 0.2s;
           <div class="welcome-card-icon">⚔️</div>
           <div class="welcome-card-name">军工</div>
         </div>
-        <div class="welcome-card" onclick="quickSearch('商业航天')">
+        <div class="welcome-card" onclick="openCapacityRankGroupPage('aerospace')" style="border-color:rgba(29,78,216,0.35);background:rgba(29,78,216,0.06)">
           <div class="welcome-card-icon">🛰️</div>
           <div class="welcome-card-name">商业航天</div>
         </div>
@@ -2341,6 +2349,8 @@ transition: opacity 0.2s;
 <script src="data/capacity-rank-consumer-electronics2026.js"></script>
 <script src="data/capacity-rank-compute2026.js"></script>
 <script src="data/capacity-rank-semiconductor2026.js"></script>
+<script src="data/capacity-rank-battery2026.js"></script>
+<script src="data/capacity-rank-aerospace2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>

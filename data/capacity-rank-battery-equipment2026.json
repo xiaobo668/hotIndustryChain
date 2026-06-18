@@ -1,0 +1,172 @@
+{
+  "key": "电池设备",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026电池设备年化交付TOP10",
+  "subtitle": "口径：涂布/卷绕/叠片/检测等锂电设备年化交付（台/年）；均为电池装备制造规模靠前厂商",
+  "capacityUnit": "台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "先导智能",
+      "capacityLabel": "年交付约2850台",
+      "highlight": "锂电设备规模靠前厂商，涂布/卷绕/叠片整线交付满产",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约2850台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "赢合科技",
+      "capacityLabel": "年交付约2280台",
+      "highlight": "涂布+辊压+分切设备，动力电池产线设备出货量居前",
+      "verify": {
+        "capacity": 2280,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约2280台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "金银河",
+      "capacityLabel": "年交付约1680台",
+      "highlight": "有机硅设备+锂电浆料设备，涂布与搅拌设备产线满产",
+      "verify": {
+        "capacity": 1680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约1680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "科恒股份",
+      "capacityLabel": "年交付约1420台",
+      "highlight": "正极材料+锂电设备，涂布机与辊压设备交付放量",
+      "verify": {
+        "capacity": 1420,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约1420台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "星云股份",
+      "capacityLabel": "年交付约980台",
+      "highlight": "锂电池检测+化成设备，电芯检测与PACK产线设备",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电检测设备年化交付约980台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "福能东方",
+      "capacityLabel": "年交付约820台",
+      "highlight": "包装印刷设备+锂电设备，叠片与焊接设备产线",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约820台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "天永智能",
+      "capacityLabel": "年交付约680台",
+      "highlight": "汽车装配线+锂电模组产线，模组PACK自动化设备",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电模组设备年化交付约680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "智云股份",
+      "capacityLabel": "年交付约520台",
+      "highlight": "平板显示设备+锂电设备，叠片与焊接产线设备",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电设备年化交付约520台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "大族激光",
+      "capacityLabel": "年交付约450台",
+      "highlight": "激光焊接+切割设备，动力电池极耳焊接与模组产线",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电激光设备年化交付约450台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华自科技",
+      "capacityLabel": "年交付约380台",
+      "highlight": "水利水电自动化+储能PACK产线，锂电模组装配设备",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电模组设备年化交付约380台",
+        "officialCross": null
+      }
+    }
+  ]
+}

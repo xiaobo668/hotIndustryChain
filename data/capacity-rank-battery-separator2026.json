@@ -1,0 +1,172 @@
+{
+  "key": "隔膜",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026锂电隔膜产能TOP10",
+  "subtitle": "口径：湿法/干法/涂覆隔膜年化产能（亿㎡/年）；均为隔膜制造规模靠前厂商",
+  "capacityUnit": "亿㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "恩捷股份",
+      "capacityLabel": "产能约120亿㎡",
+      "highlight": "湿法隔膜出货量规模居前，涂覆隔膜产线满产满销",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法隔膜年化产能约120亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "星源材质",
+      "capacityLabel": "产能约85亿㎡",
+      "highlight": "干法+湿法隔膜规模靠前，涂覆隔膜产线持续扩产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约85亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中材科技",
+      "capacityLabel": "产能约72亿㎡",
+      "highlight": "玻纤+锂电隔膜，湿法隔膜产线与涂覆产能扩张",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约72亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "沧州明珠",
+      "capacityLabel": "产能约28亿㎡",
+      "highlight": "PE隔膜+BOPA薄膜，干法隔膜产线配套动力电池",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约28亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "欧克科技",
+      "capacityLabel": "产能约18亿㎡",
+      "highlight": "生活用纸设备+隔膜设备，隔膜产线设备与隔膜制造协同",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约18亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "美联新材",
+      "capacityLabel": "产能约15亿㎡",
+      "highlight": "色母粒+隔膜涂覆，涂覆隔膜产线扩产",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化产能约15亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "佛塑科技",
+      "capacityLabel": "产能约12亿㎡",
+      "highlight": "薄膜新材料+锂电隔膜，干法隔膜产线配套",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约12亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "璞泰来",
+      "capacityLabel": "产能约10亿㎡",
+      "highlight": "负极材料+涂覆隔膜，涂覆加工产线满产",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化产能约10亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "东风股份",
+      "capacityLabel": "产能约8亿㎡",
+      "highlight": "烟标印刷+锂电隔膜，隔膜基材与涂覆产线",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化产能约8亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "乐凯胶片",
+      "capacityLabel": "产能约6亿㎡",
+      "highlight": "感光材料+锂电隔膜涂覆，隔膜涂覆产线配套",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜涂覆年化产能约6亿㎡",
+        "officialCross": null
+      }
+    }
+  ]
+}

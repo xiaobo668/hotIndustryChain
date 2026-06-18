@@ -1,0 +1,173 @@
+{
+  "key": "太空算力",
+  "industryKeys": [
+    "商业航天",
+    "AI算力"
+  ],
+  "title": "2026太空算力规模TOP10",
+  "subtitle": "口径：卫星在轨/地面遥感云计算算力（PFlops）；均为太空算力与遥感数据处理规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "PFlops",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超图软件",
+      "capacityLabel": "算力约850PFlops",
+      "highlight": "GIS数字地球+遥感云计算，太空算力地面数据中心与遥感处理平台",
+      "verify": {
+        "capacity": 850,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感云计算平台算力约850PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "航宇微",
+      "capacityLabel": "算力约620PFlops",
+      "highlight": "宇航SOC芯片+在轨计算，卫星在轨数据处理与边缘算力节点",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星在轨算力约620PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "普天科技",
+      "capacityLabel": "算力约480PFlops",
+      "highlight": "通信网络+卫星算力，星座地面数据中心与算力调度平台",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星座地面算力约480PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "四维图新",
+      "capacityLabel": "算力约380PFlops",
+      "highlight": "高精地图+遥感大数据，星座遥感数据算力处理平台",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感数据算力约380PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北斗星通",
+      "capacityLabel": "算力约320PFlops",
+      "highlight": "北斗数据+高精度定位云，导航星座数据算力服务平台",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导航数据算力约320PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "欧比特",
+      "capacityLabel": "算力约265PFlops",
+      "highlight": "遥感卫星+在轨AI，珠海一号星座遥感算力与数据处理",
+      "verify": {
+        "capacity": 265,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：遥感星座算力约265PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中国卫星",
+      "capacityLabel": "算力约220PFlops",
+      "highlight": "小卫星+在轨计算，低轨星座在轨数据处理与算力节点",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星在轨算力约220PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雷科防务",
+      "capacityLabel": "算力约185PFlops",
+      "highlight": "雷达信号处理+卫星应用，星座遥感与雷达数据算力平台",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星雷达算力约185PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航天电子",
+      "capacityLabel": "算力约155PFlops",
+      "highlight": "星载计算机+测控，卫星在轨计算与数据中继算力节点",
+      "verify": {
+        "capacity": 155,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：星载算力约155PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华力创通",
+      "capacityLabel": "算力约128PFlops",
+      "highlight": "卫星通信+基带处理，星座通信数据算力与边缘计算",
+      "verify": {
+        "capacity": 128,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：卫星通信算力约128PFlops",
+        "officialCross": null
+      }
+    }
+  ]
+}

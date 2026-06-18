@@ -1,0 +1,172 @@
+{
+  "key": "负极材料",
+  "industryKeys": [
+    "锂电池"
+  ],
+  "title": "2026负极材料产能TOP10",
+  "subtitle": "口径：人造石墨等负极材料年化产能（万吨/年）；均为负极材料制造规模靠前厂商",
+  "capacityUnit": "万吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "贝特瑞",
+      "capacityLabel": "产能约28万吨",
+      "highlight": "人造石墨负极材料出货量规模居前，硅基负极产线持续导入",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "璞泰来",
+      "capacityLabel": "产能约22万吨",
+      "highlight": "人造石墨负极+涂覆隔膜，负极材料产线满产",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约22万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "杉杉股份",
+      "capacityLabel": "产能约18万吨",
+      "highlight": "人造石墨负极材料规模靠前，负极产线与正极材料协同",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "尚太科技",
+      "capacityLabel": "产能约15万吨",
+      "highlight": "人造石墨负极材料，一体化石墨化产线成本优势突出",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约15万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中科电气",
+      "capacityLabel": "产能约12万吨",
+      "highlight": "电磁冶金设备+负极材料，石墨化与负极产线垂直整合",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "翔丰华",
+      "capacityLabel": "产能约10万吨",
+      "highlight": "人造石墨负极材料，快充负极产线扩产",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "方大炭素",
+      "capacityLabel": "产能约8万吨",
+      "highlight": "石墨电极+锂电负极石墨化，负极石墨化代工产能扩张",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极石墨化年化产能约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "道氏技术",
+      "capacityLabel": "产能约6万吨",
+      "highlight": "陶瓷釉面+锂电正极/负极材料，三元前驱体与负极协同",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "百川股份",
+      "capacityLabel": "产能约5万吨",
+      "highlight": "精细化工+锂电负极石墨化，负极材料产线配套",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极材料年化产能约5万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "永东股份",
+      "capacityLabel": "产能约4万吨",
+      "highlight": "炭黑+针状焦原料，负极材料上游原料与石墨化配套",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万吨/年",
+        "sourceType": "media",
+        "source": "东方财富·锂电池产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：负极原料配套年化产能约4万吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

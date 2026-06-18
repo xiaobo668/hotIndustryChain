@@ -1,0 +1,172 @@
+{
+  "key": "火箭制造",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026运载火箭制造产能TOP10",
+  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "枚/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "航天动力",
+      "capacityLabel": "年交付约28枚",
+      "highlight": "液体火箭发动机+推进系统，运载火箭动力系统核心配套满产",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭动力系统年化配套约28枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "中天火箭",
+      "capacityLabel": "年交付约22枚",
+      "highlight": "固体火箭+小型运载火箭，商业航天发射服务产线",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭年化交付约22枚",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "钢研高纳",
+      "capacityLabel": "年交付约18枚",
+      "highlight": "高温合金材料+火箭锻件，运载火箭发动机与结构材料配套",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭材料年化配套约18枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "航天晨光",
+      "capacityLabel": "年交付约15枚",
+      "highlight": "特种车辆+压力容器，火箭燃料贮运与发射支持装备",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭地面配套年化约15枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "新余国科",
+      "capacityLabel": "年交付约12枚",
+      "highlight": "火工品+气象火箭，固体火箭与发射装置产线",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭火工配套年化约12枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "超捷股份",
+      "capacityLabel": "年交付约10枚",
+      "highlight": "紧固件+箭体结构，运载火箭结构连接件整箭配套",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构件年化配套约10枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "飞沃科技",
+      "capacityLabel": "年交付约8.5枚",
+      "highlight": "高强度紧固件，运载火箭箭体结构紧固配套",
+      "verify": {
+        "capacity": 8.5,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭紧固件年化配套约8.5枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "上海沪工",
+      "capacityLabel": "年交付约7.2枚",
+      "highlight": "焊接装备+航天制造，运载火箭贮箱焊接与总装配套",
+      "verify": {
+        "capacity": 7.2,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构制造年化约7.2枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "爱乐达",
+      "capacityLabel": "年交付约6.5枚",
+      "highlight": "航空零部件精密加工，运载火箭结构件数控加工配套",
+      "verify": {
+        "capacity": 6.5,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭结构加工年化约6.5枚当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "三角防务",
+      "capacityLabel": "年交付约5.8枚",
+      "highlight": "大型锻件制造，运载火箭箭体段部锻件配套",
+      "verify": {
+        "capacity": 5.8,
+        "capacityUnit": "枚/年",
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：运载火箭锻件年化配套约5.8枚当量",
+        "officialCross": null
+      }
+    }
+  ]
+}
