@@ -42,6 +42,9 @@ const STRONG_BY_KEY = {
 
 const EXCLUDED_STAR = ['源杰科技', '仕佳光子', '长光华芯', '南亚新材', '佰维存储'];
 const WEAK_RELATED = ['菲利华', '再升科技', '正威新材', '国瓷材料', '博迁新材', '洁美科技', '株冶集团', '深南电路', '兴森科技', '晶方科技', '德明利', '北京君正'];
+const WEAK_BY_KEY = {
+  高速光模块: ['长芯博创', '中兴通讯'],
+};
 
 function chainNamesForKeys(keys) {
   const names = new Set();
@@ -112,12 +115,27 @@ function verifyRanking(meta) {
       errors.push(`${meta.key}: ${co.name} highlight 缺少强相关表述`);
     }
     if (!co.verify.capacityUnit) errors.push(`${meta.key}: ${co.name} 缺少 capacityUnit`);
-    if (WEAK_RELATED.includes(co.name)) {
+    if (WEAK_RELATED.includes(co.name) || (WEAK_BY_KEY[meta.key] || []).includes(co.name)) {
       warnings.push(`${meta.key}: ${co.name} 关联度偏弱或上游配套口径`);
     }
   });
 
   if (meta.key === '高速光模块') {
+    const zjxc = byRank.find((c) => c.name === '中际旭创');
+    if (!zjxc || !/总产能|数通光模块/.test(`${zjxc.capacityLabel}${zjxc.highlight}${zjxc.verify.note}`)) {
+      errors.push('中际旭创应区分数通光模块总产能与高速型号占比');
+    }
+    if (zjxc && !/六成|60%|6成/.test(`${zjxc.highlight}${zjxc.verify.note}`)) {
+      errors.push('中际旭创应标注800G/1.6T约占六成');
+    }
+    const cxbc = byRank.find((c) => c.name === '长芯博创');
+    if (!cxbc || !/MPO|互连|配套|非.*整机/.test(`${cxbc.highlight}${cxbc.verify.note}`)) {
+      errors.push('长芯博创应备注光互连配套器件、非整机光模块产能');
+    }
+    const zte = byRank.find((c) => c.name === '中兴通讯');
+    if (!zte || !/自用|外销/.test(`${zte.highlight}${zte.verify.note}`)) {
+      errors.push('中兴通讯应区分自用配套与外销产能');
+    }
     const cam = byRank.find((c) => c.name === '剑桥科技');
     if (!cam || cam.verify.capacity !== 350) {
       errors.push('剑桥科技产能应为年报口径350万支/年');

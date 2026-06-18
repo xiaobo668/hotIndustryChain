@@ -4,15 +4,15 @@
     "光互联"
   ],
   "title": "2026高速光模块（800G/1.6T）现有年产能TOP10",
-  "subtitle": "口径：800G/1.6T数通光模块现有年化产能（万支/年）；1-4、6-10为媒体报道，第5位剑桥科技为年报披露",
+  "subtitle": "口径：800G/1.6T数通光模块现有年化产能（万支/年）；旭创920万支为数通光模块总产能（高速约六成）；第9位长芯博创为互连配套器件折算、第10位中兴以自用配套为主；第5位剑桥科技为年报披露",
   "capacityUnit": "万支/年",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "中际旭创",
-      "capacityLabel": "年产能约920万支",
-      "highlight": "800G/1.6T光模块全球龙头，泰国+苏州双基地满产，AI数据中心光互联市占率第一",
+      "capacityLabel": "数通光模块总产能约920万支",
+      "highlight": "数通光模块全球龙头，泰国+苏州双基地满产；800G/1.6T高速型号约占六成且为主力出货",
       "verify": {
         "capacity": 920,
         "capacityUnit": "万支/年",
@@ -20,7 +20,7 @@
         "source": "东方财富·光模块产能与订单梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：800G/1.6T现有产线年化产能约900万支级；公司未单独披露分产品产能",
+        "note": "行业公开口径：920万支为数通光模块总成产能，非仅800G/1.6T；高速产品结构约六成；公司未单独披露分型号产能",
         "officialCross": {
           "field": "capacity",
           "min": 900,
@@ -147,8 +147,8 @@
     {
       "rank": 9,
       "name": "长芯博创",
-      "capacityLabel": "年产能约180万支",
-      "highlight": "MPO/AOC/硅光互连器件，海外云厂商长期合作，高速互连产能扩张",
+      "capacityLabel": "互连器件产能约180万支",
+      "highlight": "MPO连接器/AOC光纤组件龙头，光互连配套器件产能；非光模块整机厂商",
       "verify": {
         "capacity": 180,
         "capacityUnit": "万支/年",
@@ -156,15 +156,15 @@
         "source": "东方财富·光模块产能与订单梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：高速互连器件+模块年化产能约180万支级",
+        "note": "主营MPO连接器、光纤组件等光互连配套器件，非光模块整机产能；180万支为互连器件折算产能参考",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "中兴通讯",
-      "capacityLabel": "年产能约150万支",
-      "highlight": "智算中心交换机+光网络方案，自研光模块配套大集群组网",
+      "capacityLabel": "自用配套产能约150万支",
+      "highlight": "智算中心交换机+光网络方案，自研光模块以自用配套为主、外销极少",
       "verify": {
         "capacity": 150,
         "capacityUnit": "万支/年",
@@ -172,7 +172,7 @@
         "source": "东方财富·光通信产业产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：数通光模块年化产能约150万支，以自供+外协为主",
+        "note": "自研光模块主要配套自有交换机与组网方案，对外外销产能极少；150万支为自用配套产能口径",
         "officialCross": null
       }
     }
