@@ -1,0 +1,172 @@
+{
+  "key": "摄像头模组",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026摄像头模组出货量TOP10",
+  "subtitle": "口径：摄像头模组/光学组件年化出货量（万套/年）；均为光学影像制造规模靠前厂商",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "欧菲光",
+      "capacityLabel": "年出货约28500万套",
+      "highlight": "手机摄像头模组规模靠前厂商，光学影像模组出货量行业前列",
+      "verify": {
+        "capacity": 28500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头模组年化出货量约28500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "立讯精密",
+      "capacityLabel": "年出货约22000万套",
+      "highlight": "摄像头模组精密组装，苹果摄像头模组主要供货企业",
+      "verify": {
+        "capacity": 22000,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头模组年化出货量约22000万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "联创电子",
+      "capacityLabel": "年出货约15800万套",
+      "highlight": "光学镜头+车载/手机摄像头模组，玻塑混合镜头规模靠前厂商",
+      "verify": {
+        "capacity": 15800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头模组年化出货量约15800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "同兴达",
+      "capacityLabel": "年出货约7200万套",
+      "highlight": "摄像头模组+显示模组，手机光学影像模组出货量领先",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头模组年化出货量约7200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "水晶光电",
+      "capacityLabel": "年出货约6800万套",
+      "highlight": "光学元器件规模靠前厂商，手机滤光片/镜头盖板与AR光学",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头光学组件年化出货量约6800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "蓝思科技",
+      "capacityLabel": "年出货约5500万套",
+      "highlight": "玻璃盖板+摄像头镜片，手机摄像头结构件主要供货企业",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头结构件年化出货量约5500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "凤凰光学",
+      "capacityLabel": "年出货约4200万套",
+      "highlight": "光学镜头+摄像头模组，安防与消费电子光学制造",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头模组年化出货量约4200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "宇瞳光学",
+      "capacityLabel": "年出货约3600万套",
+      "highlight": "安防与手机光学镜头规模靠前厂商，玻塑混合镜头产能扩张",
+      "verify": {
+        "capacity": 3600,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光学镜头年化出货量约3600万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "五方光电",
+      "capacityLabel": "年出货约3100万套",
+      "highlight": "红外截止滤光片规模靠前厂商，手机摄像头光学镀膜主要供货企业",
+      "verify": {
+        "capacity": 3100,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头滤光片年化出货量约3100万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "道明光学",
+      "capacityLabel": "年出货约2600万套",
+      "highlight": "光学膜与棱镜，手机摄像头光学元器件配套",
+      "verify": {
+        "capacity": 2600,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：摄像头光学膜年化出货量约2600万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

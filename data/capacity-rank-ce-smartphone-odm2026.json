@@ -1,0 +1,172 @@
+{
+  "key": "智能手机ODM",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026智能手机ODM出货量TOP10",
+  "subtitle": "口径：智能手机ODM/EMS年化出货量（万台/年）；均为手机整机代工规模靠前厂商",
+  "capacityUnit": "万台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "华勤技术",
+      "capacityLabel": "年出货约18500万台",
+      "highlight": "手机ODM全球规模靠前厂商，AI手机与智能硬件整机出货量行业前三",
+      "verify": {
+        "capacity": 18500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约18500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "龙旗科技",
+      "capacityLabel": "年出货约15200万台",
+      "highlight": "智能手机ODM，小米/荣耀等品牌整机设计制造出货量领先",
+      "verify": {
+        "capacity": 15200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约15200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "闻泰科技",
+      "capacityLabel": "年出货约12800万台",
+      "highlight": "手机ODM+半导体，智能硬件整机代工与品牌客户深度绑定",
+      "verify": {
+        "capacity": 12800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约12800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "光弘科技",
+      "capacityLabel": "年出货约6800万台",
+      "highlight": "消费电子EMS规模靠前厂商，手机/可穿戴整机组装产能扩张",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机EMS年化出货量约6800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "福日电子",
+      "capacityLabel": "年出货约5200万台",
+      "highlight": "智能手机ODM与LED显示，华为/荣耀等客户整机代工",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约5200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "合力泰",
+      "capacityLabel": "年出货约4800万台",
+      "highlight": "显示模组+手机ODM，全面屏显示模组与整机协同出货",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约4800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "科森科技",
+      "capacityLabel": "年出货约3500万台",
+      "highlight": "精密结构件+整机组装，智能手机金属件与EMS代工",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机EMS年化出货量约3500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "美格智能",
+      "capacityLabel": "年出货约3200万台",
+      "highlight": "智能模组+IoT终端，5G模组与智能硬件ODM",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能模组/终端年化出货量约3200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "卓翼科技",
+      "capacityLabel": "年出货约2800万台",
+      "highlight": "消费电子ODM/EMS，智能手机与IoT硬件代工",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能手机ODM年化出货量约2800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "瑞德智能",
+      "capacityLabel": "年出货约1800万台",
+      "highlight": "智能控制器+小家电/终端ODM，消费电子终端代工",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：智能硬件ODM年化出货量约1800万台",
+        "officialCross": null
+      }
+    }
+  ]
+}

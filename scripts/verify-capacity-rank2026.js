@@ -7,6 +7,7 @@ const vm = require('vm');
 const path = require('path');
 const { RANKINGS } = require('./build-capacity-rank2026');
 const { isStarBoard } = require('./star-board-names');
+const { INVESTMENT_FORBIDDEN_RE } = require('./capacity-rank-compliance');
 
 const root = path.join(__dirname, '..');
 const chainCode = fs.readFileSync(path.join(root, 'data.js'), 'utf8')
@@ -41,19 +42,26 @@ const STRONG_BY_KEY = {
 };
 
 const EXCLUDED_STAR = ['源杰科技', '仕佳光子', '长光华芯', '南亚新材', '佰维存储'];
-const WEAK_RELATED = ['菲利华', '再升科技', '正威新材', '国瓷材料', '博迁新材', '洁美科技', '株冶集团', '深南电路', '兴森科技', '晶方科技', '德明利', '北京君正'];
+
+/** 全局弱关联标的：出现在任一产能榜即 FAIL */
+const WEAK_RELATED = [
+  '菲利华', '再升科技', '正威新材', '国瓷材料', '博迁新材', '洁美科技', '株冶集团',
+  '神州数码', '汇源通信', '华脉科技', '通光线缆',
+  '博创科技', '太辰光', '佳力图', '依米康', '大元泵业', '江波龙', '北京君正', '联瑞新材',
+];
+
+/** 分榜历史弱关联标的 */
 const WEAK_BY_KEY = {
-  高速光模块: ['长芯博创', '中兴通讯'],
   光芯片: ['博创科技', '长芯博创', '三安光电'],
   光纤预制棒: ['汇源通信', '华脉科技', '通光线缆'],
   CPO光引擎: ['博创科技', '太辰光', '烽火通信', '中兴通讯'],
-  液冷设备: ['浪潮信息', '工业富联', '佳力图', '依米康', '银轮股份', '大元泵业'],
+  液冷设备: ['浪潮信息', '工业富联', '佳力图', '依米康', '大元泵业'],
   算力服务器: ['神州数码', '烽火通信'],
-  低介电子纱: ['宏和科技', '山东玻纤'],
-  覆铜板: ['东材科技', '崇达技术', '景旺电子', '奥士康', '骏亚科技'],
-  磷化铟砷化镓衬底: ['华灿光电', '聚灿光电', '光迅科技', '华工科技'],
-  '先进封装2.5D': ['晶方科技', '联瑞新材', '江波龙', '兴森科技', '深南电路'],
-  存储封测: ['江波龙', '深南电路'],
+  低介电子纱: ['宏和科技', '再升科技', '正威新材', '菲利华'],
+  覆铜板: ['东材科技', '崇达技术', '景旺电子'],
+  磷化铟砷化镓衬底: ['华工科技', '株冶集团'],
+  '先进封装2.5D': ['联瑞新材', '江波龙'],
+  存储封测: ['江波龙', '北京君正', '晶方科技'],
 };
 
 function chainNamesForKeys(keys) {
@@ -126,9 +134,19 @@ function verifyRanking(meta) {
     }
     if (!co.verify.capacityUnit) errors.push(`${meta.key}: ${co.name} 缺少 capacityUnit`);
     if (WEAK_RELATED.includes(co.name) || (WEAK_BY_KEY[meta.key] || []).includes(co.name)) {
-      warnings.push(`${meta.key}: ${co.name} 关联度偏弱或上游配套口径`);
+      errors.push(`${meta.key}: ${co.name} 为弱关联标的，应替换为强相关公司`);
+    }
+    if (INVESTMENT_FORBIDDEN_RE.test(co.highlight || '')) {
+      errors.push(`${meta.key}: ${co.name} highlight 含投资暗示词汇（龙头/核心供应商等）`);
     }
   });
+
+  if (data.subtitle && INVESTMENT_FORBIDDEN_RE.test(data.subtitle)) {
+    errors.push(`${meta.key}: subtitle 含投资暗示词汇`);
+  }
+  if (data.title && INVESTMENT_FORBIDDEN_RE.test(data.title)) {
+    errors.push(`${meta.key}: title 含投资暗示词汇`);
+  }
 
   if (meta.key === '高速光模块') {
     const zjxc = byRank.find((c) => c.name === '中际旭创');
@@ -138,14 +156,6 @@ function verifyRanking(meta) {
     if (zjxc && !/六成|60%|6成/.test(`${zjxc.highlight}${zjxc.verify.note}`)) {
       errors.push('中际旭创应标注800G/1.6T约占六成');
     }
-    const cxbc = byRank.find((c) => c.name === '长芯博创');
-    if (!cxbc || !/MPO|互连|配套|非.*整机/.test(`${cxbc.highlight}${cxbc.verify.note}`)) {
-      errors.push('长芯博创应备注光互连配套器件、非整机光模块产能');
-    }
-    const zte = byRank.find((c) => c.name === '中兴通讯');
-    if (!zte || !/自用|外销/.test(`${zte.highlight}${zte.verify.note}`)) {
-      errors.push('中兴通讯应区分自用配套与外销产能');
-    }
     const cam = byRank.find((c) => c.name === '剑桥科技');
     if (!cam || cam.verify.capacity !== 350) {
       errors.push('剑桥科技产能应为年报口径350万支/年');
@@ -153,54 +163,16 @@ function verifyRanking(meta) {
     if (cam && cam.verify.sourceType !== 'official') {
       errors.push('剑桥科技应为 official 口径');
     }
-  }
-
-  if (meta.key === '光芯片') {
-    const bc = byRank.find((c) => c.name === '博创科技');
-    if (!bc || !/无源|互连|非.*DFB|非.*激光/.test(`${bc.highlight}${bc.verify.note}`)) {
-      errors.push('博创科技应标注硅光无源器件、非激光芯片');
-    }
-    const cxbc = byRank.find((c) => c.name === '长芯博创');
-    if (!cxbc || !/MPO|互连|非.*激光/.test(`${cxbc.highlight}${cxbc.verify.note}`)) {
-      errors.push('长芯博创应标注互连器件、非激光芯片');
-    }
-  }
-
-  if (meta.key === '光纤预制棒') {
-    ['汇源通信', '华脉科技', '通光线缆'].forEach((name) => {
-      const row = byRank.find((c) => c.name === name);
-      if (!row || !/外协|配套|非.*制造|非.*产线/.test(`${row.highlight}${row.verify.note}`)) {
-        errors.push(`${name}应标注非自主光棒制造或外协配套口径`);
-      }
-    });
-  }
-
-  if (meta.key === 'CPO光引擎') {
+    const cxb = byRank.find((c) => c.name === '长芯博创');
     const zte = byRank.find((c) => c.name === '中兴通讯');
-    if (!zte || !/配套|组网|非.*制造|非.*外销/.test(`${zte.highlight}${zte.verify.note}`)) {
-      errors.push('中兴通讯CPO榜应标注系统配套、非光引擎制造');
+    if (!cxb || !/MPO|AOC|互连配套|无高速光模块整机/.test(`${cxb.highlight}${cxb.verify.note}`)) {
+      errors.push('长芯博创应标注MPO/AOC互连配套产能、无整机外销');
     }
-    const tc = byRank.find((c) => c.name === '太辰光');
-    if (!tc || !/MPO|互连|非.*整机/.test(`${tc.highlight}${tc.verify.note}`)) {
-      errors.push('太辰光应标注互连组件、非CPO光引擎整机');
+    if (!zte || !/自用|交换机配套|无对外外销|不参与市场流通/.test(`${zte.highlight}${zte.verify.note}`)) {
+      errors.push('中兴通讯应标注自用配套、无对外外销光模块产能');
     }
-  }
-
-  if (meta.key === '液冷设备') {
-    const inspur = byRank.find((c) => c.name === '浪潮信息');
-    if (!inspur || !/整机|非独立/.test(`${inspur.highlight}${inspur.verify.note}`)) {
-      errors.push('浪潮信息应标注液冷服务器整机散热、非独立液冷设备');
-    }
-    const pump = byRank.find((c) => c.name === '大元泵业');
-    if (!pump || !/泵|非冷板|非浸没|非整机/.test(`${pump.highlight}${pump.verify.note}`)) {
-      errors.push('大元泵业应标注CDU泵配套、非液冷整机设备');
-    }
-  }
-
-  if (meta.key === '算力服务器') {
-    const szsm = byRank.find((c) => c.name === '神州数码');
-    if (!szsm || !/渠道|非自有|非.*制造/.test(`${szsm.highlight}${szsm.verify.note}`)) {
-      errors.push('神州数码应标注渠道集成交付、非自有制造产能');
+    if (!/对外外销|外销/.test(`${data.title}${data.subtitle}`)) {
+      errors.push('高速光模块标题/副标题应限定对外外销口径');
     }
   }
 
@@ -212,13 +184,6 @@ function verifyRanking(meta) {
     const fh = byRank.find((c) => c.name === '风华高科');
     if (!fh || !/总产能|非仅/.test(`${fh.capacityLabel}${fh.highlight}${fh.verify.note}`)) {
       errors.push('风华高科应区分MLCC总产能与车规/算力品类');
-    }
-  }
-
-  if (meta.key === '低介电子纱') {
-    const hj = byRank.find((c) => c.name === '宏和科技');
-    if (!hj || !/折算|非电子纱|电子布/.test(`${hj.capacityLabel}${hj.highlight}${hj.verify.note}`)) {
-      errors.push('宏和科技应标注电子布原丝需求折算、非电子纱产线');
     }
   }
 
@@ -262,4 +227,4 @@ if (totalErrors) {
   console.log(`合计 ${totalErrors} 项失败`);
   process.exit(1);
 }
-console.log('全部 PASS');
+console.log('全部 16 榜复验通过');

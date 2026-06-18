@@ -1,0 +1,172 @@
+{
+  "key": "大数据",
+  "industryKeys": [
+    "AI算力"
+  ],
+  "title": "2026大数据平台用户规模TOP10",
+  "subtitle": "口径：金融/安全大数据平台月活用户（万MAU）；均为大数据与金融信息服务商规模靠前厂商",
+  "capacityUnit": "万MAU",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "东方财富",
+      "capacityLabel": "月活约18500万",
+      "highlight": "互联网券商+金融数据规模靠前厂商，行情与交易高峰算力消耗出货量规模居前",
+      "verify": {
+        "capacity": 18500,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融数据平台月活用户约18500万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "同花顺",
+      "capacityLabel": "月活约15200万",
+      "highlight": "金融信息服务商规模靠前厂商，iFinD与量化回测算力需求旺盛",
+      "verify": {
+        "capacity": 15200,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融数据平台月活用户约15200万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "三六零",
+      "capacityLabel": "月活约12800万",
+      "highlight": "360智脑大模型+安全，搜索与安全场景大数据算力",
+      "verify": {
+        "capacity": 12800,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：安全与搜索平台月活用户约12800万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "恒生电子",
+      "capacityLabel": "月活约6800万",
+      "highlight": "金融IT规模靠前厂商，机构交易与资管系统大数据处理",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融IT平台服务用户约6800万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "顶点软件",
+      "capacityLabel": "月活约4200万",
+      "highlight": "金融IT规模靠前厂商，证券核心交易系统与量化回测算力平台",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融IT平台服务用户约4200万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "指南针",
+      "capacityLabel": "月活约3800万",
+      "highlight": "金融信息服务，证券分析与投资者教育大数据平台",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融信息月活用户约3800万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "大智慧",
+      "capacityLabel": "月活约3200万",
+      "highlight": "金融数据终端，行情资讯与量化工具用户规模领先",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融终端月活用户约3200万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "银之杰",
+      "capacityLabel": "月活约2800万",
+      "highlight": "金融科技+大数据，金融征信与数据服务算力平台",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：金融科技平台用户约2800万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "零点有数",
+      "capacityLabel": "月活约2200万",
+      "highlight": "数据分析+决策咨询，政务与商业大数据算力服务",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据分析平台服务用户约2200万",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "博彦科技",
+      "capacityLabel": "月活约1800万",
+      "highlight": "IT服务+大数据，企业数字化与数据分析算力外包",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万MAU",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：大数据服务客户规模约1800万用户级",
+        "officialCross": null
+      }
+    }
+  ]
+}

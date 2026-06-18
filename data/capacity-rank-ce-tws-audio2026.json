@@ -1,0 +1,172 @@
+{
+  "key": "TWS耳机音箱",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026 TWS/耳机音箱出货量TOP10",
+  "subtitle": "口径：TWS耳机年化出货量（万副/年）；均为声学代工/品牌出货规模靠前厂商",
+  "capacityUnit": "万副/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "歌尔股份",
+      "capacityLabel": "年出货约28500万副",
+      "highlight": "TWS耳机代工全球规模靠前厂商，苹果AirPods主要供货企业",
+      "verify": {
+        "capacity": 28500,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约28500万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "立讯精密",
+      "capacityLabel": "年出货约22800万副",
+      "highlight": "连接器+声学+组装，AirPods/Watch核心制造与TWS代工",
+      "verify": {
+        "capacity": 22800,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约22800万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "国光电器",
+      "capacityLabel": "年出货约6800万副",
+      "highlight": "声学喇叭+音箱/TWS代工，AI音箱与耳机ODM出货放量",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS/耳机年化出货量约6800万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "佳禾智能",
+      "capacityLabel": "年出货约5200万副",
+      "highlight": "TWS耳机ODM规模靠前厂商，品牌客户耳机与智能音箱代工",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约5200万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "朝阳科技",
+      "capacityLabel": "年出货约4200万副",
+      "highlight": "电声器件+TWS耳机，消费电子声学零部件与整机代工",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约4200万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "漫步者",
+      "capacityLabel": "年出货约3800万副",
+      "highlight": "音频设备品牌规模靠前厂商，TWS耳机与智能音箱自有品牌出货",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约3800万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "天键股份",
+      "capacityLabel": "年出货约3200万副",
+      "highlight": "耳机ODM规模靠前厂商，TWS与头戴式耳机代工出货量行业前列",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约3200万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "奋达科技",
+      "capacityLabel": "年出货约1200万副",
+      "highlight": "智能音箱+可穿戴代工，TWS与智能手环ODM",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约1200万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "惠威科技",
+      "capacityLabel": "年出货约950万副",
+      "highlight": "音响品牌+代工，TWS耳机与有源音箱出货",
+      "verify": {
+        "capacity": 950,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约950万副",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "共达电声",
+      "capacityLabel": "年出货约780万副",
+      "highlight": "微型电声元器件+TWS，声学器件与耳机代工",
+      "verify": {
+        "capacity": 780,
+        "capacityUnit": "万副/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：TWS耳机年化出货量约780万副",
+        "officialCross": null
+      }
+    }
+  ]
+}

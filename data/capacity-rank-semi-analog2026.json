@@ -1,0 +1,174 @@
+{
+  "key": "模拟芯片",
+  "industryKeys": [
+    "半导体",
+    "芯片",
+    "元件"
+  ],
+  "title": "2026模拟芯片出货量TOP10",
+  "subtitle": "口径：模拟/电源管理/信号链芯片年化出货量（万片/年）；均为模拟芯片设计出货规模靠前厂商",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "圣邦股份",
+      "capacityLabel": "年出货约185万片",
+      "highlight": "模拟IC设计，电源管理/信号链芯片出货量国内领先",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟芯片年化出货量约185万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "上海贝岭",
+      "capacityLabel": "年出货约142万片",
+      "highlight": "电源管理+计量芯片，工控与消费电子模拟芯片",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟芯片年化出货量约142万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "富满微",
+      "capacityLabel": "年出货约98万片",
+      "highlight": "模拟+电源管理IDM，LED驱动与电源芯片量产",
+      "verify": {
+        "capacity": 98,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟芯片年化出货量约98万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国民技术",
+      "capacityLabel": "年出货约72万片",
+      "highlight": "电源管理+安全模拟，USB-PD与电池管理芯片",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟芯片年化出货量约72万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "博通集成",
+      "capacityLabel": "年出货约58万片",
+      "highlight": "射频+模拟混合，WiFi/BT射频前端与模拟芯片",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：射频模拟芯片年化出货量约58万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "捷捷微电",
+      "capacityLabel": "年出货约45万片",
+      "highlight": "功率模拟+保护器件，TVS/ESD与电源保护芯片",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率模拟芯片年化出货量约45万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "台基股份",
+      "capacityLabel": "年出货约38万片",
+      "highlight": "大功率半导体+模拟驱动，功率模块与驱动芯片",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率模拟芯片年化出货量约38万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "苏州固锝",
+      "capacityLabel": "年出货约32万片",
+      "highlight": "分立器件+传感器模拟，功率与传感模拟芯片",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟芯片年化出货量约32万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "扬杰科技",
+      "capacityLabel": "年出货约28万片",
+      "highlight": "功率器件+模拟驱动，MOSFET/IGBT与驱动芯片",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率模拟芯片年化出货量约28万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华微电子",
+      "capacityLabel": "年出货约22万片",
+      "highlight": "功率MOSFET+模拟，工控与电源模拟芯片",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率模拟芯片年化出货量约22万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

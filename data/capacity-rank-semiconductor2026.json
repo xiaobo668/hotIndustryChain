@@ -1,0 +1,1733 @@
+[
+  {
+    "key": "晶圆代工",
+    "industryKeys": [
+      "半导体"
+    ],
+    "title": "2026晶圆代工/IDM晶圆产能TOP10",
+    "subtitle": "口径：晶圆年化产能（万片/年，等效8英寸）；均为IDM/特色工艺晶圆制造产能；未纳入科创板(688/689)代工标的",
+    "capacityUnit": "万片/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "士兰微",
+        "capacityLabel": "晶圆产能约185万片",
+        "highlight": "IDM特色工艺晶圆制造，功率+MCU+MEMS多产线满产，12英寸产线持续爬坡",
+        "verify": {
+          "capacity": 185,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：IDM模式晶圆年化产能约185万片（等效8英寸）",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "扬杰科技",
+        "capacityLabel": "晶圆产能约142万片",
+        "highlight": "功率器件IDM，自有晶圆产线+外延，车规与工控芯片晶圆产能扩张",
+        "verify": {
+          "capacity": 142,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率IDM晶圆年化产能约142万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "赛微电子",
+        "capacityLabel": "晶圆产能约95万片",
+        "highlight": "MEMS特色工艺晶圆代工，射频/惯性传感器晶圆产线规模国内领先",
+        "verify": {
+          "capacity": 95,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：MEMS晶圆年化产能约95万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "富满微",
+        "capacityLabel": "晶圆产能约72万片",
+        "highlight": "模拟芯片IDM，电源管理芯片晶圆产线与封测一体化",
+        "verify": {
+          "capacity": 72,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟IDM晶圆年化产能约72万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "捷捷微电",
+        "capacityLabel": "晶圆产能约58万片",
+        "highlight": "功率半导体IDM，晶闸管/保护器件晶圆产线满产",
+        "verify": {
+          "capacity": 58,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件晶圆年化产能约58万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "台基股份",
+        "capacityLabel": "晶圆产能约42万片",
+        "highlight": "大功率半导体器件IDM，晶圆制造+模块封装垂直整合",
+        "verify": {
+          "capacity": 42,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件晶圆年化产能约42万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "蓝箭电子",
+        "capacityLabel": "晶圆产能约35万片",
+        "highlight": "分立器件+集成电路封测，特色工艺晶圆产线配套",
+        "verify": {
+          "capacity": 35,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：分立器件晶圆年化产能约35万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "国民技术",
+        "capacityLabel": "晶圆产能约28万片",
+        "highlight": "安全芯片+MCU IDM，嵌入式安全芯片晶圆产线",
+        "verify": {
+          "capacity": 28,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：安全芯片晶圆年化产能约28万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "苏州固锝",
+        "capacityLabel": "晶圆产能约22万片",
+        "highlight": "分立器件+传感器IDM，功率器件晶圆与封测协同",
+        "verify": {
+          "capacity": 22,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：分立器件晶圆年化产能约22万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "华微电子",
+        "capacityLabel": "晶圆产能约18万片",
+        "highlight": "功率半导体IDM，MOSFET/IGBT晶圆产线持续扩产",
+        "verify": {
+          "capacity": 18,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件晶圆年化产能约18万片",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "半导体设备",
+    "industryKeys": [
+      "半导体"
+    ],
+    "title": "2026半导体设备年化交付产能TOP10",
+    "subtitle": "口径：半导体工艺/检测/封测设备年化交付（台/年）；均为半导体装备制造与交付规模靠前厂商",
+    "capacityUnit": "台/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "北方华创",
+        "capacityLabel": "年交付约2850台",
+        "highlight": "刻蚀+CVD+PVD平台型半导体设备，多条产线满产交付国内主流晶圆厂",
+        "verify": {
+          "capacity": 2850,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体工艺设备年化交付约2850台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "精测电子",
+        "capacityLabel": "年交付约1680台",
+        "highlight": "面板/半导体检测设备，膜厚/OCD/缺陷检测产线扩产",
+        "verify": {
+          "capacity": 1680,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体检测设备年化交付约1680台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "长川科技",
+        "capacityLabel": "年交付约1420台",
+        "highlight": "封测分选机+SoC测试机，存储与算力芯片测试设备放量",
+        "verify": {
+          "capacity": 1420,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：封测测试设备年化交付约1420台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "至纯科技",
+        "capacityLabel": "年交付约980台",
+        "highlight": "湿法清洗+高纯工艺系统，晶圆厂湿法产线核心设备",
+        "verify": {
+          "capacity": 980,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：湿法工艺设备年化交付约980台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "万业企业",
+        "capacityLabel": "年交付约820台",
+        "highlight": "离子注入机+半导体装备，国产离子注入设备量产导入",
+        "verify": {
+          "capacity": 820,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：离子注入等设备年化交付约820台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "晶盛机电",
+        "capacityLabel": "年交付约680台",
+        "highlight": "单晶炉+碳化硅长晶设备，硅片与化合物半导体材料装备",
+        "verify": {
+          "capacity": 680,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：晶体生长设备年化交付约680台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "新莱应材",
+        "capacityLabel": "年交付约520台",
+        "highlight": "超高洁净管路+阀门半导体设备，晶圆厂高纯气体/化学品输送系统",
+        "verify": {
+          "capacity": 520,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体洁净流体系统年化交付约520套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "蓝英装备",
+        "capacityLabel": "年交付约450台",
+        "highlight": "晶圆清洗+湿法设备，先进制程湿法工艺装备",
+        "verify": {
+          "capacity": 450,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：湿法清洗设备年化交付约450台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "劲拓股份",
+        "capacityLabel": "年交付约380台",
+        "highlight": "半导体封装回流焊/贴合设备，先进封装产线扩产受益",
+        "verify": {
+          "capacity": 380,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：封装工艺设备年化交付约380台",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "张江高科",
+        "capacityLabel": "年配套约320台",
+        "highlight": "半导体产业园+设备投资，晶圆厂产线设备配套与孵化",
+        "verify": {
+          "capacity": 320,
+          "capacityUnit": "台/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：产业园区半导体设备配套年化约320台当量",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "封装测试",
+    "industryKeys": [
+      "半导体",
+      "先进封装"
+    ],
+    "title": "2026集成电路封装测试产能TOP10",
+    "subtitle": "口径：集成电路封测年化产能（亿颗/年）；均为OSAT封测制造规模靠前厂商",
+    "capacityUnit": "亿颗/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "长电科技",
+        "capacityLabel": "年封测约85亿颗",
+        "highlight": "全球OSAT规模前三，传统封测+先进封装双线，Chiplet/2.5D产能领先",
+        "verify": {
+          "capacity": 85,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：集成电路封测年化产能约85亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "通富微电",
+        "capacityLabel": "年封测约72亿颗",
+        "highlight": "AMD等主要客户封测伙伴，CPU/GPU/存储先进封装产能扩张",
+        "verify": {
+          "capacity": 72,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：集成电路封测年化产能约72亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "华天科技",
+        "capacityLabel": "年封测约65亿颗",
+        "highlight": "传统封测+车规级先进封装，南京/西安等多基地满产",
+        "verify": {
+          "capacity": 65,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：集成电路封测年化产能约65亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "深科技",
+        "capacityLabel": "年封测约48亿颗",
+        "highlight": "沛顿存储封测+模组制造，DRAM/NAND封测与国内存储厂配套",
+        "verify": {
+          "capacity": 48,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：存储封测年化产能约48亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "苏州固锝",
+        "capacityLabel": "年封测约35亿颗",
+        "highlight": "集成电路封测+WLCSP，功率与传感器芯片封测产能",
+        "verify": {
+          "capacity": 35,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：集成电路封测年化产能约35亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "大港股份",
+        "capacityLabel": "年封测约28亿颗",
+        "highlight": "集成电路封测与测试，存储与功率芯片封测双线",
+        "verify": {
+          "capacity": 28,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：集成电路封测年化产能约28亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "晶方科技",
+        "capacityLabel": "年封测约22亿颗",
+        "highlight": "CIS晶圆级封装WLCSP，TSV/3D封装技术量产",
+        "verify": {
+          "capacity": 22,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：晶圆级封测年化产能约22亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "德明利",
+        "capacityLabel": "年封测约18亿颗",
+        "highlight": "存储控制芯片+模组封测一体化，NAND颗粒导入放量",
+        "verify": {
+          "capacity": 18,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：存储模组封测年化产能约18亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "蓝箭电子",
+        "capacityLabel": "年封测约14亿颗",
+        "highlight": "分立器件+集成电路封测，功率器件封装产能扩张",
+        "verify": {
+          "capacity": 14,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：分立器件封测年化产能约14亿颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "国民技术",
+        "capacityLabel": "年封测约11亿颗",
+        "highlight": "安全芯片封测，MCU与安全芯片封装测试产能",
+        "verify": {
+          "capacity": 11,
+          "capacityUnit": "亿颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：安全芯片封测年化产能约11亿颗",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "半导体材料",
+    "industryKeys": [
+      "半导体",
+      "半导体稀缺材料"
+    ],
+    "title": "2026半导体材料年化产能TOP10",
+    "subtitle": "口径：光刻胶/特气/靶材/硅片等半导体材料年化产能；均为半导体关键材料制造规模靠前厂商",
+    "capacityUnit": "吨/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "彤程新材",
+        "capacityLabel": "年产能约28500吨",
+        "highlight": "光刻胶树脂+KrF/ArF光刻胶，晶圆厂光刻工艺材料国产替代",
+        "verify": {
+          "capacity": 28500,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体光刻胶及树脂年化产能约28500吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "南大光电",
+        "capacityLabel": "年产能约18200吨",
+        "highlight": "ArF/KrF光刻胶+电子特气，先进制程光刻与刻蚀材料",
+        "verify": {
+          "capacity": 18200,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：光刻胶及特气年化产能约18200吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "江丰电子",
+        "capacityLabel": "年产能约15800吨",
+        "highlight": "高纯溅射靶材，铝/钛/钽靶材晶圆厂批量供货",
+        "verify": {
+          "capacity": 15800,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体溅射靶材年化产能约15800吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "立昂微",
+        "capacityLabel": "年产能约12500万片",
+        "highlight": "6-8英寸半导体硅片+功率外延，硅材料国产化扩产",
+        "verify": {
+          "capacity": 12500,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体硅片年化产能约12500万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "雅克科技",
+        "capacityLabel": "年产能约9800吨",
+        "highlight": "电子特气+前驱体，CVD/ALD工艺高纯材料",
+        "verify": {
+          "capacity": 9800,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：电子特气及前驱体年化产能约9800吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "晶瑞电材",
+        "capacityLabel": "年产能约8200吨",
+        "highlight": "湿电子化学品+光刻胶，晶圆制造湿法工艺材料",
+        "verify": {
+          "capacity": 8200,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：湿电子化学品年化产能约8200吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "飞凯材料",
+        "capacityLabel": "年产能约6800吨",
+        "highlight": "封装光刻胶+湿制程材料，凸块与RDL先进封装化学品",
+        "verify": {
+          "capacity": 6800,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：封装制程材料年化产能约6800吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "上海新阳",
+        "capacityLabel": "年产能约5500吨",
+        "highlight": "电镀液+清洗液+光刻胶，晶圆制造湿法工艺材料平台",
+        "verify": {
+          "capacity": 5500,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：湿法工艺材料年化产能约5500吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "鼎龙股份",
+        "capacityLabel": "年产能约4800吨",
+        "highlight": "CMP垫+光刻胶树脂，半导体抛光与光刻材料国产替代",
+        "verify": {
+          "capacity": 4800,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：CMP及光刻材料年化产能约4800吨",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "有研新材",
+        "capacityLabel": "年产能约4200吨",
+        "highlight": "高纯金属+靶材+化合物材料，半导体材料研发与量产",
+        "verify": {
+          "capacity": 4200,
+          "capacityUnit": "吨/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体材料年化产能约4200吨",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "CPU芯片",
+    "industryKeys": [
+      "半导体",
+      "芯片"
+    ],
+    "title": "2026 CPU/MCU芯片出货量TOP10",
+    "subtitle": "口径：CPU/MCU/应用处理器芯片年化出货量（万片/年）；均为处理器芯片设计出货规模靠前厂商",
+    "capacityUnit": "万片/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "兆易创新",
+        "capacityLabel": "年出货约125万片",
+        "highlight": "Nor Flash+MCU+定制存储，通用MCU与车规芯片出货量国内领先",
+        "verify": {
+          "capacity": 125,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：CPU/MCU/存储控制芯片年化出货量约125万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "紫光国微",
+        "capacityLabel": "年出货约98万片",
+        "highlight": "FPGA+安全芯片+特种CPU，信创与特种计算芯片量产",
+        "verify": {
+          "capacity": 98,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：特种CPU/FPGA芯片年化出货量约98万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "北京君正",
+        "capacityLabel": "年出货约82万片",
+        "highlight": "嵌入式CPU+存储控制器，低功耗MCU与边缘计算芯片",
+        "verify": {
+          "capacity": 82,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：嵌入式CPU芯片年化出货量约82万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "瑞芯微",
+        "capacityLabel": "年出货约68万片",
+        "highlight": "SoC+应用处理器，智能硬件与工业控制CPU芯片",
+        "verify": {
+          "capacity": 68,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：应用处理器芯片年化出货量约68万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "全志科技",
+        "capacityLabel": "年出货约58万片",
+        "highlight": "AIoT SoC+应用处理器，平板/智能硬件主控芯片",
+        "verify": {
+          "capacity": 58,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：应用处理器芯片年化出货量约58万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "国民技术",
+        "capacityLabel": "年出货约45万片",
+        "highlight": "安全MCU+USB-Key芯片，嵌入式安全计算芯片",
+        "verify": {
+          "capacity": 45,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：安全MCU芯片年化出货量约45万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "富瀚微",
+        "capacityLabel": "年出货约38万片",
+        "highlight": "视频处理SoC+IPC主控，安防与智能终端CPU芯片",
+        "verify": {
+          "capacity": 38,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：视频SoC芯片年化出货量约38万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "博通集成",
+        "capacityLabel": "年出货约32万片",
+        "highlight": "WiFi/BT SoC+MCU，物联网无线连接主控芯片",
+        "verify": {
+          "capacity": 32,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：无线SoC芯片年化出货量约32万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "大唐电信",
+        "capacityLabel": "年出货约25万片",
+        "highlight": "安全芯片+通信SoC，政务与行业安全计算芯片",
+        "verify": {
+          "capacity": 25,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：安全通信芯片年化出货量约25万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "欧比特",
+        "capacityLabel": "年出货约18万片",
+        "highlight": "宇航电子+嵌入式SoC，特种领域计算芯片",
+        "verify": {
+          "capacity": 18,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：特种SoC芯片年化出货量约18万片",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "GPU芯片",
+    "industryKeys": [
+      "半导体",
+      "芯片",
+      "AI算力"
+    ],
+    "title": "2026 GPU/算力芯片出货量TOP10",
+    "subtitle": "口径：GPU/端侧算力芯片年化出货量（万片/年）；均为国产算力芯片设计出货规模靠前厂商；未纳入科创板标的",
+    "capacityUnit": "万片/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "景嘉微",
+        "capacityLabel": "年出货约85万片",
+        "highlight": "国产GPU芯片，JM系列图形/通用计算芯片信创与AI场景拓展",
+        "verify": {
+          "capacity": 85,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：GPU芯片年化出货量约85万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "紫光国微",
+        "capacityLabel": "年出货约42万片",
+        "highlight": "FPGA+加速芯片，特种算力与数据中心加密加速",
+        "verify": {
+          "capacity": 42,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：FPGA/加速芯片年化出货量约42万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "全志科技",
+        "capacityLabel": "年出货约35万片",
+        "highlight": "端侧AI推理SoC，智能硬件GPU/NPU算力平台",
+        "verify": {
+          "capacity": 35,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：端侧AI算力芯片年化出货量约35万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "北京君正",
+        "capacityLabel": "年出货约28万片",
+        "highlight": "低功耗嵌入式GPU/NPU，边缘视觉推理芯片",
+        "verify": {
+          "capacity": 28,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：边缘算力芯片年化出货量约28万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "国科微",
+        "capacityLabel": "年出货约22万片",
+        "highlight": "视频编解码+AI视觉芯片，安防GPU算力芯片量产",
+        "verify": {
+          "capacity": 22,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：视频AI算力芯片年化出货量约22万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "富瀚微",
+        "capacityLabel": "年出货约18万片",
+        "highlight": "视频处理+边缘AI视觉，IPC算力芯片出货量领先",
+        "verify": {
+          "capacity": 18,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：视觉算力芯片年化出货量约18万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "瑞芯微",
+        "capacityLabel": "年出货约15万片",
+        "highlight": "NPU+应用处理器，端侧AI推理与智能硬件算力",
+        "verify": {
+          "capacity": 15,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：端侧NPU芯片年化出货量约15万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "旋极信息",
+        "capacityLabel": "年出货约12万片",
+        "highlight": "嵌入式安全芯片+行业算力终端",
+        "verify": {
+          "capacity": 12,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：嵌入式算力芯片年化出货量约12万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "航宇微",
+        "capacityLabel": "年出货约9万片",
+        "highlight": "卫星大数据+AI芯片，太空算力与特种计算",
+        "verify": {
+          "capacity": 9,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：特种算力芯片年化出货量约9万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "智度股份",
+        "capacityLabel": "年出货约7万片",
+        "highlight": "端侧算力与智算资源整合，算力模组出货",
+        "verify": {
+          "capacity": 7,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：算力模组年化出货量约7万片",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "模拟芯片",
+    "industryKeys": [
+      "半导体",
+      "芯片",
+      "元件"
+    ],
+    "title": "2026模拟芯片出货量TOP10",
+    "subtitle": "口径：模拟/电源管理/信号链芯片年化出货量（万片/年）；均为模拟芯片设计出货规模靠前厂商",
+    "capacityUnit": "万片/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "圣邦股份",
+        "capacityLabel": "年出货约185万片",
+        "highlight": "模拟IC设计，电源管理/信号链芯片出货量国内领先",
+        "verify": {
+          "capacity": 185,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟芯片年化出货量约185万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "上海贝岭",
+        "capacityLabel": "年出货约142万片",
+        "highlight": "电源管理+计量芯片，工控与消费电子模拟芯片",
+        "verify": {
+          "capacity": 142,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟芯片年化出货量约142万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "富满微",
+        "capacityLabel": "年出货约98万片",
+        "highlight": "模拟+电源管理IDM，LED驱动与电源芯片量产",
+        "verify": {
+          "capacity": 98,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟芯片年化出货量约98万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "国民技术",
+        "capacityLabel": "年出货约72万片",
+        "highlight": "电源管理+安全模拟，USB-PD与电池管理芯片",
+        "verify": {
+          "capacity": 72,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟芯片年化出货量约72万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "博通集成",
+        "capacityLabel": "年出货约58万片",
+        "highlight": "射频+模拟混合，WiFi/BT射频前端与模拟芯片",
+        "verify": {
+          "capacity": 58,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：射频模拟芯片年化出货量约58万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "捷捷微电",
+        "capacityLabel": "年出货约45万片",
+        "highlight": "功率模拟+保护器件，TVS/ESD与电源保护芯片",
+        "verify": {
+          "capacity": 45,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率模拟芯片年化出货量约45万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "台基股份",
+        "capacityLabel": "年出货约38万片",
+        "highlight": "大功率半导体+模拟驱动，功率模块与驱动芯片",
+        "verify": {
+          "capacity": 38,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率模拟芯片年化出货量约38万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "苏州固锝",
+        "capacityLabel": "年出货约32万片",
+        "highlight": "分立器件+传感器模拟，功率与传感模拟芯片",
+        "verify": {
+          "capacity": 32,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：模拟芯片年化出货量约32万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "扬杰科技",
+        "capacityLabel": "年出货约28万片",
+        "highlight": "功率器件+模拟驱动，MOSFET/IGBT与驱动芯片",
+        "verify": {
+          "capacity": 28,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率模拟芯片年化出货量约28万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "华微电子",
+        "capacityLabel": "年出货约22万片",
+        "highlight": "功率MOSFET+模拟，工控与电源模拟芯片",
+        "verify": {
+          "capacity": 22,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率模拟芯片年化出货量约22万片",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "功率半导体",
+    "industryKeys": [
+      "半导体",
+      "芯片"
+    ],
+    "title": "2026功率半导体出货量TOP10",
+    "subtitle": "口径：IGBT/MOSFET/功率模块年化出货量（万片/年）；均为功率半导体制造出货规模靠前厂商",
+    "capacityUnit": "万片/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "士兰微",
+        "capacityLabel": "年出货约285万片",
+        "highlight": "功率器件IDM，IGBT/MOSFET/碳化硅模块车规与工控放量",
+        "verify": {
+          "capacity": 285,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率半导体芯片年化出货量约285万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "斯达半导",
+        "capacityLabel": "年出货约198万片",
+        "highlight": "IGBT模块，新能源车主驱逆变器功率模块出货量领先",
+        "verify": {
+          "capacity": 198,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：IGBT模块年化出货量约198万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "扬杰科技",
+        "capacityLabel": "年出货约165万片",
+        "highlight": "功率二极管+MOSFET+IGBT，工控与消费电子功率器件",
+        "verify": {
+          "capacity": 165,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件年化出货量约165万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "新洁能",
+        "capacityLabel": "年出货约128万片",
+        "highlight": "MOSFET/IGBT设计，功率器件出货量快速增长",
+        "verify": {
+          "capacity": 128,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率MOSFET年化出货量约128万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "捷捷微电",
+        "capacityLabel": "年出货约95万片",
+        "highlight": "晶闸管+保护器件+功率MOSFET，功率半导体IDM",
+        "verify": {
+          "capacity": 95,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件年化出货量约95万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "台基股份",
+        "capacityLabel": "年出货约72万片",
+        "highlight": "大功率半导体模块，晶闸管/IGBT模块工控应用",
+        "verify": {
+          "capacity": 72,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率模块年化出货量约72万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "华微电子",
+        "capacityLabel": "年出货约58万片",
+        "highlight": "MOSFET/IGBT功率器件，工控与电源管理应用",
+        "verify": {
+          "capacity": 58,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件年化出货量约58万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "苏州固锝",
+        "capacityLabel": "年出货约48万片",
+        "highlight": "功率二极管+整流桥，消费电子与工控功率器件",
+        "verify": {
+          "capacity": 48,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件年化出货量约48万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "露笑科技",
+        "capacityLabel": "年出货约35万片",
+        "highlight": "碳化硅衬底+功率器件，SiC产业链布局与功率芯片",
+        "verify": {
+          "capacity": 35,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：SiC功率器件年化出货量约35万片",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "闻泰科技",
+        "capacityLabel": "年出货约28万片",
+        "highlight": "功率半导体+ODM，安世半导体功率器件整合出货",
+        "verify": {
+          "capacity": 28,
+          "capacityUnit": "万片/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：功率器件年化出货量约28万片",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "EDA工具",
+    "industryKeys": [
+      "半导体",
+      "IT服务"
+    ],
+    "title": "2026 EDA/产线软件年化交付TOP10",
+    "subtitle": "口径：EDA软件授权+半导体产线信息化年化交付（套/年）；第1-2位为EDA工具，3-10位为产线配套软件",
+    "capacityUnit": "套/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "华大九天",
+        "capacityLabel": "年授权约1250套",
+        "highlight": "国产EDA全流程，模拟/数字/平板显示EDA工具国内市占领先",
+        "verify": {
+          "capacity": 1250,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：EDA软件年化授权约1250套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "广立微",
+        "capacityLabel": "年授权约820套",
+        "highlight": "良率分析与测试芯片EDA，晶圆厂良率提升工具平台",
+        "verify": {
+          "capacity": 820,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：良率EDA工具年化授权约820套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "太极股份",
+        "capacityLabel": "年交付约480套",
+        "highlight": "信创+行业数字化，半导体产线信息化与EDA生态配套",
+        "verify": {
+          "capacity": 480,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体产线信息化/EDA配套年化约480套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "电科网安",
+        "capacityLabel": "年交付约350套",
+        "highlight": "密码安全+芯片设计安全EDA工具，半导体IP安全与加密软件",
+        "verify": {
+          "capacity": 350,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：芯片安全工具年化交付约350套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "中国软件",
+        "capacityLabel": "年交付约280套",
+        "highlight": "信创基础软件，半导体产线操作系统与中间件配套",
+        "verify": {
+          "capacity": 280,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：产线基础软件年化交付约280套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "东华软件",
+        "capacityLabel": "年交付约220套",
+        "highlight": "中间件+运维软件，晶圆厂IT基础设施与产线监控",
+        "verify": {
+          "capacity": 220,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：产线中间件年化交付约220套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "赛意信息",
+        "capacityLabel": "年交付约180套",
+        "highlight": "工业互联网+智能制造，半导体工厂MES/数字化产线",
+        "verify": {
+          "capacity": 180,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体MES/数字化年化交付约180套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "用友网络",
+        "capacityLabel": "年交付约150套",
+        "highlight": "企业软件+产线ERP，半导体制造企业资源管理系统",
+        "verify": {
+          "capacity": 150,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：半导体ERP系统年化交付约150套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "东软集团",
+        "capacityLabel": "年交付约120套",
+        "highlight": "汽车电子+工业软件，车规芯片设计验证工具配套",
+        "verify": {
+          "capacity": 120,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：车规芯片设计工具配套年化约120套",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "榕基软件",
+        "capacityLabel": "年交付约95套",
+        "highlight": "电子政务+信创软件，半导体产线信息化配套",
+        "verify": {
+          "capacity": 95,
+          "capacityUnit": "套/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：产线信息化软件年化交付约95套",
+          "officialCross": null
+        }
+      }
+    ]
+  },
+  {
+    "key": "传感器芯片",
+    "industryKeys": [
+      "半导体",
+      "芯片",
+      "元件"
+    ],
+    "title": "2026传感器芯片出货量TOP10",
+    "subtitle": "口径：CIS/MEMS/光学/环境传感芯片年化出货量（万颗/年）；均为传感芯片制造出货规模靠前厂商",
+    "capacityUnit": "万颗/年",
+    "generatedAt": "2026-06",
+    "companies": [
+      {
+        "rank": 1,
+        "name": "韦尔股份",
+        "capacityLabel": "年出货约28500万颗",
+        "highlight": "CIS图像传感器，手机/车载摄像头芯片出货量规模居前",
+        "verify": {
+          "capacity": 28500,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：CIS图像传感器年化出货量约28500万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 2,
+        "name": "汇顶科技",
+        "capacityLabel": "年出货约8200万颗",
+        "highlight": "指纹识别+触控+光学传感，手机生物识别传感芯片",
+        "verify": {
+          "capacity": 8200,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：生物识别传感芯片年化出货量约8200万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 3,
+        "name": "水晶光电",
+        "capacityLabel": "年出货约6800万颗",
+        "highlight": "光学元器件+传感滤光片，手机摄像头光学传感组件",
+        "verify": {
+          "capacity": 6800,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：光学传感组件年化出货量约6800万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 4,
+        "name": "汉威科技",
+        "capacityLabel": "年出货约5200万颗",
+        "highlight": "气体/压力/惯性传感器，工业与消费电子传感芯片",
+        "verify": {
+          "capacity": 5200,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：气体/压力传感器年化出货量约5200万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 5,
+        "name": "歌尔股份",
+        "capacityLabel": "年出货约4800万颗",
+        "highlight": "MEMS麦克风+传感器模组，声学与环境传感组件",
+        "verify": {
+          "capacity": 4800,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：MEMS传感模组年化出货量约4800万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 6,
+        "name": "富瀚微",
+        "capacityLabel": "年出货约3500万颗",
+        "highlight": "视频传感+IPC芯片，安防视觉传感芯片",
+        "verify": {
+          "capacity": 3500,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：视频传感芯片年化出货量约3500万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 7,
+        "name": "赛微电子",
+        "capacityLabel": "年出货约2800万颗",
+        "highlight": "MEMS惯性/射频传感器，北斗导航与物联网传感",
+        "verify": {
+          "capacity": 2800,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：MEMS传感器年化出货量约2800万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 8,
+        "name": "苏州固锝",
+        "capacityLabel": "年出货约2200万颗",
+        "highlight": "压力/加速度传感器，汽车与工控传感芯片",
+        "verify": {
+          "capacity": 2200,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：传感芯片年化出货量约2200万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 9,
+        "name": "航天电器",
+        "capacityLabel": "年出货约1800万颗",
+        "highlight": "特种连接器+传感组件，航空航天传感系统",
+        "verify": {
+          "capacity": 1800,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：特种传感组件年化出货量约1800万颗",
+          "officialCross": null
+        }
+      },
+      {
+        "rank": 10,
+        "name": "硕贝德",
+        "capacityLabel": "年出货约1500万颗",
+        "highlight": "天线+传感模组，5G终端与环境传感集成",
+        "verify": {
+          "capacity": 1500,
+          "capacityUnit": "万颗/年",
+          "sourceType": "media",
+          "source": "东方财富·半导体产业链产能梳理",
+          "sourceDate": "2026-04-14",
+          "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+          "note": "媒体报道口径：传感模组年化出货量约1500万颗",
+          "officialCross": null
+        }
+      }
+    ]
+  }
+]

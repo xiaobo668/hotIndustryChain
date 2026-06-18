@@ -1,0 +1,172 @@
+{
+  "key": "充电设备",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026充电设备出货量TOP10",
+  "subtitle": "口径：充电器/移动电源年化出货量（万台/年）；均为充电品牌/ODM规模靠前厂商",
+  "capacityUnit": "万台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "安克创新",
+      "capacityLabel": "年出货约15800万台",
+      "highlight": "充电头/移动电源全球品牌规模靠前厂商，氮化镓快充出货量领先",
+      "verify": {
+        "capacity": 15800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电器/移动电源年化出货量约15800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "奥海科技",
+      "capacityLabel": "年出货约12500万台",
+      "highlight": "手机充电器ODM规模靠前厂商，快充与PC电源代工出货量出货量规模居前",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电器ODM年化出货量约12500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "公牛集团",
+      "capacityLabel": "年出货约8200万台",
+      "highlight": "民用电工规模靠前厂商，数码充电与插座产品线出货量领先",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：数码充电产品年化出货量约8200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "茂硕电源",
+      "capacityLabel": "年出货约3500万台",
+      "highlight": "LED驱动电源+消费电子适配器，充电电源出货放量",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电源适配器年化出货量约3500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "京泉华",
+      "capacityLabel": "年出货约2800万台",
+      "highlight": "磁性元器件+电源适配器，充电器变压器与电源组件",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电电源组件年化出货量约2800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "英可瑞",
+      "capacityLabel": "年出货约2100万台",
+      "highlight": "电力电源+充电模块，充电桩与消费电子电源",
+      "verify": {
+        "capacity": 2100,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电电源模块年化出货量约2100万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "伊戈尔",
+      "capacityLabel": "年出货约1850万台",
+      "highlight": "电源变压器与充电组件，消费电子电源配套",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电电源组件年化出货量约1850万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "拓邦股份",
+      "capacityLabel": "年出货约1650万台",
+      "highlight": "智能控制器+充电产品，IoT与消费电子电源方案",
+      "verify": {
+        "capacity": 1650,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电控制器/终端年化出货量约1650万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "得润电子",
+      "capacityLabel": "年出货约1400万台",
+      "highlight": "连接器+电源线束，消费电子充电连接组件",
+      "verify": {
+        "capacity": 1400,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电连接组件年化出货量约1400万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "瀛通通讯",
+      "capacityLabel": "年出货约1200万台",
+      "highlight": "数据线+声学配件，Type-C线与充电配件出货",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：充电数据线年化出货量约1200万台",
+        "officialCross": null
+      }
+    }
+  ]
+}

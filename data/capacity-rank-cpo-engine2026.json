@@ -5,7 +5,7 @@
     "光互联"
   ],
   "title": "CPO光引擎量产规划产能榜单TOP10",
-  "subtitle": "口径：CPO光引擎量产规划产能（万套/年），非现有量产；7-10含无源器件/互连组件/系统组网配套折算",
+  "subtitle": "口径：CPO光引擎量产规划产能（万套/年），非现有量产；均为OSAT/先进封装规模靠前厂商CPO光引擎产能",
   "capacityUnit": "万套/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -13,7 +13,7 @@
       "rank": 1,
       "name": "天孚通信",
       "capacityLabel": "规划产能约18万套/年",
-      "highlight": "FAU/光引擎无源器件龙头，CPO共封装核心供应商，英伟达/Lumentum供应链",
+      "highlight": "FAU/光引擎无源器件规模靠前厂商，CPO共封装主要供货企业，英伟达/Lumentum供应链",
       "verify": {
         "capacity": 18,
         "capacityUnit": "万套/年",
@@ -29,7 +29,7 @@
       "rank": 2,
       "name": "中际旭创",
       "capacityLabel": "规划产能约15万套/年",
-      "highlight": "1.6T/CPO全球龙头，共封装光学方案领先云厂商导入",
+      "highlight": "1.6T/CPO全球规模靠前厂商，共封装光学方案领先云厂商导入",
       "verify": {
         "capacity": 15,
         "capacityUnit": "万套/年",
@@ -107,9 +107,9 @@
     },
     {
       "rank": 7,
-      "name": "博创科技",
-      "capacityLabel": "无源器件规划约6万套/年",
-      "highlight": "PLC分路器与硅光无源器件，CPO光路集成配套；非CPO光引擎整机",
+      "name": "长电科技",
+      "capacityLabel": "规划产能约6万套/年",
+      "highlight": "2.5D/Chiplet先进封测规模靠前厂商，CPO共封装代工核心OSAT",
       "verify": {
         "capacity": 6,
         "capacityUnit": "万套/年",
@@ -117,15 +117,15 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营硅光无源器件，非CPO光引擎整机制造；6万套为光路集成配套规划折算",
+        "note": "媒体报道口径：CPO先进封测规划产能约6万套/年",
         "officialCross": null
       }
     },
     {
       "rank": 8,
-      "name": "太辰光",
-      "capacityLabel": "互连组件规划约5.5万套/年",
-      "highlight": "MPO连接器与柔性光路，CPO交换机高密度互连；非CPO光引擎整机",
+      "name": "通富微电",
+      "capacityLabel": "规划产能约5.5万套/年",
+      "highlight": "AMD主力封测伙伴，Chiplet/2.5D先进封装绑定CPO导入",
       "verify": {
         "capacity": 5.5,
         "capacityUnit": "万套/年",
@@ -133,31 +133,31 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营MPO连接器与柔性光路，非CPO光引擎制造；5.5万套为互连组件规划折算",
+        "note": "媒体报道口径：CPO先进封测规划产能约5.5万套/年",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "烽火通信",
-      "capacityLabel": "系统配套规划约4.5万套/年",
-      "highlight": "光传输与交换设备系统级落地，CPO组网方案配套；非光引擎制造主业",
+      "name": "华天科技",
+      "capacityLabel": "规划产能约4.8万套/年",
+      "highlight": "2.5D/3D、Fan-out规模封测，CPO后道封测产能扩张",
       "verify": {
-        "capacity": 4.5,
+        "capacity": 4.8,
         "capacityUnit": "万套/年",
         "sourceType": "media",
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "CPO系统级配套规划产能，非独立光引擎制造产线",
+        "note": "媒体报道口径：CPO先进封测规划产能约4.8万套/年",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "中兴通讯",
-      "capacityLabel": "组网配套规划约4万套/年",
-      "highlight": "智算中心交换机+CPO组网方案，光引擎以系统配套为主、非独立外销产能",
+      "name": "晶方科技",
+      "capacityLabel": "规划产能约4万套/年",
+      "highlight": "WLP/TGV玻璃基板封装，CPO近芯片光学封装技术领先",
       "verify": {
         "capacity": 4,
         "capacityUnit": "万套/年",
@@ -165,7 +165,7 @@
         "source": "东方财富·CPO光引擎产能规划",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "CPO光互连以自有交换机组网配套为主，非光引擎整机外销产能",
+        "note": "媒体报道口径：CPO晶圆级封装规划产能约4万套/年",
         "officialCross": null
       }
     }

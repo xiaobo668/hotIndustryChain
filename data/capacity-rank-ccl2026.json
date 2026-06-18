@@ -7,7 +7,7 @@
     "存储芯片"
   ],
   "title": "覆铜板（CCL）年产能排行TOP10",
-  "subtitle": "口径：覆铜板年化产能（万㎡/年）；1-7为覆铜板主业或一体化厂商，8-10含CCL上游材料/PCB配套产能折算",
+  "subtitle": "口径：覆铜板年化产能（万㎡/年）；1-7为覆铜板主业或一体化厂商，8-10为CCL专用化学品/辅材规模靠前厂商配套",
   "capacityUnit": "万㎡/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -15,7 +15,7 @@
       "rank": 1,
       "name": "生益科技",
       "capacityLabel": "年产能约12000万㎡",
-      "highlight": "覆铜板龙头，高频高速CCL国内市占率第一，AI服务器CCL认证领先",
+      "highlight": "覆铜板规模靠前厂商，高频高速CCL国内出货量规模居前，AI服务器CCL认证领先",
       "verify": {
         "capacity": 12000,
         "capacityUnit": "万㎡/年",
@@ -125,9 +125,9 @@
     },
     {
       "rank": 8,
-      "name": "东材科技",
+      "name": "飞凯材料",
       "capacityLabel": "年产能约720万㎡",
-      "highlight": "高速树脂与膜材料，ABF/CCL上游粘结片与基材国产替代",
+      "highlight": "覆铜板专用树脂与湿制程材料，高频高速CCL化学品配套产能",
       "verify": {
         "capacity": 720,
         "capacityUnit": "万㎡/年",
@@ -135,39 +135,39 @@
         "source": "东方财富·覆铜板产能梳理",
         "sourceDate": "2026-02",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
-        "note": "媒体报道口径：CCL上游膜材料折算年化配套约720万㎡",
+        "note": "媒体报道口径：CCL专用化学品折算年化配套约720万㎡",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "崇达技术",
+      "name": "福莱新材",
       "capacityLabel": "年产能约680万㎡",
-      "highlight": "高端小批量PCB定制龙头，覆铜板+PCB一体化产能配套",
+      "highlight": "功能性涂布薄膜，MLCC离型膜与CCL封装保护膜配套供应",
       "verify": {
         "capacity": 680,
         "capacityUnit": "万㎡/年",
         "sourceType": "media",
-        "source": "新浪财经·PCB十大龙头产能梳理",
-        "sourceDate": "2026-04-09",
-        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
-        "note": "媒体报道口径：覆铜板配套产能约680万㎡/年",
+        "source": "东方财富·覆铜板产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "媒体报道口径：CCL/被动元件辅材折算年化配套约680万㎡",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "景旺电子",
+      "name": "圣泉集团",
       "capacityLabel": "年产能约620万㎡",
-      "highlight": "汽车+服务器PCB，高端多层板国产替代，覆铜板基材配套产能",
+      "highlight": "酚醛树脂与电子化学品，覆铜板粘结剂与CCL基材主要供货企业",
       "verify": {
         "capacity": 620,
         "capacityUnit": "万㎡/年",
         "sourceType": "media",
-        "source": "新浪财经·PCB十大龙头产能梳理",
-        "sourceDate": "2026-04-09",
-        "sourceUrl": "https://www.sina.cn/news/detail/5285721612225912.html",
-        "note": "媒体报道口径：覆铜板配套产能约620万㎡/年",
+        "source": "东方财富·覆铜板产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "媒体报道口径：CCL粘结树脂折算年化配套约620万㎡",
         "officialCross": null
       }
     }

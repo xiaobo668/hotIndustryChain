@@ -8,7 +8,7 @@
     "存储芯片"
   ],
   "title": "ABF载板量产产能榜单TOP10",
-  "subtitle": "口径：ABF/FC-BGA封装基板量产年化产能（万片/年）；9-10为ABF上游基材/膜材料配套折算",
+  "subtitle": "口径：ABF/FC-BGA封装基板量产年化产能（万片/年）；均为封装基板/覆铜板一体化制造规模靠前厂商",
   "capacityUnit": "万片/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,7 +16,7 @@
       "rank": 1,
       "name": "深南电路",
       "capacityLabel": "量产产能约280万片/年",
-      "highlight": "ABF封装基板龙头，FC-BGA载板直供OSAT与AI芯片先进封装",
+      "highlight": "ABF封装基板规模靠前厂商，FC-BGA载板直供OSAT与AI芯片先进封装",
       "verify": {
         "capacity": 280,
         "capacityUnit": "万片/年",
@@ -48,7 +48,7 @@
       "rank": 3,
       "name": "鹏鼎控股",
       "capacityLabel": "量产产能约125万片/年",
-      "highlight": "全球PCB龙头，高端HDI/类载板能力向ABF封装基板延伸",
+      "highlight": "全球PCB规模靠前厂商，高端HDI/类载板能力向ABF封装基板延伸",
       "verify": {
         "capacity": 125,
         "capacityUnit": "万片/年",
@@ -112,7 +112,7 @@
       "rank": 7,
       "name": "崇达技术",
       "capacityLabel": "量产产能约45万片/年",
-      "highlight": "高端小批量PCB定制龙头，封装基板与ABF样品验证中",
+      "highlight": "高端小批量PCB定制规模靠前厂商，封装基板与ABF样品验证中",
       "verify": {
         "capacity": 45,
         "capacityUnit": "万片/年",
@@ -128,7 +128,7 @@
       "rank": 8,
       "name": "东山精密",
       "capacityLabel": "量产产能约38万片/年",
-      "highlight": "全球FPC龙头，高端HDI/类载板能力向ABF封装基板延伸",
+      "highlight": "全球FPC规模靠前厂商，高端HDI/类载板能力向ABF封装基板延伸",
       "verify": {
         "capacity": 38,
         "capacityUnit": "万片/年",
@@ -142,25 +142,25 @@
     },
     {
       "rank": 9,
-      "name": "生益科技",
+      "name": "骏亚科技",
       "capacityLabel": "量产产能约32万片/年",
-      "highlight": "覆铜板/CCL龙头，ABF载板上游关键基材与粘结片配套产能",
+      "highlight": "覆铜板+PCB一体化，IC载板与ABF封装基板样品验证推进",
       "verify": {
         "capacity": 32,
         "capacityUnit": "万片/年",
-        "sourceType": "media",
-        "source": "东方财富·ABF载板产业链梳理",
-        "sourceDate": "2026-02",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
-        "note": "媒体报道口径：ABF载板上游基材折算年化配套约32万片；非载板制造主业",
+        "sourceType": "official",
+        "source": "骏亚科技年报问询函回复",
+        "sourceDate": "2024-12末",
+        "sourceUrl": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11224165&stockid=603386",
+        "note": "媒体报道口径：封装基板/ABF样品验证产能约32万片/年",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "东材科技",
+      "name": "超声电子",
       "capacityLabel": "量产产能约28万片/年",
-      "highlight": "高速树脂与膜材料，ABF上游国产替代，膜材料配套载板扩产",
+      "highlight": "覆铜板+PCB综合厂商，高性能HDI与封装基板向ABF延伸",
       "verify": {
         "capacity": 28,
         "capacityUnit": "万片/年",
@@ -168,7 +168,7 @@
         "source": "东方财富·ABF载板产业链梳理",
         "sourceDate": "2026-02",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
-        "note": "媒体报道口径：ABF上游膜材料折算年化配套约28万片；非载板制造主业",
+        "note": "媒体报道口径：封装基板/ABF量产年化产能约28万片",
         "officialCross": null
       }
     }

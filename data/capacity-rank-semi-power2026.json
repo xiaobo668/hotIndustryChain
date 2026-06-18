@@ -1,0 +1,173 @@
+{
+  "key": "功率半导体",
+  "industryKeys": [
+    "半导体",
+    "芯片"
+  ],
+  "title": "2026功率半导体出货量TOP10",
+  "subtitle": "口径：IGBT/MOSFET/功率模块年化出货量（万片/年）；均为功率半导体制造出货规模靠前厂商",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "士兰微",
+      "capacityLabel": "年出货约285万片",
+      "highlight": "功率器件IDM，IGBT/MOSFET/碳化硅模块车规与工控放量",
+      "verify": {
+        "capacity": 285,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率半导体芯片年化出货量约285万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "斯达半导",
+      "capacityLabel": "年出货约198万片",
+      "highlight": "IGBT模块，新能源车主驱逆变器功率模块出货量领先",
+      "verify": {
+        "capacity": 198,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：IGBT模块年化出货量约198万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "扬杰科技",
+      "capacityLabel": "年出货约165万片",
+      "highlight": "功率二极管+MOSFET+IGBT，工控与消费电子功率器件",
+      "verify": {
+        "capacity": 165,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件年化出货量约165万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "新洁能",
+      "capacityLabel": "年出货约128万片",
+      "highlight": "MOSFET/IGBT设计，功率器件出货量快速增长",
+      "verify": {
+        "capacity": 128,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率MOSFET年化出货量约128万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "捷捷微电",
+      "capacityLabel": "年出货约95万片",
+      "highlight": "晶闸管+保护器件+功率MOSFET，功率半导体IDM",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件年化出货量约95万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "台基股份",
+      "capacityLabel": "年出货约72万片",
+      "highlight": "大功率半导体模块，晶闸管/IGBT模块工控应用",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率模块年化出货量约72万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "华微电子",
+      "capacityLabel": "年出货约58万片",
+      "highlight": "MOSFET/IGBT功率器件，工控与电源管理应用",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件年化出货量约58万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "苏州固锝",
+      "capacityLabel": "年出货约48万片",
+      "highlight": "功率二极管+整流桥，消费电子与工控功率器件",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件年化出货量约48万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "露笑科技",
+      "capacityLabel": "年出货约35万片",
+      "highlight": "碳化硅衬底+功率器件，SiC产业链布局与功率芯片",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：SiC功率器件年化出货量约35万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "闻泰科技",
+      "capacityLabel": "年出货约28万片",
+      "highlight": "功率半导体+ODM，安世半导体功率器件整合出货",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件年化出货量约28万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

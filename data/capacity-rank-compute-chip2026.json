@@ -1,0 +1,173 @@
+{
+  "key": "算力芯片",
+  "industryKeys": [
+    "AI算力",
+    "半导体"
+  ],
+  "title": "2026算力芯片出货量TOP10",
+  "subtitle": "口径：算力/GPU/AI芯片年化出货量（万片/年）；均为国产算力芯片设计制造规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "景嘉微",
+      "capacityLabel": "年出货约85万片",
+      "highlight": "国产GPU芯片规模靠前厂商，JM系列图形/通用计算芯片信创与AI场景拓展",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力/GPU芯片年化出货量约85万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "紫光国微",
+      "capacityLabel": "年出货约72万片",
+      "highlight": "FPGA+安全芯片规模靠前厂商，特种算力与数据中心加密加速芯片",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：特种算力芯片年化出货量约72万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "全志科技",
+      "capacityLabel": "年出货约65万片",
+      "highlight": "AIoT SoC规模靠前厂商，端侧AI推理芯片与智能硬件算力平台",
+      "verify": {
+        "capacity": 65,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：端侧AI算力芯片年化出货量约65万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北京君正",
+      "capacityLabel": "年出货约48万片",
+      "highlight": "嵌入式存储+MCU，低功耗AI推理与边缘算力芯片",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘算力芯片年化出货量约48万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "国科微",
+      "capacityLabel": "年出货约42万片",
+      "highlight": "视频编解码+AI芯片，安防与智能终端算力芯片量产",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：视频AI算力芯片年化出货量约42万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "富瀚微",
+      "capacityLabel": "年出货约35万片",
+      "highlight": "视频处理芯片规模靠前厂商，IPC与边缘AI视觉算力芯片",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：视觉AI算力芯片年化出货量约35万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "欧比特",
+      "capacityLabel": "年出货约28万片",
+      "highlight": "宇航电子+AI芯片，卫星与特种领域算力芯片",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：特种算力芯片年化出货量约28万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "航宇微",
+      "capacityLabel": "年出货约22万片",
+      "highlight": "卫星大数据+AI芯片，太空算力与特种计算芯片",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：太空算力芯片年化出货量约22万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "旋极信息",
+      "capacityLabel": "年出货约18万片",
+      "highlight": "嵌入式系统+安全芯片，行业算力终端与安全计算",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：嵌入式算力芯片年化出货量约18万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "智度股份",
+      "capacityLabel": "年出货约15万片",
+      "highlight": "互联网营销+算力服务，端侧算力与智算资源整合",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力相关芯片/模组年化出货量约15万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

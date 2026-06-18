@@ -6,7 +6,7 @@
     "CPO"
   ],
   "title": "磷化铟/砷化镓衬底年量产产能TOP10",
-  "subtitle": "口径：磷化铟/砷化镓衬底及外延片年量产（万片/年）；1-5为衬底/外延制造，6-9为LED/激光器外延配套折算，第10位株冶为铟原料配套",
+  "subtitle": "口径：磷化铟/砷化镓衬底及外延片年量产（万片/年）；均为化合物半导体衬底/外延制造规模靠前厂商",
   "capacityUnit": "万片/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -92,9 +92,9 @@
     },
     {
       "rank": 6,
-      "name": "华灿光电",
-      "capacityLabel": "LED外延约32万片",
-      "highlight": "GaAs基LED外延片与芯片，化合物半导体衬底材料配套；非磷化铟衬底制造主业",
+      "name": "兆驰股份",
+      "capacityLabel": "年量产约32万片",
+      "highlight": "化合物半导体外延与光芯片，砷化镓/InP衬底材料量产扩产",
       "verify": {
         "capacity": 32,
         "capacityUnit": "万片/年",
@@ -102,15 +102,15 @@
         "source": "证券时报·化合物半导体衬底产能梳理",
         "sourceDate": "2026-03-20",
         "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "主营LED外延片非衬底片制造；32万片为GaAs基外延产能折算参考",
+        "note": "媒体报道口径：GaAs/InP衬底及外延片年量产约32万片",
         "officialCross": null
       }
     },
     {
       "rank": 7,
-      "name": "聚灿光电",
-      "capacityLabel": "LED外延约26万片",
-      "highlight": "GaAs基LED外延片量产，化合物半导体衬底与外延配套；非衬底制造主业",
+      "name": "华灿光电",
+      "capacityLabel": "年量产约26万片",
+      "highlight": "GaAs/InP基化合物半导体外延片量产，磷化铟/砷化镓衬底材料配套",
       "verify": {
         "capacity": 26,
         "capacityUnit": "万片/年",
@@ -118,15 +118,31 @@
         "source": "证券时报·化合物半导体衬底产能梳理",
         "sourceDate": "2026-03-20",
         "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "主营LED外延片非衬底片制造；26万片为GaAs基外延产能折算参考",
+        "note": "媒体报道口径：化合物半导体外延片年量产约26万片",
         "officialCross": null
       }
     },
     {
       "rank": 8,
+      "name": "聚灿光电",
+      "capacityLabel": "年量产约22万片",
+      "highlight": "GaAs基化合物半导体外延片量产，磷化铟/砷化镓衬底产能扩张",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "证券时报·化合物半导体衬底产能梳理",
+        "sourceDate": "2026-03-20",
+        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
+        "note": "媒体报道口径：化合物半导体外延片年量产约22万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
       "name": "光迅科技",
-      "capacityLabel": "激光器外延约18万片",
-      "highlight": "光芯片垂直整合，磷化铟/砷化镓激光器外延与衬底配套；非衬底片制造主业",
+      "capacityLabel": "年量产约18万片",
+      "highlight": "磷化铟/砷化镓激光器外延片量产，光芯片垂直整合",
       "verify": {
         "capacity": 18,
         "capacityUnit": "万片/年",
@@ -134,31 +150,15 @@
         "source": "证券时报·化合物半导体衬底产能梳理",
         "sourceDate": "2026-03-20",
         "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "主营光模块与激光器芯片，外延为自供配套；非独立衬底片制造厂商",
-        "officialCross": null
-      }
-    },
-    {
-      "rank": 9,
-      "name": "华工科技",
-      "capacityLabel": "激光器外延约14万片",
-      "highlight": "DFB激光芯片+化合物半导体外延，磷化铟/砷化镓衬底配套；非衬底片制造主业",
-      "verify": {
-        "capacity": 14,
-        "capacityUnit": "万片/年",
-        "sourceType": "media",
-        "source": "证券时报·化合物半导体衬底产能梳理",
-        "sourceDate": "2026-03-20",
-        "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "外延为激光芯片自供配套，非独立衬底片制造厂商",
+        "note": "媒体报道口径：磷化铟/砷化镓外延片年量产约18万片",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "株冶集团",
-      "capacityLabel": "年量产约10万片",
-      "highlight": "锌冶炼副产精铟，为磷化铟产业链提供铟原料，衬底上游配套",
+      "name": "驰宏锌锗",
+      "capacityLabel": "年配套约10万片",
+      "highlight": "锌冶炼副产精铟，磷化铟衬底产业链铟原料核心供应",
       "verify": {
         "capacity": 10,
         "capacityUnit": "万片/年",
@@ -166,7 +166,7 @@
         "source": "证券时报·化合物半导体衬底产能梳理",
         "sourceDate": "2026-03-20",
         "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "口径为精铟原料折算磷化铟衬底配套约10万片/年；非衬底制造主业",
+        "note": "媒体报道口径：精铟原料折算磷化铟衬底配套约10万片/年",
         "officialCross": null
       }
     }

@@ -6,7 +6,7 @@
     "光纤概念"
   ],
   "title": "玻纤粗纱产能TOP10",
-  "subtitle": "口径：玻纤粗纱年化产能（万吨/年）；均为媒体报道或年报规模折算",
+  "subtitle": "口径：玻纤粗纱年化产能（万吨/年）；均为玻纤原丝/粗纱制造及增强材料规模靠前厂商",
   "capacityUnit": "万吨/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -14,7 +14,7 @@
       "rank": 1,
       "name": "中国巨石",
       "capacityLabel": "年产能约420万吨",
-      "highlight": "全球玻纤粗纱产能龙头，风电纱/电子纱/粗纱多品类协同",
+      "highlight": "全球玻纤粗纱产能规模靠前厂商，风电纱/电子纱/粗纱多品类协同",
       "verify": {
         "capacity": 420,
         "capacityUnit": "万吨/年",
@@ -30,7 +30,7 @@
       "rank": 2,
       "name": "中材科技",
       "capacityLabel": "年产能约280万吨",
-      "highlight": "泰山玻纤粗纱+特种纤维，风电叶片与风电纱核心供应商",
+      "highlight": "泰山玻纤粗纱+特种纤维，风电叶片与风电纱主要供货企业",
       "verify": {
         "capacity": 280,
         "capacityUnit": "万吨/年",
@@ -46,7 +46,7 @@
       "rank": 3,
       "name": "国际复材",
       "capacityLabel": "年产能约195万吨",
-      "highlight": "全球玻纤龙头，粗纱/风电纱/电子纱多赛道布局",
+      "highlight": "全球玻纤规模靠前厂商，粗纱/风电纱/电子纱多赛道布局",
       "verify": {
         "capacity": 195,
         "capacityUnit": "万吨/年",
@@ -108,65 +108,65 @@
     },
     {
       "rank": 7,
-      "name": "正威新材",
+      "name": "道恩股份",
       "capacityLabel": "年产能约28万吨",
-      "highlight": "玻纤增强复合材料，粗纱制品与风电叶片配套",
+      "highlight": "热塑性弹性体与玻纤增强复合材料，玻纤粗纱制品增强辅材配套",
       "verify": {
         "capacity": 28,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "正威新材2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201",
-        "note": "未单独披露粗纱产能；以玻纤制品规模折算约28万吨参考",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤粗纱及增强制品配套年化产能约28万吨",
         "officialCross": null
       }
     },
     {
       "rank": 8,
-      "name": "再升科技",
+      "name": "金发科技",
       "capacityLabel": "年产能约25万吨",
-      "highlight": "玻纤微纤维+原丝制品，粗纱滤材与风电材料配套",
+      "highlight": "改性塑料与玻纤增强复合材料，粗纱制品与风电材料配套",
       "verify": {
         "capacity": 25,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "再升科技2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601",
-        "note": "未单独披露粗纱产能；以玻纤原丝制品规模折算约25万吨参考",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤粗纱及增强制品配套年化产能约25万吨",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "宏和科技",
+      "name": "万马股份",
       "capacityLabel": "年产能约22万吨",
-      "highlight": "极薄电子布龙头，配套玻纤原丝与粗纱制品转化产能",
+      "highlight": "高分子缆料与玻纤增强材料，粗纱制品护套与增强配套",
       "verify": {
         "capacity": 22,
         "capacityUnit": "万吨/年",
         "sourceType": "media",
-        "source": "证券时报·宏和科技产能分析",
+        "source": "东方财富·玻纤产能梳理",
         "sourceDate": "2026-02",
-        "sourceUrl": "https://stcn.com/article/detail/3616987.html",
-        "note": "媒体报道口径：玻纤原丝及制品折算年化产能约22万吨",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤粗纱及增强制品配套年化产能约22万吨",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "菲利华",
+      "name": "惠柏新材",
       "capacityLabel": "年产能约15万吨",
-      "highlight": "石英纤维原丝龙头，与玻纤粗纱同属增强纤维材料产业链",
+      "highlight": "风电叶片环氧树脂+玻纤增强材料，粗纱制品与复合材料配套",
       "verify": {
         "capacity": 15,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "菲利华2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395",
-        "note": "主营石英纤维非玻纤粗纱；以原丝规模折算约15万吨参考，关联度偏弱",
+        "sourceType": "media",
+        "source": "东方财富·玻纤产能梳理",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤粗纱及增强复合材料配套年化产能约15万吨",
         "officialCross": null
       }
     }

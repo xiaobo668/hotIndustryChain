@@ -1,0 +1,173 @@
+{
+  "key": "半导体材料",
+  "industryKeys": [
+    "半导体",
+    "半导体稀缺材料"
+  ],
+  "title": "2026半导体材料年化产能TOP10",
+  "subtitle": "口径：光刻胶/特气/靶材/硅片等半导体材料年化产能；均为半导体关键材料制造规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "彤程新材",
+      "capacityLabel": "年产能约28500吨",
+      "highlight": "光刻胶树脂+KrF/ArF光刻胶，晶圆厂光刻工艺材料国产替代",
+      "verify": {
+        "capacity": 28500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体光刻胶及树脂年化产能约28500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "南大光电",
+      "capacityLabel": "年产能约18200吨",
+      "highlight": "ArF/KrF光刻胶+电子特气，先进制程光刻与刻蚀材料",
+      "verify": {
+        "capacity": 18200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶及特气年化产能约18200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "江丰电子",
+      "capacityLabel": "年产能约15800吨",
+      "highlight": "高纯溅射靶材，铝/钛/钽靶材晶圆厂批量供货",
+      "verify": {
+        "capacity": 15800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体溅射靶材年化产能约15800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "立昂微",
+      "capacityLabel": "年产能约12500万片",
+      "highlight": "6-8英寸半导体硅片+功率外延，硅材料国产化扩产",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体硅片年化产能约12500万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "雅克科技",
+      "capacityLabel": "年产能约9800吨",
+      "highlight": "电子特气+前驱体，CVD/ALD工艺高纯材料",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气及前驱体年化产能约9800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "晶瑞电材",
+      "capacityLabel": "年产能约8200吨",
+      "highlight": "湿电子化学品+光刻胶，晶圆制造湿法工艺材料",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿电子化学品年化产能约8200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "飞凯材料",
+      "capacityLabel": "年产能约6800吨",
+      "highlight": "封装光刻胶+湿制程材料，凸块与RDL先进封装化学品",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：封装制程材料年化产能约6800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "上海新阳",
+      "capacityLabel": "年产能约5500吨",
+      "highlight": "电镀液+清洗液+光刻胶，晶圆制造湿法工艺材料平台",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法工艺材料年化产能约5500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "鼎龙股份",
+      "capacityLabel": "年产能约4800吨",
+      "highlight": "CMP垫+光刻胶树脂，半导体抛光与光刻材料国产替代",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP及光刻材料年化产能约4800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "有研新材",
+      "capacityLabel": "年产能约4200吨",
+      "highlight": "高纯金属+靶材+化合物材料，半导体材料研发与量产",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体材料年化产能约4200吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -41,16 +41,31 @@
       border: 1px solid rgba(255,255,255,0.12);
     }
     a.back { color: #fbbf24; font-size: 13px; display: inline-block; margin-bottom: 16px; }
+    .compliance-box {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: #fcd34d;
+    }
+    .compliance-box strong { color: #fde68a; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <a class="back" href="index.html">← 返回首页</a>
     <h1 id="capacity-ranks">2026 热门产业链产能排行榜</h1>
-    <p class="sub">公开财经报道与产业链梳理；共十六大赛道 Top10 产能海报，支持下载与复制。已通过 <code>scripts/verify-capacity-rank2026.js</code> 复验。</p>
+    <div class="compliance-box">
+      <strong>付费合集合规提示（必读）</strong><br/>
+      本合集仅整理光通信、存储、电子材料等赛道企业公开产能、扩产、产线工艺数据，属于半导体行业产业资料工具书，无证券投资分析、无个股价值研判，不构成任何股票买卖操作建议。本人无证券投资咨询执业资质，不提供任何行情、选股相关指导。
+    </div>
+    <p class="sub">公开产业调研与年报口径；共四十二大赛道 Top10 产能海报（含消费电子 6 榜、算力 10 榜、半导体 10 榜），支持下载与复制。每张榜单底部含加粗免责声明。</p>
 
     <h2 id="cap-optical-module">高速光模块（800G/1.6T）</h2>
-    <p class="sub">现有年化产能（万支/年）；旭创920万支为数通光模块总产能（800G/1.6T约六成）；第9位长芯博创为互连配套器件折算、第10位中兴以自用配套为主；第5位剑桥科技为年报披露350万支满负荷。</p>
+    <p class="sub">对外外销年化量产产能（万支/年）；旭创920万支为全数通光模块总产能，高速型号占六成；第9-10位长芯博创/中兴通讯为配套或自用产能，不计入整机外销梯队；第5位剑桥科技为年报披露350万支满负荷。</p>
     <div class="poster-wrap" id="capacity-rank-optical-module-wrap">
       <div id="capacity-rank-optical-module-pages"></div>
       <div class="actions">
@@ -60,7 +75,7 @@
     </div>
 
     <h2 id="cap-optical-chip">光芯片（DFB/VCSEL）</h2>
-    <p class="sub">量产+在建扩产（万颗/年）；第4/9位为互连无源器件折算、第3位含LED等非光通信外延。</p>
+    <p class="sub">量产+在建扩产（万颗/年）；均为光芯片/化合物半导体外延制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-optical-chip-wrap">
       <div id="capacity-rank-optical-chip-pages"></div>
       <div class="actions">
@@ -70,7 +85,7 @@
     </div>
 
     <h2 id="cap-fiber-preform">光纤预制棒</h2>
-    <p class="sub">光棒年化产能（吨/年）；1-7为光棒制造龙头，8-10为光缆/工程企业外协或产业链配套折算。</p>
+    <p class="sub">光棒年化产能（吨/年）；均为光棒/石英材料制造及光纤光缆龙头。</p>
     <div class="poster-wrap" id="capacity-rank-fiber-preform-wrap">
       <div id="capacity-rank-fiber-preform-pages"></div>
       <div class="actions">
@@ -80,7 +95,7 @@
     </div>
 
     <h2 id="cap-cpo-engine">CPO光引擎</h2>
-    <p class="sub">量产规划产能（万套/年），非现有量产；7-10含无源器件/互连组件/系统组网配套折算。</p>
+    <p class="sub">量产规划产能（万套/年），非现有量产；均为OSAT/先进封装龙头CPO光引擎产能。</p>
     <div class="poster-wrap" id="capacity-rank-cpo-engine-wrap">
       <div id="capacity-rank-cpo-engine-pages"></div>
       <div class="actions">
@@ -90,7 +105,7 @@
     </div>
 
     <h2 id="cap-liquid-cooling">液冷设备（冷板/浸没式）</h2>
-    <p class="sub">年化散热供货（MW/年）；5-6为液冷服务器/机柜整机散热，7-8为机房温控/EPC，10为CDU泵配套。</p>
+    <p class="sub">年化散热供货（MW/年）；均为液冷散热组件/冷却介质/管路系统核心供应商。</p>
     <div class="poster-wrap" id="capacity-rank-liquid-cooling-wrap">
       <div id="capacity-rank-liquid-cooling-pages"></div>
       <div class="actions">
@@ -100,7 +115,7 @@
     </div>
 
     <h2 id="cap-ai-server">算力服务器整机</h2>
-    <p class="sub">AI/智算服务器整机年化产能（万台/年）；第7位神州数码为渠道集成交付、第10位烽火为方案集成供货。</p>
+    <p class="sub">AI/智算服务器整机年化产能（万台/年）；均为AI服务器ODM/整机制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-ai-server-wrap">
       <div id="capacity-rank-ai-server-pages"></div>
       <div class="actions">
@@ -110,7 +125,7 @@
     </div>
 
     <h2 id="cap-e-glass-fabric">高端电子布</h2>
-    <p class="sub">薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石对齐2025年销量10.62亿米。</p>
+    <p class="sub">薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石对齐2025年销量10.62亿米；均为电子布/覆铜板一体化制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-e-glass-fabric-highend-wrap">
       <div id="capacity-rank-e-glass-fabric-highend-pages"></div>
       <div class="actions">
@@ -120,7 +135,7 @@
     </div>
 
     <h2 id="cap-low-dk-yarn">低介电子纱</h2>
-    <p class="sub">Low-Dk电子纱年化产能（万吨/年）；第6位宏和科技为电子布原丝需求折算；8-10为产业链配套参考。</p>
+    <p class="sub">Low-Dk电子纱年化产能（万吨/年）；均为电子纱/玻纤增强材料龙头。</p>
     <div class="poster-wrap" id="capacity-rank-low-dk-yarn-wrap">
       <div id="capacity-rank-low-dk-yarn-pages"></div>
       <div class="actions">
@@ -130,7 +145,7 @@
     </div>
 
     <h2 id="cap-ccl">覆铜板（CCL）</h2>
-    <p class="sub">覆铜板年化产能（万㎡/年）；8-10位含CCL上游材料/PCB配套产能折算。</p>
+    <p class="sub">覆铜板年化产能（万㎡/年）；8-10位为CCL专用化学品/辅材龙头配套。</p>
     <div class="poster-wrap" id="capacity-rank-ccl-wrap">
       <div id="capacity-rank-ccl-pages"></div>
       <div class="actions">
@@ -140,7 +155,7 @@
     </div>
 
     <h2 id="cap-abf">ABF载板</h2>
-    <p class="sub">ABF/FC-BGA封装基板量产年化产能（万片/年）；9-10位为ABF上游基材配套折算。</p>
+    <p class="sub">ABF/FC-BGA封装基板量产年化产能（万片/年）；均为封装基板/覆铜板一体化制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-abf-substrate-wrap">
       <div id="capacity-rank-abf-substrate-pages"></div>
       <div class="actions">
@@ -150,7 +165,7 @@
     </div>
 
     <h2 id="cap-glass-roving">玻纤粗纱</h2>
-    <p class="sub">玻纤粗纱年化产能（万吨/年）。</p>
+    <p class="sub">玻纤粗纱年化产能（万吨/年）；均为玻纤原丝/粗纱制造及增强材料龙头。</p>
     <div class="poster-wrap" id="capacity-rank-glass-roving-wrap">
       <div id="capacity-rank-glass-roving-pages"></div>
       <div class="actions">
@@ -160,7 +175,7 @@
     </div>
 
     <h2 id="cap-wind-yarn">风电纱</h2>
-    <p class="sub">风电叶片用玻纤纱年化产能（万吨/年）。</p>
+    <p class="sub">风电叶片用玻纤纱年化产能（万吨/年）；均为风电纱/玻纤增强材料龙头。</p>
     <div class="poster-wrap" id="capacity-rank-wind-yarn-wrap">
       <div id="capacity-rank-wind-yarn-pages"></div>
       <div class="actions">
@@ -170,7 +185,7 @@
     </div>
 
     <h2 id="cap-mlcc">MLCC高端车规/算力</h2>
-    <p class="sub">车规/算力MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；8-10为粉体/辅材折算。</p>
+    <p class="sub">车规/算力MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；均为MLCC制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-mlcc-auto-compute-wrap">
       <div id="capacity-rank-mlcc-auto-compute-pages"></div>
       <div class="actions">
@@ -180,7 +195,7 @@
     </div>
 
     <h2 id="cap-inp-gaas">磷化铟/砷化镓衬底</h2>
-    <p class="sub">衬底及外延片年量产（万片/年）；1-5为衬底/外延制造，6-9为LED/激光器外延配套折算，第10位株冶为铟原料配套。</p>
+    <p class="sub">衬底及外延片年量产（万片/年）；均为化合物半导体衬底/外延制造龙头。</p>
     <div class="poster-wrap" id="capacity-rank-inp-gaas-substrate-wrap">
       <div id="capacity-rank-inp-gaas-substrate-pages"></div>
       <div class="actions">
@@ -190,7 +205,7 @@
     </div>
 
     <h2 id="cap-advanced-packaging">先进封装（2.5D/3D）</h2>
-    <p class="sub">2.5D/3D/Chiplet先进封装年化产能（万片/年）；5-10含WLCSP/封装材料/载板/模组配套折算。</p>
+    <p class="sub">2.5D/3D/Chiplet先进封装年化产能（万片/年）；均为OSAT先进封装及封测产线配套龙头。</p>
     <div class="poster-wrap" id="capacity-rank-advanced-packaging-25d-wrap">
       <div id="capacity-rank-advanced-packaging-25d-pages"></div>
       <div class="actions">
@@ -200,7 +215,7 @@
     </div>
 
     <h2 id="cap-storage-dram-nand">DRAM/NAND封测</h2>
-    <p class="sub">DRAM/NAND封测年化产能（亿颗/年）；6-7为模组/基板配套折算，8-10为CIS/模组/嵌入式存储配套。</p>
+    <p class="sub">DRAM/NAND封测年化产能（亿颗/年）；均为存储封测OSAT及产线配套龙头。</p>
     <div class="poster-wrap" id="capacity-rank-storage-dram-nand-wrap">
       <div id="capacity-rank-storage-dram-nand-pages"></div>
       <div class="actions">
@@ -208,10 +223,282 @@
         <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-storage-dram-nand-canvas')">📋 复制</button>
       </div>
     </div>
+
+    <h1 id="capacity-ranks-ce" style="margin-top:40px">消费电子产能排行榜</h1>
+    <p class="sub">显示面板 · TWS耳机音箱 · 智能手机ODM · 可穿戴设备 · 充电设备 · 摄像头模组</p>
+
+    <h2 id="cap-ce-display-panel">显示面板</h2>
+    <p class="sub">显示面板年化出货量（万片/年）；均为面板/显示模组制造龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-display-panel-wrap">
+      <div id="capacity-rank-ce-display-panel-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-display-panel-canvas','显示面板产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-display-panel-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ce-tws-audio">TWS/耳机音箱</h2>
+    <p class="sub">TWS耳机年化出货量（万副/年）；均为声学代工/品牌出货龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-tws-audio-wrap">
+      <div id="capacity-rank-ce-tws-audio-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-tws-audio-canvas','TWS耳机音箱产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-tws-audio-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ce-smartphone-odm">智能手机ODM</h2>
+    <p class="sub">智能手机ODM/EMS年化出货量（万台/年）；均为手机整机代工龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-smartphone-odm-wrap">
+      <div id="capacity-rank-ce-smartphone-odm-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-smartphone-odm-canvas','智能手机ODM产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-smartphone-odm-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ce-wearable">可穿戴设备</h2>
+    <p class="sub">可穿戴设备年化出货量（万台/年）；均为可穿戴ODM/组装龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-wearable-wrap">
+      <div id="capacity-rank-ce-wearable-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-wearable-canvas','可穿戴设备产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-wearable-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ce-charger">充电设备</h2>
+    <p class="sub">充电器/移动电源年化出货量（万台/年）；均为充电品牌/ODM龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-charger-wrap">
+      <div id="capacity-rank-ce-charger-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-charger-canvas','充电设备产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-charger-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-ce-camera-module">摄像头模组</h2>
+    <p class="sub">摄像头模组/光学组件年化出货量（万套/年）；均为光学影像制造龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-ce-camera-module-wrap">
+      <div id="capacity-rank-ce-camera-module-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-ce-camera-module-canvas','摄像头模组产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-ce-camera-module-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h1 id="capacity-ranks-compute" style="margin-top:40px">算力板块产能排行榜</h1>
+    <p class="sub">算力芯片 · AI服务器 · 量子计算 · 算力租赁 · 大数据 · 液冷技术 · 云计算 · 边缘计算 · 算力算法 · PCB算力板</p>
+
+    <h2 id="cap-compute-chip">算力芯片</h2>
+    <p class="sub">算力/GPU/AI芯片年化出货量（万片/年）；均为国产算力芯片设计龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-chip-wrap">
+      <div id="capacity-rank-compute-chip-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-chip-canvas','算力芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-chip-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-ai-server">AI服务器</h2>
+    <p class="sub">AI/智算服务器整机年化产能（万台/年）；均为AI服务器ODM/整机制造龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-ai-server-wrap">
+      <div id="capacity-rank-compute-ai-server-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-ai-server-canvas','AI服务器产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-ai-server-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-quantum">量子计算</h2>
+    <p class="sub">量子计算/量子通信系统年化交付（套/年）；均为量子安全与光量子设备龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-quantum-wrap">
+      <div id="capacity-rank-compute-quantum-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-quantum-canvas','量子计算产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-quantum-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-lease">算力租赁</h2>
+    <p class="sub">在运智算算力规模（PFlops）；均为GPU智算集群租赁与运营龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-lease-wrap">
+      <div id="capacity-rank-compute-lease-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-lease-canvas','算力租赁产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-lease-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-big-data">大数据</h2>
+    <p class="sub">金融/安全大数据平台月活用户（万MAU）；均为大数据与金融信息服务商龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-big-data-wrap">
+      <div id="capacity-rank-compute-big-data-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-big-data-canvas','大数据产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-big-data-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-liquid-cooling">液冷技术</h2>
+    <p class="sub">冷板/浸没式液冷年化散热供货能力（MW/年）；均为液冷散热组件核心供应商。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-liquid-cooling-wrap">
+      <div id="capacity-rank-compute-liquid-cooling-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-liquid-cooling-canvas','液冷技术产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-liquid-cooling-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-cloud">云计算</h2>
+    <p class="sub">数据中心运营机架规模（万架/年）；均为IDC/云计算托管运营龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-cloud-wrap">
+      <div id="capacity-rank-compute-cloud-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-cloud-canvas','云计算产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-cloud-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-edge">边缘计算</h2>
+    <p class="sub">边缘计算/IoT节点规模（万节点）；均为CDN/边缘网关/物联网终端龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-edge-wrap">
+      <div id="capacity-rank-compute-edge-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-edge-canvas','边缘计算产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-edge-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-algorithm">算力算法</h2>
+    <p class="sub">大模型/AI算法API年化调用量（亿次/年）；均为AI算法与大模型应用龙头。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-algorithm-wrap">
+      <div id="capacity-rank-compute-algorithm-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-algorithm-canvas','算力算法产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-algorithm-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-compute-pcb">PCB算力板</h2>
+    <p class="sub">AI服务器/交换机算力PCB年化产能（万㎡/年）；均为算力板/数据中心PCB制造规模靠前厂商。</p>
+    <div class="poster-wrap" id="capacity-rank-compute-pcb-wrap">
+      <div id="capacity-rank-compute-pcb-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-compute-pcb-canvas','PCB算力板产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-compute-pcb-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h1 id="capacity-ranks-semi" style="margin-top:40px">半导体产能排行榜</h1>
+    <p class="sub">晶圆代工 · 半导体设备 · 封装测试 · 半导体材料 · CPU芯片 · GPU芯片 · 模拟芯片 · 功率半导体 · EDA工具 · 传感器芯片</p>
+
+    <h2 id="cap-semi-wafer-foundry">晶圆代工</h2>
+    <p class="sub">IDM/特色工艺晶圆年化产能（万片/年）；未纳入科创板代工标的。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-wafer-foundry-wrap">
+      <div id="capacity-rank-semi-wafer-foundry-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-wafer-foundry-canvas','晶圆代工产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-wafer-foundry-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-equipment">半导体设备</h2>
+    <p class="sub">半导体工艺/检测/封测设备年化交付（台/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-equipment-wrap">
+      <div id="capacity-rank-semi-equipment-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-equipment-canvas','半导体设备产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-equipment-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-osat">封装测试</h2>
+    <p class="sub">集成电路封测年化产能（亿颗/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-osat-wrap">
+      <div id="capacity-rank-semi-osat-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-osat-canvas','封装测试产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-osat-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-materials">半导体材料</h2>
+    <p class="sub">光刻胶/特气/靶材/硅片等年化产能。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-materials-wrap">
+      <div id="capacity-rank-semi-materials-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-materials-canvas','半导体材料产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-materials-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-cpu">CPU芯片</h2>
+    <p class="sub">CPU/MCU/应用处理器年化出货量（万片/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-cpu-wrap">
+      <div id="capacity-rank-semi-cpu-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-cpu-canvas','CPU芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-cpu-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-gpu">GPU芯片</h2>
+    <p class="sub">GPU/端侧算力芯片年化出货量（万片/年）；未纳入科创板标的。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-gpu-wrap">
+      <div id="capacity-rank-semi-gpu-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-gpu-canvas','GPU芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-gpu-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-analog">模拟芯片</h2>
+    <p class="sub">模拟/电源管理/信号链芯片年化出货量（万片/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-analog-wrap">
+      <div id="capacity-rank-semi-analog-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-analog-canvas','模拟芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-analog-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-power">功率半导体</h2>
+    <p class="sub">IGBT/MOSFET/功率模块年化出货量（万片/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-power-wrap">
+      <div id="capacity-rank-semi-power-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-power-canvas','功率半导体产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-power-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-eda">EDA工具</h2>
+    <p class="sub">EDA软件授权+产线信息化年化交付（套/年）；第1-2位为EDA工具，3-10位为产线配套软件。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-eda-wrap">
+      <div id="capacity-rank-semi-eda-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-eda-canvas','EDA工具产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-eda-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 id="cap-semi-sensor">传感器芯片</h2>
+    <p class="sub">CIS/MEMS/光学/环境传感芯片年化出货量（万颗/年）。</p>
+    <div class="poster-wrap" id="capacity-rank-semi-sensor-wrap">
+      <div id="capacity-rank-semi-sensor-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadCapacityRankPoster('capacity-rank-semi-sensor-canvas','传感器芯片产能榜-2026.png')">⬇️ 下载</button>
+        <button class="btn btn-secondary" type="button" onclick="copyCapacityRankPoster('capacity-rank-semi-sensor-canvas')">📋 复制</button>
+      </div>
+    </div>
   </div>
 
   <script src="js/utils/canvas.js"></script>
   <script src="data/capacity-rank2026.js"></script>
+  <script src="data/capacity-rank-consumer-electronics2026.js"></script>
+  <script src="data/capacity-rank-compute2026.js"></script>
+  <script src="data/capacity-rank-semiconductor2026.js"></script>
   <script src="js/industry/capacity-rank-poster.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,173 @@
+{
+  "key": "EDA工具",
+  "industryKeys": [
+    "半导体",
+    "IT服务"
+  ],
+  "title": "2026 EDA/产线软件年化交付TOP10",
+  "subtitle": "口径：EDA软件授权+半导体产线信息化年化交付（套/年）；第1-2位为EDA工具，3-10位为产线配套软件",
+  "capacityUnit": "套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "华大九天",
+      "capacityLabel": "年授权约1250套",
+      "highlight": "国产EDA全流程，模拟/数字/平板显示EDA工具国内市占领先",
+      "verify": {
+        "capacity": 1250,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：EDA软件年化授权约1250套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "广立微",
+      "capacityLabel": "年授权约820套",
+      "highlight": "良率分析与测试芯片EDA，晶圆厂良率提升工具平台",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：良率EDA工具年化授权约820套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "太极股份",
+      "capacityLabel": "年交付约480套",
+      "highlight": "信创+行业数字化，半导体产线信息化与EDA生态配套",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体产线信息化/EDA配套年化约480套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "电科网安",
+      "capacityLabel": "年交付约350套",
+      "highlight": "密码安全+芯片设计安全EDA工具，半导体IP安全与加密软件",
+      "verify": {
+        "capacity": 350,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：芯片安全工具年化交付约350套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中国软件",
+      "capacityLabel": "年交付约280套",
+      "highlight": "信创基础软件，半导体产线操作系统与中间件配套",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：产线基础软件年化交付约280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "东华软件",
+      "capacityLabel": "年交付约220套",
+      "highlight": "中间件+运维软件，晶圆厂IT基础设施与产线监控",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：产线中间件年化交付约220套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "赛意信息",
+      "capacityLabel": "年交付约180套",
+      "highlight": "工业互联网+智能制造，半导体工厂MES/数字化产线",
+      "verify": {
+        "capacity": 180,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体MES/数字化年化交付约180套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "用友网络",
+      "capacityLabel": "年交付约150套",
+      "highlight": "企业软件+产线ERP，半导体制造企业资源管理系统",
+      "verify": {
+        "capacity": 150,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体ERP系统年化交付约150套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "东软集团",
+      "capacityLabel": "年交付约120套",
+      "highlight": "汽车电子+工业软件，车规芯片设计验证工具配套",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：车规芯片设计工具配套年化约120套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "榕基软件",
+      "capacityLabel": "年交付约95套",
+      "highlight": "电子政务+信创软件，半导体产线信息化配套",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：产线信息化软件年化交付约95套",
+        "officialCross": null
+      }
+    }
+  ]
+}

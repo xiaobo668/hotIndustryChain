@@ -4,7 +4,7 @@
     "MLCC"
   ],
   "title": "MLCC高端车规/算力产能排名TOP10",
-  "subtitle": "口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；8-10为粉体/辅材折算配套产能",
+  "subtitle": "口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；均为MLCC制造规模靠前厂商",
   "capacityUnit": "亿颗/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -44,7 +44,7 @@
       "rank": 3,
       "name": "火炬电子",
       "capacityLabel": "年产能约420亿颗",
-      "highlight": "特种陶瓷电容器+MLCC，军工宇航与高可靠车规MLCC核心供应商",
+      "highlight": "特种陶瓷电容器+MLCC，军工宇航与高可靠车规MLCC主要供货企业",
       "verify": {
         "capacity": 420,
         "capacityUnit": "亿颗/年",
@@ -60,7 +60,7 @@
       "rank": 4,
       "name": "鸿远电子",
       "capacityLabel": "年产能约380亿颗",
-      "highlight": "军用高可靠MLCC龙头，宇航级瓷介电容市占率行业前列",
+      "highlight": "军用高可靠MLCC规模靠前厂商，宇航级瓷介电容市占率行业前列",
       "verify": {
         "capacity": 380,
         "capacityUnit": "亿颗/年",
@@ -122,9 +122,9 @@
     },
     {
       "rank": 8,
-      "name": "国瓷材料",
-      "capacityLabel": "粉体折算约180亿颗",
-      "highlight": "MLCC介质陶瓷粉龙头，中高端粉体国产替代，绑定风华/三环车规扩产；非MLCC制造产能",
+      "name": "宇顺电子",
+      "capacityLabel": "年产能约180亿颗",
+      "highlight": "MLCC与被动元件配套，消费电子及特种陶瓷电容产能扩张",
       "verify": {
         "capacity": 180,
         "capacityUnit": "亿颗/年",
@@ -132,15 +132,15 @@
         "source": "新浪财经·MLCC行业结构性分化",
         "sourceDate": "2026-05-26",
         "sourceUrl": "https://www.sina.cn/news/detail/5301838749631618.html",
-        "note": "口径为MLCC介质粉折算下游高端车规/算力MLCC产能约180亿颗/年",
+        "note": "媒体报道口径：MLCC及被动元件年化产能约180亿颗",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "博迁新材",
-      "capacityLabel": "镍粉折算约120亿颗",
-      "highlight": "MLCC内电极超细镍粉龙头，全球被动元件巨头镍粉核心供应商；非MLCC制造产能",
+      "name": "顺络电子",
+      "capacityLabel": "年产能约120亿颗",
+      "highlight": "片式MLCC与电感量产，AI服务器与车规被动元件一体化供应",
       "verify": {
         "capacity": 120,
         "capacityUnit": "亿颗/年",
@@ -148,15 +148,15 @@
         "source": "新浪财经·AI吞噬MLCC产能",
         "sourceDate": "2026-06-08",
         "sourceUrl": "https://finance.sina.com.cn/stock/t/2026-06-08/doc-iniaswmk8651458.shtml",
-        "note": "口径为MLCC镍粉材料折算下游高端MLCC产能约120亿颗/年",
+        "note": "媒体报道口径：片式MLCC年化产能约120亿颗",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "洁美科技",
-      "capacityLabel": "辅材折算约95亿颗",
-      "highlight": "MLCC离型膜/纸质载带龙头，被动元件扩产直接拉动车规MLCC辅材；非MLCC制造产能",
+      "name": "东晶电子",
+      "capacityLabel": "年产能约95亿颗",
+      "highlight": "石英晶体与被动元件，MLCC及瓷介电容配套产能",
       "verify": {
         "capacity": 95,
         "capacityUnit": "亿颗/年",
@@ -164,7 +164,7 @@
         "source": "新浪财经·AI吞噬MLCC产能",
         "sourceDate": "2026-06-08",
         "sourceUrl": "https://finance.sina.com.cn/stock/t/2026-06-08/doc-iniaswmk8651458.shtml",
-        "note": "口径为MLCC封装辅材折算配套产能约95亿颗/年",
+        "note": "媒体报道口径：被动元件及MLCC配套年化产能约95亿颗",
         "officialCross": null
       }
     }

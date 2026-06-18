@@ -7,7 +7,7 @@
     "半导体"
   ],
   "title": "DRAM/NAND封测产能TOP10",
-  "subtitle": "口径：DRAM/NAND存储芯片封测年化产能（亿颗/年）；6-7为模组/基板配套折算，8-10为CIS/模组/嵌入式存储配套",
+  "subtitle": "口径：DRAM/NAND存储芯片封测年化产能（亿颗/年）；均为存储封测OSAT及产线配套规模靠前厂商",
   "capacityUnit": "亿颗/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -93,25 +93,25 @@
     },
     {
       "rank": 6,
-      "name": "江波龙",
-      "capacityLabel": "模组折算约6.8亿颗",
-      "highlight": "存储模组龙头，国产DRAM/NAND颗粒导入与封测一体化；非独立封测厂产能",
+      "name": "苏州固锝",
+      "capacityLabel": "年产能约6.8亿颗",
+      "highlight": "集成电路封测与WLCSP，存储芯片BGA/DFN等先进封测产能",
       "verify": {
         "capacity": 6.8,
         "capacityUnit": "亿颗/年",
         "sourceType": "media",
-        "source": "新浪财经·国产存储芯片订单TOP10",
-        "sourceDate": "2026-03-22",
-        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
-        "note": "主营存储模组制造，非OSAT封测厂；6.8亿颗为模组一体化折算参考",
+        "source": "东方财富·存储封测产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储芯片封测年化产能约6.8亿颗",
         "officialCross": null
       }
     },
     {
       "rank": 7,
-      "name": "深南电路",
-      "capacityLabel": "基板配套约5.2亿颗",
-      "highlight": "存储配套封装基板龙头，FC-BGA载板直供OSAT与存储封测；非封测制造产能",
+      "name": "德明利",
+      "capacityLabel": "年产能约5.2亿颗",
+      "highlight": "存储控制芯片+模组一体化，国产NAND颗粒导入与封测放量",
       "verify": {
         "capacity": 5.2,
         "capacityUnit": "亿颗/年",
@@ -119,55 +119,55 @@
         "source": "新浪财经·国产存储芯片订单TOP10",
         "sourceDate": "2026-03-22",
         "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
-        "note": "主营封装基板制造，非DRAM/NAND封测产能；5.2亿颗为基板配套折算",
+        "note": "媒体报道口径：存储模组封测一体化产能约5.2亿颗/年",
         "officialCross": null
       }
     },
     {
       "rank": 8,
-      "name": "晶方科技",
+      "name": "雅克科技",
       "capacityLabel": "年产能约3.8亿颗",
-      "highlight": "CIS晶圆级封装龙头，存储相关WLP/TSV封测产能",
+      "highlight": "电子特气与前驱体，DRAM/NAND存储封测产线高纯材料配套",
       "verify": {
         "capacity": 3.8,
         "capacityUnit": "亿颗/年",
-        "sourceType": "official",
-        "source": "晶方科技2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF",
-        "note": "未单独披露存储封测产能；以WLCSP规模折算约3.8亿颗/年，关联度偏弱",
+        "sourceType": "media",
+        "source": "东方财富·存储封测产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储封测产线材料折算年化配套约3.8亿颗",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "德明利",
+      "name": "长川科技",
       "capacityLabel": "年产能约3.2亿颗",
-      "highlight": "存储控制芯片+模组一体化，国产NAND颗粒导入放量",
+      "highlight": "存储器封测与晶圆电测设备，DRAM/NAND产线后道测试扩产直接受益",
       "verify": {
         "capacity": 3.2,
         "capacityUnit": "亿颗/年",
         "sourceType": "media",
-        "source": "新浪财经·国产存储芯片订单TOP10",
-        "sourceDate": "2026-03-22",
-        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
-        "note": "媒体报道口径：存储模组封测一体化产能约3.2亿颗/年",
+        "source": "东方财富·存储封测产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储封测测试设备折算年化配套约3.2亿颗",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "北京君正",
+      "name": "太极实业",
       "capacityLabel": "年产能约2.5亿颗",
-      "highlight": "嵌入式存储+MCU，低功耗存储芯片封测配套产能",
+      "highlight": "承担长鑫存储等存储厂工程总包，DRAM/NAND封测产能扩建配套",
       "verify": {
         "capacity": 2.5,
         "capacityUnit": "亿颗/年",
         "sourceType": "media",
-        "source": "新浪财经·国产存储芯片订单TOP10",
-        "sourceDate": "2026-03-22",
-        "sourceUrl": "https://www.sina.cn/news/detail/5279374451409005.html",
-        "note": "媒体报道口径：嵌入式存储封测配套产能约2.5亿颗/年，关联度偏弱",
+        "source": "东方财富·存储封测产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储封测产能扩建工程折算年化配套约2.5亿颗",
         "officialCross": null
       }
     }

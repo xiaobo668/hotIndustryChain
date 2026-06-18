@@ -1,0 +1,173 @@
+{
+  "key": "封装测试",
+  "industryKeys": [
+    "半导体",
+    "先进封装"
+  ],
+  "title": "2026集成电路封装测试产能TOP10",
+  "subtitle": "口径：集成电路封测年化产能（亿颗/年）；均为OSAT封测制造规模靠前厂商",
+  "capacityUnit": "亿颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "长电科技",
+      "capacityLabel": "年封测约85亿颗",
+      "highlight": "全球OSAT规模前三，传统封测+先进封装双线，Chiplet/2.5D产能领先",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：集成电路封测年化产能约85亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通富微电",
+      "capacityLabel": "年封测约72亿颗",
+      "highlight": "AMD等主要客户封测伙伴，CPU/GPU/存储先进封装产能扩张",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：集成电路封测年化产能约72亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华天科技",
+      "capacityLabel": "年封测约65亿颗",
+      "highlight": "传统封测+车规级先进封装，南京/西安等多基地满产",
+      "verify": {
+        "capacity": 65,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：集成电路封测年化产能约65亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "深科技",
+      "capacityLabel": "年封测约48亿颗",
+      "highlight": "沛顿存储封测+模组制造，DRAM/NAND封测与国内存储厂配套",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储封测年化产能约48亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "苏州固锝",
+      "capacityLabel": "年封测约35亿颗",
+      "highlight": "集成电路封测+WLCSP，功率与传感器芯片封测产能",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：集成电路封测年化产能约35亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "大港股份",
+      "capacityLabel": "年封测约28亿颗",
+      "highlight": "集成电路封测与测试，存储与功率芯片封测双线",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：集成电路封测年化产能约28亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "晶方科技",
+      "capacityLabel": "年封测约22亿颗",
+      "highlight": "CIS晶圆级封装WLCSP，TSV/3D封装技术量产",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：晶圆级封测年化产能约22亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "德明利",
+      "capacityLabel": "年封测约18亿颗",
+      "highlight": "存储控制芯片+模组封测一体化，NAND颗粒导入放量",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：存储模组封测年化产能约18亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "蓝箭电子",
+      "capacityLabel": "年封测约14亿颗",
+      "highlight": "分立器件+集成电路封测，功率器件封装产能扩张",
+      "verify": {
+        "capacity": 14,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：分立器件封测年化产能约14亿颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "国民技术",
+      "capacityLabel": "年封测约11亿颗",
+      "highlight": "安全芯片封测，MCU与安全芯片封装测试产能",
+      "verify": {
+        "capacity": 11,
+        "capacityUnit": "亿颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：安全芯片封测年化产能约11亿颗",
+        "officialCross": null
+      }
+    }
+  ]
+}

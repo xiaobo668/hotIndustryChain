@@ -1,0 +1,173 @@
+{
+  "key": "量子计算",
+  "industryKeys": [
+    "AI算力",
+    "光互联"
+  ],
+  "title": "2026量子计算相关产能TOP10",
+  "subtitle": "口径：量子计算/量子通信系统年化交付（套/年）；均为量子安全与光量子设备规模靠前厂商",
+  "capacityUnit": "套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "科大国创",
+      "capacityLabel": "年交付约1250套",
+      "highlight": "量子计算软件+行业解决方案，政务与金融量子安全算力平台",
+      "verify": {
+        "capacity": 1250,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子计算相关系统年化交付约1250套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "光迅科技",
+      "capacityLabel": "年交付约980套",
+      "highlight": "光通信+量子器件，量子密钥分发与光量子器件量产",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子通信器件年化交付约980套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华工科技",
+      "capacityLabel": "年交付约820套",
+      "highlight": "激光+光器件，量子通信光模块与精密光学组件",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子光器件年化交付约820套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "亨通光电",
+      "capacityLabel": "年交付约680套",
+      "highlight": "光纤+量子通信，量子保密通信网络设备与系统集成",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子通信设备年化交付约680套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "烽火通信",
+      "capacityLabel": "年交付约550套",
+      "highlight": "光通信全产业链，量子保密通信系统与网络设备",
+      "verify": {
+        "capacity": 550,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子通信系统年化交付约550套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "神州信息",
+      "capacityLabel": "年交付约480套",
+      "highlight": "金融IT+量子安全，银行量子加密与算力安全解决方案",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子安全系统年化交付约480套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "浙江东方",
+      "capacityLabel": "年交付约420套",
+      "highlight": "量子通信产业投资，量子保密通信网络建设与运营",
+      "verify": {
+        "capacity": 420,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子通信配套年化交付约420套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雄帝科技",
+      "capacityLabel": "年交付约350套",
+      "highlight": "智能证卡+安全芯片，量子加密身份认证与终端",
+      "verify": {
+        "capacity": 350,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子安全终端年化交付约350套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "格尔软件",
+      "capacityLabel": "年交付约280套",
+      "highlight": "密码安全+PKI，量子密钥管理与安全认证系统",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子密码系统年化交付约280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "苏州科达",
+      "capacityLabel": "年交付约220套",
+      "highlight": "视频会议+量子安全，政务量子加密通信终端",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "套/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：量子安全通信终端年化交付约220套",
+        "officialCross": null
+      }
+    }
+  ]
+}

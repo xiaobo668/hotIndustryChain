@@ -3,14 +3,58 @@
  */
 const CAPACITY_RANK_PAGE_W = 430;
 
+const CAPACITY_POSTER_FOOTER_LINES = [
+  '数据口径均来自企业年报、行业公开产业调研报道，',
+  '仅用于行业产业学习参考，请勿仅凭本数据开展证券投资；股市存在高风险，自主投资请独立审慎判断。',
+];
+
+const CAPACITY_POSTER_LAYOUT = {
+  PAD: 12,
+  TOP: 14,
+  TITLE_FONT: 'bold 17px "PingFang SC", sans-serif',
+  TITLE_H: 20,
+  SUB_FONT: '9px "PingFang SC", sans-serif',
+  SUB_LINE_H: 12,
+  SUB_LINES: 2,
+  GAP: 10,
+  CARD_HEAD: 32,
+  ROW_H: 34,
+  FOOTER_LINES: 2,
+  FOOTER_LINE_H: 12,
+  FOOTER_H: 28,
+  FOOTER_FONT: 'bold 9px "PingFang SC", sans-serif',
+  NAME_FONT: 'bold 13px "PingFang SC", sans-serif',
+  CAP_FONT: 'bold 10px "PingFang SC", sans-serif',
+};
+
+function splitSubtitleTwoLines(ctx, subtitle, maxWidth) {
+  if (!subtitle) return ['', ''];
+  const parts = subtitle.split('；').filter(Boolean);
+  if (parts.length >= 2) {
+    const mid = Math.ceil(parts.length / 2);
+    const line1 = fitOneLineWidth(ctx, parts.slice(0, mid).join('；'), maxWidth);
+    const line2 = fitOneLineWidth(ctx, parts.slice(mid).join('；'), maxWidth);
+    return [line1, line2];
+  }
+  let line1 = '';
+  let line2 = '';
+  for (let i = 0; i < subtitle.length; i++) {
+    const test = line1 + subtitle[i];
+    if (ctx.measureText(test).width > maxWidth && line1) {
+      line2 = fitOneLineWidth(ctx, subtitle.slice(i), maxWidth);
+      return [line1, line2];
+    }
+    line1 = test;
+  }
+  return [line1, ''];
+}
+
 function estimateCapacityRankPosterHeight(data) {
-  const TITLE_H = 72;
-  const SUB_H = 28;
-  const CARD_HEAD = 32;
-  const ROW_H = 34;
-  const FOOTER_H = 28;
+  const L = CAPACITY_POSTER_LAYOUT;
   const n = (data.companies || []).length;
-  return TITLE_H + SUB_H + CARD_HEAD + n * ROW_H + 8 + FOOTER_H;
+  const headerH = L.TOP + L.TITLE_H + L.SUB_LINES * L.SUB_LINE_H + L.GAP;
+  const cardH = L.CARD_HEAD + n * L.ROW_H + 8;
+  return headerH + cardH + L.GAP + L.FOOTER_LINES * L.FOOTER_LINE_H + 10;
 }
 
 function renderCapacityRankPoster(data, containerId, canvasId) {
@@ -42,12 +86,7 @@ function renderCapacityRankPoster(data, containerId, canvasId) {
 }
 
 function drawCapacityRankPoster(ctx, data, W, H) {
-  const PAD = 12;
-  const TITLE_H = 72;
-  const SUB_H = 28;
-  const CARD_HEAD = 32;
-  const ROW_H = 34;
-  const FOOTER_H = 28;
+  const L = CAPACITY_POSTER_LAYOUT;
   const CARD_RADIUS = 10;
   const borderBlue = '#4a90c8';
   const barColor = '#1e40af';
@@ -71,20 +110,25 @@ function drawCapacityRankPoster(ctx, data, W, H) {
   }
   ctx.restore();
 
-  let y = 14;
+  let y = L.TOP;
   ctx.fillStyle = '#0f172a';
-  ctx.font = 'bold 15px "PingFang SC", sans-serif';
+  ctx.font = L.TITLE_FONT;
   ctx.textAlign = 'center';
   ctx.fillText(data.title, W / 2, y + 16);
-  ctx.font = '9px "PingFang SC", sans-serif';
-  ctx.fillStyle = '#475569';
-  ctx.fillText(data.subtitle || '', W / 2, y + 34);
-  ctx.textAlign = 'left';
-  y = TITLE_H + 4;
+  y += L.TITLE_H;
 
-  const cardW = W - PAD * 2;
-  const cardX = PAD;
-  const cardH = CARD_HEAD + data.companies.length * ROW_H + 8;
+  ctx.font = L.SUB_FONT;
+  ctx.fillStyle = '#475569';
+  const subLines = splitSubtitleTwoLines(ctx, data.subtitle || '', W - L.PAD * 2);
+  subLines.forEach((line, i) => {
+    ctx.fillText(line, W / 2, y + 10 + i * L.SUB_LINE_H);
+  });
+  y += L.SUB_LINES * L.SUB_LINE_H + L.GAP;
+  ctx.textAlign = 'left';
+
+  const cardW = W - L.PAD * 2;
+  const cardX = L.PAD;
+  const cardH = L.CARD_HEAD + data.companies.length * L.ROW_H + 8;
 
   ctx.save();
   ctx.shadowColor = 'rgba(15, 23, 42, 0.06)';
@@ -103,32 +147,32 @@ function drawCapacityRankPoster(ctx, data, W, H) {
   ctx.save();
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
   ctx.clip();
-  const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + CARD_HEAD);
+  const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + L.CARD_HEAD);
   bgrad.addColorStop(0, barColor);
   bgrad.addColorStop(1, '#1e3a8a');
   ctx.fillStyle = bgrad;
-  ctx.fillRect(cardX, y, cardW, CARD_HEAD);
+  ctx.fillRect(cardX, y, cardW, L.CARD_HEAD);
   ctx.restore();
 
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 11px "PingFang SC", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText((data.key || '产能') + ' · 产能排行', cardX + cardW / 2, y + CARD_HEAD / 2);
+  ctx.fillText((data.key || '产能') + ' · 产能排行', cardX + cardW / 2, y + L.CARD_HEAD / 2);
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 
-  let cy = y + CARD_HEAD + 4;
+  let cy = y + L.CARD_HEAD + 4;
   data.companies.forEach((co, ci) => {
     if (ci > 0) {
       ctx.strokeStyle = '#e8eef5';
       ctx.beginPath();
-      ctx.moveTo(cardX + innerPadX, cy + ci * ROW_H);
-      ctx.lineTo(cardX + cardW - innerPadX, cy + ci * ROW_H);
+      ctx.moveTo(cardX + innerPadX, cy + ci * L.ROW_H);
+      ctx.lineTo(cardX + cardW - innerPadX, cy + ci * L.ROW_H);
       ctx.stroke();
     }
 
-    const rowTop = cy + ci * ROW_H;
+    const rowTop = cy + ci * L.ROW_H;
     const baseX = cardX + innerPadX;
     const maxLineW = cardW - innerPadX * 2;
 
@@ -140,12 +184,11 @@ function drawCapacityRankPoster(ctx, data, W, H) {
     const capStr = co.capacityLabel || '';
     const capGap = 6;
 
-    ctx.font = 'bold 11px "PingFang SC", sans-serif';
+    ctx.font = L.CAP_FONT;
+    const capW = ctx.measureText(capStr).width;
+    ctx.font = L.NAME_FONT;
     ctx.fillStyle = '#0f172a';
     let nameStr = co.name;
-    ctx.font = 'bold 10px "PingFang SC", sans-serif';
-    const capW = ctx.measureText(capStr).width;
-    ctx.font = 'bold 11px "PingFang SC", sans-serif';
     const maxNameW = maxLineW - 18 - capW - capGap;
     if (ctx.measureText(nameStr).width > maxNameW) {
       nameStr = fitOneLineWidth(ctx, nameStr, maxNameW);
@@ -153,7 +196,7 @@ function drawCapacityRankPoster(ctx, data, W, H) {
     ctx.fillText(nameStr, nameX, rowTop + 12);
     const nameW = ctx.measureText(nameStr).width;
 
-    ctx.font = 'bold 10px "PingFang SC", sans-serif';
+    ctx.font = L.CAP_FONT;
     ctx.fillStyle = '#1d4ed8';
     ctx.fillText(capStr, nameX + nameW + capGap, rowTop + 12);
 
@@ -164,14 +207,14 @@ function drawCapacityRankPoster(ctx, data, W, H) {
     ctx.fillText(fitOneLineWidth(ctx, bullet, maxDescW), baseX + 4, rowTop + 26);
   });
 
-  ctx.fillStyle = '#64748b';
-  ctx.font = '9px "PingFang SC", sans-serif';
+  const cardBottom = y + cardH;
+  ctx.fillStyle = '#475569';
+  ctx.font = L.FOOTER_FONT;
   ctx.textAlign = 'center';
-  ctx.fillText(
-    `产业链分析工具 · ${data.generatedAt || ''} · 产能口径来自公开报道 · 仅供参考，不构成投资建议`,
-    W / 2,
-    H - FOOTER_H / 2 + 2
-  );
+  const footerTop = cardBottom + L.GAP;
+  CAPACITY_POSTER_FOOTER_LINES.forEach((line, i) => {
+    ctx.fillText(line, W / 2, footerTop + 10 + i * L.FOOTER_LINE_H);
+  });
   ctx.textAlign = 'left';
 }
 
@@ -217,11 +260,51 @@ const CAPACITY_RANK_POSTER_CONFIG = [
   { key: '磷化铟砷化镓衬底', industryKeys: ['半导体稀缺材料', '光互联', 'CPO'], wrapId: 'capacity-rank-inp-gaas-substrate-wrap', pagesId: 'capacity-rank-inp-gaas-substrate-pages', canvasId: 'capacity-rank-inp-gaas-substrate-canvas' },
   { key: '先进封装2.5D', industryKeys: ['先进封装', '存储芯片', '半导体稀缺材料', 'PCB', '半导体', '长鑫存储'], wrapId: 'capacity-rank-advanced-packaging-25d-wrap', pagesId: 'capacity-rank-advanced-packaging-25d-pages', canvasId: 'capacity-rank-advanced-packaging-25d-canvas' },
   { key: '存储封测', industryKeys: ['存储芯片', '长鑫存储', '先进封装', '半导体'], wrapId: 'capacity-rank-storage-dram-nand-wrap', pagesId: 'capacity-rank-storage-dram-nand-pages', canvasId: 'capacity-rank-storage-dram-nand-canvas' },
+  { key: '显示面板', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-display-panel-wrap', pagesId: 'capacity-rank-ce-display-panel-pages', canvasId: 'capacity-rank-ce-display-panel-canvas' },
+  { key: 'TWS耳机音箱', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-tws-audio-wrap', pagesId: 'capacity-rank-ce-tws-audio-pages', canvasId: 'capacity-rank-ce-tws-audio-canvas' },
+  { key: '智能手机ODM', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-smartphone-odm-wrap', pagesId: 'capacity-rank-ce-smartphone-odm-pages', canvasId: 'capacity-rank-ce-smartphone-odm-canvas' },
+  { key: '可穿戴设备', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-wearable-wrap', pagesId: 'capacity-rank-ce-wearable-pages', canvasId: 'capacity-rank-ce-wearable-canvas' },
+  { key: '充电设备', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-charger-wrap', pagesId: 'capacity-rank-ce-charger-pages', canvasId: 'capacity-rank-ce-charger-canvas' },
+  { key: '摄像头模组', industryKeys: ['消费电子'], wrapId: 'capacity-rank-ce-camera-module-wrap', pagesId: 'capacity-rank-ce-camera-module-pages', canvasId: 'capacity-rank-ce-camera-module-canvas' },
+  { key: '算力芯片', industryKeys: ['AI算力', '半导体'], wrapId: 'capacity-rank-compute-chip-wrap', pagesId: 'capacity-rank-compute-chip-pages', canvasId: 'capacity-rank-compute-chip-canvas' },
+  { key: 'AI服务器', industryKeys: ['AI算力', '算力租赁', 'AIDC'], wrapId: 'capacity-rank-compute-ai-server-wrap', pagesId: 'capacity-rank-compute-ai-server-pages', canvasId: 'capacity-rank-compute-ai-server-canvas' },
+  { key: '量子计算', industryKeys: ['AI算力', '光互联'], wrapId: 'capacity-rank-compute-quantum-wrap', pagesId: 'capacity-rank-compute-quantum-pages', canvasId: 'capacity-rank-compute-quantum-canvas' },
+  { key: '算力租赁', industryKeys: ['算力租赁', 'AI算力', 'AIDC'], wrapId: 'capacity-rank-compute-lease-wrap', pagesId: 'capacity-rank-compute-lease-pages', canvasId: 'capacity-rank-compute-lease-canvas' },
+  { key: '大数据', industryKeys: ['AI算力'], wrapId: 'capacity-rank-compute-big-data-wrap', pagesId: 'capacity-rank-compute-big-data-pages', canvasId: 'capacity-rank-compute-big-data-canvas' },
+  { key: '液冷技术', industryKeys: ['液冷', 'AI算力', 'AIDC'], wrapId: 'capacity-rank-compute-liquid-cooling-wrap', pagesId: 'capacity-rank-compute-liquid-cooling-pages', canvasId: 'capacity-rank-compute-liquid-cooling-canvas' },
+  { key: '云计算', industryKeys: ['AI算力', '算力租赁', 'AIDC'], wrapId: 'capacity-rank-compute-cloud-wrap', pagesId: 'capacity-rank-compute-cloud-pages', canvasId: 'capacity-rank-compute-cloud-canvas' },
+  { key: '边缘计算', industryKeys: ['AI算力', '算力租赁'], wrapId: 'capacity-rank-compute-edge-wrap', pagesId: 'capacity-rank-compute-edge-pages', canvasId: 'capacity-rank-compute-edge-canvas' },
+  { key: '算力算法', industryKeys: ['AI算力', '人工智能'], wrapId: 'capacity-rank-compute-algorithm-wrap', pagesId: 'capacity-rank-compute-algorithm-pages', canvasId: 'capacity-rank-compute-algorithm-canvas' },
+  { key: 'PCB算力板', industryKeys: ['PCB', 'AI算力', '半导体'], wrapId: 'capacity-rank-compute-pcb-wrap', pagesId: 'capacity-rank-compute-pcb-pages', canvasId: 'capacity-rank-compute-pcb-canvas' },
+  { key: '晶圆代工', industryKeys: ['半导体'], wrapId: 'capacity-rank-semi-wafer-foundry-wrap', pagesId: 'capacity-rank-semi-wafer-foundry-pages', canvasId: 'capacity-rank-semi-wafer-foundry-canvas' },
+  { key: '半导体设备', industryKeys: ['半导体'], wrapId: 'capacity-rank-semi-equipment-wrap', pagesId: 'capacity-rank-semi-equipment-pages', canvasId: 'capacity-rank-semi-equipment-canvas' },
+  { key: '封装测试', industryKeys: ['半导体', '先进封装'], wrapId: 'capacity-rank-semi-osat-wrap', pagesId: 'capacity-rank-semi-osat-pages', canvasId: 'capacity-rank-semi-osat-canvas' },
+  { key: '半导体材料', industryKeys: ['半导体', '半导体稀缺材料'], wrapId: 'capacity-rank-semi-materials-wrap', pagesId: 'capacity-rank-semi-materials-pages', canvasId: 'capacity-rank-semi-materials-canvas' },
+  { key: 'CPU芯片', industryKeys: ['半导体', '芯片'], wrapId: 'capacity-rank-semi-cpu-wrap', pagesId: 'capacity-rank-semi-cpu-pages', canvasId: 'capacity-rank-semi-cpu-canvas' },
+  { key: 'GPU芯片', industryKeys: ['半导体', '芯片', 'AI算力'], wrapId: 'capacity-rank-semi-gpu-wrap', pagesId: 'capacity-rank-semi-gpu-pages', canvasId: 'capacity-rank-semi-gpu-canvas' },
+  { key: '模拟芯片', industryKeys: ['半导体', '芯片', '元件'], wrapId: 'capacity-rank-semi-analog-wrap', pagesId: 'capacity-rank-semi-analog-pages', canvasId: 'capacity-rank-semi-analog-canvas' },
+  { key: '功率半导体', industryKeys: ['半导体', '芯片'], wrapId: 'capacity-rank-semi-power-wrap', pagesId: 'capacity-rank-semi-power-pages', canvasId: 'capacity-rank-semi-power-canvas' },
+  { key: 'EDA工具', industryKeys: ['半导体', 'IT服务'], wrapId: 'capacity-rank-semi-eda-wrap', pagesId: 'capacity-rank-semi-eda-pages', canvasId: 'capacity-rank-semi-eda-canvas' },
+  { key: '传感器芯片', industryKeys: ['半导体', '芯片', '元件'], wrapId: 'capacity-rank-semi-sensor-wrap', pagesId: 'capacity-rank-semi-sensor-pages', canvasId: 'capacity-rank-semi-sensor-canvas' },
 ];
 
+function getCapacityRankRegistry() {
+  const main = typeof CAPACITY_RANK_REGISTRY2026 !== 'undefined' ? CAPACITY_RANK_REGISTRY2026 : {};
+  const ce = typeof CAPACITY_RANK_REGISTRY_CONSUMER_ELECTRONICS2026 !== 'undefined'
+    ? CAPACITY_RANK_REGISTRY_CONSUMER_ELECTRONICS2026
+    : {};
+  const compute = typeof CAPACITY_RANK_REGISTRY_COMPUTE2026 !== 'undefined'
+    ? CAPACITY_RANK_REGISTRY_COMPUTE2026
+    : {};
+  const semi = typeof CAPACITY_RANK_REGISTRY_SEMICONDUCTOR2026 !== 'undefined'
+    ? CAPACITY_RANK_REGISTRY_SEMICONDUCTOR2026
+    : {};
+  return Object.assign({}, main, ce, compute, semi);
+}
+
 function getCapacityRankDatasetByKey(key) {
-  if (!key || typeof CAPACITY_RANK_REGISTRY2026 === 'undefined') return null;
-  return CAPACITY_RANK_REGISTRY2026[key] || null;
+  if (!key) return null;
+  return getCapacityRankRegistry()[key] || null;
 }
 
 function resolveCapacityRankIndustryKey(industry) {
@@ -272,7 +355,7 @@ function maybeRenderCapacityRankPoster(industry) {
 }
 
 function initAllCapacityRankPosters() {
-  if (typeof CAPACITY_RANK_REGISTRY2026 === 'undefined') return;
+  if (!Object.keys(getCapacityRankRegistry()).length) return;
   CAPACITY_RANK_POSTER_CONFIG.forEach((cfg) => {
     const data = getCapacityRankDatasetByKey(cfg.key);
     if (data) initCapacityRankPosterPage(data, cfg.pagesId, cfg.canvasId);

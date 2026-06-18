@@ -1,0 +1,173 @@
+{
+  "key": "算力算法",
+  "industryKeys": [
+    "AI算力",
+    "人工智能"
+  ],
+  "title": "2026算力算法调用规模TOP10",
+  "subtitle": "口径：大模型/AI算法API年化调用量（亿次/年）；均为AI算法与大模型应用规模靠前厂商",
+  "capacityUnit": "亿次/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "科大讯飞",
+      "capacityLabel": "年调用约850亿次",
+      "highlight": "星火大模型规模靠前厂商，语音与多模态AI算力调用出货量规模居前",
+      "verify": {
+        "capacity": 850,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：大模型API年化调用量约850亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "拓尔思",
+      "capacityLabel": "年调用约620亿次",
+      "highlight": "NLP+大数据，政务与媒体AI内容生成算力平台",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：NLP算力API年化调用量约620亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "用友网络",
+      "capacityLabel": "年调用约480亿次",
+      "highlight": "企业软件+AI大模型，BIP与行业大模型算力API调用领先",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：企业AI年化调用量约480亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "泛微网络",
+      "capacityLabel": "年调用约380亿次",
+      "highlight": "协同办公+AI助手，企业流程与文档智能算力服务",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：协同办公AI年化调用量约380亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "汉王科技",
+      "capacityLabel": "年调用约280亿次",
+      "highlight": "OCR+手写识别，文档智能与AI算力服务",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：OCR/手写AI年化调用量约280亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "华宇软件",
+      "capacityLabel": "年调用约220亿次",
+      "highlight": "法律AI+政务大模型，司法与政务算力应用落地",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：法律AI年化调用量约220亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "深信服",
+      "capacityLabel": "年调用约180亿次",
+      "highlight": "网络安全+AI，安全大模型与威胁检测算力",
+      "verify": {
+        "capacity": 180,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：安全AI年化调用量约180亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "美亚柏科",
+      "capacityLabel": "年调用约150亿次",
+      "highlight": "电子取证+公共安全AI，大数据研判算力平台",
+      "verify": {
+        "capacity": 150,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：公共安全AI年化调用量约150亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "初灵信息",
+      "capacityLabel": "年调用约120亿次",
+      "highlight": "视频智能+边缘AI，运营商与行业视觉算力",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：视频AI年化调用量约120亿次",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "榕基软件",
+      "capacityLabel": "年调用约95亿次",
+      "highlight": "电子政务+信创，政务大数据与AI算力应用",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "亿次/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：政务AI年化调用量约95亿次",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "key": "可穿戴设备",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026可穿戴设备出货量TOP10",
+  "subtitle": "口径：可穿戴设备年化出货量（万台/年）；均为可穿戴ODM/组装规模靠前厂商",
+  "capacityUnit": "万台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "立讯精密",
+      "capacityLabel": "年出货约15800万台",
+      "highlight": "Apple Watch等可穿戴整机组装，可穿戴设备出货量主要供货企业",
+      "verify": {
+        "capacity": 15800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴设备年化出货量约15800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "歌尔股份",
+      "capacityLabel": "年出货约12500万台",
+      "highlight": "VR/AR+可穿戴声学，智能手表与耳机可穿戴代工",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴设备年化出货量约12500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "环旭电子",
+      "capacityLabel": "年出货约8200万台",
+      "highlight": "SiP封装+可穿戴模组，Apple Watch等可穿戴核心供应链",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴模组年化出货量约8200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "华勤技术",
+      "capacityLabel": "年出货约6500万台",
+      "highlight": "智能手表/手环ODM，可穿戴整机设计制造出货",
+      "verify": {
+        "capacity": 6500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴ODM年化出货量约6500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "光弘科技",
+      "capacityLabel": "年出货约4200万台",
+      "highlight": "可穿戴EMS代工，智能手表与手环整机组装",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴EMS年化出货量约4200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "佳禾智能",
+      "capacityLabel": "年出货约3500万台",
+      "highlight": "TWS+可穿戴ODM，智能耳机与手环代工出货",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴设备年化出货量约3500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "奋达科技",
+      "capacityLabel": "年出货约2200万台",
+      "highlight": "智能音箱+可穿戴代工，TWS与智能手环ODM",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴设备年化出货量约2200万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "乐心医疗",
+      "capacityLabel": "年出货约1800万台",
+      "highlight": "智能手环/健康穿戴设备，医疗级可穿戴出货量领先",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴设备年化出货量约1800万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "创维数字",
+      "capacityLabel": "年出货约1500万台",
+      "highlight": "智能终端+VR/AR设备，可穿戴与算力硬件出货",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴/VR终端年化出货量约1500万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "共达电声",
+      "capacityLabel": "年出货约1200万台",
+      "highlight": "可穿戴声学器件，TWS与智能穿戴电声组件",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "万台/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：可穿戴声学组件年化出货量约1200万台",
+        "officialCross": null
+      }
+    }
+  ]
+}

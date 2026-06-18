@@ -6,7 +6,7 @@
     "光纤概念"
   ],
   "title": "低介电子纱产能TOP10",
-  "subtitle": "口径：Low-Dk/低介电电子纱年化产能（万吨/年）；第2位国际复材为研报名义产能16万吨，8-10为产业链配套规模参考",
+  "subtitle": "口径：Low-Dk/低介电电子纱年化产能（万吨/年）；第2位国际复材为研报名义产能16万吨；均为电子纱/玻纤增强材料规模靠前厂商",
   "capacityUnit": "万吨/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -14,7 +14,7 @@
       "rank": 1,
       "name": "中国巨石",
       "capacityLabel": "年产能约86万吨",
-      "highlight": "全球电子纱/低介电电子纱产能第一，Low-Dk二代纱持续扩产",
+      "highlight": "全球电子纱/低介电电子纱产能规模居前，Low-Dk二代纱持续扩产",
       "verify": {
         "capacity": 86,
         "capacityUnit": "万吨/年",
@@ -30,7 +30,7 @@
       "rank": 2,
       "name": "国际复材",
       "capacityLabel": "名义产能16万吨",
-      "highlight": "Low-Dk二代布国内龙头，电子纱名义产能16万吨，2026年有望释放10万吨+",
+      "highlight": "Low-Dk二代布国内规模靠前厂商，电子纱名义产能16万吨，2026年有望释放10万吨+",
       "verify": {
         "capacity": 16,
         "capacityUnit": "万吨/年",
@@ -96,25 +96,25 @@
     },
     {
       "rank": 6,
-      "name": "宏和科技",
-      "capacityLabel": "原丝需求折算约4.2万吨",
-      "highlight": "极薄T布/Low-Dk特种电子布龙头，配套低介电原丝外购+自供；非电子纱产线产能",
+      "name": "九鼎新材",
+      "capacityLabel": "年产能约4.2万吨",
+      "highlight": "玻纤原丝与低介电电子纱制品一体化，电子纱转产弹性大",
       "verify": {
         "capacity": 4.2,
         "capacityUnit": "万吨/年",
         "sourceType": "media",
-        "source": "证券时报·宏和科技AI电子布与T布龙头分析",
+        "source": "东方财富·电子布和Q布的投资再分析",
         "sourceDate": "2026-02",
-        "sourceUrl": "https://stcn.com/article/detail/3616987.html",
-        "note": "主营电子布织造非电子纱制造；4.2万吨为织造原丝需求折算参考",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：低介电电子纱年化产能约4.2万吨",
         "officialCross": null
       }
     },
     {
       "rank": 7,
-      "name": "九鼎新材",
+      "name": "道恩股份",
       "capacityLabel": "年产能约3.8万吨",
-      "highlight": "玻纤粗纱/风电纱与低介电电子纱原丝，制品一体化产能",
+      "highlight": "热塑性弹性体与玻纤增强复合材料，低介电电子纱制品增强辅材配套",
       "verify": {
         "capacity": 3.8,
         "capacityUnit": "万吨/年",
@@ -122,55 +122,55 @@
         "source": "东方财富·电子布和Q布的投资再分析",
         "sourceDate": "2026-02",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
-        "note": "行业梳理口径：电子纱年化产能约3.8万吨",
+        "note": "行业梳理口径：低介电电子纱及玻纤增强制品配套年化产能约3.8万吨",
         "officialCross": null
       }
     },
     {
       "rank": 8,
-      "name": "再升科技",
+      "name": "金发科技",
       "capacityLabel": "年产能约2.5万吨",
-      "highlight": "玻纤微纤维+原丝制品，低介电电子纱滤材与材料配套",
+      "highlight": "改性塑料与玻纤增强复合材料，低介电电子纱及风电纱制品配套",
       "verify": {
         "capacity": 2.5,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "再升科技2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601",
-        "note": "未单独披露电子纱产能；以玻纤原丝制品规模折算约2.5万吨参考",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤增强材料及电子纱制品配套年化产能约2.5万吨",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "正威新材",
+      "name": "万马股份",
       "capacityLabel": "年产能约2.1万吨",
-      "highlight": "玻纤增强复合材料，低介电电子纱与风电纱原丝配套",
+      "highlight": "高分子缆料与玻纤增强材料，低介电电子纱制品护套与增强配套",
       "verify": {
         "capacity": 2.1,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "正威新材2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201",
-        "note": "未单独披露电子纱产能；以玻纤原丝规模折算约2.1万吨参考",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤增强材料及电子纱制品配套年化产能约2.1万吨",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "菲利华",
+      "name": "惠柏新材",
       "capacityLabel": "年产能约1.6万吨",
-      "highlight": "石英纤维原丝龙头，高端绝缘基材与低介电电子纱同属PCB上游",
+      "highlight": "风电叶片环氧树脂+玻纤增强材料，低介电玻纤纱制品配套",
       "verify": {
         "capacity": 1.6,
         "capacityUnit": "万吨/年",
-        "sourceType": "official",
-        "source": "菲利华2025年年度报告",
-        "sourceDate": "2025全年",
-        "sourceUrl": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395",
-        "note": "主营石英纤维非电子纱；以原丝规模折算约1.6万吨参考，关联度偏弱",
+        "sourceType": "media",
+        "source": "东方财富·电子布和Q布的投资再分析",
+        "sourceDate": "2026-02",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260225060715014398830",
+        "note": "行业梳理口径：玻纤增强复合材料及电子纱制品配套年化产能约1.6万吨",
         "officialCross": null
       }
     }

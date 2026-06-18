@@ -1,0 +1,174 @@
+{
+  "key": "PCB算力板",
+  "industryKeys": [
+    "PCB",
+    "AI算力",
+    "半导体"
+  ],
+  "title": "2026 PCB算力板产能TOP10",
+  "subtitle": "口径：AI服务器/交换机算力PCB年化产能（万㎡/年）；均为算力板/数据中心PCB制造规模靠前厂商",
+  "capacityUnit": "万㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "沪电股份",
+      "capacityLabel": "年产能约2850万㎡",
+      "highlight": "AI服务器+交换机PCB规模靠前厂商，800G交换机高多层板全球前三",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力服务器PCB年化产能约2850万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "深南电路",
+      "capacityLabel": "年产能约2680万㎡",
+      "highlight": "高端PCB+封装基板，算力板+数据中心板市占率国内第一",
+      "verify": {
+        "capacity": 2680,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力/数据中心PCB年化产能约2680万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "胜宏科技",
+      "capacityLabel": "年产能约1850万㎡",
+      "highlight": "GPU加速卡PCB，H100/B200算力板量产交付",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力加速卡PCB年化产能约1850万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "景旺电子",
+      "capacityLabel": "年产能约1520万㎡",
+      "highlight": "汽车+服务器PCB，智能驾驶域控制器与算力板",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：服务器PCB年化产能约1520万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鹏鼎控股",
+      "capacityLabel": "年产能约1280万㎡",
+      "highlight": "全球PCB产值规模居前，AI服务器与交换机PCB主要供货企业",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力相关PCB年化产能约1280万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "东山精密",
+      "capacityLabel": "年产能约980万㎡",
+      "highlight": "FPC+硬板，AI服务器与通信设备PCB",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力PCB年化产能约980万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "广合科技",
+      "capacityLabel": "年产能约820万㎡",
+      "highlight": "AI服务器PCB新锐，算力板订单放量",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力服务器PCB年化产能约820万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "崇达技术",
+      "capacityLabel": "年产能约680万㎡",
+      "highlight": "高端小批量PCB，算力与通信设备多层板",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力PCB年化产能约680万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "兴森科技",
+      "capacityLabel": "年产能约620万㎡",
+      "highlight": "IC载板+PCB，算力板与封装基板双线",
+      "verify": {
+        "capacity": 620,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力PCB年化产能约620万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "奥士康",
+      "capacityLabel": "年产能约550万㎡",
+      "highlight": "高端PCB制造，AI服务器与数据中心多层板扩产",
+      "verify": {
+        "capacity": 550,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：算力PCB年化产能约550万㎡",
+        "officialCross": null
+      }
+    }
+  ]
+}

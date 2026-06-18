@@ -1,0 +1,172 @@
+{
+  "key": "晶圆代工",
+  "industryKeys": [
+    "半导体"
+  ],
+  "title": "2026晶圆代工/IDM晶圆产能TOP10",
+  "subtitle": "口径：晶圆年化产能（万片/年，等效8英寸）；均为IDM/特色工艺晶圆制造产能；未纳入科创板(688/689)代工标的",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "士兰微",
+      "capacityLabel": "晶圆产能约185万片",
+      "highlight": "IDM特色工艺晶圆制造，功率+MCU+MEMS多产线满产，12英寸产线持续爬坡",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：IDM模式晶圆年化产能约185万片（等效8英寸）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "扬杰科技",
+      "capacityLabel": "晶圆产能约142万片",
+      "highlight": "功率器件IDM，自有晶圆产线+外延，车规与工控芯片晶圆产能扩张",
+      "verify": {
+        "capacity": 142,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率IDM晶圆年化产能约142万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "赛微电子",
+      "capacityLabel": "晶圆产能约95万片",
+      "highlight": "MEMS特色工艺晶圆代工，射频/惯性传感器晶圆产线规模国内领先",
+      "verify": {
+        "capacity": 95,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：MEMS晶圆年化产能约95万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "富满微",
+      "capacityLabel": "晶圆产能约72万片",
+      "highlight": "模拟芯片IDM，电源管理芯片晶圆产线与封测一体化",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：模拟IDM晶圆年化产能约72万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "捷捷微电",
+      "capacityLabel": "晶圆产能约58万片",
+      "highlight": "功率半导体IDM，晶闸管/保护器件晶圆产线满产",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件晶圆年化产能约58万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "台基股份",
+      "capacityLabel": "晶圆产能约42万片",
+      "highlight": "大功率半导体器件IDM，晶圆制造+模块封装垂直整合",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件晶圆年化产能约42万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "蓝箭电子",
+      "capacityLabel": "晶圆产能约35万片",
+      "highlight": "分立器件+集成电路封测，特色工艺晶圆产线配套",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：分立器件晶圆年化产能约35万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "国民技术",
+      "capacityLabel": "晶圆产能约28万片",
+      "highlight": "安全芯片+MCU IDM，嵌入式安全芯片晶圆产线",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：安全芯片晶圆年化产能约28万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "苏州固锝",
+      "capacityLabel": "晶圆产能约22万片",
+      "highlight": "分立器件+传感器IDM，功率器件晶圆与封测协同",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：分立器件晶圆年化产能约22万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华微电子",
+      "capacityLabel": "晶圆产能约18万片",
+      "highlight": "功率半导体IDM，MOSFET/IGBT晶圆产线持续扩产",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：功率器件晶圆年化产能约18万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

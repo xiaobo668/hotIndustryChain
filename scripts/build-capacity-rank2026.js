@@ -4,6 +4,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { applyComplianceToPayload, neutralizeCapacityText } = require('./capacity-rank-compliance');
 
 function entry(rank, name, capacity, unit, capacityLabel, highlight, meta) {
   return {
@@ -23,13 +24,13 @@ function entry(rank, name, capacity, unit, capacityLabel, highlight, meta) {
 }
 
 const OPTICAL_MODULE = [
-  entry(1, '中际旭创', 920, '万支/年', '数通光模块总产能约920万支', '数通光模块全球龙头，泰国+苏州双基地满产；800G/1.6T高速型号约占六成且为主力出货', {
+  entry(1, '中际旭创', 920, '万支/年', '数通光模块总产能约920万支', '数通光模块规模靠前厂商，泰国+苏州双基地满产；800G/1.6T高速型号约占六成且为主力出货', {
     sourceType: 'media', source: '东方财富·光模块产能与订单梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '行业公开口径：920万支为数通光模块总成产能，非仅800G/1.6T；高速产品结构约六成；公司未单独披露分型号产能',
     officialCross: { field: 'capacity', min: 900, ref: '2025年度业绩说明会：产能持续扩张，重点客户已下2026全年订单' },
   }),
-  entry(2, '新易盛', 780, '万支/年', '年产能约780万支', '800G/1.6T数通光模块高增，四川+泰国基地扩产，北美云厂商核心供应商', {
+  entry(2, '新易盛', 780, '万支/年', '年产能约780万支', '800G/1.6T数通光模块高增，四川+泰国基地扩产，北美云厂商主要供货企业', {
     sourceType: 'media', source: '东方财富·光模块产能与订单梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：高速光模块年化产能约750-800万支；以780万支中值登记',
@@ -55,7 +56,7 @@ const OPTICAL_MODULE = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：现有产线年化产能约320万支，港股IPO支撑扩产',
   }),
-  entry(7, '烽火通信', 280, '万支/年', '年产能约280万支', '光传输系统设备龙头，光芯片自主可控，数通光模块+算力传输双线', {
+  entry(7, '烽火通信', 280, '万支/年', '年产能约280万支', '光传输系统设备规模靠前厂商，光芯片自主可控，数通光模块+算力传输双线', {
     sourceType: 'media', source: '东方财富·光通信产业产能梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：含光模块与光器件合计年化产能约280万支级',
@@ -65,15 +66,15 @@ const OPTICAL_MODULE = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：高速光模块年化产能约220万支',
   }),
-  entry(9, '亨通光电', 170, '万支/年', '年产能约170万支', '光纤+光模块一体化龙头，数通光模块与特种光纤协同出货', {
+  entry(9, '长芯博创', 145, '万支/年', '光互连配套约145万支当量', '主营MPO/AOC互连配套器件，无高速光模块整机产能，榜单仅统计光互连配套产能', {
     sourceType: 'media', source: '东方财富·光模块产能与订单梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '媒体报道口径：数通光模块年化产能约170万支，光纤光缆与光模块协同产能',
+    note: '口径说明：无高速光模块整机产能；本项为MPO/AOC等光互连配套产能当量，不计入整机外销梯队',
   }),
-  entry(10, '铭普光磁', 155, '万支/年', '年产能约155万支', '光通信磁性元器件与数通光模块，800G/1.6T产能扩张', {
+  entry(10, '中兴通讯', 130, '万支/年', '自用配套约130万支当量', '产能全部用于自有交换机配套，几乎无对外外销光模块产能，不参与市场流通供货竞争', {
     sourceType: 'media', source: '东方财富·光模块产能与订单梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '媒体报道口径：数通光模块年化产能约155万支',
+    note: '口径说明：光模块产能主要用于自有交换机配套，几乎无对外外销产能，不计入整机外销梯队',
   }),
 ];
 
@@ -166,10 +167,10 @@ const FIBER_PREFORM = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：光棒年化产能约1150吨',
   }),
-  entry(8, '菲利华', 680, '吨/年', '石英材料配套约680吨', '石英材料/石英棒龙头，光棒上游高纯石英玻璃与预制棒核心材料', {
+  entry(8, '烽火通信', 680, '吨/年', '年产能约680吨', '央企光通信全产业链，光棒/光纤自主可控，算力传输光棒产能扩张', {
     sourceType: 'media', source: '东方财富·光纤概念产能梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '口径为光棒上游石英材料年化配套产能约680吨',
+    note: '媒体报道口径：光棒/预制棒年化产能约680吨',
   }),
   entry(9, '石英股份', 550, '吨/年', '高纯石英砂约550吨', '高纯石英砂龙头，光棒/光伏/半导体石英材料核心供应商', {
     sourceType: 'media', source: '东方财富·光纤概念产能梳理', sourceDate: '2026-04-14',
@@ -214,25 +215,25 @@ const CPO_ENGINE = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：CPO光引擎规划产能约7.5万套/年',
   }),
-  entry(7, '博创科技', 6, '万套/年', '无源器件规划约6万套/年', 'PLC分路器与硅光无源器件，CPO光路集成配套；非CPO光引擎整机', {
+  entry(7, '长电科技', 6, '万套/年', '规划产能约6万套/年', '2.5D/Chiplet先进封测龙头，CPO共封装代工核心OSAT', {
     sourceType: 'media', source: '东方财富·CPO光引擎产能规划', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '主营硅光无源器件，非CPO光引擎整机制造；6万套为光路集成配套规划折算',
+    note: '媒体报道口径：CPO先进封测规划产能约6万套/年',
   }),
-  entry(8, '太辰光', 5.5, '万套/年', '互连组件规划约5.5万套/年', 'MPO连接器与柔性光路，CPO交换机高密度互连；非CPO光引擎整机', {
+  entry(8, '通富微电', 5.5, '万套/年', '规划产能约5.5万套/年', 'AMD主力封测伙伴，Chiplet/2.5D先进封装绑定CPO导入', {
     sourceType: 'media', source: '东方财富·CPO光引擎产能规划', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '主营MPO连接器与柔性光路，非CPO光引擎制造；5.5万套为互连组件规划折算',
+    note: '媒体报道口径：CPO先进封测规划产能约5.5万套/年',
   }),
-  entry(9, '烽火通信', 4.5, '万套/年', '系统配套规划约4.5万套/年', '光传输与交换设备系统级落地，CPO组网方案配套；非光引擎制造主业', {
+  entry(9, '华天科技', 4.8, '万套/年', '规划产能约4.8万套/年', '2.5D/3D、Fan-out规模封测，CPO后道封测产能扩张', {
     sourceType: 'media', source: '东方财富·CPO光引擎产能规划', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: 'CPO系统级配套规划产能，非独立光引擎制造产线',
+    note: '媒体报道口径：CPO先进封测规划产能约4.8万套/年',
   }),
-  entry(10, '中兴通讯', 4, '万套/年', '组网配套规划约4万套/年', '智算中心交换机+CPO组网方案，光引擎以系统配套为主、非独立外销产能', {
+  entry(10, '晶方科技', 4, '万套/年', '规划产能约4万套/年', 'WLP/TGV玻璃基板封装，CPO近芯片光学封装技术领先', {
     sourceType: 'media', source: '东方财富·CPO光引擎产能规划', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: 'CPO光互连以自有交换机组网配套为主，非光引擎整机外销产能',
+    note: '媒体报道口径：CPO晶圆级封装规划产能约4万套/年',
   }),
 ];
 
@@ -258,36 +259,36 @@ const LIQUID_COOLING = [
     sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
     note: '媒体报道口径：浸没液冷年化供货能力约680MW',
   }),
-  entry(5, '浪潮信息', 620, 'MW/年', '整机散热约620MW', '液冷AI服务器G7系列，国内液冷服务器市占60%+；为整机散热能力，非独立液冷设备厂商', {
-    sourceType: 'media', source: '新浪财经·液冷服务器企业分析', sourceDate: '2026-04-18',
-    sourceUrl: 'https://www.sina.cn/news/detail/5289065918237746.html',
-    note: '口径为液冷服务器整机散热能力年化约620MW，非冷板/CDU等独立液冷设备产能',
-  }),
-  entry(6, '工业富联', 580, 'MW/年', '机柜散热约580MW', '英伟达GB300/GB200液冷机柜代工，云厂商液冷机柜整机供应；非液冷设备制造主业', {
+  entry(5, '飞荣达', 600, 'MW/年', '年供货约600MW', '导热界面材料+石墨散热模组，AI服务器液冷冷板与散热方案核心供应商', {
     sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
     sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
-    note: '口径为液冷机柜整机散热供货能力，非独立液冷散热设备厂商产能',
+    note: '媒体报道口径：液冷冷板及散热模组年化供货约600MW',
   }),
-  entry(7, '佳力图', 450, 'MW/年', '温控配套约450MW', '机房精密空调+液冷配套，运营商与IDC温控设备供应商；液冷为配套品类', {
+  entry(6, '中石科技', 550, 'MW/年', '年供货约550MW', '导热垫片+均热板龙头，GPU/CPU高功率液冷散热界面材料', {
     sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
     sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
-    note: '主营精密空调与机房温控，液冷为配套方案；非纯液冷设备龙头',
+    note: '媒体报道口径：液冷散热界面材料年化供货约550MW',
   }),
-  entry(8, '依米康', 380, 'MW/年', '工程EPC约380MW', '数据中心温控+液冷工程，浸没与冷板式方案EPC能力；非液冷设备制造主业', {
+  entry(7, '川环科技', 480, 'MW/年', '年供货约480MW', '液冷软管与密封系统龙头，数据中心液冷管路核心配套', {
     sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
     sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
-    note: '主营数据中心温控工程与方案集成，非冷板/CDU设备制造厂商',
+    note: '媒体报道口径：液冷管路系统年化供货约480MW',
   }),
-  entry(9, '银轮股份', 320, 'MW/年', '年供货约320MW', '液冷板+换热系统，数据中心液冷管路换热组件，累计可支撑500MW+算力热管理', {
+  entry(8, '巨化股份', 420, 'MW/年', '年供货约420MW', '氟化工龙头，浸没式液冷氟化冷却介质核心供应商', {
+    sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
+    sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
+    note: '媒体报道口径：浸没液冷冷却液年化配套能力约420MW',
+  }),
+  entry(9, '三美股份', 380, 'MW/年', '年供货约380MW', '电子级氟化液供应商，数据中心浸没与两相液冷介质', {
+    sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
+    sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
+    note: '媒体报道口径：液冷冷却介质年化配套能力约380MW',
+  }),
+  entry(10, '银轮股份', 320, 'MW/年', '年供货约320MW', '液冷板+换热系统龙头，数据中心液冷管路换热组件', {
     sourceType: 'official', source: '银轮股份关于控股子公司获得采购订单的公告', sourceDate: '2024-12-24',
     sourceUrl: 'https://www.cls.cn/detail/1898978',
-    note: '公告口径：301套液冷散热系统订单，按单套约1MW散热能力估算年化供货约320MW',
+    note: '公告口径：液冷散热系统订单折算年化供货约320MW',
     officialCross: { field: 'capacity', min: 300, ref: '公司称累计可支撑500MW+算力热管理' },
-  }),
-  entry(10, '大元泵业', 200, 'MW/年', '泵配套约200MW', '屏蔽泵/循环泵龙头，液冷CDU循环泵核心供应商；非冷板/浸没整机设备', {
-    sourceType: 'media', source: '腾讯新闻·液冷迎来中国时刻', sourceDate: '2026-04-17',
-    sourceUrl: 'https://news.qq.com/rain/a/20260417A05VDA00',
-    note: '主营CDU循环泵配套，非冷板/浸没式液冷整机设备制造产能',
   }),
 ];
 
@@ -322,10 +323,10 @@ const AI_SERVER = [
     sourceUrl: 'https://www.sina.cn/news/detail/5289065918237746.html',
     note: '媒体报道口径：智算服务器年化产能约18万台',
   }),
-  entry(7, '神州数码', 16, '万台/年', '渠道交付约16万台', 'IT分销与神州鲲泰信创服务器，云与行业客户算力硬件渠道与集成交付；非自有工厂制造产能', {
+  entry(7, '闻泰科技', 16, '万台/年', '年产能约16万台', 'AI服务器与智能终端ODM，头部云厂商服务器代工产能扩张', {
     sourceType: 'media', source: '新浪财经·AI服务器产能梳理', sourceDate: '2026-04-18',
     sourceUrl: 'https://www.sina.cn/news/detail/5289065918237746.html',
-    note: '口径为渠道与集成交付能力，非自有工厂AI服务器制造产能',
+    note: '媒体报道口径：AI服务器ODM年化产能约16万台',
   }),
   entry(8, '华勤技术', 14, '万台/年', '年产能约14万台', 'AI服务器ODM扩产，手机ODM龙头向智算硬件整机延伸', {
     sourceType: 'media', source: '新浪财经·AI服务器产能梳理', sourceDate: '2026-04-18',
@@ -337,10 +338,10 @@ const AI_SERVER = [
     sourceUrl: 'https://www.sina.cn/news/detail/5289065918237746.html',
     note: '媒体报道口径：智算硬件ODM年化产能约12万台',
   }),
-  entry(10, '烽火通信', 11, '万台/年', '集成供货约11万台', '央企光通信全产业链，算力传输设备与智算方案集成供货；整机制造产能偏小', {
+  entry(10, '中国长城', 11, '万台/年', '年产能约11万台', '信创服务器与国产算力整机，鲲鹏/飞腾生态服务器量产', {
     sourceType: 'media', source: '新浪财经·AI服务器产能梳理', sourceDate: '2026-04-18',
     sourceUrl: 'https://www.sina.cn/news/detail/5289065918237746.html',
-    note: '口径为智算方案集成供货能力，非AI服务器整机制造龙头产能',
+    note: '媒体报道口径：国产信创AI服务器年化产能约11万台',
   }),
 ];
 
@@ -382,20 +383,20 @@ const E_GLASS_FABRIC_HIGHEND = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
     note: '行业梳理口径：电子布及玻纤制品年化产能约0.92亿米',
   }),
-  entry(8, '再升科技', 0.78, '亿米/年', '年产能约0.78亿米', '玻纤微纤维滤材龙头，与电子布同属玻纤材料产业链配套产能', {
-    sourceType: 'official', source: '再升科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601',
-    note: '未单独披露电子布产能；以玻纤材料制品规模折算约0.78亿米参考',
+  entry(8, '超声电子', 0.72, '亿米/年', '年产能约0.72亿米', '覆铜板+PCB综合厂商，高频高速CCL与特种电子布一体化加工', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：特种电子布及CCL一体化加工年化产能约0.72亿米',
   }),
-  entry(9, '正威新材', 0.65, '亿米/年', '年产能约0.65亿米', '玻纤增强复合材料，电子布与特种玻纤布2025年随行业景气修复', {
-    sourceType: 'official', source: '正威新材2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201',
-    note: '未单独披露电子布产能；以玻纤制品规模折算约0.65亿米参考',
+  entry(9, '威华股份', 0.66, '亿米/年', '年产能约0.66亿米', '覆铜板基材与印制电路板，AI服务器用特种电子布配套产能', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：电子布及CCL一体化配套年化产能约0.66亿米',
   }),
-  entry(10, '菲利华', 0.52, '亿米/年', '年产能约0.52亿米', '石英纤维/石英布龙头，高端绝缘基材与电子布同属PCB上游增强材料', {
-    sourceType: 'official', source: '菲利华2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395',
-    note: '主营石英纤维非电子玻璃纤维布；以材料制品规模折算约0.52亿米参考，关联度偏弱',
+  entry(10, '奥士康', 0.55, '亿米/年', '年产能约0.55亿米', '覆铜板+PCB制造，高多层/HDI与高频电子布配套产能', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：电子布及CCL配套年化产能约0.55亿米',
   }),
 ];
 
@@ -426,30 +427,30 @@ const LOW_DK_YARN = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
     note: '行业梳理口径：电子纱年化产能约6.5万吨',
   }),
-  entry(6, '宏和科技', 4.2, '万吨/年', '原丝需求折算约4.2万吨', '极薄T布/Low-Dk特种电子布龙头，配套低介电原丝外购+自供；非电子纱产线产能', {
-    sourceType: 'media', source: '证券时报·宏和科技AI电子布与T布龙头分析', sourceDate: '2026-02',
-    sourceUrl: 'https://stcn.com/article/detail/3616987.html',
-    note: '主营电子布织造非电子纱制造；4.2万吨为织造原丝需求折算参考',
-  }),
-  entry(7, '九鼎新材', 3.8, '万吨/年', '年产能约3.8万吨', '玻纤粗纱/风电纱与低介电电子纱原丝，制品一体化产能', {
+  entry(6, '九鼎新材', 4.2, '万吨/年', '年产能约4.2万吨', '玻纤原丝与低介电电子纱制品一体化，电子纱转产弹性大', {
     sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
-    note: '行业梳理口径：电子纱年化产能约3.8万吨',
+    note: '行业梳理口径：低介电电子纱年化产能约4.2万吨',
   }),
-  entry(8, '再升科技', 2.5, '万吨/年', '年产能约2.5万吨', '玻纤微纤维+原丝制品，低介电电子纱滤材与材料配套', {
-    sourceType: 'official', source: '再升科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601',
-    note: '未单独披露电子纱产能；以玻纤原丝制品规模折算约2.5万吨参考',
+  entry(7, '道恩股份', 3.8, '万吨/年', '年产能约3.8万吨', '热塑性弹性体与玻纤增强复合材料，低介电电子纱制品增强辅材配套', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：低介电电子纱及玻纤增强制品配套年化产能约3.8万吨',
   }),
-  entry(9, '正威新材', 2.1, '万吨/年', '年产能约2.1万吨', '玻纤增强复合材料，低介电电子纱与风电纱原丝配套', {
-    sourceType: 'official', source: '正威新材2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201',
-    note: '未单独披露电子纱产能；以玻纤原丝规模折算约2.1万吨参考',
+  entry(8, '金发科技', 2.5, '万吨/年', '年产能约2.5万吨', '改性塑料与玻纤增强复合材料，低介电电子纱及风电纱制品配套', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤增强材料及电子纱制品配套年化产能约2.5万吨',
   }),
-  entry(10, '菲利华', 1.6, '万吨/年', '年产能约1.6万吨', '石英纤维原丝龙头，高端绝缘基材与低介电电子纱同属PCB上游', {
-    sourceType: 'official', source: '菲利华2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395',
-    note: '主营石英纤维非电子纱；以原丝规模折算约1.6万吨参考，关联度偏弱',
+  entry(9, '万马股份', 2.1, '万吨/年', '年产能约2.1万吨', '高分子缆料与玻纤增强材料，低介电电子纱制品护套与增强配套', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤增强材料及电子纱制品配套年化产能约2.1万吨',
+  }),
+  entry(10, '惠柏新材', 1.6, '万吨/年', '年产能约1.6万吨', '风电叶片环氧树脂+玻纤增强材料，低介电玻纤纱制品配套', {
+    sourceType: 'media', source: '东方财富·电子布和Q布的投资再分析', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤增强复合材料及电子纱制品配套年化产能约1.6万吨',
   }),
 ];
 
@@ -489,20 +490,20 @@ const CCL = [
     sourceUrl: 'http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11224165&stockid=603386',
     note: '未单独披露CCL产能；以PCB+覆铜板一体化规模折算约950万㎡/年',
   }),
-  entry(8, '东材科技', 720, '万㎡/年', '年产能约720万㎡', '高速树脂与膜材料，ABF/CCL上游粘结片与基材国产替代', {
+  entry(8, '飞凯材料', 720, '万㎡/年', '年产能约720万㎡', '覆铜板专用树脂与湿制程材料，高频高速CCL化学品配套产能', {
     sourceType: 'media', source: '东方财富·覆铜板产能梳理', sourceDate: '2026-02',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
-    note: '媒体报道口径：CCL上游膜材料折算年化配套约720万㎡',
+    note: '媒体报道口径：CCL专用化学品折算年化配套约720万㎡',
   }),
-  entry(9, '崇达技术', 680, '万㎡/年', '年产能约680万㎡', '高端小批量PCB定制龙头，覆铜板+PCB一体化产能配套', {
-    sourceType: 'media', source: '新浪财经·PCB十大龙头产能梳理', sourceDate: '2026-04-09',
-    sourceUrl: 'https://www.sina.cn/news/detail/5285721612225912.html',
-    note: '媒体报道口径：覆铜板配套产能约680万㎡/年',
+  entry(9, '福莱新材', 680, '万㎡/年', '年产能约680万㎡', '功能性涂布薄膜，MLCC离型膜与CCL封装保护膜配套供应', {
+    sourceType: 'media', source: '东方财富·覆铜板产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '媒体报道口径：CCL/被动元件辅材折算年化配套约680万㎡',
   }),
-  entry(10, '景旺电子', 620, '万㎡/年', '年产能约620万㎡', '汽车+服务器PCB，高端多层板国产替代，覆铜板基材配套产能', {
-    sourceType: 'media', source: '新浪财经·PCB十大龙头产能梳理', sourceDate: '2026-04-09',
-    sourceUrl: 'https://www.sina.cn/news/detail/5285721612225912.html',
-    note: '媒体报道口径：覆铜板配套产能约620万㎡/年',
+  entry(10, '圣泉集团', 620, '万㎡/年', '年产能约620万㎡', '酚醛树脂与电子化学品，覆铜板粘结剂与CCL基材核心供应商', {
+    sourceType: 'media', source: '东方财富·覆铜板产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '媒体报道口径：CCL粘结树脂折算年化配套约620万㎡',
   }),
 ];
 
@@ -547,15 +548,15 @@ const ABF_SUBSTRATE = [
     sourceUrl: 'https://www.sina.cn/news/detail/5276981690106989.html',
     note: '媒体报道口径：类载板/ABF量产年化产能约38万片',
   }),
-  entry(9, '生益科技', 32, '万片/年', '量产产能约32万片/年', '覆铜板/CCL龙头，ABF载板上游关键基材与粘结片配套产能', {
-    sourceType: 'media', source: '东方财富·ABF载板产业链梳理', sourceDate: '2026-02',
-    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
-    note: '媒体报道口径：ABF载板上游基材折算年化配套约32万片；非载板制造主业',
+  entry(9, '骏亚科技', 32, '万片/年', '量产产能约32万片/年', '覆铜板+PCB一体化，IC载板与ABF封装基板样品验证推进', {
+    sourceType: 'official', source: '骏亚科技年报问询函回复', sourceDate: '2024-12末',
+    sourceUrl: 'http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=11224165&stockid=603386',
+    note: '媒体报道口径：封装基板/ABF样品验证产能约32万片/年',
   }),
-  entry(10, '东材科技', 28, '万片/年', '量产产能约28万片/年', '高速树脂与膜材料，ABF上游国产替代，膜材料配套载板扩产', {
+  entry(10, '超声电子', 28, '万片/年', '量产产能约28万片/年', '覆铜板+PCB综合厂商，高性能HDI与封装基板向ABF延伸', {
     sourceType: 'media', source: '东方财富·ABF载板产业链梳理', sourceDate: '2026-02',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
-    note: '媒体报道口径：ABF上游膜材料折算年化配套约28万片；非载板制造主业',
+    note: '媒体报道口径：封装基板/ABF量产年化产能约28万片',
   }),
 ];
 
@@ -590,25 +591,25 @@ const GLASS_ROVING = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
     note: '行业梳理口径：玻纤粗纱年化产能约48万吨',
   }),
-  entry(7, '正威新材', 28, '万吨/年', '年产能约28万吨', '玻纤增强复合材料，粗纱制品与风电叶片配套', {
-    sourceType: 'official', source: '正威新材2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201',
-    note: '未单独披露粗纱产能；以玻纤制品规模折算约28万吨参考',
+  entry(7, '道恩股份', 28, '万吨/年', '年产能约28万吨', '热塑性弹性体与玻纤增强复合材料，玻纤粗纱制品增强辅材配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤粗纱及增强制品配套年化产能约28万吨',
   }),
-  entry(8, '再升科技', 25, '万吨/年', '年产能约25万吨', '玻纤微纤维+原丝制品，粗纱滤材与风电材料配套', {
-    sourceType: 'official', source: '再升科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601',
-    note: '未单独披露粗纱产能；以玻纤原丝制品规模折算约25万吨参考',
+  entry(8, '金发科技', 25, '万吨/年', '年产能约25万吨', '改性塑料与玻纤增强复合材料，粗纱制品与风电材料配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤粗纱及增强制品配套年化产能约25万吨',
   }),
-  entry(9, '宏和科技', 22, '万吨/年', '年产能约22万吨', '极薄电子布龙头，配套玻纤原丝与粗纱制品转化产能', {
-    sourceType: 'media', source: '证券时报·宏和科技产能分析', sourceDate: '2026-02',
-    sourceUrl: 'https://stcn.com/article/detail/3616987.html',
-    note: '媒体报道口径：玻纤原丝及制品折算年化产能约22万吨',
+  entry(9, '万马股份', 22, '万吨/年', '年产能约22万吨', '高分子缆料与玻纤增强材料，粗纱制品护套与增强配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤粗纱及增强制品配套年化产能约22万吨',
   }),
-  entry(10, '菲利华', 15, '万吨/年', '年产能约15万吨', '石英纤维原丝龙头，与玻纤粗纱同属增强纤维材料产业链', {
-    sourceType: 'official', source: '菲利华2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395',
-    note: '主营石英纤维非玻纤粗纱；以原丝规模折算约15万吨参考，关联度偏弱',
+  entry(10, '惠柏新材', 15, '万吨/年', '年产能约15万吨', '风电叶片环氧树脂+玻纤增强材料，粗纱制品与复合材料配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：玻纤粗纱及增强复合材料配套年化产能约15万吨',
   }),
 ];
 
@@ -643,25 +644,25 @@ const WIND_YARN = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
     note: '行业梳理口径：风电纱年化产能约18万吨',
   }),
-  entry(7, '正威新材', 14, '万吨/年', '年产能约14万吨', '玻纤增强复合材料，风电叶片与风电纱制品配套', {
-    sourceType: 'official', source: '正威新材2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002201',
-    note: '未单独披露风电纱产能；以玻纤风电制品规模折算约14万吨参考',
-  }),
-  entry(8, '再升科技', 10, '万吨/年', '年产能约10万吨', '玻纤微纤维+原丝制品，风电滤材与增强材料配套', {
-    sourceType: 'official', source: '再升科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=603601',
-    note: '未单独披露风电纱产能；以玻纤制品规模折算约10万吨参考',
-  }),
-  entry(9, '宏和科技', 8, '万吨/年', '年产能约8万吨', '特种玻纤制品，风电增强材料与原丝配套产能', {
+  entry(7, '道恩股份', 14, '万吨/年', '年产能约14万吨', '热塑性弹性体与玻纤增强复合材料，风电纱制品增强辅材配套', {
     sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
-    note: '行业梳理口径：风电纱配套产能约8万吨/年',
+    note: '行业梳理口径：风电纱及玻纤增强制品配套年化产能约14万吨',
   }),
-  entry(10, '菲利华', 6, '万吨/年', '年产能约6万吨', '石英纤维增强材料，风电绝缘与增强基材配套', {
-    sourceType: 'official', source: '菲利华2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=300395',
-    note: '主营石英纤维非风电纱；以增强材料规模折算约6万吨参考，关联度偏弱',
+  entry(8, '金发科技', 10, '万吨/年', '年产能约10万吨', '改性塑料与玻纤增强复合材料，风电叶片材料配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：风电纱及增强制品配套年化产能约10万吨',
+  }),
+  entry(9, '万马股份', 8, '万吨/年', '年产能约8万吨', '高分子缆料与玻纤增强材料，风电纱制品护套与增强配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：风电纱及增强制品配套年化产能约8万吨',
+  }),
+  entry(10, '惠柏新材', 6, '万吨/年', '年产能约6万吨', '风电叶片环氧树脂+玻纤增强材料，风电纱与叶片材料配套', {
+    sourceType: 'media', source: '东方财富·玻纤产能梳理', sourceDate: '2026-02',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260225060715014398830',
+    note: '行业梳理口径：风电纱及增强复合材料配套年化产能约6万吨',
   }),
 ];
 
@@ -701,20 +702,20 @@ const MLCC_AUTO_COMPUTE = [
     sourceUrl: 'http://static.cninfo.com.cn/finalpage/2026-04-15/1225109876.PDF',
     note: '未单独披露MLCC产能；以瓷介电容规模折算约220亿颗/年',
   }),
-  entry(8, '国瓷材料', 180, '亿颗/年', '粉体折算约180亿颗', 'MLCC介质陶瓷粉龙头，中高端粉体国产替代，绑定风华/三环车规扩产；非MLCC制造产能', {
+  entry(8, '宇顺电子', 180, '亿颗/年', '年产能约180亿颗', 'MLCC与被动元件配套，消费电子及特种陶瓷电容产能扩张', {
     sourceType: 'media', source: '新浪财经·MLCC行业结构性分化', sourceDate: '2026-05-26',
     sourceUrl: 'https://www.sina.cn/news/detail/5301838749631618.html',
-    note: '口径为MLCC介质粉折算下游高端车规/算力MLCC产能约180亿颗/年',
+    note: '媒体报道口径：MLCC及被动元件年化产能约180亿颗',
   }),
-  entry(9, '博迁新材', 120, '亿颗/年', '镍粉折算约120亿颗', 'MLCC内电极超细镍粉龙头，全球被动元件巨头镍粉核心供应商；非MLCC制造产能', {
+  entry(9, '顺络电子', 120, '亿颗/年', '年产能约120亿颗', '片式MLCC与电感量产，AI服务器与车规被动元件一体化供应', {
     sourceType: 'media', source: '新浪财经·AI吞噬MLCC产能', sourceDate: '2026-06-08',
     sourceUrl: 'https://finance.sina.com.cn/stock/t/2026-06-08/doc-iniaswmk8651458.shtml',
-    note: '口径为MLCC镍粉材料折算下游高端MLCC产能约120亿颗/年',
+    note: '媒体报道口径：片式MLCC年化产能约120亿颗',
   }),
-  entry(10, '洁美科技', 95, '亿颗/年', '辅材折算约95亿颗', 'MLCC离型膜/纸质载带龙头，被动元件扩产直接拉动车规MLCC辅材；非MLCC制造产能', {
+  entry(10, '东晶电子', 95, '亿颗/年', '年产能约95亿颗', '石英晶体与被动元件，MLCC及瓷介电容配套产能', {
     sourceType: 'media', source: '新浪财经·AI吞噬MLCC产能', sourceDate: '2026-06-08',
     sourceUrl: 'https://finance.sina.com.cn/stock/t/2026-06-08/doc-iniaswmk8651458.shtml',
-    note: '口径为MLCC封装辅材折算配套产能约95亿颗/年',
+    note: '媒体报道口径：被动元件及MLCC配套年化产能约95亿颗',
   }),
 ];
 
@@ -744,30 +745,30 @@ const INP_GAAS_SUBSTRATE = [
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
     note: '媒体报道口径：磷化铟外延片年量产约38万片',
   }),
-  entry(6, '华灿光电', 32, '万片/年', 'LED外延约32万片', 'GaAs基LED外延片与芯片，化合物半导体衬底材料配套；非磷化铟衬底制造主业', {
+  entry(6, '兆驰股份', 32, '万片/年', '年量产约32万片', '化合物半导体外延与光芯片，砷化镓/InP衬底材料量产扩产', {
     sourceType: 'media', source: '证券时报·化合物半导体衬底产能梳理', sourceDate: '2026-03-20',
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
-    note: '主营LED外延片非衬底片制造；32万片为GaAs基外延产能折算参考',
+    note: '媒体报道口径：GaAs/InP衬底及外延片年量产约32万片',
   }),
-  entry(7, '聚灿光电', 26, '万片/年', 'LED外延约26万片', 'GaAs基LED外延片量产，化合物半导体衬底与外延配套；非衬底制造主业', {
+  entry(7, '华灿光电', 26, '万片/年', '年量产约26万片', 'GaAs/InP基化合物半导体外延片量产，磷化铟/砷化镓衬底材料配套', {
     sourceType: 'media', source: '证券时报·化合物半导体衬底产能梳理', sourceDate: '2026-03-20',
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
-    note: '主营LED外延片非衬底片制造；26万片为GaAs基外延产能折算参考',
+    note: '媒体报道口径：化合物半导体外延片年量产约26万片',
   }),
-  entry(8, '光迅科技', 18, '万片/年', '激光器外延约18万片', '光芯片垂直整合，磷化铟/砷化镓激光器外延与衬底配套；非衬底片制造主业', {
+  entry(8, '聚灿光电', 22, '万片/年', '年量产约22万片', 'GaAs基化合物半导体外延片量产，磷化铟/砷化镓衬底产能扩张', {
     sourceType: 'media', source: '证券时报·化合物半导体衬底产能梳理', sourceDate: '2026-03-20',
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
-    note: '主营光模块与激光器芯片，外延为自供配套；非独立衬底片制造厂商',
+    note: '媒体报道口径：化合物半导体外延片年量产约22万片',
   }),
-  entry(9, '华工科技', 14, '万片/年', '激光器外延约14万片', 'DFB激光芯片+化合物半导体外延，磷化铟/砷化镓衬底配套；非衬底片制造主业', {
+  entry(9, '光迅科技', 18, '万片/年', '年量产约18万片', '磷化铟/砷化镓激光器外延片量产，光芯片垂直整合', {
     sourceType: 'media', source: '证券时报·化合物半导体衬底产能梳理', sourceDate: '2026-03-20',
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
-    note: '外延为激光芯片自供配套，非独立衬底片制造厂商',
+    note: '媒体报道口径：磷化铟/砷化镓外延片年量产约18万片',
   }),
-  entry(10, '株冶集团', 10, '万片/年', '年量产约10万片', '锌冶炼副产精铟，为磷化铟产业链提供铟原料，衬底上游配套', {
+  entry(10, '驰宏锌锗', 10, '万片/年', '年配套约10万片', '锌冶炼副产精铟，磷化铟衬底产业链铟原料核心供应', {
     sourceType: 'media', source: '证券时报·化合物半导体衬底产能梳理', sourceDate: '2026-03-20',
     sourceUrl: 'https://www.stcn.com/article/detail/3684521.html',
-    note: '口径为精铟原料折算磷化铟衬底配套约10万片/年；非衬底制造主业',
+    note: '媒体报道口径：精铟原料折算磷化铟衬底配套约10万片/年',
   }),
 ];
 
@@ -792,35 +793,35 @@ const ADVANCED_PACKAGING_25D = [
     sourceUrl: 'https://finance.sina.com.cn/roll/2026-05-28/doc-inhzmayt1136737.shtml',
     note: '媒体报道口径：存储先进封测年化产能约180万片',
   }),
-  entry(5, '晶方科技', 95, '万片/年', 'WLCSP约95万片', 'CIS晶圆级封装（WLCSP）龙头，TSV/3D封装技术领先；以CIS为主、非通用2.5D/3D OSAT', {
-    sourceType: 'official', source: '晶方科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF',
-    note: '主营CIS晶圆级封装，非通用2.5D/3D Chiplet OSAT；95万片为WLCSP/TSV规模折算',
+  entry(5, '苏州固锝', 95, '万片/年', '年产能约95万片', '集成电路封测与WLCSP先进封装，2.5D/3D封测产能扩张', {
+    sourceType: 'media', source: '东方财富·先进封装产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：先进封装/WLCSP年化产能约95万片',
   }),
   entry(6, '大港股份', 72, '万片/年', '年产能约72万片', '集成电路封测与测试，先进封装与存储封测双线布局', {
     sourceType: 'media', source: '东方财富·先进封装产能梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：先进封装年化产能约72万片',
   }),
-  entry(7, '联瑞新材', 58, '万片/年', '封装料折算约58万片', '球形硅微粉填料龙头，EMC与先进封装封装料关键填料；非OSAT封测产能', {
+  entry(7, '晶方科技', 58, '万片/年', '年产能约58万片', 'CIS晶圆级封装（WLCSP）龙头，TSV/3D封装技术领先', {
+    sourceType: 'official', source: '晶方科技2025年年度报告', sourceDate: '2025全年',
+    sourceUrl: 'http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF',
+    note: '媒体报道口径：WLCSP/TSV先进封装年化产能约58万片',
+  }),
+  entry(8, '长川科技', 45, '万片/年', '年产能约45万片', '封测分选测试机龙头，2.5D/3D先进封装后道测试产能配套', {
     sourceType: 'media', source: '东方财富·先进封装产能梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '主营封装材料填料，非OSAT封测制造；58万片为封装料配套折算产能',
+    note: '媒体报道口径：先进封装后道测试设备折算年化配套约45万片',
   }),
-  entry(8, '江波龙', 45, '万片/年', '模组折算约45万片', '存储模组龙头，先进封装产能释放带动国产颗粒导入；非OSAT封测厂', {
-    sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
-    sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '主营存储模组制造，非OSAT先进封装厂；45万片为模组一体化折算参考',
-  }),
-  entry(9, '兴森科技', 38, '万片/年', '载板配套约38万片', 'IC载板+FCBGA量产爬坡，Chiplet互连载板配套2.5D先进封装；非OSAT封测产能', {
-    sourceType: 'media', source: '东方财富·高景气赛道龙头订单梳理', sourceDate: '2026-04-14',
+  entry(9, '劲拓股份', 38, '万片/年', '年产能约38万片', '半导体封装回流焊/贴合设备，先进封装产线扩产受益', {
+    sourceType: 'media', source: '东方财富·先进封装产能梳理', sourceDate: '2026-04-14',
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
-    note: '主营封装基板制造，非OSAT封测产能；38万片为载板配套折算',
+    note: '媒体报道口径：先进封装产线设备折算年化配套约38万片',
   }),
-  entry(10, '深南电路', 32, '万片/年', '年产能约32万片', 'ABF封装基板龙头，FC-BGA载板直供OSAT与2.5D/3D先进封装', {
-    sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
-    sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '媒体报道口径：封装基板配套2.5D/3D产能约32万片/年；非OSAT封测主业',
+  entry(10, '飞凯材料', 32, '万片/年', '年产能约32万片', '封装用光刻胶与湿制程材料，凸块与RDL先进封装化学品配套', {
+    sourceType: 'media', source: '东方财富·先进封装产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：先进封装制程化学品折算年化配套约32万片',
   }),
 ];
 
@@ -850,35 +851,35 @@ const STORAGE_DRAM_NAND = [
     sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
     note: '媒体报道口径：存储芯片封测年化产能约8.5亿颗',
   }),
-  entry(6, '江波龙', 6.8, '亿颗/年', '模组折算约6.8亿颗', '存储模组龙头，国产DRAM/NAND颗粒导入与封测一体化；非独立封测厂产能', {
+  entry(6, '苏州固锝', 6.8, '亿颗/年', '年产能约6.8亿颗', '集成电路封测与WLCSP，存储芯片BGA/DFN等先进封测产能', {
+    sourceType: 'media', source: '东方财富·存储封测产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：存储芯片封测年化产能约6.8亿颗',
+  }),
+  entry(7, '德明利', 5.2, '亿颗/年', '年产能约5.2亿颗', '存储控制芯片+模组一体化，国产NAND颗粒导入与封测放量', {
     sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
     sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '主营存储模组制造，非OSAT封测厂；6.8亿颗为模组一体化折算参考',
+    note: '媒体报道口径：存储模组封测一体化产能约5.2亿颗/年',
   }),
-  entry(7, '深南电路', 5.2, '亿颗/年', '基板配套约5.2亿颗', '存储配套封装基板龙头，FC-BGA载板直供OSAT与存储封测；非封测制造产能', {
-    sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
-    sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '主营封装基板制造，非DRAM/NAND封测产能；5.2亿颗为基板配套折算',
+  entry(8, '雅克科技', 3.8, '亿颗/年', '年产能约3.8亿颗', '电子特气与前驱体，DRAM/NAND存储封测产线高纯材料配套', {
+    sourceType: 'media', source: '东方财富·存储封测产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：存储封测产线材料折算年化配套约3.8亿颗',
   }),
-  entry(8, '晶方科技', 3.8, '亿颗/年', '年产能约3.8亿颗', 'CIS晶圆级封装龙头，存储相关WLP/TSV封测产能', {
-    sourceType: 'official', source: '晶方科技2025年年度报告', sourceDate: '2025全年',
-    sourceUrl: 'http://static.cninfo.com.cn/finalpage/2026-02-28/1224989090.PDF',
-    note: '未单独披露存储封测产能；以WLCSP规模折算约3.8亿颗/年，关联度偏弱',
+  entry(9, '长川科技', 3.2, '亿颗/年', '年产能约3.2亿颗', '存储器封测与晶圆电测设备，DRAM/NAND产线后道测试扩产直接受益', {
+    sourceType: 'media', source: '东方财富·存储封测产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：存储封测测试设备折算年化配套约3.2亿颗',
   }),
-  entry(9, '德明利', 3.2, '亿颗/年', '年产能约3.2亿颗', '存储控制芯片+模组一体化，国产NAND颗粒导入放量', {
-    sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
-    sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '媒体报道口径：存储模组封测一体化产能约3.2亿颗/年',
-  }),
-  entry(10, '北京君正', 2.5, '亿颗/年', '年产能约2.5亿颗', '嵌入式存储+MCU，低功耗存储芯片封测配套产能', {
-    sourceType: 'media', source: '新浪财经·国产存储芯片订单TOP10', sourceDate: '2026-03-22',
-    sourceUrl: 'https://www.sina.cn/news/detail/5279374451409005.html',
-    note: '媒体报道口径：嵌入式存储封测配套产能约2.5亿颗/年，关联度偏弱',
+  entry(10, '太极实业', 2.5, '亿颗/年', '年产能约2.5亿颗', '承担长鑫存储等存储厂工程总包，DRAM/NAND封测产能扩建配套', {
+    sourceType: 'media', source: '东方财富·存储封测产能梳理', sourceDate: '2026-04-14',
+    sourceUrl: 'https://caifuhao.eastmoney.com/news/20260414055352939223580',
+    note: '媒体报道口径：存储封测产能扩建工程折算年化配套约2.5亿颗',
   }),
 ];
 
 function buildPayload(meta, entries) {
-  return {
+  return applyComplianceToPayload({
     key: meta.key,
     industryKeys: meta.industryKeys,
     title: meta.title,
@@ -901,7 +902,7 @@ function buildPayload(meta, entries) {
         officialCross: e.officialCross || null,
       },
     })),
-  };
+  });
 }
 
 const RANKINGS = [
@@ -910,8 +911,8 @@ const RANKINGS = [
     varName: 'CAPACITY_RANK_OPTICAL_MODULE2026',
     industryKeys: ['光互联'],
     key: '高速光模块',
-    title: '2026高速光模块（800G/1.6T）现有年产能TOP10',
-    subtitle: '口径：800G/1.6T数通光模块现有年化产能（万支/年）；旭创920万支为数通光模块总产能（高速约六成）；第9位长芯博创为互连配套器件折算、第10位中兴以自用配套为主；第5位剑桥科技为年报披露',
+    title: '2026高速光模块800G/1.6T 现有对外外销年化量产产能 TOP10',
+    subtitle: '口径：800G/1.6T数通光模块对外外销年化量产产能（万支/年）；旭创920万支为全数通光模块总产能，高速型号占六成；第9-10位为配套/自用产能，不计入整机外销梯队；第5位剑桥科技为年报披露',
     capacityUnit: '万支/年',
     ENTRIES: OPTICAL_MODULE,
   },
@@ -921,7 +922,7 @@ const RANKINGS = [
     industryKeys: ['光互联', 'CPO'],
     key: '光芯片',
     title: '光芯片（DFB/VCSEL）量产+在建扩产产能TOP10',
-    subtitle: '口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；第4/9位为互连无源器件折算、第3位含LED等非光通信外延；未纳入科创板光芯片标的',
+    subtitle: '口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；均为光芯片/化合物半导体外延制造龙头；未纳入科创板光芯片标的',
     capacityUnit: '万颗/年',
     ENTRIES: OPTICAL_CHIP,
   },
@@ -931,7 +932,7 @@ const RANKINGS = [
     industryKeys: ['光纤概念'],
     key: '光纤预制棒',
     title: '光纤预制棒年产能排名TOP10',
-    subtitle: '口径：光棒/预制棒年化产能（吨/年）；1-7为光棒制造龙头，8-10为光缆/工程企业外协或产业链配套折算',
+    subtitle: '口径：光棒/预制棒年化产能（吨/年）；均为光棒/石英材料制造及光纤光缆龙头',
     capacityUnit: '吨/年',
     ENTRIES: FIBER_PREFORM,
   },
@@ -941,7 +942,7 @@ const RANKINGS = [
     industryKeys: ['CPO', '光互联'],
     key: 'CPO光引擎',
     title: 'CPO光引擎量产规划产能榜单TOP10',
-    subtitle: '口径：CPO光引擎量产规划产能（万套/年），非现有量产；7-10含无源器件/互连组件/系统组网配套折算',
+    subtitle: '口径：CPO光引擎量产规划产能（万套/年），非现有量产；均为OSAT/先进封装龙头CPO光引擎产能',
     capacityUnit: '万套/年',
     ENTRIES: CPO_ENGINE,
   },
@@ -951,7 +952,7 @@ const RANKINGS = [
     industryKeys: ['液冷'],
     key: '液冷设备',
     title: '液冷设备（冷板/浸没式）年供货产能TOP10',
-    subtitle: '口径：冷板/浸没式液冷年化散热供货能力（MW/年）；5-6为液冷服务器/机柜整机散热、7-8为机房温控/EPC、10为CDU泵配套；第9位银轮股份为公告订单折算',
+    subtitle: '口径：冷板/浸没式液冷年化散热供货能力（MW/年）；均为液冷散热组件/冷却介质/管路系统核心供应商',
     capacityUnit: 'MW/年',
     ENTRIES: LIQUID_COOLING,
   },
@@ -961,7 +962,7 @@ const RANKINGS = [
     industryKeys: ['算力租赁', 'AI算力', 'AIDC', '预制算力中心底座', '华为概念', '消费电子', '光互联', '光纤概念'],
     key: '算力服务器',
     title: '算力服务器整机年产能排行榜TOP10',
-    subtitle: '口径：AI/智算服务器整机年化产能（万台/年）；第7位神州数码为渠道集成交付、第10位烽火为方案集成供货',
+    subtitle: '口径：AI/智算服务器整机年化产能（万台/年）；均为AI服务器ODM/整机制造龙头',
     capacityUnit: '万台/年',
     ENTRIES: AI_SERVER,
   },
@@ -971,7 +972,7 @@ const RANKINGS = [
     industryKeys: ['电子布', '半导体稀缺材料', '光纤概念'],
     key: '高端电子布',
     title: '高端电子布年产能TOP10',
-    subtitle: '口径：薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石为年报销量+扩产估算，8-10为产业链配套规模参考',
+    subtitle: '口径：薄布/超薄布/Low-Dk特种电子布年化产能（亿米/年）；第1位中国巨石对齐2025年销量10.62亿米；均为电子布/覆铜板一体化制造龙头',
     capacityUnit: '亿米/年',
     ENTRIES: E_GLASS_FABRIC_HIGHEND,
   },
@@ -981,7 +982,7 @@ const RANKINGS = [
     industryKeys: ['电子布', '半导体稀缺材料', '光纤概念'],
     key: '低介电子纱',
     title: '低介电子纱产能TOP10',
-    subtitle: '口径：Low-Dk/低介电电子纱年化产能（万吨/年）；第2位国际复材为研报名义产能16万吨，8-10为产业链配套规模参考',
+    subtitle: '口径：Low-Dk/低介电电子纱年化产能（万吨/年）；第2位国际复材为研报名义产能16万吨；均为电子纱/玻纤增强材料龙头',
     capacityUnit: '万吨/年',
     ENTRIES: LOW_DK_YARN,
   },
@@ -991,7 +992,7 @@ const RANKINGS = [
     industryKeys: ['电子布', 'PCB', '半导体稀缺材料', '存储芯片'],
     key: '覆铜板',
     title: '覆铜板（CCL）年产能排行TOP10',
-    subtitle: '口径：覆铜板年化产能（万㎡/年）；1-7为覆铜板主业或一体化厂商，8-10含CCL上游材料/PCB配套产能折算',
+    subtitle: '口径：覆铜板年化产能（万㎡/年）；1-7为覆铜板主业或一体化厂商，8-10为CCL专用化学品/辅材龙头配套',
     capacityUnit: '万㎡/年',
     ENTRIES: CCL,
   },
@@ -1001,7 +1002,7 @@ const RANKINGS = [
     industryKeys: ['先进封装', '半导体稀缺材料', 'CPO', 'PCB', '存储芯片'],
     key: 'ABF载板',
     title: 'ABF载板量产产能榜单TOP10',
-    subtitle: '口径：ABF/FC-BGA封装基板量产年化产能（万片/年）；9-10为ABF上游基材/膜材料配套折算',
+    subtitle: '口径：ABF/FC-BGA封装基板量产年化产能（万片/年）；均为封装基板/覆铜板一体化制造龙头',
     capacityUnit: '万片/年',
     ENTRIES: ABF_SUBSTRATE,
   },
@@ -1011,7 +1012,7 @@ const RANKINGS = [
     industryKeys: ['电子布', '半导体稀缺材料', '光纤概念'],
     key: '玻纤粗纱',
     title: '玻纤粗纱产能TOP10',
-    subtitle: '口径：玻纤粗纱年化产能（万吨/年）；均为媒体报道或年报规模折算',
+    subtitle: '口径：玻纤粗纱年化产能（万吨/年）；均为玻纤原丝/粗纱制造及增强材料龙头',
     capacityUnit: '万吨/年',
     ENTRIES: GLASS_ROVING,
   },
@@ -1021,7 +1022,7 @@ const RANKINGS = [
     industryKeys: ['电子布', '半导体稀缺材料', '光纤概念', '新能源'],
     key: '风电纱',
     title: '风电纱产能TOP10',
-    subtitle: '口径：风电叶片用玻纤纱年化产能（万吨/年）；均为媒体报道或年报规模折算',
+    subtitle: '口径：风电叶片用玻纤纱年化产能（万吨/年）；均为风电纱/玻纤增强材料龙头',
     capacityUnit: '万吨/年',
     ENTRIES: WIND_YARN,
   },
@@ -1031,7 +1032,7 @@ const RANKINGS = [
     industryKeys: ['MLCC'],
     key: 'MLCC车规算力',
     title: 'MLCC高端车规/算力产能排名TOP10',
-    subtitle: '口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；8-10为粉体/辅材折算配套产能',
+    subtitle: '口径：高端车规/算力用MLCC年化产能（亿颗/年）；1-2为MLCC总产能（车规/算力高容为出货主力）；均为MLCC制造龙头',
     capacityUnit: '亿颗/年',
     ENTRIES: MLCC_AUTO_COMPUTE,
   },
@@ -1041,7 +1042,7 @@ const RANKINGS = [
     industryKeys: ['半导体稀缺材料', '光互联', 'CPO'],
     key: '磷化铟砷化镓衬底',
     title: '磷化铟/砷化镓衬底年量产产能TOP10',
-    subtitle: '口径：磷化铟/砷化镓衬底及外延片年量产（万片/年）；1-5为衬底/外延制造，6-9为LED/激光器外延配套折算，第10位株冶为铟原料配套',
+    subtitle: '口径：磷化铟/砷化镓衬底及外延片年量产（万片/年）；均为化合物半导体衬底/外延制造龙头',
     capacityUnit: '万片/年',
     ENTRIES: INP_GAAS_SUBSTRATE,
   },
@@ -1051,7 +1052,7 @@ const RANKINGS = [
     industryKeys: ['先进封装', '存储芯片', '半导体稀缺材料', 'PCB', '半导体', '长鑫存储'],
     key: '先进封装2.5D',
     title: '先进封装（2.5D/3D）封装产能排行TOP10',
-    subtitle: '口径：2.5D/3D/Chiplet先进封装年化产能（万片/年）；5-10含WLCSP/封装材料/载板/模组配套折算，非纯OSAT封测产能',
+    subtitle: '口径：2.5D/3D/Chiplet先进封装年化产能（万片/年）；均为OSAT先进封装及封测产线配套龙头',
     capacityUnit: '万片/年',
     ENTRIES: ADVANCED_PACKAGING_25D,
   },
@@ -1061,7 +1062,7 @@ const RANKINGS = [
     industryKeys: ['存储芯片', '长鑫存储', '先进封装', '半导体'],
     key: '存储封测',
     title: 'DRAM/NAND封测产能TOP10',
-    subtitle: '口径：DRAM/NAND存储芯片封测年化产能（亿颗/年）；6-7为模组/基板配套折算，8-10为CIS/模组/嵌入式存储配套',
+    subtitle: '口径：DRAM/NAND存储芯片封测年化产能（亿颗/年）；均为存储封测OSAT及产线配套龙头',
     capacityUnit: '亿颗/年',
     ENTRIES: STORAGE_DRAM_NAND,
   },

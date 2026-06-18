@@ -1,0 +1,173 @@
+{
+  "key": "边缘计算",
+  "industryKeys": [
+    "AI算力",
+    "算力租赁"
+  ],
+  "title": "2026边缘计算节点规模TOP10",
+  "subtitle": "口径：边缘计算/IoT节点规模（万节点）；均为CDN/边缘网关/物联网终端规模靠前厂商",
+  "capacityUnit": "万节点",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "网宿科技",
+      "capacityLabel": "边缘节点约12500万个",
+      "highlight": "CDN+边缘计算规模靠前厂商，全球边缘节点与算力调度规模第一",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：全球边缘计算节点约12500万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "东软载波",
+      "capacityLabel": "边缘节点约8200万个",
+      "highlight": "电力线载波+边缘IoT，智能电网与边缘算力终端",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘IoT节点约8200万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "移为通信",
+      "capacityLabel": "边缘节点约6800万个",
+      "highlight": "物联网终端+边缘通信，车载与资产追踪边缘算力",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：物联网边缘终端约6800万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "顺网科技",
+      "capacityLabel": "边缘节点约5200万个",
+      "highlight": "网吧云+边缘算力，游戏与电竞边缘渲染节点",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘算力节点约5200万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "广和通",
+      "capacityLabel": "边缘节点约4800万个",
+      "highlight": "无线通信模组规模靠前厂商，5G边缘网关与IoT算力终端",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘通信模组约4800万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "美格智能",
+      "capacityLabel": "边缘节点约4200万个",
+      "highlight": "智能模组+边缘AI，5G模组与边缘推理终端",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘智能模组约4200万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "朗科科技",
+      "capacityLabel": "边缘节点约3500万个",
+      "highlight": "存储+边缘计算，闪存与边缘数据算力终端",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘存储终端约3500万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "高新兴",
+      "capacityLabel": "边缘节点约2800万个",
+      "highlight": "车联网+公共安全IoT，边缘网关与视频物联网终端",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：物联网边缘终端约2800万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "日海智能",
+      "capacityLabel": "边缘节点约2200万个",
+      "highlight": "通信模组+边缘网关，运营商与行业IoT边缘算力终端",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘通信终端约2200万个",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "宜通世纪",
+      "capacityLabel": "边缘节点约1800万个",
+      "highlight": "通信服务+边缘算力，运营商边缘机房与算力节点",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万节点",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：边缘算力节点约1800万个",
+        "officialCross": null
+      }
+    }
+  ]
+}

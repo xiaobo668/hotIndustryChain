@@ -1,0 +1,174 @@
+{
+  "key": "算力租赁",
+  "industryKeys": [
+    "算力租赁",
+    "AI算力",
+    "AIDC"
+  ],
+  "title": "2026算力租赁规模TOP10",
+  "subtitle": "口径：在运智算算力规模（PFlops）；均为GPU智算集群租赁与运营规模靠前厂商",
+  "capacityUnit": "PFlops",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "鸿博股份",
+      "capacityLabel": "智算规模约12500PFlops",
+      "highlight": "英博数科智算中心，高端GPU集群租赁与算力运营规模靠前厂商",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约12500PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "恒润股份",
+      "capacityLabel": "智算规模约8200PFlops",
+      "highlight": "润六尺智算中心，GPU算力租赁与AI训练集群运营",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约8200PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中贝通信",
+      "capacityLabel": "智算规模约6800PFlops",
+      "highlight": "通信工程+智算中心，算力租赁与IDC运维一体化",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约6800PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "利通电子",
+      "capacityLabel": "智算规模约5500PFlops",
+      "highlight": "算力租赁转型标的，GPU集群投放与市场关注度居前",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约5500PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "润建股份",
+      "capacityLabel": "智算规模约4800PFlops",
+      "highlight": "通信运维+智算园区，IDC建设与代运营一体化",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约4800PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "亚康股份",
+      "capacityLabel": "智算规模约4200PFlops",
+      "highlight": "算力基础设施运维，头部互联网算力集群交付服务",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约4200PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "拓维信息",
+      "capacityLabel": "智算规模约3800PFlops",
+      "highlight": "华为昇腾生态伙伴，国产智算建设与算力服务",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运昇腾智算算力规模约3800PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "首都在线",
+      "capacityLabel": "智算规模约3200PFlops",
+      "highlight": "公有云GPU与裸金属，弹性算力租赁代表厂商",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运GPU云算力规模约3200PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "奥飞数据",
+      "capacityLabel": "智算规模约2800PFlops",
+      "highlight": "IDC+智算机柜，华南及海外节点算力租赁扩张",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约2800PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "南兴股份",
+      "capacityLabel": "智算规模约2500PFlops",
+      "highlight": "云计算+智算转型，算力租赁与云桌面协同",
+      "verify": {
+        "capacity": 2500,
+        "capacityUnit": "PFlops",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：在运智算算力规模约2500PFlops",
+        "officialCross": null
+      }
+    }
+  ]
+}

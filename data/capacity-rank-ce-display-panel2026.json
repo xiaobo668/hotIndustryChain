@@ -1,0 +1,172 @@
+{
+  "key": "显示面板",
+  "industryKeys": [
+    "消费电子"
+  ],
+  "title": "2026显示面板出货量TOP10",
+  "subtitle": "口径：显示面板年化出货量（万片/年）；均为面板/显示模组制造规模靠前厂商",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "京东方A",
+      "capacityLabel": "年出货约42800万片",
+      "highlight": "全球显示面板规模靠前厂商，OLED/LCD出货量出货量规模居前，折叠屏面板国内市占领先",
+      "verify": {
+        "capacity": 42800,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示面板年化出货量约42800万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "TCL科技",
+      "capacityLabel": "年出货约26500万片",
+      "highlight": "华星光电面板规模靠前厂商，大尺寸TV与IT/mobile OLED产能持续扩张",
+      "verify": {
+        "capacity": 26500,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：华星光电面板年化出货量约26500万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "深天马A",
+      "capacityLabel": "年出货约17200万片",
+      "highlight": "中小尺寸LTPS/AMOLED面板规模靠前厂商，车载与消费电子双轮驱动",
+      "verify": {
+        "capacity": 17200,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：中小尺寸面板年化出货量约17200万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "维信诺",
+      "capacityLabel": "年出货约7800万片",
+      "highlight": "OLED面板规模靠前厂商，柔性AMOLED量产与折叠屏面板供货",
+      "verify": {
+        "capacity": 7800,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：OLED面板年化出货量约7800万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "华映科技",
+      "capacityLabel": "年出货约5200万片",
+      "highlight": "显示面板制造，中小尺寸LCD/OLED模组与面板产能",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示面板年化出货量约5200万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "彩虹股份",
+      "capacityLabel": "年出货约4800万片",
+      "highlight": "液晶玻璃基板+面板，显示产业链上游材料与面板协同",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：面板及显示材料年化出货量约4800万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "同兴达",
+      "capacityLabel": "年出货约3500万片",
+      "highlight": "显示模组+摄像头模组，中小尺寸显示模组出货量领先",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示模组年化出货量约3500万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "合力泰",
+      "capacityLabel": "年出货约2800万片",
+      "highlight": "显示模组+手机ODM，全面屏显示模组与整机协同",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示模组年化出货量约2800万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "凯盛科技",
+      "capacityLabel": "年出货约2200万片",
+      "highlight": "显示玻璃与触控模组，消费电子显示材料与模组",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示触控模组年化出货量约2200万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "莱宝高科",
+      "capacityLabel": "年出货约1800万片",
+      "highlight": "中大尺寸触摸屏与显示模组，平板/笔记本显示模组",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·消费电子产能与出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：显示触控模组年化出货量约1800万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

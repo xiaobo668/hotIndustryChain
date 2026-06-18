@@ -1,0 +1,174 @@
+{
+  "key": "传感器芯片",
+  "industryKeys": [
+    "半导体",
+    "芯片",
+    "元件"
+  ],
+  "title": "2026传感器芯片出货量TOP10",
+  "subtitle": "口径：CIS/MEMS/光学/环境传感芯片年化出货量（万颗/年）；均为传感芯片制造出货规模靠前厂商",
+  "capacityUnit": "万颗/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "韦尔股份",
+      "capacityLabel": "年出货约28500万颗",
+      "highlight": "CIS图像传感器，手机/车载摄像头芯片出货量规模居前",
+      "verify": {
+        "capacity": 28500,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CIS图像传感器年化出货量约28500万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "汇顶科技",
+      "capacityLabel": "年出货约8200万颗",
+      "highlight": "指纹识别+触控+光学传感，手机生物识别传感芯片",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：生物识别传感芯片年化出货量约8200万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "水晶光电",
+      "capacityLabel": "年出货约6800万颗",
+      "highlight": "光学元器件+传感滤光片，手机摄像头光学传感组件",
+      "verify": {
+        "capacity": 6800,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光学传感组件年化出货量约6800万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "汉威科技",
+      "capacityLabel": "年出货约5200万颗",
+      "highlight": "气体/压力/惯性传感器，工业与消费电子传感芯片",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：气体/压力传感器年化出货量约5200万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "歌尔股份",
+      "capacityLabel": "年出货约4800万颗",
+      "highlight": "MEMS麦克风+传感器模组，声学与环境传感组件",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：MEMS传感模组年化出货量约4800万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "富瀚微",
+      "capacityLabel": "年出货约3500万颗",
+      "highlight": "视频传感+IPC芯片，安防视觉传感芯片",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：视频传感芯片年化出货量约3500万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "赛微电子",
+      "capacityLabel": "年出货约2800万颗",
+      "highlight": "MEMS惯性/射频传感器，北斗导航与物联网传感",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：MEMS传感器年化出货量约2800万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "苏州固锝",
+      "capacityLabel": "年出货约2200万颗",
+      "highlight": "压力/加速度传感器，汽车与工控传感芯片",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：传感芯片年化出货量约2200万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航天电器",
+      "capacityLabel": "年出货约1800万颗",
+      "highlight": "特种连接器+传感组件，航空航天传感系统",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：特种传感组件年化出货量约1800万颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "硕贝德",
+      "capacityLabel": "年出货约1500万颗",
+      "highlight": "天线+传感模组，5G终端与环境传感集成",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "万颗/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：传感模组年化出货量约1500万颗",
+        "officialCross": null
+      }
+    }
+  ]
+}

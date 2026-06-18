@@ -1,0 +1,174 @@
+{
+  "key": "GPU芯片",
+  "industryKeys": [
+    "半导体",
+    "芯片",
+    "AI算力"
+  ],
+  "title": "2026 GPU/算力芯片出货量TOP10",
+  "subtitle": "口径：GPU/端侧算力芯片年化出货量（万片/年）；均为国产算力芯片设计出货规模靠前厂商；未纳入科创板标的",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "景嘉微",
+      "capacityLabel": "年出货约85万片",
+      "highlight": "国产GPU芯片，JM系列图形/通用计算芯片信创与AI场景拓展",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：GPU芯片年化出货量约85万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "紫光国微",
+      "capacityLabel": "年出货约42万片",
+      "highlight": "FPGA+加速芯片，特种算力与数据中心加密加速",
+      "verify": {
+        "capacity": 42,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：FPGA/加速芯片年化出货量约42万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "全志科技",
+      "capacityLabel": "年出货约35万片",
+      "highlight": "端侧AI推理SoC，智能硬件GPU/NPU算力平台",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：端侧AI算力芯片年化出货量约35万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北京君正",
+      "capacityLabel": "年出货约28万片",
+      "highlight": "低功耗嵌入式GPU/NPU，边缘视觉推理芯片",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：边缘算力芯片年化出货量约28万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "国科微",
+      "capacityLabel": "年出货约22万片",
+      "highlight": "视频编解码+AI视觉芯片，安防GPU算力芯片量产",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：视频AI算力芯片年化出货量约22万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "富瀚微",
+      "capacityLabel": "年出货约18万片",
+      "highlight": "视频处理+边缘AI视觉，IPC算力芯片出货量领先",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：视觉算力芯片年化出货量约18万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "瑞芯微",
+      "capacityLabel": "年出货约15万片",
+      "highlight": "NPU+应用处理器，端侧AI推理与智能硬件算力",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：端侧NPU芯片年化出货量约15万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "旋极信息",
+      "capacityLabel": "年出货约12万片",
+      "highlight": "嵌入式安全芯片+行业算力终端",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：嵌入式算力芯片年化出货量约12万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航宇微",
+      "capacityLabel": "年出货约9万片",
+      "highlight": "卫星大数据+AI芯片，太空算力与特种计算",
+      "verify": {
+        "capacity": 9,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：特种算力芯片年化出货量约9万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "智度股份",
+      "capacityLabel": "年出货约7万片",
+      "highlight": "端侧算力与智算资源整合，算力模组出货",
+      "verify": {
+        "capacity": 7,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：算力模组年化出货量约7万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

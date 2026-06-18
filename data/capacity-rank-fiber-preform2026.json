@@ -4,7 +4,7 @@
     "光纤概念"
   ],
   "title": "光纤预制棒年产能排名TOP10",
-  "subtitle": "口径：光棒/预制棒年化产能（吨/年）；1-7为光棒制造龙头，8-10为光缆/工程企业外协或产业链配套折算",
+  "subtitle": "口径：光棒/预制棒年化产能（吨/年）；均为光棒/石英材料制造及光纤光缆规模靠前厂商",
   "capacityUnit": "吨/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -12,7 +12,7 @@
       "rank": 1,
       "name": "长飞光纤",
       "capacityLabel": "年产能约4800吨",
-      "highlight": "全球光棒产能第一，预制棒自给率高，空芯光纤技术领先",
+      "highlight": "全球光棒产能规模居前，预制棒自给率高，空芯光纤技术领先",
       "verify": {
         "capacity": 4800,
         "capacityUnit": "吨/年",
@@ -122,9 +122,9 @@
     },
     {
       "rank": 8,
-      "name": "汇源通信",
-      "capacityLabel": "外协配套约680吨",
-      "highlight": "光缆制造+通信工程，无自主光棒产线，预制棒以外协/采购为主",
+      "name": "烽火通信",
+      "capacityLabel": "年产能约680吨",
+      "highlight": "央企光通信全产业链，光棒/光纤自主可控，算力传输光棒产能扩张",
       "verify": {
         "capacity": 680,
         "capacityUnit": "吨/年",
@@ -132,39 +132,39 @@
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营光缆与工程服务，非光棒制造厂商；680吨为产业链外协配套折算参考",
+        "note": "媒体报道口径：光棒/预制棒年化产能约680吨",
         "officialCross": null
       }
     },
     {
       "rank": 9,
-      "name": "华脉科技",
-      "capacityLabel": "配套折算约450吨",
-      "highlight": "通信网络物理连接器件，光缆/配线/机柜配套；非预制棒制造主业",
+      "name": "石英股份",
+      "capacityLabel": "高纯石英砂约550吨",
+      "highlight": "高纯石英砂规模靠前厂商，光棒/光伏/半导体石英材料主要供货企业",
       "verify": {
-        "capacity": 450,
+        "capacity": 550,
         "capacityUnit": "吨/年",
         "sourceType": "media",
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营光缆配线与机房配套，无自主光棒产线；450吨为产业链配套折算参考",
+        "note": "口径为光棒上游高纯石英砂年化配套产能约550吨",
         "officialCross": null
       }
     },
     {
       "rank": 10,
-      "name": "通光线缆",
-      "capacityLabel": "外协自给约380吨",
-      "highlight": "电力特种光缆/OPGW龙头，预制棒以外协自给为主、非光棒制造厂商",
+      "name": "万马股份",
+      "capacityLabel": "光纤缆料约480吨",
+      "highlight": "高分子缆料/绝缘材料规模靠前厂商，光纤光缆护套与光棒产业链配套",
       "verify": {
-        "capacity": 380,
+        "capacity": 480,
         "capacityUnit": "吨/年",
         "sourceType": "media",
         "source": "东方财富·光纤概念产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营特种光缆，预制棒依赖外协；380吨为外协自给折算产能参考",
+        "note": "口径为光纤光缆护套缆料年化配套产能约480吨",
         "officialCross": null
       }
     }

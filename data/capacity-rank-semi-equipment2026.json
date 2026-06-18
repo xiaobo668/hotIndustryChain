@@ -1,0 +1,172 @@
+{
+  "key": "半导体设备",
+  "industryKeys": [
+    "半导体"
+  ],
+  "title": "2026半导体设备年化交付产能TOP10",
+  "subtitle": "口径：半导体工艺/检测/封测设备年化交付（台/年）；均为半导体装备制造与交付规模靠前厂商",
+  "capacityUnit": "台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "北方华创",
+      "capacityLabel": "年交付约2850台",
+      "highlight": "刻蚀+CVD+PVD平台型半导体设备，多条产线满产交付国内主流晶圆厂",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体工艺设备年化交付约2850台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "精测电子",
+      "capacityLabel": "年交付约1680台",
+      "highlight": "面板/半导体检测设备，膜厚/OCD/缺陷检测产线扩产",
+      "verify": {
+        "capacity": 1680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体检测设备年化交付约1680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "长川科技",
+      "capacityLabel": "年交付约1420台",
+      "highlight": "封测分选机+SoC测试机，存储与算力芯片测试设备放量",
+      "verify": {
+        "capacity": 1420,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：封测测试设备年化交付约1420台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "至纯科技",
+      "capacityLabel": "年交付约980台",
+      "highlight": "湿法清洗+高纯工艺系统，晶圆厂湿法产线核心设备",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法工艺设备年化交付约980台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "万业企业",
+      "capacityLabel": "年交付约820台",
+      "highlight": "离子注入机+半导体装备，国产离子注入设备量产导入",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：离子注入等设备年化交付约820台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "晶盛机电",
+      "capacityLabel": "年交付约680台",
+      "highlight": "单晶炉+碳化硅长晶设备，硅片与化合物半导体材料装备",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：晶体生长设备年化交付约680台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "新莱应材",
+      "capacityLabel": "年交付约520台",
+      "highlight": "超高洁净管路+阀门半导体设备，晶圆厂高纯气体/化学品输送系统",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：半导体洁净流体系统年化交付约520套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "蓝英装备",
+      "capacityLabel": "年交付约450台",
+      "highlight": "晶圆清洗+湿法设备，先进制程湿法工艺装备",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法清洗设备年化交付约450台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "劲拓股份",
+      "capacityLabel": "年交付约380台",
+      "highlight": "半导体封装回流焊/贴合设备，先进封装产线扩产受益",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：封装工艺设备年化交付约380台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "张江高科",
+      "capacityLabel": "年配套约320台",
+      "highlight": "半导体产业园+设备投资，晶圆厂产线设备配套与孵化",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：产业园区半导体设备配套年化约320台当量",
+        "officialCross": null
+      }
+    }
+  ]
+}

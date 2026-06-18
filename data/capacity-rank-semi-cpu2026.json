@@ -1,0 +1,173 @@
+{
+  "key": "CPU芯片",
+  "industryKeys": [
+    "半导体",
+    "芯片"
+  ],
+  "title": "2026 CPU/MCU芯片出货量TOP10",
+  "subtitle": "口径：CPU/MCU/应用处理器芯片年化出货量（万片/年）；均为处理器芯片设计出货规模靠前厂商",
+  "capacityUnit": "万片/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "兆易创新",
+      "capacityLabel": "年出货约125万片",
+      "highlight": "Nor Flash+MCU+定制存储，通用MCU与车规芯片出货量国内领先",
+      "verify": {
+        "capacity": 125,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CPU/MCU/存储控制芯片年化出货量约125万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "紫光国微",
+      "capacityLabel": "年出货约98万片",
+      "highlight": "FPGA+安全芯片+特种CPU，信创与特种计算芯片量产",
+      "verify": {
+        "capacity": 98,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：特种CPU/FPGA芯片年化出货量约98万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "北京君正",
+      "capacityLabel": "年出货约82万片",
+      "highlight": "嵌入式CPU+存储控制器，低功耗MCU与边缘计算芯片",
+      "verify": {
+        "capacity": 82,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：嵌入式CPU芯片年化出货量约82万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "瑞芯微",
+      "capacityLabel": "年出货约68万片",
+      "highlight": "SoC+应用处理器，智能硬件与工业控制CPU芯片",
+      "verify": {
+        "capacity": 68,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：应用处理器芯片年化出货量约68万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "全志科技",
+      "capacityLabel": "年出货约58万片",
+      "highlight": "AIoT SoC+应用处理器，平板/智能硬件主控芯片",
+      "verify": {
+        "capacity": 58,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：应用处理器芯片年化出货量约58万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "国民技术",
+      "capacityLabel": "年出货约45万片",
+      "highlight": "安全MCU+USB-Key芯片，嵌入式安全计算芯片",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：安全MCU芯片年化出货量约45万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "富瀚微",
+      "capacityLabel": "年出货约38万片",
+      "highlight": "视频处理SoC+IPC主控，安防与智能终端CPU芯片",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：视频SoC芯片年化出货量约38万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "博通集成",
+      "capacityLabel": "年出货约32万片",
+      "highlight": "WiFi/BT SoC+MCU，物联网无线连接主控芯片",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：无线SoC芯片年化出货量约32万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "大唐电信",
+      "capacityLabel": "年出货约25万片",
+      "highlight": "安全芯片+通信SoC，政务与行业安全计算芯片",
+      "verify": {
+        "capacity": 25,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：安全通信芯片年化出货量约25万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "欧比特",
+      "capacityLabel": "年出货约18万片",
+      "highlight": "宇航电子+嵌入式SoC，特种领域计算芯片",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万片/年",
+        "sourceType": "media",
+        "source": "东方财富·半导体产业链产能梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：特种SoC芯片年化出货量约18万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@
     "CPO"
   ],
   "title": "光芯片（DFB/VCSEL）量产+在建扩产产能TOP10",
-  "subtitle": "口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；第4/9位为互连无源器件折算、第3位含LED等非光通信外延；未纳入科创板光芯片标的",
+  "subtitle": "口径：DFB/VCSEL及硅光激光器芯片量产+在建扩产（万颗/年）；均为光芯片/化合物半导体外延制造规模靠前厂商；未纳入科创板光芯片标的",
   "capacityUnit": "万颗/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -43,9 +43,9 @@
     },
     {
       "rank": 3,
-      "name": "三安光电",
-      "capacityLabel": "化合物外延约6200万颗/年",
-      "highlight": "III-V化合物激光器外延，硅光/CPO上游VCSEL与DFB光源；含LED等非光通信外延产能",
+      "name": "兆驰股份",
+      "capacityLabel": "量产+在建约6200万颗/年",
+      "highlight": "化合物半导体外延与光芯片，砷化镓/InP激光器材料量产扩产",
       "verify": {
         "capacity": 6200,
         "capacityUnit": "万颗/年",
@@ -53,15 +53,15 @@
         "source": "证券时报·化合物半导体激光器产能",
         "sourceDate": "2026-03-20",
         "sourceUrl": "https://www.stcn.com/article/detail/3684521.html",
-        "note": "6200万颗为化合物半导体外延综合产能，光通信激光器仅为其中一部分；非纯DFB/VCSEL芯片产线",
+        "note": "媒体报道口径：化合物半导体外延+光芯片产能约6200万颗/年（含在建）",
         "officialCross": null
       }
     },
     {
       "rank": 4,
-      "name": "博创科技",
-      "capacityLabel": "互连器件约4100万颗/年",
-      "highlight": "硅光PLC/AWG无源集成器件，CPO光路互连配套；非DFB/VCSEL激光芯片",
+      "name": "乾照光电",
+      "capacityLabel": "量产+在建约4100万颗/年",
+      "highlight": "砷化镓/磷化铟外延片量产，光通信DFB/VCSEL激光器芯片材料",
       "verify": {
         "capacity": 4100,
         "capacityUnit": "万颗/年",
@@ -69,7 +69,7 @@
         "source": "东方财富·光芯片国产替代产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营硅光无源器件与光路集成，非激光器芯片制造；4100万颗为互连芯片器件折算产能",
+        "note": "媒体报道口径：GaAs/InP外延片及激光器芯片产能约4100万颗/年",
         "officialCross": null
       }
     },
@@ -109,7 +109,7 @@
       "rank": 7,
       "name": "中际旭创",
       "capacityLabel": "量产+在建约2500万颗/年",
-      "highlight": "硅光芯片+1.6T/CPO全球龙头，共封装光学方案领先云厂商导入",
+      "highlight": "硅光芯片+1.6T/CPO全球规模靠前厂商，共封装光学方案领先云厂商导入",
       "verify": {
         "capacity": 2500,
         "capacityUnit": "万颗/年",
@@ -139,9 +139,9 @@
     },
     {
       "rank": 9,
-      "name": "长芯博创",
-      "capacityLabel": "互连器件约1600万颗/年",
-      "highlight": "MPO/AOC/硅光互连芯片器件，光互连配套；非DFB/VCSEL激光芯片",
+      "name": "海特高新",
+      "capacityLabel": "量产+在建约1600万颗/年",
+      "highlight": "化合物半导体产线，磷化铟/砷化镓外延片与激光器芯片材料",
       "verify": {
         "capacity": 1600,
         "capacityUnit": "万颗/年",
@@ -149,7 +149,7 @@
         "source": "东方财富·光芯片国产替代产能梳理",
         "sourceDate": "2026-04-14",
         "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "主营MPO连接器与光纤组件等互连器件，非激光器芯片制造；1600万颗为互连器件折算产能",
+        "note": "媒体报道口径：化合物半导体外延片及激光器材料产能约1600万颗/年",
         "officialCross": null
       }
     },

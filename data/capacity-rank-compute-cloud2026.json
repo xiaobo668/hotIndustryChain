@@ -1,0 +1,174 @@
+{
+  "key": "云计算",
+  "industryKeys": [
+    "AI算力",
+    "算力租赁",
+    "AIDC"
+  ],
+  "title": "2026云计算机架规模TOP10",
+  "subtitle": "口径：数据中心运营机架规模（万架/年）；均为IDC/云计算托管运营规模靠前厂商",
+  "capacityUnit": "万架/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "润泽科技",
+      "capacityLabel": "运营机架约8.5万架",
+      "highlight": "超大规模IDC智算园区，批发型云客户机架上架率行业领先",
+      "verify": {
+        "capacity": 8.5,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约8.5万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "光环新网",
+      "capacityLabel": "运营机架约6.8万架",
+      "highlight": "京津冀IDC规模靠前厂商，AI算力租赁与云计算托管扩张",
+      "verify": {
+        "capacity": 6.8,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约6.8万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "网宿科技",
+      "capacityLabel": "运营机架约5.2万架",
+      "highlight": "CDN+云计算，边缘云与数据中心算力托管",
+      "verify": {
+        "capacity": 5.2,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：云计算托管机架约5.2万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "数据港",
+      "capacityLabel": "运营机架约4.8万架",
+      "highlight": "阿里云核心数据中心合作方，上架率与云算力扩张同步",
+      "verify": {
+        "capacity": 4.8,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约4.8万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "奥飞数据",
+      "capacityLabel": "运营机架约4.2万架",
+      "highlight": "华南及海外IDC，智算机柜与带宽资源弹性供给",
+      "verify": {
+        "capacity": 4.2,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约4.2万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "科华数据",
+      "capacityLabel": "运营机架约3.8万架",
+      "highlight": "UPS+IDC一体化，智算数据中心建设与运营",
+      "verify": {
+        "capacity": 3.8,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约3.8万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "宝信软件",
+      "capacityLabel": "运营机架约3.2万架",
+      "highlight": "IDC+工业互联网，宝之云数据中心与钢铁行业云",
+      "verify": {
+        "capacity": 3.2,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：IDC运营机架约3.2万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "美利云",
+      "capacityLabel": "运营机架约2.8万架",
+      "highlight": "央企云数据中心，宁夏中卫算力枢纽节点",
+      "verify": {
+        "capacity": 2.8,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约2.8万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "首都在线",
+      "capacityLabel": "运营机架约2.5万架",
+      "highlight": "全球云网一体化，GPU云与裸金属算力托管",
+      "verify": {
+        "capacity": 2.5,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：云计算托管机架约2.5万架",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "铜牛信息",
+      "capacityLabel": "运营机架约2.2万架",
+      "highlight": "北京国资IDC，算力租赁与政务云托管",
+      "verify": {
+        "capacity": 2.2,
+        "capacityUnit": "万架/年",
+        "sourceType": "media",
+        "source": "新浪财经·AI算力产业链产能梳理",
+        "sourceDate": "2026-04-18",
+        "sourceUrl": "https://www.sina.cn/news/detail/5289065918237746.html",
+        "note": "媒体报道口径：数据中心运营机架约2.2万架",
+        "officialCross": null
+      }
+    }
+  ]
+}
