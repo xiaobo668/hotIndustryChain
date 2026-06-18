@@ -1,0 +1,173 @@
+{
+  "key": "火工品",
+  "industryKeys": [
+    "耗材",
+    "商业航天"
+  ],
+  "title": "2026航天火工品耗材出货量TOP10",
+  "subtitle": "口径：固体火箭发动机火工品与起爆器材年化出货量（吨/年）；源自商业航天产业链；均为火工耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "新余国科",
+      "capacityLabel": "年出货约2850吨",
+      "highlight": "火工品+特种装备，固体火箭发动机点火与分离耗材规模靠前",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约2850吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "国泰集团",
+      "capacityLabel": "年出货约2280吨",
+      "highlight": "民爆+火工品，航天发射与固体推进火工耗材",
+      "verify": {
+        "capacity": 2280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约2280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "保利联合",
+      "capacityLabel": "年出货约1850吨",
+      "highlight": "民爆工程+火工品，航天测控与发射火工耗材",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约1850吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "金奥博",
+      "capacityLabel": "年出货约1520吨",
+      "highlight": "民爆装备+起爆器材，航天火工品自动化产线",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：起爆器材年化出货量约1520吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "江南化工",
+      "capacityLabel": "年出货约1280吨",
+      "highlight": "民爆+特种化工，航天火工与推进剂耗材",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约1280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "广东宏大",
+      "capacityLabel": "年出货约980吨",
+      "highlight": "矿山民爆+特种火工品，航天发射配套耗材",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约980吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "易普力",
+      "capacityLabel": "年出货约820吨",
+      "highlight": "民爆一体化，航天火工品与起爆耗材",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约820吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "凯龙股份",
+      "capacityLabel": "年出货约680吨",
+      "highlight": "民爆器材+硝酸铵，火工品原料耗材配套",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：火工品年化出货量约680吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "北化股份",
+      "capacityLabel": "年出货约520吨",
+      "highlight": "硝化棉+特种化工，固体推进剂与火工耗材",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：推进剂耗材年化出货量约520吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "中天火箭",
+      "capacityLabel": "年出货约450吨",
+      "highlight": "固体火箭+小型运载火箭，航天火工品与起爆耗材配套",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：航天火工品年化出货量约450吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

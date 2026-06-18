@@ -1,0 +1,174 @@
+{
+  "key": "导热界面材料",
+  "industryKeys": [
+    "耗材",
+    "AI算力",
+    "液冷"
+  ],
+  "title": "2026导热界面材料耗材出货量TOP10",
+  "subtitle": "口径：AI服务器/芯片导热垫片与界面材料年化出货量（吨/年）；源自算力产业链；均为散热界面耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "飞荣达",
+      "capacityLabel": "年出货约2850吨",
+      "highlight": "导热界面材料+石墨散热，AI服务器芯片散热耗材规模靠前",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热界面材料年化出货量约2850吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "中石科技",
+      "capacityLabel": "年出货约2280吨",
+      "highlight": "导热垫片+均热板，GPU/CPU高功率散热界面耗材",
+      "verify": {
+        "capacity": 2280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热界面材料年化出货量约2280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "超频三",
+      "capacityLabel": "年出货约1680吨",
+      "highlight": "散热模组+导热界面材料，服务器与消费电子散热耗材",
+      "verify": {
+        "capacity": 1680,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热材料年化出货量约1680吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "回天新材",
+      "capacityLabel": "年出货约1420吨",
+      "highlight": "导热硅胶+密封胶，电子器件散热界面耗材",
+      "verify": {
+        "capacity": 1420,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热胶年化出货量约1420吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "硅宝科技",
+      "capacityLabel": "年出货约980吨",
+      "highlight": "有机硅密封胶+导热材料，服务器与新能源散热耗材",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热密封胶年化出货量约980吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "科创新源",
+      "capacityLabel": "年出货约820吨",
+      "highlight": "导热垫片+密封缓冲材料，服务器芯片散热界面耗材",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热界面材料年化出货量约820吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "斯迪克",
+      "capacityLabel": "年出货约680吨",
+      "highlight": "功能性涂层+导热胶带，电子散热界面耗材",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热胶带年化出货量约680吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "锦富技术",
+      "capacityLabel": "年出货约520吨",
+      "highlight": "模切+导热材料，消费电子散热耗材配套",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热耗材年化出货量约520吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "川环科技",
+      "capacityLabel": "年出货约450吨",
+      "highlight": "液冷软管+导热界面密封，数据中心芯片散热耗材",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热密封耗材年化出货量约450吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "长盈精密",
+      "capacityLabel": "年出货约380吨",
+      "highlight": "导热凝胶+石墨散热片，消费电子与服务器散热界面耗材",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：导热界面材料年化出货量约380吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

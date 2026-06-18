@@ -4034,6 +4034,201 @@ const INDUSTRY_DATA = {
         ]
       }
     ]
+  },
+
+  // ========== 耗材 ==========
+  // 口径：六大产业链可量化出货量耗材；剔除科创板(688/689)
+  "耗材": {
+    name: "耗材",
+    color: "#f59e0b",
+    gradient: ["#f59e0b", "#b45309"],
+    description: "横跨光互联与电子材料、消费电子、算力、半导体、锂电池、商业航天六大板块的制造耗材梳理，涵盖光刻胶、电子特气、溅射靶材、CMP抛光液、电子浆料、偏光片、电解液、锂电隔膜、正极材料、导热界面材料、浸没冷却液、航天火工品等可量化出货量赛道。口径：主业与对应细分耗材制造/出货量强相关；剔除科创板(688/689)。",
+    upstream: [
+      {
+        name: "光刻胶",
+        companies: [
+          { name: "南大光电", highlight: "ArF/KrF光刻胶量产导入" },
+          { name: "彤程新材", highlight: "KrF/ArF光刻胶树脂与成品" },
+          { name: "上海新阳", highlight: "KrF/ArF光刻胶+电镀液" },
+          { name: "晶瑞电材", highlight: "i线光刻胶+湿电子化学品" },
+          { name: "鼎龙股份", highlight: "光刻胶树脂/CMP垫" },
+          { name: "飞凯材料", highlight: "封装光刻胶+湿制程材料" },
+          { name: "容大感光", highlight: "PCB光刻胶+显示光刻胶" },
+          { name: "广信材料", highlight: "UV光刻胶+涂料" },
+          { name: "强力新材", highlight: "PCB光刻胶+特种树脂" },
+          { name: "濮阳惠成", highlight: "顺酐酸酐衍生物+光刻胶树脂中间体" }
+        ]
+      },
+      {
+        name: "电子特气",
+        companies: [
+          { name: "雅克科技", highlight: "电子特气+前驱体" },
+          { name: "昊华科技", highlight: "氟化工+电子特气" },
+          { name: "和远气体", highlight: "电子特气+工业气体" },
+          { name: "侨源股份", highlight: "高纯工业气体" },
+          { name: "凯美特气", highlight: "食品级+电子级二氧化碳" },
+          { name: "南大光电", highlight: "磷烷/砷烷等电子特气" },
+          { name: "三孚股份", highlight: "三氯氢硅+电子特气原料" },
+          { name: "杭氧股份", highlight: "工业气体+电子特气" },
+          { name: "华谊集团", highlight: "氟化工+工业气体" },
+          { name: "鲁西化工", highlight: "化工园区气体运营+氟化工" }
+        ]
+      },
+      {
+        name: "溅射靶材",
+        companies: [
+          { name: "江丰电子", highlight: "高纯溅射靶材" },
+          { name: "阿石创", highlight: "PVD靶材" },
+          { name: "有研新材", highlight: "稀有金属靶材+半导体材料" },
+          { name: "隆华科技", highlight: "钼/钨/钽等难熔金属靶材" },
+          { name: "东方钽业", highlight: "钽粉到靶材一体化" },
+          { name: "宝钛股份", highlight: "钛材+难熔金属靶材坯料" },
+          { name: "新疆众和", highlight: "高纯铝箔+靶材坯料" },
+          { name: "贵研铂业", highlight: "贵金属靶材+催化材料" },
+          { name: "图南股份", highlight: "高温合金精密铸件+靶材坯料" },
+          { name: "云南锗业", highlight: "锗/砷化镓材料" }
+        ]
+      },
+      {
+        name: "CMP抛光液",
+        companies: [
+          { name: "鼎龙股份", highlight: "CMP抛光垫+抛光液" },
+          { name: "江化微", highlight: "湿电子化学品+CMP清洗液" },
+          { name: "格林达", highlight: "TMAH显影液+CMP后清洗液" },
+          { name: "上海新阳", highlight: "电镀液+CMP后处理液" },
+          { name: "晶瑞电材", highlight: "湿电子化学品+CMP配套清洗液" },
+          { name: "科隆股份", highlight: "CMP抛光助剂+湿电子表面活性剂" },
+          { name: "飞凯材料", highlight: "湿制程材料+封装化学品" },
+          { name: "川恒股份", highlight: "电子级磷酸+湿电子化学品" },
+          { name: "巨化股份", highlight: "氟化工+电子湿化学品" },
+          { name: "多氟多", highlight: "氢氟酸+电子化学品" }
+        ]
+      },
+      {
+        name: "电子浆料",
+        companies: [
+          { name: "三环集团", highlight: "MLCC陶瓷基体与电子浆料自供" },
+          { name: "风华高科", highlight: "MLCC+电阻+电子浆料" },
+          { name: "厦门信达", highlight: "LED封装+电子浆料" },
+          { name: "贵研铂业", highlight: "贵金属浆料+催化材料" },
+          { name: "苏州固锝", highlight: "分立器件封测+浆料配套" },
+          { name: "火炬电子", highlight: "特种陶瓷电容器+浆料" },
+          { name: "顺络电子", highlight: "片式电感+浆料配套" },
+          { name: "国瓷材料", highlight: "MLCC介质粉体+电子浆料" },
+          { name: "鸿远电子", highlight: "高可靠MLCC+电极浆料" },
+          { name: "铜峰电子", highlight: "薄膜电容器+金属化膜" }
+        ]
+      },
+      {
+        name: "偏光片",
+        companies: [
+          { name: "杉杉股份", highlight: "偏光片+锂电材料" },
+          { name: "三利谱", highlight: "偏光片制造规模靠前" },
+          { name: "深纺织A", highlight: "偏光片+纺织" },
+          { name: "纬达光电", highlight: "偏光片+光学膜" },
+          { name: "东材科技", highlight: "PVA光学膜+偏光片基膜" },
+          { name: "激智科技", highlight: "光学膜+显示材料" },
+          { name: "皖维高新", highlight: "PVA光学膜+偏光片基膜" },
+          { name: "华映科技", highlight: "显示面板+偏光片配套" },
+          { name: "深天马A", highlight: "中小尺寸面板+偏光片耗材" },
+          { name: "锦富技术", highlight: "显示模切+偏光片组件" }
+        ]
+      }
+    ],
+    midstream: [
+      {
+        name: "电解液",
+        companies: [
+          { name: "天赐材料", highlight: "电解液出货量规模靠前" },
+          { name: "新宙邦", highlight: "电解液规模靠前厂商" },
+          { name: "多氟多", highlight: "六氟磷酸锂+电解液一体化" },
+          { name: "瑞泰新材", highlight: "电解液与锂盐添加剂" },
+          { name: "胜华新材", highlight: "碳酸酯溶剂+成品电解液" },
+          { name: "江苏国泰", highlight: "瑞泰新材母公司+电解液" },
+          { name: "永太科技", highlight: "LiFSI与电解液添加剂" },
+          { name: "滨化股份", highlight: "碳酸酯溶剂+电解液配料" },
+          { name: "中欣氟材", highlight: "LiFSI氟化盐添加剂" },
+          { name: "联化科技", highlight: "电解液添加剂中间体" }
+        ]
+      },
+      {
+        name: "锂电隔膜",
+        companies: [
+          { name: "恩捷股份", highlight: "湿法隔膜出货量规模居前" },
+          { name: "星源材质", highlight: "干法+湿法隔膜规模靠前" },
+          { name: "中材科技", highlight: "湿法隔膜+涂覆产能" },
+          { name: "沧州明珠", highlight: "PE隔膜+BOPA薄膜" },
+          { name: "美联新材", highlight: "隔膜涂覆耗材主业" },
+          { name: "佛塑科技", highlight: "薄膜新材料+锂电隔膜" },
+          { name: "璞泰来", highlight: "涂覆隔膜加工" },
+          { name: "东材科技", highlight: "锂电隔膜基材薄膜" },
+          { name: "裕兴股份", highlight: "特种聚酯薄膜隔膜基材" },
+          { name: "乐凯胶片", highlight: "感光材料+隔膜涂覆" }
+        ]
+      },
+      {
+        name: "正极材料",
+        companies: [
+          { name: "湖南裕能", highlight: "磷酸铁锂正极材料出货量规模居前" },
+          { name: "当升科技", highlight: "高镍NCM正极材料规模靠前" },
+          { name: "中伟新材", highlight: "三元前驱体+正极材料" },
+          { name: "德方纳米", highlight: "纳米磷酸铁锂正极" },
+          { name: "丰元股份", highlight: "磷酸铁锂+草酸锂盐" },
+          { name: "龙蟠科技", highlight: "磷酸铁锂正极耗材扩产" },
+          { name: "盟固利", highlight: "钴酸锂+三元正极" },
+          { name: "华友钴业", highlight: "钴镍锂资源+三元前驱体" },
+          { name: "杉杉股份", highlight: "人造石墨负极+正极材料" },
+          { name: "科恒股份", highlight: "稀土发光材料+锂电正极" }
+        ]
+      }
+    ],
+    downstream: [
+      {
+        name: "导热界面材料",
+        companies: [
+          { name: "飞荣达", highlight: "导热界面材料+石墨散热" },
+          { name: "中石科技", highlight: "导热垫片+均热板" },
+          { name: "超频三", highlight: "散热模组+导热界面材料" },
+          { name: "回天新材", highlight: "导热硅胶+密封胶" },
+          { name: "硅宝科技", highlight: "有机硅密封胶+导热材料" },
+          { name: "科创新源", highlight: "导热垫片+密封缓冲材料" },
+          { name: "斯迪克", highlight: "功能性涂层+导热胶带" },
+          { name: "锦富技术", highlight: "模切+导热材料" },
+          { name: "川环科技", highlight: "液冷软管+导热界面密封" },
+          { name: "长盈精密", highlight: "导热凝胶+石墨散热片" }
+        ]
+      },
+      {
+        name: "浸没冷却液",
+        companies: [
+          { name: "巨化股份", highlight: "氟化工+浸没冷却液" },
+          { name: "三美股份", highlight: "制冷剂+氟精细化学品" },
+          { name: "永和股份", highlight: "氟化工一体化" },
+          { name: "润禾材料", highlight: "有机硅油+冷却液" },
+          { name: "昊华科技", highlight: "氟化工+特种化学品" },
+          { name: "东阳光", highlight: "铝箔+氟化工冷却液" },
+          { name: "中欣氟材", highlight: "氟精细化学品液冷工质" },
+          { name: "永太科技", highlight: "氟化工中间体" },
+          { name: "滨化股份", highlight: "氟化工+冷却工质" },
+          { name: "科隆股份", highlight: "氟化冷却介质助剂" }
+        ]
+      },
+      {
+        name: "火工品",
+        companies: [
+          { name: "新余国科", highlight: "火工品+特种装备" },
+          { name: "国泰集团", highlight: "民爆+火工品" },
+          { name: "保利联合", highlight: "民爆工程+火工品" },
+          { name: "金奥博", highlight: "民爆装备+起爆器材" },
+          { name: "江南化工", highlight: "民爆+特种化工" },
+          { name: "广东宏大", highlight: "矿山民爆+特种火工品" },
+          { name: "易普力", highlight: "民爆一体化" },
+          { name: "凯龙股份", highlight: "民爆器材+硝酸铵" },
+          { name: "北化股份", highlight: "硝化棉+特种化工" },
+          { name: "中天火箭", highlight: "固体火箭+火工品配套" }
+        ]
+      }
+    ]
   }
 
 };
@@ -4302,6 +4497,15 @@ const KEYWORD_MAP = {
    "军工信息化": "军工",
    // ---- 商业航天 ----
    "商业航天": "商业航天",
+  "耗材": "耗材",
+  "制造耗材": "耗材",
+  "产业链耗材": "耗材",
+  "溅射靶材": "耗材",
+  "偏光片": "耗材",
+  "锂电隔膜": "耗材",
+  "导热界面材料": "耗材",
+  "浸没冷却液": "耗材",
+  "火工品": "耗材",
    "卫星互联网": "商业航天",
    "可复用火箭": "商业航天",
    "火箭": "商业航天",

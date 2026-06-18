@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 产业链耗材排行榜</title>
+  <link rel="stylesheet" href="consumables/consumables-common.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链首页</a>
+    <h1>2026 产业链耗材排行榜</h1>
+    <div class="compliance-box" id="consumables-compliance-box"></div>
+    <p class="sub">从六大热门产业链梳理 12 个可量化出货量耗材赛道 Top10 海报；涵盖半导体材料、显示光学、锂电材料、算力散热与航天火工品等，支持下载与复制。每张榜单底部含加粗免责声明。</p>
+    <div id="consumables-rank-sections"></div>
+  </div>
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/consumables-rank2026.js"></script>
+  <script src="js/industry/consumables-rank-poster.js"></script>
+  <script src="js/industry/consumables-rank-pages.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initConsumablesRankPage);
+  </script>
+</body>
+</html>

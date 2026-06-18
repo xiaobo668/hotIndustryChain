@@ -1,0 +1,174 @@
+{
+  "key": "电子浆料",
+  "industryKeys": [
+    "耗材",
+    "MLCC",
+    "电子布"
+  ],
+  "title": "2026电子浆料耗材出货量TOP10",
+  "subtitle": "口径：MLCC/被动元件电极浆料年化出货量（吨/年）；源自光互联与电子材料产业链；均为导电浆料耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "三环集团",
+      "capacityLabel": "年出货约12500吨",
+      "highlight": "MLCC陶瓷基体与电子浆料自供，粉体到器件垂直一体化耗材",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约12500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "风华高科",
+      "capacityLabel": "年出货约9800吨",
+      "highlight": "MLCC+电阻+电子浆料，被动元件电极浆料耗材规模靠前",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约9800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "厦门信达",
+      "capacityLabel": "年出货约7200吨",
+      "highlight": "LED封装+电子浆料，导电浆料与封装耗材",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约7200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "贵研铂业",
+      "capacityLabel": "年出货约5800吨",
+      "highlight": "贵金属浆料+催化材料，厚膜电路电极浆料耗材",
+      "verify": {
+        "capacity": 5800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：贵金属浆料年化出货量约5800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "苏州固锝",
+      "capacityLabel": "年出货约4500吨",
+      "highlight": "分立器件封测+浆料配套，功率器件封装耗材",
+      "verify": {
+        "capacity": 4500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：封装浆料年化出货量约4500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "火炬电子",
+      "capacityLabel": "年出货约3800吨",
+      "highlight": "特种陶瓷电容器+浆料，MLCC与微波器件电极耗材",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约3800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "顺络电子",
+      "capacityLabel": "年出货约3200吨",
+      "highlight": "片式电感+浆料配套，被动元件电极浆料耗材",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约3200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "国瓷材料",
+      "capacityLabel": "年出货约2500吨",
+      "highlight": "MLCC介质粉体+电子浆料，被动元件电极浆料耗材",
+      "verify": {
+        "capacity": 2500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约2500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "鸿远电子",
+      "capacityLabel": "年出货约1800吨",
+      "highlight": "高可靠MLCC+电极浆料，特种被动元件浆料耗材",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子浆料年化出货量约1800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "铜峰电子",
+      "capacityLabel": "年出货约1200吨",
+      "highlight": "薄膜电容器+金属化膜，电极浆料与膜材耗材",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电极耗材年化出货量约1200吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

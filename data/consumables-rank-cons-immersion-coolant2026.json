@@ -1,0 +1,174 @@
+{
+  "key": "浸没冷却液",
+  "industryKeys": [
+    "耗材",
+    "液冷",
+    "AI算力"
+  ],
+  "title": "2026浸没冷却液耗材出货量TOP10",
+  "subtitle": "口径：数据中心浸没式液冷工质年化出货量（吨/年）；源自算力/液冷产业链；均为冷却液耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "巨化股份",
+      "capacityLabel": "年出货约12500吨",
+      "highlight": "氟化工+浸没冷却液，数据中心液冷工质耗材规模靠前",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：浸没冷却液年化出货量约12500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "三美股份",
+      "capacityLabel": "年出货约9800吨",
+      "highlight": "制冷剂+氟精细化学品，液冷氟化液耗材",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：液冷工质年化出货量约9800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "永和股份",
+      "capacityLabel": "年出货约7200吨",
+      "highlight": "氟化工一体化，浸没式液冷冷却液耗材",
+      "verify": {
+        "capacity": 7200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：冷却液年化出货量约7200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "润禾材料",
+      "capacityLabel": "年出货约5500吨",
+      "highlight": "有机硅油+冷却液，浸没液冷导热介质耗材",
+      "verify": {
+        "capacity": 5500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：有机硅冷却液年化出货量约5500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "昊华科技",
+      "capacityLabel": "年出货约4200吨",
+      "highlight": "氟化工+特种化学品，电子级冷却液耗材",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子冷却液年化出货量约4200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "东阳光",
+      "capacityLabel": "年出货约2800吨",
+      "highlight": "铝箔+氟化工，浸没式液冷氟化冷却液耗材",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：冷却液年化出货量约2800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中欣氟材",
+      "capacityLabel": "年出货约1800吨",
+      "highlight": "氟精细化学品，液冷浸没工质原料耗材",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：氟化液原料年化出货量约1800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "永太科技",
+      "capacityLabel": "年出货约1500吨",
+      "highlight": "氟化工中间体，浸没冷却液氟化物耗材",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：氟化工耗材年化出货量约1500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "滨化股份",
+      "capacityLabel": "年出货约1200吨",
+      "highlight": "氟化工+冷却工质，浸没液冷氟化物耗材",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：液冷工质年化出货量约1200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科隆股份",
+      "capacityLabel": "年出货约1000吨",
+      "highlight": "氟化冷却介质助剂，浸没液冷工质配方耗材",
+      "verify": {
+        "capacity": 1000,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：冷却液助剂年化出货量约1000吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

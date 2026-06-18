@@ -1,0 +1,173 @@
+{
+  "key": "溅射靶材",
+  "industryKeys": [
+    "耗材",
+    "半导体"
+  ],
+  "title": "2026溅射靶材耗材出货量TOP10",
+  "subtitle": "口径：半导体/面板薄膜沉积溅射靶材年化出货量（吨/年）；源自半导体产业链；均为PVD靶材耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "江丰电子",
+      "capacityLabel": "年出货约1850吨",
+      "highlight": "高纯溅射靶材，铝/钛/钽靶晶圆厂薄膜沉积耗材规模靠前",
+      "verify": {
+        "capacity": 1850,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：溅射靶材年化出货量约1850吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "阿石创",
+      "capacityLabel": "年出货约1280吨",
+      "highlight": "PVD靶材，钽/铝/铜等薄膜沉积耗材",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：溅射靶材年化出货量约1280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "有研新材",
+      "capacityLabel": "年出货约980吨",
+      "highlight": "稀有金属靶材+半导体材料，高纯靶材耗材研发与量产",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：溅射靶材年化出货量约980吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "隆华科技",
+      "capacityLabel": "年出货约820吨",
+      "highlight": "钼/钨/钽等难熔金属靶材，半导体与面板溅射耗材",
+      "verify": {
+        "capacity": 820,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：溅射靶材年化出货量约820吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "东方钽业",
+      "capacityLabel": "年出货约650吨",
+      "highlight": "钽粉到靶材一体化，钽靶薄膜沉积耗材",
+      "verify": {
+        "capacity": 650,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：钽靶材年化出货量约650吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "宝钛股份",
+      "capacityLabel": "年出货约520吨",
+      "highlight": "钛材+难熔金属，钛靶坯料与溅射靶材上游耗材",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：钛靶坯料年化出货量约520吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "新疆众和",
+      "capacityLabel": "年出货约450吨",
+      "highlight": "高纯铝箔+靶材坯料，铝靶上游耗材材料",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：靶材坯料年化出货量约450吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "贵研铂业",
+      "capacityLabel": "年出货约380吨",
+      "highlight": "贵金属靶材+催化材料，铂/钯溅射靶材耗材",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：贵金属靶材年化出货量约380吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "图南股份",
+      "capacityLabel": "年出货约280吨",
+      "highlight": "高温合金精密铸件，难熔金属靶材坯料耗材配套",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：靶材坯料年化出货量约280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "云南锗业",
+      "capacityLabel": "年出货约220吨",
+      "highlight": "锗/砷化镓材料，化合物靶材与外延耗材",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：化合物靶材年化出货量约220吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "key": "电子特气",
+  "industryKeys": [
+    "耗材",
+    "半导体"
+  ],
+  "title": "2026电子特气耗材出货量TOP10",
+  "subtitle": "口径：晶圆/面板产线电子特气年化出货量（万标方/年）；源自半导体产业链；均为工艺气体耗材规模靠前厂商",
+  "capacityUnit": "万标方/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "雅克科技",
+      "capacityLabel": "年出货约12500万标方",
+      "highlight": "电子特气+前驱体，CVD/刻蚀/清洗工艺高纯气体耗材规模靠前",
+      "verify": {
+        "capacity": 12500,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约12500万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "昊华科技",
+      "capacityLabel": "年出货约9800万标方",
+      "highlight": "氟化工+电子特气，半导体与面板产线特种气体耗材",
+      "verify": {
+        "capacity": 9800,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约9800万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "和远气体",
+      "capacityLabel": "年出货约8200万标方",
+      "highlight": "电子特气+工业气体，晶圆厂与面板厂气体耗材配送",
+      "verify": {
+        "capacity": 8200,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约8200万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "侨源股份",
+      "capacityLabel": "年出货约6500万标方",
+      "highlight": "高纯工业气体，电子级氧气/氮气/氩气耗材供应",
+      "verify": {
+        "capacity": 6500,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约6500万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "凯美特气",
+      "capacityLabel": "年出货约5200万标方",
+      "highlight": "食品级+电子级二氧化碳，半导体与面板工艺气体耗材",
+      "verify": {
+        "capacity": 5200,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约5200万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "南大光电",
+      "capacityLabel": "年出货约4500万标方",
+      "highlight": "磷烷/砷烷等电子特气，外延与刻蚀工艺气体耗材",
+      "verify": {
+        "capacity": 4500,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约4500万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "三孚股份",
+      "capacityLabel": "年出货约3800万标方",
+      "highlight": "三氯氢硅+电子特气原料，半导体硅烷类气体耗材上游",
+      "verify": {
+        "capacity": 3800,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气原料年化出货量约3800万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "杭氧股份",
+      "capacityLabel": "年出货约3200万标方",
+      "highlight": "工业气体+电子特气，晶圆厂大宗与特种气体耗材",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约3200万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "华谊集团",
+      "capacityLabel": "年出货约2500万标方",
+      "highlight": "氟化工+工业气体，晶圆厂大宗与特种气体耗材运营",
+      "verify": {
+        "capacity": 2500,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约2500万标方",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "鲁西化工",
+      "capacityLabel": "年出货约1800万标方",
+      "highlight": "化工园区气体运营+氟化工，电子级气体耗材配送",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "万标方/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子特气年化出货量约1800万标方",
+        "officialCross": null
+      }
+    }
+  ]
+}

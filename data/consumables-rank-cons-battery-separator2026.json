@@ -1,0 +1,173 @@
+{
+  "key": "锂电隔膜",
+  "industryKeys": [
+    "耗材",
+    "锂电池"
+  ],
+  "title": "2026锂电隔膜耗材出货量TOP10",
+  "subtitle": "口径：动力电池隔膜年化出货量（亿㎡/年）；源自锂电池产业链；均为隔膜耗材规模靠前厂商",
+  "capacityUnit": "亿㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "恩捷股份",
+      "capacityLabel": "年出货约120亿㎡",
+      "highlight": "湿法隔膜出货量规模居前，涂覆隔膜耗材产线满产",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电隔膜年化出货量约120亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "星源材质",
+      "capacityLabel": "年出货约85亿㎡",
+      "highlight": "干法+湿法隔膜规模靠前，涂覆隔膜耗材扩产",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电隔膜年化出货量约85亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中材科技",
+      "capacityLabel": "年出货约72亿㎡",
+      "highlight": "湿法隔膜+涂覆产能，动力电池隔膜耗材",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：锂电隔膜年化出货量约72亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "沧州明珠",
+      "capacityLabel": "年出货约28亿㎡",
+      "highlight": "PE隔膜+BOPA薄膜，干法隔膜耗材配套",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化出货量约28亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "美联新材",
+      "capacityLabel": "年出货约15亿㎡",
+      "highlight": "隔膜涂覆耗材主业，湿法涂覆隔膜出货量规模靠前",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化出货量约15亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "佛塑科技",
+      "capacityLabel": "年出货约12亿㎡",
+      "highlight": "薄膜新材料+锂电隔膜，干法隔膜耗材",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜年化出货量约12亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "璞泰来",
+      "capacityLabel": "年出货约10亿㎡",
+      "highlight": "涂覆隔膜加工，动力电池隔膜涂覆耗材满产",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：涂覆隔膜年化出货量约10亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "东材科技",
+      "capacityLabel": "年出货约8亿㎡",
+      "highlight": "锂电隔膜基材薄膜，涂覆隔膜上游耗材",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜基材年化出货量约8亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "裕兴股份",
+      "capacityLabel": "年出货约7亿㎡",
+      "highlight": "特种聚酯薄膜，锂电隔膜涂覆基材耗材",
+      "verify": {
+        "capacity": 7,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜基材年化出货量约7亿㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "乐凯胶片",
+      "capacityLabel": "年出货约6亿㎡",
+      "highlight": "感光材料+隔膜涂覆，隔膜涂覆耗材",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "亿㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：隔膜涂覆年化出货量约6亿㎡",
+        "officialCross": null
+      }
+    }
+  ]
+}

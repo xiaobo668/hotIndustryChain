@@ -1,0 +1,173 @@
+{
+  "key": "光刻胶",
+  "industryKeys": [
+    "耗材",
+    "半导体"
+  ],
+  "title": "2026光刻胶耗材出货量TOP10",
+  "subtitle": "口径：半导体/面板用光刻胶年化出货量（吨/年）；源自半导体产业链；均为光刻工艺耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "南大光电",
+      "capacityLabel": "年出货约2850吨",
+      "highlight": "ArF/KrF光刻胶量产导入，晶圆厂光刻工艺耗材国产替代规模靠前",
+      "verify": {
+        "capacity": 2850,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约2850吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "彤程新材",
+      "capacityLabel": "年出货约2200吨",
+      "highlight": "KrF/ArF光刻胶树脂与成品，G线/I线及先进制程光刻胶耗材",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约2200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "上海新阳",
+      "capacityLabel": "年出货约1800吨",
+      "highlight": "KrF/ArF光刻胶+电镀液，晶圆制造湿法工艺耗材平台",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约1800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "晶瑞电材",
+      "capacityLabel": "年出货约1520吨",
+      "highlight": "i线光刻胶+湿电子化学品，半导体光刻耗材双轮驱动",
+      "verify": {
+        "capacity": 1520,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约1520吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鼎龙股份",
+      "capacityLabel": "年出货约1280吨",
+      "highlight": "光刻胶树脂/CMP垫，半导体光刻与抛光耗材国产替代",
+      "verify": {
+        "capacity": 1280,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约1280吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "飞凯材料",
+      "capacityLabel": "年出货约980吨",
+      "highlight": "封装光刻胶+湿制程材料，凸块与RDL先进封装光刻耗材",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约980吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "容大感光",
+      "capacityLabel": "年出货约720吨",
+      "highlight": "PCB光刻胶+显示光刻胶，线路板与面板光刻耗材",
+      "verify": {
+        "capacity": 720,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约720吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "广信材料",
+      "capacityLabel": "年出货约580吨",
+      "highlight": "UV光刻胶+涂料，消费电子与PCB光刻耗材配套",
+      "verify": {
+        "capacity": 580,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约580吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "强力新材",
+      "capacityLabel": "年出货约450吨",
+      "highlight": "PCB光刻胶+特种树脂，线路板光刻工艺耗材",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶年化出货量约450吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "濮阳惠成",
+      "capacityLabel": "年出货约320吨",
+      "highlight": "顺酐酸酐衍生物+光刻胶树脂中间体，光刻胶上游耗材原料",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：光刻胶树脂原料年化出货量约320吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

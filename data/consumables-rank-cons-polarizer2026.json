@@ -1,0 +1,173 @@
+{
+  "key": "偏光片",
+  "industryKeys": [
+    "耗材",
+    "消费电子"
+  ],
+  "title": "2026偏光片耗材出货量TOP10",
+  "subtitle": "口径：显示面板偏光片年化出货量（万㎡/年）；源自消费电子产业链；均为偏光片耗材规模靠前厂商",
+  "capacityUnit": "万㎡/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "杉杉股份",
+      "capacityLabel": "年出货约8500万㎡",
+      "highlight": "偏光片+锂电材料，显示面板偏光片耗材规模靠前",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片年化出货量约8500万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "三利谱",
+      "capacityLabel": "年出货约6200万㎡",
+      "highlight": "偏光片制造规模靠前，LCD/OLED偏光片耗材满产",
+      "verify": {
+        "capacity": 6200,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片年化出货量约6200万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "深纺织A",
+      "capacityLabel": "年出货约4800万㎡",
+      "highlight": "偏光片+纺织，显示面板偏光片耗材产线",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片年化出货量约4800万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "纬达光电",
+      "capacityLabel": "年出货约3500万㎡",
+      "highlight": "偏光片+光学膜，中小尺寸显示偏光片耗材",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片年化出货量约3500万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "东材科技",
+      "capacityLabel": "年出货约2800万㎡",
+      "highlight": "PVA光学膜+偏光片基膜，偏光片上游核心耗材",
+      "verify": {
+        "capacity": 2800,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片基膜年化出货量约2800万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "激智科技",
+      "capacityLabel": "年出货约2200万㎡",
+      "highlight": "光学膜+显示材料，偏光片配套光学耗材",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片配套光学耗材年化出货量约2200万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "皖维高新",
+      "capacityLabel": "年出货约1350万㎡",
+      "highlight": "PVA光学膜+偏光片基膜，显示偏光片上游耗材",
+      "verify": {
+        "capacity": 1350,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片基膜年化出货量约1350万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华映科技",
+      "capacityLabel": "年出货约850万㎡",
+      "highlight": "显示面板制造，偏光片模组耗材配套出货",
+      "verify": {
+        "capacity": 850,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片配套年化出货量约850万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "深天马A",
+      "capacityLabel": "年出货约700万㎡",
+      "highlight": "中小尺寸显示面板，偏光片耗材集成供货",
+      "verify": {
+        "capacity": 700,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片耗材年化出货量约700万㎡",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "锦富技术",
+      "capacityLabel": "年出货约600万㎡",
+      "highlight": "显示模切+偏光片组件，面板偏光耗材配套",
+      "verify": {
+        "capacity": 600,
+        "capacityUnit": "万㎡/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：偏光片组件年化出货量约600万㎡",
+        "officialCross": null
+      }
+    }
+  ]
+}

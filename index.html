@@ -1054,6 +1054,28 @@ transition: opacity 0.2s;
       color: #6ee7b7 !important;
       background: rgba(16, 185, 129, 0.12) !important;
     }
+    .consumables-rank-entry {
+      max-width: 560px;
+      margin: 20px auto 8px;
+      padding: 14px 20px;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px dashed rgba(245, 158, 11, 0.45);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .consumables-rank-entry:hover {
+      background: rgba(245, 158, 11, 0.14);
+      border-color: #f59e0b;
+      transform: translateY(-1px);
+    }
+    .consumables-rank-entry-title { font-weight: 700; color: #fbbf24; font-size: 15px; }
+    .consumables-rank-entry-desc { font-size: 13px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+    .consumables-hotkey {
+      border-color: rgba(245, 158, 11, 0.35) !important;
+      color: #fde68a !important;
+      background: rgba(245, 158, 11, 0.12) !important;
+    }
     .capacity-welcome-card {
       border-color: rgba(16, 185, 129, 0.35) !important;
       background: rgba(16, 185, 129, 0.06) !important;
@@ -1514,6 +1536,7 @@ transition: opacity 0.2s;
           <span class="hotkey-label">热门：</span>
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
           <span class="hotkey-tag capacity-hotkey" onclick="openCapacityRankPage()">📊 产能排行榜</span>
+          <span class="hotkey-tag consumables-hotkey" onclick="openConsumablesRankPage()">🧪 耗材排行榜</span>
           <span class="hotkey-tag" style="border-color:rgba(220,38,38,0.35);color:#fca5a5;background:rgba(220,38,38,0.12)" onclick="quickSearch('年初涨幅')">📈 年初涨幅Top15</span>
           <span class="hotkey-tag" style="border-color:rgba(7,193,96,0.35);color:#6ee7b7;background:rgba(7,193,96,0.12)" onclick="window.location.href='wechat.html'">📱 公众号文稿</span>
           <span class="hotkey-tag" style="border-color:rgba(108,99,255,0.35);color:#c4b5fd;background:rgba(108,99,255,0.12)" onclick="window.location.href='analysis.html'">📋 分析文档</span>
@@ -1654,6 +1677,10 @@ transition: opacity 0.2s;
       <div class="capacity-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px">
         <div class="capacity-rank-entry-title">📊 2026 产业链产能排行榜</div>
         <div class="capacity-rank-entry-desc">按行业拆分：光互联与电子材料（16）· 消费电子（6）· 算力板块（10）· 半导体（10）· 锂电池（10）· 商业航天（10）— 共 62 个细分赛道 Top10 产能海报</div>
+      </div>
+      <div class="consumables-rank-entry" onclick="openConsumablesRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openConsumablesRankPage()" style="margin-top:12px">
+        <div class="consumables-rank-entry-title">🧪 2026 产业链耗材排行榜</div>
+        <div class="consumables-rank-entry-desc">源自六大热门产业链：光刻胶 · 电子特气 · 溅射靶材 · CMP抛光液 · 电子浆料 · 偏光片 · 电解液 · 锂电隔膜 · 正极材料 · 导热界面材料 · 浸没冷却液 · 航天火工品 — 共 12 个赛道 Top10 出货量海报</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px" id="welcome-capacity-grid">
         <div class="welcome-card" onclick="openCapacityRankGroupPage('optical-electronics')" style="border-color:rgba(59,130,246,0.35);background:rgba(59,130,246,0.06);padding:14px">
@@ -2384,6 +2411,7 @@ transition: opacity 0.2s;
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
 <script src="js/industry/capacity-rank-pages.js"></script>
+<script src="js/industry/consumables-rank-pages.js"></script>
 <script src="js/industry/capacity-rank-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->
@@ -2615,6 +2643,10 @@ function openOrderRankPage() {
 
 function openCapacityRankPage() {
   window.location.href = 'capacity-poster.html';
+}
+
+function openConsumablesRankPage() {
+  window.location.href = 'consumables-poster.html';
 }
 
 // 页面加载完成后初始化 Select

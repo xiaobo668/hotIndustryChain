@@ -1,0 +1,173 @@
+{
+  "key": "CMP抛光液",
+  "industryKeys": [
+    "耗材",
+    "半导体"
+  ],
+  "title": "2026CMP抛光液耗材出货量TOP10",
+  "subtitle": "口径：晶圆CMP抛光液及配套湿化学品年化出货量（吨/年）；源自半导体产业链；均为平坦化工艺耗材规模靠前厂商",
+  "capacityUnit": "吨/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "鼎龙股份",
+      "capacityLabel": "年出货约8500吨",
+      "highlight": "CMP抛光垫+抛光液，晶圆平坦化工艺耗材规模靠前",
+      "verify": {
+        "capacity": 8500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP材料年化出货量约8500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "江化微",
+      "capacityLabel": "年出货约6200吨",
+      "highlight": "湿电子化学品+CMP清洗液，晶圆抛光与清洗耗材",
+      "verify": {
+        "capacity": 6200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP抛光液年化出货量约6200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "格林达",
+      "capacityLabel": "年出货约4800吨",
+      "highlight": "TMAH显影液+CMP后清洗液，晶圆湿法工艺耗材",
+      "verify": {
+        "capacity": 4800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿法抛光清洗液年化出货量约4800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "上海新阳",
+      "capacityLabel": "年出货约4200吨",
+      "highlight": "电镀液+CMP后处理液，晶圆制造湿法耗材平台",
+      "verify": {
+        "capacity": 4200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP后处理液年化出货量约4200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "晶瑞电材",
+      "capacityLabel": "年出货约3500吨",
+      "highlight": "湿电子化学品+CMP配套清洗液，半导体抛光耗材",
+      "verify": {
+        "capacity": 3500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP配套化学品年化出货量约3500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "科隆股份",
+      "capacityLabel": "年出货约2600吨",
+      "highlight": "CMP抛光助剂+湿电子表面活性剂，晶圆平坦化抛光液耗材",
+      "verify": {
+        "capacity": 2600,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：CMP抛光液助剂年化出货量约2600吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "飞凯材料",
+      "capacityLabel": "年出货约2200吨",
+      "highlight": "湿制程材料+封装化学品，CMP与封装工艺耗材",
+      "verify": {
+        "capacity": 2200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿制程耗材年化出货量约2200吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "川恒股份",
+      "capacityLabel": "年出货约1800吨",
+      "highlight": "电子级磷酸+湿电子化学品，晶圆CMP后清洗抛光耗材",
+      "verify": {
+        "capacity": 1800,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：湿电子化学品年化出货量约1800吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "巨化股份",
+      "capacityLabel": "年出货约1500吨",
+      "highlight": "氟化工+电子湿化学品，蚀刻与清洗工艺耗材",
+      "verify": {
+        "capacity": 1500,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子湿化学品年化出货量约1500吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "多氟多",
+      "capacityLabel": "年出货约1200吨",
+      "highlight": "氢氟酸+电子化学品，晶圆蚀刻与清洗耗材",
+      "verify": {
+        "capacity": 1200,
+        "capacityUnit": "吨/年",
+        "sourceType": "media",
+        "source": "东方财富·产业链耗材出货量梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：电子湿化学品年化出货量约1200吨",
+        "officialCross": null
+      }
+    }
+  ]
+}
