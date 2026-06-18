@@ -2,7 +2,10 @@
   --bg: #0f0f1a;
   --text: #e8e8f0;
   --text-muted: #8888aa;
-  --accent: #f59e0b;
+  --accent: #10b981;
+  --accent-deep: #059669;
+  --accent-light: #34d399;
+  --accent-text: #6ee7b7;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -13,7 +16,7 @@ body {
   padding: 24px;
 }
 .wrap { max-width: 520px; margin: 0 auto; }
-h1 { font-size: 22px; margin-bottom: 8px; }
+h1 { font-size: 22px; margin-bottom: 8px; color: var(--accent-light); }
 h2 { margin-top: 28px; font-size: 18px; color: var(--text); }
 .sub { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
 .poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 8px; }
@@ -25,7 +28,7 @@ h2 { margin-top: 28px; font-size: 18px; color: var(--text); }
   font-size: 14px; font-weight: 600; cursor: pointer;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), #ea580c);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #fff;
 }
 .btn-secondary {
@@ -33,19 +36,19 @@ h2 { margin-top: 28px; font-size: 18px; color: var(--text); }
   color: var(--text);
   border: 1px solid rgba(255,255,255,0.12);
 }
-a.back { color: #fbbf24; font-size: 13px; display: inline-block; margin-bottom: 16px; text-decoration: none; }
+a.back { color: var(--accent-light); font-size: 13px; display: inline-block; margin-bottom: 16px; text-decoration: none; }
 a.back:hover { text-decoration: underline; }
 .compliance-box {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
   border-radius: 10px;
   padding: 14px 16px;
   margin-bottom: 24px;
   font-size: 12px;
   line-height: 1.7;
-  color: #fcd34d;
+  color: var(--accent-text);
 }
-.compliance-box strong { color: #fde68a; }
+.compliance-box strong { color: #a7f3d0; }
 .industry-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,8 +67,8 @@ a.back:hover { text-decoration: underline; }
   display: block;
 }
 .industry-card:hover {
-  border-color: rgba(245, 158, 11, 0.45);
-  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(16, 185, 129, 0.45);
+  background: rgba(16, 185, 129, 0.08);
 }
 .industry-card-icon { font-size: 28px; margin-bottom: 8px; }
 .industry-card-name { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
@@ -74,8 +77,8 @@ a.back:hover { text-decoration: underline; }
   display: inline-block;
   margin-top: 8px;
   font-size: 11px;
-  color: #fbbf24;
-  background: rgba(245, 158, 11, 0.12);
+  color: var(--accent-light);
+  background: rgba(16, 185, 129, 0.12);
   padding: 2px 8px;
   border-radius: 6px;
 }
@@ -91,7 +94,7 @@ a.back:hover { text-decoration: underline; }
   display: inline-block;
   margin: 0 8px 6px 0;
   font-size: 12px;
-  color: #93c5fd;
+  color: var(--accent-light);
   text-decoration: none;
 }
 .nav-toc a:hover { text-decoration: underline; }

@@ -1,7 +1,17 @@
 /**
- * 产能规模排行海报（样式与 order-rank-poster.js 一致）
+ * 产能规模排行海报（翡翠绿主题，与订单榜青色区分）
  */
 const CAPACITY_RANK_PAGE_W = 430;
+
+const CAPACITY_POSTER_THEME = {
+  border: '#34d399',
+  barStart: '#047857',
+  barEnd: '#065f46',
+  rank: '#047857',
+  capacity: '#059669',
+  bgStops: ['#d1fae5', '#ecfdf5', '#f7fffb'],
+  gridStroke: 'rgba(5, 150, 105, 0.07)',
+};
 
 const CAPACITY_POSTER_FOOTER_LINES = [
   '数据口径均来自企业年报、行业公开产业调研报道，',
@@ -87,20 +97,21 @@ function renderCapacityRankPoster(data, containerId, canvasId) {
 
 function drawCapacityRankPoster(ctx, data, W, H) {
   const L = CAPACITY_POSTER_LAYOUT;
+  const T = CAPACITY_POSTER_THEME;
   const CARD_RADIUS = 10;
-  const borderBlue = '#4a90c8';
-  const barColor = '#1e40af';
+  const borderBlue = T.border;
+  const barColor = T.barStart;
   const innerPadX = 10;
 
   const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, '#cfe8fb');
-  bg.addColorStop(0.4, '#e3f2fd');
-  bg.addColorStop(1, '#f5fbff');
+  bg.addColorStop(0, T.bgStops[0]);
+  bg.addColorStop(0.4, T.bgStops[1]);
+  bg.addColorStop(1, T.bgStops[2]);
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
   ctx.save();
-  ctx.strokeStyle = 'rgba(37, 99, 235, 0.07)';
+  ctx.strokeStyle = T.gridStroke;
   ctx.lineWidth = 1;
   for (let i = 0; i < 22; i++) {
     ctx.beginPath();
@@ -149,7 +160,7 @@ function drawCapacityRankPoster(ctx, data, W, H) {
   ctx.clip();
   const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + L.CARD_HEAD);
   bgrad.addColorStop(0, barColor);
-  bgrad.addColorStop(1, '#1e3a8a');
+  bgrad.addColorStop(1, T.barEnd);
   ctx.fillStyle = bgrad;
   ctx.fillRect(cardX, y, cardW, L.CARD_HEAD);
   ctx.restore();
@@ -177,7 +188,7 @@ function drawCapacityRankPoster(ctx, data, W, H) {
     const maxLineW = cardW - innerPadX * 2;
 
     ctx.font = 'bold 10px "PingFang SC", sans-serif';
-    ctx.fillStyle = '#1e40af';
+    ctx.fillStyle = T.rank;
     ctx.fillText(String(co.rank) + '.', baseX, rowTop + 12);
 
     const nameX = baseX + 18;
@@ -197,7 +208,7 @@ function drawCapacityRankPoster(ctx, data, W, H) {
     const nameW = ctx.measureText(nameStr).width;
 
     ctx.font = L.CAP_FONT;
-    ctx.fillStyle = '#1d4ed8';
+    ctx.fillStyle = T.capacity;
     ctx.fillText(capStr, nameX + nameW + capGap, rowTop + 12);
 
     ctx.font = '9px "PingFang SC", sans-serif';
