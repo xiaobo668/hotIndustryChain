@@ -889,6 +889,50 @@ transition: opacity 0.2s;
     .shiliao-summary-classic .shiliao-classic-book { font-size: 13px; color: #65a30d; }
     .shiliao-summary-classic .shiliao-classic-quote { font-size: 12px; color: var(--text-muted); }
 
+    /* ===== 职场模块 ===== */
+    #header-zhichang { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+    .module-tab-btn.zhichang-active.active { background: #6366f1; }
+    .zhichang-editor-wrap {
+      max-width: 520px; margin: 24px auto 0; text-align: left;
+    }
+    .zhichang-editor-label {
+      font-size: 13px; color: var(--text-muted); margin-bottom: 8px;
+    }
+    .zhichang-poster-textarea {
+      width: 100%; min-height: 120px; padding: 14px 16px;
+      border-radius: 12px; border: 1px solid rgba(99,102,241,0.35);
+      background: rgba(99,102,241,0.08); color: var(--text);
+      font-size: 15px; line-height: 1.6; resize: vertical;
+      font-family: "PingFang SC", sans-serif;
+    }
+    .zhichang-poster-textarea:focus {
+      outline: none; border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.18);
+    }
+    .zhichang-editor-hint {
+      font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.6;
+    }
+    .zhichang-template-preview {
+      margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px;
+    }
+    .zhichang-poster-canvas {
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    }
+    .zhichang-welcome-card:hover { border-color: #6366f1 !important; }
+    .zhichang-card-preview {
+      font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.5;
+    }
+    .zhichang-dl-btn {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    }
+    .zhichang-hotkey-tag {
+      border-color: rgba(99,102,241,0.35) !important;
+      color: #a5b4fc !important;
+      background: rgba(99,102,241,0.12) !important;
+    }
+    .zhichang-hotkey-tag:hover { background: rgba(99,102,241,0.22) !important; }
+
     /* ===== K线教学 ===== */
     .kline-chapter-list {
       display: grid;
@@ -1507,6 +1551,7 @@ transition: opacity 0.2s;
         <button class="module-tab-btn" onclick="switchModule('xhs')" id="tab-xhs">📕 小红书创作</button>
         <button class="module-tab-btn kline-active" onclick="switchModule('kline')" id="tab-kline">📊 K线教学</button>
         <button class="module-tab-btn" onclick="switchModule('shiliao')" id="tab-shiliao">🥗 食疗</button>
+        <button class="module-tab-btn zhichang-active" onclick="switchModule('zhichang')" id="tab-zhichang">💼 职场</button>
       </div>
     </div>
 
@@ -1631,6 +1676,23 @@ transition: opacity 0.2s;
           <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('红枣')">🍒 红枣</span>
           <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('薏米')">🌾 薏米</span>
           <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('白萝卜')">🥕 白萝卜</span>
+        </div>
+      </div>
+
+      <!-- ===== 职场模块 Header ===== -->
+      <div id="header-zhichang" style="display:none">
+        <div class="logo">
+          <div class="logo-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">💼</div>
+          <div>
+            <div class="logo-text">职场 · 海报模版</div>
+            <div class="logo-sub">Workplace Poster Template</div>
+          </div>
+        </div>
+        <div class="hotkeys" id="zhichang-hotkeys">
+          <span class="hotkey-label">快捷文案：</span>
+          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-1')">😮‍💨 想退休</span>
+          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-2')">📅 无效会议</span>
+          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-3')">🎉 周五灵魂</span>
         </div>
       </div>
 
@@ -1892,6 +1954,37 @@ transition: opacity 0.2s;
         <span style="color:#65a30d;font-size:13px">✨ 食疗海报可下载 · 60秒口播稿可直接朗读</span>
       </p>
       <div class="welcome-grid" id="shiliao-welcome-grid" style="margin-top:28px"></div>
+    </div>
+
+    <!-- ===== 职场模块 Welcome ===== -->
+    <div id="welcome-zhichang" class="welcome" style="display:none">
+      <div class="welcome-icon" style="font-size:64px;margin-bottom:20px">💼</div>
+      <h2>职场 · 海报模版</h2>
+      <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:520px;margin:0 auto">
+        使用<strong>模版底图</strong>，在<strong>中间区域</strong>填入文案，一键生成职场风格海报<br/>
+        <span style="color:#a5b4fc;font-size:13px">✨ 支持换行 · 自动居中 · 下载 / 复制</span>
+      </p>
+
+      <div class="zhichang-editor-wrap">
+        <div class="zhichang-editor-label">中间文字（Enter 换行）</div>
+        <textarea
+          id="zhichang-poster-text"
+          class="zhichang-poster-textarea"
+          placeholder="在此输入职场文案..."
+        ></textarea>
+        <div class="zhichang-editor-hint">文字会自动居中排版，并避开四角装饰图区域。以后说「职场」的内容都会在这里生成。</div>
+      </div>
+
+      <div class="zhichang-template-preview">
+        <div id="zhichang-template-preview"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary zhichang-dl-btn" type="button" onclick="downloadZhichangPoster()">⬇️ 下载海报</button>
+          <button class="btn btn-secondary" type="button" onclick="copyZhichangPoster()">📋 复制海报</button>
+          <button class="btn btn-secondary" type="button" onclick="refreshZhichangTemplatePreview()">🔄 刷新预览</button>
+        </div>
+      </div>
+
+      <div class="welcome-grid" id="zhichang-sample-grid" style="margin-top:28px"></div>
     </div>
 
     <!-- ===== K线教学 Welcome ===== -->
@@ -2455,6 +2548,11 @@ transition: opacity 0.2s;
 <script src="js/shiliao/organ-poster.js"></script>
 <script src="js/shiliao/summary-poster.js"></script>
 <script src="js/shiliao/ui.js"></script>
+
+<!-- 9. 职场模块 -->
+<script src="js/zhichang/template.js"></script>
+<script src="js/zhichang/poster.js"></script>
+<script src="js/zhichang/ui.js"></script>
 <script>
 // 初始化自定义可搜索 Select
 function initIndustrySelect() {
