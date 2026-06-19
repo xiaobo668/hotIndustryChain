@@ -1,10 +1,10 @@
 /**
  * 职场海报模版配置
- * 背景图：assets/zhichang/poster-template.png（493×580）
+ * 背景图：assets/zhichang/poster-template.jpg（493×580）
  * 中间留白区域用于叠加文字，四角装饰图保留
  */
 const ZHICHANG_POSTER_TEMPLATE = {
-  src: 'assets/zhichang/poster-template.png',
+  src: 'assets/zhichang/poster-template.jpg',
   width: 493,
   height: 580,
   displayWidth: 430,

@@ -28,7 +28,6 @@ function initXHSUI() {
  * 模块切换：产业链分析 ↔ 小红书创作 ↔ K线教学
  */
 function switchModule(module) {
-  if (currentModule === module) return;
   currentModule = module;
 
   document.querySelectorAll('#module-tabs .module-tab-btn').forEach(b => b.classList.remove('active'));
@@ -55,15 +54,25 @@ function switchModule(module) {
   const welcomeContainer = document.getElementById('welcome');
 
   function hideAllResults() {
-    document.getElementById('result').classList.remove('show');
-    document.getElementById('xhs-result').classList.remove('show');
+    const result = document.getElementById('result');
+    if (result) result.classList.remove('show');
+    const xhsResult = document.getElementById('xhs-result');
+    if (xhsResult) xhsResult.classList.remove('show');
     const klineResult = document.getElementById('kline-result');
     if (klineResult) klineResult.classList.remove('show');
     const shiliaoResult = document.getElementById('shiliao-result');
     if (shiliaoResult) shiliaoResult.classList.remove('show');
-    document.getElementById('loading').classList.remove('show');
-    document.getElementById('not-found').classList.remove('show');
-    document.getElementById('ai-error').classList.remove('show');
+    const loading = document.getElementById('loading');
+    if (loading) loading.classList.remove('show');
+    const notFound = document.getElementById('not-found');
+    if (notFound) notFound.classList.remove('show');
+    const aiError = document.getElementById('ai-error');
+    if (aiError) aiError.classList.remove('show');
+  }
+
+  if (module !== 'kline') {
+    const spaceWrap = document.getElementById('kline-space-wrap');
+    if (spaceWrap) spaceWrap.style.display = 'none';
   }
 
   if (module === 'industry') {
@@ -118,11 +127,13 @@ function switchModule(module) {
     if (welcomeXHS) welcomeXHS.style.display = 'none';
     if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeShiliao) welcomeShiliao.style.display = 'none';
-    if (welcomeZhichang) welcomeZhichang.style.display = '';
-    if (welcomeContainer) welcomeContainer.style.display = '';
+    if (welcomeZhichang) welcomeZhichang.style.display = 'block';
+    if (welcomeContainer) welcomeContainer.style.display = 'block';
     hideAllResults();
     if (typeof initZhichangUI === 'function') initZhichangUI();
   }
+
+  window.scrollTo(0, 0);
 }
 
 /**
