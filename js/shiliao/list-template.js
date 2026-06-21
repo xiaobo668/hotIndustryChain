@@ -38,6 +38,29 @@ const SHILIAO_LIST_THEMES = {
     bottomDecor: 'playful',
     titleSparkle: true,
   },
+  clean: {
+    id: 'clean',
+    name: '笔记白',
+    bg: '#ffffff',
+    title: '#111111',
+    keyword: '#111111',
+    desc: '#333333',
+    quoteMarks: false,
+    bottomDecor: 'none',
+    titleSparkle: true,
+    noteStyle: true,
+  },
+  warm: {
+    id: 'warm',
+    name: '暖杏色',
+    bg: '#fffaf5',
+    title: '#7c4a1e',
+    keyword: '#c05621',
+    desc: '#444444',
+    quoteMarks: false,
+    bottomDecor: 'none',
+    titleSparkle: true,
+  },
 };
 
 function getShiliaoListTheme(id) {

@@ -8,15 +8,17 @@ function getShiliaoListPosterLayout() {
     PAD: 28,
     TOP: 40,
     TITLE_SIZE: 26,
-    TITLE_LH: 36,
-    TITLE_BOTTOM: 32,
-    ITEM_GAP: 20,
+    SUBTITLE_GAP: 4,
+    TITLE_BOTTOM: 16,
+    ITEM_GAP: 4,
     BODY_SIZE: 16,
     DESC_SIZE: 14,
     BODY_LINE_H: 28,
     DESC_LINE_H: 24,
     COL_GAP: 0,
-    BOTTOM_PAD: 52,
+    BOTTOM_PAD: 50,
+    FOOTER_SIZE: 12,
+    FOOTER_BOTTOM: 30,
     FOOTER_H: 56,
   };
 }
@@ -71,7 +73,8 @@ function estimateShiliaoListPosterHeight(topic, theme) {
   const items = topic.items || [];
   const { descW } = getListColumnMetrics(L, ctx, items);
 
-  let h = L.TOP + L.TITLE_LH + L.TITLE_BOTTOM;
+  let h = L.TOP + L.TITLE_SIZE + L.TITLE_BOTTOM;
+  if (topic.subtitle) h += L.SUBTITLE_GAP + L.DESC_SIZE;
 
   items.forEach((raw, i) => {
     const item = { rank: i + 1, name: raw.name, desc: raw.desc };
@@ -160,6 +163,12 @@ function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   ctx.fillStyle = theme.bg;
   ctx.fillRect(0, 0, W, H);
 
+  if (theme.noteStyle) {
+    ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(12, 12, W - 24, H - 24);
+  }
+
   let y = L.TOP;
 
   if (theme.quoteMarks) {
@@ -170,9 +179,19 @@ function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   ctx.font = `bold ${L.TITLE_SIZE}px "PingFang SC", sans-serif`;
   ctx.fillStyle = theme.title;
   ctx.textAlign = 'center';
-  ctx.textBaseline = 'alphabetic';
-  ctx.fillText(titleText, W / 2, y + L.TITLE_SIZE);
-  y += L.TITLE_LH + L.TITLE_BOTTOM;
+  ctx.textBaseline = 'top';
+  ctx.fillText(titleText, W / 2, y);
+  y += L.TITLE_SIZE;
+
+  if (topic.subtitle) {
+    y += L.SUBTITLE_GAP;
+    ctx.font = `${L.DESC_SIZE}px "PingFang SC", sans-serif`;
+    ctx.fillStyle = theme.noteStyle ? '#666666' : theme.desc || '#666666';
+    ctx.fillText(`（${topic.subtitle}）`, W / 2, y);
+    y += L.DESC_SIZE;
+  }
+
+  y += L.TITLE_BOTTOM;
 
   ctx.textAlign = 'left';
   items.forEach((raw, i) => {
@@ -184,10 +203,11 @@ function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   if (theme.bottomDecor === 'leaves') drawListPosterLeaves(ctx, W, H);
   if (theme.bottomDecor === 'playful') drawListPosterPlayful(ctx, W, H);
 
-  ctx.font = '12px "PingFang SC", sans-serif';
+  ctx.font = `${L.FOOTER_SIZE}px "PingFang SC", sans-serif`;
   ctx.fillStyle = 'rgba(80,80,80,0.5)';
   ctx.textAlign = 'center';
-  ctx.fillText('健康饮食 · 仅供参考', W / 2, H - 16);
+  ctx.textBaseline = 'bottom';
+  ctx.fillText('健康饮食 · 仅供参考', W / 2, H - L.FOOTER_BOTTOM);
 }
 
 function renderShiliaoListPoster(topic, theme, containerId, canvasId) {

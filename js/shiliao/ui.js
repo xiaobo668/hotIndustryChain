@@ -72,14 +72,14 @@ function updateShiliaoModeUI() {
   const searchWrap = document.querySelector('#header-shiliao .search-wrap');
 
   if (mode === 'list') {
-    if (logoText) logoText.textContent = '健康饮食 · Top10 榜单';
+    if (logoText) logoText.textContent = '健康饮食 · 榜单海报';
     if (logoSub) logoSub.textContent = 'Healthy Eating List Poster';
     if (input) input.placeholder = '选择下方主题生成榜单海报';
-    if (welcomeTitle) welcomeTitle.textContent = `Top10 榜单模版 · ${count} 个示例`;
+    if (welcomeTitle) welcomeTitle.textContent = `榜单模版 · ${count} 个主题`;
     if (welcomeDesc) {
       welcomeDesc.innerHTML =
-        '选择主题与配色，一键生成竖版<strong>Top10 食物榜单</strong>海报<br/>' +
-        '<span style="color:#65a30d;font-size:13px">清新绿 · 薄荷紫 · 温柔粉 · 下载 / 复制</span>';
+        '选择主题与配色，一键生成竖版<strong>食物榜单</strong>海报<br/>' +
+        '<span style="color:#65a30d;font-size:13px">笔记白 · 清新绿 · 薄荷紫 · 温柔粉 · 暖杏色 · 下载 / 复制</span>';
     }
     if (searchWrap) searchWrap.style.display = 'none';
   } else if (mode === 'disease') {
@@ -148,7 +148,7 @@ function renderShiliaoWelcomeCards() {
       onclick="openShiliaoListTopic('${item.id}')">
       <div class="welcome-card-icon">${item.icon}</div>
       <div class="welcome-card-name">${item.title}</div>
-      <div class="shiliao-card-sub">${getShiliaoListTheme(item.defaultTheme).name}模版</div>
+      <div class="shiliao-card-sub">${item.category || ''} · ${(item.items || []).length}项 · ${getShiliaoListTheme(item.defaultTheme).name}</div>
     </div>`
       )
       .join('');
@@ -252,7 +252,7 @@ function doShiliaoSearchFromInput() {
 }
 
 window._shiliaoListTopicId = window._shiliaoListTopicId || null;
-window._shiliaoListThemeId = window._shiliaoListThemeId || 'green';
+window._shiliaoListThemeId = window._shiliaoListThemeId || 'clean';
 
 function openShiliaoListTopic(id) {
   const topic = getShiliaoListTopic(id);

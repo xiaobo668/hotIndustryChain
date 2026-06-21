@@ -59,9 +59,10 @@ const SHILIAO_LIST_TOPICS = [
 ];
 
 function getShiliaoListTopics() {
-  return SHILIAO_LIST_TOPICS;
+  const notes = typeof getShiliaoListNoteTopics === 'function' ? getShiliaoListNoteTopics() : [];
+  return [...SHILIAO_LIST_TOPICS, ...notes];
 }
 
 function getShiliaoListTopic(id) {
-  return SHILIAO_LIST_TOPICS.find((t) => t.id === id) || null;
+  return getShiliaoListTopics().find((t) => t.id === id) || null;
 }
