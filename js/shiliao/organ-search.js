@@ -1,5 +1,5 @@
 /**
- * 器官食补搜索
+ * 营养侧重搜索
  */
 function doShiliaoOrganSearch(query) {
   const q = (query || '').trim();
@@ -17,10 +17,7 @@ function doShiliaoOrganSearch(query) {
     const nf = document.querySelector('#not-found h3');
     const np = document.querySelector('#not-found p');
     if (nf) nf.textContent = '暂未收录该器官';
-    if (np) {
-      np.innerHTML =
-        '当前内置 12 个器官：心、肝、脾胃、肺、肾、眼、脑、皮肤、血管、肠道、骨骼、头发<br/>可在欢迎页切换「器官食补」浏览全部';
-    }
+    if (np) np.innerHTML = '健康饮食模块暂无营养侧重数据，待录入后可搜索';
     return;
   }
 

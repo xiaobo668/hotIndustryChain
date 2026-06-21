@@ -691,7 +691,7 @@ transition: opacity 0.2s;
     #header-kline { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
     #header-shiliao { display: none; align-items: center; gap: 20px; flex-wrap: wrap; width: 100%; }
 
-    /* ===== 食疗模块 ===== */
+    /* ===== 健康饮食模块 ===== */
     #shiliao-result { display: none; }
     #shiliao-result.show { display: block; }
     .shiliao-result-header {
@@ -847,6 +847,49 @@ transition: opacity 0.2s;
     .shiliao-back-btn:hover {
       background: rgba(101,163,13,0.18); border-color: #65a30d;
     }
+    .shiliao-list-panel {
+      display: none;
+      max-width: 480px;
+      margin: 32px auto 0;
+      text-align: left;
+    }
+    .shiliao-list-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .shiliao-list-panel-head h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .shiliao-list-theme-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .shiliao-list-theme-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(101,163,13,0.35);
+      background: rgba(255,255,255,0.04);
+      color: var(--text-muted);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .shiliao-list-theme-btn.active {
+      background: linear-gradient(135deg, #65a30d, #15803d);
+      color: #fff;
+      border-color: transparent;
+    }
+    .shiliao-list-card--active {
+      border-color: #65a30d !important;
+      box-shadow: 0 0 0 2px rgba(101,163,13,0.25);
+    }
     .shiliao-summary-list { display: flex; flex-direction: column; gap: 14px; }
     .shiliao-summary-item {
       background: var(--surface); border: 1px solid var(--border);
@@ -932,6 +975,76 @@ transition: opacity 0.2s;
       background: rgba(99,102,241,0.12) !important;
     }
     .zhichang-hotkey-tag:hover { background: rgba(99,102,241,0.22) !important; }
+    .zhichang-album-list-wrap { max-width: 640px; margin: 24px auto 0; text-align: left; }
+    .zhichang-album-list-label {
+      font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 10px;
+    }
+    .zhichang-album-entry {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 18px; margin-bottom: 10px;
+      background: rgba(99,102,241,0.08);
+      border: 1px solid rgba(99,102,241,0.35);
+      border-radius: 14px; cursor: pointer; transition: all 0.2s;
+    }
+    .zhichang-album-entry:hover {
+      border-color: #6366f1; background: rgba(99,102,241,0.14);
+      transform: translateY(-1px);
+    }
+    .zhichang-album-entry-icon { font-size: 32px; flex-shrink: 0; }
+    .zhichang-album-entry-body { flex: 1; min-width: 0; }
+    .zhichang-album-entry-title { font-size: 16px; font-weight: 700; color: var(--text); }
+    .zhichang-album-entry-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+    .zhichang-album-entry-arrow { color: #6366f1; font-size: 18px; }
+    #zhichang-album-panel {
+      display: none; max-width: 900px; margin: 24px auto 0; text-align: left;
+    }
+    .zhichang-album-panel-head {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .zhichang-album-panel-head h3 { font-size: 20px; font-weight: 700; margin: 0; }
+    .zhichang-album-panel-head p { font-size: 13px; color: var(--text-muted); margin: 6px 0 0; }
+    .zhichang-album-post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .zhichang-album-post-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px; cursor: pointer; transition: all 0.2s;
+    }
+    .zhichang-album-post-card:hover {
+      border-color: #6366f1; background: rgba(99,102,241,0.06);
+    }
+    .zhichang-album-post-num {
+      font-size: 11px; font-weight: 700; color: #6366f1;
+      background: rgba(99,102,241,0.12); display: inline-block;
+      padding: 2px 8px; border-radius: 20px; margin-bottom: 8px;
+    }
+    .zhichang-album-post-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .zhichang-album-post-tags { font-size: 11px; color: #818cf8; margin-bottom: 8px; }
+    .zhichang-album-post-tags span { margin-right: 6px; }
+    .zhichang-album-post-preview {
+      font-size: 12px; color: var(--text-muted); line-height: 1.5;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    #zhichang-active-post-meta {
+      display: none; max-width: 640px; margin: 12px auto 0;
+      padding: 10px 14px; border-radius: 10px;
+      background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.25);
+      font-size: 13px; color: var(--text-muted); text-align: center;
+    }
+    .zhichang-copy-text-btn { margin-left: 10px; padding: 4px 10px !important; font-size: 12px !important; }
+    .zhichang-poster-textarea { min-height: 220px; }
+    .zhichang-album-load-hint {
+      padding: 16px 18px; border-radius: 12px; font-size: 13px; line-height: 1.6;
+      color: #fca5a5; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3);
+      text-align: left;
+    }
+    .zhichang-album-load-hint code { color: #fbbf24; font-size: 12px; }
+    .zhichang-album-hero {
+      max-width: 640px; margin: 20px auto 0; text-align: left;
+    }
 
     /* ===== K线教学 ===== */
     .kline-chapter-list {
@@ -1560,7 +1673,7 @@ transition: opacity 0.2s;
         <button class="module-tab-btn active" onclick="switchModule('industry')" id="tab-industry">🏭 产业链分析</button>
         <button class="module-tab-btn" onclick="switchModule('xhs')" id="tab-xhs">📕 小红书创作</button>
         <button class="module-tab-btn kline-active" onclick="switchModule('kline')" id="tab-kline">📊 K线教学</button>
-        <button class="module-tab-btn" onclick="switchModule('shiliao')" id="tab-shiliao">🥗 食疗</button>
+        <button class="module-tab-btn" onclick="switchModule('shiliao')" id="tab-shiliao">🥗 健康饮食</button>
         <button class="module-tab-btn zhichang-active" onclick="switchModule('zhichang')" id="tab-zhichang">💼 职场</button>
       </div>
     </div>
@@ -1598,6 +1711,7 @@ transition: opacity 0.2s;
           <span class="hotkey-tag" onclick="quickSearch('2026六大主线')">2026六大主线</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体')">半导体</span>
           <span class="hotkey-tag" onclick="quickSearch('半导体稀缺材料')">半导体稀缺材料</span>
+          <span class="hotkey-tag" style="border-color:rgba(99,102,241,0.35);color:#a5b4fc;background:rgba(99,102,241,0.12)" onclick="openScarceMaterialsPosterPage()">🧪 稀缺材料海报</span>
           <span class="hotkey-tag" onclick="quickSearch('先进封装')">先进封装</span>
           <span class="hotkey-tag" onclick="quickSearch('特斯拉FSD入华')">特斯拉FSD入华</span>
           <span class="hotkey-tag" onclick="quickSearch('AI算力')">AI算力</span>
@@ -1657,18 +1771,19 @@ transition: opacity 0.2s;
         </div>
       </div>
 
-      <!-- ===== 食疗模块 Header ===== -->
+      <!-- ===== 健康饮食模块 Header ===== -->
       <div id="header-shiliao" style="display:none">
         <div class="logo">
           <div class="logo-icon" style="background:linear-gradient(135deg,#65a30d,#15803d)">🥗</div>
           <div>
-            <div class="logo-text">食疗养生 · 食材百科</div>
-            <div class="logo-sub">Food Therapy & Ingredient Wellness</div>
+            <div class="logo-text">健康饮食 · 食材百科</div>
+            <div class="logo-sub">Healthy Eating & Nutrition</div>
             <div class="shiliao-mode-tabs" style="margin-top:10px">
               <button class="shiliao-mode-btn active" data-mode="ingredient" onclick="switchShiliaoMode('ingredient')">🥬 食材百科</button>
-              <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🏥 对症食疗</button>
-              <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🫀 器官食补</button>
-              <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 食疗汇总</button>
+              <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🍽️ 场景饮食</button>
+              <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🥗 营养侧重</button>
+              <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 饮食汇总</button>
+              <button class="shiliao-mode-btn" data-mode="list" onclick="switchShiliaoMode('list')">📊 榜单模版</button>
             </div>
           </div>
         </div>
@@ -1677,16 +1792,9 @@ transition: opacity 0.2s;
             placeholder="搜索常用食材，如：生姜、山药、红枣..."
             autocomplete="off"
             onkeydown="if(event.key==='Enter')doShiliaoSearchFromInput()" />
-          <button class="search-btn shiliao-search-btn" onclick="doShiliaoSearchFromInput()">食疗 →</button>
+          <button class="search-btn shiliao-search-btn" onclick="doShiliaoSearchFromInput()">搜索 →</button>
         </div>
-        <div class="hotkeys" id="shiliao-hotkeys">
-          <span class="hotkey-label">常用食材：</span>
-          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('生姜')">🫚 生姜</span>
-          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('山药')">🍠 山药</span>
-          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('红枣')">🍒 红枣</span>
-          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('薏米')">🌾 薏米</span>
-          <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('白萝卜')">🥕 白萝卜</span>
-        </div>
+        <div class="hotkeys" id="shiliao-hotkeys"></div>
       </div>
 
       <!-- ===== 职场模块 Header ===== -->
@@ -1699,10 +1807,8 @@ transition: opacity 0.2s;
           </div>
         </div>
         <div class="hotkeys" id="zhichang-hotkeys">
-          <span class="hotkey-label">快捷文案：</span>
-          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-1')">😮‍💨 想退休</span>
-          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-2')">📅 无效会议</span>
-          <span class="hotkey-tag zhichang-hotkey-tag" onclick="applyZhichangSampleById('demo-3')">🎉 周五灵魂</span>
+          <span class="hotkey-label">共鸣话题：</span>
+          <span class="hotkey-tag zhichang-hotkey-tag" onclick="openZhichangAlbum('album-wonang')">🫠 窝囊整顿</span>
         </div>
       </div>
 
@@ -1744,7 +1850,7 @@ transition: opacity 0.2s;
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
-        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 电子纸 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 — 查看 Top10 订单规模海报，支持下载与复制</div>
+        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 电子纸 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 · 人形机器人 — 查看 Top10 订单规模海报，支持下载与复制</div>
       </div>
       <div class="capacity-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px">
         <div class="capacity-rank-entry-title">📊 2026 产业链产能排行榜</div>
@@ -1824,6 +1930,10 @@ transition: opacity 0.2s;
         <div class="welcome-card" onclick="quickSearch('半导体稀缺材料')">
           <div class="welcome-card-icon">🔬</div>
           <div class="welcome-card-name">稀缺材料</div>
+        </div>
+        <div class="welcome-card" onclick="openScarceMaterialsPosterPage()" style="border-color:rgba(99,102,241,0.35);background:rgba(99,102,241,0.06)">
+          <div class="welcome-card-icon">📋</div>
+          <div class="welcome-card-name">稀缺材料海报</div>
         </div>
         <div class="welcome-card" onclick="openCapacityRankGroupPage('compute')" style="border-color:rgba(124,58,237,0.35);background:rgba(124,58,237,0.06)">
           <div class="welcome-card-icon">🚀</div>
@@ -1949,21 +2059,41 @@ transition: opacity 0.2s;
       <div class="xhs-topic-list" id="xhs-topic-list" style="margin-top:24px;max-width:900px;margin-left:auto;margin-right:auto"></div>
     </div>
 
-    <!-- ===== 食疗模块 Welcome ===== -->
+    <!-- ===== 健康饮食模块 Welcome ===== -->
     <div id="welcome-shiliao" class="welcome" style="display:none">
       <div class="welcome-icon" style="font-size:64px;margin-bottom:20px">🥗</div>
-      <h2>食疗养生 · 食材百科</h2>
+      <h2>健康饮食 · 食材百科</h2>
       <div class="shiliao-mode-tabs" style="margin:16px auto 0">
-        <button class="shiliao-mode-btn active" data-mode="ingredient" onclick="switchShiliaoMode('ingredient')">🥬 食材百科（60种）</button>
-        <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🏥 对症食疗（39种）</button>
-        <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🫀 器官食补（12个）</button>
-        <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 食疗汇总</button>
+        <button class="shiliao-mode-btn active" data-mode="ingredient" onclick="switchShiliaoMode('ingredient')">🥬 食材百科</button>
+        <button class="shiliao-mode-btn" data-mode="disease" onclick="switchShiliaoMode('disease')">🍽️ 场景饮食</button>
+        <button class="shiliao-mode-btn" data-mode="organ" onclick="switchShiliaoMode('organ')">🥗 营养侧重</button>
+        <button class="shiliao-mode-btn" data-mode="summary" onclick="switchShiliaoMode('summary')">📋 饮食汇总</button>
+        <button class="shiliao-mode-btn" data-mode="list" onclick="switchShiliaoMode('list')">📊 榜单模版</button>
       </div>
       <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:520px;margin:16px auto 0">
-        搜索常用食材，查看<strong>养生作用</strong>、<strong>古籍记载</strong>、<strong>对症食疗菜</strong><br/>
-        <span style="color:#65a30d;font-size:13px">✨ 食疗海报可下载 · 60秒口播稿可直接朗读</span>
+        当前暂无内容，待录入新数据<br/>
+        <span style="color:#65a30d;font-size:13px">支持食材百科 · 场景饮食 · 营养侧重 · 饮食汇总 · 榜单模版</span>
       </p>
       <div class="welcome-grid" id="shiliao-welcome-grid" style="margin-top:28px"></div>
+
+      <div class="shiliao-list-panel" id="shiliao-list-panel">
+        <div class="shiliao-list-panel-head">
+          <h3 id="shiliao-list-panel-title">Top10 榜单预览</h3>
+        </div>
+        <div class="shiliao-list-theme-row" id="shiliao-list-theme-row">
+          <button type="button" class="shiliao-list-theme-btn" data-theme="green" onclick="switchShiliaoListTheme('green')">🌿 清新绿</button>
+          <button type="button" class="shiliao-list-theme-btn" data-theme="mint" onclick="switchShiliaoListTheme('mint')">💜 薄荷紫</button>
+          <button type="button" class="shiliao-list-theme-btn" data-theme="pink" onclick="switchShiliaoListTheme('pink')">🌸 温柔粉</button>
+        </div>
+        <div class="poster-wrap" id="shiliao-list-poster-wrap">
+          <div id="shiliao-list-poster-pages"></div>
+          <div class="poster-actions">
+            <button class="btn btn-primary shiliao-dl-btn" type="button" onclick="downloadShiliaoListPosterFromUI()">⬇️ 下载榜单海报</button>
+            <button class="btn btn-secondary" type="button" onclick="copyShiliaoListPoster('shiliao-list-poster-canvas')">📋 复制海报</button>
+            <button class="btn btn-secondary" type="button" onclick="renderShiliaoListPosterPreview()">🔄 刷新预览</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ===== 职场模块 Welcome ===== -->
@@ -1972,8 +2102,38 @@ transition: opacity 0.2s;
       <h2>职场 · 海报模版</h2>
       <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:520px;margin:0 auto">
         使用<strong>模版底图</strong>，在<strong>中间区域</strong>填入文案，一键生成职场风格海报<br/>
-        <span style="color:#a5b4fc;font-size:13px">✨ 支持换行 · 自动居中 · 下载 / 复制</span>
+        <span style="color:#a5b4fc;font-size:13px">✨ 图文专辑 · 8–15 行正文 · 支持换行 · 下载 / 复制</span>
       </p>
+
+      <div class="zhichang-album-hero">
+        <div class="zhichang-album-list-label">📚 图文专辑</div>
+        <div class="zhichang-album-list-wrap" id="zhichang-album-list-wrap">
+          <div id="zhichang-album-list">
+            <div class="zhichang-album-entry" onclick="openZhichangAlbum('album-wonang')" role="button" tabindex="0"
+              onkeydown="if(event.key==='Enter'||event.key===' ')openZhichangAlbum('album-wonang')">
+              <div class="zhichang-album-entry-icon">🫠</div>
+              <div class="zhichang-album-entry-body">
+                <div class="zhichang-album-entry-title">00后整顿职场（窝囊版）</div>
+                <div class="zhichang-album-entry-desc">整顿职场 × 只敢在心里 · 30 条图文</div>
+              </div>
+              <div class="zhichang-album-entry-arrow">→</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="zhichang-album-panel">
+        <div class="zhichang-album-panel-head">
+          <div>
+            <h3 id="zhichang-album-panel-title"></h3>
+            <p id="zhichang-album-panel-sub"></p>
+          </div>
+          <button type="button" class="btn btn-secondary" onclick="closeZhichangAlbum()">← 返回专辑列表</button>
+        </div>
+        <div class="zhichang-album-post-grid" id="zhichang-album-post-grid"></div>
+      </div>
+
+      <div id="zhichang-active-post-meta"></div>
 
       <div class="zhichang-editor-wrap">
         <div class="zhichang-editor-label">中间文字（Enter 换行）</div>
@@ -2208,6 +2368,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-e-paper-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-humanoid-robot-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-humanoid-robot-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-humanoid-robot-canvas','人形机器人订单榜-2026.png')">⬇️ 下载人形机器人订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-humanoid-robot-canvas')">📋 复制</button>
+        </div>
+      </div>
       <div class="poster-wrap" id="capacity-rank-optical-module-wrap" style="display:none;margin-top:20px">
         <div id="capacity-rank-optical-module-pages"></div>
         <div class="poster-actions">
@@ -2428,7 +2595,7 @@ transition: opacity 0.2s;
     </div>
   </div>
 
-  <!-- ===== 食疗结果区（完全独立）===== -->
+  <!-- ===== 健康饮食结果区（完全独立）===== -->
   <div id="shiliao-result">
     <button type="button" class="shiliao-back-btn" onclick="backToShiliaoOverview()">← 返回总览</button>
     <div class="shiliao-result-header" id="shiliao-header">
@@ -2440,8 +2607,8 @@ transition: opacity 0.2s;
     </div>
 
     <div class="shiliao-tabs" id="shiliao-tabs">
-      <button class="shiliao-tab-btn active" data-tab="shiliao-detail" onclick="switchShiliaoTab('shiliao-detail', this)">📋 食疗详情</button>
-      <button class="shiliao-tab-btn" data-tab="shiliao-poster" onclick="switchShiliaoTab('shiliao-poster', this)">🎨 食疗海报</button>
+      <button class="shiliao-tab-btn active" data-tab="shiliao-detail" onclick="switchShiliaoTab('shiliao-detail', this)">📋 饮食详情</button>
+      <button class="shiliao-tab-btn" data-tab="shiliao-poster" onclick="switchShiliaoTab('shiliao-poster', this)">🎨 饮食海报</button>
       <button class="shiliao-tab-btn" data-tab="shiliao-voice" onclick="switchShiliaoTab('shiliao-voice', this)">🎙️ 60s口播</button>
     </div>
 
@@ -2453,7 +2620,7 @@ transition: opacity 0.2s;
       <div class="poster-wrap" id="shiliao-poster-wrap">
         <div id="shiliao-poster-pages"></div>
         <div class="poster-actions">
-          <button class="btn btn-primary shiliao-dl-btn" onclick="downloadShiliaoPoster()">⬇️ 下载食疗海报</button>
+          <button class="btn btn-primary shiliao-dl-btn" onclick="downloadShiliaoPoster()">⬇️ 下载饮食海报</button>
           <button class="btn btn-secondary" onclick="copyShiliaoPoster()">📋 复制海报</button>
         </div>
       </div>
@@ -2504,6 +2671,7 @@ transition: opacity 0.2s;
 <script src="data/order-rank-power2026.js"></script>
 <script src="data/order-rank-storage-chip2026.js"></script>
 <script src="data/order-rank-e-paper2026.js"></script>
+<script src="data/order-rank-humanoid-robot2026.js"></script>
 <script src="data/capacity-rank2026.js"></script>
 <script src="data/capacity-rank-consumer-electronics2026.js"></script>
 <script src="data/capacity-rank-compute2026.js"></script>
@@ -2516,6 +2684,7 @@ transition: opacity 0.2s;
 <script src="js/industry/capacity-rank-pages.js"></script>
 <script src="js/industry/consumables-rank-pages.js"></script>
 <script src="js/industry/capacity-rank-poster.js"></script>
+<script src="js/industry/scarce-materials-poster.js"></script>
 
 <!-- 5. 板块龙头模块 -->
 <script src="js/sector/search.js"></script>
@@ -2538,7 +2707,7 @@ transition: opacity 0.2s;
 <script src="js/kline/render.js"></script>
 <script src="js/kline/ui.js"></script>
 
-<!-- 8. 食疗模块 -->
+<!-- 8. 健康饮食模块 -->
 <script src="js/shiliao/data-extra.js"></script>
 <script src="js/shiliao/data-household.js"></script>
 <script src="js/shiliao/data.js"></script>
@@ -2557,10 +2726,14 @@ transition: opacity 0.2s;
 <script src="js/shiliao/disease-poster.js"></script>
 <script src="js/shiliao/organ-poster.js"></script>
 <script src="js/shiliao/summary-poster.js"></script>
+<script src="js/shiliao/list-template.js"></script>
+<script src="js/shiliao/list-data.js"></script>
+<script src="js/shiliao/list-poster.js"></script>
 <script src="js/shiliao/ui.js"></script>
 
 <!-- 9. 职场模块 -->
 <script src="js/zhichang/template.js"></script>
+<script src="js/zhichang/album-wonang.js?v=1"></script>
 <script src="js/zhichang/poster.js"></script>
 <script src="js/zhichang/ui.js"></script>
 <script>
@@ -2757,11 +2930,24 @@ function openConsumablesRankPage() {
   window.location.href = 'consumables-poster.html';
 }
 
+function openScarceMaterialsPosterPage() {
+  window.location.href = 'scarce-materials-poster.html';
+}
+
 // 页面加载完成后初始化 Select
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(initIndustrySelect, 100);
+  if (typeof renderZhichangAlbums === 'function') {
+    renderZhichangAlbums();
+  }
   if (window.location.hash.startsWith('#kline')) {
     switchModule('kline');
+  } else if (window.location.hash.startsWith('#zhichang')) {
+    switchModule('zhichang');
+    const m = window.location.hash.match(/^#zhichang(?:\/([\w-]+))?/);
+    if (m && m[1] && typeof openZhichangAlbum === 'function') {
+      setTimeout(function() { openZhichangAlbum(m[1]); }, 80);
+    }
   }
 });
 </script>

@@ -1,10 +1,10 @@
 /**
- * 食疗内容渲染
+ * 健康饮食内容渲染
  */
 function renderShiliaoResult(data) {
   if (!data) return;
 
-  document.getElementById('shiliao-title').textContent = `${data.icon || '🥗'} ${data.name} · 食疗养生`;
+  document.getElementById('shiliao-title').textContent = `${data.icon || '🥗'} ${data.name} · 健康饮食`;
   document.getElementById('shiliao-desc').textContent = data.summary;
   document.getElementById('shiliao-stats').innerHTML = `
     <div class="shiliao-stat">
@@ -13,7 +13,7 @@ function renderShiliaoResult(data) {
     </div>
     <div class="shiliao-stat">
       <div class="shiliao-stat-num">${(data.dishes || []).length}</div>
-      <div class="shiliao-stat-label">食疗菜品</div>
+      <div class="shiliao-stat-label">推荐菜品</div>
     </div>
     <div class="shiliao-stat">
       <div class="shiliao-stat-num">60s</div>
@@ -55,7 +55,7 @@ function renderShiliaoDetail(data) {
       (d) => `
     <div class="shiliao-dish-card">
       <div class="shiliao-dish-name">${d.name}</div>
-      <div class="shiliao-dish-symptom"><span>缓解：</span>${d.symptom}</div>
+      <div class="shiliao-dish-symptom"><span>适合：</span>${d.symptom}</div>
       <div class="shiliao-dish-note">${d.note}</div>
     </div>`
     )
@@ -63,7 +63,7 @@ function renderShiliaoDetail(data) {
 
   el.innerHTML = `
     <section class="shiliao-section">
-      <h3 class="shiliao-section-title">🌿 养生医疗作用</h3>
+      <h3 class="shiliao-section-title">🌿 营养特点</h3>
       <ul class="shiliao-effect-list">${effects}</ul>
     </section>
     <section class="shiliao-section">
@@ -71,7 +71,7 @@ function renderShiliaoDetail(data) {
       <div class="shiliao-classic-list">${classics}</div>
     </section>
     <section class="shiliao-section">
-      <h3 class="shiliao-section-title">🍲 食疗菜品 · 对症调理</h3>
+      <h3 class="shiliao-section-title">🍲 推荐菜品 · 日常搭配</h3>
       <div class="shiliao-dish-list">${dishes}</div>
     </section>
     ${
@@ -82,7 +82,7 @@ function renderShiliaoDetail(data) {
     </section>`
         : ''
     }
-    <p class="shiliao-disclaimer">以上内容整理自中医典籍与食疗文献，仅供参考，不构成医疗建议。身体不适请就医。</p>
+    <p class="shiliao-disclaimer">以上内容整理自饮食文化与营养常识，仅供参考，不替代专业意见。</p>
   `;
 }
 
@@ -92,7 +92,7 @@ function renderShiliaoVoiceover(data) {
   const text = data.voiceover || '';
   const len = text.length;
   const estSec = Math.round(len / 4);
-  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 食疗口播要点`;
+  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 饮食口播要点`;
   const voiceSummary = data.voiceSummary || data.summary || '';
   el.innerHTML = `
     <div class="shiliao-voice-summary">

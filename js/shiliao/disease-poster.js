@@ -1,5 +1,5 @@
 /**
- * 对症食疗 / 器官食补海报 Canvas 绘制（紧凑双列排版）
+ * 场景饮食 / 营养侧重海报 Canvas 绘制（紧凑双列排版）
  */
 function getShiliaoDiseasePosterLayout() {
   return {
@@ -102,7 +102,7 @@ function renderShiliaoTherapyPoster(data, kind) {
   const label = document.createElement('div');
   label.className = 'poster-page-label';
   label.textContent =
-    kind === 'organ' ? `${data.name} · 器官食补海报` : `${data.name} · 对症食疗海报`;
+    kind === 'organ' ? `${data.name} · 营养侧重海报` : `${data.name} · 场景饮食海报`;
   container.appendChild(label);
 
   const canvas = document.createElement('canvas');
@@ -142,14 +142,14 @@ function drawShiliaoTherapyPoster(ctx, data, W, H, kind) {
 
   let y = L.TOP;
   const headTitle = isOrgan
-    ? `${data.icon || ''} ${data.name} · 器官食补`
-    : `${data.icon || ''} ${data.name} · 对症食疗`;
+    ? `${data.icon || ''} ${data.name} · 营养侧重`
+    : `${data.icon || ''} ${data.name} · 场景饮食`;
   y = drawShiliaoPosterHeader(ctx, y, headTitle, data.summary, W, cardW, L.PAD, L, accent, 8, cardW - 20);
 
   const secOpts = { L, accent, cardW, pad: L.PAD, innerW };
-  const principleTitle = isOrgan ? '调养要点' : '调理原则';
+  const principleTitle = isOrgan ? '营养要点' : '饮食建议';
   const ingTitle = isOrgan ? '偏爱食材' : '推荐食材';
-  const dishTitle = isOrgan ? '推荐菜品' : '食疗菜品';
+  const dishTitle = '推荐菜品';
 
   y = drawShiliaoPosterSection(ctx, y, principleTitle, principleH, (w) => {
     if (!data.principle) return;
@@ -172,8 +172,8 @@ function drawShiliaoTherapyPoster(ctx, data, W, H, kind) {
   ctx.textBaseline = 'middle';
   const td = new Date();
   const footer = isOrgan
-    ? `器官食补 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，请及时就医`
-    : `对症食疗 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，请及时就医`;
+    ? `营养侧重 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考`
+    : `场景饮食 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考`;
   ctx.fillText(footer, W / 2, H - L.FOOTER / 2);
   ctx.textAlign = 'left';
   ctx.textBaseline = 'alphabetic';

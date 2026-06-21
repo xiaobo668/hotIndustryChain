@@ -1,10 +1,10 @@
 /**
- * 对症食疗内容渲染
+ * 场景饮食内容渲染
  */
 function renderShiliaoDiseaseResult(data) {
   if (!data) return;
 
-  document.getElementById('shiliao-title').textContent = `${data.icon || '🏥'} ${data.name} · 对症食疗`;
+  document.getElementById('shiliao-title').textContent = `${data.icon || '🍽️'} ${data.name} · 场景饮食`;
   document.getElementById('shiliao-desc').textContent = data.summary || '';
   document.getElementById('shiliao-stats').innerHTML = `
     <div class="shiliao-stat">
@@ -13,14 +13,14 @@ function renderShiliaoDiseaseResult(data) {
     </div>
     <div class="shiliao-stat">
       <div class="shiliao-stat-num">${(data.dishes || []).length}</div>
-      <div class="shiliao-stat-label">食疗菜品</div>
+      <div class="shiliao-stat-label">推荐菜品</div>
     </div>
     <div class="shiliao-stat">
       <div class="shiliao-stat-num">60s</div>
       <div class="shiliao-stat-label">口播脚本</div>
     </div>
     <div class="shiliao-stat">
-      <div class="shiliao-stat-num" style="font-size:12px;color:#65a30d">${data.category || '对症'}</div>
+      <div class="shiliao-stat-num" style="font-size:12px;color:#65a30d">${data.category || '场景'}</div>
       <div class="shiliao-stat-label">分类</div>
     </div>
   `;
@@ -38,7 +38,7 @@ function renderShiliaoDiseaseDetail(data) {
 
   const principle = data.principle
     ? `<section class="shiliao-section">
-      <h3 class="shiliao-section-title">📌 调理原则</h3>
+      <h3 class="shiliao-section-title">📌 饮食建议</h3>
       <div class="shiliao-disease-principle">${data.principle}</div>
     </section>`
     : '';
@@ -71,18 +71,18 @@ function renderShiliaoDiseaseDetail(data) {
       <div class="shiliao-ingredient-list">${ingredients}</div>
     </section>
     <section class="shiliao-section">
-      <h3 class="shiliao-section-title">🍲 食疗菜品 · ${(data.dishes || []).length} 道</h3>
+      <h3 class="shiliao-section-title">🍲 推荐菜品 · ${(data.dishes || []).length} 道</h3>
       <div class="shiliao-dish-list">${dishes}</div>
     </section>
     ${
       data.caution
         ? `<section class="shiliao-section shiliao-caution">
-      <h3 class="shiliao-section-title">⚠️ 调理注意</h3>
+      <h3 class="shiliao-section-title">⚠️ 注意事项</h3>
       <p>${data.caution}</p>
     </section>`
         : ''
     }
-    <p class="shiliao-disclaimer">以上内容整理自中医食疗文献，仅供参考，不构成医疗建议。疾病症状请及时就医。</p>
+    <p class="shiliao-disclaimer">以上内容整理自饮食文化与营养常识，仅供参考，不替代专业意见。</p>
   `;
 }
 
@@ -92,7 +92,7 @@ function renderShiliaoDiseaseVoiceover(data) {
   const text = data.voiceover || '';
   const len = text.length;
   const estSec = Math.round(len / 4);
-  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 对症食疗口播`;
+  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 场景饮食口播`;
   const voiceSummary = data.voiceSummary || data.summary || '';
   el.innerHTML = `
     <div class="shiliao-voice-summary">

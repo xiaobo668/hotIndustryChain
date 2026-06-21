@@ -1,5 +1,5 @@
 /**
- * 食疗汇总内容渲染
+ * 饮食汇总内容渲染
  */
 function renderShiliaoSummaryResult(data) {
   if (!data) return;
@@ -79,7 +79,7 @@ function renderShiliaoSummaryDetail(data) {
     </section>`
         : ''
     }
-    <p class="shiliao-disclaimer">古籍引文整理自中医典籍与食疗文献，仅供参考，不构成医疗建议。</p>
+    <p class="shiliao-disclaimer">古籍引文整理自饮食典籍与营养常识，仅供参考，不替代专业意见。</p>
   `;
 }
 

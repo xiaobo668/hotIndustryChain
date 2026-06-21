@@ -1,5 +1,5 @@
 /**
- * 食疗搜索 — 本地食材库
+ * 健康饮食搜索 — 本地食材库
  */
 function doShiliaoSearch(query) {
   const q = (query || '').trim();
@@ -17,10 +17,7 @@ function doShiliaoSearch(query) {
     const nf = document.querySelector('#not-found h3');
     const np = document.querySelector('#not-found p');
     if (nf) nf.textContent = '暂未收录该食材';
-    if (np) {
-      np.innerHTML =
-        '当前内置 60 种常用食材，可切换「对症食疗」按症状查找<br/>试试：生姜、山药、红枣、枸杞、薏米';
-    }
+    if (np) np.innerHTML = '健康饮食模块暂无食材数据，待录入后可搜索';
     return;
   }
 

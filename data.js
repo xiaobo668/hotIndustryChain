@@ -774,16 +774,31 @@ const INDUSTRY_DATA = {
       {
         name: "核心零部件",
         companies: [
-          { name: "汇川技术", highlight: "伺服驱动+运动控制龙头，人形机器人关节电机核心供应商" },
-          { name: "绿的谐波", highlight: "谐波减速器龙头，工业机器人关节核心零部件" },
-          { name: "双环传动", highlight: "精密减速器，特斯拉人形机器人供应商认证" }
+          { name: "汇川技术", highlight: "伺服驱动+运动控制，人形机器人关节电控模组主要供货方" },
+          { name: "绿的谐波", highlight: "谐波减速器，人形旋转关节模组扩产配套" },
+          { name: "双环传动", highlight: "精密减速器，人形旋转关节RV/谐波配套" }
+        ]
+      },
+      {
+        name: "线性执行器/丝杠",
+        companies: [
+          { name: "三花智控", highlight: "机电执行器与线性传动模组，人形关节量产配套扩产" },
+          { name: "五洲新春", highlight: "行星滚柱丝杠与轴承，人形线性关节传动配套" },
+          { name: "贝斯特", highlight: "精密丝杠副，人形机器人线性执行器加工配套" }
+        ]
+      },
+      {
+        name: "结构件/轻量化部件",
+        companies: [
+          { name: "拓普集团", highlight: "铝合金结构件与执行器壳体，人形本体轻量化量产配套" }
         ]
       },
       {
         name: "传感器/感知",
         companies: [
           { name: "敏芯股份", highlight: "MEMS传感器，压力/惯性传感器机器人感知配套" },
-          { name: "奥比中光", highlight: "3D视觉传感器龙头，机器人与环境感知核心器件" },
+          { name: "奥比中光", highlight: "3D视觉传感器，人形环境感知与避障模组" },
+          { name: "柯力传感", highlight: "六维力/力矩传感器，人形灵巧手与关节力控感知" },
           { name: "汉威科技", highlight: "气体/压力传感器，工业机器人安全与环境感知" }
         ]
       }
@@ -3900,53 +3915,53 @@ const INDUSTRY_DATA = {
     name: "半导体稀缺材料",
     color: "#6366f1",
     gradient: ["#6366f1", "#4338ca"],
-    description: "梳理光刻机产业链之外的12类高壁垒半导体关键材料：磷化铟、光刻胶、碳化硅、ABF载板、钽电容、高端PCB、电子级硫酸、MLCC、铜箔、电子布、钽靶材、高纯氦气。口径：主业或核心收入与对应材料强相关；剔除科创板(688/689)；涨价/缺口描述来自自媒体梳理，仅供产业链学习，不构成投资建议。",
+    posterTitle: "半导体12大稀缺材料",
+    posterLabel: "半导体12大稀缺材料 · 单页产业图谱",
+    description: "梳理光刻机产业链之外的12类半导体关键材料：磷化铟、光刻胶、碳化硅、ABF载板、钽电容、高端PCB、电子级硫酸、MLCC、铜箔、电子布、钽靶材、高纯氦气。口径：主业或核心收入与对应材料强相关；剔除科创板(688/689)；数据来自企业年报与公开产业报道，属于产业链产业资料工具书，无证券投资分析、无个股价值研判，不构成任何股票买卖操作建议。",
+    themeGroups: [
+      { title: "一、上游关键材料", color: "#4338ca", segmentsKey: "upstream" },
+      { title: "二、中游关键材料", color: "#2563eb", segmentsKey: "midstream" },
+      { title: "三、下游关键材料", color: "#0369a1", segmentsKey: "downstream" },
+    ],
     upstream: [
       {
         name: "磷化铟衬底",
         companies: [
-          { name: "云南锗业", highlight: "锗/砷化镓/磷化铟衬底，光通信与毫米波雷达用InP外延片国产主力" },
+          { name: "云南锗业", highlight: "锗/砷化镓/磷化铟衬底，光通信与毫米波雷达用InP外延片国产主要参与者" },
           { name: "有研新材", highlight: "化合物半导体材料与靶材，磷化铟等高端衬底材料布局" },
           { name: "三安光电", highlight: "III-V族化合物外延，磷化铟相关光芯片材料能力" },
           { name: "海特高新", highlight: "化合物半导体产线，磷化铟外延片小批量供货（航空+半导体双主业）" },
-          { name: "乾照光电", highlight: "砷化镓/磷化铟外延片与化合物半导体芯片，光通信与显示外延产能" },
-          { name: "华灿光电", highlight: "GaAs/InP基LED外延片与芯片，化合物半导体衬底材料配套" },
-          { name: "聚灿光电", highlight: "GaAs基LED外延片量产，化合物半导体衬底与外延产能扩张" },
-          { name: "兆驰股份", highlight: "化合物半导体外延与光芯片，砷化镓/InP衬底材料产能布局" },
-          { name: "光迅科技", highlight: "磷化铟/砷化镓激光器外延片量产，光芯片垂直整合" },
-          { name: "驰宏锌锗", highlight: "锌冶炼副产精铟，磷化铟衬底产业链铟原料核心供应" }
+          { name: "株冶集团", highlight: "锌冶炼副产精铟，为InP产业链提供铟原料" }
         ]
       },
       {
         name: "光刻胶",
         companies: [
-          { name: "南大光电", highlight: "ArF/KrF光刻胶国产突破，晶圆厂验证与导入加速" },
+          { name: "南大光电", highlight: "ArF/KrF光刻胶国产化推进，晶圆厂验证与导入加速" },
           { name: "彤程新材", highlight: "参股北京科华，G线/I线及KrF光刻胶树脂与成品布局" },
           { name: "上海新阳", highlight: "KrF/ArF光刻胶与电镀液，晶圆制造材料平台型公司" },
-          { name: "晶瑞电材", highlight: "i线光刻胶+湿电子化学品，半导体材料双轮（300655）" },
+          { name: "晶瑞电材", highlight: "i线光刻胶+湿电子化学品，半导体材料双轮" },
           { name: "鼎龙股份", highlight: "CMP垫+光刻胶树脂/PI浆料，半导体材料国产替代" }
         ]
       },
       {
         name: "碳化硅",
         companies: [
-          { name: "三安光电", highlight: "6英寸SiC衬底+外延+器件IDM，800V快充与电驱核心材料" },
-          { name: "晶盛机电", highlight: "SiC长晶炉与衬底设备，碳化硅扩产直接受益" },
-          { name: "斯达半导", highlight: "SiC功率模块龙头，衬底紧缺下模块环节高景气" },
-          { name: "东尼电子", highlight: "SiC切割线/耗材与器件配套（替换原图天岳先进688）" },
-          { name: "露笑科技", highlight: "SiC衬底产线建设，弹性标的但量产兑现需跟踪" }
+          { name: "三安光电", highlight: "6英寸SiC衬底+外延+器件IDM，800V快充与电驱关键材料" },
+          { name: "晶盛机电", highlight: "SiC长晶炉与衬底设备，碳化硅扩产配套环节" },
+          { name: "斯达半导", highlight: "SiC功率模块主要厂商，衬底供应偏紧下模块环节" },
+          { name: "东尼电子", highlight: "SiC切割线/耗材与器件配套" },
+          { name: "露笑科技", highlight: "SiC衬底产线建设，量产进度以公告为准" }
         ]
       },
       {
         name: "ABF载板/上游",
         companies: [
-          { name: "深南电路", highlight: "ABF载板国内龙头，CPU/GPU封装基板核心供应商" },
+          { name: "深南电路", highlight: "ABF载板国内主要厂商，CPU/GPU封装基板主要供货企业" },
           { name: "兴森科技", highlight: "IC载板+ABF布局，AI算力封装基板扩产" },
-          { name: "鹏鼎控股", highlight: "全球PCB龙头，高端HDI/类载板能力向ABF延伸" },
-          { name: "生益科技", highlight: "覆铜板/CCL龙头，ABF载板上游关键基材（替换崇达技术）" },
-          { name: "东材科技", highlight: "高速树脂与膜材料，ABF上游国产替代（替换东山精密）" },
-          { name: "骏亚科技", highlight: "覆铜板+PCB一体化，IC载板与ABF封装基板样品验证推进" },
-          { name: "超声电子", highlight: "覆铜板+PCB综合厂商，高性能HDI与封装基板向ABF延伸" }
+          { name: "鹏鼎控股", highlight: "全球PCB规模靠前厂商，高端HDI/类载板能力向ABF延伸" },
+          { name: "生益科技", highlight: "覆铜板/CCL主要厂商，ABF载板上游关键基材" },
+          { name: "东材科技", highlight: "高速树脂与膜材料，ABF上游国产替代" }
         ]
       }
     ],
@@ -3954,21 +3969,21 @@ const INDUSTRY_DATA = {
       {
         name: "钽电容",
         companies: [
-          { name: "宏达电子", highlight: "钽电容军工+民用龙头，AI服务器高可靠电容供应商" },
-          { name: "振华科技", highlight: "钽电容与混合集成电路，特种被动元件核心央企平台" },
+          { name: "宏达电子", highlight: "钽电容军工+民用主要厂商，AI服务器高可靠电容供货" },
+          { name: "振华科技", highlight: "钽电容与混合集成电路，特种被动元件央企产业平台" },
           { name: "东方钽业", highlight: "钽粉-钽丝-钽电容产业链一体化，上游资源可控" },
           { name: "火炬电子", highlight: "钽电容+陶瓷电容，特种被动元件双主线" },
-          { name: "鸿远电子", highlight: "高可靠瓷介/钽相关特种电容（替换原图风华高科）" }
+          { name: "鸿远电子", highlight: "高可靠瓷介/钽相关特种电容" }
         ]
       },
       {
         name: "高端PCB载板",
         companies: [
-          { name: "沪电股份", highlight: "AI服务器/交换机高端PCB龙头，算力硬件核心供应商" },
+          { name: "沪电股份", highlight: "AI服务器/交换机高端PCB主要厂商，算力硬件主要供货企业" },
           { name: "胜宏科技", highlight: "GPU/AI服务器PCB，高层数HDI与高速板放量" },
-          { name: "深南电路", highlight: "高端PCB+IC载板双龙头，算力与通信双线" },
+          { name: "深南电路", highlight: "高端PCB+IC载板双主线主要厂商，算力与通信双线" },
           { name: "景旺电子", highlight: "汽车+服务器PCB，高端多层板国产替代" },
-          { name: "广合科技", highlight: "AI服务器PCB新锐，算力板订单放量（替换生益科技/生益电子688）" }
+          { name: "广合科技", highlight: "AI服务器PCB后起厂商，算力板订单放量" }
         ]
       },
       {
@@ -3976,19 +3991,19 @@ const INDUSTRY_DATA = {
         companies: [
           { name: "晶瑞电材", highlight: "电子级硫酸/双氧水等湿法清洗液，晶圆厂认证供应商" },
           { name: "江化微", highlight: "湿电子化学品，蚀刻/清洗用电子级酸液" },
-          { name: "格林达", highlight: "TMAH显影液等湿电子化学品（替换原图兴福电子未上市）" },
-          { name: "巨化股份", highlight: "电子级氢氟酸/氟化工（替换原图中巨芯688）" },
+          { name: "格林达", highlight: "TMAH显影液等湿电子化学品" },
+          { name: "巨化股份", highlight: "电子级氢氟酸/氟化工" },
           { name: "多氟多", highlight: "电子级氢氟酸与氟化盐，半导体湿法清洗材料配套" }
         ]
       },
       {
         name: "MLCC电容",
         companies: [
-          { name: "风华高科", highlight: "国内MLCC出货龙头，AI/车规高容MLCC紧缺受益" },
+          { name: "风华高科", highlight: "国内MLCC出货规模居前，AI/车规高容MLCC供需偏紧环节" },
           { name: "三环集团", highlight: "MLCC+粉体垂直一体化，高端被动元件国产替代" },
           { name: "火炬电子", highlight: "特种MLCC+瓷介电容，高可靠场景份额高" },
-          { name: "鸿远电子", highlight: "军用高可靠MLCC，宇航级瓷介电容龙头" },
-          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉龙头，粉体涨价周期核心受益" }
+          { name: "鸿远电子", highlight: "军用高可靠MLCC，宇航级瓷介电容主要厂商" },
+          { name: "国瓷材料", highlight: "MLCC介质陶瓷粉主要厂商，粉体供应环节" }
         ]
       }
     ],
@@ -3997,27 +4012,27 @@ const INDUSTRY_DATA = {
         name: "铜箔",
         companies: [
           { name: "铜冠铜箔", highlight: "锂电铜箔+电子电路铜箔，AI服务器PCB与电池双需求" },
-          { name: "逸豪新材", highlight: "电子电路/锂电铜箔（替换原图嘉元科技688）" },
+          { name: "逸豪新材", highlight: "电子电路/锂电铜箔" },
           { name: "德福科技", highlight: "锂电铜箔快速扩产，电子电路铜箔第二曲线" },
           { name: "诺德股份", highlight: "铜箔老牌企业，锂电+电子铜箔双线" },
-          { name: "中一科技", highlight: "铜箔新贵，高端锂电与标准铜箔同步扩产" }
+          { name: "中一科技", highlight: "铜箔后起厂商，高端锂电与标准铜箔同步扩产" }
         ]
       },
       {
         name: "电子布",
         companies: [
-          { name: "中国巨石", highlight: "电子纱/电子布龙头，高端Low-DK电子布供给紧张" },
+          { name: "中国巨石", highlight: "电子纱/电子布主要厂商，高端Low-DK电子布供给偏紧" },
           { name: "宏和科技", highlight: "超薄电子布与特种玻璃纤维布，高端CCL reinforcing材料" },
           { name: "中材科技", highlight: "玻纤+隔膜双主业，电子布/特种纤维材料" },
           { name: "长海股份", highlight: "玻纤制品，电子布与复合材料配套" },
-          { name: "山东玻纤", highlight: "玻纤纱线，电子布上游原纱弹性标的" }
+          { name: "山东玻纤", highlight: "玻纤纱线，电子布上游原纱配套环节" }
         ]
       },
       {
         name: "半导体钽靶材",
         companies: [
-          { name: "江丰电子", highlight: "高纯溅射靶材龙头，钽/钛/铝靶核心供应商（替换金钼股份）" },
-          { name: "阿石创", highlight: "PVD靶材，钽/铝/铜等薄膜沉积材料（替换洛阳钼业）" },
+          { name: "江丰电子", highlight: "高纯溅射靶材主要厂商，钽/钛/铝靶主要供货企业" },
+          { name: "阿石创", highlight: "PVD靶材，钽/铝/铜等薄膜沉积材料" },
           { name: "有研新材", highlight: "稀有金属靶材与半导体材料，钽靶布局" },
           { name: "隆华科技", highlight: "钼/钨/钽等难熔金属靶材与材料" },
           { name: "东方钽业", highlight: "钽粉到靶材一体化，钽靶上游资源+材料" }
@@ -4027,10 +4042,10 @@ const INDUSTRY_DATA = {
         name: "高纯氦气",
         companies: [
           { name: "凯美特气", highlight: "工业气体+稀有气体，半导体刻蚀/清洗用氦气布局" },
-          { name: "杭氧股份", highlight: "空分与特种气体龙头，高纯气体供应能力" },
+          { name: "杭氧股份", highlight: "空分与特种气体主要厂商，高纯气体供应能力" },
           { name: "和远气体", highlight: "华中气体供应商，电子特气与氦气储运" },
-          { name: "雅克科技", highlight: "LNG/湿法特气与半导体材料（替换华特气体/金宏气体688）" },
-          { name: "侨源股份", highlight: "高纯工业气体，半导体厂务气体配套（替换正帆科技688）" }
+          { name: "雅克科技", highlight: "LNG/湿法特气与半导体材料" },
+          { name: "侨源股份", highlight: "高纯工业气体，半导体厂务气体配套" }
         ]
       }
     ]
@@ -4684,18 +4699,35 @@ const KEYWORD_MAP = {
    "竞彩": "2022世界杯"
   };
 
+// 解析 themeGroups.segmentsKey → segments
+function resolveIndustryThemeGroups(data) {
+  if (!data || !data.themeGroups || !data.themeGroups.length) return data;
+  return {
+    ...data,
+    themeGroups: data.themeGroups.map((t) => ({
+      title: t.title,
+      color: t.color,
+      segments: t.segments || data[t.segmentsKey] || [],
+    })),
+  };
+}
+
 // 搜索行业数据
 function searchIndustry(query) {
   const trimmed = query.trim();
+  let hit = null;
   // 精确匹配
-  if (INDUSTRY_DATA[trimmed]) return INDUSTRY_DATA[trimmed];
-  if (KEYWORD_MAP[trimmed]) return INDUSTRY_DATA[KEYWORD_MAP[trimmed]];
-  // 关键词映射（最长关键词优先，避免「Physical AI」被「AI」截胡）
-  const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
-  for (const [keyword, industryKey] of entries) {
-    if (trimmed.includes(keyword) || keyword.includes(trimmed)) {
-      return INDUSTRY_DATA[industryKey];
+  if (INDUSTRY_DATA[trimmed]) hit = INDUSTRY_DATA[trimmed];
+  else if (KEYWORD_MAP[trimmed]) hit = INDUSTRY_DATA[KEYWORD_MAP[trimmed]];
+  else {
+    // 关键词映射（最长关键词优先，避免「Physical AI」被「AI」截胡）
+    const entries = Object.entries(KEYWORD_MAP).sort((a, b) => b[0].length - a[0].length);
+    for (const [keyword, industryKey] of entries) {
+      if (trimmed.includes(keyword) || keyword.includes(trimmed)) {
+        hit = INDUSTRY_DATA[industryKey];
+        break;
+      }
     }
   }
-  return null;
+  return hit ? resolveIndustryThemeGroups(hit) : null;
 }

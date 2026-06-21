@@ -1,5 +1,5 @@
 /**
- * 对症食疗搜索
+ * 场景饮食搜索
  */
 function doShiliaoDiseaseSearch(query) {
   const q = (query || '').trim();
@@ -16,11 +16,8 @@ function doShiliaoDiseaseSearch(query) {
     document.getElementById('not-found').classList.add('show');
     const nf = document.querySelector('#not-found h3');
     const np = document.querySelector('#not-found p');
-    if (nf) nf.textContent = '暂未收录该症状/疾病';
-    if (np) {
-      np.innerHTML =
-        '当前内置 39 种常见不适：失眠、便秘、湿气重、风热感冒、痛风等<br/>可在欢迎页切换「对症食疗」浏览全部';
-    }
+    if (nf) nf.textContent = '暂未收录该饮食场景';
+    if (np) np.innerHTML = '健康饮食模块暂无场景饮食数据，待录入后可搜索';
     return;
   }
 
@@ -49,7 +46,7 @@ function quickShiliaoDiseaseSearch(name) {
   doShiliaoDiseaseSearch(name);
 }
 
-/** 从对症页跳转查看食材详情 */
+/** 从场景饮食页跳转查看食材详情 */
 function jumpToShiliaoIngredient(name) {
   if (!name) return;
   const key = resolveShiliaoKey(name);

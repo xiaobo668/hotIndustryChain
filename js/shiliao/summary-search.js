@@ -1,5 +1,5 @@
 /**
- * 食疗汇总搜索
+ * 饮食汇总搜索
  */
 function doShiliaoSummarySearch(query) {
   const q = (query || '').trim();
@@ -17,10 +17,7 @@ function doShiliaoSummarySearch(query) {
     const nf = document.querySelector('#not-found h3');
     const np = document.querySelector('#not-found p');
     if (nf) nf.textContent = '暂未收录该汇总主题';
-    if (np) {
-      np.innerHTML =
-        '当前汇总：增强免疫力、延年益寿、40岁养生、维C/蛋白排行等<br/>可在欢迎页切换「食疗汇总」浏览';
-    }
+    if (np) np.innerHTML = '健康饮食模块暂无饮食汇总数据，待录入后可搜索';
     return;
   }
 

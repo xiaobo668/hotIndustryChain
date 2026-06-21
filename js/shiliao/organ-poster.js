@@ -1,5 +1,5 @@
 /**
- * 器官食补海报 Canvas 绘制
+ * 营养侧重海报 Canvas 绘制
  */
 function getShiliaoOrganPosterLayout() {
   return getShiliaoDiseasePosterLayout();

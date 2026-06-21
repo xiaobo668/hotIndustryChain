@@ -325,7 +325,14 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '电力', wrapId: 'order-rank-power-wrap', pagesId: 'order-rank-power-pages', canvasId: 'order-rank-power-canvas' },
   { key: '存储芯片', wrapId: 'order-rank-storage-chip-wrap', pagesId: 'order-rank-storage-chip-pages', canvasId: 'order-rank-storage-chip-canvas' },
   { key: '电子纸', wrapId: 'order-rank-e-paper-wrap', pagesId: 'order-rank-e-paper-pages', canvasId: 'order-rank-e-paper-canvas' },
+  { key: '人形机器人', industryKeys: ['人形机器人', '机器人'], wrapId: 'order-rank-humanoid-robot-wrap', pagesId: 'order-rank-humanoid-robot-pages', canvasId: 'order-rank-humanoid-robot-canvas' },
 ];
+
+function orderRankConfigMatches(industryKey, cfg) {
+  if (!industryKey || !cfg) return false;
+  if (industryKey === cfg.key) return true;
+  return !!(cfg.industryKeys && cfg.industryKeys.includes(industryKey));
+}
 
 function getOrderRankDatasetByKey(key) {
   if (!key) return null;
@@ -341,6 +348,7 @@ function getOrderRankDatasetByKey(key) {
   if (key === '电力' && typeof ORDER_RANK_POWER2026 !== 'undefined') return ORDER_RANK_POWER2026;
   if (key === '存储芯片' && typeof ORDER_RANK_STORAGE_CHIP2026 !== 'undefined') return ORDER_RANK_STORAGE_CHIP2026;
   if (key === '电子纸' && typeof ORDER_RANK_E_PAPER2026 !== 'undefined') return ORDER_RANK_E_PAPER2026;
+  if ((key === '人形机器人' || key === '机器人') && typeof ORDER_RANK_HUMANOID_ROBOT2026 !== 'undefined') return ORDER_RANK_HUMANOID_ROBOT2026;
   return null;
 }
 
@@ -381,7 +389,7 @@ function maybeRenderOrderRankPoster(industry) {
   ORDER_RANK_POSTER_CONFIG.forEach((cfg) => {
     const wrap = document.getElementById(cfg.wrapId);
     if (!wrap) return;
-    const show = industryKey === cfg.key;
+    const show = orderRankConfigMatches(industryKey, cfg);
     wrap.style.display = show ? '' : 'none';
     if (show) {
       matchedConfig = true;

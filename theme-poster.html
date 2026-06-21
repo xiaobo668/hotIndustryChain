@@ -214,6 +214,16 @@
         <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-e-paper-canvas')">📋 复制</button>
       </div>
     </div>
+
+    <h1 style="margin-top:36px;font-size:20px">人形机器人 · 2026年订单规模 Top10</h1>
+    <p class="sub">1-6 名为公开报道/行业调研 2026 年人形机器人相关在手或预计订单（线性执行器、结构件、减速器、电控、微电机等）；7-10 名为产业链节点以 2025 年报业务规模作参考。已通过 scripts/verify-order-rank-humanoid-robot2026.js 复验。</p>
+    <div class="poster-wrap" id="order-rank-humanoid-robot-wrap">
+      <div id="order-rank-humanoid-robot-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-humanoid-robot-canvas','人形机器人订单榜-2026.png')">⬇️ 下载人形机器人订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-humanoid-robot-canvas')">📋 复制</button>
+      </div>
+    </div>
   </div>
   <script src="js/utils/canvas.js"></script>
   <script src="data/theme-poster-may2026.js"></script>
@@ -230,6 +240,7 @@
   <script src="data/order-rank-power2026.js"></script>
   <script src="data/order-rank-storage-chip2026.js"></script>
   <script src="data/order-rank-e-paper2026.js"></script>
+  <script src="data/order-rank-humanoid-robot2026.js"></script>
   <script src="js/industry/theme-poster.js"></script>
   <script src="js/industry/ytd-gainers-poster.js"></script>
   <script src="js/industry/order-rank-poster.js"></script>
@@ -253,6 +264,7 @@
       initOrderRankPosterPage(ORDER_RANK_POWER2026, 'order-rank-power-pages', 'order-rank-power-canvas');
       initOrderRankPosterPage(ORDER_RANK_STORAGE_CHIP2026, 'order-rank-storage-chip-pages', 'order-rank-storage-chip-canvas');
       initOrderRankPosterPage(ORDER_RANK_E_PAPER2026, 'order-rank-e-paper-pages', 'order-rank-e-paper-canvas');
+      initOrderRankPosterPage(ORDER_RANK_HUMANOID_ROBOT2026, 'order-rank-humanoid-robot-pages', 'order-rank-humanoid-robot-canvas');
     });
   </script>
 </body>

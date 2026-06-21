@@ -1,5 +1,5 @@
 /**
- * 食疗汇总海报 Canvas 绘制（紧凑双列）
+ * 饮食汇总海报 Canvas 绘制（紧凑双列）
  */
 function getShiliaoSummaryPosterLayout() {
   return {
@@ -209,7 +209,7 @@ function drawShiliaoSummaryPoster(ctx, data, W, H) {
   ctx.textBaseline = 'middle';
   const td = new Date();
   ctx.fillText(
-    `食疗汇总 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考`,
+    `饮食汇总 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考`,
     W / 2,
     H - L.FOOTER / 2
   );

@@ -1,10 +1,34 @@
 /**
- * 食疗 UI — 四模式切换、Tab 与欢迎页
+ * 健康饮食 UI — 四模式切换、Tab 与欢迎页
  */
 window._shiliaoMode = window._shiliaoMode || 'ingredient';
 window._shiliaoContentType = 'ingredient';
 
-const SHILIAO_MODES = ['ingredient', 'disease', 'organ', 'summary'];
+const SHILIAO_MODES = ['ingredient', 'disease', 'organ', 'summary', 'list'];
+
+function getShiliaoModeList(mode) {
+  if (mode === 'list') return getShiliaoListTopics();
+  if (mode === 'disease') return getShiliaoDiseaseList();
+  if (mode === 'organ') return getShiliaoOrganList();
+  if (mode === 'summary') return getShiliaoSummaryList();
+  return getShiliaoList();
+}
+
+function renderShiliaoEmptyHint(mode) {
+  const labels = {
+    ingredient: '食材百科',
+    disease: '场景饮食',
+    organ: '营养侧重',
+    summary: '饮食汇总',
+    list: '榜单模版',
+  };
+  return `
+    <div style="grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--text-muted)">
+      <div style="font-size:48px;margin-bottom:16px">🥗</div>
+      <div style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px">${labels[mode] || '健康饮食'}暂无内容</div>
+      <div style="font-size:14px;line-height:1.7">内容已清空，待录入新数据</div>
+    </div>`;
+}
 
 function initShiliaoUI() {
   renderShiliaoWelcomeCards();
@@ -17,6 +41,19 @@ function switchShiliaoMode(mode) {
   renderShiliaoWelcomeCards();
   const input = document.getElementById('shiliao-search-input');
   if (input) input.value = '';
+  const listPanel = document.getElementById('shiliao-list-panel');
+  if (mode !== 'list') {
+    if (listPanel) listPanel.style.display = 'none';
+    return;
+  }
+  if (window._shiliaoListTopicId) {
+    if (listPanel) listPanel.style.display = 'block';
+    updateShiliaoListThemeUI();
+    renderShiliaoListPosterPreview();
+    return;
+  }
+  const topics = getShiliaoListTopics();
+  if (topics.length) openShiliaoListTopic(topics[0].id);
 }
 
 function updateShiliaoModeUI() {
@@ -31,99 +68,95 @@ function updateShiliaoModeUI() {
   const hotkeys = document.getElementById('shiliao-hotkeys');
   const welcomeTitle = document.querySelector('#welcome-shiliao h2');
   const welcomeDesc = document.querySelector('#welcome-shiliao > p');
+  const count = getShiliaoModeList(mode).length;
+  const searchWrap = document.querySelector('#header-shiliao .search-wrap');
 
-  if (mode === 'disease') {
-    if (logoText) logoText.textContent = '对症食疗 · 症状查方';
-    if (logoSub) logoSub.textContent = 'Symptom-Based Food Therapy';
-    if (input) input.placeholder = '搜索症状/不适，如：失眠、湿气重、气血不足...';
-    if (welcomeTitle) welcomeTitle.textContent = '对症食疗 · 39 种常见不适';
+  if (mode === 'list') {
+    if (logoText) logoText.textContent = '健康饮食 · Top10 榜单';
+    if (logoSub) logoSub.textContent = 'Healthy Eating List Poster';
+    if (input) input.placeholder = '选择下方主题生成榜单海报';
+    if (welcomeTitle) welcomeTitle.textContent = `Top10 榜单模版 · ${count} 个示例`;
     if (welcomeDesc) {
       welcomeDesc.innerHTML =
-        '按<strong>症状/疾病</strong>查找推荐食材与<strong>3～5 道食疗菜</strong><br/>' +
-        '<span style="color:#65a30d;font-size:13px">✨ 对症海报可下载 · 食材可跳转百科 · 60秒口播可朗读</span>';
+        '选择主题与配色，一键生成竖版<strong>Top10 食物榜单</strong>海报<br/>' +
+        '<span style="color:#65a30d;font-size:13px">清新绿 · 薄荷紫 · 温柔粉 · 下载 / 复制</span>';
     }
-    if (hotkeys) {
-      hotkeys.innerHTML = `
-        <span class="hotkey-label">常见不适：</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoDiseaseSearch('失眠')">😴 失眠</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoDiseaseSearch('湿气重')">💦 湿气重</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoDiseaseSearch('气血不足')">💗 气血不足</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoDiseaseSearch('咳嗽痰多')">😷 咳嗽</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoDiseaseSearch('消化不良')">🫃 消化不良</span>
-      `;
+    if (searchWrap) searchWrap.style.display = 'none';
+  } else if (mode === 'disease') {
+    if (logoText) logoText.textContent = '场景饮食 · 日常查食谱';
+    if (logoSub) logoSub.textContent = 'Scene-Based Healthy Eating';
+    if (input) input.placeholder = count ? '搜索饮食场景…' : '暂无场景饮食数据';
+    if (welcomeTitle) welcomeTitle.textContent = `场景饮食${count ? ` · ${count} 个` : ''}`;
+    if (welcomeDesc) {
+      welcomeDesc.innerHTML = count
+        ? '按<strong>日常场景</strong>查找推荐食材与<strong>健康菜品</strong>'
+        : '当前暂无场景饮食内容<br/><span style="color:#65a30d;font-size:13px">待录入后可搜索、生成海报与口播</span>';
     }
   } else if (mode === 'summary') {
-    if (logoText) logoText.textContent = '食疗汇总 · 典籍清单';
-    if (logoSub) logoSub.textContent = 'Classic Food Therapy Lists';
-    if (input) input.placeholder = '搜索汇总主题，如：免疫力、延年益寿、40岁养生...';
-    if (welcomeTitle) welcomeTitle.textContent = '食疗汇总 · 典籍与营养清单';
+    if (logoText) logoText.textContent = '饮食汇总 · 清单';
+    if (logoSub) logoSub.textContent = 'Healthy Eating Lists';
+    if (input) input.placeholder = count ? '搜索汇总主题…' : '暂无饮食汇总数据';
+    if (welcomeTitle) welcomeTitle.textContent = `饮食汇总${count ? ` · ${count} 项` : ''}`;
     if (welcomeDesc) {
-      welcomeDesc.innerHTML =
-        '汇总<strong>增强免疫力</strong>、<strong>小儿脾胃</strong>、<strong>抗衰老</strong>、<strong>维C/蛋白排行</strong>等，附典籍出处<br/>' +
-        '<span style="color:#65a30d;font-size:13px">✨ 汇总海报可下载 · 已收录食材可跳转百科 · 60秒口播</span>';
-    }
-    if (hotkeys) {
-      hotkeys.innerHTML = `
-        <span class="hotkey-label">汇总主题：</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('增强免疫力')">🛡️ 免疫力</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('延年益寿')">🌿 延年</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('四十养生')">🧓 40岁+</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('维C水果')">🍊 维C水果</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('高蛋白食材')">🥩 高蛋白</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('幼儿少食')">👶 幼儿少食</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('抗衰老')">✨ 抗衰老</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSummarySearch('小儿脾胃')">🍚 小儿脾胃</span>
-      `;
+      welcomeDesc.innerHTML = count
+        ? '汇总主题清单，附典籍出处与口播'
+        : '当前暂无饮食汇总内容<br/><span style="color:#65a30d;font-size:13px">待录入后可搜索、生成海报与口播</span>';
     }
   } else if (mode === 'organ') {
-    if (logoText) logoText.textContent = '器官食补 · 偏爱食材';
-    if (logoSub) logoSub.textContent = 'Organ-Friendly Foods';
-    if (input) input.placeholder = '搜索器官，如：心脏、肝脏、肺、眼睛...';
-    if (welcomeTitle) welcomeTitle.textContent = '器官食补 · 12 个器官偏爱';
+    if (logoText) logoText.textContent = '营养侧重 · 分区推荐';
+    if (logoSub) logoSub.textContent = 'Nutrition Focus';
+    if (input) input.placeholder = count ? '搜索营养分区…' : '暂无营养侧重数据';
+    if (welcomeTitle) welcomeTitle.textContent = `营养侧重${count ? ` · ${count} 个` : ''}`;
     if (welcomeDesc) {
-      welcomeDesc.innerHTML =
-        '查看<strong>各器官最喜欢的食材</strong>与<strong>推荐菜品</strong>，点击食材跳转百科<br/>' +
-        '<span style="color:#65a30d;font-size:13px">✨ 器官海报可下载 · 60秒口播可朗读</span>';
-    }
-    if (hotkeys) {
-      hotkeys.innerHTML = `
-        <span class="hotkey-label">常用器官：</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoOrganSearch('心脏')">❤️ 心脏</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoOrganSearch('肝脏')">🫀 肝脏</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoOrganSearch('脾胃')">🍚 脾胃</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoOrganSearch('肺')">🫁 肺</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoOrganSearch('肾脏')">🫘 肾脏</span>
-      `;
+      welcomeDesc.innerHTML = count
+        ? '查看各分区推荐食材与菜品'
+        : '当前暂无营养侧重内容<br/><span style="color:#65a30d;font-size:13px">待录入后可搜索、生成海报与口播</span>';
     }
   } else {
-    if (logoText) logoText.textContent = '食疗养生 · 食材百科';
-    if (logoSub) logoSub.textContent = 'Food Therapy & Ingredient Wellness';
-    if (input) input.placeholder = '搜索常用食材，如：生姜、山药、红枣...';
-    if (welcomeTitle) welcomeTitle.textContent = '食疗养生 · 食材百科';
+    if (logoText) logoText.textContent = '健康饮食 · 食材百科';
+    if (logoSub) logoSub.textContent = 'Healthy Eating & Nutrition';
+    if (input) input.placeholder = count ? '搜索食材…' : '暂无食材数据';
+    if (welcomeTitle) welcomeTitle.textContent = `健康饮食 · 食材百科${count ? `（${count}种）` : ''}`;
     if (welcomeDesc) {
-      welcomeDesc.innerHTML =
-        '搜索常用食材，查看<strong>养生作用</strong>、<strong>古籍记载</strong>、<strong>对症食疗菜</strong><br/>' +
-        '<span style="color:#65a30d;font-size:13px">✨ 食疗海报可下载 · 60秒口播稿可直接朗读</span>';
-    }
-    if (hotkeys) {
-      hotkeys.innerHTML = `
-        <span class="hotkey-label">常用食材：</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('生姜')">🫚 生姜</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('山药')">🍠 山药</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('红枣')">🍒 红枣</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('薏米')">🌾 薏米</span>
-        <span class="hotkey-tag shiliao-hotkey-tag" onclick="quickShiliaoSearch('白萝卜')">🥕 白萝卜</span>
-      `;
+      welcomeDesc.innerHTML = count
+        ? '搜索食材，查看<strong>营养特点</strong>、<strong>推荐菜品</strong>与口播'
+        : '当前暂无食材内容<br/><span style="color:#65a30d;font-size:13px">待录入后可搜索、生成海报与口播</span>';
     }
   }
+
+  if (mode !== 'list' && searchWrap) searchWrap.style.display = '';
+
+  if (hotkeys) hotkeys.innerHTML = '';
 }
 
 function renderShiliaoWelcomeCards() {
   const grid = document.getElementById('shiliao-welcome-grid');
   if (!grid) return;
 
-  if (window._shiliaoMode === 'disease') {
-    grid.innerHTML = getShiliaoDiseaseList()
+  const mode = window._shiliaoMode;
+  const list = getShiliaoModeList(mode);
+  if (!list.length) {
+    grid.innerHTML = renderShiliaoEmptyHint(mode);
+    return;
+  }
+
+  if (mode === 'list') {
+    grid.innerHTML = list
+      .map(
+        (item) => `
+    <div class="welcome-card shiliao-welcome-card${window._shiliaoListTopicId === item.id ? ' shiliao-list-card--active' : ''}"
+      onclick="openShiliaoListTopic('${item.id}')">
+      <div class="welcome-card-icon">${item.icon}</div>
+      <div class="welcome-card-name">${item.title}</div>
+      <div class="shiliao-card-sub">${getShiliaoListTheme(item.defaultTheme).name}模版</div>
+    </div>`
+      )
+      .join('');
+    return;
+  }
+
+  if (mode === 'disease') {
+    grid.innerHTML = list
       .map(
         (item) => `
     <div class="welcome-card shiliao-welcome-card" onclick="quickShiliaoDiseaseSearch('${item.name}')">
@@ -133,8 +166,8 @@ function renderShiliaoWelcomeCards() {
     </div>`
       )
       .join('');
-  } else if (window._shiliaoMode === 'summary') {
-    grid.innerHTML = getShiliaoSummaryList()
+  } else if (mode === 'summary') {
+    grid.innerHTML = list
       .map(
         (item) => `
     <div class="welcome-card shiliao-welcome-card" onclick="quickShiliaoSummarySearch('${item.name}')">
@@ -144,8 +177,8 @@ function renderShiliaoWelcomeCards() {
     </div>`
       )
       .join('');
-  } else if (window._shiliaoMode === 'organ') {
-    grid.innerHTML = getShiliaoOrganList()
+  } else if (mode === 'organ') {
+    grid.innerHTML = list
       .map(
         (item) => `
     <div class="welcome-card shiliao-welcome-card" onclick="quickShiliaoOrganSearch('${item.name}')">
@@ -156,7 +189,7 @@ function renderShiliaoWelcomeCards() {
       )
       .join('');
   } else {
-    grid.innerHTML = getShiliaoList()
+    grid.innerHTML = list
       .map(
         (item) => `
     <div class="welcome-card shiliao-welcome-card" onclick="quickShiliaoSearch('${item.name}')">
@@ -173,16 +206,16 @@ function updateShiliaoTabsForMode(type) {
   const detailBtn = document.querySelector('#shiliao-tabs .shiliao-tab-btn[data-tab="shiliao-detail"]');
   if (posterBtn) {
     posterBtn.style.display = '';
-    if (type === 'disease') posterBtn.textContent = '🎨 对症海报';
-    else if (type === 'organ') posterBtn.textContent = '🎨 器官海报';
+    if (type === 'disease') posterBtn.textContent = '🎨 场景海报';
+    else if (type === 'organ') posterBtn.textContent = '🎨 营养海报';
     else if (type === 'summary') posterBtn.textContent = '🎨 汇总海报';
-    else posterBtn.textContent = '🎨 食疗海报';
+    else posterBtn.textContent = '🎨 饮食海报';
   }
   if (detailBtn) {
-    if (type === 'disease') detailBtn.textContent = '📋 对症方案';
-    else if (type === 'organ') detailBtn.textContent = '📋 器官食补';
+    if (type === 'disease') detailBtn.textContent = '📋 场景方案';
+    else if (type === 'organ') detailBtn.textContent = '📋 营养侧重';
     else if (type === 'summary') detailBtn.textContent = '📋 汇总详情';
-    else detailBtn.textContent = '📋 食疗详情';
+    else detailBtn.textContent = '📋 饮食详情';
   }
 }
 
@@ -211,13 +244,58 @@ function switchShiliaoTab(tabId, btn) {
 function doShiliaoSearchFromInput() {
   const input = document.getElementById('shiliao-search-input');
   const q = input ? input.value : '';
+  if (window._shiliaoMode === 'list') return;
   if (window._shiliaoMode === 'disease') doShiliaoDiseaseSearch(q);
   else if (window._shiliaoMode === 'organ') doShiliaoOrganSearch(q);
   else if (window._shiliaoMode === 'summary') doShiliaoSummarySearch(q);
   else doShiliaoSearch(q);
 }
 
-/** 返回食疗总览（食材/对症/器官卡片列表） */
+window._shiliaoListTopicId = window._shiliaoListTopicId || null;
+window._shiliaoListThemeId = window._shiliaoListThemeId || 'green';
+
+function openShiliaoListTopic(id) {
+  const topic = getShiliaoListTopic(id);
+  if (!topic) return;
+  window._shiliaoListTopicId = id;
+  window._shiliaoListThemeId = topic.defaultTheme || 'green';
+  const panel = document.getElementById('shiliao-list-panel');
+  if (panel) panel.style.display = 'block';
+  const titleEl = document.getElementById('shiliao-list-panel-title');
+  if (titleEl) titleEl.textContent = topic.title;
+  updateShiliaoListThemeUI();
+  renderShiliaoListPosterPreview();
+  renderShiliaoWelcomeCards();
+  panel?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function switchShiliaoListTheme(themeId) {
+  window._shiliaoListThemeId = themeId;
+  updateShiliaoListThemeUI();
+  renderShiliaoListPosterPreview();
+}
+
+function updateShiliaoListThemeUI() {
+  document.querySelectorAll('.shiliao-list-theme-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.theme === window._shiliaoListThemeId);
+  });
+}
+
+function renderShiliaoListPosterPreview() {
+  const topic = getShiliaoListTopic(window._shiliaoListTopicId);
+  if (!topic) return;
+  const theme = getShiliaoListTheme(window._shiliaoListThemeId);
+  renderShiliaoListPoster(topic, theme, 'shiliao-list-poster-pages', 'shiliao-list-poster-canvas');
+}
+
+function downloadShiliaoListPosterFromUI() {
+  const topic = getShiliaoListTopic(window._shiliaoListTopicId);
+  const theme = getShiliaoListTheme(window._shiliaoListThemeId);
+  const name = topic ? `${topic.title}-${theme.name}.png` : '健康饮食榜单.png';
+  downloadShiliaoListPoster('shiliao-list-poster-canvas', name);
+}
+
+/** 返回健康饮食总览 */
 function backToShiliaoOverview() {
   const shiliaoResult = document.getElementById('shiliao-result');
   const welcome = document.getElementById('welcome');

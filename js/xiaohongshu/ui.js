@@ -131,6 +131,7 @@ function switchModule(module) {
     if (welcomeContainer) welcomeContainer.style.display = 'block';
     hideAllResults();
     if (typeof initZhichangUI === 'function') initZhichangUI();
+    window.location.hash = 'zhichang';
   }
 
   window.scrollTo(0, 0);

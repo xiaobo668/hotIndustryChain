@@ -1,10 +1,10 @@
 /**
- * 器官食补内容渲染
+ * 营养侧重内容渲染
  */
 function renderShiliaoOrganResult(data) {
   if (!data) return;
 
-  document.getElementById('shiliao-title').textContent = `${data.icon || '🫀'} ${data.name} · 器官食补`;
+  document.getElementById('shiliao-title').textContent = `${data.icon || '🥗'} ${data.name} · 营养侧重`;
   document.getElementById('shiliao-desc').textContent = data.summary || '';
   document.getElementById('shiliao-stats').innerHTML = `
     <div class="shiliao-stat">
@@ -20,7 +20,7 @@ function renderShiliaoOrganResult(data) {
       <div class="shiliao-stat-label">口播脚本</div>
     </div>
     <div class="shiliao-stat">
-      <div class="shiliao-stat-num" style="font-size:12px;color:#65a30d">${data.category || '器官'}</div>
+      <div class="shiliao-stat-num" style="font-size:12px;color:#65a30d">${data.category || '营养'}</div>
       <div class="shiliao-stat-label">分类</div>
     </div>
   `;
@@ -38,7 +38,7 @@ function renderShiliaoOrganDetail(data) {
 
   const principle = data.principle
     ? `<section class="shiliao-section">
-      <h3 class="shiliao-section-title">📌 调养要点</h3>
+      <h3 class="shiliao-section-title">📌 营养要点</h3>
       <div class="shiliao-disease-principle">${data.principle}</div>
     </section>`
     : '';
@@ -67,7 +67,7 @@ function renderShiliaoOrganDetail(data) {
   el.innerHTML = `
     ${principle}
     <section class="shiliao-section">
-      <h3 class="shiliao-section-title">💚 ${data.name}最爱的食材 <span class="shiliao-section-hint">点击可查看食材百科</span></h3>
+      <h3 class="shiliao-section-title">💚 ${data.name}分区推荐食材 <span class="shiliao-section-hint">点击可查看食材百科</span></h3>
       <div class="shiliao-ingredient-list">${ingredients}</div>
     </section>
     <section class="shiliao-section">
@@ -77,12 +77,12 @@ function renderShiliaoOrganDetail(data) {
     ${
       data.caution
         ? `<section class="shiliao-section shiliao-caution">
-      <h3 class="shiliao-section-title">⚠️ 调养注意</h3>
+      <h3 class="shiliao-section-title">⚠️ 注意事项</h3>
       <p>${data.caution}</p>
     </section>`
         : ''
     }
-    <p class="shiliao-disclaimer">以上内容整理自中医食疗与营养常识，仅供参考，不构成医疗建议。器官疾病请及时就医。</p>
+    <p class="shiliao-disclaimer">以上内容整理自饮食文化与营养常识，仅供参考，不替代专业意见。</p>
   `;
 }
 
@@ -92,7 +92,7 @@ function renderShiliaoOrganVoiceover(data) {
   const text = data.voiceover || '';
   const len = text.length;
   const estSec = Math.round(len / 4);
-  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 器官食补口播`;
+  const voiceTitle = data.voiceTitle || `${data.icon || ''} ${data.name} · 营养侧重口播`;
   const voiceSummary = data.voiceSummary || data.summary || '';
   el.innerHTML = `
     <div class="shiliao-voice-summary">

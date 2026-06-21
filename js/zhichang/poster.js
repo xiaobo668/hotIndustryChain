@@ -57,6 +57,14 @@ function layoutZhichangText(ctx, text, maxWidth, maxHeight, fontSize, lineHeight
   const rawLines = splitZhichangLines(text);
   if (!rawLines.length) rawLines.push('在此输入文字');
 
+  if (rawLines.length >= 8) {
+    fontSize = Math.min(fontSize, 18);
+    lineHeight = 1.4;
+  }
+  if (rawLines.length >= 12) {
+    fontSize = Math.min(fontSize, 15);
+  }
+
   ctx.font = `${ZHICHANG_POSTER_TEMPLATE.font.weight} ${fontSize}px ${ZHICHANG_POSTER_TEMPLATE.font.family}`;
   const lh = fontSize * lineHeight;
   let lines = [];
@@ -73,14 +81,20 @@ function layoutZhichangText(ctx, text, maxWidth, maxHeight, fontSize, lineHeight
     });
   }
 
-  const totalH = lines.length * lh;
-  return { lines, fontSize, lineHeight: lh, totalH };
+  const totalH = lines.length * (fontSize * lineHeight);
+  return { lines, fontSize, lineHeight: fontSize * lineHeight, totalH };
 }
 
 function drawZhichangPoster(ctx, text, W, H, tpl, img) {
   ctx.drawImage(img, 0, 0, W, H);
 
-  const zone = tpl.textZone;
+  const rawLineCount = splitZhichangLines(text).length;
+  const zone = { ...tpl.textZone };
+  if (rawLineCount >= 8) {
+    zone.yRatio = 0.24;
+    zone.hRatio = 0.52;
+  }
+
   const x = W * zone.xRatio;
   const y = H * zone.yRatio;
   const maxW = W * zone.wRatio;

@@ -25,7 +25,9 @@ function renderResult(data, source) {
   renderTable(data);
   if (document.getElementById('view-poster')?.classList.contains('active')) {
     requestAnimationFrame(() => {
-      renderPoster(data);
+      if (!maybeRenderScarceMaterialsPoster(data)) {
+        renderPoster(data);
+      }
       maybeRenderOrderRankPoster(data);
       maybeRenderCapacityRankPoster(data);
     });
@@ -200,7 +202,9 @@ function switchTab(tab, btn) {
     case 'poster':
       if (currentIndustry) {
         requestAnimationFrame(() => {
-          renderPoster(currentIndustry);
+          if (!maybeRenderScarceMaterialsPoster(currentIndustry)) {
+            renderPoster(currentIndustry);
+          }
           maybeRenderOrderRankPoster(currentIndustry);
           maybeRenderCapacityRankPoster(currentIndustry);
         });

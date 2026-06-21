@@ -1,5 +1,5 @@
 /**
- * 食疗海报 Canvas 绘制
+ * 健康饮食海报 Canvas 绘制
  */
 const SHILIAO_POSTER_W = 430;
 
@@ -245,11 +245,11 @@ function drawShiliaoPosterHeader(ctx, y, title, summary, W, cardW, padX, L, acce
 
 function dishSubText(d, mode) {
   return mode === 'ingredient'
-    ? '缓解：' + (d.symptom || '') + (d.note ? ' · ' + d.note : '')
+    ? '适合：' + (d.symptom || '') + (d.note ? ' · ' + d.note : '')
     : (d.ingredients ? d.ingredients + ' · ' : '') + (d.note || '');
 }
 
-/** 食疗海报统一区块：左色条 + 紧凑标题 */
+/** 健康饮食海报统一区块：左色条 + 紧凑标题 */
 function drawShiliaoPosterSection(ctx, y, title, bodyH, drawBody, opts) {
   const { L, accent, cardW, pad, innerW } = opts;
   if (!bodyH) return y;
@@ -445,7 +445,7 @@ function renderShiliaoPoster(data) {
 
   const label = document.createElement('div');
   label.className = 'poster-page-label';
-  label.textContent = `${data.name} · 食疗养生海报`;
+  label.textContent = `${data.name} · 健康饮食海报`;
   container.appendChild(label);
 
   const canvas = document.createElement('canvas');
@@ -480,7 +480,7 @@ function drawShiliaoPoster(ctx, data, W, H) {
   y = drawShiliaoPosterHeader(
     ctx,
     y,
-    `${data.icon || ''} ${data.name} · 食疗养生`,
+    `${data.icon || ''} ${data.name} · 健康饮食`,
     data.summary,
     W,
     cardW,
@@ -518,7 +518,7 @@ function drawShiliaoPoster(ctx, data, W, H) {
     });
   }, secOpts);
 
-  drawShiliaoPosterSection(ctx, y, '食疗菜品', dishesH, (w) => {
+  drawShiliaoPosterSection(ctx, y, '推荐菜品', dishesH, (w) => {
     drawTwoColDishes(ctx, data.dishes || [], w, L, 'ingredient');
   }, secOpts);
 
@@ -528,7 +528,7 @@ function drawShiliaoPoster(ctx, data, W, H) {
   ctx.textBaseline = 'middle';
   const td = new Date();
   ctx.fillText(
-    `食疗养生 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考，不构成医疗建议`,
+    `健康饮食 · ${td.getFullYear()}年${td.getMonth() + 1}月${td.getDate()}日 · 仅供参考`,
     W / 2,
     H - L.FOOTER / 2
   );
@@ -540,18 +540,18 @@ function downloadShiliaoPoster() {
   const canvas = document.getElementById('shiliao-poster-canvas');
   const data = window._shiliaoCurrentData;
   if (!canvas || !data) {
-    alert('请先生成食疗内容并切换到海报页');
+    alert('请先生成饮食内容并切换到海报页');
     return;
   }
   const type = window._shiliaoContentType;
   const tag =
     type === 'disease'
-      ? '对症食疗海报'
+      ? '场景饮食海报'
       : type === 'organ'
-        ? '器官食补海报'
+        ? '营养侧重海报'
         : type === 'summary'
-          ? '食疗汇总海报'
-          : '食疗海报';
+          ? '饮食汇总海报'
+          : '饮食海报';
   const a = document.createElement('a');
   a.download = `${data.name}_${tag}_${new Date().toLocaleDateString('zh-CN')}.png`;
   a.href = canvas.toDataURL('image/png');
