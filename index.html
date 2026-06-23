@@ -1976,7 +1976,7 @@ transition: opacity 0.2s;
       </div>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
-        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 电子纸 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 · 人形机器人 · 商业航天（10赛道市场规模参考）— 查看 Top10 海报，支持下载与复制</div>
+        <div class="order-rank-entry-desc">算力租赁 · PCB · 先进封装 · 液冷 · MLCC · 电子布 · 电子纸 · 多氟多 · 光互联 · 光纤概念 · 电力 · 存储芯片 · 人形机器人 · 商业航天（综合订单规模+10赛道）— 查看 Top10 海报，支持下载与复制</div>
       </div>
       <div class="capacity-rank-entry" onclick="openCapacityRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openCapacityRankPage()" style="margin-top:12px">
         <div class="capacity-rank-entry-title">📊 2026 产业链产能排行榜</div>
@@ -2516,6 +2516,13 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-e-paper-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-aerospace-overview-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-aerospace-overview-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-aerospace-overview-canvas','商业航天综合订单规模TOP10-2026.png')">⬇️ 下载商业航天综合订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-aerospace-overview-canvas')">📋 复制</button>
+        </div>
+      </div>
       <div class="poster-wrap" id="order-rank-humanoid-robot-wrap" style="display:none;margin-top:20px">
         <div id="order-rank-humanoid-robot-pages"></div>
         <div class="poster-actions">
@@ -2830,6 +2837,7 @@ transition: opacity 0.2s;
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>
 <script src="js/industry/order-rank-pages.js"></script>
+<script src="data/order-rank-aerospace-overview2026.js"></script>
 <script src="data/order-rank-aerospace2026.js"></script>
 <script src="js/industry/capacity-rank-pages.js"></script>
 <script src="js/industry/consumables-rank-pages.js"></script>

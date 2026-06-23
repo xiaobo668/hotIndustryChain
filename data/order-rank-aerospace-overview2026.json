@@ -1,0 +1,171 @@
+{
+  "key": "商业航天综合",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026商业航天综合订单规模TOP10",
+  "subtitle": "综合10条细分赛道，取每家公司在各赛道中最高订单规模参考（亿元）排序；非统一在手订单披露，不可跨公司加总",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫星",
+      "orderLabel": "订单规模参考约86.9亿元",
+      "highlight": "卫星制造赛道 · 小卫星总装规模靠前，低轨卫星星座组网制造平台满产",
+      "verify": {
+        "amount": 86.9,
+        "segment": "卫星制造",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自卫星制造赛道。卫星年化总装交付约185颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "上海沪工",
+      "orderLabel": "订单规模参考约66.7亿元",
+      "highlight": "卫星制造赛道 · 焊接装备+卫星结构制造，卫星平台结构件与总装配套",
+      "verify": {
+        "amount": 66.7,
+        "segment": "卫星制造",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自卫星制造赛道。卫星结构件年化交付约142颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航宇微",
+      "orderLabel": "订单规模参考约55.5亿元",
+      "highlight": "卫星制造赛道 · 宇航电子芯片+卫星制造，微纳卫星与宇航SOC产线",
+      "verify": {
+        "amount": 55.5,
+        "segment": "卫星制造",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自卫星制造赛道。卫星年化交付约118颗",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中国卫通",
+      "orderLabel": "订单规模参考约45亿元",
+      "highlight": "星座运营赛道 · 高轨卫星通信运营规模靠前，Ka宽带与广播通信星座服务能力",
+      "verify": {
+        "amount": 45,
+        "segment": "星座运营",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自星座运营赛道。星座运营节点规模指数100（内部编制，非企业官方披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "航天电子",
+      "orderLabel": "订单规模参考约44.7亿元",
+      "highlight": "卫星制造赛道 · 星载计算机+测控设备，卫星电子系统配套出货量居前",
+      "verify": {
+        "amount": 44.7,
+        "segment": "卫星制造",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自卫星制造赛道。卫星电子系统年化配套约95颗当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天动力",
+      "orderLabel": "订单规模参考约42.5亿元",
+      "highlight": "火箭发动机赛道 · 液体火箭发动机制造规模靠前，液氧煤油发动机产线与推进系统配套满产",
+      "verify": {
+        "amount": 42.5,
+        "segment": "火箭发动机",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自火箭发动机赛道。液体火箭发动机年化交付约85台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "四维图新",
+      "orderLabel": "订单规模参考约41.4亿元",
+      "highlight": "星座运营赛道 · 高精地图+遥感数据服务，低轨星座数据应用与运营平台",
+      "verify": {
+        "amount": 41.4,
+        "segment": "星座运营",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自星座运营赛道。星座运营节点规模指数92（内部编制，非企业官方披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "海格通信",
+      "orderLabel": "订单规模参考约39.9亿元",
+      "highlight": "航天测控赛道 · 卫星测控+通信终端，航天测控地面站与终端系统出货量居前",
+      "verify": {
+        "amount": 39.9,
+        "segment": "航天测控",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自航天测控赛道。航天测控系统年化交付约2850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "超捷股份",
+      "orderLabel": "订单规模参考约34.4亿元",
+      "highlight": "箭体结构赛道 · 紧固件+箭体结构件，商业火箭箭体连接与结构配套出货量居前",
+      "verify": {
+        "amount": 34.4,
+        "segment": "箭体结构",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自箭体结构赛道。箭体结构件年化交付约4200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "欧比特",
+      "orderLabel": "订单规模参考约33.8亿元",
+      "highlight": "卫星制造赛道 · 微纳卫星+遥感卫星，商业遥感卫星制造产线扩产",
+      "verify": {
+        "amount": 33.8,
+        "segment": "卫星制造",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "综合榜取10赛道最高值；本条来自卫星制造赛道。卫星年化交付约72颗",
+        "officialCross": null
+      }
+    }
+  ]
+}

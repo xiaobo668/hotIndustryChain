@@ -326,6 +326,7 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '存储芯片', wrapId: 'order-rank-storage-chip-wrap', pagesId: 'order-rank-storage-chip-pages', canvasId: 'order-rank-storage-chip-canvas' },
   { key: '电子纸', wrapId: 'order-rank-e-paper-wrap', pagesId: 'order-rank-e-paper-pages', canvasId: 'order-rank-e-paper-canvas' },
   { key: '人形机器人', industryKeys: ['人形机器人', '机器人'], wrapId: 'order-rank-humanoid-robot-wrap', pagesId: 'order-rank-humanoid-robot-pages', canvasId: 'order-rank-humanoid-robot-canvas' },
+  { key: '商业航天综合', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-overview-wrap', pagesId: 'order-rank-aerospace-overview-pages', canvasId: 'order-rank-aerospace-overview-canvas' },
   { key: '火箭发动机', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-engine-wrap', pagesId: 'order-rank-aerospace-rocket-engine-pages', canvasId: 'order-rank-aerospace-rocket-engine-canvas' },
   { key: '箭体结构', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-structure-wrap', pagesId: 'order-rank-aerospace-rocket-structure-pages', canvasId: 'order-rank-aerospace-rocket-structure-canvas' },
   { key: '卫星制造', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-satellite-mfg-wrap', pagesId: 'order-rank-aerospace-satellite-mfg-pages', canvasId: 'order-rank-aerospace-satellite-mfg-canvas' },
@@ -348,7 +349,11 @@ function getOrderRankRegistry() {
   const aerospace = typeof ORDER_RANK_REGISTRY_AEROSPACE2026 !== 'undefined'
     ? ORDER_RANK_REGISTRY_AEROSPACE2026
     : {};
-  return Object.assign({}, aerospace);
+  const reg = Object.assign({}, aerospace);
+  if (typeof ORDER_RANK_AEROSPACE_OVERVIEW2026 !== 'undefined') {
+    reg['商业航天综合'] = ORDER_RANK_AEROSPACE_OVERVIEW2026;
+  }
+  return reg;
 }
 
 function getOrderRankDatasetByKey(key) {
@@ -368,6 +373,7 @@ function getOrderRankDatasetByKey(key) {
   if (key === '存储芯片' && typeof ORDER_RANK_STORAGE_CHIP2026 !== 'undefined') return ORDER_RANK_STORAGE_CHIP2026;
   if (key === '电子纸' && typeof ORDER_RANK_E_PAPER2026 !== 'undefined') return ORDER_RANK_E_PAPER2026;
   if ((key === '人形机器人' || key === '机器人') && typeof ORDER_RANK_HUMANOID_ROBOT2026 !== 'undefined') return ORDER_RANK_HUMANOID_ROBOT2026;
+  if (key === '商业航天综合' && typeof ORDER_RANK_AEROSPACE_OVERVIEW2026 !== 'undefined') return ORDER_RANK_AEROSPACE_OVERVIEW2026;
   return null;
 }
 

@@ -131,3 +131,8 @@ ORDER_RANKINGS.forEach(({ payload }) => {
 });
 
 module.exports = { ORDER_RANKINGS, ORDER_SCALE };
+
+if (process.argv[1] && process.argv[1].endsWith('build-order-rank-aerospace2026.js')) {
+  const { writeOverviewFiles, buildOverviewPayload } = require('./build-order-rank-aerospace-overview2026');
+  writeOverviewFiles(buildOverviewPayload(ORDER_RANKINGS));
+}

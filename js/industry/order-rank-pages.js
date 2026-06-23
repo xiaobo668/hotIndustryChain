@@ -5,9 +5,10 @@ const ORDER_RANK_PAGE_GROUPS = {
   aerospace: {
     id: 'aerospace',
     title: '商业航天市场规模参考榜',
-    subtitle: '火箭发动机 · 箭体结构 · 卫星/火箭制造 · 卫星通信 · 姿态控制 · 星座运营 · 太空算力 · 航天材料 · 测控（节点规模换算，非统一在手订单）',
+    subtitle: '综合订单规模 TOP10 + 火箭发动机 · 箭体结构 · 卫星/火箭制造 · 卫星通信 · 姿态控制 · 星座运营 · 太空算力 · 航天材料 · 测控',
     icon: '🛰️',
     path: 'order/aerospace.html',
+    overviewKey: '商业航天综合',
     keys: [
       '火箭发动机', '箭体结构', '卫星制造', '火箭制造', '卫星通信', '卫星姿态控制',
       '星座运营', '太空算力', '航天材料', '航天测控',
@@ -28,6 +29,8 @@ const INDUSTRY_TO_ORDER_PAGE = {
 };
 
 const ORDER_SECTION_HINTS = {
+  商业航天综合:
+    '综合10条细分赛道，取每家公司在各赛道中最高订单规模参考（亿元）排序；详见下方分赛道榜单。',
   火箭发动机: '液体/固体火箭发动机及核心部件市场规模参考（亿元，由节点交付能力换算）。',
   箭体结构: '火箭箭体结构件、紧固件、贮箱等配套市场规模参考（亿元）。',
   卫星制造: '商业卫星总装与平台制造市场规模参考（亿元）。',
@@ -123,7 +126,16 @@ function initOrderRankGroupPage(groupId) {
   if (subEl) subEl.textContent = group.subtitle;
   document.title = group.title + ' · 2026';
 
-  renderOrderRankToc(container, group.keys);
+  const tocKeys = group.overviewKey ? [group.overviewKey, ...group.keys] : group.keys;
+  if (group.overviewKey) {
+    const overviewCfg = getOrderRankPosterConfigByKey(group.overviewKey);
+    const overviewData = typeof getOrderRankDatasetByKey === 'function'
+      ? getOrderRankDatasetByKey(group.overviewKey)
+      : null;
+    if (overviewCfg) renderOrderRankSection(container, overviewCfg, overviewData);
+  }
+
+  renderOrderRankToc(container, tocKeys);
 
   group.keys.forEach((key) => {
     const cfg = getOrderRankPosterConfigByKey(key);
@@ -157,7 +169,7 @@ function renderOrderRankHub(containerId) {
       '<div class="industry-card-icon">' + group.icon + '</div>'
       + '<div class="industry-card-name">' + group.title + '</div>'
       + '<div class="industry-card-desc">' + group.subtitle + '</div>'
-      + '<span class="industry-card-count">' + group.keys.length + ' 个赛道 Top10</span>';
+      + '<span class="industry-card-count">' + (group.overviewKey ? '综合+ ' : '') + group.keys.length + ' 个赛道 Top10</span>';
     container.appendChild(a);
   });
 }
