@@ -4,7 +4,7 @@
     "商业航天"
   ],
   "title": "2026航天测控系统产能TOP10",
-  "subtitle": "口径：航天测控地面站/终端/雷达年化交付（套/年）；均为航天测控系统制造规模靠前厂商",
+  "subtitle": "口径：航天测控地面站/终端/雷达年化交付（套/年）；均为航天测控系统制造规模靠前厂商；数据为产业链节点规模参考（内部编制），非企业官方产能披露",
   "capacityUnit": "套/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,11 +16,11 @@
       "verify": {
         "capacity": 2850,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控系统年化交付约2850套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控系统年化交付约2850套",
         "officialCross": null
       }
     },
@@ -32,11 +32,11 @@
       "verify": {
         "capacity": 2280,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控终端年化交付约2280套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控终端年化交付约2280套",
         "officialCross": null
       }
     },
@@ -48,11 +48,11 @@
       "verify": {
         "capacity": 1850,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控雷达年化交付约1850套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控雷达年化交付约1850套",
         "officialCross": null
       }
     },
@@ -64,11 +64,11 @@
       "verify": {
         "capacity": 1520,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控电子年化交付约1520套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控电子年化交付约1520套",
         "officialCross": null
       }
     },
@@ -80,11 +80,11 @@
       "verify": {
         "capacity": 1280,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控系统年化交付约1280套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控系统年化交付约1280套",
         "officialCross": null
       }
     },
@@ -96,11 +96,11 @@
       "verify": {
         "capacity": 1050,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控集成年化交付约1050套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控集成年化交付约1050套",
         "officialCross": null
       }
     },
@@ -112,11 +112,11 @@
       "verify": {
         "capacity": 880,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控安防年化交付约880套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控安防年化交付约880套",
         "officialCross": null
       }
     },
@@ -128,11 +128,11 @@
       "verify": {
         "capacity": 720,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控导航年化交付约720套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控导航年化交付约720套",
         "officialCross": null
       }
     },
@@ -144,11 +144,11 @@
       "verify": {
         "capacity": 580,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控芯片年化交付约580套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控芯片年化交付约580套",
         "officialCross": null
       }
     },
@@ -160,11 +160,11 @@
       "verify": {
         "capacity": 450,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天测控惯性系统年化交付约450套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天测控惯性系统年化交付约450套",
         "officialCross": null
       }
     }

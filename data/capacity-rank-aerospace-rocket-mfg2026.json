@@ -4,7 +4,7 @@
     "商业航天"
   ],
   "title": "2026运载火箭制造产能TOP10",
-  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商",
+  "subtitle": "口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商；数据为产业链节点规模参考（内部编制），非企业官方产能披露",
   "capacityUnit": "枚/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,11 +16,11 @@
       "verify": {
         "capacity": 28,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭动力系统年化配套约28枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭动力系统年化配套约28枚当量",
         "officialCross": null
       }
     },
@@ -32,11 +32,11 @@
       "verify": {
         "capacity": 22,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭年化交付约22枚",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭年化交付约22枚",
         "officialCross": null
       }
     },
@@ -48,11 +48,11 @@
       "verify": {
         "capacity": 18,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭材料年化配套约18枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭材料年化配套约18枚当量",
         "officialCross": null
       }
     },
@@ -64,11 +64,11 @@
       "verify": {
         "capacity": 15,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭地面配套年化约15枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭地面配套年化约15枚当量",
         "officialCross": null
       }
     },
@@ -80,11 +80,11 @@
       "verify": {
         "capacity": 12,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭火工配套年化约12枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭火工配套年化约12枚当量",
         "officialCross": null
       }
     },
@@ -96,11 +96,11 @@
       "verify": {
         "capacity": 10,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭结构件年化配套约10枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭结构件年化配套约10枚当量",
         "officialCross": null
       }
     },
@@ -112,11 +112,11 @@
       "verify": {
         "capacity": 8.5,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭紧固件年化配套约8.5枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭紧固件年化配套约8.5枚当量",
         "officialCross": null
       }
     },
@@ -128,11 +128,11 @@
       "verify": {
         "capacity": 7.2,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭结构制造年化约7.2枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭结构制造年化约7.2枚当量",
         "officialCross": null
       }
     },
@@ -144,11 +144,11 @@
       "verify": {
         "capacity": 6.5,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭结构加工年化约6.5枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭结构加工年化约6.5枚当量",
         "officialCross": null
       }
     },
@@ -160,11 +160,11 @@
       "verify": {
         "capacity": 5.8,
         "capacityUnit": "枚/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：运载火箭锻件年化配套约5.8枚当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：运载火箭锻件年化配套约5.8枚当量",
         "officialCross": null
       }
     }

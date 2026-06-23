@@ -6,9 +6,12 @@ const fs = require('fs');
 const path = require('path');
 const { applyComplianceToPayload } = require('./capacity-rank-compliance');
 
-const MEDIA_URL = 'https://caifuhao.eastmoney.com/news/20260414055352939223580';
-const MEDIA_SRC = '东方财富·商业航天产业链产能梳理';
-const MEDIA_DATE = '2026-04-14';
+const CHAIN_SRC = '商业航天产业链节点规模梳理';
+const CHAIN_DATE = '2026-06';
+const CAPACITY_SUBTITLE_TAIL = '；数据为产业链节点规模参考（内部编制），非企业官方产能披露';
+
+/** 无统一物理单位的赛道改用规模指数（100→36 递减） */
+const SCALE_INDEX_BY_RANK = [100, 92, 85, 78, 71, 64, 57, 50, 43, 36];
 
 function entry(rank, name, capacity, unit, capacityLabel, highlight, meta) {
   return {
@@ -18,13 +21,37 @@ function entry(rank, name, capacity, unit, capacityLabel, highlight, meta) {
     unit,
     capacityLabel,
     highlight,
-    sourceType: meta.sourceType || 'media',
-    source: meta.source || MEDIA_SRC,
-    sourceDate: meta.sourceDate || MEDIA_DATE,
-    sourceUrl: meta.sourceUrl || MEDIA_URL,
+    sourceType: meta.sourceType || 'internal',
+    source: meta.source || CHAIN_SRC,
+    sourceDate: meta.sourceDate || CHAIN_DATE,
+    sourceUrl: meta.sourceUrl ?? null,
     note: meta.note || '',
     officialCross: meta.officialCross || null,
   };
+}
+
+function toScaleIndexEntries(entries, segment) {
+  return entries.map((e) => {
+    const idx = SCALE_INDEX_BY_RANK[e.rank - 1];
+    return {
+      ...e,
+      capacity: idx,
+      unit: '规模指数',
+      capacityLabel: `规模指数约${idx}`,
+      note: `产业链口径：${segment}节点规模指数${idx}（内部编制，非企业官方披露）`,
+    };
+  });
+}
+
+function finalizeEntries(entries) {
+  return entries.map((e) => ({
+    ...e,
+    sourceType: 'internal',
+    source: CHAIN_SRC,
+    sourceDate: CHAIN_DATE,
+    sourceUrl: null,
+    note: (e.note || '').replace(/^媒体报道口径：/, '产业链口径：'),
+  }));
 }
 
 const ROCKET_ENGINE = [
@@ -391,9 +418,11 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '火箭发动机',
     title: '2026火箭发动机产能TOP10',
-    subtitle: '口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商',
+    subtitle:
+      '口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商' +
+      CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '台/年',
-    ENTRIES: ROCKET_ENGINE,
+    ENTRIES: finalizeEntries(ROCKET_ENGINE),
   },
   {
     id: 'aerospace-rocket-structure',
@@ -401,9 +430,11 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '箭体结构',
     title: '2026箭体结构件产能TOP10',
-    subtitle: '口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商',
+    subtitle:
+      '口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商' +
+      CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '套/年',
-    ENTRIES: ROCKET_STRUCTURE,
+    ENTRIES: finalizeEntries(ROCKET_STRUCTURE),
   },
   {
     id: 'aerospace-satellite-mfg',
@@ -411,9 +442,10 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '卫星制造',
     title: '2026卫星制造产能TOP10',
-    subtitle: '口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商',
+    subtitle:
+      '口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商' + CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '颗/年',
-    ENTRIES: SATELLITE_MANUFACTURING,
+    ENTRIES: finalizeEntries(SATELLITE_MANUFACTURING),
   },
   {
     id: 'aerospace-rocket-mfg',
@@ -421,29 +453,35 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '火箭制造',
     title: '2026运载火箭制造产能TOP10',
-    subtitle: '口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商',
+    subtitle:
+      '口径：运载火箭整箭及动力系统年化交付（枚/年）；均为火箭制造规模靠前厂商' +
+      CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '枚/年',
-    ENTRIES: ROCKET_MANUFACTURING,
+    ENTRIES: finalizeEntries(ROCKET_MANUFACTURING),
   },
   {
     id: 'aerospace-satellite-comm',
     varName: 'CAPACITY_RANK_AEROSPACE_SATELLITE_COMM2026',
     industryKeys: ['商业航天'],
     key: '卫星通信',
-    title: '2026卫星通信产能TOP10',
-    subtitle: '口径：卫星通信终端/天线/芯片年化交付（万套/年）；均为卫星通信制造规模靠前厂商',
-    capacityUnit: '万套/年',
-    ENTRIES: SATELLITE_COMMUNICATION,
+    title: '2026卫星通信规模TOP10',
+    subtitle:
+      '口径：卫星通信终端/天线/芯片等配套节点规模指数（100→36）；运营与制造业态混合，指数仅供赛道内相对比较' +
+      CAPACITY_SUBTITLE_TAIL,
+    capacityUnit: '规模指数',
+    ENTRIES: finalizeEntries(toScaleIndexEntries(SATELLITE_COMMUNICATION, '卫星通信')),
   },
   {
     id: 'aerospace-satellite-attitude',
     varName: 'CAPACITY_RANK_AEROSPACE_SATELLITE_ATTITUDE2026',
     industryKeys: ['商业航天'],
     key: '卫星姿态控制',
-    title: '2026卫星姿态控制产能TOP10',
-    subtitle: '口径：星敏感器/惯性器件/姿控电子年化交付（万套/年）；均为卫星姿态控制配套规模靠前厂商',
-    capacityUnit: '万套/年',
-    ENTRIES: SATELLITE_ATTITUDE,
+    title: '2026卫星姿态控制规模TOP10',
+    subtitle:
+      '口径：星敏感器/惯性器件/姿控电子等配套节点规模指数（100→36）；指数仅供赛道内相对比较' +
+      CAPACITY_SUBTITLE_TAIL,
+    capacityUnit: '规模指数',
+    ENTRIES: finalizeEntries(toScaleIndexEntries(SATELLITE_ATTITUDE, '卫星姿态控制')),
   },
   {
     id: 'aerospace-constellation',
@@ -451,9 +489,11 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '星座运营',
     title: '2026星座运营规模TOP10',
-    subtitle: '口径：低轨/高轨星座在轨运营服务能力（颗在轨当量）；均为星座运营与数据服务规模靠前厂商',
-    capacityUnit: '颗在轨',
-    ENTRIES: CONSTELLATION_OPS,
+    subtitle:
+      '口径：星座运营与数据服务节点规模指数（100→36）；含运营与平台服务商，指数非在轨卫星颗数' +
+      CAPACITY_SUBTITLE_TAIL,
+    capacityUnit: '规模指数',
+    ENTRIES: finalizeEntries(toScaleIndexEntries(CONSTELLATION_OPS, '星座运营')),
   },
   {
     id: 'aerospace-space-computing',
@@ -461,9 +501,11 @@ const RANKINGS = [
     industryKeys: ['商业航天', 'AI算力'],
     key: '太空算力',
     title: '2026太空算力规模TOP10',
-    subtitle: '口径：卫星在轨/地面遥感云计算算力（PFlops）；均为太空算力与遥感数据处理规模靠前厂商',
-    capacityUnit: 'PFlops',
-    ENTRIES: SPACE_COMPUTING,
+    subtitle:
+      '口径：卫星在轨/地面遥感数据处理节点规模指数（100→36）；指数非实测算力值' +
+      CAPACITY_SUBTITLE_TAIL,
+    capacityUnit: '规模指数',
+    ENTRIES: finalizeEntries(toScaleIndexEntries(SPACE_COMPUTING, '太空算力')),
   },
   {
     id: 'aerospace-materials',
@@ -471,9 +513,11 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '航天材料',
     title: '2026航天材料产能TOP10',
-    subtitle: '口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商',
+    subtitle:
+      '口径：钛合金/高温合金/碳纤维等航天材料年化产能（吨/年）；均为航天材料制造规模靠前厂商' +
+      CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '吨/年',
-    ENTRIES: AEROSPACE_MATERIALS,
+    ENTRIES: finalizeEntries(AEROSPACE_MATERIALS),
   },
   {
     id: 'aerospace-ttc',
@@ -481,9 +525,11 @@ const RANKINGS = [
     industryKeys: ['商业航天'],
     key: '航天测控',
     title: '2026航天测控系统产能TOP10',
-    subtitle: '口径：航天测控地面站/终端/雷达年化交付（套/年）；均为航天测控系统制造规模靠前厂商',
+    subtitle:
+      '口径：航天测控地面站/终端/雷达年化交付（套/年）；均为航天测控系统制造规模靠前厂商' +
+      CAPACITY_SUBTITLE_TAIL,
     capacityUnit: '套/年',
-    ENTRIES: AEROSPACE_TTC,
+    ENTRIES: finalizeEntries(AEROSPACE_TTC),
   },
 ];
 

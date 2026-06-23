@@ -4,7 +4,7 @@
     "商业航天"
   ],
   "title": "2026火箭发动机产能TOP10",
-  "subtitle": "口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商",
+  "subtitle": "口径：液体/固体火箭发动机及核心部件年化交付（台/年）；均为火箭推进系统制造规模靠前厂商；数据为产业链节点规模参考（内部编制），非企业官方产能披露",
   "capacityUnit": "台/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,11 +16,11 @@
       "verify": {
         "capacity": 85,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：液体火箭发动机年化交付约85台",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：液体火箭发动机年化交付约85台",
         "officialCross": null
       }
     },
@@ -32,11 +32,11 @@
       "verify": {
         "capacity": 62,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机高温合金部件年化交付约62台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机高温合金部件年化交付约62台当量",
         "officialCross": null
       }
     },
@@ -48,11 +48,11 @@
       "verify": {
         "capacity": 48,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：航天增材制造部件年化交付约48台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：航天增材制造部件年化交付约48台当量",
         "officialCross": null
       }
     },
@@ -64,11 +64,11 @@
       "verify": {
         "capacity": 38,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机锻件年化交付约38台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机锻件年化交付约38台当量",
         "officialCross": null
       }
     },
@@ -80,11 +80,11 @@
       "verify": {
         "capacity": 32,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机电子/材料部件年化交付约32台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机电子/材料部件年化交付约32台当量",
         "officialCross": null
       }
     },
@@ -96,11 +96,11 @@
       "verify": {
         "capacity": 28,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机火工配套年化交付约28台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机火工配套年化交付约28台当量",
         "officialCross": null
       }
     },
@@ -112,11 +112,11 @@
       "verify": {
         "capacity": 22,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：推进控制子系统年化交付约22台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：推进控制子系统年化交付约22台当量",
         "officialCross": null
       }
     },
@@ -128,11 +128,11 @@
       "verify": {
         "capacity": 18,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机高温合金锻件年化交付约18台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机高温合金锻件年化交付约18台当量",
         "officialCross": null
       }
     },
@@ -144,11 +144,11 @@
       "verify": {
         "capacity": 15,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机钛合金部件年化交付约15台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机钛合金部件年化交付约15台当量",
         "officialCross": null
       }
     },
@@ -160,11 +160,11 @@
       "verify": {
         "capacity": 12,
         "capacityUnit": "台/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：发动机复合材料部件年化交付约12台当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：发动机复合材料部件年化交付约12台当量",
         "officialCross": null
       }
     }

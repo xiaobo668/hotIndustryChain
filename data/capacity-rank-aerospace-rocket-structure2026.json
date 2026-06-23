@@ -4,7 +4,7 @@
     "商业航天"
   ],
   "title": "2026箭体结构件产能TOP10",
-  "subtitle": "口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商",
+  "subtitle": "口径：火箭箭体结构件/紧固件/贮箱年化交付（套/年）；均为箭体结构制造规模靠前厂商；数据为产业链节点规模参考（内部编制），非企业官方产能披露",
   "capacityUnit": "套/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,11 +16,11 @@
       "verify": {
         "capacity": 4200,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体结构件年化交付约4200套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体结构件年化交付约4200套",
         "officialCross": null
       }
     },
@@ -32,11 +32,11 @@
       "verify": {
         "capacity": 3500,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体紧固件年化交付约3500套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体紧固件年化交付约3500套",
         "officialCross": null
       }
     },
@@ -48,11 +48,11 @@
       "verify": {
         "capacity": 2800,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体结构件年化交付约2800套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体结构件年化交付约2800套",
         "officialCross": null
       }
     },
@@ -64,11 +64,11 @@
       "verify": {
         "capacity": 2200,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体结构加工件年化交付约2200套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体结构加工件年化交付约2200套",
         "officialCross": null
       }
     },
@@ -80,11 +80,11 @@
       "verify": {
         "capacity": 1850,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体锻件年化交付约1850套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体锻件年化交付约1850套",
         "officialCross": null
       }
     },
@@ -96,11 +96,11 @@
       "verify": {
         "capacity": 1520,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体贮箱结构年化交付约1520套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体贮箱结构年化交付约1520套",
         "officialCross": null
       }
     },
@@ -112,11 +112,11 @@
       "verify": {
         "capacity": 1280,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体结构年化交付约1280套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体结构年化交付约1280套",
         "officialCross": null
       }
     },
@@ -128,11 +128,11 @@
       "verify": {
         "capacity": 980,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体地面配套年化交付约980套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体地面配套年化交付约980套",
         "officialCross": null
       }
     },
@@ -144,11 +144,11 @@
       "verify": {
         "capacity": 820,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体复合材料年化交付约820套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体复合材料年化交付约820套",
         "officialCross": null
       }
     },
@@ -160,11 +160,11 @@
       "verify": {
         "capacity": 650,
         "capacityUnit": "套/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：箭体信息化配套年化交付约650套",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：箭体信息化配套年化交付约650套",
         "officialCross": null
       }
     }

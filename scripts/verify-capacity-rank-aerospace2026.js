@@ -96,7 +96,9 @@ function verifyRanking(meta) {
     if (row.capacityLabel !== src.capacityLabel) {
       errors.push(`${meta.key}: ${src.name} capacityLabel 不匹配`);
     }
-    if (!row.verify.sourceUrl) errors.push(`${meta.key}: ${src.name} 缺少 sourceUrl`);
+    if (!row.verify.sourceUrl && row.verify.sourceType === 'media') {
+      errors.push(`${meta.key}: ${src.name} 缺少 sourceUrl`);
+    }
   });
 
   byRank.forEach((co) => {

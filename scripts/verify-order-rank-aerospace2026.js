@@ -1,5 +1,5 @@
 /**
- * 商业航天订单榜复验（10 个拆分赛道）
+ * 商业航天市场规模参考榜复验（10 个拆分赛道）
  * 运行: node scripts/verify-order-rank-aerospace2026.js
  */
 const fs = require('fs');
@@ -26,7 +26,6 @@ const chainNames = new Set();
 
 const errors = [];
 const warnings = [];
-const ORDER_RANK_MAX = 6;
 
 if (!chain) errors.push('缺少 INDUSTRY_DATA.商业航天');
 if (!registry || Object.keys(registry).length !== 10) {
@@ -40,6 +39,9 @@ ORDER_RANKINGS.forEach(({ key, ENTRIES, payload }) => {
     return;
   }
   if (data.companies.length !== 10) errors.push(`${key}: 公司数量应为10`);
+  if (!data.subtitle || !data.subtitle.includes('非企业统一在手订单')) {
+    errors.push(`${key}: subtitle 应说明非统一在手订单口径`);
+  }
 
   const byRank = [...data.companies].sort((a, b) => a.rank - b.rank);
   for (let i = 0; i < byRank.length - 1; i++) {
@@ -57,21 +59,27 @@ ORDER_RANKINGS.forEach(({ key, ENTRIES, payload }) => {
 
   byRank.forEach((co) => {
     if (!chainNames.has(co.name)) warnings.push(`${key}: 不在商业航天产业链节点 ${co.name}`);
-    if (co.rank <= ORDER_RANK_MAX && co.verify.sourceType === 'media') {
-      warnings.push(`${key}/${co.name}: 1-6位为媒体报道口径`);
+    if (co.verify.sourceType !== 'derived') {
+      errors.push(`${key}/${co.name}: sourceType 应为 derived`);
     }
-    if (co.rank > ORDER_RANK_MAX) {
-      warnings.push(`${key}/${co.name}: 7-10位作规模参考，非统一在手订单口径`);
+    if (co.verify.sourceUrl) {
+      errors.push(`${key}/${co.name}: 不应使用外部媒体链接作为订单来源`);
+    }
+    if ((co.orderLabel || '').includes('在手/预计订单')) {
+      errors.push(`${key}/${co.name}: orderLabel 不应使用在手订单表述`);
+    }
+    if ((co.verify.note || '').includes('媒体报道口径：媒体报道口径')) {
+      errors.push(`${key}/${co.name}: note 存在重复前缀`);
     }
   });
 });
 
-console.log('=== 商业航天订单榜复验 ===');
+console.log('=== 商业航天市场规模参考榜复验 ===');
 console.log('赛道数:', Object.keys(registry || {}).length);
 if (warnings.length) {
   console.log('\nWARN:');
-  warnings.slice(0, 15).forEach((w) => console.log(' -', w));
-  if (warnings.length > 15) console.log(` - ...共 ${warnings.length} 条`);
+  warnings.slice(0, 10).forEach((w) => console.log(' -', w));
+  if (warnings.length > 10) console.log(` - ...共 ${warnings.length} 条`);
 }
 if (errors.length) {
   console.log('\nFAIL:');

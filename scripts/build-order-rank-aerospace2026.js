@@ -1,46 +1,53 @@
 /**
- * 2026 商业航天板块订单规模排行（10 个可拆分赛道）
+ * 2026 商业航天板块市场规模参考排行（10 个可拆分赛道）
+ * 由产能/规模节点数据换算，非统一在手订单披露
  * 运行: node scripts/build-order-rank-aerospace2026.js
  */
 const fs = require('fs');
 const path = require('path');
 const { RANKINGS: CAP_RANKINGS } = require('./build-capacity-rank-aerospace2026');
 
-const MEDIA_URL = 'https://caifuhao.eastmoney.com/news/20260414055352939223580';
-const MEDIA_SRC = '东方财富·商业航天产业链订单梳理';
-const MEDIA_DATE = '2026-04-14';
+const CHAIN_SRC = '商业航天产业链节点规模梳理';
+const CHAIN_DATE = '2026-06';
 
-/** 产能数值 → 订单金额（亿元）换算系数 */
+/** 节点规模数值 → 市场规模参考（亿元）赛道换算系数 */
 const ORDER_SCALE = {
   'aerospace-rocket-engine': 0.5,
   'aerospace-rocket-structure': 0.0082,
   'aerospace-satellite-mfg': 0.47,
   'aerospace-rocket-mfg': 1.15,
-  'aerospace-satellite-comm': 0.0028,
-  'aerospace-satellite-attitude': 0.0026,
-  'aerospace-constellation': 0.32,
-  'aerospace-space-computing': 0.14,
+  'aerospace-satellite-comm': 0.12,
+  'aerospace-satellite-attitude': 0.08,
+  'aerospace-constellation': 0.45,
+  'aerospace-space-computing': 0.25,
   'aerospace-materials': 0.0024,
   'aerospace-ttc': 0.014,
 };
 
 const SUBTITLE =
-  '1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考';
+  '市场规模参考按产业链节点交付能力/规模指数换算为亿元区间（内部编制），非企业统一在手订单披露，仅供产业学习参考';
 
-function buildOrderEntries(capEntries, scale) {
+function stripNotePrefix(note) {
+  return String(note || '')
+    .replace(/^产业链口径：/, '')
+    .replace(/^媒体报道口径：/, '');
+}
+
+function buildOrderEntries(capEntries, scale, capId) {
   return capEntries.map((e) => {
     const amount = Math.round(e.capacity * scale * 10) / 10;
+    const scaleDesc = e.unit === '规模指数' ? `规模指数${e.capacity}` : `${e.capacity}${e.unit}`;
     return {
       rank: e.rank,
       name: e.name,
       amount,
-      orderLabel: `在手/预计订单约${amount}亿元`,
+      orderLabel: `市场规模参考约${amount}亿元`,
       highlight: e.highlight,
-      sourceType: 'media',
-      source: MEDIA_SRC,
-      sourceDate: MEDIA_DATE,
-      sourceUrl: MEDIA_URL,
-      note: `媒体报道口径：${e.note.replace('年化交付', '预计订单').replace('年化产能', '预计订单').replace('在轨约', '订单规模约')}`,
+      sourceType: 'derived',
+      source: CHAIN_SRC,
+      sourceDate: CHAIN_DATE,
+      sourceUrl: null,
+      note: `市场规模参考=${scaleDesc}×赛道系数${scale}（${capId}）；${stripNotePrefix(e.note)}`,
     };
   });
 }
@@ -49,7 +56,7 @@ function buildPayload(meta, entries) {
   return {
     key: meta.key,
     industryKeys: meta.industryKeys || ['商业航天'],
-    title: meta.title.replace('产能', '订单规模'),
+    title: meta.title,
     subtitle: SUBTITLE,
     generatedAt: '2026-06',
     companies: entries.map((e) => ({
@@ -72,9 +79,9 @@ function buildPayload(meta, entries) {
 
 const ORDER_RANKINGS = CAP_RANKINGS.map((cap) => {
   const scale = ORDER_SCALE[cap.id] || 0.5;
-  const entries = buildOrderEntries(cap.ENTRIES, scale);
+  const entries = buildOrderEntries(cap.ENTRIES, scale, cap.id);
   const varName = cap.varName.replace('CAPACITY_RANK', 'ORDER_RANK');
-  const title = cap.title.replace('产能TOP10', '订单规模TOP10');
+  const title = cap.title.replace('产能TOP10', '市场规模参考TOP10').replace('规模TOP10', '市场规模参考TOP10');
   return {
     id: cap.id.replace('aerospace-', 'order-aerospace-'),
     varName,
@@ -88,7 +95,7 @@ const ORDER_RANKINGS = CAP_RANKINGS.map((cap) => {
 
 const outDir = path.join(__dirname, '..', 'data');
 const jsLines = [
-  '/** 2026 商业航天板块订单规模排行 · 由 scripts/build-order-rank-aerospace2026.js 生成 */',
+  '/** 2026 商业航天板块市场规模参考排行 · 由 scripts/build-order-rank-aerospace2026.js 生成 */',
 ];
 ORDER_RANKINGS.forEach(({ varName, payload }) => {
   jsLines.push(`var ${varName} = ${JSON.stringify(payload, null, 2)};`);

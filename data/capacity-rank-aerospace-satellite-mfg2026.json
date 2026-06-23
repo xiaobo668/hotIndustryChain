@@ -4,7 +4,7 @@
     "商业航天"
   ],
   "title": "2026卫星制造产能TOP10",
-  "subtitle": "口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商",
+  "subtitle": "口径：商业卫星年化总装交付（颗/年）；均为卫星制造规模靠前厂商；数据为产业链节点规模参考（内部编制），非企业官方产能披露",
   "capacityUnit": "颗/年",
   "generatedAt": "2026-06",
   "companies": [
@@ -16,11 +16,11 @@
       "verify": {
         "capacity": 185,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星年化总装交付约185颗",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星年化总装交付约185颗",
         "officialCross": null
       }
     },
@@ -32,11 +32,11 @@
       "verify": {
         "capacity": 142,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星结构件年化交付约142颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星结构件年化交付约142颗当量",
         "officialCross": null
       }
     },
@@ -48,11 +48,11 @@
       "verify": {
         "capacity": 118,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星年化交付约118颗",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星年化交付约118颗",
         "officialCross": null
       }
     },
@@ -64,11 +64,11 @@
       "verify": {
         "capacity": 95,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星电子系统年化配套约95颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星电子系统年化配套约95颗当量",
         "officialCross": null
       }
     },
@@ -80,11 +80,11 @@
       "verify": {
         "capacity": 72,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星年化交付约72颗",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星年化交付约72颗",
         "officialCross": null
       }
     },
@@ -96,11 +96,11 @@
       "verify": {
         "capacity": 58,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星配套年化约58颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星配套年化约58颗当量",
         "officialCross": null
       }
     },
@@ -112,11 +112,11 @@
       "verify": {
         "capacity": 48,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星年化交付约48颗",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星年化交付约48颗",
         "officialCross": null
       }
     },
@@ -128,11 +128,11 @@
       "verify": {
         "capacity": 38,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星射频芯片年化配套约38颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星射频芯片年化配套约38颗当量",
         "officialCross": null
       }
     },
@@ -144,11 +144,11 @@
       "verify": {
         "capacity": 32,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星微波组件年化交付约32颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星微波组件年化交付约32颗当量",
         "officialCross": null
       }
     },
@@ -160,11 +160,11 @@
       "verify": {
         "capacity": 28,
         "capacityUnit": "颗/年",
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链产能梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：卫星通信配套年化约28颗当量",
+        "sourceType": "internal",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "产业链口径：卫星通信配套年化约28颗当量",
         "officialCross": null
       }
     }
