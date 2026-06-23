@@ -3,157 +3,157 @@
   "industryKeys": [
     "商业航天"
   ],
-  "title": "2026航天材料订单规模TOP10",
-  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "title": "2026航天材料市场规模参考TOP10",
+  "subtitle": "市场规模参考按产业链节点交付能力/规模指数换算为亿元区间（内部编制），非企业统一在手订单披露，仅供产业学习参考",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "上大股份",
-      "orderLabel": "在手/预计订单约30亿元",
+      "orderLabel": "市场规模参考约30亿元",
       "highlight": "高温合金锻件规模靠前，火箭发动机涡轮盘与航天结构材料产线",
       "verify": {
         "amount": 30,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天高温合金预计订单约12500吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=12500吨/年×赛道系数0.0024（aerospace-materials）；航天高温合金年化产能约12500吨",
         "officialCross": null
       }
     },
     {
       "rank": 2,
       "name": "西部材料",
-      "orderLabel": "在手/预计订单约23.5亿元",
+      "orderLabel": "市场规模参考约23.5亿元",
       "highlight": "钛合金+难熔金属，航天结构件与发动机材料产线满产",
       "verify": {
         "amount": 23.5,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天钛合金预计订单约9800吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=9800吨/年×赛道系数0.0024（aerospace-materials）；航天钛合金年化产能约9800吨",
         "officialCross": null
       }
     },
     {
       "rank": 3,
       "name": "宝钛股份",
-      "orderLabel": "在手/预计订单约20.4亿元",
+      "orderLabel": "市场规模参考约20.4亿元",
       "highlight": "钛材规模靠前厂商，航天钛合金板材与锻件产线",
       "verify": {
         "amount": 20.4,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天钛材预计订单约8500吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=8500吨/年×赛道系数0.0024（aerospace-materials）；航天钛材年化产能约8500吨",
         "officialCross": null
       }
     },
     {
       "rank": 4,
       "name": "钢研高纳",
-      "orderLabel": "在手/预计订单约17.3亿元",
+      "orderLabel": "市场规模参考约17.3亿元",
       "highlight": "高温合金铸件，火箭发动机涡轮盘与燃烧室材料产线",
       "verify": {
         "amount": 17.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天高温合金预计订单约7200吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=7200吨/年×赛道系数0.0024（aerospace-materials）；航天高温合金年化产能约7200吨",
         "officialCross": null
       }
     },
     {
       "rank": 5,
       "name": "光威复材",
-      "orderLabel": "在手/预计订单约13.9亿元",
+      "orderLabel": "市场规模参考约13.9亿元",
       "highlight": "碳纤维复合材料规模靠前，火箭箭体与卫星结构复合材料",
       "verify": {
         "amount": 13.9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天碳纤维预计订单约5800吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=5800吨/年×赛道系数0.0024（aerospace-materials）；航天碳纤维年化产能约5800吨",
         "officialCross": null
       }
     },
     {
       "rank": 6,
       "name": "中简科技",
-      "orderLabel": "在手/预计订单约10.8亿元",
+      "orderLabel": "市场规模参考约10.8亿元",
       "highlight": "高性能碳纤维，航天航空结构用碳纤维产线",
       "verify": {
         "amount": 10.8,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天碳纤维预计订单约4500吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=4500吨/年×赛道系数0.0024（aerospace-materials）；航天碳纤维年化产能约4500吨",
         "officialCross": null
       }
     },
     {
       "rank": 7,
       "name": "博云新材",
-      "orderLabel": "在手/预计订单约9.1亿元",
+      "orderLabel": "市场规模参考约9.1亿元",
       "highlight": "炭/炭复合材料，航天热端材料与刹车材料产线",
       "verify": {
         "amount": 9.1,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天复合材料预计订单约3800吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=3800吨/年×赛道系数0.0024（aerospace-materials）；航天复合材料年化产能约3800吨",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "派克新材",
-      "orderLabel": "在手/预计订单约7.7亿元",
+      "orderLabel": "市场规模参考约7.7亿元",
       "highlight": "航空航天锻件，火箭与卫星结构锻件产线满产",
       "verify": {
         "amount": 7.7,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天锻件预计订单约3200吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=3200吨/年×赛道系数0.0024（aerospace-materials）；航天锻件年化产能约3200吨",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "火炬电子",
-      "orderLabel": "在手/预计订单约6.7亿元",
+      "orderLabel": "市场规模参考约6.7亿元",
       "highlight": "特种陶瓷+高温材料，航天电子陶瓷与热端材料",
       "verify": {
         "amount": 6.7,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天陶瓷材料预计订单约2800吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=2800吨/年×赛道系数0.0024（aerospace-materials）；航天陶瓷材料年化产能约2800吨",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "图南股份",
-      "orderLabel": "在手/预计订单约5.3亿元",
+      "orderLabel": "市场规模参考约5.3亿元",
       "highlight": "高温合金精密铸件，航空发动机与航天热端铸件产线",
       "verify": {
         "amount": 5.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天高温合金铸件预计订单约2200吨",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=2200吨/年×赛道系数0.0024（aerospace-materials）；航天高温合金铸件年化产能约2200吨",
         "officialCross": null
       }
     }

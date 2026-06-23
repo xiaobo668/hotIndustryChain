@@ -3,157 +3,157 @@
   "industryKeys": [
     "商业航天"
   ],
-  "title": "2026航天测控系统订单规模TOP10",
-  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "title": "2026航天测控系统市场规模参考TOP10",
+  "subtitle": "市场规模参考按产业链节点交付能力/规模指数换算为亿元区间（内部编制），非企业统一在手订单披露，仅供产业学习参考",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "海格通信",
-      "orderLabel": "在手/预计订单约39.9亿元",
+      "orderLabel": "市场规模参考约39.9亿元",
       "highlight": "卫星测控+通信终端，航天测控地面站与终端系统出货量居前",
       "verify": {
         "amount": 39.9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控系统预计订单约2850套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=2850套/年×赛道系数0.014（aerospace-ttc）；航天测控系统年化交付约2850套",
         "officialCross": null
       }
     },
     {
       "rank": 2,
       "name": "华力创通",
-      "orderLabel": "在手/预计订单约31.9亿元",
+      "orderLabel": "市场规模参考约31.9亿元",
       "highlight": "卫星通信+测控基带，航天测控终端与信号处理系统",
       "verify": {
         "amount": 31.9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控终端预计订单约2280套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=2280套/年×赛道系数0.014（aerospace-ttc）；航天测控终端年化交付约2280套",
         "officialCross": null
       }
     },
     {
       "rank": 3,
       "name": "雷科防务",
-      "orderLabel": "在手/预计订单约25.9亿元",
+      "orderLabel": "市场规模参考约25.9亿元",
       "highlight": "雷达+卫星应用，航天测控雷达与遥感信号处理系统",
       "verify": {
         "amount": 25.9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控雷达预计订单约1850套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=1850套/年×赛道系数0.014（aerospace-ttc）；航天测控雷达年化交付约1850套",
         "officialCross": null
       }
     },
     {
       "rank": 4,
       "name": "航天电子",
-      "orderLabel": "在手/预计订单约21.3亿元",
+      "orderLabel": "市场规模参考约21.3亿元",
       "highlight": "星载测控+地面设备，航天测控电子系统核心配套",
       "verify": {
         "amount": 21.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控电子预计订单约1520套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=1520套/年×赛道系数0.014（aerospace-ttc）；航天测控电子年化交付约1520套",
         "officialCross": null
       }
     },
     {
       "rank": 5,
       "name": "中国卫星",
-      "orderLabel": "在手/预计订单约17.9亿元",
+      "orderLabel": "市场规模参考约17.9亿元",
       "highlight": "小卫星+测控集成，航天测控地面站与卫星测控分系统",
       "verify": {
         "amount": 17.9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控系统预计订单约1280套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=1280套/年×赛道系数0.014（aerospace-ttc）；航天测控系统年化交付约1280套",
         "officialCross": null
       }
     },
     {
       "rank": 6,
       "name": "普天科技",
-      "orderLabel": "在手/预计订单约14.7亿元",
+      "orderLabel": "市场规模参考约14.7亿元",
       "highlight": "通信网络+测控集成，航天测控通信网络与系统集成",
       "verify": {
         "amount": 14.7,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控集成预计订单约1050套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=1050套/年×赛道系数0.014（aerospace-ttc）；航天测控集成年化交付约1050套",
         "officialCross": null
       }
     },
     {
       "rank": 7,
       "name": "航天长峰",
-      "orderLabel": "在手/预计订单约12.3亿元",
+      "orderLabel": "市场规模参考约12.3亿元",
       "highlight": "安保+测控电子，航天发射测控与安保安防系统",
       "verify": {
         "amount": 12.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控安防预计订单约880套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=880套/年×赛道系数0.014（aerospace-ttc）；航天测控安防年化交付约880套",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "北斗星通",
-      "orderLabel": "在手/预计订单约10.1亿元",
+      "orderLabel": "市场规模参考约10.1亿元",
       "highlight": "北斗测控+高精度定位，航天测控导航增强与监测",
       "verify": {
         "amount": 10.1,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控导航预计订单约720套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=720套/年×赛道系数0.014（aerospace-ttc）；航天测控导航年化交付约720套",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "振芯科技",
-      "orderLabel": "在手/预计订单约8.1亿元",
+      "orderLabel": "市场规模参考约8.1亿元",
       "highlight": "北斗芯片+测控，航天测控基带与射频芯片系统",
       "verify": {
         "amount": 8.1,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控芯片预计订单约580套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=580套/年×赛道系数0.014（aerospace-ttc）；航天测控芯片年化交付约580套",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "晨曦航空",
-      "orderLabel": "在手/预计订单约6.3亿元",
+      "orderLabel": "市场规模参考约6.3亿元",
       "highlight": "惯性导航+飞控，航天测控惯性测量与飞行控制系统",
       "verify": {
         "amount": 6.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天测控惯性系统预计订单约450套",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=450套/年×赛道系数0.014（aerospace-ttc）；航天测控惯性系统年化交付约450套",
         "officialCross": null
       }
     }

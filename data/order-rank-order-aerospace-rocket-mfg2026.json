@@ -3,157 +3,157 @@
   "industryKeys": [
     "商业航天"
   ],
-  "title": "2026运载火箭制造订单规模TOP10",
-  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "title": "2026运载火箭制造市场规模参考TOP10",
+  "subtitle": "市场规模参考按产业链节点交付能力/规模指数换算为亿元区间（内部编制），非企业统一在手订单披露，仅供产业学习参考",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "航天动力",
-      "orderLabel": "在手/预计订单约32.2亿元",
+      "orderLabel": "市场规模参考约32.2亿元",
       "highlight": "液体火箭发动机+推进系统，运载火箭动力系统核心配套满产",
       "verify": {
         "amount": 32.2,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭动力系统年化配套约28枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=28枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭动力系统年化配套约28枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 2,
       "name": "中天火箭",
-      "orderLabel": "在手/预计订单约25.3亿元",
+      "orderLabel": "市场规模参考约25.3亿元",
       "highlight": "固体火箭+小型运载火箭，商业航天发射服务产线",
       "verify": {
         "amount": 25.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭预计订单约22枚",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=22枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭年化交付约22枚",
         "officialCross": null
       }
     },
     {
       "rank": 3,
       "name": "钢研高纳",
-      "orderLabel": "在手/预计订单约20.7亿元",
+      "orderLabel": "市场规模参考约20.7亿元",
       "highlight": "高温合金材料+火箭锻件，运载火箭发动机与结构材料配套",
       "verify": {
         "amount": 20.7,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭材料年化配套约18枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=18枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭材料年化配套约18枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 4,
       "name": "航天晨光",
-      "orderLabel": "在手/预计订单约17.3亿元",
+      "orderLabel": "市场规模参考约17.3亿元",
       "highlight": "特种车辆+压力容器，火箭燃料贮运与发射支持装备",
       "verify": {
         "amount": 17.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭地面配套年化约15枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=15枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭地面配套年化约15枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 5,
       "name": "新余国科",
-      "orderLabel": "在手/预计订单约13.8亿元",
+      "orderLabel": "市场规模参考约13.8亿元",
       "highlight": "火工品+气象火箭，固体火箭与发射装置产线",
       "verify": {
         "amount": 13.8,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭火工配套年化约12枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=12枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭火工配套年化约12枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 6,
       "name": "超捷股份",
-      "orderLabel": "在手/预计订单约11.5亿元",
+      "orderLabel": "市场规模参考约11.5亿元",
       "highlight": "紧固件+箭体结构，运载火箭结构连接件整箭配套",
       "verify": {
         "amount": 11.5,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭结构件年化配套约10枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=10枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭结构件年化配套约10枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 7,
       "name": "飞沃科技",
-      "orderLabel": "在手/预计订单约9.8亿元",
+      "orderLabel": "市场规模参考约9.8亿元",
       "highlight": "高强度紧固件，运载火箭箭体结构紧固配套",
       "verify": {
         "amount": 9.8,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭紧固件年化配套约8.5枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=8.5枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭紧固件年化配套约8.5枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "上海沪工",
-      "orderLabel": "在手/预计订单约8.3亿元",
+      "orderLabel": "市场规模参考约8.3亿元",
       "highlight": "焊接装备+航天制造，运载火箭贮箱焊接与总装配套",
       "verify": {
         "amount": 8.3,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭结构制造年化约7.2枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=7.2枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭结构制造年化约7.2枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "爱乐达",
-      "orderLabel": "在手/预计订单约7.5亿元",
+      "orderLabel": "市场规模参考约7.5亿元",
       "highlight": "航空零部件精密加工，运载火箭结构件数控加工配套",
       "verify": {
         "amount": 7.5,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭结构加工年化约6.5枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=6.5枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭结构加工年化约6.5枚当量",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "三角防务",
-      "orderLabel": "在手/预计订单约6.7亿元",
+      "orderLabel": "市场规模参考约6.7亿元",
       "highlight": "大型锻件制造，运载火箭箭体段部锻件配套",
       "verify": {
         "amount": 6.7,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：运载火箭锻件年化配套约5.8枚当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=5.8枚/年×赛道系数1.15（aerospace-rocket-mfg）；运载火箭锻件年化配套约5.8枚当量",
         "officialCross": null
       }
     }

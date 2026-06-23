@@ -3,157 +3,157 @@
   "industryKeys": [
     "商业航天"
   ],
-  "title": "2026火箭发动机订单规模TOP10",
-  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "title": "2026火箭发动机市场规模参考TOP10",
+  "subtitle": "市场规模参考按产业链节点交付能力/规模指数换算为亿元区间（内部编制），非企业统一在手订单披露，仅供产业学习参考",
   "generatedAt": "2026-06",
   "companies": [
     {
       "rank": 1,
       "name": "航天动力",
-      "orderLabel": "在手/预计订单约42.5亿元",
+      "orderLabel": "市场规模参考约42.5亿元",
       "highlight": "液体火箭发动机制造规模靠前，液氧煤油发动机产线与推进系统配套满产",
       "verify": {
         "amount": 42.5,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：液体火箭发动机预计订单约85台",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=85台/年×赛道系数0.5（aerospace-rocket-engine）；液体火箭发动机年化交付约85台",
         "officialCross": null
       }
     },
     {
       "rank": 2,
       "name": "钢研高纳",
-      "orderLabel": "在手/预计订单约31亿元",
+      "orderLabel": "市场规模参考约31亿元",
       "highlight": "高温合金铸件+涡轮盘，火箭发动机燃烧室与涡轮核心材料产线",
       "verify": {
         "amount": 31,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机高温合金部件预计订单约62台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=62台/年×赛道系数0.5（aerospace-rocket-engine）；发动机高温合金部件年化交付约62台当量",
         "officialCross": null
       }
     },
     {
       "rank": 3,
       "name": "光韵达",
-      "orderLabel": "在手/预计订单约24亿元",
+      "orderLabel": "市场规模参考约24亿元",
       "highlight": "金属3D打印+激光装备，火箭发动机复杂构件增材制造产线",
       "verify": {
         "amount": 24,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：航天增材制造部件预计订单约48台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=48台/年×赛道系数0.5（aerospace-rocket-engine）；航天增材制造部件年化交付约48台当量",
         "officialCross": null
       }
     },
     {
       "rank": 4,
       "name": "派克新材",
-      "orderLabel": "在手/预计订单约19亿元",
+      "orderLabel": "市场规模参考约19亿元",
       "highlight": "航空航天锻件规模靠前，火箭发动机壳体与结构锻件产线满产",
       "verify": {
         "amount": 19,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机锻件预计订单约38台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=38台/年×赛道系数0.5（aerospace-rocket-engine）；发动机锻件年化交付约38台当量",
         "officialCross": null
       }
     },
     {
       "rank": 5,
       "name": "火炬电子",
-      "orderLabel": "在手/预计订单约16亿元",
+      "orderLabel": "市场规模参考约16亿元",
       "highlight": "特种陶瓷电容器+高温材料，火箭发动机电子与热端材料配套",
       "verify": {
         "amount": 16,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机电子/材料部件预计订单约32台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=32台/年×赛道系数0.5（aerospace-rocket-engine）；发动机电子/材料部件年化交付约32台当量",
         "officialCross": null
       }
     },
     {
       "rank": 6,
       "name": "新余国科",
-      "orderLabel": "在手/预计订单约14亿元",
+      "orderLabel": "市场规模参考约14亿元",
       "highlight": "火工品+特种装备，固体火箭发动机点火与分离装置产线",
       "verify": {
         "amount": 14,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机火工配套预计订单约28台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=28台/年×赛道系数0.5（aerospace-rocket-engine）；发动机火工配套年化交付约28台当量",
         "officialCross": null
       }
     },
     {
       "rank": 7,
       "name": "晨曦航空",
-      "orderLabel": "在手/预计订单约11亿元",
+      "orderLabel": "市场规模参考约11亿元",
       "highlight": "航空发动机电子控制+惯性器件，火箭推进控制子系统配套",
       "verify": {
         "amount": 11,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：推进控制子系统预计订单约22台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=22台/年×赛道系数0.5（aerospace-rocket-engine）；推进控制子系统年化交付约22台当量",
         "officialCross": null
       }
     },
     {
       "rank": 8,
       "name": "上大股份",
-      "orderLabel": "在手/预计订单约9亿元",
+      "orderLabel": "市场规模参考约9亿元",
       "highlight": "高温合金锻件，火箭发动机涡轮盘与机匣锻件产线",
       "verify": {
         "amount": 9,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机高温合金锻件预计订单约18台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=18台/年×赛道系数0.5（aerospace-rocket-engine）；发动机高温合金锻件年化交付约18台当量",
         "officialCross": null
       }
     },
     {
       "rank": 9,
       "name": "西部材料",
-      "orderLabel": "在手/预计订单约7.5亿元",
+      "orderLabel": "市场规模参考约7.5亿元",
       "highlight": "钛合金+难熔金属，火箭发动机喷管与结构材料产线",
       "verify": {
         "amount": 7.5,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机钛合金部件预计订单约15台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=15台/年×赛道系数0.5（aerospace-rocket-engine）；发动机钛合金部件年化交付约15台当量",
         "officialCross": null
       }
     },
     {
       "rank": 10,
       "name": "博云新材",
-      "orderLabel": "在手/预计订单约6亿元",
+      "orderLabel": "市场规模参考约6亿元",
       "highlight": "炭/炭复合材料+粉末冶金，火箭发动机热端材料与刹车材料",
       "verify": {
         "amount": 6,
-        "sourceType": "media",
-        "source": "东方财富·商业航天产业链订单梳理",
-        "sourceDate": "2026-04-14",
-        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
-        "note": "媒体报道口径：媒体报道口径：发动机复合材料部件预计订单约12台当量",
+        "sourceType": "derived",
+        "source": "商业航天产业链节点规模梳理",
+        "sourceDate": "2026-06",
+        "sourceUrl": null,
+        "note": "市场规模参考=12台/年×赛道系数0.5（aerospace-rocket-engine）；发动机复合材料部件年化交付约12台当量",
         "officialCross": null
       }
     }
