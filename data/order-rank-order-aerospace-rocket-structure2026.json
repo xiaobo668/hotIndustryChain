@@ -1,0 +1,161 @@
+{
+  "key": "箭体结构",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026箭体结构件订单规模TOP10",
+  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超捷股份",
+      "orderLabel": "在手/预计订单约34.4亿元",
+      "highlight": "紧固件+箭体结构件，商业火箭箭体连接与结构配套出货量居前",
+      "verify": {
+        "amount": 34.4,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体结构件预计订单约4200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "飞沃科技",
+      "orderLabel": "在手/预计订单约28.7亿元",
+      "highlight": "高强度紧固件规模靠前，火箭箭体结构连接件产线满产",
+      "verify": {
+        "amount": 28.7,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体紧固件预计订单约3500套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "上海沪工",
+      "orderLabel": "在手/预计订单约23亿元",
+      "highlight": "焊接装备+航天结构制造，火箭贮箱与箭体结构焊接产线",
+      "verify": {
+        "amount": 23,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体结构件预计订单约2800套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "爱乐达",
+      "orderLabel": "在手/预计订单约18亿元",
+      "highlight": "航空零部件精密加工，火箭箭体结构件数控加工产线",
+      "verify": {
+        "amount": 18,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体结构加工件预计订单约2200套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "三角防务",
+      "orderLabel": "在手/预计订单约15.2亿元",
+      "highlight": "大型锻件+结构件，火箭箭体段部结构锻件产线",
+      "verify": {
+        "amount": 15.2,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体锻件预计订单约1850套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "航天晨光",
+      "orderLabel": "在手/预计订单约12.5亿元",
+      "highlight": "特种装备+压力容器，火箭燃料贮箱与管路结构产线",
+      "verify": {
+        "amount": 12.5,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体贮箱结构预计订单约1520套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中天火箭",
+      "orderLabel": "在手/预计订单约10.5亿元",
+      "highlight": "固体火箭+小型运载火箭，箭体结构总装与发射服务配套",
+      "verify": {
+        "amount": 10.5,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体结构预计订单约1280套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "航天长峰",
+      "orderLabel": "在手/预计订单约8亿元",
+      "highlight": "安保+航天配套，火箭测发控与箭体地面支持结构",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体地面配套预计订单约980套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "光威复材",
+      "orderLabel": "在手/预计订单约6.7亿元",
+      "highlight": "碳纤维复合材料规模靠前，火箭箭体复合材料结构件产线",
+      "verify": {
+        "amount": 6.7,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体复合材料预计订单约820套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "新晨科技",
+      "orderLabel": "在手/预计订单约5.3亿元",
+      "highlight": "金融信息化+军工配套，火箭地面测控与结构信息化配套",
+      "verify": {
+        "amount": 5.3,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：箭体信息化配套预计订单约650套",
+        "officialCross": null
+      }
+    }
+  ]
+}

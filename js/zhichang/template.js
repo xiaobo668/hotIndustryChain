@@ -1,19 +1,24 @@
 /**
  * 职场海报模版配置
- * 背景图：assets/zhichang/poster-template.jpg（493×580）
- * 中间留白区域用于叠加文字，四角装饰图保留
+ * 底图：纯色背景 + 两张可定位装饰图（493×580）
+ * 中间留白区域用于叠加文字
  */
 const ZHICHANG_POSTER_TEMPLATE = {
-  src: 'assets/zhichang/poster-template.jpg',
   width: 493,
   height: 580,
   displayWidth: 430,
+  bgColor: '#f4efe6',
+  /** 装饰图（相对模版宽高的比例定位；右上靠上、左下靠下，避免长文重叠） */
+  decorations: [
+    { src: 'assets/zhichang/decor-sticker.jpg', xRatio: 0.746, yRatio: 0.006, wRatio: 0.20 },
+    { src: 'assets/zhichang/decor-sticker.jpg', xRatio: 0.01, yRatio: 0.805, wRatio: 0.20 },
+  ],
   /** 中间文字安全区（相对模版宽高的比例） */
   textZone: {
-    xRatio: 0.10,
-    yRatio: 0.28,
-    wRatio: 0.80,
-    hRatio: 0.44,
+    xRatio: 0.12,
+    yRatio: 0.22,
+    wRatio: 0.76,
+    hRatio: 0.54,
   },
   font: {
     family: '"PingFang SC", "Microsoft YaHei", sans-serif',

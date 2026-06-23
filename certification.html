@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>视频号兴趣认证专区 · 科技/产业赛道</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --card: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #e8e8f0;
+      --muted: #8888aa;
+      --accent: #38bdf8;
+      --accent-dim: rgba(56, 189, 248, 0.12);
+      --warn: #fbbf24;
+      --green: #34d399;
+      --red: #f87171;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 56px;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .back { display: inline-block; margin-bottom: 16px; font-size: 13px; color: var(--accent); text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+
+    .hero { text-align: center; margin-bottom: 28px; }
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px; font-weight: 600; color: var(--accent);
+      background: var(--accent-dim); border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 20px; padding: 4px 14px; margin-bottom: 12px;
+    }
+    .hero h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; line-height: 1.35; }
+    .hero p { color: var(--muted); font-size: 14px; max-width: 600px; margin: 0 auto; }
+
+    .reject-box {
+      background: rgba(248, 113, 113, 0.08);
+      border: 1px solid rgba(248, 113, 113, 0.35);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 24px;
+      font-size: 14px; line-height: 1.65;
+    }
+    .reject-box strong { color: #fca5a5; }
+
+    .steps { display: grid; gap: 10px; margin-bottom: 28px; }
+    .step-pill {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 14px;
+    }
+    .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+      background: var(--accent-dim); color: var(--accent);
+      font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+    }
+    .step-pill h3 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .step-pill p { font-size: 13px; color: var(--muted); }
+
+    .section { margin-bottom: 28px; }
+    .section-title {
+      font-size: 18px; font-weight: 700; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title::before {
+      content: ''; width: 4px; height: 18px;
+      background: linear-gradient(180deg, var(--accent), #0ea5e9);
+      border-radius: 2px; flex-shrink: 0;
+    }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin-bottom: 12px;
+    }
+    .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .card p, .card li { font-size: 14px; color: var(--muted); }
+    .card ul, .card ol { padding-left: 20px; margin-top: 6px; }
+    .card li { margin-bottom: 5px; }
+
+    .copy-block {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px;
+      font-size: 14px; line-height: 1.75; color: #d4d4e8;
+      margin: 10px 0; white-space: pre-wrap;
+    }
+    .copy-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .btn {
+      padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.06); color: var(--text);
+      font-size: 13px; cursor: pointer; transition: background 0.15s;
+    }
+    .btn:hover { background: rgba(255, 255, 255, 0.1); }
+    .btn-primary { background: linear-gradient(135deg, #38bdf8, #0ea5e9); border-color: transparent; color: #0f172a; font-weight: 600; }
+    .btn-primary:hover { filter: brightness(1.05); }
+    .copy-status { font-size: 12px; color: var(--green); margin-left: 4px; }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 14px; color: var(--muted);
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist input { margin-top: 4px; accent-color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .checklist label { cursor: pointer; flex: 1; }
+    .checklist .tag {
+      font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; flex-shrink: 0;
+    }
+    .tag-required { color: #fecaca; background: rgba(248, 113, 113, 0.15); }
+    .tag-bonus { color: #fde68a; background: rgba(251, 191, 36, 0.12); }
+
+    .warn-list {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+    }
+    .warn-chip {
+      font-size: 12px; padding: 4px 10px; border-radius: 6px;
+      background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.25);
+      color: #fca5a5;
+    }
+
+    .material-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;
+    }
+    .material-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px; text-decoration: none; color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .material-card:hover {
+      border-color: rgba(56, 189, 248, 0.45); transform: translateY(-2px);
+    }
+    .material-card .icon { font-size: 24px; margin-bottom: 8px; }
+    .material-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .material-card p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    .timeline {
+      border-left: 2px solid rgba(56, 189, 248, 0.3);
+      margin-left: 8px; padding-left: 20px;
+    }
+    .timeline-item { margin-bottom: 16px; position: relative; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -27px; top: 6px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim);
+    }
+    .timeline-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .timeline-item p { font-size: 13px; color: var(--muted); }
+
+    .progress-bar {
+      height: 6px; background: rgba(255, 255, 255, 0.08); border-radius: 3px;
+      margin-top: 12px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; background: linear-gradient(90deg, var(--accent), var(--green));
+      border-radius: 3px; transition: width 0.3s; width: 0%;
+    }
+    .progress-text { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链分析首页</a>
+
+    <div class="hero">
+      <span class="hero-badge">视频号 · 兴趣认证</span>
+      <h1>科技 / 产业赛道认证专区</h1>
+      <p>驳回整改 + 二次提报全套方案 · 内容补齐、材料上传、填写话术、提报时间一站搞定</p>
+    </div>
+
+    <div class="reject-box">
+      <strong>驳回原因：</strong>系统判定对应领域原创内容持续度、专业素材佐证不足。现有 21 条原创存在扣分点：内容形式单一（全是榜单图文视频）、缺少文字深度科普，专业度不足。
+    </div>
+
+    <div class="steps">
+      <div class="step-pill">
+        <span class="step-num">1</span>
+        <div><h3>补齐账号内容（3–5 天后再申请）</h3><p>新增 8–10 条垂直科普 + 清理杂项 + 统一主页包装</p></div>
+      </div>
+      <div class="step-pill">
+        <span class="step-num">2</span>
+        <div><h3>认证页填写标准话术</h3><p>兴趣类目选：科技科普 / 数码科技</p></div>
+      </div>
+      <div class="step-pill">
+        <span class="step-num">3</span>
+        <div><h3>上传 4 类佐证截图</h3><p>主页、高播放原创、持续更新、行业调研（加分）</p></div>
+      </div>
+      <div class="step-pill">
+        <span class="step-num">4</span>
+        <div><h3>按规则二次提报</h3><p>工作日 10:00–16:00 提交，规避金融违禁词</p></div>
+      </div>
+    </div>
+
+    <!-- 一、内容补齐 -->
+    <section class="section">
+      <h2 class="section-title">一、先补齐账号内容（最核心）</h2>
+
+      <div class="card">
+        <h3>1. 增量垂直原创（至少 8–10 条）</h3>
+        <p>每条视频自己整理数据、自制图表，口播独立撰写，发布时勾选「原创声明」，不要搬运网络现成图表。</p>
+        <ul>
+          <li>细分赛道技术拆解：磷化铟衬底、FC-BGA 先进封装、800G 光模块工艺</li>
+          <li>行业供需逻辑：产能扩张逻辑、国产替代进度分析</li>
+          <li>产业链上下游图谱：只讲实体制造、产能、出货，规避二级市场解读</li>
+        </ul>
+        <div class="copy-row" style="margin-top:14px">
+          <a class="btn btn-primary" href="docs/certification/video-scripts.html">📝 打开 10 条口播素材库</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>2. 清理跨领域、低质量内容</h3>
+        <ul>
+          <li>隐藏 / 删除与半导体、AI 算力、新材料无关的杂类视频</li>
+          <li>删掉播放几百、无完整产业逻辑的短碎视频</li>
+          <li>主页只保留垂直科技产业内容，强化账号垂直度</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>3. 统一主页包装</h3>
+        <p style="margin-bottom:10px">简介保留产业赛道描述，不要出现理财相关字眼。合集统一命名：</p>
+        <div class="copy-block" id="copy-collections">半导体产业链合集
+AI算力产能榜单合集</div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" onclick="copyText('copy-collections')">📋 复制合集名称</button>
+        </div>
+        <p style="margin-top:12px">建议简介模板（可按需微调）：</p>
+        <div class="copy-block" id="copy-bio">深耕 AI 算力、半导体、新材料、人形机器人实体产业链研究。持续原创产能/出货/订单榜单与产业图谱科普，面向制造业从业者分享产业知识。数据取自年报与公开行业报道，仅做实体产业科普。</div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" onclick="copyText('copy-bio')">📋 复制简介模板</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 二、认证话术 -->
+    <section class="section">
+      <h2 class="section-title">二、认证页面填写话术</h2>
+      <p style="font-size:13px;color:var(--muted);margin:-6px 0 14px">兴趣类目选：<strong style="color:var(--text)">科技科普</strong> 或 <strong style="color:var(--text)">数码科技</strong></p>
+
+      <div class="card">
+        <h3>身份介绍（直接复制）</h3>
+        <div class="copy-block" id="copy-identity">长期深耕AI算力、半导体、新材料、人形机器人等实体产业链研究，持续原创输出各赛道产能、出货、订单榜单与上下游产业图谱，专注行业实体供需、国产替代方向科普，产出全套细分产业数据梳理内容，累计20+条垂直领域原创视频，面向制造业从业者做产业知识分享。</div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" onclick="copyText('copy-identity')">📋 复制身份介绍</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>创作说明补充</h3>
+        <div class="copy-block" id="copy-creation">所有内容数据均取自上市公司年报、行业公开调研报道，仅做实体产业科普，不涉及二级市场投资分析，长期稳定输出科技制造赛道原创内容。</div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" onclick="copyText('copy-creation')">📋 复制创作说明</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三、佐证材料 -->
+    <section class="section">
+      <h2 class="section-title">三、上传佐证材料清单</h2>
+      <p style="font-size:13px;color:var(--muted);margin:-6px 0 14px">在认证「辅助证明材料」板块一次性上传，打包佐证长期深耕该领域。</p>
+
+      <ul class="checklist" id="evidence-checklist">
+        <li>
+          <input type="checkbox" id="ev1" onchange="updateProgress()" />
+          <label for="ev1">账号内容截图 ×2：主页全部产业视频合集列表 + 置顶 3 条高播放榜单视频页面</label>
+          <span class="tag tag-required">必备</span>
+        </li>
+        <li>
+          <input type="checkbox" id="ev2" onchange="updateProgress()" />
+          <label for="ev2">高播放原创后台截图 ×3：播放 10 万+ 视频的发布页，带「原创声明」标识与发布时间</label>
+          <span class="tag tag-required">必备</span>
+        </li>
+        <li>
+          <input type="checkbox" id="ev3" onchange="updateProgress()" />
+          <label for="ev3">长期更新记录：作品列表分页截图，展示近 30 天持续更新垂直产业视频</label>
+          <span class="tag tag-required">必备</span>
+        </li>
+        <li>
+          <input type="checkbox" id="ev4" onchange="updateProgress()" />
+          <label for="ev4">行业学习 / 调研辅助：研报阅读、产业展会、资讯整理文档截图（无则可不传）</label>
+          <span class="tag tag-bonus">加分</span>
+        </li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-text" id="progress-text">佐证准备进度：0 / 3 项必备</p>
+    </section>
+
+    <!-- 四、提报规则 -->
+    <section class="section">
+      <h2 class="section-title">四、提交与时间避坑</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>等待周期：新增 8–10 条后稳定更新 3–5 天再提交</h4>
+          <p>刚发完立刻提交，系统不会抓取新增内容，依旧驳回。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>提交时间：工作日 10:00–16:00</h4>
+          <p>第三方审核机构（世纪恒通）在岗，处理更快；夜间 / 周末会顺延。</p>
+        </div>
+        <div class="timeline-item">
+          <h4>严禁出现的违禁关键词</h4>
+          <p>认证文案、简介、视频口播中一旦检测到以下词汇，可能直接驳回：</p>
+          <div class="warn-list">
+            <span class="warn-chip">股票</span>
+            <span class="warn-chip">个股</span>
+            <span class="warn-chip">估值</span>
+            <span class="warn-chip">涨跌</span>
+            <span class="warn-chip">ETF</span>
+            <span class="warn-chip">投资</span>
+            <span class="warn-chip">理财</span>
+            <span class="warn-chip">开户</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 五、兜底 -->
+    <section class="section">
+      <h2 class="section-title">五、兜底方案（再次驳回时）</h2>
+      <div class="card">
+        <p>拨打通知内官方客服热线 <strong style="color:var(--accent)">0851-88655040</strong>（工作日），说明：</p>
+        <div class="copy-block" id="copy-fallback">账号长期垂直原创半导体产业链科普，已补充足量垂直原创内容与作品佐证截图，申请人工复核，可提供视频号 ID 协助人工复审。</div>
+        <div class="copy-row">
+          <button class="btn btn-primary" type="button" onclick="copyText('copy-fallback')">📋 复制申诉话术</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 素材入口 -->
+    <section class="section">
+      <h2 class="section-title">配套素材库</h2>
+      <div class="material-grid">
+        <a class="material-card" href="docs/certification/video-scripts.html">
+          <div class="icon">🎬</div>
+          <h3>10 条垂直科普口播</h3>
+          <p>技术拆解 · 供需逻辑 · 产业链图谱，一键复制口播文案</p>
+        </a>
+        <a class="material-card" href="docs/certification/content-plan.md">
+          <div class="icon">📅</div>
+          <h3>内容发布排期表</h3>
+          <p>8–10 条增量原创的发布顺序与合集归类建议</p>
+        </a>
+        <a class="material-card" href="theme-poster.html">
+          <div class="icon">🏆</div>
+          <h3>榜单海报素材</h3>
+          <p>自制图表数据来源：订单榜 / 产能榜海报可截图入镜</p>
+        </a>
+        <a class="material-card" href="analysis.html">
+          <div class="icon">📋</div>
+          <h3>分析过程文档</h3>
+          <p>来源核验记录，可作行业调研辅助佐证</p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const el = document.getElementById(id);
+      const text = el.innerText || el.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = el.parentElement.querySelector('.btn-primary') || el.nextElementSibling;
+        const status = document.createElement('span');
+        status.className = 'copy-status';
+        status.textContent = '已复制';
+        const row = el.parentElement.querySelector('.copy-row') || el.parentElement;
+        const old = row.querySelector('.copy-status');
+        if (old) old.remove();
+        row.appendChild(status);
+        setTimeout(() => status.remove(), 2000);
+      });
+    }
+
+    function updateProgress() {
+      const required = ['ev1', 'ev2', 'ev3'];
+      const done = required.filter((id) => document.getElementById(id).checked).length;
+      const pct = Math.round((done / required.length) * 100);
+      document.getElementById('progress-fill').style.width = pct + '%';
+      document.getElementById('progress-text').textContent =
+        '佐证准备进度：' + done + ' / ' + required.length + ' 项必备' +
+        (document.getElementById('ev4').checked ? ' · 加分项已勾选' : '');
+      try {
+        const state = {};
+        ['ev1', 'ev2', 'ev3', 'ev4'].forEach((id) => {
+          state[id] = document.getElementById(id).checked;
+        });
+        localStorage.setItem('cert-evidence-checklist', JSON.stringify(state));
+      } catch (_) {}
+    }
+
+    (function restoreChecklist() {
+      try {
+        const state = JSON.parse(localStorage.getItem('cert-evidence-checklist') || '{}');
+        Object.keys(state).forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.checked = !!state[id];
+        });
+        updateProgress();
+      } catch (_) {}
+    })();
+  </script>
+</body>
+</html>

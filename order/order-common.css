@@ -1,0 +1,89 @@
+:root {
+  --bg: #0f0f1a;
+  --text: #e8e8f0;
+  --text-muted: #8888aa;
+  --accent: #06b6d4;
+  --accent-deep: #0891b2;
+  --accent-light: #22d3ee;
+  --accent-text: #67e8f9;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 24px;
+}
+.wrap { max-width: 520px; margin: 0 auto; }
+h1 { font-size: 22px; margin-bottom: 8px; color: var(--accent-light); }
+h2 { margin-top: 28px; font-size: 18px; color: var(--text); }
+.sub { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-bottom: 20px; }
+.poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 8px; }
+.poster-page-label { font-size: 13px; color: var(--text-muted); text-align: center; }
+.poster-canvas-item { border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; margin-bottom: 24px; }
+.btn {
+  padding: 10px 18px; border-radius: 10px; border: none;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color: #fff;
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+a.back { color: var(--accent-light); font-size: 13px; display: inline-block; margin-bottom: 16px; text-decoration: none; }
+a.back:hover { text-decoration: underline; }
+.industry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+.industry-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.04);
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.industry-card:hover {
+  border-color: rgba(6, 182, 212, 0.45);
+  background: rgba(6, 182, 212, 0.08);
+}
+.industry-card-icon { font-size: 28px; margin-bottom: 8px; }
+.industry-card-name { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.industry-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.industry-card-count {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--accent-light);
+  background: rgba(6, 182, 212, 0.12);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.nav-toc {
+  margin: 16px 0 24px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.nav-toc-title { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.nav-toc a {
+  display: inline-block;
+  margin: 0 8px 6px 0;
+  font-size: 12px;
+  color: var(--accent-light);
+  text-decoration: none;
+}
+.nav-toc a:hover { text-decoration: underline; }

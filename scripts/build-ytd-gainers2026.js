@@ -1,234 +1,214 @@
+#!/usr/bin/env node
 /**
- * 2026年初至今 A 股涨幅 Top15（沪深主板/创业板，剔除科创/北交所/ST/次新-UW）
- * 行情：东方财富 push2delay f25（年初至今涨跌幅）
- * 运行: node scripts/build-ytd-gainers2026.js
+ * 拉取东方财富 f25（年初至今涨跌幅）Top15，合并手工归因，输出 data/ytd-gainers2026.js
+ * 用法: node scripts/build-ytd-gainers2026.js
  */
-const fs = require('fs');
 const https = require('https');
+const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
-const PERIOD_LABEL = '2026.1–至今';
-const PERIOD_NOTE =
-  '统计区间：2026年首个交易日至最近收盘（东方财富 f25 年初至今涨跌幅，前复权）；口径：沪深主板+创业板，剔除科创板/北交所/ST/*ST/-UW。';
+const LIST_URL =
+  'https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=80&po=1&np=1' +
+  '&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f25' +
+  '&fs=m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23&fields=f12,f14,f25,f13';
 
-/** 按股票代码登记涨跌归因（riseType: 业绩 | 情绪 | 炒作） */
-const MANUAL_BY_CODE = {
+/** 手工归因（按 code 索引，重跑榜单时保留/更新） */
+const ATTRIBUTION = {
   '301362': {
     riseType: '炒作',
-    whyUp: 'LED 户外照明小市值标的，智慧照明/光学题材跟风，涨幅与基本面脱节',
-    theme: '光学照明',
-  },
-  '603256': {
-    riseType: '业绩',
-    whyUp: '高端电子布（PTFE）供给偏紧，AI 服务器高频覆铜板需求拉动，2025 业绩高增兑现',
-    theme: 'PCB上游',
-  },
-  '600396': {
-    riseType: '情绪',
-    whyUp: '辽宁地方电力平台，电力改革+区域电价预期+煤价回落改善盈利，资金博弈重组预期',
-    theme: '电力',
-  },
-  '003036': {
-    riseType: '炒作',
-    whyUp: '纺织机械主业平淡，市场炒作轮胎模具/机器人跨界预期，题材驱动大于订单',
-    theme: '高端装备',
+    theme: 'PCB钻针/算力',
+    whyUp:
+      '并购厦芝精密（PCB钻针）切入AI算力耗材，市场按算力产业链重估；照明主业增长乏力，涨幅与并购预期绑定',
   },
   '603629': {
     riseType: '业绩',
-    whyUp: '算力租赁转型落地，英伟达 GPU 租赁与上架收入放量，业绩与 AI 算力题材共振',
     theme: '算力租赁',
+    whyUp: '算力租赁转型落地，英伟达 GPU 租赁与上架收入放量，业绩与 AI 算力题材共振',
+  },
+  '603256': {
+    riseType: '业绩',
+    theme: 'PCB上游',
+    whyUp: '高端电子布（PTFE）供给偏紧，AI 服务器高频覆铜板需求拉动，2025 业绩高增兑现',
   },
   '002636': {
     riseType: '业绩',
-    whyUp: '覆铜板（CCL）涨价周期，AI 服务器用高频材料需求旺盛，产品提价带动利润弹性',
     theme: 'PCB上游',
+    whyUp: '覆铜板（CCL）涨价周期，AI 服务器用高频材料需求旺盛，产品提价带动利润弹性',
   },
   '603618': {
     riseType: '情绪',
-    whyUp: '光纤光缆+电力电缆，光通信/算力传输板块情绪带动，订单预期先于财报兑现',
     theme: '光纤概念',
+    whyUp: '光纤光缆+电力电缆，光通信/算力传输板块情绪带动，订单预期先于财报兑现',
   },
-  '603115': {
-    riseType: '情绪',
-    whyUp: '电极箔（铝电解电容上游），新能源+涨价预期驱动，板块情绪大于单季业绩',
-    theme: '被动元件',
-  },
-  '002980': {
+  '003036': {
     riseType: '炒作',
-    whyUp: '检测仪器小盘股，AI 检测/机器人/智能装备概念蹭热点，缺乏对应订单与利润支撑',
-    theme: '仪器仪表',
-  },
-  '301526': {
-    riseType: '业绩',
-    whyUp: '风电/电子玻璃纤维材料，风电装机回暖+电子纱提价，2025 营收与毛利改善',
-    theme: '新材料',
-  },
-  '301669': {
-    riseType: '炒作',
-    whyUp: '新能源车 BMS/均衡管理次新标的，赛道叙事+小市值资金博弈，估值波动大',
-    theme: '新能源车',
-  },
-  '301531': {
-    riseType: '情绪',
-    whyUp: '汽车流体管路零部件，新能源车产业链情绪回暖，订单预期带动估值修复',
-    theme: '汽车零部件',
+    theme: '电子布织机',
+    whyUp:
+      '电子布喷气织机国产替代+纺织机器人+固态电池电解质概念催化；公司提示电子布织机仍处研发，题材大于订单',
   },
   '301373': {
     riseType: '炒作',
-    whyUp: '纳米二氧化硅涂料助剂，新材料标签+小盘流动性，题材炒作成分偏高',
     theme: '化工新材料',
+    whyUp: '纳米二氧化硅涂料助剂，新材料标签+小盘流动性，题材炒作成分偏高',
+  },
+  '603115': {
+    riseType: '情绪',
+    theme: '被动元件',
+    whyUp: '电极箔（铝电解电容上游），新能源+涨价预期驱动，板块情绪大于单季业绩',
+  },
+  '301526': {
+    riseType: '业绩',
+    theme: '新材料',
+    whyUp: '风电/电子玻璃纤维材料，风电装机回暖+电子纱提价，2025 营收与毛利改善',
+  },
+  '600396': {
+    riseType: '情绪',
+    theme: '电力',
+    whyUp: '辽宁地方电力平台，电力改革+区域电价预期+煤价回落改善盈利，资金博弈重组预期',
+  },
+  '300209': {
+    riseType: '炒作',
+    theme: '算力租赁',
+    whyUp:
+      '破产重整后更名转型，布局算力租赁+液冷设备+芯片设计；五年算力大单预期驱动，公司仍亏损，题材大于业绩',
   },
   '301217': {
     riseType: '业绩',
-    whyUp: '锂电/PCB 铜箔，AI 服务器高频铜箔与储能需求双轮，产能利用率提升',
     theme: 'PCB/铜箔',
+    whyUp: '锂电/PCB 铜箔，AI 服务器高频铜箔与储能需求双轮，产能利用率提升',
   },
-  '603459': {
-    riseType: '炒作',
-    whyUp: '医药包装/印刷次新，主业与当前热点关联弱，资金短炒次新流动性',
-    theme: '包装印刷',
+  '300903': {
+    riseType: '情绪',
+    theme: 'AI算力PCB',
+    whyUp:
+      'PCB 向 AI 算力转型，800G 光模块 PCB 与服务器 PCB 小批量供货；陶瓷散热板仍处研发，预期先于量产',
+  },
+  '002491': {
+    riseType: '情绪',
+    theme: '光纤概念',
+    whyUp:
+      '光棒光纤项目推进+一季度扣非扭亏，光通信板块情绪带动；公司澄清不涉及光模块/光芯片，算力光纤逻辑需谨慎',
+  },
+  '301669': {
+    riseType: '情绪',
+    theme: '储能BMS',
+    whyUp: '储能 BMS 龙头次新上市，大型储能出货量居行业前列；次新溢价+赛道叙事，非单纯新能源车 BMS',
   },
 };
 
-function httpsGetJson(url) {
+function get(url) {
   return new Promise((resolve, reject) => {
     https
-      .get(
-        url,
-        {
-          timeout: 25000,
-          headers: { 'User-Agent': 'Mozilla/5.0', Referer: 'https://quote.eastmoney.com/' },
-        },
-        (res) => {
-          let raw = '';
-          res.on('data', (c) => {
-            raw += c;
-          });
-          res.on('end', () => {
-            try {
-              resolve(JSON.parse(raw));
-            } catch (e) {
-              reject(e);
-            }
-          });
-        }
-      )
+      .get(url, { headers: { 'User-Agent': 'Mozilla/5.0', Referer: 'https://quote.eastmoney.com/' } }, (res) => {
+        let d = '';
+        res.on('data', (c) => (d += c));
+        res.on('end', () => {
+          try {
+            resolve(JSON.parse(d));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      })
       .on('error', reject);
   });
 }
 
-function codeToSecid(code, mkt) {
-  const c = String(code).padStart(6, '0');
-  const market = mkt === 1 ? '1' : '0';
-  return `${market}.${c}`;
+function filterStock(s) {
+  const name = s.f14 || '';
+  const code = s.f12 || '';
+  if (/ST|退/.test(name)) return false;
+  if (code.startsWith('688') || code.startsWith('8') || code.startsWith('4')) return false;
+  if (/-UW/.test(name)) return false;
+  return true;
 }
 
-function shouldExclude(code, name) {
-  if (/^688|^689/.test(code)) return true;
-  if (/^8|^4|^92/.test(code)) return true;
-  if (/ST|\*|退/.test(name)) return true;
-  if (/-UW|-W$/.test(name)) return true;
-  return false;
+function secidOf(s) {
+  const m = s.f13 === 1 ? '1' : '0';
+  return `${m}.${s.f12}`;
 }
 
-function loadChainHighlight(name) {
-  let code = fs.readFileSync(path.join(__dirname, '..', 'data.js'), 'utf8');
-  code = code.replace(/\bconst INDUSTRY_DATA\b/, 'var INDUSTRY_DATA');
-  const INDUSTRY_DATA = vm.runInNewContext(`${code}\nINDUSTRY_DATA;`);
-  for (const ind of Object.values(INDUSTRY_DATA)) {
-    for (const tier of [ind.upstream, ind.midstream, ind.downstream]) {
-      for (const seg of tier || []) {
-        for (const co of seg.companies || []) {
-          if (co.name === name) return co.highlight || '';
-        }
-      }
-    }
+function pctLabel(pct) {
+  const sign = pct >= 0 ? '+' : '';
+  return `${sign}${pct.toFixed(2)}%`;
+}
+
+async function main() {
+  const j = await get(LIST_URL);
+  const list = (j.data?.diff || []).filter(filterStock).slice(0, 15);
+  if (list.length < 15) {
+    console.warn('警告: 过滤后不足 15 只，实际', list.length);
   }
-  return '';
-}
 
-function classifyFallback(highlight, theme) {
-  const text = `${highlight} ${theme}`;
-  if (/业绩|净利|营收|订单|年报|一季报|涨价|放量|高增|扭亏|预增|毛利/.test(text)) return '业绩';
-  if (/概念|题材|蹭|炒作|博弈|次新|小盘|跟风|传闻/.test(text)) return '炒作';
-  return '情绪';
-}
-
-async function fetchTopYtd(n = 15) {
-  const fsParam = 'm:0+t:6,m:0+t:80,m:1+t:2,m:0+t:81+s:2048,m:1+t:23';
-  const url =
-    `https://push2delay.eastmoney.com/api/qt/clist/get?pn=1&pz=200&po=1&np=1&fltt=2&invt=2&fid=f25&fs=${encodeURIComponent(fsParam)}` +
-    '&fields=f12,f13,f14,f2,f25,f3,f20&ut=bd1d9ddb04089700cf9c27f6f7426281';
-  const json = await httpsGetJson(url);
-  const items = Object.values(json?.data?.diff || {});
-  if (!items.length) throw new Error('东方财富行情拉取失败');
-
-  const rows = [];
-  for (const row of items) {
-    const code = String(row.f12 || '').padStart(6, '0');
-    const name = String(row.f14 || '').trim();
-    if (!code || !name || shouldExclude(code, name)) continue;
-    const pct = Math.round(Number(row.f25) * 100) / 100;
-    const manual = MANUAL_BY_CODE[code] || {};
-    const chainHl = loadChainHighlight(name);
-    const riseType = manual.riseType || classifyFallback(chainHl, manual.theme || '');
-    const whyUp =
-      manual.whyUp ||
-      chainHl ||
-      `${name}年初至今领涨，驱动因素待结合公告与行业报道进一步核实`;
-    rows.push({
-      rank: rows.length + 1,
-      name,
+  const today = new Date().toISOString().slice(0, 10);
+  const companies = list.map((s, i) => {
+    const code = s.f12;
+    const attr = ATTRIBUTION[code] || {
+      riseType: '情绪',
+      theme: '—',
+      whyUp: '待补充归因说明',
+    };
+    const pct = Math.round(s.f25 * 100) / 100;
+    return {
+      rank: i + 1,
+      name: s.f14,
       code,
-      secid: codeToSecid(code, row.f13),
+      secid: secidOf(s),
       pct,
-      pctLabel: (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%',
-      riseType,
-      whyUp,
-      theme: manual.theme || '—',
-      highlight: whyUp,
+      pctLabel: pctLabel(pct),
+      riseType: attr.riseType,
+      whyUp: attr.whyUp,
+      theme: attr.theme,
+      highlight: attr.whyUp,
       verify: {
         source: '东方财富 push2delay f25',
         sourceType: 'market',
         field: 'f25',
-        secid: codeToSecid(code, row.f13),
+        secid: secidOf(s),
       },
-    });
-    if (rows.length >= n) break;
-  }
-  return rows;
-}
+    };
+  });
 
-async function main() {
-  const companies = await fetchTopYtd(15);
-  const endDate = new Date().toISOString().slice(0, 10);
-  const payload = {
+  const missing = companies.filter((c) => !ATTRIBUTION[c.code]);
+  if (missing.length) {
+    console.warn('缺少归因配置:', missing.map((c) => c.code + c.name).join(', '));
+  }
+
+  const subtitle = `统计区间：2026年首个交易日至最近收盘（东方财富 f25 年初至今涨跌幅，前复权）；口径：沪深主板+创业板，剔除科创板/北交所/ST/*ST/-UW。数据截至 ${today}。`;
+  const disclaimer =
+    '免责声明：涨幅数据来源于东方财富公开行情（f25 年初至今涨跌幅），涨跌归因为产业信息整理，仅用于行业学习参考，不构成证券投资建议；不提供任何选股、行情或买卖指导。行情实时变动，请以交易所披露为准；自主投资请独立审慎判断。';
+  const footerLines = [
+    '涨幅数据来源于东方财富公开行情（f25 年初至今涨跌幅），涨跌归因为产业信息整理，仅用于行业学习参考，',
+    '不构成证券投资建议；不提供任何选股、行情或买卖指导。',
+    '行情实时变动，请以交易所披露为准；自主投资请独立审慎判断。',
+  ];
+
+  const out = {
     key: '2026年初涨幅榜',
     title: '2026年初至今涨幅 Top15',
-    subtitle: PERIOD_NOTE,
-    period: PERIOD_LABEL,
-    generatedAt: endDate,
+    subtitle,
+    disclaimer,
+    footerLines,
+    period: '2026.1–至今',
+    generatedAt: today,
     companies,
   };
 
-  const outDir = path.join(__dirname, '..', 'data');
-  fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, 'ytd-gainers2026.json'), JSON.stringify(payload, null, 2), 'utf8');
-  const js = `/** 2026 年初至今涨幅 Top15 · 由 scripts/build-ytd-gainers2026.js 生成 */\nvar YTD_GAINERS2026 = ${JSON.stringify(payload, null, 2)};\nif (typeof window !== 'undefined') window.YTD_GAINERS2026 = YTD_GAINERS2026;\n`;
-  fs.writeFileSync(path.join(outDir, 'ytd-gainers2026.js'), js, 'utf8');
+  const js =
+    '/** 2026 年初至今涨幅 Top15 · 由 scripts/build-ytd-gainers2026.js 生成 */\n' +
+    `var YTD_GAINERS2026 = ${JSON.stringify(out, null, 2)};\n` +
+    "if (typeof window !== 'undefined') window.YTD_GAINERS2026 = YTD_GAINERS2026;\n";
 
-  console.log('OK 写入 ytd-gainers2026.js / .json 共', companies.length, '家');
-  companies.forEach((c) => {
-    console.log(`  ${c.rank}. ${c.name}  ${c.pctLabel}  [${c.riseType}]  ${c.whyUp.slice(0, 36)}…`);
-  });
+  const outPath = path.join(__dirname, '../data/ytd-gainers2026.js');
+  const jsonPath = path.join(__dirname, '../data/ytd-gainers2026.json');
+  fs.writeFileSync(outPath, js, 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify(out, null, 2), 'utf8');
+  console.log('已写入', outPath);
+  console.log('已写入', jsonPath);
+  companies.forEach((c) => console.log(`${c.rank}. ${c.name} ${c.code} ${c.pctLabel}`));
 }
 
-if (require.main === module) {
-  main().catch((e) => {
-    console.error(e);
-    process.exit(1);
-  });
-}
-
-module.exports = { MANUAL_BY_CODE, fetchTopYtd, PERIOD_NOTE };
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

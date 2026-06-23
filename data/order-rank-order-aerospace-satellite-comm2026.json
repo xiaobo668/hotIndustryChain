@@ -1,0 +1,161 @@
+{
+  "key": "卫星通信",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2026卫星通信订单规模TOP10",
+  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫通",
+      "orderLabel": "在手/预计订单约35亿元",
+      "highlight": "高轨卫星通信运营+终端配套，Ka宽带卫星通信服务能力规模居前",
+      "verify": {
+        "amount": 35,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信服务年化覆盖约12500万套当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通宇通讯",
+      "orderLabel": "在手/预计订单约23亿元",
+      "highlight": "基站天线+卫星通信天线，卫星互联网地面天线产线满产",
+      "verify": {
+        "amount": 23,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信天线预计订单约8200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华力创通",
+      "orderLabel": "在手/预计订单约19亿元",
+      "highlight": "卫星通信终端+基带芯片，天通卫星手机直连核心配套",
+      "verify": {
+        "amount": 19,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信终端预计订单约6800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "海格通信",
+      "orderLabel": "在手/预计订单约15.4亿元",
+      "highlight": "北斗+卫星通信双模终端，军用与民用卫星通信出货量居前",
+      "verify": {
+        "amount": 15.4,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信终端预计订单约5500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "振芯科技",
+      "orderLabel": "在手/预计订单约11.8亿元",
+      "highlight": "北斗导航+卫星通信芯片，卫星通信基带与射频芯片产线",
+      "verify": {
+        "amount": 11.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信芯片预计订单约4200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "上海瀚讯",
+      "orderLabel": "在手/预计订单约9.8亿元",
+      "highlight": "宽带通信设备，卫星互联网地面站与特种通信系统",
+      "verify": {
+        "amount": 9.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信设备预计订单约3500万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "盛路通信",
+      "orderLabel": "在手/预计订单约7.8亿元",
+      "highlight": "通信天线+卫星通信，卫星通信射频与天线组件产线",
+      "verify": {
+        "amount": 7.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信组件预计订单约2800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "信维通信",
+      "orderLabel": "在手/预计订单约6.2亿元",
+      "highlight": "移动终端天线+卫星通信，卫星通信终端天线与射频模组",
+      "verify": {
+        "amount": 6.2,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信天线预计订单约2200万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天箭科技",
+      "orderLabel": "在手/预计订单约5亿元",
+      "highlight": "高波段微波前端，卫星通信微波组件与功放产线",
+      "verify": {
+        "amount": 5,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信微波组件预计订单约1800万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "铖昌科技",
+      "orderLabel": "在手/预计订单约4.2亿元",
+      "highlight": "微波毫米波T/R芯片，卫星通信相控阵射频前端产线",
+      "verify": {
+        "amount": 4.2,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信射频芯片预计订单约1500万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

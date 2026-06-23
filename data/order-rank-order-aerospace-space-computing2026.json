@@ -1,0 +1,162 @@
+{
+  "key": "太空算力",
+  "industryKeys": [
+    "商业航天",
+    "AI算力"
+  ],
+  "title": "2026太空算力规模TOP10",
+  "subtitle": "1-6：公开报道2026年在手或预计订单；7-10：产业链节点以2025年报业务规模或媒体订单作参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "超图软件",
+      "orderLabel": "在手/预计订单约119亿元",
+      "highlight": "GIS数字地球+遥感云计算，太空算力地面数据中心与遥感处理平台",
+      "verify": {
+        "amount": 119,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：遥感云计算平台算力约850PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "航宇微",
+      "orderLabel": "在手/预计订单约86.8亿元",
+      "highlight": "宇航SOC芯片+在轨计算，卫星在轨数据处理与边缘算力节点",
+      "verify": {
+        "amount": 86.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星在轨算力约620PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "普天科技",
+      "orderLabel": "在手/预计订单约67.2亿元",
+      "highlight": "通信网络+卫星算力，星座地面数据中心与算力调度平台",
+      "verify": {
+        "amount": 67.2,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：星座地面算力约480PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "四维图新",
+      "orderLabel": "在手/预计订单约53.2亿元",
+      "highlight": "高精地图+遥感大数据，星座遥感数据算力处理平台",
+      "verify": {
+        "amount": 53.2,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：遥感数据算力约380PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北斗星通",
+      "orderLabel": "在手/预计订单约44.8亿元",
+      "highlight": "北斗数据+高精度定位云，导航星座数据算力服务平台",
+      "verify": {
+        "amount": 44.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：导航数据算力约320PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "欧比特",
+      "orderLabel": "在手/预计订单约37.1亿元",
+      "highlight": "遥感卫星+在轨AI，珠海一号星座遥感算力与数据处理",
+      "verify": {
+        "amount": 37.1,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：遥感星座算力约265PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "中国卫星",
+      "orderLabel": "在手/预计订单约30.8亿元",
+      "highlight": "小卫星+在轨计算，低轨星座在轨数据处理与算力节点",
+      "verify": {
+        "amount": 30.8,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星在轨算力约220PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雷科防务",
+      "orderLabel": "在手/预计订单约25.9亿元",
+      "highlight": "雷达信号处理+卫星应用，星座遥感与雷达数据算力平台",
+      "verify": {
+        "amount": 25.9,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星雷达算力约185PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "航天电子",
+      "orderLabel": "在手/预计订单约21.7亿元",
+      "highlight": "星载计算机+测控，卫星在轨计算与数据中继算力节点",
+      "verify": {
+        "amount": 21.7,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：星载算力约155PFlops",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华力创通",
+      "orderLabel": "在手/预计订单约17.9亿元",
+      "highlight": "卫星通信+基带处理，星座通信数据算力与边缘计算",
+      "verify": {
+        "amount": 17.9,
+        "sourceType": "media",
+        "source": "东方财富·商业航天产业链订单梳理",
+        "sourceDate": "2026-04-14",
+        "sourceUrl": "https://caifuhao.eastmoney.com/news/20260414055352939223580",
+        "note": "媒体报道口径：媒体报道口径：卫星通信算力约128PFlops",
+        "officialCross": null
+      }
+    }
+  ]
+}

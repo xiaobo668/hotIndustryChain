@@ -1,8 +1,8 @@
 /**
- * 职场海报 — 模版底图 + 中间文字
+ * 职场海报 — 纯色底 + 装饰图 + 中间文字
  */
-let _zhichangTemplateImage = null;
-let _zhichangTemplateLoading = null;
+const _zhichangImageCache = {};
+const _zhichangImageLoading = {};
 
 function getZhichangPosterSize() {
   const tpl = ZHICHANG_POSTER_TEMPLATE;
@@ -11,20 +11,25 @@ function getZhichangPosterSize() {
   return { W, H, tpl };
 }
 
-function loadZhichangTemplateImage() {
-  if (_zhichangTemplateImage) return Promise.resolve(_zhichangTemplateImage);
-  if (_zhichangTemplateLoading) return _zhichangTemplateLoading;
+function loadZhichangImage(src) {
+  if (_zhichangImageCache[src]) return Promise.resolve(_zhichangImageCache[src]);
+  if (_zhichangImageLoading[src]) return _zhichangImageLoading[src];
 
-  _zhichangTemplateLoading = new Promise((resolve, reject) => {
+  _zhichangImageLoading[src] = new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {
-      _zhichangTemplateImage = img;
+      _zhichangImageCache[src] = img;
       resolve(img);
     };
-    img.onerror = () => reject(new Error('职场海报模版加载失败'));
-    img.src = ZHICHANG_POSTER_TEMPLATE.src;
+    img.onerror = () => reject(new Error('职场海报资源加载失败: ' + src));
+    img.src = src;
   });
-  return _zhichangTemplateLoading;
+  return _zhichangImageLoading[src];
+}
+
+function loadZhichangPosterAssets(tpl) {
+  const decors = tpl.decorations || [];
+  return Promise.all(decors.map((d) => loadZhichangImage(d.src)));
 }
 
 function splitZhichangLines(text) {
@@ -85,14 +90,29 @@ function layoutZhichangText(ctx, text, maxWidth, maxHeight, fontSize, lineHeight
   return { lines, fontSize, lineHeight: fontSize * lineHeight, totalH };
 }
 
-function drawZhichangPoster(ctx, text, W, H, tpl, img) {
-  ctx.drawImage(img, 0, 0, W, H);
+function drawZhichangDecorations(ctx, W, H, tpl, decorImages) {
+  (tpl.decorations || []).forEach((decor, i) => {
+    const img = decorImages[i];
+    if (!img) return;
+    const dw = W * decor.wRatio;
+    const dh = (img.height / img.width) * dw;
+    const dx = W * decor.xRatio;
+    const dy = H * decor.yRatio;
+    ctx.drawImage(img, dx, dy, dw, dh);
+  });
+}
+
+function drawZhichangPoster(ctx, text, W, H, tpl, decorImages) {
+  ctx.fillStyle = tpl.bgColor || '#f4efe6';
+  ctx.fillRect(0, 0, W, H);
+
+  drawZhichangDecorations(ctx, W, H, tpl, decorImages);
 
   const rawLineCount = splitZhichangLines(text).length;
   const zone = { ...tpl.textZone };
   if (rawLineCount >= 8) {
-    zone.yRatio = 0.24;
-    zone.hRatio = 0.52;
+    zone.yRatio = 0.20;
+    zone.hRatio = 0.56;
   }
 
   const x = W * zone.xRatio;
@@ -125,7 +145,7 @@ function renderZhichangPosterToCanvas(text, canvasId) {
   const canvas = document.getElementById(canvasId || 'zhichang-poster-canvas');
   if (!canvas) return Promise.reject(new Error('canvas not found'));
 
-  return loadZhichangTemplateImage().then((img) => {
+  return loadZhichangPosterAssets(tpl).then((decorImages) => {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
@@ -135,7 +155,7 @@ function renderZhichangPosterToCanvas(text, canvasId) {
     const ctx = canvas.getContext('2d');
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
-    drawZhichangPoster(ctx, text, W, H, tpl, img);
+    drawZhichangPoster(ctx, text, W, H, tpl, decorImages);
     return canvas;
   });
 }

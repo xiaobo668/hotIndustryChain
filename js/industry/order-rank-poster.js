@@ -326,6 +326,16 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '存储芯片', wrapId: 'order-rank-storage-chip-wrap', pagesId: 'order-rank-storage-chip-pages', canvasId: 'order-rank-storage-chip-canvas' },
   { key: '电子纸', wrapId: 'order-rank-e-paper-wrap', pagesId: 'order-rank-e-paper-pages', canvasId: 'order-rank-e-paper-canvas' },
   { key: '人形机器人', industryKeys: ['人形机器人', '机器人'], wrapId: 'order-rank-humanoid-robot-wrap', pagesId: 'order-rank-humanoid-robot-pages', canvasId: 'order-rank-humanoid-robot-canvas' },
+  { key: '火箭发动机', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-engine-wrap', pagesId: 'order-rank-aerospace-rocket-engine-pages', canvasId: 'order-rank-aerospace-rocket-engine-canvas' },
+  { key: '箭体结构', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-structure-wrap', pagesId: 'order-rank-aerospace-rocket-structure-pages', canvasId: 'order-rank-aerospace-rocket-structure-canvas' },
+  { key: '卫星制造', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-satellite-mfg-wrap', pagesId: 'order-rank-aerospace-satellite-mfg-pages', canvasId: 'order-rank-aerospace-satellite-mfg-canvas' },
+  { key: '火箭制造', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-mfg-wrap', pagesId: 'order-rank-aerospace-rocket-mfg-pages', canvasId: 'order-rank-aerospace-rocket-mfg-canvas' },
+  { key: '卫星通信', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-satellite-comm-wrap', pagesId: 'order-rank-aerospace-satellite-comm-pages', canvasId: 'order-rank-aerospace-satellite-comm-canvas' },
+  { key: '卫星姿态控制', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-satellite-attitude-wrap', pagesId: 'order-rank-aerospace-satellite-attitude-pages', canvasId: 'order-rank-aerospace-satellite-attitude-canvas' },
+  { key: '星座运营', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-constellation-wrap', pagesId: 'order-rank-aerospace-constellation-pages', canvasId: 'order-rank-aerospace-constellation-canvas' },
+  { key: '太空算力', industryKeys: ['商业航天', 'AI算力'], wrapId: 'order-rank-aerospace-space-computing-wrap', pagesId: 'order-rank-aerospace-space-computing-pages', canvasId: 'order-rank-aerospace-space-computing-canvas' },
+  { key: '航天材料', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-materials-wrap', pagesId: 'order-rank-aerospace-materials-pages', canvasId: 'order-rank-aerospace-materials-canvas' },
+  { key: '航天测控', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-ttc-wrap', pagesId: 'order-rank-aerospace-ttc-pages', canvasId: 'order-rank-aerospace-ttc-canvas' },
 ];
 
 function orderRankConfigMatches(industryKey, cfg) {
@@ -334,8 +344,17 @@ function orderRankConfigMatches(industryKey, cfg) {
   return !!(cfg.industryKeys && cfg.industryKeys.includes(industryKey));
 }
 
+function getOrderRankRegistry() {
+  const aerospace = typeof ORDER_RANK_REGISTRY_AEROSPACE2026 !== 'undefined'
+    ? ORDER_RANK_REGISTRY_AEROSPACE2026
+    : {};
+  return Object.assign({}, aerospace);
+}
+
 function getOrderRankDatasetByKey(key) {
   if (!key) return null;
+  const reg = getOrderRankRegistry();
+  if (reg[key]) return reg[key];
   if (key === '算力租赁' && typeof ORDER_RANK_COMPUTING2026 !== 'undefined') return ORDER_RANK_COMPUTING2026;
   if (key === 'PCB' && typeof ORDER_RANK_PCB2026 !== 'undefined') return ORDER_RANK_PCB2026;
   if (key === '先进封装' && typeof ORDER_RANK_ADVANCED_PACKAGING2026 !== 'undefined') return ORDER_RANK_ADVANCED_PACKAGING2026;
@@ -373,6 +392,27 @@ function maybeRenderOrderRankPoster(industry) {
   const legacyWrap = document.getElementById('order-rank-poster-wrap');
   let matchedConfig = false;
 
+  const pageLink = document.getElementById('order-industry-page-link');
+  if (pageLink && typeof getOrderPageUrlForIndustry === 'function') {
+    const url = getOrderPageUrlForIndustry(industryKey);
+    if (url) {
+      pageLink.style.display = '';
+      pageLink.onclick = () => { window.location.href = url; };
+      const groupId = typeof INDUSTRY_TO_ORDER_PAGE !== 'undefined'
+        ? INDUSTRY_TO_ORDER_PAGE[industryKey]
+        : null;
+      const group = groupId && typeof getOrderPageGroup === 'function'
+        ? getOrderPageGroup(groupId)
+        : null;
+      const titleEl = pageLink.querySelector('.order-industry-page-link-title');
+      const descEl = pageLink.querySelector('.order-industry-page-link-desc');
+      if (titleEl) titleEl.textContent = '🏆 查看「' + (group ? group.title : industryKey) + '」全部订单榜';
+      if (descEl && group) descEl.textContent = group.subtitle + ' — 共 ' + group.keys.length + ' 个赛道 Top10';
+    } else {
+      pageLink.style.display = 'none';
+    }
+  }
+
   const ytdWrap = document.getElementById('ytd-gainers-wrap');
   if (ytdWrap) {
     const showYtd = industryKey === '2026年初涨幅榜';
@@ -407,6 +447,8 @@ function maybeRenderOrderRankPoster(industry) {
       if (srcEl) srcEl.style.display = 'none';
     }
   });
+
+  if (pageLink && pageLink.style.display !== 'none') matchedConfig = true;
 
   if (legacyWrap && !matchedConfig) {
     const data = getOrderRankDatasetByKey(industryKey);

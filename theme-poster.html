@@ -77,13 +77,24 @@
     .rise-tag.type-media { background: rgba(96,165,250,0.15); color: #60a5fa; }
     .rise-tag.type-hype { background: rgba(251,146,60,0.15); color: #fb923c; }
     .ytd-gainers-note { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+    .ytd-gainers-sub { font-size: 12px; color: var(--text-muted); margin-top: 12px; line-height: 1.65; }
+    .ytd-gainers-footer {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      line-height: 1.55;
+      padding: 10px 12px;
+      background: rgba(220, 38, 38, 0.06);
+      border: 1px solid rgba(220, 38, 38, 0.18);
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <a class="back" href="index.html">← 返回产业链分析</a>
     <h1 id="ytd-gainers">2026年初至今涨幅 Top15</h1>
-    <p class="sub">统计区间：2026年首个交易日至最近收盘（东方财富年初至今涨跌幅）；口径：沪深主板+创业板，剔除科创板/北交所/ST。每家公司标注上涨原因及归因：业绩 / 情绪 / 炒作。</p>
+    <p class="sub">统计区间：2026年首个交易日至最近收盘（东方财富 f25 年初至今涨跌幅，前复权）；口径：沪深主板+创业板，剔除科创板/北交所/ST/*ST/-UW。每家公司标注涨幅、涨跌归因（业绩/情绪/炒作）及上涨原因说明。</p>
     <div class="poster-wrap" id="ytd-gainers-wrap">
       <div id="ytd-gainers-pages"></div>
       <div class="actions">
@@ -140,7 +151,7 @@
       </div>
     </div>
     <h1 style="margin-top:36px;font-size:20px">液冷 · 2026年订单规模 Top10</h1>
-    <p class="sub">1-6 名为公开报道或官方披露订单；7-10 名为产业链节点以 2025 年报业务规模/公告订单作参考，已通过 scripts/verify-order-rank-liquid-cooling2026.js 复验。</p>
+    <p class="sub">1-6 名为公开报道 2026 年在手或预计订单；7-10 名为以 2025 年报营收、官方在手订单或媒体报道订单作规模参考，已通过 scripts/verify-order-rank-liquid-cooling2026.js 复验。</p>
     <div class="poster-wrap" id="order-rank-liquid-cooling-wrap">
       <div id="order-rank-liquid-cooling-pages"></div>
       <div class="actions">

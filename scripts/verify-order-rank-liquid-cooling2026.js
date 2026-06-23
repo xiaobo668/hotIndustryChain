@@ -73,14 +73,22 @@ byRank.forEach((co) => {
     }
   }
   if (!chainNames.has(co.name)) warnings.push(`不在液冷产业链节点: ${co.name}`);
-  if (co.rank > ORDER_RANK_MAX && (co.verify.note.includes('营收') || co.verify.note.includes('规模参考') || co.verify.note.includes('AIDC'))) {
+  if (co.rank > ORDER_RANK_MAX && (
+    co.verify.note.includes('营收')
+    || co.verify.note.includes('规模参考')
+    || co.verify.note.includes('AIDC')
+    || (co.verify.sourceType === 'media' && co.verify.note.includes('媒体报道'))
+  )) {
     warnings.push(`${co.name}: 7-10位以2025年报业务规模/公告小单作参考，非统一在手订单口径`);
   }
   if (co.rank <= ORDER_RANK_MAX && co.verify.sourceType === 'media' && !co.verify.officialCross) {
     warnings.push(`${co.name}: 1-6位为媒体报道/行业调研口径，建议关注公司后续公告验证`);
   }
-  if (co.name === '浪潮信息' && co.verify.note.includes('估算')) {
-    warnings.push(`${co.name}: 百亿级订单按液冷占比85%估算，非公司单独披露`);
+  if (co.name === '浪潮信息' && co.verify.note.includes('非公司单独披露')) {
+    warnings.push(`${co.name}: 口径为AI服务器订单约80亿+，非单独披露液冷订单金额`);
+  }
+  if (co.name === '领益智造' || co.name === '飞龙股份') {
+    warnings.push(`${co.name}: 新增条目，媒体报道口径，建议关注公司后续公告验证`);
   }
 });
 

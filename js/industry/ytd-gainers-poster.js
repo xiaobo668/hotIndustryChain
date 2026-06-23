@@ -1,8 +1,30 @@
 /**
  * 2026 年初至今涨幅 Top15 海报
- * 数据：YTD_GAINERS2026（data/ytd-gainers2026.js）
+ * 版式与订单排行榜海报（order-rank-poster.js）一致
  */
 const YTD_PAGE_W = 430;
+
+const YTD_GAINERS_POSTER_FOOTER_LINES = [
+  '数据来源于东方财富公开行情（f25 年初至今涨跌幅），涨跌归因为产业信息整理，仅用于行业学习参考，',
+  '不构成证券投资建议；不提供任何选股、行情或买卖指导。',
+  '行情实时变动，请以交易所披露为准；自主投资请独立审慎判断。',
+];
+
+const YTD_GAINERS_POSTER_LAYOUT = {
+  PAD: 12,
+  TOP: 14,
+  TITLE_FONT: 'bold 17px "PingFang SC", sans-serif',
+  TITLE_H: 20,
+  SUB_FONT: '9px "PingFang SC", sans-serif',
+  SUB_LINE_H: 12,
+  SUB_LINES: 2,
+  GAP: 10,
+  CARD_HEAD: 34,
+  ROW_H: 46,
+  FOOTER_LINES: YTD_GAINERS_POSTER_FOOTER_LINES.length,
+  FOOTER_LINE_H: 12,
+  FOOTER_FONT: 'bold 9px "PingFang SC", sans-serif',
+};
 
 const RISE_TYPE_STYLE = {
   业绩: { bg: '#dcfce7', fg: '#166534', label: '业绩' },
@@ -10,14 +32,28 @@ const RISE_TYPE_STYLE = {
   炒作: { bg: '#ffedd5', fg: '#c2410c', label: '炒作' },
 };
 
+function splitYtdSubtitleTwoLines(ctx, subtitle, maxWidth) {
+  if (typeof splitOrderRankSubtitleTwoLines === 'function') {
+    return splitOrderRankSubtitleTwoLines(ctx, subtitle, maxWidth);
+  }
+  if (!subtitle) return ['', ''];
+  let line1 = '';
+  for (const ch of subtitle) {
+    const test = line1 + ch;
+    if (ctx.measureText(test).width > maxWidth && line1) {
+      return [line1, subtitle.slice(line1.length)];
+    }
+    line1 = test;
+  }
+  return [line1, ''];
+}
+
 function estimateYtdGainersHeight(data) {
-  const TITLE_H = 78;
-  const SUB_H = 40;
-  const CARD_HEAD = 34;
-  const ROW_H = 46;
-  const FOOTER_H = 30;
+  const L = YTD_GAINERS_POSTER_LAYOUT;
   const n = (data.companies || []).length;
-  return TITLE_H + SUB_H + CARD_HEAD + n * ROW_H + 10 + FOOTER_H;
+  const headerH = L.TOP + L.TITLE_H + L.SUB_LINES * L.SUB_LINE_H + L.GAP;
+  const cardH = L.CARD_HEAD + n * L.ROW_H + 8;
+  return headerH + cardH + L.GAP + L.FOOTER_LINES * L.FOOTER_LINE_H + 10;
 }
 
 function renderYtdGainersPoster(data, containerId, canvasId) {
@@ -68,12 +104,7 @@ function drawRiseTypeBadge(ctx, type, x, y) {
 }
 
 function drawYtdGainersPoster(ctx, data, W, H) {
-  const PAD = 12;
-  const TITLE_H = 78;
-  const SUB_H = 40;
-  const CARD_HEAD = 34;
-  const ROW_H = 46;
-  const FOOTER_H = 30;
+  const L = YTD_GAINERS_POSTER_LAYOUT;
   const CARD_RADIUS = 10;
   const borderBlue = '#4a90c8';
   const barColor = '#1e40af';
@@ -86,21 +117,36 @@ function drawYtdGainersPoster(ctx, data, W, H) {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
-  let y = 14;
+  ctx.save();
+  ctx.strokeStyle = 'rgba(37, 99, 235, 0.07)';
+  ctx.lineWidth = 1;
+  for (let i = 0; i < 22; i++) {
+    ctx.beginPath();
+    ctx.moveTo(0, i * 40);
+    ctx.lineTo(W, i * 40 + 30);
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  let y = L.TOP;
   ctx.fillStyle = '#0f172a';
-  ctx.font = 'bold 15px "PingFang SC", sans-serif';
+  ctx.font = L.TITLE_FONT;
   ctx.textAlign = 'center';
   ctx.fillText(data.title, W / 2, y + 16);
-  ctx.font = '8.5px "PingFang SC", sans-serif';
-  ctx.fillStyle = '#475569';
-  const sub = (data.period || '') + ' · 沪深主板/创业板';
-  ctx.fillText(sub, W / 2, y + 34);
-  ctx.textAlign = 'left';
-  y = TITLE_H + 4;
+  y += L.TITLE_H;
 
-  const cardW = W - PAD * 2;
-  const cardX = PAD;
-  const cardH = CARD_HEAD + data.companies.length * ROW_H + 8;
+  ctx.font = L.SUB_FONT;
+  ctx.fillStyle = '#475569';
+  const subLines = splitYtdSubtitleTwoLines(ctx, data.subtitle || '', W - L.PAD * 2);
+  subLines.forEach((line, i) => {
+    if (line) ctx.fillText(line, W / 2, y + 10 + i * L.SUB_LINE_H);
+  });
+  y += L.SUB_LINES * L.SUB_LINE_H + L.GAP;
+  ctx.textAlign = 'left';
+
+  const cardW = W - L.PAD * 2;
+  const cardX = L.PAD;
+  const cardH = L.CARD_HEAD + data.companies.length * L.ROW_H + 8;
 
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
   ctx.fillStyle = '#ffffff';
@@ -113,32 +159,32 @@ function drawYtdGainersPoster(ctx, data, W, H) {
   ctx.save();
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
   ctx.clip();
-  const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + CARD_HEAD);
+  const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + L.CARD_HEAD);
   bgrad.addColorStop(0, barColor);
   bgrad.addColorStop(1, '#1e3a8a');
   ctx.fillStyle = bgrad;
-  ctx.fillRect(cardX, y, cardW, CARD_HEAD);
+  ctx.fillRect(cardX, y, cardW, L.CARD_HEAD);
   ctx.restore();
 
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 11px "PingFang SC", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('公司 · 涨幅 · 涨跌归因', cardX + cardW / 2, y + CARD_HEAD / 2);
+  ctx.fillText('公司 · 涨幅 · 涨跌归因', cardX + cardW / 2, y + L.CARD_HEAD / 2);
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 
-  let cy = y + CARD_HEAD + 4;
+  let cy = y + L.CARD_HEAD + 4;
   data.companies.forEach((co, ci) => {
     if (ci > 0) {
       ctx.strokeStyle = '#e8eef5';
       ctx.beginPath();
-      ctx.moveTo(cardX + innerPadX, cy + ci * ROW_H);
-      ctx.lineTo(cardX + cardW - innerPadX, cy + ci * ROW_H);
+      ctx.moveTo(cardX + innerPadX, cy + ci * L.ROW_H);
+      ctx.lineTo(cardX + cardW - innerPadX, cy + ci * L.ROW_H);
       ctx.stroke();
     }
 
-    const rowTop = cy + ci * ROW_H;
+    const rowTop = cy + ci * L.ROW_H;
     const baseX = cardX + innerPadX;
     const maxLineW = cardW - innerPadX * 2;
 
@@ -173,15 +219,23 @@ function drawYtdGainersPoster(ctx, data, W, H) {
     ctx.fillText(fitOneLineWidth(ctx, why, maxLineW - 4), baseX + 4, rowTop + 30);
   });
 
-  ctx.fillStyle = '#64748b';
-  ctx.font = '8.5px "PingFang SC", sans-serif';
+  const cardBottom = y + cardH;
+  ctx.fillStyle = '#475569';
+  ctx.font = L.FOOTER_FONT;
   ctx.textAlign = 'center';
-  ctx.fillText(
-    `产业链分析工具 · ${data.generatedAt || ''} · 行情来源东方财富 · 涨跌归因仅供参考`,
-    W / 2,
-    H - FOOTER_H / 2 + 2
-  );
+  const footerTop = cardBottom + L.GAP;
+  const footerLines = data.footerLines || YTD_GAINERS_POSTER_FOOTER_LINES;
+  footerLines.forEach((line, i) => {
+    ctx.fillText(line, W / 2, footerTop + 10 + i * L.FOOTER_LINE_H);
+  });
   ctx.textAlign = 'left';
+}
+
+function getYtdGainersDisclaimerHtml(data) {
+  const text =
+    data.disclaimer ||
+    '免责声明：涨幅数据来源于东方财富公开行情（f25 年初至今涨跌幅），涨跌归因为产业信息整理，仅用于行业学习参考，不构成证券投资建议；不提供任何选股、行情或买卖指导。行情实时变动，请以交易所披露为准；自主投资请独立审慎判断。';
+  return text;
 }
 
 function initYtdGainersPosterPage(data, containerId, canvasId) {
@@ -230,6 +284,7 @@ function renderYtdGainersTable(data, tableElId) {
           .join('')}
       </tbody>
     </table>
-    <p class="ytd-gainers-note">${data.subtitle || ''}</p>
+    <p class="ytd-gainers-sub">${data.subtitle || ''}</p>
+    <p class="ytd-gainers-footer">${getYtdGainersDisclaimerHtml(data)}</p>
   `;
 }
