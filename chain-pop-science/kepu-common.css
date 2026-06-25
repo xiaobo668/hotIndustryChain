@@ -1,0 +1,160 @@
+:root {
+  --bg: #0f0f1a;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e8e8f0;
+  --muted: #8888aa;
+  --accent: #2dd4bf;
+  --accent-dim: rgba(45, 212, 191, 0.12);
+  --accent-deep: #14b8a6;
+  --accent-text: #99f6e4;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 24px 16px 56px;
+}
+.wrap { max-width: 760px; margin: 0 auto; }
+.back { display: inline-block; margin-bottom: 16px; font-size: 13px; color: var(--accent); text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+.hero { text-align: center; margin-bottom: 24px; }
+.hero-badge {
+  display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent);
+  background: var(--accent-dim); border: 1px solid rgba(45, 212, 191, 0.35);
+  border-radius: 20px; padding: 4px 14px; margin-bottom: 12px;
+}
+.hero h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.hero p { color: var(--muted); font-size: 14px; max-width: 560px; margin: 0 auto; }
+
+.compliance-box {
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;
+  font-size: 13px; line-height: 1.65; color: var(--accent-text);
+}
+.compliance-box strong { color: #5eead4; }
+
+.spec-link-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+
+.section { margin-bottom: 28px; }
+.section-title {
+  font-size: 18px; font-weight: 700; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-title::before {
+  content: ''; width: 4px; height: 18px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+  border-radius: 2px;
+}
+
+.steps { display: grid; gap: 10px; margin-bottom: 8px; }
+.step-pill {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px;
+}
+.step-num {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+  background: var(--accent-dim); color: var(--accent);
+  font-size: 13px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.step-pill h3 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.step-pill p { font-size: 13px; color: var(--muted); }
+
+.kepu-industry-selector, .kepu-welcome-selector {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+}
+.kepu-ind-btn, .kepu-welcome-selector .kepu-ind-btn {
+  padding: 8px 14px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--card);
+  color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: all 0.15s;
+}
+.kepu-ind-btn:hover, .kepu-ind-btn.active {
+  border-color: rgba(45, 212, 191, 0.5);
+  background: var(--accent-dim); color: var(--accent);
+}
+
+.kepu-detail-head { margin-bottom: 16px; }
+.kepu-detail-head h2 { font-size: 20px; margin-bottom: 4px; }
+.kepu-tagline { font-size: 13px; color: var(--muted); }
+
+.kepu-sec-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;
+}
+.kepu-sec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.kepu-sec-num {
+  width: 24px; height: 24px; border-radius: 6px;
+  background: var(--accent-dim); color: var(--accent);
+  font-size: 12px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.kepu-sec-head h3 { font-size: 15px; font-weight: 700; }
+
+.kepu-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0 0 10px; }
+.kepu-tags li {
+  font-size: 11px; padding: 3px 8px; border-radius: 6px;
+  background: rgba(45, 212, 191, 0.1); color: var(--accent-text);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+.kepu-meta { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.kepu-meta strong { color: var(--text); }
+
+.kepu-rank-link {
+  font-size: 12px; margin: 10px 0; padding: 8px 10px;
+  background: rgba(0,0,0,0.2); border-radius: 8px;
+  border: 1px dashed rgba(45, 212, 191, 0.25);
+}
+.kepu-rank-label { color: var(--accent); font-weight: 600; margin-right: 8px; }
+.kepu-rank-link a { color: var(--accent); text-decoration: none; }
+.kepu-rank-link a:hover { text-decoration: underline; }
+.kepu-rank-tracks { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+
+.copy-block {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px;
+  font-size: 14px; line-height: 1.75; color: #d4d4e8;
+  margin: 10px 0; white-space: pre-wrap;
+}
+.copy-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+.btn {
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06); color: var(--text);
+  font-size: 13px; cursor: pointer; text-decoration: none; display: inline-block;
+}
+.btn:hover { background: rgba(255, 255, 255, 0.1); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  border-color: transparent; color: #0f172a; font-weight: 600;
+}
+.btn-outline {
+  background: transparent; border-color: rgba(45, 212, 191, 0.4); color: var(--accent);
+}
+.copy-status { font-size: 12px; color: var(--accent); }
+
+.kepu-full-wrap { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.kepu-full-wrap h3 { font-size: 16px; margin-bottom: 10px; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 18px;
+}
+.card ul { padding-left: 20px; color: var(--muted); font-size: 14px; }
+.card li { margin-bottom: 6px; }
+
+/* 首页 welcome 嵌入 */
+.kepu-welcome-intro {
+  max-width: 560px; margin: 0 auto 16px;
+  font-size: 14px; color: var(--muted); line-height: 1.65;
+}
+.kepu-welcome-actions {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;
+}
+.kepu-welcome-actions .btn { font-size: 14px; padding: 10px 18px; }

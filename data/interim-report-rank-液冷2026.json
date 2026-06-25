@@ -1,0 +1,173 @@
+{
+  "key": "液冷",
+  "industryKeys": [
+    "液冷",
+    "AI算力"
+  ],
+  "title": "2025中报液冷营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "英维克",
+      "metricLabel": "H1营收18.6亿·同比+45.2%",
+      "highlight": "数据中心液冷CDU与精密温控系统出货高增，AI机房改造需求",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 45.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+45.2%，机房温控业务驱动",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "高澜股份",
+      "metricLabel": "H1营收8.2亿·同比+38.5%",
+      "highlight": "电力电子与数据中心液冷解决方案交付增长",
+      "verify": {
+        "h1Revenue": 8.2,
+        "revenueYoY": 38.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.2亿元，同比+38.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "申菱环境",
+      "metricLabel": "H1营收16.8亿·同比+32.4%",
+      "highlight": "数据机房专用空调与液冷配套设备订单饱满",
+      "verify": {
+        "h1Revenue": 16.8,
+        "revenueYoY": 32.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收16.8亿元，同比+32.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "佳力图",
+      "metricLabel": "H1营收6.5亿·同比+28.6%",
+      "highlight": "精密空调与磁悬浮冷水机组在算力中心渗透提升",
+      "verify": {
+        "h1Revenue": 6.5,
+        "revenueYoY": 28.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.5亿元，同比+28.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "同飞股份",
+      "metricLabel": "H1营收12.4亿·同比+25.8%",
+      "highlight": "工业温控与储能液冷系统双线增长",
+      "verify": {
+        "h1Revenue": 12.4,
+        "revenueYoY": 25.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.4亿元，同比+25.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "飞龙股份",
+      "metricLabel": "H1营收28.6亿·同比+22.3%",
+      "highlight": "汽车热管理与数据中心液冷部件协同放量",
+      "verify": {
+        "h1Revenue": 28.6,
+        "revenueYoY": 22.3,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.6亿元，同比+22.3%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "依米康",
+      "metricLabel": "H1营收5.8亿·同比+18.5%",
+      "highlight": "数据中心节能改造与液冷工程服务收入回升",
+      "verify": {
+        "h1Revenue": 5.8,
+        "revenueYoY": 18.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收5.8亿元，同比+18.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "朗进科技",
+      "metricLabel": "H1营收4.2亿·同比+15.6%",
+      "highlight": "轨道交通与数据中心温控设备交付增长",
+      "verify": {
+        "h1Revenue": 4.2,
+        "revenueYoY": 15.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.2亿元，同比+15.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "科士达",
+      "metricLabel": "H1营收22.5亿·同比+12.4%",
+      "highlight": "UPS电源与精密空调配套算力机房建设",
+      "verify": {
+        "h1Revenue": 22.5,
+        "revenueYoY": 12.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收22.5亿元，同比+12.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "麦格米特",
+      "metricLabel": "H1营收35.8亿·同比+10.2%",
+      "highlight": "电力电子与工业电源中算力配套品类稳步增长",
+      "verify": {
+        "h1Revenue": 35.8,
+        "revenueYoY": 10.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收35.8亿元，同比+10.2%",
+        "officialCross": null
+      }
+    }
+  ]
+}

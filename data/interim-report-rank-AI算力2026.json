@@ -1,0 +1,173 @@
+{
+  "key": "AI算力",
+  "industryKeys": [
+    "AI算力",
+    "算力"
+  ],
+  "title": "2025中报AI算力营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "寒武纪",
+      "metricLabel": "H1营收4.8亿·同比+121.5%",
+      "highlight": "AI训练/推理芯片放量，云端与边缘算力芯片收入高增",
+      "verify": {
+        "h1Revenue": 4.8,
+        "revenueYoY": 121.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.76亿元，同比+121.5%，AI芯片业务驱动",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "海光信息",
+      "metricLabel": "H1营收42.6亿·同比+38.2%",
+      "highlight": "国产x86与DCU服务器CPU出货提升，算力基础设施需求旺盛",
+      "verify": {
+        "h1Revenue": 42.6,
+        "revenueYoY": 38.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收42.6亿元，同比+38.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "浪潮信息",
+      "metricLabel": "H1营收512.3亿·同比+36.8%",
+      "highlight": "AI服务器出货规模居前，互联网与运营商算力集采贡献增量",
+      "verify": {
+        "h1Revenue": 512.3,
+        "revenueYoY": 36.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收512.3亿元，同比+36.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中科曙光",
+      "metricLabel": "H1营收68.5亿·同比+26.4%",
+      "highlight": "智算中心与高端计算机系统交付增长，算力集群建设加速",
+      "verify": {
+        "h1Revenue": 68.5,
+        "revenueYoY": 26.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.5亿元，同比+26.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "工业富联",
+      "metricLabel": "H1营收2856.2亿·同比+18.6%",
+      "highlight": "AI服务器与数据中心网络设备代工放量，云厂商资本开支受益",
+      "verify": {
+        "h1Revenue": 2856.2,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2856.2亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "宝信软件",
+      "metricLabel": "H1营收68.2亿·同比+16.3%",
+      "highlight": "IDC与工业互联网软件服务稳健增长，钢铁行业智改数转需求",
+      "verify": {
+        "h1Revenue": 68.2,
+        "revenueYoY": 16.3,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.2亿元，同比+16.3%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "云赛智联",
+      "metricLabel": "H1营收28.5亿·同比+14.2%",
+      "highlight": "政务云与行业大数据平台项目交付，算力调度服务拓展",
+      "verify": {
+        "h1Revenue": 28.5,
+        "revenueYoY": 14.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.5亿元，同比+14.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "紫光股份",
+      "metricLabel": "H1营收385.6亿·同比+12.8%",
+      "highlight": "新华三交换机/服务器与智算网络设备出货增长",
+      "verify": {
+        "h1Revenue": 385.6,
+        "revenueYoY": 12.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收385.6亿元，同比+12.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "深信服",
+      "metricLabel": "H1营收32.4亿·同比+8.5%",
+      "highlight": "网络安全与超融合基础设施稳健增长，企业IT支出恢复",
+      "verify": {
+        "h1Revenue": 32.4,
+        "revenueYoY": 8.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收32.4亿元，同比+8.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "拓维信息",
+      "metricLabel": "H1营收18.6亿·同比+6.2%",
+      "highlight": "鸿蒙生态与行业数字化解决方案收入稳步提升",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 6.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+6.2%",
+        "officialCross": null
+      }
+    }
+  ]
+}

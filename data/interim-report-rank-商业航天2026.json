@@ -1,0 +1,172 @@
+{
+  "key": "商业航天",
+  "industryKeys": [
+    "商业航天"
+  ],
+  "title": "2025中报商业航天营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中国卫星",
+      "metricLabel": "H1营收28.6亿·同比+35.8%",
+      "highlight": "小卫星总装与宇航应用系统交付增长",
+      "verify": {
+        "h1Revenue": 28.6,
+        "revenueYoY": 35.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.6亿元，同比+35.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "航天电子",
+      "metricLabel": "H1营收68.5亿·同比+32.4%",
+      "highlight": "航天电子与测控组件，商业航天配套放量",
+      "verify": {
+        "h1Revenue": 68.5,
+        "revenueYoY": 32.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.5亿元，同比+32.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "航天电器",
+      "metricLabel": "H1营收32.8亿·同比+28.6%",
+      "highlight": "特种连接器与继电器，卫星与火箭配套",
+      "verify": {
+        "h1Revenue": 32.8,
+        "revenueYoY": 28.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收32.8亿元，同比+28.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "铖昌科技",
+      "metricLabel": "H1营收2.8亿·同比+26.5%",
+      "highlight": "微波T/R芯片，低轨卫星相控阵射频前端",
+      "verify": {
+        "h1Revenue": 2.8,
+        "revenueYoY": 26.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2.8亿元，同比+26.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "上海沪工",
+      "metricLabel": "H1营收8.5亿·同比+24.8%",
+      "highlight": "焊接装备与航天结构制造，卫星平台配套",
+      "verify": {
+        "h1Revenue": 8.5,
+        "revenueYoY": 24.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.5亿元，同比+24.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "海格通信",
+      "metricLabel": "H1营收28.6亿·同比+22.5%",
+      "highlight": "卫星通信与北斗导航终端，特种通信系统",
+      "verify": {
+        "h1Revenue": 28.6,
+        "revenueYoY": 22.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.6亿元，同比+22.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "华力创通",
+      "metricLabel": "H1营收5.8亿·同比+20.6%",
+      "highlight": "卫星通信基带芯片与终端，天通系列配套",
+      "verify": {
+        "h1Revenue": 5.8,
+        "revenueYoY": 20.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收5.8亿元，同比+20.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "超图软件",
+      "metricLabel": "H1营收6.8亿·同比+18.4%",
+      "highlight": "GIS数字地球与遥感数据处理平台",
+      "verify": {
+        "h1Revenue": 6.8,
+        "revenueYoY": 18.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.8亿元，同比+18.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "振芯科技",
+      "metricLabel": "H1营收4.2亿·同比+15.8%",
+      "highlight": "北斗导航芯片与卫星应用终端",
+      "verify": {
+        "h1Revenue": 4.2,
+        "revenueYoY": 15.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.2亿元，同比+15.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "航天晨光",
+      "metricLabel": "H1营收18.6亿·同比+12.6%",
+      "highlight": "特种装备与压力容器，火箭燃料贮箱配套",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 12.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+12.6%",
+        "officialCross": null
+      }
+    }
+  ]
+}

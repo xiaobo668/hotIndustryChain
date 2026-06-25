@@ -1,0 +1,173 @@
+{
+  "key": "光互联",
+  "industryKeys": [
+    "光互联",
+    "CPO"
+  ],
+  "title": "2025中报光互联营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "中际旭创",
+      "metricLabel": "H1营收107.5亿·同比+86.3%",
+      "highlight": "800G/1.6T光模块出货放量，北美云厂商AI互联需求驱动",
+      "verify": {
+        "h1Revenue": 107.5,
+        "revenueYoY": 86.3,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收107.5亿元，同比+86.3%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "新易盛",
+      "metricLabel": "H1营收58.6亿·同比+78.5%",
+      "highlight": "高速光模块产能利用率提升，海外客户订单饱满",
+      "verify": {
+        "h1Revenue": 58.6,
+        "revenueYoY": 78.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收58.6亿元，同比+78.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "天孚通信",
+      "metricLabel": "H1营收18.2亿·同比+55.4%",
+      "highlight": "光引擎无源/有源器件与CPO配套组件高增",
+      "verify": {
+        "h1Revenue": 18.2,
+        "revenueYoY": 55.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.2亿元，同比+55.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "光迅科技",
+      "metricLabel": "H1营收42.8亿·同比+42.6%",
+      "highlight": "光模块与光芯片自主可控，国内算力网络建设受益",
+      "verify": {
+        "h1Revenue": 42.8,
+        "revenueYoY": 42.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收42.8亿元，同比+42.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "华工科技",
+      "metricLabel": "H1营收58.5亿·同比+38.2%",
+      "highlight": "光模块与激光装备双轮驱动，感知业务稳健",
+      "verify": {
+        "h1Revenue": 58.5,
+        "revenueYoY": 38.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收58.5亿元，同比+38.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "源杰科技",
+      "metricLabel": "H1营收2.8亿·同比+35.6%",
+      "highlight": "25G/50G/100G EML激光器芯片出货提升",
+      "verify": {
+        "h1Revenue": 2.8,
+        "revenueYoY": 35.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2.8亿元，同比+35.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "仕佳光子",
+      "metricLabel": "H1营收5.6亿·同比+32.4%",
+      "highlight": "AWG/PLC分路器芯片与无源器件国内外需求增长",
+      "verify": {
+        "h1Revenue": 5.6,
+        "revenueYoY": 32.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收5.6亿元，同比+32.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "博创科技",
+      "metricLabel": "H1营收8.5亿·同比+28.6%",
+      "highlight": "硅光模块与电信接入网设备交付增长",
+      "verify": {
+        "h1Revenue": 8.5,
+        "revenueYoY": 28.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.5亿元，同比+28.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "剑桥科技",
+      "metricLabel": "H1营收18.6亿·同比+25.2%",
+      "highlight": "电信宽带与数据中心光模块双线放量",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 25.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+25.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "联特科技",
+      "metricLabel": "H1营收4.2亿·同比+22.8%",
+      "highlight": "高速光模块中小批量交付，客户认证持续推进",
+      "verify": {
+        "h1Revenue": 4.2,
+        "revenueYoY": 22.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.2亿元，同比+22.8%",
+        "officialCross": null
+      }
+    }
+  ]
+}

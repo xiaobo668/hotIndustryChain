@@ -1,0 +1,172 @@
+{
+  "key": "PCB",
+  "industryKeys": [
+    "PCB"
+  ],
+  "title": "2025中报PCB营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "胜宏科技",
+      "metricLabel": "H1营收58.6亿·同比+68.5%",
+      "highlight": "AI服务器高多层/HDI板出货爆发，算力PCB需求驱动",
+      "verify": {
+        "h1Revenue": 58.6,
+        "revenueYoY": 68.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收58.6亿元，同比+68.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "沪电股份",
+      "metricLabel": "H1营收52.8亿·同比+48.6%",
+      "highlight": "企业通信与数据中心高端PCB订单饱满",
+      "verify": {
+        "h1Revenue": 52.8,
+        "revenueYoY": 48.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收52.8亿元，同比+48.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "深南电路",
+      "metricLabel": "H1营收85.6亿·同比+42.5%",
+      "highlight": "封装基板与通信PCB双产品线高增",
+      "verify": {
+        "h1Revenue": 85.6,
+        "revenueYoY": 42.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收85.6亿元，同比+42.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "生益科技",
+      "metricLabel": "H1营收98.5亿·同比+35.8%",
+      "highlight": "覆铜板与PCB协同，AI服务器材料受益",
+      "verify": {
+        "h1Revenue": 98.5,
+        "revenueYoY": 35.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收98.5亿元，同比+35.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鹏鼎控股",
+      "metricLabel": "H1营收128.6亿·同比+28.6%",
+      "highlight": "FPC与HDI板消费电子与算力双线增长",
+      "verify": {
+        "h1Revenue": 128.6,
+        "revenueYoY": 28.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收128.6亿元，同比+28.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "东山精密",
+      "metricLabel": "H1营收168.5亿·同比+25.4%",
+      "highlight": "FPC与LED显示模组，通信电子结构件",
+      "verify": {
+        "h1Revenue": 168.5,
+        "revenueYoY": 25.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收168.5亿元，同比+25.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "景旺电子",
+      "metricLabel": "H1营收52.5亿·同比+22.8%",
+      "highlight": "汽车电子与通信PCB稳健增长",
+      "verify": {
+        "h1Revenue": 52.5,
+        "revenueYoY": 22.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收52.5亿元，同比+22.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "兴森科技",
+      "metricLabel": "H1营收28.6亿·同比+18.5%",
+      "highlight": "IC载板与样板小批量，半导体测试板",
+      "verify": {
+        "h1Revenue": 28.6,
+        "revenueYoY": 18.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.6亿元，同比+18.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "崇达技术",
+      "metricLabel": "H1营收32.8亿·同比+15.6%",
+      "highlight": "小批量PCB与特种板订单增长",
+      "verify": {
+        "h1Revenue": 32.8,
+        "revenueYoY": 15.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收32.8亿元，同比+15.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "博敏电子",
+      "metricLabel": "H1营收18.6亿·同比+12.4%",
+      "highlight": "HDI与高频通信板客户拓展",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 12.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+12.4%",
+        "officialCross": null
+      }
+    }
+  ]
+}

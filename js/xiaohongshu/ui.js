@@ -39,18 +39,21 @@ function switchModule(module) {
   const headerKline = document.getElementById('header-kline');
   const headerShiliao = document.getElementById('header-shiliao');
   const headerZhichang = document.getElementById('header-zhichang');
+  const headerKepu = document.getElementById('header-kepu');
 
   if (headerIndustry) headerIndustry.style.display = module === 'industry' ? 'flex' : 'none';
   if (headerXHS) headerXHS.style.display = module === 'xhs' ? 'flex' : 'none';
   if (headerKline) headerKline.style.display = module === 'kline' ? 'flex' : 'none';
   if (headerShiliao) headerShiliao.style.display = module === 'shiliao' ? 'flex' : 'none';
   if (headerZhichang) headerZhichang.style.display = module === 'zhichang' ? 'flex' : 'none';
+  if (headerKepu) headerKepu.style.display = module === 'kepu' ? 'flex' : 'none';
 
   const welcomeIndustry = document.getElementById('welcome-industry');
   const welcomeXHS = document.getElementById('welcome-xhs');
   const welcomeKline = document.getElementById('welcome-kline');
   const welcomeShiliao = document.getElementById('welcome-shiliao');
   const welcomeZhichang = document.getElementById('welcome-zhichang');
+  const welcomeKepu = document.getElementById('welcome-kepu');
   const welcomeContainer = document.getElementById('welcome');
 
   function hideAllResults() {
@@ -81,6 +84,7 @@ function switchModule(module) {
     if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeZhichang) welcomeZhichang.style.display = 'none';
+    if (welcomeKepu) welcomeKepu.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     hideAllResults();
 
@@ -90,6 +94,7 @@ function switchModule(module) {
     if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeZhichang) welcomeZhichang.style.display = 'none';
+    if (welcomeKepu) welcomeKepu.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     hideAllResults();
     initXHSUI();
@@ -100,6 +105,7 @@ function switchModule(module) {
     if (welcomeKline) welcomeKline.style.display = '';
     if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeZhichang) welcomeZhichang.style.display = 'none';
+    if (welcomeKepu) welcomeKepu.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     const spaceWrap = document.getElementById('kline-space-wrap');
     if (spaceWrap) spaceWrap.style.display = 'none';
@@ -118,6 +124,7 @@ function switchModule(module) {
     if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeShiliao) welcomeShiliao.style.display = '';
     if (welcomeZhichang) welcomeZhichang.style.display = 'none';
+    if (welcomeKepu) welcomeKepu.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = '';
     hideAllResults();
     if (typeof initShiliaoUI === 'function') initShiliaoUI();
@@ -128,10 +135,23 @@ function switchModule(module) {
     if (welcomeKline) welcomeKline.style.display = 'none';
     if (welcomeShiliao) welcomeShiliao.style.display = 'none';
     if (welcomeZhichang) welcomeZhichang.style.display = 'block';
+    if (welcomeKepu) welcomeKepu.style.display = 'none';
     if (welcomeContainer) welcomeContainer.style.display = 'block';
     hideAllResults();
     if (typeof initZhichangUI === 'function') initZhichangUI();
     window.location.hash = 'zhichang';
+
+  } else if (module === 'kepu') {
+    if (welcomeIndustry) welcomeIndustry.style.display = 'none';
+    if (welcomeXHS) welcomeXHS.style.display = 'none';
+    if (welcomeKline) welcomeKline.style.display = 'none';
+    if (welcomeShiliao) welcomeShiliao.style.display = 'none';
+    if (welcomeZhichang) welcomeZhichang.style.display = 'none';
+    if (welcomeKepu) welcomeKepu.style.display = 'block';
+    if (welcomeContainer) welcomeContainer.style.display = 'block';
+    hideAllResults();
+    if (typeof initChainPopScienceWelcome === 'function') initChainPopScienceWelcome();
+    window.location.hash = 'kepu';
   }
 
   window.scrollTo(0, 0);

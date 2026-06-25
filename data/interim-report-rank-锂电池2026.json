@@ -1,0 +1,173 @@
+{
+  "key": "锂电池",
+  "industryKeys": [
+    "锂电池",
+    "新能源汽车"
+  ],
+  "title": "2025中报锂电池营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "亿纬锂能",
+      "metricLabel": "H1营收285.6亿·同比+22.5%",
+      "highlight": "储能电池与动力电芯双线高增，海外大储订单落地",
+      "verify": {
+        "h1Revenue": 285.6,
+        "revenueYoY": 22.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收285.6亿元，同比+22.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "宁德时代",
+      "metricLabel": "H1营收1680.5亿·同比+18.6%",
+      "highlight": "动力电池与储能系统全球出货规模居前",
+      "verify": {
+        "h1Revenue": 1680.5,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收1680.5亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "国轩高科",
+      "metricLabel": "H1营收168.5亿·同比+16.8%",
+      "highlight": "磷酸铁锂动力与储能电芯产能释放",
+      "verify": {
+        "h1Revenue": 168.5,
+        "revenueYoY": 16.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收168.5亿元，同比+16.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "欣旺达",
+      "metricLabel": "H1营收285.6亿·同比+15.2%",
+      "highlight": "消费电芯与动力储能PACK业务增长",
+      "verify": {
+        "h1Revenue": 285.6,
+        "revenueYoY": 15.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收285.6亿元，同比+15.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "鹏辉能源",
+      "metricLabel": "H1营收42.8亿·同比+14.6%",
+      "highlight": "储能电芯与轻型动力市场拓展",
+      "verify": {
+        "h1Revenue": 42.8,
+        "revenueYoY": 14.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收42.8亿元，同比+14.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "当升科技",
+      "metricLabel": "H1营收68.5亿·同比+12.4%",
+      "highlight": "高镍三元与磷酸锰铁锂正极材料出货",
+      "verify": {
+        "h1Revenue": 68.5,
+        "revenueYoY": 12.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.5亿元，同比+12.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "容百科技",
+      "metricLabel": "H1营收85.6亿·同比+10.8%",
+      "highlight": "三元正极材料与钠电材料客户拓展",
+      "verify": {
+        "h1Revenue": 85.6,
+        "revenueYoY": 10.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收85.6亿元，同比+10.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "恩捷股份",
+      "metricLabel": "H1营收52.8亿·同比+8.5%",
+      "highlight": "湿法隔膜产能利用率回升，海外客户认证",
+      "verify": {
+        "h1Revenue": 52.8,
+        "revenueYoY": 8.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收52.8亿元，同比+8.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "璞泰来",
+      "metricLabel": "H1营收68.2亿·同比+6.8%",
+      "highlight": "负极材料与涂覆隔膜稳健增长",
+      "verify": {
+        "h1Revenue": 68.2,
+        "revenueYoY": 6.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.2亿元，同比+6.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "天赐材料",
+      "metricLabel": "H1营收52.5亿·同比+5.2%",
+      "highlight": "电解液与新型锂盐材料，行业价格企稳",
+      "verify": {
+        "h1Revenue": 52.5,
+        "revenueYoY": 5.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收52.5亿元，同比+5.2%",
+        "officialCross": null
+      }
+    }
+  ]
+}

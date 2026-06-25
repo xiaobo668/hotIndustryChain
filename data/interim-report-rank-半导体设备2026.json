@@ -1,0 +1,173 @@
+{
+  "key": "半导体设备",
+  "industryKeys": [
+    "半导体",
+    "半导体设备"
+  ],
+  "title": "2025中报半导体设备营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "北方华创",
+      "metricLabel": "H1营收128.6亿·同比+38.5%",
+      "highlight": "刻蚀/薄膜/炉管等设备国内晶圆厂扩产受益",
+      "verify": {
+        "h1Revenue": 128.6,
+        "revenueYoY": 38.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收128.6亿元，同比+38.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "中微公司",
+      "metricLabel": "H1营收32.5亿·同比+35.6%",
+      "highlight": "CCP/LPCVD刻蚀设备与MOCVD设备交付增长",
+      "verify": {
+        "h1Revenue": 32.5,
+        "revenueYoY": 35.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收32.5亿元，同比+35.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "盛美上海",
+      "metricLabel": "H1营收18.6亿·同比+32.4%",
+      "highlight": "单片清洗与电镀设备国产化替代加速",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 32.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+32.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "芯源微",
+      "metricLabel": "H1营收8.5亿·同比+28.6%",
+      "highlight": "涂胶显影与物理清洗设备客户拓展",
+      "verify": {
+        "h1Revenue": 8.5,
+        "revenueYoY": 28.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.5亿元，同比+28.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "拓荆科技",
+      "metricLabel": "H1营收12.8亿·同比+26.2%",
+      "highlight": "PECVD/ALD薄膜沉积设备出货提升",
+      "verify": {
+        "h1Revenue": 12.8,
+        "revenueYoY": 26.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.8亿元，同比+26.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "华海清科",
+      "metricLabel": "H1营收12.5亿·同比+24.8%",
+      "highlight": "CMP抛光设备国内市占率稳步提升",
+      "verify": {
+        "h1Revenue": 12.5,
+        "revenueYoY": 24.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.5亿元，同比+24.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "万业企业",
+      "metricLabel": "H1营收6.8亿·同比+20.5%",
+      "highlight": "离子注入设备与集成电路装备平台布局",
+      "verify": {
+        "h1Revenue": 6.8,
+        "revenueYoY": 20.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.8亿元，同比+20.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "至纯科技",
+      "metricLabel": "H1营收18.2亿·同比+18.6%",
+      "highlight": "高纯工艺系统与湿法设备交付增长",
+      "verify": {
+        "h1Revenue": 18.2,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.2亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "精测电子",
+      "metricLabel": "H1营收12.6亿·同比+15.4%",
+      "highlight": "面板与半导体检测设备双线拓展",
+      "verify": {
+        "h1Revenue": 12.6,
+        "revenueYoY": 15.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.6亿元，同比+15.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "长川科技",
+      "metricLabel": "H1营收12.8亿·同比+12.6%",
+      "highlight": "测试机与分选机国产化替代持续推进",
+      "verify": {
+        "h1Revenue": 12.8,
+        "revenueYoY": 12.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.8亿元，同比+12.6%",
+        "officialCross": null
+      }
+    }
+  ]
+}

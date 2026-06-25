@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产业链科普 · 四段式口播模板</title>
+  <link rel="stylesheet" href="chain-pop-science/kepu-common.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html#kepu">← 返回产业链首页</a>
+
+    <div class="hero">
+      <span class="hero-badge">产业科普 · 合规无荐股</span>
+      <h1>产业链科普口播模板</h1>
+      <p>固定四段式：上游原材料 → 中游制造 → 下游应用 → 周期&国产替代总结。通俗易懂，可直接套用短视频/图文口播。</p>
+    </div>
+
+    <div class="compliance-box">
+      <strong>合规提示</strong><br/>
+      全程只做产业知识科普，不涉及个股投资建议。只讲物料、产能、订单、需求，数据来源于企业公开披露。发布前请对照 SPEC 禁词表自检。
+    </div>
+
+    <div class="spec-link-row">
+      <a class="btn btn-outline" href="docs/chain-popular-science/SPEC.md" target="_blank" rel="noopener">📄 查看完整 SPEC 规范</a>
+      <a class="btn btn-outline" href="docs/chain-popular-science/SPEC.json" target="_blank" rel="noopener">⚙️ JSON Schema</a>
+    </div>
+
+    <div class="section">
+      <div class="section-title">四段式结构速览</div>
+      <div class="steps">
+        <div class="step-pill"><span class="step-num">0</span><div><h3>开篇定调</h3><p>3秒抓注意力 + 声明科普属性 + 合规兜底</p></div></div>
+        <div class="step-pill"><span class="step-num">1</span><div><h3>上游 · 原材料</h3><p>基础物料与核心元器件，产业链地基</p></div></div>
+        <div class="step-pill"><span class="step-num">2</span><div><h3>中游 · 制造</h3><p>代工/封装/零部件，产能订单集中区</p></div></div>
+        <div class="step-pill"><span class="step-num">3</span><div><h3>下游 · 应用</h3><p>终端场景与市场需求，景气驱动力</p></div></div>
+        <div class="step-pill"><span class="step-num">4</span><div><h3>收尾升华</h3><p>需求传导 + 国产替代 + 合规结束语</p></div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">选择产业链 · 复制口播稿</div>
+      <div class="kepu-industry-selector" id="kepu-industry-selector"></div>
+      <div id="kepu-detail-panel"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">完播率加分技巧</div>
+      <div class="card" id="kepu-tips-card"></div>
+    </div>
+  </div>
+
+  <script src="data/chain-pop-science2026.js"></script>
+  <script src="js/industry/chain-pop-science.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initChainPopSciencePage();
+      const tips = document.getElementById('kepu-tips-card');
+      if (tips && typeof CHAIN_POP_SCIENCE_SPEC !== 'undefined') {
+        tips.innerHTML = '<ul>' + CHAIN_POP_SCIENCE_SPEC.tips.map((t) => '<li>' + t + '</li>').join('') + '</ul>';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+{
+  "key": "人形机器人",
+  "industryKeys": [
+    "人形机器人",
+    "机器人"
+  ],
+  "title": "2025中报人形机器人营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "三花智控",
+      "metricLabel": "H1营收128.6亿·同比+28.5%",
+      "highlight": "热管理与机电执行器组件，人形机器人关节配套拓展",
+      "verify": {
+        "h1Revenue": 128.6,
+        "revenueYoY": 28.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收128.6亿元，同比+28.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "拓普集团",
+      "metricLabel": "H1营收98.5亿·同比+26.8%",
+      "highlight": "汽车底盘与轻量化结构件，机器人执行器布局",
+      "verify": {
+        "h1Revenue": 98.5,
+        "revenueYoY": 26.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收98.5亿元，同比+26.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "鸣志电器",
+      "metricLabel": "H1营收12.8亿·同比+24.6%",
+      "highlight": "空心杯电机与步进伺服系统，机器人关节驱动",
+      "verify": {
+        "h1Revenue": 12.8,
+        "revenueYoY": 24.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.8亿元，同比+24.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "绿的谐波",
+      "metricLabel": "H1营收2.8亿·同比+22.4%",
+      "highlight": "谐波减速器国产替代，工业机器人与人形机器人需求",
+      "verify": {
+        "h1Revenue": 2.8,
+        "revenueYoY": 22.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2.8亿元，同比+22.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "双环传动",
+      "metricLabel": "H1营收42.6亿·同比+20.5%",
+      "highlight": "RV减速器与齿轮传动，机器人关节核心部件",
+      "verify": {
+        "h1Revenue": 42.6,
+        "revenueYoY": 20.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收42.6亿元，同比+20.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "伯特利",
+      "metricLabel": "H1营收28.5亿·同比+18.6%",
+      "highlight": "线控制动与轻量化底盘，智能执行系统延伸",
+      "verify": {
+        "h1Revenue": 28.5,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.5亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "雷赛智能",
+      "metricLabel": "H1营收8.6亿·同比+16.4%",
+      "highlight": "运动控制与伺服系统，机器人电控配套",
+      "verify": {
+        "h1Revenue": 8.6,
+        "revenueYoY": 16.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.6亿元，同比+16.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "汇川技术",
+      "metricLabel": "H1营收168.5亿·同比+14.2%",
+      "highlight": "伺服系统与工业机器人本体，通用自动化平台",
+      "verify": {
+        "h1Revenue": 168.5,
+        "revenueYoY": 14.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收168.5亿元，同比+14.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "柯力传感",
+      "metricLabel": "H1营收6.8亿·同比+12.5%",
+      "highlight": "力矩传感器与称重系统，机器人感知部件",
+      "verify": {
+        "h1Revenue": 6.8,
+        "revenueYoY": 12.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.8亿元，同比+12.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "奥比中光",
+      "metricLabel": "H1营收2.5亿·同比+10.8%",
+      "highlight": "3D视觉传感器，机器人与环境感知模组",
+      "verify": {
+        "h1Revenue": 2.5,
+        "revenueYoY": 10.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2.5亿元，同比+10.8%",
+        "officialCross": null
+      }
+    }
+  ]
+}

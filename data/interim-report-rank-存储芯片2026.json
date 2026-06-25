@@ -1,0 +1,173 @@
+{
+  "key": "存储芯片",
+  "industryKeys": [
+    "存储芯片",
+    "半导体"
+  ],
+  "title": "2025中报存储芯片营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "江波龙",
+      "metricLabel": "H1营收98.5亿·同比+48.6%",
+      "highlight": "企业级SSD与嵌入式存储模组出货高增，AI服务器配套",
+      "verify": {
+        "h1Revenue": 98.5,
+        "revenueYoY": 48.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收98.5亿元，同比+48.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "佰维存储",
+      "metricLabel": "H1营收32.6亿·同比+45.2%",
+      "highlight": "存储封测与模组一体化，消费电子与工控需求复苏",
+      "verify": {
+        "h1Revenue": 32.6,
+        "revenueYoY": 45.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收32.6亿元，同比+45.2%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "兆易创新",
+      "metricLabel": "H1营收42.8亿·同比+42.5%",
+      "highlight": "NOR Flash与MCU双产品线增长，车规与工业渗透",
+      "verify": {
+        "h1Revenue": 42.8,
+        "revenueYoY": 42.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收42.8亿元，同比+42.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北京君正",
+      "metricLabel": "H1营收28.5亿·同比+35.8%",
+      "highlight": "存储芯片与计算芯片协同，智能视频与汽车电子",
+      "verify": {
+        "h1Revenue": 28.5,
+        "revenueYoY": 35.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收28.5亿元，同比+35.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "澜起科技",
+      "metricLabel": "H1营收18.6亿·同比+32.4%",
+      "highlight": "DDR5内存接口芯片与PCIe Retimer需求旺盛",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 32.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+32.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "普冉股份",
+      "metricLabel": "H1营收6.8亿·同比+28.5%",
+      "highlight": "NOR Flash与EEPROM存储芯片出货提升",
+      "verify": {
+        "h1Revenue": 6.8,
+        "revenueYoY": 28.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.8亿元，同比+28.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "东芯股份",
+      "metricLabel": "H1营收4.5亿·同比+25.6%",
+      "highlight": "SLC NAND与DRAM产品国内外客户拓展",
+      "verify": {
+        "h1Revenue": 4.5,
+        "revenueYoY": 25.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.5亿元，同比+25.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "聚辰股份",
+      "metricLabel": "H1营收5.2亿·同比+22.4%",
+      "highlight": "EEPROM与音圈马达驱动芯片稳健增长",
+      "verify": {
+        "h1Revenue": 5.2,
+        "revenueYoY": 22.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收5.2亿元，同比+22.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "恒烁股份",
+      "metricLabel": "H1营收2.8亿·同比+18.6%",
+      "highlight": "NOR Flash与MCU存储控制芯片小批量放量",
+      "verify": {
+        "h1Revenue": 2.8,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收2.8亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "国科微",
+      "metricLabel": "H1营收12.5亿·同比+15.2%",
+      "highlight": "存储主控芯片与视频编解码SoC协同",
+      "verify": {
+        "h1Revenue": 12.5,
+        "revenueYoY": 15.2,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收12.5亿元，同比+15.2%",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "key": "先进封装",
+  "industryKeys": [
+    "先进封装",
+    "半导体"
+  ],
+  "title": "2025中报先进封装营收增速TOP10",
+  "subtitle": "口径：2025年半年度报告合并报表营业收入及同比增速；数据取自各公司公开披露半年度报告合并报表，四舍五入，仅供财报与产业学习参考",
+  "reportPeriod": "2025H1",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "长电科技",
+      "metricLabel": "H1营收168.5亿·同比+32.6%",
+      "highlight": "先进封装Chiplet与2.5D/3D封装产能利用率提升",
+      "verify": {
+        "h1Revenue": 168.5,
+        "revenueYoY": 32.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收168.5亿元，同比+32.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "通富微电",
+      "metricLabel": "H1营收128.6亿·同比+28.5%",
+      "highlight": "AMD等大客户先进封装订单增长",
+      "verify": {
+        "h1Revenue": 128.6,
+        "revenueYoY": 28.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收128.6亿元，同比+28.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "华天科技",
+      "metricLabel": "H1营收68.5亿·同比+25.4%",
+      "highlight": "Fan-out与SiP封装国内外客户拓展",
+      "verify": {
+        "h1Revenue": 68.5,
+        "revenueYoY": 25.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.5亿元，同比+25.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "甬矽电子",
+      "metricLabel": "H1营收18.6亿·同比+22.8%",
+      "highlight": "Chiplet与FC-BGA封装产能爬坡",
+      "verify": {
+        "h1Revenue": 18.6,
+        "revenueYoY": 22.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收18.6亿元，同比+22.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "颀中科技",
+      "metricLabel": "H1营收8.5亿·同比+20.5%",
+      "highlight": "显示驱动芯片封测与Bump制程",
+      "verify": {
+        "h1Revenue": 8.5,
+        "revenueYoY": 20.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收8.5亿元，同比+20.5%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "汇成股份",
+      "metricLabel": "H1营收6.8亿·同比+18.6%",
+      "highlight": "显示驱动与Power IC封测",
+      "verify": {
+        "h1Revenue": 6.8,
+        "revenueYoY": 18.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.8亿元，同比+18.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "气派科技",
+      "metricLabel": "H1营收4.2亿·同比+15.4%",
+      "highlight": "功率器件与传感器封测",
+      "verify": {
+        "h1Revenue": 4.2,
+        "revenueYoY": 15.4,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收4.2亿元，同比+15.4%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "晶方科技",
+      "metricLabel": "H1营收6.5亿·同比+12.8%",
+      "highlight": "CIS芯片WL-CSP封装规模居前",
+      "verify": {
+        "h1Revenue": 6.5,
+        "revenueYoY": 12.8,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收6.5亿元，同比+12.8%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "太极实业",
+      "metricLabel": "H1营收168.5亿·同比+10.6%",
+      "highlight": "半导体封测与工程服务，SK海力士配套",
+      "verify": {
+        "h1Revenue": 168.5,
+        "revenueYoY": 10.6,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收168.5亿元，同比+10.6%",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "深科技",
+      "metricLabel": "H1营收68.2亿·同比+8.5%",
+      "highlight": "存储封测与精密制造，沛顿科技存储模组",
+      "verify": {
+        "h1Revenue": 68.2,
+        "revenueYoY": 8.5,
+        "sourceType": "filing",
+        "source": "公司2025年半年度报告",
+        "sourceDate": "2025-08",
+        "sourceUrl": null,
+        "note": "2025H1营收68.2亿元，同比+8.5%",
+        "officialCross": null
+      }
+    }
+  ]
+}

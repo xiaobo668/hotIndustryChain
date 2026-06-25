@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 热门赛道中报分析榜</title>
+  <link rel="stylesheet" href="interim-report/interim-common.css" />
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链首页</a>
+    <h1>2026 热门赛道中报分析榜</h1>
+    <div class="compliance-box" id="interim-compliance-box"></div>
+    <p class="sub">
+      基于各公司<strong>2025年半年度报告</strong>已披露合并报表数据，按 H1 营收同比增速排序，
+      覆盖 AI算力 · 液冷 · 光互联 · 存储芯片 · 半导体设备 · 人形机器人 · 锂电池 · PCB · 商业航天 · 先进封装 十大赛道 Top10。
+      每张海报底部含加粗免责声明，各赛道附披露来源说明。
+    </p>
+    <div id="interim-report-sections"></div>
+  </div>
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/interim-report-rank2026.js"></script>
+  <script src="js/industry/interim-report-poster.js"></script>
+  <script src="js/industry/interim-report-pages.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initInterimReportPage);
+  </script>
+</body>
+</html>
