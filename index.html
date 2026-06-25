@@ -1872,7 +1872,7 @@ transition: opacity 0.2s;
         <div class="hotkeys" id="hotkeys">
           <span class="hotkey-label">热门：</span>
           <span class="hotkey-tag" style="border-color:rgba(0,212,255,0.35);color:#00d4ff;background:rgba(0,212,255,0.12)" onclick="openOrderRankPage()">🏆 订单排行榜</span>
-          <span class="hotkey-tag subscription-hotkey" onclick="window.location.href='subscription.html'">💎 付费合集</span>
+          <span class="hotkey-tag subscription-hotkey" onclick="window.location.href='subscription.html'">💎 会员专区</span>
           <span class="hotkey-tag capacity-hotkey" onclick="openCapacityRankPage()">📊 产能排行榜</span>
           <span class="hotkey-tag consumables-hotkey" onclick="openConsumablesRankPage()">🧪 耗材排行榜</span>
           <span class="hotkey-tag interim-report-hotkey" onclick="openInterimReportPage()">📑 中报分析</span>
@@ -2039,11 +2039,11 @@ transition: opacity 0.2s;
       <p>输入任意行业/板块名称，同时解析<strong>产业链全景</strong>与<strong>板块龙头</strong>（中军+前锋），生成多维度可视化报告<br/><span style="color:var(--accent2);font-size:13px">✨ Kimi AI 实时分析 · 产业链表格 + 思维导图 + 海报 + 龙头一览</span></p>
       <div class="subscription-entry" onclick="window.location.href='subscription.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')window.location.href='subscription.html'">
         <div class="subscription-entry-title">
-          💎 产业链付费合集
-          <span class="subscription-entry-badge">¥9.9 起</span>
+          💎 会员专区
+          <span class="subscription-entry-badge">5 大板块</span>
         </div>
-        <div class="subscription-entry-desc">全年全细分赛道产能·订单·出货排行汇总 + 上下游脑图 + 企业业务拆解 + 季度免费更新 · 仅产业数据整理，不构成投资建议</div>
-        <div class="subscription-entry-price">单赛道 ¥9.9 · 全赛道完整版 ¥26.9（含 3 季度更新）</div>
+        <div class="subscription-entry-desc">5 大产业板块 · 上中下游图谱 · 细分产能/订单排行 · 综合 Top5</div>
+        <div class="subscription-entry-price">半导体 · AI算力 · 光互联 · 锂电池 · 商业航天</div>
       </div>
       <div class="order-rank-entry" onclick="openOrderRankPage()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openOrderRankPage()">
         <div class="order-rank-entry-title">🏆 2026 产业链订单排行榜</div>
@@ -2110,7 +2110,7 @@ transition: opacity 0.2s;
       <div class="welcome-grid" id="welcome-grid">
         <div class="welcome-card" onclick="window.location.href='subscription.html'" style="border-color:rgba(251,191,36,0.4);background:rgba(251,191,36,0.08)">
           <div class="welcome-card-icon">💎</div>
-          <div class="welcome-card-name">付费合集</div>
+          <div class="welcome-card-name">会员专区</div>
         </div>
         <div class="welcome-card" onclick="window.location.href='theme-poster.html#ytd-gainers'" style="border-color:rgba(220,38,38,0.35);background:rgba(220,38,38,0.06)">
           <div class="welcome-card-icon">📈</div>
@@ -2319,8 +2319,8 @@ transition: opacity 0.2s;
         <button class="shiliao-mode-btn" data-mode="list" onclick="switchShiliaoMode('list')">📊 榜单模版</button>
       </div>
       <p style="color:var(--text-muted);font-size:16px;line-height:1.7;max-width:520px;margin:16px auto 0">
-        当前暂无内容，待录入新数据<br/>
-        <span style="color:#65a30d;font-size:13px">支持食材百科 · 场景饮食 · 营养侧重 · 饮食汇总 · 榜单模版</span>
+        搜索食材、查看场景饮食，或在<strong>榜单模版</strong>一键生成竖版海报<br/>
+        <span style="color:#65a30d;font-size:13px">「日常20种果蔬」蔬菜+水果各1张 · 支持下载 / 复制</span>
       </p>
       <div class="welcome-grid" id="shiliao-welcome-grid" style="margin-top:28px"></div>
 
@@ -2339,7 +2339,7 @@ transition: opacity 0.2s;
           <div id="shiliao-list-poster-pages"></div>
           <div class="poster-actions">
             <button class="btn btn-primary shiliao-dl-btn" type="button" onclick="downloadShiliaoListPosterFromUI()">⬇️ 下载榜单海报</button>
-            <button class="btn btn-secondary" type="button" onclick="copyShiliaoListPoster('shiliao-list-poster-canvas')">📋 复制海报</button>
+            <button class="btn btn-secondary shiliao-copy-btn" type="button" onclick="copyShiliaoListPoster('shiliao-list-poster-canvas')">📋 复制海报</button>
             <button class="btn btn-secondary" type="button" onclick="renderShiliaoListPosterPreview()">🔄 刷新预览</button>
           </div>
         </div>

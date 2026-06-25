@@ -66,22 +66,82 @@ function measureListItemLines(ctx, item, descW, L) {
   return wrapListTextLines(ctx, item.desc, descW).length;
 }
 
+function getShiliaoListTopicItems(topic) {
+  if (!topic) return [];
+  if (topic.posterVariants && topic.posterVariants.length) {
+    return topic.posterVariants.reduce(function (acc, variant) {
+      return acc.concat(variant.items || []);
+    }, []);
+  }
+  if (topic.sections && topic.sections.length) {
+    return topic.sections.reduce(function (acc, sec) {
+      return acc.concat(sec.items || []);
+    }, []);
+  }
+  return topic.items || [];
+}
+
+function buildShiliaoListPosterTopic(baseTopic, variant) {
+  if (!variant) return baseTopic;
+  return {
+    title: baseTopic.title,
+    subtitle: variant.subtitle,
+    items: variant.items || [],
+  };
+}
+
+function getShiliaoListPosterPages(topic) {
+  if (!topic) return [];
+  if (topic.posterVariants && topic.posterVariants.length) {
+    return topic.posterVariants.map(function (variant) {
+      return {
+        key: variant.key || variant.label,
+        label: variant.label || variant.subtitle || topic.title,
+        topic: buildShiliaoListPosterTopic(topic, variant),
+      };
+    });
+  }
+  return [{ key: 'main', label: topic.title, topic: topic }];
+}
+
+function getShiliaoListPosterCanvasId(key) {
+  return key && key !== 'main' ? 'shiliao-list-poster-canvas-' + key : 'shiliao-list-poster-canvas';
+}
+
 function estimateShiliaoListPosterHeight(topic, theme) {
   const L = getShiliaoListPosterLayout();
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
-  const items = topic.items || [];
+  const items = getShiliaoListTopicItems(topic);
   const { descW } = getListColumnMetrics(L, ctx, items);
 
   let h = L.TOP + L.TITLE_SIZE + L.TITLE_BOTTOM;
   if (topic.subtitle) h += L.SUBTITLE_GAP + L.DESC_SIZE;
 
-  items.forEach((raw, i) => {
-    const item = { rank: i + 1, name: raw.name, desc: raw.desc };
-    const lines = measureListItemLines(ctx, item, descW, L);
-    const rowH = Math.max(L.BODY_SIZE, lines * L.DESC_LINE_H);
-    h += rowH + L.ITEM_GAP;
-  });
+  const SECTION_HEAD_H = 28;
+  const sections = topic.sections && topic.sections.length ? topic.sections : null;
+
+  if (sections) {
+    let rank = 0;
+    sections.forEach(function (sec) {
+      h += SECTION_HEAD_H;
+      (sec.items || []).forEach(function (raw) {
+        rank += 1;
+        const item = { rank: rank, name: raw.name, desc: raw.desc };
+        const lines = measureListItemLines(ctx, item, descW, L);
+        const rowH = Math.max(L.BODY_SIZE, lines * L.DESC_LINE_H);
+        h += rowH + L.ITEM_GAP;
+      });
+      h += 6;
+    });
+  } else {
+    items.forEach(function (raw, i) {
+      const item = { rank: i + 1, name: raw.name, desc: raw.desc };
+      const lines = measureListItemLines(ctx, item, descW, L);
+      const rowH = Math.max(L.BODY_SIZE, lines * L.DESC_LINE_H);
+      h += rowH + L.ITEM_GAP;
+    });
+  }
 
   h += L.BOTTOM_PAD;
   if (theme.bottomDecor && theme.bottomDecor !== 'none') h += L.FOOTER_H;
@@ -155,10 +215,19 @@ function drawListItem(ctx, item, x, y, metrics, theme, L) {
   return y + rowH;
 }
 
+function drawListSectionTitle(ctx, text, y, theme, W) {
+  ctx.font = 'bold 15px "PingFang SC", sans-serif';
+  ctx.fillStyle = theme.title || '#4a5d23';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  ctx.fillText(text, W / 2, y);
+  return y + 28;
+}
+
 function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   const L = getShiliaoListPosterLayout();
-  const items = topic.items || [];
-  const metrics = getListColumnMetrics(L, ctx, items);
+  const allItems = getShiliaoListTopicItems(topic);
+  const metrics = getListColumnMetrics(L, ctx, allItems);
 
   ctx.fillStyle = theme.bg;
   ctx.fillRect(0, 0, W, H);
@@ -194,11 +263,27 @@ function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   y += L.TITLE_BOTTOM;
 
   ctx.textAlign = 'left';
-  items.forEach((raw, i) => {
-    const item = { rank: i + 1, name: raw.name, desc: raw.desc };
-    const nextY = drawListItem(ctx, item, L.PAD, y, metrics, theme, L);
-    y = nextY + L.ITEM_GAP;
-  });
+  const sections = topic.sections && topic.sections.length ? topic.sections : null;
+
+  if (sections) {
+    let rank = 0;
+    sections.forEach(function (sec) {
+      y = drawListSectionTitle(ctx, sec.title, y, theme, W);
+      (sec.items || []).forEach(function (raw) {
+        rank += 1;
+        const item = { rank: rank, name: raw.name, desc: raw.desc };
+        const nextY = drawListItem(ctx, item, L.PAD, y, metrics, theme, L);
+        y = nextY + L.ITEM_GAP;
+      });
+      y += 6;
+    });
+  } else {
+    (topic.items || []).forEach(function (raw, i) {
+      const item = { rank: i + 1, name: raw.name, desc: raw.desc };
+      const nextY = drawListItem(ctx, item, L.PAD, y, metrics, theme, L);
+      y = nextY + L.ITEM_GAP;
+    });
+  }
 
   if (theme.bottomDecor === 'leaves') drawListPosterLeaves(ctx, W, H);
   if (theme.bottomDecor === 'playful') drawListPosterPlayful(ctx, W, H);
@@ -217,27 +302,77 @@ function renderShiliaoListPoster(topic, theme, containerId, canvasId) {
   const th = theme || getShiliaoListTheme(topic.defaultTheme || 'green');
   const L = getShiliaoListPosterLayout();
   const W = L.W;
-  const H = estimateShiliaoListPosterHeight(topic, th);
   const dpr = window.devicePixelRatio || 1;
+  const pages = getShiliaoListPosterPages(topic);
 
   container.innerHTML = '';
-  const label = document.createElement('div');
-  label.className = 'poster-page-label';
-  label.textContent = `${topic.title} · ${th.name}模版`;
-  container.appendChild(label);
 
-  const canvas = document.createElement('canvas');
-  canvas.width = W * dpr;
-  canvas.height = H * dpr;
-  canvas.id = canvasId || 'shiliao-list-poster-canvas';
-  canvas.className = 'poster-canvas-item';
-  canvas.style.width = W + 'px';
-  canvas.style.height = H + 'px';
-  container.appendChild(canvas);
+  if (pages.length > 1) {
+    const hint = document.createElement('p');
+    hint.className = 'poster-multi-dl-hint';
+    hint.textContent = `共 ${pages.length} 张海报 · 大标题相同 · 可分别下载或一键下载全部`;
+    container.appendChild(hint);
+  }
 
-  const ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
-  drawShiliaoListPoster(ctx, topic, th, W, H);
+  pages.forEach(function (page) {
+    const pageTopic = page.topic;
+    const H = estimateShiliaoListPosterHeight(pageTopic, th);
+    const id = canvasId && pages.length === 1 ? canvasId : getShiliaoListPosterCanvasId(page.key);
+
+    const block = document.createElement('div');
+    block.className = 'poster-page-block';
+
+    const label = document.createElement('div');
+    label.className = 'poster-page-label';
+    label.textContent =
+      pages.length > 1
+        ? `${topic.title} · ${page.label} · ${th.name}模版`
+        : `${topic.title} · ${th.name}模版`;
+    block.appendChild(label);
+
+    const canvas = document.createElement('canvas');
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.id = id;
+    canvas.className = 'poster-canvas-item';
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    block.appendChild(canvas);
+
+    if (pages.length > 1) {
+      const actions = document.createElement('div');
+      actions.className = 'poster-actions';
+      actions.style.marginTop = '0';
+      actions.innerHTML =
+        '<button class="btn btn-secondary" type="button" onclick="downloadShiliaoListPoster(\'' +
+        id +
+        '\', \'' +
+        (topic.title + '-' + page.label).replace(/'/g, "\\'") +
+        '.png\')">⬇️ 下载本张</button>' +
+        '<button class="btn btn-secondary" type="button" onclick="copyShiliaoListPoster(\'' +
+        id +
+        '\')">📋 复制本张</button>';
+      block.appendChild(actions);
+    }
+
+    container.appendChild(block);
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    drawShiliaoListPoster(ctx, pageTopic, th, W, H);
+  });
+}
+
+function downloadAllShiliaoListPosters(topic, theme) {
+  const pages = getShiliaoListPosterPages(topic);
+  const thName = theme ? theme.name : '';
+  pages.forEach(function (page, i) {
+    setTimeout(function () {
+      const id = getShiliaoListPosterCanvasId(page.key);
+      const filename = `${topic.title}-${page.label}${thName ? '-' + thName : ''}.png`;
+      downloadShiliaoListPoster(id, filename);
+    }, i * 320);
+  });
 }
 
 function downloadShiliaoListPoster(canvasId, filename) {

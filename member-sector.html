@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>会员专区 · 产业链板块</title>
+  <title>产业板块 · 会员专区</title>
   <link rel="stylesheet" href="css/member-zone.css" />
 </head>
 <body class="mz-body">
   <div class="mz-wrap">
-    <a class="mz-back" href="index.html">← 返回产业链首页</a>
+    <a class="mz-back" href="subscription.html">← 返回会员专区</a>
+    <a class="mz-back" href="index.html" style="margin-left:12px">返回首页</a>
 
-    <div class="mz-disclaimer" id="mz-disclaimer">
+    <div class="mz-disclaimer">
       ⚠️ 本专区仅整理公开产业数据，仅供行业学习参考，不构成证券投资建议。
     </div>
 
-    <div class="mz-hero">
-      <div class="mz-hero-badge">💎 会员专区</div>
-      <h1>产业板块 · 全产业链图谱</h1>
-      <p>选择板块，查看上中下游结构、细分产能/订单排行，以及产业链综合 Top5</p>
-    </div>
-
-    <div class="mz-module-grid" id="mz-module-grid"></div>
+    <div id="mz-sector-root"></div>
   </div>
 
   <script src="data/member-zone2026.js"></script>

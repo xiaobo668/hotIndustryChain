@@ -35,6 +35,14 @@ function initShiliaoUI() {
   updateShiliaoModeUI();
 }
 
+function getShiliaoListTopicItemCount(topic) {
+  if (!topic) return 0;
+  if (typeof getShiliaoListTopicItems === 'function') {
+    return getShiliaoListTopicItems(topic).length;
+  }
+  return (topic.items || []).length;
+}
+
 function switchShiliaoMode(mode) {
   window._shiliaoMode = SHILIAO_MODES.includes(mode) ? mode : 'ingredient';
   updateShiliaoModeUI();
@@ -53,7 +61,9 @@ function switchShiliaoMode(mode) {
     return;
   }
   const topics = getShiliaoListTopics();
-  if (topics.length) openShiliaoListTopic(topics[0].id);
+  const preferred = topics.find(function (t) { return t.id === 'daily-produce-20'; });
+  if (preferred) openShiliaoListTopic(preferred.id);
+  else if (topics.length) openShiliaoListTopic(topics[0].id);
 }
 
 function updateShiliaoModeUI() {
@@ -148,7 +158,7 @@ function renderShiliaoWelcomeCards() {
       onclick="openShiliaoListTopic('${item.id}')">
       <div class="welcome-card-icon">${item.icon}</div>
       <div class="welcome-card-name">${item.title}</div>
-      <div class="shiliao-card-sub">${item.category || ''} · ${(item.items || []).length}项 · ${getShiliaoListTheme(item.defaultTheme).name}</div>
+      <div class="shiliao-card-sub">${item.category || ''} · ${getShiliaoListTopicItemCount(item)}项${item.posterVariants && item.posterVariants.length ? ` · ${item.posterVariants.length}张海报` : ''} · ${getShiliaoListTheme(item.defaultTheme).name}</div>
     </div>`
       )
       .join('');
@@ -286,13 +296,32 @@ function renderShiliaoListPosterPreview() {
   if (!topic) return;
   const theme = getShiliaoListTheme(window._shiliaoListThemeId);
   renderShiliaoListPoster(topic, theme, 'shiliao-list-poster-pages', 'shiliao-list-poster-canvas');
+  updateShiliaoListDownloadButtonLabel();
 }
 
 function downloadShiliaoListPosterFromUI() {
   const topic = getShiliaoListTopic(window._shiliaoListTopicId);
   const theme = getShiliaoListTheme(window._shiliaoListThemeId);
-  const name = topic ? `${topic.title}-${theme.name}.png` : '健康饮食榜单.png';
-  downloadShiliaoListPoster('shiliao-list-poster-canvas', name);
+  if (!topic) {
+    downloadShiliaoListPoster('shiliao-list-poster-canvas', '健康饮食榜单.png');
+    return;
+  }
+  const pages = typeof getShiliaoListPosterPages === 'function' ? getShiliaoListPosterPages(topic) : [{ key: 'main' }];
+  if (pages.length > 1) {
+    downloadAllShiliaoListPosters(topic, theme);
+    return;
+  }
+  downloadShiliaoListPoster('shiliao-list-poster-canvas', `${topic.title}-${theme.name}.png`);
+}
+
+function updateShiliaoListDownloadButtonLabel() {
+  const btn = document.querySelector('.shiliao-dl-btn');
+  const copyBtn = document.querySelector('.shiliao-copy-btn');
+  if (!btn && !copyBtn) return;
+  const topic = getShiliaoListTopic(window._shiliaoListTopicId);
+  const pages = topic && typeof getShiliaoListPosterPages === 'function' ? getShiliaoListPosterPages(topic) : [];
+  if (btn) btn.textContent = pages.length > 1 ? '⬇️ 下载全部海报' : '⬇️ 下载榜单海报';
+  if (copyBtn) copyBtn.style.display = pages.length > 1 ? 'none' : '';
 }
 
 /** 返回健康饮食总览 */

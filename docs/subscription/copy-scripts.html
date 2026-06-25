@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>付费合集 · 引流话术素材库</title>
+  <style>
+    :root { --bg:#0f0f1a; --text:#e8e8f0; --muted:#8888aa; --gold:#fbbf24; --border:rgba(255,255,255,0.1); --green:#34d399; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:"PingFang SC",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; padding:20px 16px 48px; }
+    .wrap { max-width:720px; margin:0 auto; }
+    .nav { font-size:13px; margin-bottom:16px; }
+    .nav a { color:var(--gold); text-decoration:none; }
+    .nav a:hover { text-decoration:underline; }
+    h1 { font-size:22px; margin-bottom:6px; }
+    .sub { color:var(--muted); font-size:14px; margin-bottom:24px; }
+    .section { margin-bottom:28px; }
+    .section h2 { font-size:16px; font-weight:700; margin-bottom:12px; color:var(--gold); }
+    .card { background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:12px; }
+    .card h3 { font-size:14px; font-weight:700; margin-bottom:8px; }
+    .copy-block { background:rgba(0,0,0,0.25); border:1px solid var(--border); border-radius:10px; padding:14px; font-size:14px; white-space:pre-wrap; line-height:1.7; margin:8px 0; }
+    .btn { padding:8px 14px; border-radius:8px; border:1px solid var(--border); background:rgba(255,255,255,0.06); color:var(--text); font-size:13px; cursor:pointer; }
+    .btn-primary { background:linear-gradient(135deg,#fbbf24,#f59e0b); border:none; color:#1a1a2e; font-weight:600; }
+    .warn-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+    .warn-chip { font-size:12px; padding:4px 10px; border-radius:6px; background:rgba(248,113,113,0.1); border:1px solid rgba(248,113,113,0.25); color:#fca5a5; }
+    .toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--green); color:#064e3b; padding:10px 20px; border-radius:8px; font-size:14px; font-weight:600; opacity:0; transition:opacity 0.3s; pointer-events:none; }
+    .toast.show { opacity:1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="../../subscription.html">← 返回会员专区</a></div>
+    <h1>引流话术素材库</h1>
+    <p class="sub">视频号口播 · 评论区 · 小店 · 私信 · 线上开通 · 升级话术，一键复制</p>
+    <div id="copy-root"></div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="../../data/subscription-materials2026.js"></script>
+  <script>
+    function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+    function copyId(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent).then(() => showToast('已复制')).catch(() => alert(el.textContent));
+    }
+    function block(id, text) {
+      return '<div class="copy-block" id="'+id+'">'+esc(text)+'</div><button class="btn btn-primary" type="button" onclick="copyId(\''+id+'\')">📋 复制</button>';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const m = SUBSCRIPTION_MATERIALS2026;
+      const c = m.copyScripts;
+      let html = '';
+
+      html += '<div class="section"><h2>短视频结尾口播</h2>';
+      c.videoOutro.forEach(function (item, i) {
+        html += '<div class="card"><h3>'+esc(item.label)+'</h3>'+block('outro-'+i, item.text)+'</div>';
+      });
+      html += '</div>';
+
+      html += '<div class="section"><h2>评论区置顶</h2>';
+      c.commentPin.forEach(function (item, i) {
+        html += '<div class="card"><h3>'+esc(item.label)+'</h3>'+block('pin-'+i, item.text)+'</div>';
+      });
+      html += '</div>';
+
+      html += '<div class="section"><h2>视频号小店</h2>';
+      html += '<div class="card"><h3>商品标题</h3>'+block('shop-title', c.shopTitle)+'</div>';
+      html += '<div class="card"><h3>商品详情</h3>'+block('shop-desc', c.shopDesc)+'</div>';
+      html += '</div>';
+
+      html += '<div class="section"><h2>线上开通与售后</h2>';
+      html += '<div class="card"><h3>私信自动回复（未购买咨询）</h3>'+block('private', c.privateReply)+'</div>';
+      html += '<div class="card"><h3>开通指引（购买后私信）</h3>'+block('open', m.onlineAccess.openReply)+'</div>';
+      html += '<div class="card"><h3>季度更新通知</h3>'+block('update', m.onlineAccess.updateNotify)+'</div>';
+      html += '<div class="card"><h3>老用户升级话术</h3>'+block('upgrade', c.upgradeOffer)+'</div>';
+      html += '</div>';
+
+      html += '<div class="section"><h2>违禁词清单</h2><div class="card"><div class="warn-list">';
+      m.forbiddenWords.forEach(function (w) { html += '<span class="warn-chip">'+esc(w)+'</span>'; });
+      html += '</div></div></div>';
+
+      document.getElementById('copy-root').innerHTML = html;
+    });
+  </script>
+</body>
+</html>
