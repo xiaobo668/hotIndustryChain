@@ -12,7 +12,15 @@ var KP_EXPORT = {
   watermarkStepX: 0.22,
   watermarkStepY: 0.12,
   watermarkFontSize: 20,
+  /** 水印不透明度（0～1），PPT/PNG 共用 */
+  watermarkAlpha: 0.11,
 };
+
+var _kpWatermarkDataUrl = null;
+
+function kpClearWatermarkCache() {
+  _kpWatermarkDataUrl = null;
+}
 
 function kpGenerateWatermarkPositions(W, H) {
   var lines = KP_EXPORT.watermarks || [];
@@ -57,7 +65,7 @@ function kpDrawWatermarkCanvas(ctx, W, H) {
 
   tiles.forEach(function (tile) {
     ctx.save();
-    ctx.globalAlpha = 0.065 + (tile.index % 2) * 0.012;
+    ctx.globalAlpha = KP_EXPORT.watermarkAlpha + (tile.index % 2) * 0.015;
     ctx.translate(tile.x, tile.y);
     ctx.rotate((KP_EXPORT.watermarkRotate * Math.PI) / 180);
     ctx.fillText(tile.text, 0, 0);
@@ -66,30 +74,33 @@ function kpDrawWatermarkCanvas(ctx, W, H) {
   ctx.restore();
 }
 
-function kpAddWatermarkPptx(slide) {
-  var tiles = kpGenerateWatermarkPositions(1280, 720);
-  if (!tiles.length || !slide) return;
+/** 生成透明 PNG 水印层（PPTX 嵌入用，与 PNG 导出视觉一致） */
+function kpGetWatermarkDataUrl() {
+  if (_kpWatermarkDataUrl) return _kpWatermarkDataUrl;
+  var W = KP_EXPORT.W;
+  var H = KP_EXPORT.H;
+  var canvas = document.createElement('canvas');
+  canvas.width = W;
+  canvas.height = H;
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+  kpDrawWatermarkCanvas(ctx, W, H);
+  _kpWatermarkDataUrl = canvas.toDataURL('image/png');
+  return _kpWatermarkDataUrl;
+}
 
-  var slideW = 10;
-  var slideH = 5.625;
-  var boxW = 2.65;
-  var boxH = 0.28;
-
-  tiles.forEach(function (tile) {
-    slide.addText(tile.text, {
-      x: tile.nx * slideW - boxW / 2,
-      y: tile.ny * slideH - boxH / 2,
-      w: boxW,
-      h: boxH,
-      fontSize: 11,
-      bold: true,
-      color: 'CBD5E1',
-      transparency: 91,
-      rotate: KP_EXPORT.watermarkRotate,
-      align: 'center',
-      valign: 'middle',
-      fontFace: 'Microsoft YaHei',
-    });
+/** 将水印图铺到幻灯片（置于正文下层，空白区清晰可见） */
+function kpAddWatermarkPptxLayer(slide) {
+  if (!slide) return;
+  var data = kpGetWatermarkDataUrl();
+  if (!data) return;
+  slide.addImage({
+    data: data,
+    x: 0,
+    y: 0,
+    w: '100%',
+    h: '100%',
+    sizing: { type: 'cover', w: '100%', h: '100%' },
   });
 }
 
@@ -241,6 +252,7 @@ function kpDrawSlideCanvas(ctx, item, courseTitle) {
   drawNoteBox('通俗说：', sl.plainExplain, '#e0f2fe', '#0891b2', '#0e7490');
   drawNoteBox('经销要点：', sl.dealerTip, '#fef3c7', '#f59e0b', '#92400e');
 
+  /* 水印画在正文之上，与 PNG 导出一致 */
   kpDrawWatermarkCanvas(ctx, W, H);
 
   ctx.fillStyle = '#94a3b8';
@@ -360,6 +372,8 @@ async function kpDownloadPptx() {
   pptx.subject = course.subtitle || '';
 
   kpSetExportStatus('正在生成 PPTX 0/' + slides.length + '…', true);
+  kpClearWatermarkCache();
+  kpGetWatermarkDataUrl();
 
   try {
     slides.forEach(function (item, idx) {
@@ -441,8 +455,6 @@ async function kpDownloadPptx() {
         });
       }
 
-      kpAddWatermarkPptx(s);
-
       s.addText(
         'P' +
           item.chapterIndex +
@@ -469,6 +481,8 @@ async function kpDownloadPptx() {
         align: 'right',
         fontFace: 'Microsoft YaHei',
       });
+
+      kpAddWatermarkPptxLayer(s);
     });
 
     kpSetExportStatus('正在写入 PPTX 文件…', true);
