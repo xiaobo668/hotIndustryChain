@@ -6,7 +6,92 @@ var KP_EXPORT = {
   H: 720,
   PAD: 56,
   FOOTER_H: 36,
+  watermarks: ['视频号：热门产业链', '公众号：波哥产业说'],
+  watermarkRotate: -22,
+  /** 平铺间距（相对画布宽高比例），越小越密 */
+  watermarkStepX: 0.22,
+  watermarkStepY: 0.12,
+  watermarkFontSize: 20,
 };
+
+function kpGenerateWatermarkPositions(W, H) {
+  var lines = KP_EXPORT.watermarks || [];
+  if (!lines.length) return [];
+
+  var stepX = KP_EXPORT.watermarkStepX;
+  var stepY = KP_EXPORT.watermarkStepY;
+  var result = [];
+  var idx = 0;
+  var row = 0;
+
+  for (var ny = -stepY * 0.35; ny <= 1 + stepY * 0.35; ny += stepY) {
+    var offsetX = (row % 2) * (stepX * 0.5);
+    for (var nx = -stepX * 0.25 + offsetX; nx <= 1 + stepX * 0.5; nx += stepX) {
+      result.push({
+        x: nx * W,
+        y: ny * H,
+        nx: nx,
+        ny: ny,
+        text: lines[idx % lines.length],
+        index: idx,
+      });
+      idx += 1;
+    }
+    row += 1;
+  }
+  return result;
+}
+
+function kpDrawWatermarkCanvas(ctx, W, H) {
+  var tiles = kpGenerateWatermarkPositions(W, H);
+  if (!tiles.length) return;
+
+  ctx.save();
+  ctx.fillStyle = '#1e3a5f';
+  ctx.font =
+    'bold ' +
+    KP_EXPORT.watermarkFontSize +
+    'px "PingFang SC","Microsoft YaHei",sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  tiles.forEach(function (tile) {
+    ctx.save();
+    ctx.globalAlpha = 0.065 + (tile.index % 2) * 0.012;
+    ctx.translate(tile.x, tile.y);
+    ctx.rotate((KP_EXPORT.watermarkRotate * Math.PI) / 180);
+    ctx.fillText(tile.text, 0, 0);
+    ctx.restore();
+  });
+  ctx.restore();
+}
+
+function kpAddWatermarkPptx(slide) {
+  var tiles = kpGenerateWatermarkPositions(1280, 720);
+  if (!tiles.length || !slide) return;
+
+  var slideW = 10;
+  var slideH = 5.625;
+  var boxW = 2.65;
+  var boxH = 0.28;
+
+  tiles.forEach(function (tile) {
+    slide.addText(tile.text, {
+      x: tile.nx * slideW - boxW / 2,
+      y: tile.ny * slideH - boxH / 2,
+      w: boxW,
+      h: boxH,
+      fontSize: 11,
+      bold: true,
+      color: 'CBD5E1',
+      transparency: 91,
+      rotate: KP_EXPORT.watermarkRotate,
+      align: 'center',
+      valign: 'middle',
+      fontFace: 'Microsoft YaHei',
+    });
+  });
+}
 
 function kpGetFlatSlides(course) {
   var list = [];
@@ -155,6 +240,8 @@ function kpDrawSlideCanvas(ctx, item, courseTitle) {
 
   drawNoteBox('通俗说：', sl.plainExplain, '#e0f2fe', '#0891b2', '#0e7490');
   drawNoteBox('经销要点：', sl.dealerTip, '#fef3c7', '#f59e0b', '#92400e');
+
+  kpDrawWatermarkCanvas(ctx, W, H);
 
   ctx.fillStyle = '#94a3b8';
   ctx.font = '12px "PingFang SC","Microsoft YaHei",sans-serif';
@@ -353,6 +440,8 @@ async function kpDownloadPptx() {
           wrap: true,
         });
       }
+
+      kpAddWatermarkPptx(s);
 
       s.addText(
         'P' +
