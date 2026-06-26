@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产业知识付费 · 经销培训课程</title>
+  <link rel="stylesheet" href="css/knowledge-pay.css" />
+</head>
+<body class="kp-body">
+  <div class="kp-wrap kp-wrap-wide">
+    <a class="kp-back" id="kp-back-link" href="subscription.html">← 返回会员专区</a>
+
+    <div class="kp-disclaimer" id="kp-hub-disclaimer">
+      ⚠️ 本专区课程仅供产业知识培训与内部学习，不构成证券投资建议。产品规格以原厂最新数据为准。
+    </div>
+
+    <div id="kp-hub-view">
+      <div class="kp-hero">
+        <div class="kp-hero-badge">📚 产业知识付费</div>
+        <h1>经销 · 贸易 · 渠道系统培训</h1>
+        <p>按 PPT 章节组织，支持<strong>下载 PPTX</strong>、<strong>PNG 图包（ZIP）</strong>与 txt 大纲</p>
+      </div>
+      <div class="kp-course-grid" id="kp-course-grid"></div>
+    </div>
+
+    <div id="kp-course-root" style="display:none"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <script src="data/knowledge-pay2026.js"></script>
+  <script src="data/knowledge-pay-beginner-slides2026.js"></script>
+  <script>mergeKnowledgePayBeginnerSlides();</script>
+  <script src="js/industry/knowledge-pay-export.js"></script>
+  <script src="js/industry/knowledge-pay.js"></script>
+</body>
+</html>

@@ -12,6 +12,7 @@ var SUBSCRIPTION_MATERIALS2026 = {
     rankTotal: 108,
     popScienceScripts: 5,
     mindMaps: 6,
+    knowledgeCourses: 1,
   },
   packages: [
     {
@@ -204,6 +205,20 @@ var SUBSCRIPTION_MATERIALS2026 = {
         { label: '稀缺材料海报', url: 'scarce-materials-poster.html' },
       ],
     },
+    {
+      id: 'knowledge-pay',
+      layer: 4,
+      title: '产业知识付费',
+      icon: '📚',
+      count: 1,
+      desc: '面向经销/贸易/渠道从业者的系统培训 PPT，含逐页要点与经销实务提示，可下载 txt 大纲导入 PowerPoint',
+      items: [
+        '半导体材料经销入门系统课（119 页）：含【零基础】通俗讲解、【案例】话术与逐页要点',
+        '10 章 + 附录：制造全景、规格参数、FAB 采购逻辑、国产替代、术语速查',
+        '每页含 3～5 条要点 + 经销要点提示，支持一键下载 PPTX / PNG 图包',
+      ],
+      links: [{ label: '产业知识付费', url: 'knowledge-pay.html' }],
+    },
   ],
   onlineAccess: {
     hubTitle: '产业链付费合集 · 线上专题页',
@@ -224,6 +239,7 @@ var SUBSCRIPTION_MATERIALS2026 = {
       { label: '中报分析榜', url: 'interim-report.html', desc: '10 赛道 · 2025 H1 营收增速' },
       { label: '产业链科普口播', url: 'chain-pop-science.html', desc: '5 条四段式脚本' },
       { label: '稀缺材料海报', url: 'scarce-materials-poster.html', desc: '12 类半导体关键材料全景' },
+      { label: '产业知识付费', url: 'knowledge-pay.html', desc: '半导体材料经销入门 · 119 页含零基础详解' },
     ],
     openReply:
       '您好，感谢购买 2026 产业链付费合集！\n\n您的线上专题页链接：\n【在此填入公网 URL，如 https://xxx.github.io/hotIndustryChain/subscription.html】\n\n打开后按目录浏览全部 108 张榜单，各榜页可下载高清海报；术语手册、答疑、口播稿均在专题页内。\n\n⚠️ 本资料仅公开产业数据整理，仅供行业学习参考，不构成证券投资建议。\n\n购买后 3 个月内专题页有新榜单或数据修正，会私信通知您，无需重复购买。有问题请留言。',

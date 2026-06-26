@@ -52,6 +52,44 @@ function initMemberZoneHub() {
     .join('');
 }
 
+function initMemberKnowledgePayHub() {
+  const grid = document.getElementById('mz-knowledge-grid');
+  const courses =
+    typeof getKnowledgePayCourses === 'function' ? getKnowledgePayCourses() : [];
+  if (!grid || !courses.length) return;
+
+  grid.innerHTML = courses
+    .map(function (c) {
+      return (
+        '<a class="mz-knowledge-card" href="knowledge-pay.html?course=' +
+        encodeURIComponent(c.id) +
+        '">' +
+        '<div class="mz-knowledge-icon">' +
+        c.icon +
+        '</div>' +
+        '<div class="mz-knowledge-badge">' +
+        mzEsc(c.priceTag || '付费课') +
+        ' · ' +
+        mzEsc(c.price || '') +
+        '</div>' +
+        '<h3>' +
+        mzEsc(c.title) +
+        '</h3>' +
+        '<p>' +
+        mzEsc(c.subtitle) +
+        '</p>' +
+        '<div class="mz-knowledge-meta">' +
+        '<span>' +
+        (c.slideCount || 0) +
+        ' 页 PPT</span>' +
+        '<span>可下载大纲</span>' +
+        '</div>' +
+        '</a>'
+      );
+    })
+    .join('');
+}
+
 function initMemberSectorPage() {
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
@@ -293,5 +331,6 @@ function initMemberSectorPage() {
 
 document.addEventListener('DOMContentLoaded', function () {
   if (document.getElementById('mz-module-grid')) initMemberZoneHub();
+  if (document.getElementById('mz-knowledge-grid')) initMemberKnowledgePayHub();
   if (document.getElementById('mz-sector-root')) initMemberSectorPage();
 });
