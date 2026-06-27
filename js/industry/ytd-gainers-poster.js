@@ -128,8 +128,6 @@ function drawYtdGainersPoster(ctx, data, W, H) {
   }
   ctx.restore();
 
-  drawWatermark(ctx, W, H, { theme: 'ytd', layer: 'under' });
-
   let y = L.TOP;
   ctx.fillStyle = '#0f172a';
   ctx.font = L.TITLE_FONT;
@@ -231,8 +229,6 @@ function drawYtdGainersPoster(ctx, data, W, H) {
     ctx.fillText(line, W / 2, footerTop + 10 + i * L.FOOTER_LINE_H);
   });
   ctx.textAlign = 'left';
-
-  drawWatermark(ctx, W, H, { theme: 'ytd' });
 }
 
 function getYtdGainersDisclaimerHtml(data) {

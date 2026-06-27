@@ -110,8 +110,6 @@ function drawOrderRankPoster(ctx, data, W, H) {
   }
   ctx.restore();
 
-  drawWatermark(ctx, W, H, { theme: 'order', layer: 'under' });
-
   let y = L.TOP;
   ctx.fillStyle = '#0f172a';
   ctx.font = L.TITLE_FONT;
@@ -218,8 +216,6 @@ function drawOrderRankPoster(ctx, data, W, H) {
     ctx.fillText(line, W / 2, footerTop + 10 + i * L.FOOTER_LINE_H);
   });
   ctx.textAlign = 'left';
-
-  drawWatermark(ctx, W, H, { theme: 'order' });
 }
 
 function downloadOrderRankPoster(canvasId, filename) {
