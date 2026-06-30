@@ -1,8 +1,22 @@
 /**
- * 订单规模排行海报（浅蓝白风格，与 poster.js / theme-poster.js 一致）
+ * 订单规模排行海报（正红主题 · 朱红渐变）
  * 数据：ORDER_RANK_COMPUTING2026（data/order-rank-computing2026.js）
  */
 const ORDER_RANK_PAGE_W = 430;
+
+const ORDER_RANK_POSTER_THEME = {
+  border: '#f87171',
+  barStart: '#dc2626',
+  barEnd: '#991b1b',
+  rank: '#b91c1c',
+  metric: '#dc2626',
+  name: '#4c0519',
+  bgStops: ['#fecaca', '#fee2e2', '#fff5f5'],
+  gridStroke: 'rgba(220, 38, 38, 0.08)',
+  divider: '#fecaca',
+  subtitle: '#7f1d1d',
+  footer: '#991b1b',
+};
 
 const ORDER_RANK_POSTER_FOOTER_LINES = [
   '订单规模口径来自公开财经报道与产业链梳理，仅用于行业产业学习参考，',
@@ -87,20 +101,19 @@ function renderOrderRankPoster(data, containerId, canvasId) {
 
 function drawOrderRankPoster(ctx, data, W, H) {
   const L = ORDER_RANK_POSTER_LAYOUT;
+  const T = ORDER_RANK_POSTER_THEME;
   const CARD_RADIUS = 10;
-  const borderBlue = '#4a90c8';
-  const barColor = '#1e40af';
   const innerPadX = 10;
 
   const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, '#cfe8fb');
-  bg.addColorStop(0.4, '#e3f2fd');
-  bg.addColorStop(1, '#f5fbff');
+  bg.addColorStop(0, T.bgStops[0]);
+  bg.addColorStop(0.4, T.bgStops[1]);
+  bg.addColorStop(1, T.bgStops[2]);
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
   ctx.save();
-  ctx.strokeStyle = 'rgba(37, 99, 235, 0.07)';
+  ctx.strokeStyle = T.gridStroke;
   ctx.lineWidth = 1;
   for (let i = 0; i < 22; i++) {
     ctx.beginPath();
@@ -111,14 +124,14 @@ function drawOrderRankPoster(ctx, data, W, H) {
   ctx.restore();
 
   let y = L.TOP;
-  ctx.fillStyle = '#0f172a';
+  ctx.fillStyle = '#450a0a';
   ctx.font = L.TITLE_FONT;
   ctx.textAlign = 'center';
   ctx.fillText(data.title, W / 2, y + 16);
   y += L.TITLE_H;
 
   ctx.font = L.SUB_FONT;
-  ctx.fillStyle = '#475569';
+  ctx.fillStyle = T.subtitle;
   const subLines = splitOrderRankSubtitleTwoLines(ctx, data.subtitle || '', W - L.PAD * 2);
   subLines.forEach((line, i) => {
     ctx.fillText(line, W / 2, y + 10 + i * L.SUB_LINE_H);
@@ -131,7 +144,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   const cardH = L.CARD_HEAD + data.companies.length * L.ROW_H + 8;
 
   ctx.save();
-  ctx.shadowColor = 'rgba(15, 23, 42, 0.06)';
+  ctx.shadowColor = 'rgba(127, 29, 29, 0.1)';
   ctx.shadowBlur = 5;
   ctx.shadowOffsetY = 1;
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
@@ -140,7 +153,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   ctx.restore();
 
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
-  ctx.strokeStyle = borderBlue;
+  ctx.strokeStyle = T.border;
   ctx.lineWidth = 1;
   ctx.stroke();
 
@@ -148,8 +161,8 @@ function drawOrderRankPoster(ctx, data, W, H) {
   roundRect(ctx, cardX, y, cardW, cardH, CARD_RADIUS);
   ctx.clip();
   const bgrad = ctx.createLinearGradient(cardX, y, cardX, y + L.CARD_HEAD);
-  bgrad.addColorStop(0, barColor);
-  bgrad.addColorStop(1, '#1e3a8a');
+  bgrad.addColorStop(0, T.barStart);
+  bgrad.addColorStop(1, T.barEnd);
   ctx.fillStyle = bgrad;
   ctx.fillRect(cardX, y, cardW, L.CARD_HEAD);
   ctx.restore();
@@ -165,7 +178,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   let cy = y + L.CARD_HEAD + 4;
   data.companies.forEach((co, ci) => {
     if (ci > 0) {
-      ctx.strokeStyle = '#e8eef5';
+      ctx.strokeStyle = T.divider;
       ctx.beginPath();
       ctx.moveTo(cardX + innerPadX, cy + ci * L.ROW_H);
       ctx.lineTo(cardX + cardW - innerPadX, cy + ci * L.ROW_H);
@@ -177,7 +190,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
     const maxLineW = cardW - innerPadX * 2;
 
     ctx.font = 'bold 10px "PingFang SC", sans-serif';
-    ctx.fillStyle = '#1e40af';
+    ctx.fillStyle = T.rank;
     ctx.fillText(String(co.rank) + '.', baseX, rowTop + 12);
 
     const nameX = baseX + 18;
@@ -187,7 +200,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
     ctx.font = L.ORDER_FONT;
     const orderW = ctx.measureText(orderStr).width;
     ctx.font = L.NAME_FONT;
-    ctx.fillStyle = '#0f172a';
+    ctx.fillStyle = T.name;
     let nameStr = co.name;
     const maxNameW = maxLineW - 18 - orderW - orderGap;
     if (ctx.measureText(nameStr).width > maxNameW) {
@@ -197,7 +210,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
     const nameW = ctx.measureText(nameStr).width;
 
     ctx.font = L.ORDER_FONT;
-    ctx.fillStyle = '#1d4ed8';
+    ctx.fillStyle = T.metric;
     ctx.fillText(orderStr, nameX + nameW + orderGap, rowTop + 12);
 
     ctx.font = '9px "PingFang SC", sans-serif';
@@ -208,7 +221,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   });
 
   const cardBottom = y + cardH;
-  ctx.fillStyle = '#475569';
+  ctx.fillStyle = T.footer;
   ctx.font = L.FOOTER_FONT;
   ctx.textAlign = 'center';
   const footerTop = cardBottom + L.GAP;
@@ -325,7 +338,10 @@ const ORDER_RANK_POSTER_CONFIG = [
   { key: '电力', wrapId: 'order-rank-power-wrap', pagesId: 'order-rank-power-pages', canvasId: 'order-rank-power-canvas' },
   { key: '存储芯片', wrapId: 'order-rank-storage-chip-wrap', pagesId: 'order-rank-storage-chip-pages', canvasId: 'order-rank-storage-chip-canvas' },
   { key: '电子纸', wrapId: 'order-rank-e-paper-wrap', pagesId: 'order-rank-e-paper-pages', canvasId: 'order-rank-e-paper-canvas' },
-  { key: '人形机器人', industryKeys: ['人形机器人', '机器人'], wrapId: 'order-rank-humanoid-robot-wrap', pagesId: 'order-rank-humanoid-robot-pages', canvasId: 'order-rank-humanoid-robot-canvas' },
+  { key: '人形机器人', industryKeys: ['人形机器人', '机器人', '物理AI'], wrapId: 'order-rank-humanoid-robot-wrap', pagesId: 'order-rank-humanoid-robot-pages', canvasId: 'order-rank-humanoid-robot-canvas' },
+  { key: '工业机器人', industryKeys: ['物理AI'], wrapId: 'order-rank-industrial-robot-wrap', pagesId: 'order-rank-industrial-robot-pages', canvasId: 'order-rank-industrial-robot-canvas' },
+  { key: '核心零部件', industryKeys: ['物理AI'], wrapId: 'order-rank-robot-components-wrap', pagesId: 'order-rank-robot-components-pages', canvasId: 'order-rank-robot-components-canvas' },
+  { key: '具身感知', industryKeys: ['物理AI'], wrapId: 'order-rank-embodied-sensing-wrap', pagesId: 'order-rank-embodied-sensing-pages', canvasId: 'order-rank-embodied-sensing-canvas' },
   { key: '商业航天综合', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-overview-wrap', pagesId: 'order-rank-aerospace-overview-pages', canvasId: 'order-rank-aerospace-overview-canvas' },
   { key: '火箭发动机', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-engine-wrap', pagesId: 'order-rank-aerospace-rocket-engine-pages', canvasId: 'order-rank-aerospace-rocket-engine-canvas' },
   { key: '箭体结构', industryKeys: ['商业航天'], wrapId: 'order-rank-aerospace-rocket-structure-wrap', pagesId: 'order-rank-aerospace-rocket-structure-pages', canvasId: 'order-rank-aerospace-rocket-structure-canvas' },
@@ -349,7 +365,10 @@ function getOrderRankRegistry() {
   const aerospace = typeof ORDER_RANK_REGISTRY_AEROSPACE2026 !== 'undefined'
     ? ORDER_RANK_REGISTRY_AEROSPACE2026
     : {};
-  const reg = Object.assign({}, aerospace);
+  const physicalAi = typeof ORDER_RANK_REGISTRY_PHYSICAL_AI2026 !== 'undefined'
+    ? ORDER_RANK_REGISTRY_PHYSICAL_AI2026
+    : {};
+  const reg = Object.assign({}, aerospace, physicalAi);
   if (typeof ORDER_RANK_AEROSPACE_OVERVIEW2026 !== 'undefined') {
     reg['商业航天综合'] = ORDER_RANK_AEROSPACE_OVERVIEW2026;
   }

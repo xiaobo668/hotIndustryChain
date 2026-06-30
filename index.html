@@ -2636,6 +2636,55 @@ transition: opacity 0.2s;
           <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-humanoid-robot-canvas')">📋 复制</button>
         </div>
       </div>
+      <div class="poster-wrap" id="order-rank-industrial-robot-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-industrial-robot-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-industrial-robot-canvas','工业机器人订单榜-2026.png')">⬇️ 下载工业机器人订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-industrial-robot-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="order-rank-robot-components-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-robot-components-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-robot-components-canvas','核心零部件订单榜-2026.png')">⬇️ 下载核心零部件订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-robot-components-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="order-rank-embodied-sensing-wrap" style="display:none;margin-top:20px">
+        <div id="order-rank-embodied-sensing-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadOrderRankPoster('order-rank-embodied-sensing-canvas','具身感知订单榜-2026.png')">⬇️ 下载具身感知订单榜</button>
+          <button class="btn btn-secondary" onclick="copyOrderRankPoster('order-rank-embodied-sensing-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-humanoid-robot-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-humanoid-robot-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-humanoid-robot-canvas','人形机器人产能榜-2026.png')">⬇️ 下载人形机器人产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-humanoid-robot-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-industrial-robot-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-industrial-robot-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-industrial-robot-canvas','工业机器人产能榜-2026.png')">⬇️ 下载工业机器人产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-industrial-robot-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-robot-components-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-robot-components-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-robot-components-canvas','核心零部件产能榜-2026.png')">⬇️ 下载核心零部件产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-robot-components-canvas')">📋 复制</button>
+        </div>
+      </div>
+      <div class="poster-wrap" id="capacity-rank-embodied-sensing-wrap" style="display:none;margin-top:20px">
+        <div id="capacity-rank-embodied-sensing-pages"></div>
+        <div class="poster-actions">
+          <button class="btn btn-primary" onclick="downloadCapacityRankPoster('capacity-rank-embodied-sensing-canvas','具身感知产能榜-2026.png')">⬇️ 下载具身感知产能榜</button>
+          <button class="btn btn-secondary" onclick="copyCapacityRankPoster('capacity-rank-embodied-sensing-canvas')">📋 复制</button>
+        </div>
+      </div>
       <div class="poster-wrap" id="capacity-rank-optical-module-wrap" style="display:none;margin-top:20px">
         <div id="capacity-rank-optical-module-pages"></div>
         <div class="poster-actions">
@@ -2933,12 +2982,14 @@ transition: opacity 0.2s;
 <script src="data/order-rank-storage-chip2026.js"></script>
 <script src="data/order-rank-e-paper2026.js"></script>
 <script src="data/order-rank-humanoid-robot2026.js"></script>
+<script src="data/order-rank-physical-ai2026.js"></script>
 <script src="data/capacity-rank2026.js"></script>
 <script src="data/capacity-rank-consumer-electronics2026.js"></script>
 <script src="data/capacity-rank-compute2026.js"></script>
 <script src="data/capacity-rank-semiconductor2026.js"></script>
 <script src="data/capacity-rank-battery2026.js"></script>
 <script src="data/capacity-rank-aerospace2026.js"></script>
+<script src="data/capacity-rank-physical-ai2026.js"></script>
 <script src="js/industry/poster.js"></script>
 <script src="js/industry/ytd-gainers-poster.js"></script>
 <script src="js/industry/order-rank-poster.js"></script>

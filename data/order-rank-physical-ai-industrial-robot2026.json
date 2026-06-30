@@ -1,0 +1,172 @@
+{
+  "key": "工业机器人",
+  "industryKeys": [
+    "物理AI"
+  ],
+  "subCategory": "industrial",
+  "title": "2026工业机器人订单TOP10",
+  "subtitle": "口径：协作/六轴/SCARA等工业机器人2026年在手及新签订单规模估算（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "埃斯顿",
+      "orderLabel": "订单约28亿元",
+      "highlight": "六轴/SCARA工业机器人本体，汽车与3C产线订单饱满",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 28,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约28亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "汇川技术",
+      "orderLabel": "订单约24亿元",
+      "highlight": "SCARA+六轴机器人+伺服，新能源产线拉动",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 24,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约24亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "机器人",
+      "orderLabel": "订单约15亿元",
+      "highlight": "工业/移动/协作机器人国家队，重大项目占比高",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 15,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约15亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "拓斯达",
+      "orderLabel": "订单约12亿元",
+      "highlight": "工业机器人系统集成，具身机器人产线落地",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约12亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "埃夫特",
+      "orderLabel": "订单约9亿元",
+      "highlight": "六轴工业机器人，汽车焊接与通用制造",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 9,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约9亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "新时达",
+      "orderLabel": "订单约7亿元",
+      "highlight": "工业机器人与电梯控制，焊接机器人订单增长",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 7,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约7亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "凯尔达",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "焊接机器人+伺服焊接系统，钢结构产线",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "博实股份",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "特种机器人与固体物料后处理，石化场景",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "三丰智能",
+      "orderLabel": "订单约4.2亿元",
+      "highlight": "AGV/物流机器人，工厂智能搬运系统",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 4.2,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约4.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "今天国际",
+      "orderLabel": "订单约3.6亿元",
+      "highlight": "智慧物流+AMR，物理空间物料自动配送",
+      "subCategory": "industrial",
+      "verify": {
+        "amount": 3.6,
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链订单梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-order-2026.html",
+        "note": "媒体报道口径：2026年在手/预计订单约3.6亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

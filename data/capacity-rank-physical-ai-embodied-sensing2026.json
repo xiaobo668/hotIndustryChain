@@ -1,0 +1,183 @@
+{
+  "key": "具身感知",
+  "industryKeys": [
+    "物理AI"
+  ],
+  "subCategory": "sensing",
+  "title": "2026具身感知产能TOP10",
+  "subtitle": "口径：激光雷达/力觉/机器视觉/端侧芯片年化产能；仅产业学习参考",
+  "capacityUnit": "台/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "瑞芯微",
+      "capacityLabel": "年产约1500万片",
+      "highlight": "端侧AI芯片，机器人视觉低时延推理",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 15000000,
+        "capacityUnit": "片/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约1500万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "禾赛科技",
+      "capacityLabel": "年产约120万台",
+      "highlight": "激光雷达产能规模领先，机器人感知定点",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 1200000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约120万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "速腾聚创",
+      "capacityLabel": "年产约80万台",
+      "highlight": "激光雷达，移动机器人与低速无人车",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 800000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约80万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "奥比中光",
+      "capacityLabel": "年产约45万台",
+      "highlight": "3D视觉传感器，人形环境感知",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 450000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约45万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "柯力传感",
+      "capacityLabel": "年产约35万台",
+      "highlight": "六维力/力矩传感器，灵巧手力控",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 350000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约35万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "凌云光",
+      "capacityLabel": "年产约28万台",
+      "highlight": "机器视觉系统，具身数据采集",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 280000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约28万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "奥普特",
+      "capacityLabel": "年产约22万台",
+      "highlight": "机器视觉光源+镜头系统",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 220000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约22万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "汉威科技",
+      "capacityLabel": "年产约18万台",
+      "highlight": "柔性触觉传感器产能",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 180000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约18万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "海康威视",
+      "capacityLabel": "年产约12万台",
+      "highlight": "移动机器人与视觉引导系统",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 120000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约12万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "大华股份",
+      "capacityLabel": "年产约10万台",
+      "highlight": "移动机器人与机器视觉",
+      "subCategory": "sensing",
+      "verify": {
+        "capacity": 100000,
+        "capacityUnit": "台/年",
+        "sourceType": "media",
+        "source": "东方财富·物理AI产业链产能梳理",
+        "sourceDate": "2026-06-15",
+        "sourceUrl": "https://finance.eastmoney.com/a/physical-ai-capacity-2026.html",
+        "note": "媒体报道口径：年化产能/出货量约年产约10万台",
+        "officialCross": null
+      }
+    }
+  ]
+}
