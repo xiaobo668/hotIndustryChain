@@ -1,0 +1,185 @@
+{
+  "key": "电机与执行部件",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "motor-actuator",
+  "title": "2026人形机器人·电机与执行部件产能TOP10",
+  "subtitle": "口径：电机与执行部件年化产能（万套/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "鸣志电器",
+      "capacityLabel": "年产约60万套",
+      "highlight": "空心杯+步进电机",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 60,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约60万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "江苏雷利",
+      "capacityLabel": "年产约55万套",
+      "highlight": "微电机传动模组",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 55,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约55万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "步科股份",
+      "capacityLabel": "年产约25万套",
+      "highlight": "伺服驱动模组",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 25,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约25万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "兆威机电",
+      "capacityLabel": "年产约22万套",
+      "highlight": "微型传动系统",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约22万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "汇川技术",
+      "capacityLabel": "年产约22万套",
+      "highlight": "伺服电机",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约22万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "雷赛智能",
+      "capacityLabel": "年产约20万套",
+      "highlight": "步进伺服驱动",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 20,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约20万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "伟创电气",
+      "capacityLabel": "年产约18万套",
+      "highlight": "伺服系统",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约18万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "昊志机电",
+      "capacityLabel": "年产约15万套",
+      "highlight": "主轴+执行器",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约15万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "鼎智科技",
+      "capacityLabel": "年产约12万套",
+      "highlight": "线性执行器",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约12万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科沃斯",
+      "capacityLabel": "年产约10万套",
+      "highlight": "服务机器人电机",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电机与执行部件年化产能约年产约10万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -319,10 +319,18 @@ const CAPACITY_RANK_POSTER_CONFIG = [
   { key: '太空算力', industryKeys: ['商业航天', 'AI算力'], wrapId: 'capacity-rank-aerospace-space-computing-wrap', pagesId: 'capacity-rank-aerospace-space-computing-pages', canvasId: 'capacity-rank-aerospace-space-computing-canvas' },
   { key: '航天材料', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-materials-wrap', pagesId: 'capacity-rank-aerospace-materials-pages', canvasId: 'capacity-rank-aerospace-materials-canvas' },
   { key: '航天测控', industryKeys: ['商业航天'], wrapId: 'capacity-rank-aerospace-ttc-wrap', pagesId: 'capacity-rank-aerospace-ttc-pages', canvasId: 'capacity-rank-aerospace-ttc-canvas' },
-  { key: '人形机器人', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-humanoid-robot-wrap', pagesId: 'capacity-rank-humanoid-robot-pages', canvasId: 'capacity-rank-humanoid-robot-canvas' },
-  { key: '工业机器人', industryKeys: ['物理AI'], wrapId: 'capacity-rank-industrial-robot-wrap', pagesId: 'capacity-rank-industrial-robot-pages', canvasId: 'capacity-rank-industrial-robot-canvas' },
-  { key: '核心零部件', industryKeys: ['物理AI'], wrapId: 'capacity-rank-robot-components-wrap', pagesId: 'capacity-rank-robot-components-pages', canvasId: 'capacity-rank-robot-components-canvas' },
-  { key: '具身感知', industryKeys: ['物理AI'], wrapId: 'capacity-rank-embodied-sensing-wrap', pagesId: 'capacity-rank-embodied-sensing-pages', canvasId: 'capacity-rank-embodied-sensing-canvas' },
+  { key: 'AI大脑算力芯片', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-ai-brain-chip-wrap', pagesId: 'capacity-rank-pa-ai-brain-chip-pages', canvasId: 'capacity-rank-pa-ai-brain-chip-canvas' },
+  { key: '视觉与3D感知', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-vision-3d-wrap', pagesId: 'capacity-rank-pa-vision-3d-pages', canvasId: 'capacity-rank-pa-vision-3d-canvas' },
+  { key: '力觉触觉传感器', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-force-touch-wrap', pagesId: 'capacity-rank-pa-force-touch-pages', canvasId: 'capacity-rank-pa-force-touch-canvas' },
+  { key: '控制芯片边缘AI', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-control-edge-wrap', pagesId: 'capacity-rank-pa-control-edge-pages', canvasId: 'capacity-rank-pa-control-edge-canvas' },
+  { key: '电机与执行部件', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-motor-actuator-wrap', pagesId: 'capacity-rank-pa-motor-actuator-pages', canvasId: 'capacity-rank-pa-motor-actuator-canvas' },
+  { key: '丝杠轴承传动件', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-screw-bearing-wrap', pagesId: 'capacity-rank-pa-screw-bearing-pages', canvasId: 'capacity-rank-pa-screw-bearing-canvas' },
+  { key: '减速器精密运动', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-reducer-motion-wrap', pagesId: 'capacity-rank-pa-reducer-motion-pages', canvasId: 'capacity-rank-pa-reducer-motion-canvas' },
+  { key: '功率半导体驱动', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-power-semi-wrap', pagesId: 'capacity-rank-pa-power-semi-pages', canvasId: 'capacity-rank-pa-power-semi-canvas' },
+  { key: '工控控制系统', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-industrial-control-wrap', pagesId: 'capacity-rank-pa-industrial-control-pages', canvasId: 'capacity-rank-pa-industrial-control-canvas' },
+  { key: '伺服与运动控制', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-servo-motion-wrap', pagesId: 'capacity-rank-pa-servo-motion-pages', canvasId: 'capacity-rank-pa-servo-motion-canvas' },
+  { key: '电池稀土磁材', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-battery-magnet-wrap', pagesId: 'capacity-rank-pa-battery-magnet-pages', canvasId: 'capacity-rank-pa-battery-magnet-canvas' },
+  { key: '结构件机电模组', industryKeys: ['物理AI', '人形机器人', '机器人'], wrapId: 'capacity-rank-pa-structure-module-wrap', pagesId: 'capacity-rank-pa-structure-module-pages', canvasId: 'capacity-rank-pa-structure-module-canvas' },
 ];
 
 function getCapacityRankRegistry() {

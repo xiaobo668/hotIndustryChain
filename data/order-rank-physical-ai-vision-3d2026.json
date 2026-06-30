@@ -1,0 +1,174 @@
+{
+  "key": "视觉与3D感知",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "vision-3d",
+  "title": "2026人形机器人·视觉与3D感知订单TOP10",
+  "subtitle": "口径：3D视觉/激光雷达/机器视觉模组2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "禾赛科技",
+      "orderLabel": "订单约8亿元",
+      "highlight": "激光雷达机器人/智驾双场景",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "奥比中光",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "3D视觉传感器，人形避障模组",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "速腾聚创",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "激光雷达，移动机器人感知",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "凌云光",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "机器视觉+具身数据采集",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "奥普特",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "机器视觉光源+镜头",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "海康威视",
+      "orderLabel": "订单约3.2亿元",
+      "highlight": "移动机器人与机器视觉",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 3.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约3.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "大华股份",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "机器视觉与移动机器人",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "天准科技",
+      "orderLabel": "订单约2.5亿元",
+      "highlight": "精密测量与视觉装备",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 2.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约2.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "经纬恒润",
+      "orderLabel": "订单约2.2亿元",
+      "highlight": "汽车+机器人视觉方案",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 2.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约2.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "赛微电子",
+      "orderLabel": "订单约1.8亿元",
+      "highlight": "MEMS传感，惯性导航",
+      "subCategory": "vision-3d",
+      "verify": {
+        "amount": 1.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年视觉与3D感知相关预计订单约订单约1.8亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

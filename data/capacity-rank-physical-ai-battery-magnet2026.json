@@ -1,0 +1,185 @@
+{
+  "key": "电池稀土磁材",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "battery-magnet",
+  "title": "2026人形机器人·电池稀土磁材产能TOP10",
+  "subtitle": "口径：电池电芯/稀土磁材年化产能；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "capacityLabel": "年产约385GWh",
+      "highlight": "动力电池电芯",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 3850,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约385GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "比亚迪",
+      "capacityLabel": "年产约320GWh",
+      "highlight": "刀片电池",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 3200,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约320GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "capacityLabel": "年产约185GWh",
+      "highlight": "动力储能电芯",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 185,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约185GWh",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北方稀土",
+      "capacityLabel": "年产约28万吨",
+      "highlight": "稀土氧化物",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约28万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中科三环",
+      "capacityLabel": "年产约18万吨",
+      "highlight": "稀土永磁器件",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约18万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "正海磁材",
+      "capacityLabel": "年产约12万吨",
+      "highlight": "钕铁硼永磁",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约12万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "金力永磁",
+      "capacityLabel": "年产约10万吨",
+      "highlight": "稀土永磁",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约10万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "宁波韵升",
+      "capacityLabel": "年产约8万吨",
+      "highlight": "永磁材料",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约8万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "盛和资源",
+      "capacityLabel": "年产约6万吨",
+      "highlight": "稀土冶炼",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约6万吨",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "英洛华",
+      "capacityLabel": "年产约5万吨",
+      "highlight": "永磁+电机",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：电池稀土磁材年化产能约年产约5万吨",
+        "officialCross": null
+      }
+    }
+  ]
+}

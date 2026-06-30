@@ -1,0 +1,174 @@
+{
+  "key": "结构件机电模组",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "structure-module",
+  "title": "2026人形机器人·结构件机电模组订单TOP10",
+  "subtitle": "口径：线性执行器/结构件/机电模组2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "三花智控",
+      "orderLabel": "订单约38亿元",
+      "highlight": "线性执行器与机电执行器",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 38,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约38亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "拓普集团",
+      "orderLabel": "订单约32亿元",
+      "highlight": "轻量化结构件与执行器壳体",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 32,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约32亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "恒立液压",
+      "orderLabel": "订单约12亿元",
+      "highlight": "液压+丝杠执行模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约12亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "鸣志电器",
+      "orderLabel": "订单约8亿元",
+      "highlight": "机电一体化执行模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "江苏雷利",
+      "orderLabel": "订单约7亿元",
+      "highlight": "微电机传动模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 7,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约7亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "五洲新春",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "丝杠+结构传动件",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "双林股份",
+      "orderLabel": "订单约5亿元",
+      "highlight": "精密结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "中坚科技",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "园林机械+结构件延伸",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "夏厦精密",
+      "orderLabel": "订单约4亿元",
+      "highlight": "齿轮传动结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "丰立智能",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "谐波+结构模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年结构件机电模组相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

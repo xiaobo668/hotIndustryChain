@@ -1,0 +1,174 @@
+{
+  "key": "伺服与运动控制",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "servo-motion",
+  "title": "2026人形机器人·伺服与运动控制订单TOP10",
+  "subtitle": "口径：伺服驱动器/运动控制模组2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "汇川技术",
+      "orderLabel": "订单约14亿元",
+      "highlight": "伺服驱动系统，关节电控",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 14,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约14亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "埃斯顿",
+      "orderLabel": "订单约10亿元",
+      "highlight": "伺服+运动控制一体化",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 10,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约10亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "伟创电气",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "伺服系统，协作臂驱动",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "雷赛智能",
+      "orderLabel": "订单约6亿元",
+      "highlight": "步进+伺服驱动",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 6,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约6亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "禾川科技",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "伺服驱动器",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "步科股份",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "低压伺服驱动",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "鸣志电器",
+      "orderLabel": "订单约4亿元",
+      "highlight": "伺服+步进驱动",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "信捷电气",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "伺服与PLC",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "英威腾",
+      "orderLabel": "订单约3.2亿元",
+      "highlight": "伺服变频器",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 3.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约3.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科瑞技术",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "自动化+运动控制",
+      "subCategory": "servo-motion",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年伺服与运动控制相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

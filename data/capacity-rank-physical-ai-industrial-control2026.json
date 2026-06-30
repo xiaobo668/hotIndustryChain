@@ -1,0 +1,185 @@
+{
+  "key": "工控控制系统",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "industrial-control",
+  "title": "2026人形机器人·工控控制系统产能TOP10",
+  "subtitle": "口径：工控控制系统年化交付产能（万套/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "汇川技术",
+      "capacityLabel": "年产约48万套",
+      "highlight": "工控+运动控制平台",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 48,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约48万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "埃斯顿",
+      "capacityLabel": "年产约35万套",
+      "highlight": "运动控制系统",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约35万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "雷赛智能",
+      "capacityLabel": "年产约20万套",
+      "highlight": "运动控制卡",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 20,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约20万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "信捷电气",
+      "capacityLabel": "年产约15万套",
+      "highlight": "PLC系统",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约15万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "禾川科技",
+      "capacityLabel": "年产约12万套",
+      "highlight": "伺服+PLC",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约12万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "新时达",
+      "capacityLabel": "年产约10万套",
+      "highlight": "工控系统",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约10万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "英威腾",
+      "capacityLabel": "年产约9万套",
+      "highlight": "变频器工控",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 9,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约9万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "维宏股份",
+      "capacityLabel": "年产约8万套",
+      "highlight": "数控系统",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约8万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "蓝海华腾",
+      "capacityLabel": "年产约6万套",
+      "highlight": "工控驱动",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约6万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "固高科技",
+      "capacityLabel": "年产约5万套",
+      "highlight": "运动控制",
+      "subCategory": "industrial-control",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：工控控制系统年化产能约年产约5万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

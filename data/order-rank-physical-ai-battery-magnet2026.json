@@ -1,0 +1,174 @@
+{
+  "key": "电池稀土磁材",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "battery-magnet",
+  "title": "2026人形机器人·电池稀土磁材订单TOP10",
+  "subtitle": "口径：机器人电池包/稀土永磁材料2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "宁德时代",
+      "orderLabel": "订单约22亿元",
+      "highlight": "人形机器人电池包与储能电芯",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 22,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约22亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "比亚迪",
+      "orderLabel": "订单约18亿元",
+      "highlight": "刀片电池+机器人电源",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 18,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约18亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "亿纬锂能",
+      "orderLabel": "订单约12亿元",
+      "highlight": "小型动力+储能电芯",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约12亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北方稀土",
+      "orderLabel": "订单约10亿元",
+      "highlight": "稀土氧化物与永磁原料",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 10,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约10亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中科三环",
+      "orderLabel": "订单约8亿元",
+      "highlight": "稀土永磁器件，关节磁钢",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "正海磁材",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "高性能钕铁硼永磁",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "金力永磁",
+      "orderLabel": "订单约6亿元",
+      "highlight": "稀土永磁，电机磁钢",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 6,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约6亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "宁波韵升",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "钕铁硼永磁材料",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "盛和资源",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "稀土冶炼分离",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "英洛华",
+      "orderLabel": "订单约4亿元",
+      "highlight": "稀土永磁+电机",
+      "subCategory": "battery-magnet",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电池稀土磁材相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

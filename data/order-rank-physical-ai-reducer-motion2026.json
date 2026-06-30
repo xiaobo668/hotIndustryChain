@@ -1,0 +1,174 @@
+{
+  "key": "减速器精密运动",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "reducer-motion",
+  "title": "2026人形机器人·减速器精密运动订单TOP10",
+  "subtitle": "口径：谐波/RV减速器等2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "绿的谐波",
+      "orderLabel": "订单约18亿元",
+      "highlight": "谐波减速器，旋转关节核心",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 18,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约18亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "双环传动",
+      "orderLabel": "订单约12亿元",
+      "highlight": "RV/谐波精密减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约12亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中大力德",
+      "orderLabel": "订单约8亿元",
+      "highlight": "微型精密减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国茂股份",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "RV减速器，工业臂关节",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "秦川机床",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "机器人关节减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "丰立智能",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "谐波减速器新秀",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "巨轮智能",
+      "orderLabel": "订单约4亿元",
+      "highlight": "RV减速器布局",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "瑞迪智驱",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "谐波+机电一体化",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "新时达",
+      "orderLabel": "订单约3亿元",
+      "highlight": "机器人减速器配套",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "埃夫特",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "工业机器人减速器需求",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年减速器精密运动相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

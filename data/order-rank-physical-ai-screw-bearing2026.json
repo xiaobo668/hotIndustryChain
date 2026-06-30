@@ -1,0 +1,174 @@
+{
+  "key": "丝杠轴承传动件",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "screw-bearing",
+  "title": "2026人形机器人·丝杠轴承传动件订单TOP10",
+  "subtitle": "口径：滚柱丝杠/轴承等传动件2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "五洲新春",
+      "orderLabel": "订单约7.5亿元",
+      "highlight": "轴承+滚柱丝杠，线性关节",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 7.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约7.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "贝斯特",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "精密丝杠，人形线性传动",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "北特科技",
+      "orderLabel": "订单约5.8亿元",
+      "highlight": "底盘件+丝杠延伸",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 5.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约5.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "恒立液压",
+      "orderLabel": "订单约5.2亿元",
+      "highlight": "液压+丝杠执行器",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 5.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约5.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "长盛轴承",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "自润滑轴承，关节应用",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "秦川机床",
+      "orderLabel": "订单约4亿元",
+      "highlight": "滚动功能部件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "新剑传动",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "谐波+行星传动",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "双林股份",
+      "orderLabel": "订单约3亿元",
+      "highlight": "汽车传动延伸",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "力星股份",
+      "orderLabel": "订单约2.5亿元",
+      "highlight": "精密轴承钢球",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 2.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约2.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "常熟汽饰",
+      "orderLabel": "订单约2.2亿元",
+      "highlight": "精密注塑传动件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "amount": 2.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年丝杠轴承传动件相关预计订单约订单约2.2亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

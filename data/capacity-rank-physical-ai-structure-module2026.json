@@ -1,0 +1,185 @@
+{
+  "key": "结构件机电模组",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "structure-module",
+  "title": "2026人形机器人·结构件机电模组产能TOP10",
+  "subtitle": "口径：结构件与机电模组年化产能（万套/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "三花智控",
+      "capacityLabel": "年产约85万套",
+      "highlight": "机电执行器模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约85万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "拓普集团",
+      "capacityLabel": "年产约72万套",
+      "highlight": "轻量化结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 72,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约72万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "恒立液压",
+      "capacityLabel": "年产约18万套",
+      "highlight": "液压执行模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约18万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "鸣志电器",
+      "capacityLabel": "年产约15万套",
+      "highlight": "机电执行模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约15万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "江苏雷利",
+      "capacityLabel": "年产约12万套",
+      "highlight": "传动结构模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约12万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "五洲新春",
+      "capacityLabel": "年产约10万套",
+      "highlight": "丝杠结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约10万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "双林股份",
+      "capacityLabel": "年产约8万套",
+      "highlight": "精密结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约8万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "中坚科技",
+      "capacityLabel": "年产约6万套",
+      "highlight": "结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约6万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "夏厦精密",
+      "capacityLabel": "年产约5万套",
+      "highlight": "齿轮结构件",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约5万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "丰立智能",
+      "capacityLabel": "年产约4万套",
+      "highlight": "谐波结构模组",
+      "subCategory": "structure-module",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：结构件机电模组年化产能约年产约4万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

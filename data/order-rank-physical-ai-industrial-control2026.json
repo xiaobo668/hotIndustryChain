@@ -1,0 +1,174 @@
+{
+  "key": "工控控制系统",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "industrial-control",
+  "title": "2026人形机器人·工控控制系统订单TOP10",
+  "subtitle": "口径：PLC/运动控制器等工控系统2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "汇川技术",
+      "orderLabel": "订单约24亿元",
+      "highlight": "PLC+运动控制，机器人电控平台",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 24,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约24亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "埃斯顿",
+      "orderLabel": "订单约15亿元",
+      "highlight": "运动控制+机器人本体",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 15,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约15亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "雷赛智能",
+      "orderLabel": "订单约8亿元",
+      "highlight": "运动控制卡与驱动",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "信捷电气",
+      "orderLabel": "订单约6亿元",
+      "highlight": "小型PLC与HMI",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 6,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约6亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "禾川科技",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "伺服+PLC工控",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "维宏股份",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "数控系统与运动控制",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "新时达",
+      "orderLabel": "订单约4亿元",
+      "highlight": "电梯控制+机器人工控",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "英威腾",
+      "orderLabel": "订单约3.8亿元",
+      "highlight": "变频器与工控",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 3.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约3.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "蓝海华腾",
+      "orderLabel": "订单约3.2亿元",
+      "highlight": "电动汽车+工控驱动",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 3.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约3.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "固高科技",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "运动控制卡与驱动器",
+      "subCategory": "industrial-control",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年工控控制系统相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

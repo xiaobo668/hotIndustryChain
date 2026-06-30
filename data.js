@@ -3750,59 +3750,106 @@ const INDUSTRY_DATA = {
     name: "物理AI",
     color: "#6366f1",
     gradient: ["#6366f1", "#4338ca"],
-    description: "物理AI（Physical AI/具身智能）指在真实物理世界中感知、推理并执行动作的 AI 系统，架构为「具身大脑（多模态模型+仿真）— 具身小脑（运动控制）— 本体（传感+执行器）」。A股主线：力觉/视觉感知、数字孪生仿真、关节执行器、运动控制与机器人本体落地。",
+    description: "中国人形机器人供应链图谱：从AI大脑/算力芯片、视觉与3D感知、力觉触觉传感，到电机执行、减速传动、工控伺服，再到电池磁材与结构模组，覆盖Physical AI具身智能核心硬件环节。",
     upstream: [
       {
-        name: "力觉/触觉/多模态感知",
+        name: "AI大脑 / 算力芯片",
         companies: [
-          { name: "柯力传感", highlight: "六维力/力矩传感器，人形机器人灵巧手与关节力控，Physical AI 闭环感知核心" },
-          { name: "汉威科技", highlight: "柔性压力/触觉传感，具身机器人抓取与环境交互感知" },
-          { name: "凌云光", highlight: "机器视觉+具身数据采集，物理AI训练与真机验证数据闭环" }
+          { name: "寒武纪", highlight: "云端+边缘AI芯片，人形机器人端侧推理算力" },
+          { name: "海光信息", highlight: "DCU加速卡，人形运动规划与感知推理" },
+          { name: "瑞芯微", highlight: "端侧AI SoC，机器人视觉与控制低时延推理" }
         ]
       },
       {
-        name: "仿真/数字孪生/世界模型",
+        name: "视觉与3D感知",
         companies: [
-          { name: "能科科技", highlight: "工业数字孪生与仿真平台，具身策略训练与物理场景验证" },
-          { name: "中科创达", highlight: "端侧AI OS与具身智能机器人软件栈，边缘部署多模态模型" },
-          { name: "瑞芯微", highlight: "端侧AI芯片，机器人视觉与控制在设备侧低时延推理" }
+          { name: "奥比中光", highlight: "3D视觉传感器，人形环境感知与避障" },
+          { name: "禾赛科技", highlight: "激光雷达，机器人导航与SLAM" },
+          { name: "凌云光", highlight: "机器视觉+具身数据采集闭环" }
+        ]
+      },
+      {
+        name: "力觉 / 触觉 / 传感器",
+        companies: [
+          { name: "汉威科技", highlight: "柔性压力/触觉传感，抓取交互感知" },
+          { name: "柯力传感", highlight: "六维力/力矩传感器，灵巧手力控" },
+          { name: "奥普特", highlight: "机器视觉传感，引导与检测" }
+        ]
+      },
+      {
+        name: "控制芯片 / 边缘AI",
+        companies: [
+          { name: "全志科技", highlight: "智能应用处理器，机器人主控芯片" },
+          { name: "芯原股份", highlight: "芯片IP与定制，机器人ASIC设计" },
+          { name: "乐鑫科技", highlight: "WiFi+MCU，机器人边缘联网控制" }
         ]
       }
     ],
     midstream: [
       {
-        name: "关节执行器（减速器/电机）",
+        name: "电机与执行部件",
         companies: [
-          { name: "绿的谐波", highlight: "谐波减速器龙头，具身机器人旋转关节核心执行器" },
-          { name: "双环传动", highlight: "精密减速器，人形机器人关节模组供应链" },
-          { name: "鸣志电器", highlight: "空心杯电机+步进电机，灵巧手与关节驱动执行末端" },
-          { name: "中大力德", highlight: "微型精密减速器，小型具身机器人关节模组" }
+          { name: "鸣志电器", highlight: "空心杯电机+步进，灵巧手驱动" },
+          { name: "江苏雷利", highlight: "微电机与传动模组，关节执行" },
+          { name: "步科股份", highlight: "伺服驱动与运动控制模组" }
         ]
       },
       {
-        name: "运动控制/具身小脑",
+        name: "丝杠 / 轴承 / 传动件",
         companies: [
-          { name: "汇川技术", highlight: "伺服驱动+运动控制，具身机器人实时力控与轨迹规划" },
-          { name: "埃斯顿", highlight: "自主运动控制+机器人本体，具身小脑与执行一体化" },
-          { name: "雷赛智能", highlight: "伺服/步进+运动控制卡，具身设备运动控制与驱动" }
+          { name: "贝斯特", highlight: "精密零部件+丝杠，人形线性关节" },
+          { name: "北特科技", highlight: "汽车底盘件延伸，丝杠传动" },
+          { name: "五洲新春", highlight: "轴承+滚柱丝杠，关节传动" }
+        ]
+      },
+      {
+        name: "减速器与精密运动",
+        companies: [
+          { name: "绿的谐波", highlight: "谐波减速器，人形旋转关节核心" },
+          { name: "双环传动", highlight: "RV减速器，工业与人形关节" },
+          { name: "中大力德", highlight: "微型精密减速器，小型关节" }
+        ]
+      },
+      {
+        name: "功率半导体 / 驱动",
+        companies: [
+          { name: "斯达半导", highlight: "IGBT模块，伺服与关节驱动" },
+          { name: "士兰微", highlight: "IDM功率器件，电机驱动芯片" },
+          { name: "时代电气", highlight: "轨交IGBT龙头，工业驱动延伸" }
+        ]
+      },
+      {
+        name: "工控 / 控制系统",
+        companies: [
+          { name: "汇川技术", highlight: "伺服+PLC，机器人运动控制平台" },
+          { name: "埃斯顿", highlight: "自主运动控制+机器人本体" },
+          { name: "雷赛智能", highlight: "运动控制卡与步进伺服" }
+        ]
+      },
+      {
+        name: "伺服与运动控制",
+        companies: [
+          { name: "伟创电气", highlight: "伺服系统，协作臂与关节驱动" },
+          { name: "雷赛智能", highlight: "步进+伺服运动控制" },
+          { name: "步科股份", highlight: "低压伺服驱动，小型关节" }
         ]
       }
     ],
     downstream: [
       {
-        name: "具身机器人本体/集成",
+        name: "电池 / 稀土 / 磁材",
         companies: [
-          { name: "机器人", highlight: "工业机器人+服务机器人本体，Physical AI 产线落地国家队" },
-          { name: "拓斯达", highlight: "工业机器人系统集成，具身机器人产线物理自动化落地" },
-          { name: "东方精工", highlight: "智能包装装备+机器人产线，乐聚人形机器人组装线合资落地" }
+          { name: "宁德时代", highlight: "动力电池龙头，人形机器人电池包" },
+          { name: "北方稀土", highlight: "稀土资源，永磁材料原料" },
+          { name: "中科三环", highlight: "稀土永磁器件，关节电机磁钢" }
         ]
       },
       {
-        name: "Physical AI 场景落地",
+        name: "结构件 / 机电模组",
         companies: [
-          { name: "三丰智能", highlight: "AGV/物流机器人，仓储与工厂物理世界智能搬运" },
-          { name: "今天国际", highlight: "智慧物流+AMR/AGV，物理空间物料自动配送" },
-          { name: "亿嘉和", highlight: "特种具身机器人，电力巡检与安防物理世界作业自动化" }
+          { name: "拓普集团", highlight: "轻量化结构件，人形执行器壳体" },
+          { name: "三花智控", highlight: "机电执行器，人形关节线性模组" },
+          { name: "恒立液压", highlight: "液压+丝杠，重载执行模组" }
         ]
       }
     ]

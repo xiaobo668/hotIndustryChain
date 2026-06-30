@@ -1,0 +1,185 @@
+{
+  "key": "功率半导体驱动",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "power-semi",
+  "title": "2026人形机器人·功率半导体驱动产能TOP10",
+  "subtitle": "口径：功率半导体年化产能（万片/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "士兰微",
+      "capacityLabel": "年产约520万片",
+      "highlight": "IDM功率器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约520万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "华润微",
+      "capacityLabel": "年产约480万片",
+      "highlight": "功率器件代工",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 480,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约480万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "斯达半导",
+      "capacityLabel": "年产约450万片",
+      "highlight": "IGBT模块",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约450万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "时代电气",
+      "capacityLabel": "年产约380万片",
+      "highlight": "IGBT功率模块",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约380万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "扬杰科技",
+      "capacityLabel": "年产约350万片",
+      "highlight": "功率半导体",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 350,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约350万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "新洁能",
+      "capacityLabel": "年产约320万片",
+      "highlight": "MOSFET/IGBT",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约320万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "捷捷微电",
+      "capacityLabel": "年产约280万片",
+      "highlight": "防护器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约280万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "东微半导",
+      "capacityLabel": "年产约220万片",
+      "highlight": "MOSFET",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 220,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约220万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "宏微科技",
+      "capacityLabel": "年产约180万片",
+      "highlight": "IGBT封装",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 180,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约180万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华微电子",
+      "capacityLabel": "年产约150万片",
+      "highlight": "功率器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "capacity": 150,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：功率半导体驱动年化产能约年产约150万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

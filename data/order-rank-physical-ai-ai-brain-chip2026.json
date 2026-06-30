@@ -1,0 +1,174 @@
+{
+  "key": "AI大脑算力芯片",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "ai-brain-chip",
+  "title": "2026人形机器人·AI大脑算力芯片订单TOP10",
+  "subtitle": "口径：人形机器人端侧/边缘AI算力芯片2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "寒武纪",
+      "orderLabel": "订单约18亿元",
+      "highlight": "云端+边缘AI芯片，人形端侧推理算力",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 18,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约18亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "海光信息",
+      "orderLabel": "订单约15亿元",
+      "highlight": "DCU加速卡，运动规划与多模态推理",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 15,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约15亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "瑞芯微",
+      "orderLabel": "订单约12亿元",
+      "highlight": "端侧AI SoC，视觉与控制低时延",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 12,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约12亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "景嘉微",
+      "orderLabel": "订单约9亿元",
+      "highlight": "GPU芯片，机器人仿真与边缘渲染",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 9,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约9亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "全志科技",
+      "orderLabel": "订单约7.5亿元",
+      "highlight": "智能应用处理器，服务机器人主控",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 7.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约7.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "芯原股份",
+      "orderLabel": "订单约6.8亿元",
+      "highlight": "IP授权+芯片定制，机器人ASIC",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 6.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约6.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "乐鑫科技",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "WiFi+MCU，机器人联网与边缘控制",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "国芯科技",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "嵌入式CPU，工业与机器人控制",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "龙芯中科",
+      "orderLabel": "订单约4.2亿元",
+      "highlight": "自主指令集CPU，工控与特种机器人",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 4.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约4.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "北京君正",
+      "orderLabel": "订单约3.8亿元",
+      "highlight": "视频+AI处理器，视觉导航模组",
+      "subCategory": "ai-brain-chip",
+      "verify": {
+        "amount": 3.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年AI大脑算力芯片相关预计订单约订单约3.8亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

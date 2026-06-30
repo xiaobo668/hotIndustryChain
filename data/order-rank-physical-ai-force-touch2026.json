@@ -1,0 +1,174 @@
+{
+  "key": "力觉触觉传感器",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "force-touch",
+  "title": "2026人形机器人·力觉触觉传感器订单TOP10",
+  "subtitle": "口径：力矩/触觉/柔性传感模组2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "柯力传感",
+      "orderLabel": "订单约6亿元",
+      "highlight": "六维力/力矩传感器，灵巧手力控",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 6,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约6亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "汉威科技",
+      "orderLabel": "订单约4.2亿元",
+      "highlight": "柔性触觉传感，抓取交互",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 4.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约4.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "奥普特",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "机器视觉传感引导",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "中航电测",
+      "orderLabel": "订单约3亿元",
+      "highlight": "应变式力传感器，关节力控",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "森霸传感",
+      "orderLabel": "订单约2.5亿元",
+      "highlight": "红外与光学传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 2.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约2.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "康斯特",
+      "orderLabel": "订单约2.2亿元",
+      "highlight": "精密压力校准与传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 2.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约2.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "东华测试",
+      "orderLabel": "订单约1.8亿元",
+      "highlight": "结构力学测试与传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 1.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约1.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华依科技",
+      "orderLabel": "订单约1.6亿元",
+      "highlight": "惯性导航与力传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 1.6,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约1.6亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "睿能科技",
+      "orderLabel": "订单约1.4亿元",
+      "highlight": "针织设备+传感延伸",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 1.4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约1.4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "宇立仪器",
+      "orderLabel": "订单约1.2亿元",
+      "highlight": "六维力传感器专业厂商",
+      "subCategory": "force-touch",
+      "verify": {
+        "amount": 1.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年力觉触觉传感器相关预计订单约订单约1.2亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "key": "电机与执行部件",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "motor-actuator",
+  "title": "2026人形机器人·电机与执行部件订单TOP10",
+  "subtitle": "口径：空心杯/步进/伺服电机等执行部件2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "鸣志电器",
+      "orderLabel": "订单约10亿元",
+      "highlight": "空心杯电机，灵巧手微驱动",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 10,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约10亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "江苏雷利",
+      "orderLabel": "订单约8.5亿元",
+      "highlight": "微电机与传动模组",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 8.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约8.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "步科股份",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "伺服驱动与运动控制",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "兆威机电",
+      "orderLabel": "订单约4亿元",
+      "highlight": "微型传动系统，关节模组",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "伟创电气",
+      "orderLabel": "订单约3.8亿元",
+      "highlight": "伺服系统，协作臂驱动",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 3.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约3.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "昊志机电",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "主轴+谐波，关节执行",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "鼎智科技",
+      "orderLabel": "订单约3.2亿元",
+      "highlight": "线性执行器，丝杠电机",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 3.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约3.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "雷赛智能",
+      "orderLabel": "订单约3亿元",
+      "highlight": "步进+伺服驱动",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "汇川技术",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "伺服电机系统",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "科沃斯",
+      "orderLabel": "订单约2.5亿元",
+      "highlight": "服务机器人电机模组",
+      "subCategory": "motor-actuator",
+      "verify": {
+        "amount": 2.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年电机与执行部件相关预计订单约订单约2.5亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

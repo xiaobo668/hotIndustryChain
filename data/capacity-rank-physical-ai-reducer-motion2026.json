@@ -1,0 +1,185 @@
+{
+  "key": "减速器精密运动",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "reducer-motion",
+  "title": "2026人形机器人·减速器精密运动产能TOP10",
+  "subtitle": "口径：减速器年化产能（万套/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "绿的谐波",
+      "capacityLabel": "年产约120万套",
+      "highlight": "谐波减速器产能靠前",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约120万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "双环传动",
+      "capacityLabel": "年产约85万套",
+      "highlight": "RV减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 85,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约85万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "中大力德",
+      "capacityLabel": "年产约45万套",
+      "highlight": "微型减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约45万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国茂股份",
+      "capacityLabel": "年产约38万套",
+      "highlight": "RV减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 38,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约38万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "秦川机床",
+      "capacityLabel": "年产约32万套",
+      "highlight": "关节减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约32万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "丰立智能",
+      "capacityLabel": "年产约15万套",
+      "highlight": "谐波减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约15万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "巨轮智能",
+      "capacityLabel": "年产约12万套",
+      "highlight": "RV减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约12万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "瑞迪智驱",
+      "capacityLabel": "年产约10万套",
+      "highlight": "谐波一体化",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约10万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "新时达",
+      "capacityLabel": "年产约8万套",
+      "highlight": "减速器配套",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约8万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "埃夫特",
+      "capacityLabel": "年产约6万套",
+      "highlight": "机器人减速器",
+      "subCategory": "reducer-motion",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：减速器精密运动年化产能约年产约6万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

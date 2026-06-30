@@ -1,0 +1,185 @@
+{
+  "key": "视觉与3D感知",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "vision-3d",
+  "title": "2026人形机器人·视觉与3D感知产能TOP10",
+  "subtitle": "口径：视觉与3D感知模组年化产能（万台/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "禾赛科技",
+      "capacityLabel": "年产约120万台",
+      "highlight": "激光雷达产能规模靠前",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 120,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约120万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "速腾聚创",
+      "capacityLabel": "年产约80万台",
+      "highlight": "激光雷达产能",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 80,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约80万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "奥比中光",
+      "capacityLabel": "年产约45万台",
+      "highlight": "3D视觉传感器",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 45,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约45万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "凌云光",
+      "capacityLabel": "年产约28万台",
+      "highlight": "机器视觉系统",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约28万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "奥普特",
+      "capacityLabel": "年产约22万台",
+      "highlight": "机器视觉光源镜头",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约22万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "赛微电子",
+      "capacityLabel": "年产约15万片",
+      "highlight": "MEMS惯性传感",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约15万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "海康威视",
+      "capacityLabel": "年产约12万台",
+      "highlight": "移动机器人视觉系统",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约12万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "大华股份",
+      "capacityLabel": "年产约10万台",
+      "highlight": "移动机器人视觉",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约10万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "天准科技",
+      "capacityLabel": "年产约8万台",
+      "highlight": "精密视觉装备",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约8万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "经纬恒润",
+      "capacityLabel": "年产约6万台",
+      "highlight": "车载+机器人视觉",
+      "subCategory": "vision-3d",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：视觉与3D感知年化产能约年产约6万台",
+        "officialCross": null
+      }
+    }
+  ]
+}

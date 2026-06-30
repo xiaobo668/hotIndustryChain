@@ -1,0 +1,185 @@
+{
+  "key": "力觉触觉传感器",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "force-touch",
+  "title": "2026人形机器人·力觉触觉传感器产能TOP10",
+  "subtitle": "口径：力觉与触觉传感器年化产能（万台/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "柯力传感",
+      "capacityLabel": "年产约35万台",
+      "highlight": "六维力/力矩传感器",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 35,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约35万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "森霸传感",
+      "capacityLabel": "年产约25万台",
+      "highlight": "光学传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 25,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约25万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "奥普特",
+      "capacityLabel": "年产约22万台",
+      "highlight": "机器视觉传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约22万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "汉威科技",
+      "capacityLabel": "年产约18万台",
+      "highlight": "柔性触觉传感器",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约18万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "中航电测",
+      "capacityLabel": "年产约15万台",
+      "highlight": "应变式力传感器",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约15万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "康斯特",
+      "capacityLabel": "年产约8万台",
+      "highlight": "压力传感校准",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约8万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "东华测试",
+      "capacityLabel": "年产约6万台",
+      "highlight": "力学测试传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约6万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "华依科技",
+      "capacityLabel": "年产约5万台",
+      "highlight": "惯性传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 5,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约5万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "睿能科技",
+      "capacityLabel": "年产约4万台",
+      "highlight": "工业传感",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 4,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约4万台",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "宇立仪器",
+      "capacityLabel": "年产约3万台",
+      "highlight": "六维力传感器",
+      "subCategory": "force-touch",
+      "verify": {
+        "capacity": 3,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：力觉触觉传感器年化产能约年产约3万台",
+        "officialCross": null
+      }
+    }
+  ]
+}

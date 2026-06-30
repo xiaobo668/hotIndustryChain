@@ -1,0 +1,185 @@
+{
+  "key": "控制芯片边缘AI",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "control-edge",
+  "title": "2026人形机器人·控制芯片边缘AI产能TOP10",
+  "subtitle": "口径：控制芯片年化出货产能（万片/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "全志科技",
+      "capacityLabel": "年产约980万片",
+      "highlight": "智能应用处理器",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 980,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约980万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "北京君正",
+      "capacityLabel": "年产约720万片",
+      "highlight": "视频控制处理器",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 720,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约720万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "乐鑫科技",
+      "capacityLabel": "年产约680万片",
+      "highlight": "WiFi MCU",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 680,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约680万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "瑞芯微",
+      "capacityLabel": "年产约520万片",
+      "highlight": "端侧控制SoC",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 520,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约520万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "晶晨股份",
+      "capacityLabel": "年产约450万片",
+      "highlight": "多媒体SoC",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约450万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "芯原股份",
+      "capacityLabel": "年产约450万片当量",
+      "highlight": "IP定制交付",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 450,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约450万片当量",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "恒玄科技",
+      "capacityLabel": "年产约380万片",
+      "highlight": "蓝牙SoC",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 380,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约380万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "炬芯科技",
+      "capacityLabel": "年产约320万片",
+      "highlight": "IoT芯片",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 320,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约320万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "富瀚微",
+      "capacityLabel": "年产约280万片",
+      "highlight": "视频编解码",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 280,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约280万片",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "国科微",
+      "capacityLabel": "年产约250万片",
+      "highlight": "AI+广电芯片",
+      "subCategory": "control-edge",
+      "verify": {
+        "capacity": 250,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：控制芯片边缘AI年化产能约年产约250万片",
+        "officialCross": null
+      }
+    }
+  ]
+}

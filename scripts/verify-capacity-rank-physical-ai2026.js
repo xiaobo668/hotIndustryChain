@@ -6,7 +6,7 @@ const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
 const { assertComplianceText, INVESTMENT_FORBIDDEN_RE } = require('./capacity-rank-compliance');
-const { RANKINGS } = require('./build-capacity-rank-physical-ai2026');
+const { PHYSICAL_AI_SEGMENTS } = require('./physical-ai-segments');
 
 const root = path.join(__dirname, '..');
 const chainCode = fs.readFileSync(path.join(root, 'data.js'), 'utf8')
@@ -51,7 +51,7 @@ function checkRank(data, label) {
   }
 }
 
-RANKINGS.forEach((cfg) => {
+PHYSICAL_AI_SEGMENTS.forEach((cfg) => {
   const data = registry[cfg.key];
   if (!data) errors.push(`缺少榜单: ${cfg.key}`);
   else checkRank(data, cfg.key);

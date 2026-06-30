@@ -1,0 +1,185 @@
+{
+  "key": "丝杠轴承传动件",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "screw-bearing",
+  "title": "2026人形机器人·丝杠轴承传动件产能TOP10",
+  "subtitle": "口径：丝杠轴承传动件年化产能（万套/年）；仅产业学习参考",
+  "capacityUnit": "万套/年",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "秦川机床",
+      "capacityLabel": "年产约32万套",
+      "highlight": "滚动功能部件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 32,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约32万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "五洲新春",
+      "capacityLabel": "年产约28万套",
+      "highlight": "轴承+滚柱丝杠",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 28,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约28万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "贝斯特",
+      "capacityLabel": "年产约22万套",
+      "highlight": "精密丝杠",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 22,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约22万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "北特科技",
+      "capacityLabel": "年产约18万套",
+      "highlight": "丝杠传动件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约18万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "恒立液压",
+      "capacityLabel": "年产约18万套",
+      "highlight": "液压传动执行",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 18,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约18万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "长盛轴承",
+      "capacityLabel": "年产约15万套",
+      "highlight": "自润滑轴承",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 15,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约15万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "力星股份",
+      "capacityLabel": "年产约12万套",
+      "highlight": "轴承钢球",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 12,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约12万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "新剑传动",
+      "capacityLabel": "年产约10万套",
+      "highlight": "精密传动",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 10,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约10万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "双林股份",
+      "capacityLabel": "年产约8万套",
+      "highlight": "传动零部件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 8,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约8万套",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "常熟汽饰",
+      "capacityLabel": "年产约6万套",
+      "highlight": "精密传动件",
+      "subCategory": "screw-bearing",
+      "verify": {
+        "capacity": 6,
+        "capacityUnit": "万套/年",
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链产能梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-capacity-2026.html",
+        "note": "媒体报道口径：丝杠轴承传动件年化产能约年产约6万套",
+        "officialCross": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "key": "控制芯片边缘AI",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "control-edge",
+  "title": "2026人形机器人·控制芯片边缘AI订单TOP10",
+  "subtitle": "口径：MCU/SoC等机器人控制芯片2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "全志科技",
+      "orderLabel": "订单约7.5亿元",
+      "highlight": "智能应用处理器，服务机器人主控",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 7.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约7.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "芯原股份",
+      "orderLabel": "订单约6.8亿元",
+      "highlight": "IP+定制芯片，机器人ASIC",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 6.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约6.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "乐鑫科技",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "WiFi+MCU边缘控制",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "瑞芯微",
+      "orderLabel": "订单约5亿元",
+      "highlight": "端侧AI控制SoC",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "北京君正",
+      "orderLabel": "订单约4.5亿元",
+      "highlight": "视频+控制处理器",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 4.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约4.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "晶晨股份",
+      "orderLabel": "订单约4亿元",
+      "highlight": "多媒体SoC，智能终端",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 4,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约4亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "恒玄科技",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "低功耗蓝牙SoC",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "炬芯科技",
+      "orderLabel": "订单约3亿元",
+      "highlight": "蓝牙音频+IoT芯片",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "富瀚微",
+      "orderLabel": "订单约2.8亿元",
+      "highlight": "视频编解码芯片",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 2.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约2.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "国科微",
+      "orderLabel": "订单约2.5亿元",
+      "highlight": "直播卫星+AI芯片",
+      "subCategory": "control-edge",
+      "verify": {
+        "amount": 2.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年控制芯片边缘AI相关预计订单约订单约2.5亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}

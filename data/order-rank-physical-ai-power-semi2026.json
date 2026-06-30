@@ -1,0 +1,174 @@
+{
+  "key": "功率半导体驱动",
+  "industryKeys": [
+    "物理AI",
+    "人形机器人",
+    "机器人"
+  ],
+  "subCategory": "power-semi",
+  "title": "2026人形机器人·功率半导体驱动订单TOP10",
+  "subtitle": "口径：IGBT/SiC等功率器件2026年预计订单（亿元）；仅产业学习参考",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "斯达半导",
+      "orderLabel": "订单约9亿元",
+      "highlight": "IGBT模块，伺服关节驱动",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 9,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约9亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "时代电气",
+      "orderLabel": "订单约8亿元",
+      "highlight": "IGBT功率模块",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "士兰微",
+      "orderLabel": "订单约7亿元",
+      "highlight": "IDM功率器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 7,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约7亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "华润微",
+      "orderLabel": "订单约6.5亿元",
+      "highlight": "功率半导体代工",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 6.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约6.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "扬杰科技",
+      "orderLabel": "订单约5.5亿元",
+      "highlight": "功率二极管+MOSFET",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 5.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约5.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "捷捷微电",
+      "orderLabel": "订单约4.8亿元",
+      "highlight": "晶闸管与防护器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 4.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约4.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "东微半导",
+      "orderLabel": "订单约4.2亿元",
+      "highlight": "高压超级结MOSFET",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 4.2,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约4.2亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "宏微科技",
+      "orderLabel": "订单约3.8亿元",
+      "highlight": "IGBT模块封装",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 3.8,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约3.8亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "新洁能",
+      "orderLabel": "订单约3.5亿元",
+      "highlight": "MOSFET/IGBT器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 3.5,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约3.5亿元",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "华微电子",
+      "orderLabel": "订单约3亿元",
+      "highlight": "功率半导体器件",
+      "subCategory": "power-semi",
+      "verify": {
+        "amount": 3,
+        "sourceType": "media",
+        "source": "东方财富·人形机器人供应链订单梳理",
+        "sourceDate": "2026-06-20",
+        "sourceUrl": "https://finance.eastmoney.com/a/humanoid-robot-supply-chain-2026.html",
+        "note": "媒体报道口径：2026年功率半导体驱动相关预计订单约订单约3亿元",
+        "officialCross": null
+      }
+    }
+  ]
+}
