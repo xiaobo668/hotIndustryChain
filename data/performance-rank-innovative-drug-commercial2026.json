@@ -1,0 +1,177 @@
+{
+  "key": "创新药商业化",
+  "industryKeys": [
+    "创新药",
+    "生物医药",
+    "CXO",
+    "CRO",
+    "CDMO"
+  ],
+  "subCategory": "commercial",
+  "title": "2026创新药·创新药商业化营收规模TOP10",
+  "subtitle": "口径：创新药商业化与医药渠道公司2024年全年营收规模；数据取自各公司2024年年度报告合并报表（2025年披露），按全年营收规模降序排列，不含科创板(688/689)标的，仅产业学习参考",
+  "reportPeriod": "2024FY",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "上海医药",
+      "metricLabel": "2024营收2752.51亿元",
+      "highlight": "2024年营收2752.51亿元，医药商业规模靠前厂商",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 2752.51,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约2752.51亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "九州通",
+      "metricLabel": "2024营收1518.1亿元",
+      "highlight": "2024年营收1518.10亿元，医药流通与创新药配送网络",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 1518.1,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约1518.1亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "国药一致",
+      "metricLabel": "2024营收743.78亿元",
+      "highlight": "2024年营收743.78亿元，医药流通+器械分销",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 743.78,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约743.78亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "国药股份",
+      "metricLabel": "2024营收505.97亿元",
+      "highlight": "2024年营收505.97亿元，麻精药品+北京医药商业",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 505.97,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约505.97亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "华东医药",
+      "metricLabel": "2024营收419.06亿元",
+      "highlight": "2024年营收419.06亿元，创新药+医美商业化平台",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 419.06,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约419.06亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "恒瑞医药",
+      "metricLabel": "2024营收279.85亿元",
+      "highlight": "2024年营收279.85亿元，国内创新药销售团队领先",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 279.85,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约279.85亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "大参林",
+      "metricLabel": "2024营收264.97亿元",
+      "highlight": "2024年营收264.97亿元，华南连锁药房规模靠前厂商",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 264.97,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约264.97亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "益丰药房",
+      "metricLabel": "2024营收240.62亿元",
+      "highlight": "2024年营收240.62亿元，连锁药房+DTP布局",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 240.62,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约240.62亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "润达医疗",
+      "metricLabel": "2024营收83.12亿元",
+      "highlight": "2024年营收83.12亿元，IVD流通+院内供应链",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 83.12,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约83.12亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "鱼跃医疗",
+      "metricLabel": "2024营收75.66亿元",
+      "highlight": "2024年营收75.66亿元，家用医疗器械+慢病管理",
+      "subCategory": "commercial",
+      "verify": {
+        "annualRevenue": 75.66,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约75.66亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    }
+  ]
+}

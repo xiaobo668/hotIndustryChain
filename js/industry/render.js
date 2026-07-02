@@ -207,6 +207,7 @@ function switchTab(tab, btn) {
           }
           maybeRenderOrderRankPoster(currentIndustry);
           maybeRenderCapacityRankPoster(currentIndustry);
+          maybeRenderPerformanceRankPoster(currentIndustry);
         });
       }
       break;

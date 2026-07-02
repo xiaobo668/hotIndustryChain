@@ -1,0 +1,177 @@
+{
+  "key": "GLP1代谢药",
+  "industryKeys": [
+    "创新药",
+    "生物医药",
+    "CXO",
+    "CRO",
+    "CDMO"
+  ],
+  "subCategory": "glp1",
+  "title": "2026创新药·GLP1代谢药营收规模TOP10",
+  "subtitle": "口径：GLP-1减重/降糖与创新代谢药公司2024年全年营收规模；数据取自各公司2024年年度报告合并报表（2025年披露），按全年营收规模降序排列，不含科创板(688/689)标的，仅产业学习参考",
+  "reportPeriod": "2024FY",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "华东医药",
+      "metricLabel": "2024营收419.06亿元",
+      "highlight": "2024年营收419.06亿元，利拉鲁肽类似药+医美协同",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 419.06,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约419.06亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "恒瑞医药",
+      "metricLabel": "2024营收279.85亿元",
+      "highlight": "2024年营收279.85亿元，HRS9531等GLP-1管线布局",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 279.85,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约279.85亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "健康元",
+      "metricLabel": "2024营收156.19亿元",
+      "highlight": "2024年营收156.19亿元，吸入制剂与代谢相关布局",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 156.19,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约156.19亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "东阳光",
+      "metricLabel": "2024营收121.99亿元",
+      "highlight": "2024年营收121.99亿元，代谢与抗病毒药物平台",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 121.99,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约121.99亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "丽珠集团",
+      "metricLabel": "2024营收118.12亿元",
+      "highlight": "2024年营收118.12亿元，司美格鲁肽类似药研发推进",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 118.12,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约118.12亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "甘李药业",
+      "metricLabel": "2024营收30.45亿元",
+      "highlight": "2024年营收30.45亿元，胰岛素集采后国内市占率提升",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 30.45,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约30.45亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "派林生物",
+      "metricLabel": "2024营收26.55亿元",
+      "highlight": "2024年营收26.55亿元，血制品主业快速增长",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 26.55,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约26.55亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "众生药业",
+      "metricLabel": "2024营收24.67亿元",
+      "highlight": "2024年营收24.67亿元，RAY1225 GLP-1多肽临床推进",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 24.67,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约24.67亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "通化东宝",
+      "metricLabel": "2024营收20.1亿元",
+      "highlight": "2024年营收20.10亿元，胰岛素规模靠前厂商集采续约",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 20.1,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约20.1亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "翰宇药业",
+      "metricLabel": "2024营收5.9亿元",
+      "highlight": "2024年营收5.90亿元，多肽原料药与制剂",
+      "subCategory": "glp1",
+      "verify": {
+        "annualRevenue": 5.9,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约5.9亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    }
+  ]
+}

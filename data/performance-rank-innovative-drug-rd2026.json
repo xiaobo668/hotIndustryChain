@@ -1,0 +1,177 @@
+{
+  "key": "创新药研发",
+  "industryKeys": [
+    "创新药",
+    "生物医药",
+    "CXO",
+    "CRO",
+    "CDMO"
+  ],
+  "subCategory": "rd",
+  "title": "2026创新药·创新药研发营收规模TOP10",
+  "subtitle": "口径：创新药研发型公司2024年全年营收规模；数据取自各公司2024年年度报告合并报表（2025年披露），按全年营收规模降序排列，不含科创板(688/689)标的，仅产业学习参考",
+  "reportPeriod": "2024FY",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "华东医药",
+      "metricLabel": "2024营收419.06亿元",
+      "highlight": "2024年营收419.06亿元，创新药与医美双轮驱动",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 419.06,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约419.06亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "复星医药",
+      "metricLabel": "2024营收410.67亿元",
+      "highlight": "2024年营收410.67亿元，创新药与生物类似药布局",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 410.67,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约410.67亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "恒瑞医药",
+      "metricLabel": "2024营收279.85亿元",
+      "highlight": "2024年营收279.85亿元，创新药转型成效显著",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 279.85,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约279.85亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "人福医药",
+      "metricLabel": "2024营收254.35亿元",
+      "highlight": "2024年营收254.35亿元，麻醉药+创新药研发",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 254.35,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约254.35亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "科伦药业",
+      "metricLabel": "2024营收218.12亿元",
+      "highlight": "2024年营收218.12亿元，科伦博泰ADC里程碑收入",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 218.12,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约218.12亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "健康元",
+      "metricLabel": "2024营收156.19亿元",
+      "highlight": "2024年营收156.19亿元，吸入制剂与创新药管线",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 156.19,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约156.19亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "东阳光",
+      "metricLabel": "2024营收121.99亿元",
+      "highlight": "2024年营收121.99亿元，抗病毒与代谢药研发",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 121.99,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约121.99亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "丽珠集团",
+      "metricLabel": "2024营收118.12亿元",
+      "highlight": "2024年营收118.12亿元，生物药与创新药研发推进",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 118.12,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约118.12亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "京新药业",
+      "metricLabel": "2024营收41.59亿元",
+      "highlight": "2024年营收41.59亿元，精神神经创新药为主",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 41.59,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约41.59亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "信立泰",
+      "metricLabel": "2024营收40.12亿元",
+      "highlight": "2024年营收40.12亿元，创新降压药与抗凝管线",
+      "subCategory": "rd",
+      "verify": {
+        "annualRevenue": 40.12,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约40.12亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    }
+  ]
+}

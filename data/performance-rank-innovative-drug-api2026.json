@@ -1,0 +1,177 @@
+{
+  "key": "原料药中间体",
+  "industryKeys": [
+    "创新药",
+    "生物医药",
+    "CXO",
+    "CRO",
+    "CDMO"
+  ],
+  "subCategory": "api",
+  "title": "2026创新药·原料药中间体营收规模TOP10",
+  "subtitle": "口径：特色原料药与中间体公司2024年全年营收规模；数据取自各公司2024年年度报告合并报表（2025年披露），按全年营收规模降序排列，不含科创板(688/689)标的，仅产业学习参考",
+  "reportPeriod": "2024FY",
+  "generatedAt": "2026-06",
+  "companies": [
+    {
+      "rank": 1,
+      "name": "普洛药业",
+      "metricLabel": "2024营收120.22亿元",
+      "highlight": "2024年营收120.22亿元，原料药+CDMO双主业",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 120.22,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约120.22亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 2,
+      "name": "华海药业",
+      "metricLabel": "2024营收95.47亿元",
+      "highlight": "2024年营收95.47亿元，特色原料药全球规模靠前厂商",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 95.47,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约95.47亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 3,
+      "name": "海普瑞",
+      "metricLabel": "2024营收52.81亿元",
+      "highlight": "2024年营收52.81亿元，肝素原料药与制剂",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 52.81,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约52.81亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 4,
+      "name": "九洲药业",
+      "metricLabel": "2024营收51.61亿元",
+      "highlight": "2024年营收51.61亿元，CDMO+特色原料药",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 51.61,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约51.61亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 5,
+      "name": "仙琚制药",
+      "metricLabel": "2024营收40.01亿元",
+      "highlight": "2024年营收40.01亿元，甾体激素原料药+制剂",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 40.01,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约40.01亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 6,
+      "name": "健友股份",
+      "metricLabel": "2024营收39.24亿元",
+      "highlight": "2024年营收39.24亿元，肝素制剂+原料药出口",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 39.24,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约39.24亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 7,
+      "name": "天宇股份",
+      "metricLabel": "2024营收26.31亿元",
+      "highlight": "2024年营收26.31亿元，沙坦类原料药与制剂拓展",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 26.31,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约26.31亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 8,
+      "name": "司太立",
+      "metricLabel": "2024营收23.5亿元",
+      "highlight": "2024年营收23.50亿元，碘造影剂原料药",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 23.5,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约23.5亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 9,
+      "name": "润都股份",
+      "metricLabel": "2024营收11.82亿元",
+      "highlight": "2024年营收11.82亿元，特色原料药与缓控释制剂",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 11.82,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约11.82亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    },
+    {
+      "rank": 10,
+      "name": "奥翔药业",
+      "metricLabel": "2024营收7.95亿元",
+      "highlight": "2024年营收7.95亿元，特色原料药+制剂一体化",
+      "subCategory": "api",
+      "verify": {
+        "annualRevenue": 7.95,
+        "sourceType": "filing",
+        "source": "公司2024年年度报告",
+        "sourceDate": "2025-04",
+        "sourceUrl": null,
+        "note": "披露口径：2024年全年营业收入约7.95亿元（合并报表，2025年披露）",
+        "officialCross": null
+      }
+    }
+  ]
+}
