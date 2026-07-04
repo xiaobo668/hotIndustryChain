@@ -27,42 +27,17 @@
     <a class="back" href="index.html">← 返回产业链分析首页</a>
     <h1>📱 公众号文稿</h1>
     <p class="sub">生成产业链或订单榜时同步产出，支持一键复制粘贴至微信公众号编辑器。发布时请勾选「含 AI 生成内容」。</p>
-    
-    <article class="card">
-      <h2><a href="docs/wechat/fiber-concept2026.html">2026光纤概念产业链全梳理：订单Top10来了</a></h2>
-      <p class="meta">2026-06 · 产业链 + 订单榜 · 链键：<code>光纤概念</code></p>
-      <div class="links">
-        <a href="docs/wechat/fiber-concept2026.html">📱 预览并复制</a>
-        <a href="docs/wechat/fiber-concept2026.md">📝 Markdown</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <h2><a href="docs/wechat/cpo2026.html">共封装光学产业链全梳理（2026）</a></h2>
-      <p class="meta">2026-06 · 产业链 · 链键：<code>CPO</code></p>
-      <div class="links">
-        <a href="docs/wechat/cpo2026.html">📱 预览并复制</a>
-        <a href="docs/wechat/cpo2026.md">📝 Markdown</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <h2><a href="docs/wechat/optical-interconnect2026.html">2026光互联产业链全梳理：订单Top10来了</a></h2>
-      <p class="meta">2026-06 · 产业链 + 订单榜 · 链键：<code>光互联</code></p>
-      <div class="links">
-        <a href="docs/wechat/optical-interconnect2026.html">📱 预览并复制</a>
-        <a href="docs/wechat/optical-interconnect2026.md">📝 Markdown</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <h2><a href="docs/wechat/semiconductor-scarce-materials2026.html">半导体稀缺材料产业链全梳理（2026）</a></h2>
-      <p class="meta">2026-06 · 产业链 · 链键：<code>半导体稀缺材料</code></p>
-      <div class="links">
-        <a href="docs/wechat/semiconductor-scarce-materials2026.html">📱 预览并复制</a>
-        <a href="docs/wechat/semiconductor-scarce-materials2026.md">📝 Markdown</a>
-      </div>
-    </article>
+    <div id="docs-list"></div>
   </div>
+  <script src="js/shell/docs-index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initDocsIndexPage({
+        manifestUrl: 'docs/wechat/manifest.json',
+        containerId: 'docs-list',
+        mode: 'wechat',
+      });
+    });
+  </script>
 </body>
 </html>

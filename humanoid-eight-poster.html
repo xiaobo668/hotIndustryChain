@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人形机器人 · 十大选手海报</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --text: #e8e8f0;
+      --text-muted: #8888aa;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    h1 { font-size: 20px; margin-bottom: 8px; color: #fcd34d; }
+    .sub { color: var(--text-muted); font-size: 13px; line-height: 1.65; margin-bottom: 20px; }
+    .poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .poster-page-label { font-size: 12px; color: var(--text-muted); }
+    .poster-canvas-item { border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      padding: 10px 18px; border-radius: 10px; border: none;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #dc2626);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    a.back { color: #fcd34d; font-size: 13px; display: inline-block; margin-bottom: 16px; text-decoration: none; }
+    .nav-card {
+      display: block;
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.08);
+      color: #fcd34d;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .nav-card:hover { background: rgba(245, 158, 11, 0.14); }
+    .note {
+      margin-top: 20px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      background: rgba(245, 158, 11, 0.06);
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+    .note strong { color: #fcd34d; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链首页</a>
+    <a class="nav-card" href="docs/人形机器人-八大选手海报.md" target="_blank" rel="noopener">📄 查看完整梳理文档（产业链定位 + 策略映射）</a>
+    <a class="nav-card" href="order-tracks.html#ord-人形机器人" style="border-color:rgba(0,212,255,0.35);background:rgba(0,212,255,0.06);color:#67e8f9">🏆 对比：人形机器人订单榜 Top10 →</a>
+    <h1>人形机器人风口来袭</h1>
+    <p class="sub">十大选手谁会一飞冲天？梳理埃斯顿、拓普集团、三花智控、双环传动、五洲新春、鸣志电器、秦川机床、柯力传感、绿的谐波、汇川技术在产业链中的位置；支持海报下载与复制。</p>
+    <div class="poster-wrap" id="humanoid-eight-wrap">
+      <div id="humanoid-eight-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('humanoid-eight-canvas','人形机器人十大选手-2026.png')">⬇️ 下载海报</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('humanoid-eight-canvas')">📋 复制海报</button>
+        <button class="btn btn-secondary" type="button" onclick="initOrderRankPosterPage(HUMANOID_TOP10_STARS2026,'humanoid-eight-pages','humanoid-eight-canvas')">🔄 刷新</button>
+      </div>
+    </div>
+    <div class="note">
+      <strong>口径说明：</strong>本海报为「风口选手」视角，按市场热度与产业链位置梳理 10 家核心标的，不含股价与代码。
+      与<a href="order-tracks.html" style="color:#67e8f9">订单榜 Top10</a>（按订单规模排序）互为补充，不构成投资建议。
+    </div>
+  </div>
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/humanoid-eight-stars2026.js"></script>
+  <script src="js/industry/order-rank-poster.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initOrderRankPosterPage(HUMANOID_TOP10_STARS2026, 'humanoid-eight-pages', 'humanoid-eight-canvas');
+    });
+  </script>
+</body>
+</html>

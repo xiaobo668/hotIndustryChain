@@ -66,7 +66,7 @@ function openOrderRankGroupPage(groupId) {
 function openOrderRankPageForIndustry(industryName) {
   const url = getOrderPageUrlForIndustry(industryName);
   if (url) window.location.href = url;
-  else window.location.href = 'theme-poster.html#order-ranks';
+  else window.location.href = 'order-poster.html';
 }
 
 function getOrderRankPosterConfigByKey(key) {
@@ -153,13 +153,23 @@ function renderOrderRankHub(containerId) {
 
   const legacy = document.createElement('a');
   legacy.className = 'industry-card';
-  legacy.href = 'theme-poster.html#order-ranks';
+  legacy.href = 'order-tracks.html';
   legacy.innerHTML =
     '<div class="industry-card-icon">🏆</div>'
     + '<div class="industry-card-name">综合订单排行榜</div>'
     + '<div class="industry-card-desc">算力租赁 · PCB · 先进封装 · 液冷 · 光互联 · 电力 · 存储芯片 · 人形机器人等</div>'
     + '<span class="industry-card-count">13 个赛道</span>';
   container.appendChild(legacy);
+
+  const humanoidEight = document.createElement('a');
+  humanoidEight.className = 'industry-card';
+  humanoidEight.href = 'humanoid-eight-poster.html';
+  humanoidEight.innerHTML =
+    '<div class="industry-card-icon">🦾</div>'
+    + '<div class="industry-card-name">人形机器人 · 十大选手</div>'
+    + '<div class="industry-card-desc">风口选手梳理：埃斯顿 · 拓普 · 三花 · 双环 · 五洲新春 · 鸣志 · 秦川机床 · 柯力传感 · 绿的谐波 · 汇川技术</div>'
+    + '<span class="industry-card-count">10 家核心标的</span>';
+  container.appendChild(humanoidEight);
 
   Object.values(ORDER_RANK_PAGE_GROUPS).forEach((group) => {
     const a = document.createElement('a');

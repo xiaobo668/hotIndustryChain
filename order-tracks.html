@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 产业链订单排行榜 · 各赛道</title>
+  <link rel="stylesheet" href="order/order-common.css" />
+  <style>
+    .order-rank-sources-panel {
+      max-width: 560px; width: 100%; margin: 16px auto 0; padding: 16px 18px;
+      background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(8, 145, 178, 0.35);
+      border-radius: 12px; text-align: left;
+    }
+    .order-rank-sources-panel h3 { font-size: 14px; font-weight: 700; color: #67e8f9; margin: 0 0 6px; }
+    .order-rank-sources-panel .sources-sub { font-size: 12px; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }
+    .order-rank-sources-table { width: 100%; border-collapse: collapse; font-size: 11px; margin-bottom: 12px; }
+    .order-rank-sources-table th, .order-rank-sources-table td {
+      border: 1px solid rgba(255,255,255,0.08); padding: 6px 8px; vertical-align: top; text-align: left;
+    }
+    .order-rank-sources-table th { background: rgba(8,145,178,0.15); color: #a5f3fc; font-weight: 600; }
+    .order-rank-sources-table a { color: #67e8f9; word-break: break-all; }
+    .order-rank-sources-links { font-size: 12px; line-height: 1.7; }
+    .order-rank-sources-links a { color: #67e8f9; }
+    .order-rank-sources-footer { font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+    .order-rank-sources-panel .doc-link { display: inline-block; margin-top: 8px; font-size: 12px; color: #c4b5fd; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="order-poster.html">← 返回订单榜首页</a>
+    <a class="back" href="index.html" style="margin-left:12px">返回产业链首页</a>
+    <h1 id="order-ranks">2026 产业链订单排行榜 · 各赛道</h1>
+    <p class="sub">公开财经报道与产业链梳理；各赛道 Top10/Top15 订单规模海报，支持下载与复制。</p>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">电子布 · 2026年订单规模 Top10</h2>
+    <p class="sub">1-6 名为公开报道2026年电子布/电子纱/特种纤维布在手或预计订单；7-10 名为产业链节点以2025年报营收作规模参考。</p>
+    <div class="poster-wrap" id="order-rank-e-glass-fabric-wrap">
+      <div id="order-rank-e-glass-fabric-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-e-glass-fabric-canvas','电子布订单榜-2026.png')">⬇️ 下载电子布订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-e-glass-fabric-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">算力租赁 · 订单规模 Top15</h2>
+    <div class="poster-wrap" id="order-rank-computing-wrap">
+      <div id="order-rank-computing-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-computing-canvas','算力租赁订单榜-2026.png')">⬇️ 下载算力租赁订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-computing-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">PCB · 2026年订单规模 Top15</h2>
+    <div class="poster-wrap" id="order-rank-pcb-wrap">
+      <div id="order-rank-pcb-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-pcb-canvas','PCB订单榜-2026.png')">⬇️ 下载PCB订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-pcb-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">先进封装 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-advanced-wrap">
+      <div id="order-rank-advanced-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-advanced-canvas','先进封装订单榜-2026.png')">⬇️ 下载先进封装订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-advanced-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">液冷 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-liquid-cooling-wrap">
+      <div id="order-rank-liquid-cooling-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-liquid-cooling-canvas','液冷订单榜-2026.png')">⬇️ 下载液冷订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-liquid-cooling-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">MLCC · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-mlcc-wrap">
+      <div id="order-rank-mlcc-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-mlcc-canvas','MLCC订单榜-2026.png')">⬇️ 下载MLCC订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-mlcc-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">多氟多 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-duofuduo-wrap">
+      <div id="order-rank-duofuduo-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-duofuduo-canvas','多氟多订单榜-2026.png')">⬇️ 下载多氟多订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-duofuduo-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">光互联 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-optical-interconnect-wrap">
+      <div id="order-rank-optical-interconnect-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-optical-interconnect-canvas','光互联订单榜-2026.png')">⬇️ 下载光互联订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-optical-interconnect-canvas')">📋 复制</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankSourcesText('order-rank-optical-interconnect-sources')">📎 复制来源说明</button>
+      </div>
+      <div id="order-rank-optical-interconnect-sources" class="order-rank-sources-panel"></div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">光纤概念 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-fiber-concept-wrap">
+      <div id="order-rank-fiber-concept-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-fiber-concept-canvas','光纤概念订单榜-2026.png')">⬇️ 下载光纤概念订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-fiber-concept-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">电力 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-power-wrap">
+      <div id="order-rank-power-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-power-canvas','电力订单榜-2026.png')">⬇️ 下载电力订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-power-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">存储芯片 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-storage-chip-wrap">
+      <div id="order-rank-storage-chip-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-storage-chip-canvas','存储芯片订单榜-2026.png')">⬇️ 下载存储芯片订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-storage-chip-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">电子纸 · 2026年订单规模 Top10</h2>
+    <div class="poster-wrap" id="order-rank-e-paper-wrap">
+      <div id="order-rank-e-paper-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-e-paper-canvas','电子纸订单榜-2026.png')">⬇️ 下载电子纸订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-e-paper-canvas')">📋 复制</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px;font-size:18px;color:var(--text)">人形机器人 · 2026年订单规模 Top10</h2>
+    <p class="sub" style="margin-bottom:12px"><a href="humanoid-eight-poster.html" style="color:#fcd34d">→ 另见：人形机器人十大选手风口海报（市场热度视角）</a></p>
+    <div class="poster-wrap" id="order-rank-humanoid-robot-wrap">
+      <div id="order-rank-humanoid-robot-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('order-rank-humanoid-robot-canvas','人形机器人订单榜-2026.png')">⬇️ 下载人形机器人订单榜</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('order-rank-humanoid-robot-canvas')">📋 复制</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/order-rank-e-glass-fabric2026.js"></script>
+  <script src="data/order-rank-computing2026.js"></script>
+  <script src="data/order-rank-pcb2026.js"></script>
+  <script src="data/order-rank-advanced-packaging2026.js"></script>
+  <script src="data/order-rank-liquid-cooling2026.js"></script>
+  <script src="data/order-rank-mlcc2026.js"></script>
+  <script src="data/order-rank-duofuduo2026.js"></script>
+  <script src="data/order-rank-optical-interconnect2026.js"></script>
+  <script src="data/order-rank-fiber-concept2026.js"></script>
+  <script src="data/order-rank-power2026.js"></script>
+  <script src="data/order-rank-storage-chip2026.js"></script>
+  <script src="data/order-rank-e-paper2026.js"></script>
+  <script src="data/order-rank-humanoid-robot2026.js"></script>
+  <script src="js/industry/order-rank-poster.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initOrderRankPosterPage(ORDER_RANK_E_GLASS_FABRIC2026, 'order-rank-e-glass-fabric-pages', 'order-rank-e-glass-fabric-canvas');
+      initOrderRankPosterPage(ORDER_RANK_COMPUTING2026, 'order-rank-computing-pages', 'order-rank-computing-canvas');
+      initOrderRankPosterPage(ORDER_RANK_PCB2026, 'order-rank-pcb-pages', 'order-rank-pcb-canvas');
+      initOrderRankPosterPage(ORDER_RANK_ADVANCED_PACKAGING2026, 'order-rank-advanced-pages', 'order-rank-advanced-canvas');
+      initOrderRankPosterPage(ORDER_RANK_LIQUID_COOLING2026, 'order-rank-liquid-cooling-pages', 'order-rank-liquid-cooling-canvas');
+      initOrderRankPosterPage(ORDER_RANK_MLCC2026, 'order-rank-mlcc-pages', 'order-rank-mlcc-canvas');
+      initOrderRankPosterPage(ORDER_RANK_DUOFUDUO2026, 'order-rank-duofuduo-pages', 'order-rank-duofuduo-canvas');
+      initOrderRankPosterPage(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-pages', 'order-rank-optical-interconnect-canvas');
+      renderOrderRankSourcesPanel(ORDER_RANK_OPTICAL_INTERCONNECT2026, 'order-rank-optical-interconnect-sources', { analysisDoc: 'docs/analysis/optical-interconnect2026.html' });
+      initOrderRankPosterPage(ORDER_RANK_FIBER_CONCEPT2026, 'order-rank-fiber-concept-pages', 'order-rank-fiber-concept-canvas');
+      initOrderRankPosterPage(ORDER_RANK_POWER2026, 'order-rank-power-pages', 'order-rank-power-canvas');
+      initOrderRankPosterPage(ORDER_RANK_STORAGE_CHIP2026, 'order-rank-storage-chip-pages', 'order-rank-storage-chip-canvas');
+      initOrderRankPosterPage(ORDER_RANK_E_PAPER2026, 'order-rank-e-paper-pages', 'order-rank-e-paper-canvas');
+      initOrderRankPosterPage(ORDER_RANK_HUMANOID_ROBOT2026, 'order-rank-humanoid-robot-pages', 'order-rank-humanoid-robot-canvas');
+    });
+  </script>
+</body>
+</html>

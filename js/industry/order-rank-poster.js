@@ -171,7 +171,7 @@ function drawOrderRankPoster(ctx, data, W, H) {
   ctx.font = 'bold 11px "PingFang SC", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText((data.key || '订单') + ' · 订单规模排行', cardX + cardW / 2, y + L.CARD_HEAD / 2);
+  ctx.fillText(data.cardLabel || ((data.key || '订单') + ' · 订单规模排行'), cardX + cardW / 2, y + L.CARD_HEAD / 2);
   ctx.textBaseline = 'alphabetic';
   ctx.textAlign = 'left';
 

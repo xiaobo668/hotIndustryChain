@@ -14,7 +14,7 @@ var MEMBER_ZONE2026 = {
       icon: '💎',
       tagline: '从材料、设计、制造、封测到终端应用，看懂「现代工业粮食」全链条',
       capacityPage: 'capacity/semiconductor.html',
-      orderHub: 'theme-poster.html#order-ranks',
+      orderHub: 'order-tracks.html',
       chain: {
         upstream: {
           title: '上游 · 材料与核心耗材',
@@ -51,11 +51,11 @@ var MEMBER_ZONE2026 = {
         tracks: ['ABF载板', '先进封装2.5D', '存储封测', '磷化铟砷化镓衬底', '覆铜板', 'MLCC车规算力'],
       },
       orderTracks: [
-        { key: '存储芯片', page: 'theme-poster.html#order-ranks' },
-        { key: '先进封装', page: 'theme-poster.html#order-ranks' },
-        { key: 'PCB', page: 'theme-poster.html#order-ranks' },
-        { key: 'MLCC', page: 'theme-poster.html#order-ranks' },
-        { key: '电子布', page: 'theme-poster.html#order-ranks' },
+        { key: '存储芯片', page: 'order-tracks.html' },
+        { key: '先进封装', page: 'order-tracks.html' },
+        { key: 'PCB', page: 'order-tracks.html' },
+        { key: 'MLCC', page: 'order-tracks.html' },
+        { key: '电子布', page: 'order-tracks.html' },
       ],
       consumablesTracks: [
         { key: '光刻胶', page: 'consumables-poster.html' },
@@ -99,7 +99,7 @@ var MEMBER_ZONE2026 = {
       icon: '🚀',
       tagline: '从AI芯片到服务器、液冷与智算中心，看懂算力基础设施全链条',
       capacityPage: 'capacity/compute.html',
-      orderHub: 'theme-poster.html#order-ranks',
+      orderHub: 'order-tracks.html',
       chain: {
         upstream: {
           title: '上游 · 算力芯片与核心材料',
@@ -125,9 +125,9 @@ var MEMBER_ZONE2026 = {
         '云计算', '边缘计算', '算力算法', 'PCB算力板',
       ],
       orderTracks: [
-        { key: '算力租赁', page: 'theme-poster.html#order-ranks' },
-        { key: '液冷', page: 'theme-poster.html#order-ranks' },
-        { key: 'PCB', page: 'theme-poster.html#order-ranks' },
+        { key: '算力租赁', page: 'order-tracks.html' },
+        { key: '液冷', page: 'order-tracks.html' },
+        { key: 'PCB', page: 'order-tracks.html' },
       ],
       consumablesTracks: [
         { key: '导热界面材料', page: 'consumables-poster.html' },
@@ -151,7 +151,7 @@ var MEMBER_ZONE2026 = {
       icon: '🔗',
       tagline: '从光芯片、光纤到800G/1.6T光模块，看懂AI数据中心「高速公路」',
       capacityPage: 'capacity/optical-electronics.html',
-      orderHub: 'theme-poster.html#order-ranks',
+      orderHub: 'order-tracks.html',
       chain: {
         upstream: {
           title: '上游 · 光芯片与光纤材料',
@@ -178,11 +178,11 @@ var MEMBER_ZONE2026 = {
         'MLCC车规算力', '磷化铟砷化镓衬底', '先进封装2.5D', '存储封测',
       ],
       orderTracks: [
-        { key: '光互联', page: 'theme-poster.html#order-ranks' },
-        { key: '光纤概念', page: 'theme-poster.html#order-ranks' },
-        { key: '电子布', page: 'theme-poster.html#order-ranks' },
-        { key: 'MLCC', page: 'theme-poster.html#order-ranks' },
-        { key: 'PCB', page: 'theme-poster.html#order-ranks' },
+        { key: '光互联', page: 'order-tracks.html' },
+        { key: '光纤概念', page: 'order-tracks.html' },
+        { key: '电子布', page: 'order-tracks.html' },
+        { key: 'MLCC', page: 'order-tracks.html' },
+        { key: 'PCB', page: 'order-tracks.html' },
       ],
       consumablesTracks: [],
       interimTracks: [
@@ -203,7 +203,7 @@ var MEMBER_ZONE2026 = {
       icon: '🔋',
       tagline: '从四大材料到电芯制造，看懂新能源「能量仓库」全链条',
       capacityPage: 'capacity/battery.html',
-      orderHub: 'theme-poster.html#order-ranks',
+      orderHub: 'order-tracks.html',
       chain: {
         upstream: {
           title: '上游 · 资源与四大材料',
@@ -229,8 +229,8 @@ var MEMBER_ZONE2026 = {
         '固态电池', '电池设备', '储能电池', '电池回收',
       ],
       orderTracks: [
-        { key: '多氟多', page: 'theme-poster.html#order-ranks' },
-        { key: '电力', page: 'theme-poster.html#order-ranks' },
+        { key: '多氟多', page: 'order-tracks.html' },
+        { key: '电力', page: 'order-tracks.html' },
       ],
       consumablesTracks: [
         { key: '电解液', page: 'consumables-poster.html' },

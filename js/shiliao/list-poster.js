@@ -145,6 +145,11 @@ function estimateShiliaoListPosterHeight(topic, theme) {
 
   h += L.BOTTOM_PAD;
   if (theme.bottomDecor && theme.bottomDecor !== 'none') h += L.FOOTER_H;
+  if (topic.disclaimer) {
+    ctx.font = `${L.FOOTER_SIZE}px "PingFang SC", sans-serif`;
+    const footerLines = wrapListTextLines(ctx, topic.disclaimer, L.W - L.PAD * 2);
+    if (footerLines.length > 1) h += (footerLines.length - 1) * (L.FOOTER_SIZE + 4);
+  }
   return Math.max(h, 560);
 }
 
@@ -292,7 +297,14 @@ function drawShiliaoListPoster(ctx, topic, theme, W, H) {
   ctx.fillStyle = 'rgba(80,80,80,0.5)';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'bottom';
-  ctx.fillText('健康饮食 · 仅供参考', W / 2, H - L.FOOTER_BOTTOM);
+  const footerText = topic.disclaimer || '健康饮食 · 仅供参考';
+  const footerLines = wrapListTextLines(ctx, footerText, W - L.PAD * 2);
+  const footerLineH = L.FOOTER_SIZE + 4;
+  let footerY = H - L.FOOTER_BOTTOM + (footerLines.length - 1) * footerLineH;
+  footerLines.forEach(function (line) {
+    ctx.fillText(line, W / 2, footerY);
+    footerY -= footerLineH;
+  });
 }
 
 function renderShiliaoListPoster(topic, theme, containerId, canvasId) {

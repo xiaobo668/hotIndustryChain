@@ -1,18 +1,3 @@
-/**
- * Canvas 通用工具函数
- * - roundRect: 绘制圆角矩形
- * - drawWrappedText: 绘制自动换行文本
- * - fitOneLineWidth: 文本截断适配单行宽度
- */
-
-/** 绘制圆角矩形路径（不填充/描边，需后续调用 fill/stroke）
- *  @param {CanvasRenderingContext2D} ctx
- *  @param {number} x 左上角 X
- *  @param {number} y 左上角 Y
- *  @param {number} w 宽度
- *  @param {number} h 高度
- *  @param {number|number[]} r 圆角半径（数字或 [tl,tr,br,b] 数组）
- */
 function roundRect(ctx, x, y, w, h, r) {
   if (typeof r === 'number') r = [r, r, r, r];
   const [tl, tr, br, bl] = r;
@@ -29,40 +14,30 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-/** 在指定宽度内绘制文本，超出则截断并加省略号 */
 function fitOneLineWidth(ctx, text, maxWidth) {
   if (!text) return '';
   if (ctx.measureText(text).width <= maxWidth) return text;
   for (let i = text.length - 1; i > 0; i--) {
-    const truncated = text.substring(0, i) + '...';
-    if (ctx.measureText(truncated).width <= maxWidth) return truncated;
+    const t = text.substring(0, i) + '...';
+    if (ctx.measureText(t).width <= maxWidth) return t;
   }
   return '...';
 }
 
-/** 绘制自动换行文本 */
-function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
-  if (!text) return y;
-  const words = text.split('');
+function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight) {
+  const words = String(text || '').split('');
   let line = '';
-  let currentY = y;
-  let lineCount = 0;
-
+  let cy = y;
   for (let i = 0; i < words.length; i++) {
-    const testLine = line + words[i];
-    if (ctx.measureText(testLine).width > maxWidth && line !== '') {
-      if (lineCount >= maxLines - 1) {
-        ctx.fillText(line + '...', x, currentY);
-        return currentY + lineHeight;
-      }
-      ctx.fillText(line, x, currentY);
+    const test = line + words[i];
+    if (ctx.measureText(test).width > maxWidth && line) {
+      ctx.fillText(line, x, cy);
       line = words[i];
-      currentY += lineHeight;
-      lineCount++;
+      cy += lineHeight;
     } else {
-      line = testLine;
+      line = test;
     }
   }
-  ctx.fillText(line, x, currentY);
-  return currentY + lineHeight;
+  if (line) ctx.fillText(line, x, cy);
+  return cy + lineHeight - y;
 }
