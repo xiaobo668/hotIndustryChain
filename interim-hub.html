@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 中报专区</title>
+  <link rel="stylesheet" href="interim-report/interim-common.css" />
+  <style>
+    .hub-cards { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+    .hub-card {
+      padding: 18px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px dashed;
+    }
+    .hub-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .hub-card-forecast {
+      background: linear-gradient(135deg, rgba(217,119,6,0.14), rgba(180,83,9,0.08));
+      border-color: rgba(251,191,36,0.5);
+    }
+    .hub-card-report {
+      background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(124,58,237,0.08));
+      border-color: rgba(167,139,250,0.5);
+    }
+    .hub-card-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .hub-card-forecast .hub-card-title { color: #fcd34d; }
+    .hub-card-report .hub-card-title { color: #c4b5fd; }
+    .hub-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .hub-badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+    .hub-badge-hot { background: rgba(239,68,68,0.2); color: #fca5a5; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链首页</a>
+    <h1>2026 中报专区</h1>
+    <div class="compliance-box">
+      <strong>合规提示</strong><br/>
+      本专区整理上市公司公开披露的半年报业绩预告及中报财务数据，仅用于财报与产业学习参考，不构成证券投资建议。
+    </div>
+    <p class="sub">7月进入中报披露窗口，以下两个模块分别覆盖<strong>业绩预告</strong>（归母净利润预告）与<strong>热门赛道中报分析</strong>（已披露半年报营收增速）。</p>
+    <div class="hub-cards">
+      <div class="hub-card hub-card-forecast" onclick="location.href='interim-forecast.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')location.href='interim-forecast.html'">
+        <div class="hub-card-title">📊 中报业绩预告 · 利润与增幅<span class="hub-badge hub-badge-hot">热门</span></div>
+        <div class="hub-card-desc">截至7月8日 · 139家已披露2026H1业绩预告 · 预喜率约90% · 净利润规模榜 & 增幅榜 Top15 海报 · 附完整披露名单</div>
+      </div>
+      <div class="hub-card hub-card-report" onclick="location.href='interim-report.html'" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')location.href='interim-report.html'">
+        <div class="hub-card-title">📑 热门赛道中报分析榜</div>
+        <div class="hub-card-desc">基于2025年半年度报告 · AI算力 · 液冷 · 光互联 · 存储芯片 · 半导体设备 · 人形机器人 · 锂电池 · PCB · 商业航天 · 先进封装 — 十大赛道 H1 营收增速 Top10</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
