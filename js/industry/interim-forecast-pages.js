@@ -46,6 +46,15 @@ const INTERIM_FORECAST_SECTIONS = [
     fileName: '2026中报预告-存储芯片增幅榜.png',
     hint: '存储芯片赛道（成分股+预告文本匹配）已披露公司的归母净利润预告增幅 Top10；仅纳入预增/略增。截止日前名单持续更新。',
   },
+  {
+    id: 'semi-profit',
+    getData: () => (typeof INTERIM_FORECAST_2026H1 !== 'undefined' ? INTERIM_FORECAST_2026H1.semiProfitTop15 : null),
+    wrapId: 'if-semi-profit-wrap',
+    pagesId: 'if-semi-profit-pages',
+    canvasId: 'if-semi-profit-canvas',
+    fileName: '2026中报预告-半导体净利润榜.png',
+    hint: '半导体赛道（存储/设备/先进封装/材料等产业链成分+预告文本匹配）按归母净利润预告上限排序 Top15。',
+  },
 ];
 
 function getInterimForecastComplianceHtml() {
@@ -132,8 +141,8 @@ function initInterimForecastPage() {
     intro.innerHTML =
       '截至 <strong>' + asOfText + '</strong>，A股已有 <strong>'
       + meta.totalDisclosed + '家</strong> 披露 <strong>2026H1业绩预告</strong>（归母净利润），预喜率约 <strong>'
-      + meta.positiveRatio + '%</strong>。下方含市场全景、规模榜、增幅榜与 <strong>存储芯片增幅 Top10</strong>（赛道已披露'
-      + (meta.storageDisclosed || '—') + '家），附完整名单。';
+      + meta.positiveRatio + '%</strong>。下方含市场全景、规模榜、增幅榜、<strong>存储芯片增幅 Top10</strong> 与 <strong>半导体净利润 Top15</strong>（赛道已披露'
+      + (meta.storageDisclosed || '—') + ' / ' + (meta.semiDisclosed || '—') + '家），附完整名单。';
   }
 }
 

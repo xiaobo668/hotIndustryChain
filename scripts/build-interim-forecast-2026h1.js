@@ -7,7 +7,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const AS_OF = '2026-07-09';
+const AS_OF = '2026-07-10';
 const OUT = path.join(__dirname, '../data/interim-forecast-2026h1.js');
 
 const API_BASE =
@@ -24,6 +24,62 @@ const STORAGE_CHIP_UNIVERSE = [
 
 const STORAGE_REASON_KW = /存储晶圆|半导体存储|存储产业|存储和算力|存储模组|存储芯片|存储主控|存储业务|存储器|DRAM|NAND|NOR Flash|闪存|内存接口|嵌入式存储|企业级存储|SLC NAND|存储价格/;
 const STORAGE_EXCLUDE = new Set(['京东方A', '京东方B', '视源股份']);
+
+const SEMICONDUCTOR_REASON_KW = /半导体|集成电路|IC设计|晶圆|封测|芯片设计|芯片业务|存储芯片|模拟芯片|功率半导体|射频芯片|MCU|FPGA|EDA|光刻|刻蚀|薄膜沉积|CMP|光刻胶|电子特气|探针台|分选机/;
+const SEMICONDUCTOR_EXCLUDE = new Set([
+  '京东方A', '京东方B', '视源股份', '大族激光', '华测检测', '赛意信息', '新宙邦',
+  '诚邦股份', '欧菲光', '万华化学', '立讯精密',
+]);
+
+function loadSemiconductorUniverse() {
+  const base = path.join(__dirname, '../data');
+  const names = new Set(STORAGE_CHIP_UNIVERSE);
+
+  const interimPath = path.join(base, 'interim-report-rank2026.js');
+  if (fs.existsSync(interimPath)) {
+    const text = fs.readFileSync(interimPath, 'utf8');
+    const parts = text.split(/var INTERIM_REPORT_\w+2026 = /).slice(1);
+    parts.forEach((part) => {
+      if (!part.slice(0, 800).includes('"半导体"')) return;
+      const body = part.split('};')[0];
+      const re = /"name": "([^"]+)"/g;
+      let m;
+      while ((m = re.exec(body))) names.add(m[1]);
+    });
+  }
+
+  const globSemiCapacity = fs.readdirSync(base).filter((f) => f.startsWith('capacity-rank-semi-') && f.endsWith('.json'));
+  globSemiCapacity.forEach((file) => {
+    const d = JSON.parse(fs.readFileSync(path.join(base, file), 'utf8'));
+    const blocks = Array.isArray(d) ? d : [d];
+    blocks.forEach((block) => {
+      (block.companies || []).forEach((c) => names.add(c.name));
+    });
+  });
+
+  ['order-rank-storage-chip2026.js', 'order-rank-physical-ai-power-semi2026.json'].forEach((file) => {
+    const fp = path.join(base, file);
+    if (!fs.existsSync(fp)) return;
+    const text = fs.readFileSync(fp, 'utf8');
+    const re = /"name": "([^"]+)"/g;
+    let m;
+    while ((m = re.exec(text))) names.add(m[1]);
+  });
+
+  const scarcePath = path.join(base, 'semiconductor-scarce-materials2026.json');
+  if (fs.existsSync(scarcePath)) {
+    const d = JSON.parse(fs.readFileSync(scarcePath, 'utf8'));
+    (d.companies || []).forEach((c) => names.add(c.name));
+  }
+
+  return names;
+}
+
+let SEMICONDUCTOR_UNIVERSE = null;
+function getSemiconductorUniverse() {
+  if (!SEMICONDUCTOR_UNIVERSE) SEMICONDUCTOR_UNIVERSE = loadSemiconductorUniverse();
+  return SEMICONDUCTOR_UNIVERSE;
+}
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
@@ -129,6 +185,18 @@ function isStorageChipCompany(r) {
   return STORAGE_REASON_KW.test(blob);
 }
 
+function isSemiconductorCompany(r) {
+  const name = r.SECURITY_NAME_ABBR || '';
+  if (SEMICONDUCTOR_EXCLUDE.has(name)) return false;
+  if (getSemiconductorUniverse().has(name)) return true;
+  const blob = (r.CHANGE_REASON_EXPLAIN || '') + (r.PREDICT_CONTENT || '');
+  return SEMICONDUCTOR_REASON_KW.test(blob);
+}
+
+function profitUpperValue(r) {
+  return Number(r.PREDICT_AMT_UPPER ?? r.PREDICT_AMT_LOWER ?? -Infinity);
+}
+
 function formatAsOfLabel(iso) {
   const [, m, d] = iso.split('-');
   return `${Number(m)}月${Number(d)}日`;
@@ -166,6 +234,12 @@ async function main() {
     (a, b) => Number(b.ADD_AMP_UPPER) - Number(a.ADD_AMP_UPPER)
   );
   const storageTop = storageGrowth.slice(0, 10);
+
+  const semiDisclosed = companies.filter(isSemiconductorCompany);
+  const semiProfit = [...semiDisclosed]
+    .filter((r) => profitUpperValue(r) > 0)
+    .sort((a, b) => profitUpperValue(b) - profitUpperValue(a));
+  const semiProfitTop = semiProfit.slice(0, 15);
   const asOfLabel = formatAsOfLabel(AS_OF);
 
   const output = {
@@ -178,8 +252,10 @@ async function main() {
       typeCounts,
       storageDisclosed: storageDisclosed.length,
       storageGrowthEligible: storageGrowth.length,
+      semiDisclosed: semiDisclosed.length,
+      semiProfitPositive: semiProfit.length,
       source: '东方财富数据中心 · RPT_PUBLIC_OP_NEWPREDICT',
-      note: '归母净利润预告；存储芯片赛道含成分股与预告文本关键词匹配',
+      note: '归母净利润预告；赛道成分来自产业链榜单与预告文本匹配',
     },
     profitTop15: {
       title: '2026中报预告 · 净利润规模榜',
@@ -200,6 +276,13 @@ async function main() {
       cardHead: '存储芯片 · 归母净利润预告增幅 Top10',
       companies: storageTop.map((r, i) => toItem(r, i + 1)),
     },
+    semiProfitTop15: {
+      title: '2026中报预告 · 半导体净利润榜',
+      subtitle: `截至${asOfLabel}半导体赛道已披露${semiDisclosed.length}家、盈利预告${semiProfit.length}家；按归母净利润预告上限排序 Top15`,
+      key: '半导体',
+      cardHead: '半导体 · 归母净利润预告规模 Top15',
+      companies: semiProfitTop.map((r, i) => toItem(r, i + 1)),
+    },
     overview: {
       title: '2026中报业绩预告全景',
       subtitle: `截至${asOfLabel} · A股${companies.length}家已披露2026H1业绩预告 · 预喜${good}家（${((good / companies.length) * 100).toFixed(1)}%）`,
@@ -219,6 +302,7 @@ async function main() {
         `净利润榜首：${sortedProfit[0].SECURITY_NAME_ABBR} ${fmtProfit(sortedProfit[0].PREDICT_AMT_LOWER, sortedProfit[0].PREDICT_AMT_UPPER)}`,
         `增幅榜首：${sortedGrowth[0].SECURITY_NAME_ABBR} ${fmtGrowth(sortedGrowth[0].ADD_AMP_LOWER, sortedGrowth[0].ADD_AMP_UPPER, sortedGrowth[0].PREDICT_TYPE)}`,
         `存储芯片增幅榜首：${storageTop[0] ? storageTop[0].SECURITY_NAME_ABBR + ' ' + fmtGrowth(storageTop[0].ADD_AMP_LOWER, storageTop[0].ADD_AMP_UPPER, storageTop[0].PREDICT_TYPE) : '待更多公司披露'}`,
+        `半导体净利润榜首：${semiProfitTop[0] ? semiProfitTop[0].SECURITY_NAME_ABBR + ' ' + fmtProfit(semiProfitTop[0].PREDICT_AMT_LOWER, semiProfitTop[0].PREDICT_AMT_UPPER) : '待更多公司披露'}`,
         '强制披露截止日7月15日，名单持续更新中',
       ],
     },
@@ -233,7 +317,7 @@ async function main() {
 
   fs.writeFileSync(OUT, js, 'utf8');
   console.log(
-    `✅ 全市场 ${companies.length} 家 · 增幅 ${sortedGrowth.length} 家 · 存储赛道披露 ${storageDisclosed.length} 家 / 增幅 ${storageTop.length} 家 → ${OUT}`
+    `✅ 全市场 ${companies.length} 家 · 存储增幅 ${storageTop.length} 家 · 半导体净利润 ${semiProfitTop.length} 家 → ${OUT}`
   );
 }
 

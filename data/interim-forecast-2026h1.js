@@ -1,32 +1,35 @@
-/** 2026H1 中报业绩预告数据 · 来源东方财富 · 截至2026-07-09 */
+/** 2026H1 中报业绩预告数据 · 来源东方财富 · 截至2026-07-10 */
 const INTERIM_FORECAST_2026H1 = {
   "meta": {
-    "asOf": "2026-07-09",
+    "asOf": "2026-07-10",
     "reportPeriod": "2026H1",
-    "totalDisclosed": 194,
-    "positiveRatio": 90.2,
-    "positiveCount": 175,
+    "totalDisclosed": 238,
+    "positiveRatio": 88.2,
+    "positiveCount": 210,
     "typeCounts": {
-      "预增": 129,
-      "略增": 24,
-      "扭亏": 15,
+      "预增": 153,
+      "略增": 27,
+      "扭亏": 23,
       "略减": 6,
       "减亏": 5,
-      "预减": 3,
-      "首亏": 5,
-      "增亏": 3,
+      "预减": 6,
+      "首亏": 8,
+      "增亏": 5,
+      "��增": 1,
       "续亏": 1,
       "续盈": 2,
       "不确定": 1
     },
-    "storageDisclosed": 11,
-    "storageGrowthEligible": 8,
+    "storageDisclosed": 13,
+    "storageGrowthEligible": 10,
+    "semiDisclosed": 14,
+    "semiProfitPositive": 14,
     "source": "东方财富数据中心 · RPT_PUBLIC_OP_NEWPREDICT",
-    "note": "归母净利润预告；存储芯片赛道含成分股与预告文本关键词匹配"
+    "note": "归母净利润预告；赛道成分来自产业链榜单与预告文本匹配"
   },
   "profitTop15": {
     "title": "2026中报预告 · 净利润规模榜",
-    "subtitle": "截至7月9日共194家披露中报预告；按归母净利润预告上限排序 Top15",
+    "subtitle": "截至7月10日共238家披露中报预告；按归母净利润预告上限排序 Top15",
     "key": "净利润规模",
     "companies": [
       {
@@ -44,6 +47,32 @@ const INTERIM_FORECAST_2026H1 = {
       },
       {
         "rank": 2,
+        "code": "601899",
+        "name": "紫金矿业",
+        "profit": "391亿",
+        "growth": "+68%",
+        "type": "��增",
+        "metricLabel": "391亿  +68%",
+        "highlight": "��增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 39100000000,
+        "growthUpper": 68
+      },
+      {
+        "rank": 3,
+        "code": "601138",
+        "name": "工业富联",
+        "profit": "234亿~244亿",
+        "growth": "+93%~101%",
+        "type": "预增",
+        "metricLabel": "234亿~244亿  +93%~101%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 24400000000,
+        "growthUpper": 101
+      },
+      {
+        "rank": 4,
         "code": "601211",
         "name": "国泰海通",
         "profit": "200.03亿~205.11亿",
@@ -56,7 +85,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 30
       },
       {
-        "rank": 3,
+        "rank": 5,
         "code": "301308",
         "name": "江波龙",
         "profit": "92亿~110亿",
@@ -69,7 +98,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 74393.95
       },
       {
-        "rank": 4,
+        "rank": 6,
         "code": "600999",
         "name": "招商证券",
         "profit": "100亿~110亿",
@@ -82,7 +111,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 112
       },
       {
-        "rank": 5,
+        "rank": 7,
         "code": "600309",
         "name": "万华化学",
         "profit": "98亿~104亿",
@@ -95,7 +124,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 69.85
       },
       {
-        "rank": 6,
+        "rank": 8,
         "code": "600362",
         "name": "江西铜业",
         "profit": "75.5亿~85亿",
@@ -108,7 +137,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 103.61
       },
       {
-        "rank": 7,
+        "rank": 9,
         "code": "601995",
         "name": "中金公司",
         "profit": "77.08亿~82.27亿",
@@ -121,7 +150,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 90
       },
       {
-        "rank": 8,
+        "rank": 10,
         "code": "002475",
         "name": "立讯精密",
         "profit": "78.4亿~81.06亿",
@@ -134,7 +163,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 22
       },
       {
-        "rank": 9,
+        "rank": 11,
         "code": "601872",
         "name": "招商轮船",
         "profit": "66亿~73亿",
@@ -147,7 +176,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 248
       },
       {
-        "rank": 10,
+        "rank": 12,
         "code": "600346",
         "name": "恒力石化",
         "profit": "72亿",
@@ -160,7 +189,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 136.06
       },
       {
-        "rank": 11,
+        "rank": 13,
         "code": "002648",
         "name": "卫星化学",
         "profit": "60亿~70亿",
@@ -173,7 +202,20 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 155.13
       },
       {
-        "rank": 12,
+        "rank": 14,
+        "code": "603986",
+        "name": "兆易创新",
+        "profit": "69亿",
+        "growth": "+1099%",
+        "type": "预增",
+        "metricLabel": "69亿  +1099%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 6900000000,
+        "growthUpper": 1099
+      },
+      {
+        "rank": 15,
         "code": "000792",
         "name": "盐湖股份",
         "profit": "60亿~63亿",
@@ -184,51 +226,12 @@ const INTERIM_FORECAST_2026H1 = {
         "noticeDate": "2026-07-03",
         "profitUpper": 6300000000,
         "growthUpper": 142.95
-      },
-      {
-        "rank": 13,
-        "code": "000703",
-        "name": "恒逸石化",
-        "profit": "55亿~60亿",
-        "growth": "+2326%~2547%",
-        "type": "预增",
-        "metricLabel": "55亿~60亿  +2326%~2547%",
-        "highlight": "预增",
-        "noticeDate": "2026-06-26",
-        "profitUpper": 6000000000,
-        "growthUpper": 2546.88
-      },
-      {
-        "rank": 14,
-        "code": "200725",
-        "name": "京东方B",
-        "profit": "50亿~55亿",
-        "growth": "+54%~69%",
-        "type": "预增",
-        "metricLabel": "50亿~55亿  +54%~69%",
-        "highlight": "预增",
-        "noticeDate": "2026-07-09",
-        "profitUpper": 5500000000,
-        "growthUpper": 69
-      },
-      {
-        "rank": 15,
-        "code": "000725",
-        "name": "京东方A",
-        "profit": "50亿~55亿",
-        "growth": "+54%~69%",
-        "type": "预增",
-        "metricLabel": "50亿~55亿  +54%~69%",
-        "highlight": "预增",
-        "noticeDate": "2026-07-09",
-        "profitUpper": 5500000000,
-        "growthUpper": 69
       }
     ]
   },
   "growthTop15": {
     "title": "2026中报预告 · 净利润增幅榜",
-    "subtitle": "截至7月9日预喜率90%；按同比增幅上限排序 Top15（仅预增/略增，不含扭亏）",
+    "subtitle": "截至7月10日预喜率88%；按同比增幅上限排序 Top15（仅预增/略增，不含扭亏）",
     "key": "净利润增幅",
     "companies": [
       {
@@ -272,6 +275,19 @@ const INTERIM_FORECAST_2026H1 = {
       },
       {
         "rank": 4,
+        "code": "002115",
+        "name": "三维通信",
+        "profit": "4000万~5500万",
+        "growth": "+1429%~2002%",
+        "type": "预增",
+        "metricLabel": "4000万~5500万  +1429%~2002%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 55000000,
+        "growthUpper": 2001.8
+      },
+      {
+        "rank": 5,
         "code": "600084",
         "name": "*ST尼雅",
         "profit": "750万~1090万",
@@ -284,7 +300,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 1523.23
       },
       {
-        "rank": 5,
+        "rank": 6,
         "code": "000301",
         "name": "东方盛虹",
         "profit": "42亿~50亿",
@@ -297,7 +313,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 1194.51
       },
       {
-        "rank": 6,
+        "rank": 7,
         "code": "000070",
         "name": "特发信息",
         "profit": "5500万~7100万",
@@ -310,7 +326,20 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 1166.93
       },
       {
-        "rank": 7,
+        "rank": 8,
+        "code": "603986",
+        "name": "兆易创新",
+        "profit": "69亿",
+        "growth": "+1099%",
+        "type": "预增",
+        "metricLabel": "69亿  +1099%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 6900000000,
+        "growthUpper": 1099
+      },
+      {
+        "rank": 9,
         "code": "002274",
         "name": "华昌化工",
         "profit": "1.23亿",
@@ -323,7 +352,20 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 1025.93
       },
       {
-        "rank": 8,
+        "rank": 10,
+        "code": "002709",
+        "name": "天赐材料",
+        "profit": "27亿~30亿",
+        "growth": "+908%~1020%",
+        "type": "预增",
+        "metricLabel": "27亿~30亿  +908%~1020%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 3000000000,
+        "growthUpper": 1019.82
+      },
+      {
+        "rank": 11,
         "code": "603618",
         "name": "杭电股份",
         "profit": "3.6亿~4亿",
@@ -336,7 +378,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 957.82
       },
       {
-        "rank": 9,
+        "rank": 12,
         "code": "300821",
         "name": "东岳硅材",
         "profit": "4.24亿~4.44亿",
@@ -349,7 +391,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 952.28
       },
       {
-        "rank": 10,
+        "rank": 13,
         "code": "002497",
         "name": "雅化集团",
         "profit": "11亿~13亿",
@@ -362,7 +404,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 857.48
       },
       {
-        "rank": 11,
+        "rank": 14,
         "code": "002414",
         "name": "高德红外",
         "profit": "12.7亿~14.5亿",
@@ -375,7 +417,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 701.41
       },
       {
-        "rank": 12,
+        "rank": 15,
         "code": "300209",
         "name": "行云科技",
         "profit": "1000万~1500万",
@@ -386,51 +428,12 @@ const INTERIM_FORECAST_2026H1 = {
         "noticeDate": "2026-07-08",
         "profitUpper": 15000000,
         "growthUpper": 699.15
-      },
-      {
-        "rank": 13,
-        "code": "002042",
-        "name": "华孚时尚",
-        "profit": "1.6亿~2亿",
-        "growth": "+538%~697%",
-        "type": "预增",
-        "metricLabel": "1.6亿~2亿  +538%~697%",
-        "highlight": "预增",
-        "noticeDate": "2026-07-04",
-        "profitUpper": 200000000,
-        "growthUpper": 696.88
-      },
-      {
-        "rank": 14,
-        "code": "603466",
-        "name": "风语筑",
-        "profit": "9000万~1.35亿",
-        "growth": "+431%~696%",
-        "type": "预增",
-        "metricLabel": "9000万~1.35亿  +431%~696%",
-        "highlight": "预增",
-        "noticeDate": "2026-07-09",
-        "profitUpper": 135000000,
-        "growthUpper": 696.36
-      },
-      {
-        "rank": 15,
-        "code": "601162",
-        "name": "天风证券",
-        "profit": "1.64亿~2.46亿",
-        "growth": "+429%~694%",
-        "type": "预增",
-        "metricLabel": "1.64亿~2.46亿  +429%~694%",
-        "highlight": "预增",
-        "noticeDate": "2026-07-09",
-        "profitUpper": 246000000,
-        "growthUpper": 693.55
       }
     ]
   },
   "storageGrowthTop10": {
     "title": "2026中报预告 · 存储芯片增幅榜",
-    "subtitle": "截至7月9日存储赛道已披露11家、可比增幅8家；按归母净利润同比增幅排序 Top10（仅预增/略增）",
+    "subtitle": "截至7月10日存储赛道已披露13家、可比增幅10家；按归母净利润同比增幅排序 Top10（仅预增/略增）",
     "key": "存储芯片",
     "cardHead": "存储芯片 · 归母净利润预告增幅 Top10",
     "companies": [
@@ -449,6 +452,19 @@ const INTERIM_FORECAST_2026H1 = {
       },
       {
         "rank": 2,
+        "code": "603986",
+        "name": "兆易创新",
+        "profit": "69亿",
+        "growth": "+1099%",
+        "type": "预增",
+        "metricLabel": "69亿  +1099%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 6900000000,
+        "growthUpper": 1099
+      },
+      {
+        "rank": 3,
         "code": "300209",
         "name": "行云科技",
         "profit": "1000万~1500万",
@@ -461,7 +477,7 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 699.15
       },
       {
-        "rank": 3,
+        "rank": 4,
         "code": "301099",
         "name": "雅创电子",
         "profit": "2.2亿~2.7亿",
@@ -472,6 +488,131 @@ const INTERIM_FORECAST_2026H1 = {
         "noticeDate": "2026-07-08",
         "profitUpper": 270000000,
         "growthUpper": 561.49
+      },
+      {
+        "rank": 5,
+        "code": "688385",
+        "name": "复旦微电",
+        "profit": "8亿~10亿",
+        "growth": "+313%~416%",
+        "type": "预增",
+        "metricLabel": "8亿~10亿  +313%~416%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-08",
+        "profitUpper": 1000000000,
+        "growthUpper": 416.49
+      },
+      {
+        "rank": 6,
+        "code": "300458",
+        "name": "全志科技",
+        "profit": "4.75亿~5.15亿",
+        "growth": "+195%~220%",
+        "type": "预增",
+        "metricLabel": "4.75亿~5.15亿  +195%~220%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-09",
+        "profitUpper": 515000000,
+        "growthUpper": 219.55
+      },
+      {
+        "rank": 7,
+        "code": "001287",
+        "name": "中电港",
+        "profit": "5亿~5.3亿",
+        "growth": "+176%~193%",
+        "type": "预增",
+        "metricLabel": "5亿~5.3亿  +176%~193%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-04",
+        "profitUpper": 530000000,
+        "growthUpper": 193.01
+      },
+      {
+        "rank": 8,
+        "code": "300604",
+        "name": "长川科技",
+        "profit": "9亿~10亿",
+        "growth": "+111%~134%",
+        "type": "预增",
+        "metricLabel": "9亿~10亿  +111%~134%",
+        "highlight": "预增",
+        "noticeDate": "2026-06-23",
+        "profitUpper": 1000000000,
+        "growthUpper": 134.18
+      },
+      {
+        "rank": 9,
+        "code": "300054",
+        "name": "鼎龙股份",
+        "profit": "5.1亿~5.4亿",
+        "growth": "+64%~74%",
+        "type": "预增",
+        "metricLabel": "5.1亿~5.4亿  +64%~74%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 540000000,
+        "growthUpper": 73.61
+      },
+      {
+        "rank": 10,
+        "code": "603893",
+        "name": "瑞芯微",
+        "profit": "8.5亿~9.1亿",
+        "growth": "+60%~71%",
+        "type": "预增",
+        "metricLabel": "8.5亿~9.1亿  +60%~71%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-08",
+        "profitUpper": 910000000,
+        "growthUpper": 71.33
+      }
+    ]
+  },
+  "semiProfitTop15": {
+    "title": "2026中报预告 · 半导体净利润榜",
+    "subtitle": "截至7月10日半导体赛道已披露14家、盈利预告14家；按归母净利润预告上限排序 Top15",
+    "key": "半导体",
+    "cardHead": "半导体 · 归母净利润预告规模 Top15",
+    "companies": [
+      {
+        "rank": 1,
+        "code": "301308",
+        "name": "江波龙",
+        "profit": "92亿~110亿",
+        "growth": "+62204%~74394%",
+        "type": "预增",
+        "metricLabel": "92亿~110亿  +62204%~74394%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-03",
+        "profitUpper": 11000000000,
+        "growthUpper": 74393.95
+      },
+      {
+        "rank": 2,
+        "code": "603986",
+        "name": "兆易创新",
+        "profit": "69亿",
+        "growth": "+1099%",
+        "type": "预增",
+        "metricLabel": "69亿  +1099%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 6900000000,
+        "growthUpper": 1099
+      },
+      {
+        "rank": 3,
+        "code": "300604",
+        "name": "长川科技",
+        "profit": "9亿~10亿",
+        "growth": "+111%~134%",
+        "type": "预增",
+        "metricLabel": "9亿~10亿  +111%~134%",
+        "highlight": "预增",
+        "noticeDate": "2026-06-23",
+        "profitUpper": 1000000000,
+        "growthUpper": 134.18
       },
       {
         "rank": 4,
@@ -488,19 +629,32 @@ const INTERIM_FORECAST_2026H1 = {
       },
       {
         "rank": 5,
-        "code": "300458",
-        "name": "全志科技",
-        "profit": "4.75亿~5.15亿",
-        "growth": "+195%~220%",
+        "code": "603893",
+        "name": "瑞芯微",
+        "profit": "8.5亿~9.1亿",
+        "growth": "+60%~71%",
         "type": "预增",
-        "metricLabel": "4.75亿~5.15亿  +195%~220%",
+        "metricLabel": "8.5亿~9.1亿  +60%~71%",
         "highlight": "预增",
-        "noticeDate": "2026-07-09",
-        "profitUpper": 515000000,
-        "growthUpper": 219.55
+        "noticeDate": "2026-07-08",
+        "profitUpper": 910000000,
+        "growthUpper": 71.33
       },
       {
         "rank": 6,
+        "code": "300054",
+        "name": "鼎龙股份",
+        "profit": "5.1亿~5.4亿",
+        "growth": "+64%~74%",
+        "type": "预增",
+        "metricLabel": "5.1亿~5.4亿  +64%~74%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-10",
+        "profitUpper": 540000000,
+        "growthUpper": 73.61
+      },
+      {
+        "rank": 7,
         "code": "001287",
         "name": "中电港",
         "profit": "5亿~5.3亿",
@@ -513,67 +667,133 @@ const INTERIM_FORECAST_2026H1 = {
         "growthUpper": 193.01
       },
       {
-        "rank": 7,
-        "code": "300604",
-        "name": "长川科技",
-        "profit": "9亿~10亿",
-        "growth": "+111%~134%",
+        "rank": 8,
+        "code": "300458",
+        "name": "全志科技",
+        "profit": "4.75亿~5.15亿",
+        "growth": "+195%~220%",
         "type": "预增",
-        "metricLabel": "9亿~10亿  +111%~134%",
+        "metricLabel": "4.75亿~5.15亿  +195%~220%",
         "highlight": "预增",
-        "noticeDate": "2026-06-23",
-        "profitUpper": 1000000000,
-        "growthUpper": 134.18
+        "noticeDate": "2026-07-09",
+        "profitUpper": 515000000,
+        "growthUpper": 219.55
       },
       {
-        "rank": 8,
-        "code": "603893",
-        "name": "瑞芯微",
-        "profit": "8.5亿~9.1亿",
-        "growth": "+60%~71%",
+        "rank": 9,
+        "code": "301099",
+        "name": "雅创电子",
+        "profit": "2.2亿~2.7亿",
+        "growth": "+439%~561%",
         "type": "预增",
-        "metricLabel": "8.5亿~9.1亿  +60%~71%",
+        "metricLabel": "2.2亿~2.7亿  +439%~561%",
         "highlight": "预增",
         "noticeDate": "2026-07-08",
-        "profitUpper": 910000000,
-        "growthUpper": 71.33
+        "profitUpper": 270000000,
+        "growthUpper": 561.49
+      },
+      {
+        "rank": 10,
+        "code": "300671",
+        "name": "富满微",
+        "profit": "9000万~1.1亿",
+        "growth": "扭亏",
+        "type": "扭亏",
+        "metricLabel": "9000万~1.1亿  扭亏",
+        "highlight": "扭亏",
+        "noticeDate": "2026-06-26",
+        "profitUpper": 110000000,
+        "growthUpper": 407.54
+      },
+      {
+        "rank": 11,
+        "code": "600889",
+        "name": "*ST京化",
+        "profit": "4000万~4800万",
+        "growth": "扭亏",
+        "type": "扭亏",
+        "metricLabel": "4000万~4800万  扭亏",
+        "highlight": "扭亏",
+        "noticeDate": "2026-07-04",
+        "profitUpper": 48000000,
+        "growthUpper": 153.97
+      },
+      {
+        "rank": 12,
+        "code": "688337",
+        "name": "普源精电",
+        "profit": "3458万~4262万",
+        "growth": "+113%~163%",
+        "type": "预增",
+        "metricLabel": "3458万~4262万  +113%~163%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-06",
+        "profitUpper": 42622300,
+        "growthUpper": 162.84
+      },
+      {
+        "rank": 13,
+        "code": "301369",
+        "name": "联动科技",
+        "profit": "2100万~2900万",
+        "growth": "+73%~139%",
+        "type": "预增",
+        "metricLabel": "2100万~2900万  +73%~139%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-07",
+        "profitUpper": 29000000,
+        "growthUpper": 139.44
+      },
+      {
+        "rank": 14,
+        "code": "300209",
+        "name": "行云科技",
+        "profit": "1000万~1500万",
+        "growth": "+433%~699%",
+        "type": "预增",
+        "metricLabel": "1000万~1500万  +433%~699%",
+        "highlight": "预增",
+        "noticeDate": "2026-07-08",
+        "profitUpper": 15000000,
+        "growthUpper": 699.15
       }
     ]
   },
   "overview": {
     "title": "2026中报业绩预告全景",
-    "subtitle": "截至7月9日 · A股194家已披露2026H1业绩预告 · 预喜175家（90.2%）",
+    "subtitle": "截至7月10日 · A股238家已披露2026H1业绩预告 · 预喜210家（88.2%）",
     "key": "市场全景",
     "stats": [
       {
         "label": "已披露",
-        "value": "194家"
+        "value": "238家"
       },
       {
         "label": "预喜率",
-        "value": "90.2%"
+        "value": "88.2%"
       },
       {
         "label": "预增",
-        "value": "129家"
+        "value": "153家"
       },
       {
         "label": "略增",
-        "value": "24家"
+        "value": "27家"
       },
       {
         "label": "扭亏",
-        "value": "15家"
+        "value": "23家"
       },
       {
         "label": "预减/首亏",
-        "value": "17家"
+        "value": "25家"
       }
     ],
     "highlights": [
       "净利润榜首：长鑫科技 500亿~570亿",
       "增幅榜首：江波龙 +62204%~74394%",
       "存储芯片增幅榜首：江波龙 +62204%~74394%",
+      "半导体净利润榜首：江波龙 92亿~110亿",
       "强制披露截止日7月15日，名单持续更新中"
     ]
   },
@@ -593,6 +813,32 @@ const INTERIM_FORECAST_2026H1 = {
     },
     {
       "rank": 2,
+      "code": "601899",
+      "name": "紫金矿业",
+      "profit": "391亿",
+      "growth": "+68%",
+      "type": "��增",
+      "metricLabel": "391亿  +68%",
+      "highlight": "��增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 39100000000,
+      "growthUpper": 68
+    },
+    {
+      "rank": 3,
+      "code": "601138",
+      "name": "工业富联",
+      "profit": "234亿~244亿",
+      "growth": "+93%~101%",
+      "type": "预增",
+      "metricLabel": "234亿~244亿  +93%~101%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 24400000000,
+      "growthUpper": 101
+    },
+    {
+      "rank": 4,
       "code": "601211",
       "name": "国泰海通",
       "profit": "200.03亿~205.11亿",
@@ -605,7 +851,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 30
     },
     {
-      "rank": 3,
+      "rank": 5,
       "code": "301308",
       "name": "江波龙",
       "profit": "92亿~110亿",
@@ -618,7 +864,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 74393.95
     },
     {
-      "rank": 4,
+      "rank": 6,
       "code": "600999",
       "name": "招商证券",
       "profit": "100亿~110亿",
@@ -631,7 +877,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 112
     },
     {
-      "rank": 5,
+      "rank": 7,
       "code": "600309",
       "name": "万华化学",
       "profit": "98亿~104亿",
@@ -644,7 +890,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 69.85
     },
     {
-      "rank": 6,
+      "rank": 8,
       "code": "600362",
       "name": "江西铜业",
       "profit": "75.5亿~85亿",
@@ -657,7 +903,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 103.61
     },
     {
-      "rank": 7,
+      "rank": 9,
       "code": "601995",
       "name": "中金公司",
       "profit": "77.08亿~82.27亿",
@@ -670,7 +916,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 90
     },
     {
-      "rank": 8,
+      "rank": 10,
       "code": "002475",
       "name": "立讯精密",
       "profit": "78.4亿~81.06亿",
@@ -683,7 +929,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 22
     },
     {
-      "rank": 9,
+      "rank": 11,
       "code": "601872",
       "name": "招商轮船",
       "profit": "66亿~73亿",
@@ -696,7 +942,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 248
     },
     {
-      "rank": 10,
+      "rank": 12,
       "code": "600346",
       "name": "恒力石化",
       "profit": "72亿",
@@ -709,7 +955,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 136.06
     },
     {
-      "rank": 11,
+      "rank": 13,
       "code": "002648",
       "name": "卫星化学",
       "profit": "60亿~70亿",
@@ -722,7 +968,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 155.13
     },
     {
-      "rank": 12,
+      "rank": 14,
+      "code": "603986",
+      "name": "兆易创新",
+      "profit": "69亿",
+      "growth": "+1099%",
+      "type": "预增",
+      "metricLabel": "69亿  +1099%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 6900000000,
+      "growthUpper": 1099
+    },
+    {
+      "rank": 15,
       "code": "000792",
       "name": "盐湖股份",
       "profit": "60亿~63亿",
@@ -735,7 +994,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 142.95
     },
     {
-      "rank": 13,
+      "rank": 16,
       "code": "000703",
       "name": "恒逸石化",
       "profit": "55亿~60亿",
@@ -748,7 +1007,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 2546.88
     },
     {
-      "rank": 14,
+      "rank": 17,
       "code": "200725",
       "name": "京东方B",
       "profit": "50亿~55亿",
@@ -761,7 +1020,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 69
     },
     {
-      "rank": 15,
+      "rank": 18,
       "code": "000725",
       "name": "京东方A",
       "profit": "50亿~55亿",
@@ -774,7 +1033,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 69
     },
     {
-      "rank": 16,
+      "rank": 19,
       "code": "000301",
       "name": "东方盛虹",
       "profit": "42亿~50亿",
@@ -787,7 +1046,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 1194.51
     },
     {
-      "rank": 17,
+      "rank": 20,
+      "code": "000933",
+      "name": "神火股份",
+      "profit": "48亿",
+      "growth": "+152%",
+      "type": "预增",
+      "metricLabel": "48亿  +152%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 4800000000,
+      "growthUpper": 152.04
+    },
+    {
+      "rank": 21,
+      "code": "601168",
+      "name": "西部矿业",
+      "profit": "40亿~43亿",
+      "growth": "+114%~130%",
+      "type": "预增",
+      "metricLabel": "40亿~43亿  +114%~130%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 4300000000,
+      "growthUpper": 130
+    },
+    {
+      "rank": 22,
       "code": "002532",
       "name": "天山铝业",
       "profit": "42亿",
@@ -800,7 +1085,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 101.52
     },
     {
-      "rank": 18,
+      "rank": 23,
       "code": "001248",
       "name": "华润新能源",
       "profit": "33亿~38亿",
@@ -813,7 +1098,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -19.18
     },
     {
-      "rank": 19,
+      "rank": 24,
       "code": "000408",
       "name": "藏格矿业",
       "profit": "35.5亿~37.5亿",
@@ -826,7 +1111,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 108.31
     },
     {
-      "rank": 20,
+      "rank": 25,
       "code": "603268",
       "name": "松发股份",
       "profit": "36亿",
@@ -839,7 +1124,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 456.33
     },
     {
-      "rank": 21,
+      "rank": 26,
       "code": "000415",
       "name": "渤海租赁",
       "profit": "30亿~36亿",
@@ -852,7 +1137,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 278.33
     },
     {
-      "rank": 22,
+      "rank": 27,
       "code": "600233",
       "name": "圆通速递",
       "profit": "31亿~34亿",
@@ -865,7 +1150,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 85.73
     },
     {
-      "rank": 23,
+      "rank": 28,
       "code": "300014",
       "name": "亿纬锂能",
       "profit": "31.3亿~33.71亿",
@@ -878,7 +1163,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 110
     },
     {
-      "rank": 24,
+      "rank": 29,
       "code": "000977",
       "name": "浪潮信息",
       "profit": "26亿~31亿",
@@ -891,7 +1176,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 288
     },
     {
-      "rank": 25,
+      "rank": 30,
       "code": "000987",
       "name": "越秀资本",
       "profit": "27.27亿~30.39亿",
@@ -904,7 +1189,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 95
     },
     {
-      "rank": 26,
+      "rank": 31,
+      "code": "002709",
+      "name": "天赐材料",
+      "profit": "27亿~30亿",
+      "growth": "+908%~1020%",
+      "type": "预增",
+      "metricLabel": "27亿~30亿  +908%~1020%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 3000000000,
+      "growthUpper": 1019.82
+    },
+    {
+      "rank": 32,
       "code": "605117",
       "name": "德业股份",
       "profit": "26.68亿~27.28亿",
@@ -917,7 +1215,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 79.22
     },
     {
-      "rank": 27,
+      "rank": 33,
+      "code": "300390",
+      "name": "天华新能",
+      "profit": "22亿~24亿",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "22亿~24亿  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 2400000000,
+      "growthUpper": 1641.55
+    },
+    {
+      "rank": 34,
       "code": "600961",
       "name": "株冶集团",
       "profit": "16亿~22亿",
@@ -930,7 +1241,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 275.78
     },
     {
-      "rank": 28,
+      "rank": 35,
       "code": "002558",
       "name": "巨人网络",
       "profit": "20亿~22亿",
@@ -943,7 +1254,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 183.12
     },
     {
-      "rank": 29,
+      "rank": 36,
       "code": "002064",
       "name": "华峰化学",
       "profit": "16.8亿~20.8亿",
@@ -956,7 +1267,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 111.53
     },
     {
-      "rank": 30,
+      "rank": 37,
       "code": "001399",
       "name": "惠科股份",
       "profit": "18.5亿~20.5亿",
@@ -969,7 +1280,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -5.17
     },
     {
-      "rank": 31,
+      "rank": 38,
       "code": "600595",
       "name": "中孚实业",
       "profit": "18亿~19.5亿",
@@ -982,7 +1293,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 175.62
     },
     {
-      "rank": 32,
+      "rank": 39,
+      "code": "601108",
+      "name": "财通证券",
+      "profit": "18.4亿~19.5亿",
+      "growth": "+70%~80%",
+      "type": "预增",
+      "metricLabel": "18.4亿~19.5亿  +70%~80%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 1950000000,
+      "growthUpper": 80
+    },
+    {
+      "rank": 40,
       "code": "002841",
       "name": "视源股份",
       "profit": "14.5亿~16.5亿",
@@ -995,7 +1319,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 314.91
     },
     {
-      "rank": 33,
+      "rank": 41,
       "code": "603225",
       "name": "新凤鸣",
       "profit": "13.8亿~15亿",
@@ -1008,7 +1332,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 111.79
     },
     {
-      "rank": 34,
+      "rank": 42,
       "code": "000729",
       "name": "燕京啤酒",
       "profit": "13.79亿~14.89亿",
@@ -1021,7 +1345,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 35
     },
     {
-      "rank": 35,
+      "rank": 43,
       "code": "002444",
       "name": "巨星科技",
       "profit": "12.09亿~14.64亿",
@@ -1034,7 +1358,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 15
     },
     {
-      "rank": 36,
+      "rank": 44,
       "code": "002414",
       "name": "高德红外",
       "profit": "12.7亿~14.5亿",
@@ -1047,7 +1371,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 701.41
     },
     {
-      "rank": 37,
+      "rank": 45,
       "code": "002266",
       "name": "浙富控股",
       "profit": "12.5亿~14.5亿",
@@ -1060,7 +1384,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 156.11
     },
     {
-      "rank": 38,
+      "rank": 46,
+      "code": "600428",
+      "name": "中远海特",
+      "profit": "12.79亿~14.02亿",
+      "growth": "+55%~70%",
+      "type": "预增",
+      "metricLabel": "12.79亿~14.02亿  +55%~70%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 1402379800,
+      "growthUpper": 70
+    },
+    {
+      "rank": 47,
       "code": "600499",
       "name": "科达制造",
       "profit": "12.6亿~13.6亿",
@@ -1073,7 +1410,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 82.53
     },
     {
-      "rank": 39,
+      "rank": 48,
+      "code": "002008",
+      "name": "大族激光",
+      "profit": "12.5亿~13.5亿",
+      "growth": "+156%~177%",
+      "type": "预增",
+      "metricLabel": "12.5亿~13.5亿  +156%~177%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 1350000000,
+      "growthUpper": 176.55
+    },
+    {
+      "rank": 49,
       "code": "600256",
       "name": "广汇能源",
       "profit": "11.7亿~13.2亿",
@@ -1086,7 +1436,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 54.68
     },
     {
-      "rank": 40,
+      "rank": 50,
       "code": "002497",
       "name": "雅化集团",
       "profit": "11亿~13亿",
@@ -1099,7 +1449,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 857.48
     },
     {
-      "rank": 41,
+      "rank": 51,
       "code": "002240",
       "name": "盛新锂能",
       "profit": "10亿~12亿",
@@ -1112,7 +1462,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 242.68
     },
     {
-      "rank": 42,
+      "rank": 52,
       "code": "000060",
       "name": "中金岭南",
       "profit": "10.5亿~12亿",
@@ -1125,7 +1475,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 114.73
     },
     {
-      "rank": 43,
+      "rank": 53,
+      "code": "603588",
+      "name": "高能环境",
+      "profit": "9亿~11亿",
+      "growth": "+79%~119%",
+      "type": "预增",
+      "metricLabel": "9亿~11亿  +79%~119%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 1100000000,
+      "growthUpper": 118.94
+    },
+    {
+      "rank": 54,
       "code": "300037",
       "name": "新宙邦",
       "profit": "9.7亿~10.3亿",
@@ -1138,7 +1501,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 112.88
     },
     {
-      "rank": 44,
+      "rank": 55,
       "code": "002545",
       "name": "东方铁塔",
       "profit": "8.97亿~10.17亿",
@@ -1151,7 +1514,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 106.19
     },
     {
-      "rank": 45,
+      "rank": 56,
       "code": "300604",
       "name": "长川科技",
       "profit": "9亿~10亿",
@@ -1164,7 +1527,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 134.18
     },
     {
-      "rank": 46,
+      "rank": 57,
       "code": "301200",
       "name": "大族数控",
       "profit": "9亿~10亿",
@@ -1177,7 +1540,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 279.84
     },
     {
-      "rank": 47,
+      "rank": 58,
       "code": "688385",
       "name": "复旦微电",
       "profit": "8亿~10亿",
@@ -1190,7 +1553,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 416.49
     },
     {
-      "rank": 48,
+      "rank": 59,
       "code": "000688",
       "name": "国城矿业",
       "profit": "9亿~10亿",
@@ -1203,7 +1566,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 28.07
     },
     {
-      "rank": 49,
+      "rank": 60,
       "code": "001389",
       "name": "广合科技",
       "profit": "9.1亿~9.6亿",
@@ -1216,7 +1579,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 95.29
     },
     {
-      "rank": 50,
+      "rank": 61,
       "code": "603893",
       "name": "瑞芯微",
       "profit": "8.5亿~9.1亿",
@@ -1229,7 +1592,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 71.33
     },
     {
-      "rank": 51,
+      "rank": 62,
+      "code": "002812",
+      "name": "恩捷股份",
+      "profit": "7.36亿~9亿",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "7.36亿~9亿  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 900000000,
+      "growthUpper": 1066.56
+    },
+    {
+      "rank": 63,
       "code": "600120",
       "name": "浙江东方",
       "profit": "8.72亿",
@@ -1242,7 +1618,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 114.25
     },
     {
-      "rank": 52,
+      "rank": 64,
       "code": "002653",
       "name": "海思科",
       "profit": "7.9亿~8.7亿",
@@ -1255,7 +1631,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 575.35
     },
     {
-      "rank": 53,
+      "rank": 65,
+      "code": "000791",
+      "name": "甘肃能源",
+      "profit": "8.25亿~8.45亿",
+      "growth": "+0%~2%",
+      "type": "略增",
+      "metricLabel": "8.25亿~8.45亿  +0%~2%",
+      "highlight": "略增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 845000000,
+      "growthUpper": 2.45
+    },
+    {
+      "rank": 66,
+      "code": "600906",
+      "name": "财达证券",
+      "profit": "7.12亿~8.09亿",
+      "growth": "+90%~116%",
+      "type": "预增",
+      "metricLabel": "7.12亿~8.09亿  +90%~116%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 808928400,
+      "growthUpper": 116
+    },
+    {
+      "rank": 67,
       "code": "600521",
       "name": "华海药业",
       "profit": "7.57亿~7.99亿",
@@ -1268,7 +1670,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 95
     },
     {
-      "rank": 54,
+      "rank": 68,
       "code": "301165",
       "name": "锐捷网络",
       "profit": "6亿~7.5亿",
@@ -1281,7 +1683,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 65.88
     },
     {
-      "rank": 55,
+      "rank": 69,
       "code": "600105",
       "name": "永鼎股份",
       "profit": "5亿~7亿",
@@ -1294,7 +1696,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 120
     },
     {
-      "rank": 56,
+      "rank": 70,
       "code": "002048",
       "name": "宁波华翔",
       "profit": "6.1亿~6.9亿",
@@ -1307,7 +1709,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 284.69
     },
     {
-      "rank": 57,
+      "rank": 71,
       "code": "601339",
       "name": "百隆东方",
       "profit": "5.07亿~6.24亿",
@@ -1320,7 +1722,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 60
     },
     {
-      "rank": 58,
+      "rank": 72,
       "code": "002452",
       "name": "长高电气",
       "profit": "5.5亿~5.8亿",
@@ -1333,7 +1735,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 449.7
     },
     {
-      "rank": 59,
+      "rank": 73,
       "code": "300012",
       "name": "华测检测",
       "profit": "5.61亿~5.71亿",
@@ -1346,7 +1748,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 22.12
     },
     {
-      "rank": 60,
+      "rank": 74,
       "code": "301345",
       "name": "涛涛车业",
       "profit": "5.2亿~5.6亿",
@@ -1359,7 +1761,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 63.64
     },
     {
-      "rank": 61,
+      "rank": 75,
       "code": "603162",
       "name": "海通发展",
       "profit": "5亿~5.5亿",
@@ -1372,7 +1774,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 532
     },
     {
-      "rank": 62,
+      "rank": 76,
       "code": "605020",
       "name": "永和股份",
       "profit": "4.6亿~5.5亿",
@@ -1385,7 +1787,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 102.68
     },
     {
-      "rank": 63,
+      "rank": 77,
+      "code": "300054",
+      "name": "鼎龙股份",
+      "profit": "5.1亿~5.4亿",
+      "growth": "+64%~74%",
+      "type": "预增",
+      "metricLabel": "5.1亿~5.4亿  +64%~74%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 540000000,
+      "growthUpper": 73.61
+    },
+    {
+      "rank": 78,
       "code": "001287",
       "name": "中电港",
       "profit": "5亿~5.3亿",
@@ -1398,7 +1813,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 193.01
     },
     {
-      "rank": 64,
+      "rank": 79,
       "code": "603929",
       "name": "亚翔集成",
       "profit": "4.56亿~5.25亿",
@@ -1411,7 +1826,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 226.29
     },
     {
-      "rank": 65,
+      "rank": 80,
       "code": "300458",
       "name": "全志科技",
       "profit": "4.75亿~5.15亿",
@@ -1424,7 +1839,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 219.55
     },
     {
-      "rank": 66,
+      "rank": 81,
       "code": "002568",
       "name": "百润股份",
       "profit": "4.65亿~4.9亿",
@@ -1437,7 +1852,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 25.94
     },
     {
-      "rank": 67,
+      "rank": 82,
       "code": "002546",
       "name": "新联电子",
       "profit": "4.41亿~4.66亿",
@@ -1450,7 +1865,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 147.87
     },
     {
-      "rank": 68,
+      "rank": 83,
       "code": "300748",
       "name": "金力永磁",
       "profit": "4亿~4.6亿",
@@ -1463,7 +1878,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 50.84
     },
     {
-      "rank": 69,
+      "rank": 84,
       "code": "300763",
       "name": "锦浪科技",
       "profit": "4.1亿~4.6亿",
@@ -1476,7 +1891,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -23.61
     },
     {
-      "rank": 70,
+      "rank": 85,
       "code": "300821",
       "name": "东岳硅材",
       "profit": "4.24亿~4.44亿",
@@ -1489,7 +1904,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 952.28
     },
     {
-      "rank": 71,
+      "rank": 86,
+      "code": "600664",
+      "name": "哈药股份",
+      "profit": "3.8亿~4.37亿",
+      "growth": "+46%~68%",
+      "type": "预增",
+      "metricLabel": "3.8亿~4.37亿  +46%~68%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 437249500,
+      "growthUpper": 68.36
+    },
+    {
+      "rank": 87,
       "code": "600872",
       "name": "中炬高新",
       "profit": "3.9亿~4.3亿",
@@ -1502,7 +1930,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 67.41
     },
     {
-      "rank": 72,
+      "rank": 88,
+      "code": "603730",
+      "name": "岱美股份",
+      "profit": "4亿~4.3亿",
+      "growth": "+66%~78%",
+      "type": "预增",
+      "metricLabel": "4亿~4.3亿  +66%~78%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 430000000,
+      "growthUpper": 78.18
+    },
+    {
+      "rank": 89,
       "code": "003022",
       "name": "联泓新科",
       "profit": "4亿~4.3亿",
@@ -1515,7 +1956,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 167.63
     },
     {
-      "rank": 73,
+      "rank": 90,
       "code": "002396",
       "name": "星网锐捷",
       "profit": "3.1亿~4.3亿",
@@ -1528,7 +1969,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 102.9
     },
     {
-      "rank": 74,
+      "rank": 91,
       "code": "603132",
       "name": "金徽股份",
       "profit": "4亿~4.2亿",
@@ -1541,7 +1982,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 65.93
     },
     {
-      "rank": 75,
+      "rank": 92,
       "code": "002083",
       "name": "孚日股份",
       "profit": "3.69亿~4.18亿",
@@ -1554,7 +1995,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 70.27
     },
     {
-      "rank": 76,
+      "rank": 93,
       "code": "001339",
       "name": "智微智能",
       "profit": "3.5亿~4.17亿",
@@ -1567,7 +2008,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 309.65
     },
     {
-      "rank": 77,
+      "rank": 94,
       "code": "603093",
       "name": "南华期货",
       "profit": "3.75亿~4.05亿",
@@ -1580,7 +2021,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 75.13
     },
     {
-      "rank": 78,
+      "rank": 95,
       "code": "603618",
       "name": "杭电股份",
       "profit": "3.6亿~4亿",
@@ -1593,7 +2034,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 957.82
     },
     {
-      "rank": 79,
+      "rank": 96,
       "code": "000949",
       "name": "新乡化纤",
       "profit": "3亿~4亿",
@@ -1606,7 +2047,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 537.45
     },
     {
-      "rank": 80,
+      "rank": 97,
       "code": "000603",
       "name": "盛达资源",
       "profit": "3.5亿~4亿",
@@ -1619,7 +2060,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 470.64
     },
     {
-      "rank": 81,
+      "rank": 98,
       "code": "603317",
       "name": "天味食品",
       "profit": "3.73亿~3.89亿",
@@ -1632,7 +2073,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 104.45
     },
     {
-      "rank": 82,
+      "rank": 99,
       "code": "002204",
       "name": "大连重工",
       "profit": "3.51亿~3.85亿",
@@ -1645,7 +2086,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 23.36
     },
     {
-      "rank": 83,
+      "rank": 100,
       "code": "601678",
       "name": "滨化股份",
       "profit": "3.44亿",
@@ -1658,7 +2099,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 208.25
     },
     {
-      "rank": 84,
+      "rank": 101,
       "code": "001365",
       "name": "天海电子",
       "profit": "3.05亿~3.37亿",
@@ -1671,7 +2112,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 7.05
     },
     {
-      "rank": 85,
+      "rank": 102,
+      "code": "002479",
+      "name": "富春环保",
+      "profit": "2.98亿~3.35亿",
+      "growth": "+60%~80%",
+      "type": "预增",
+      "metricLabel": "2.98亿~3.35亿  +60%~80%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 335483700,
+      "growthUpper": 80
+    },
+    {
+      "rank": 103,
       "code": "600063",
       "name": "皖维高新",
       "profit": "3亿~3.3亿",
@@ -1684,7 +2138,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 28.95
     },
     {
-      "rank": 86,
+      "rank": 104,
       "code": "002326",
       "name": "永太科技",
       "profit": "2.65亿~3.3亿",
@@ -1697,7 +2151,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 461.22
     },
     {
-      "rank": 87,
+      "rank": 105,
       "code": "300861",
       "name": "美畅股份",
       "profit": "2.95亿~3.15亿",
@@ -1710,7 +2164,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 272.08
     },
     {
-      "rank": 88,
+      "rank": 106,
       "code": "601208",
       "name": "东材科技",
       "profit": "3.12亿",
@@ -1723,7 +2177,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 63.93
     },
     {
-      "rank": 89,
+      "rank": 107,
+      "code": "000430",
+      "name": "张家界",
+      "profit": "2.98亿~3.1亿",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "2.98亿~3.1亿  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 310000000,
+      "growthUpper": 1031.73
+    },
+    {
+      "rank": 108,
+      "code": "603638",
+      "name": "艾迪精密",
+      "profit": "2.98亿~3.08亿",
+      "growth": "+44%~49%",
+      "type": "略增",
+      "metricLabel": "2.98亿~3.08亿  +44%~49%",
+      "highlight": "略增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 308000000,
+      "growthUpper": 48.8
+    },
+    {
+      "rank": 109,
       "code": "301696",
       "name": "三瑞智能",
       "profit": "2.43亿~3.03亿",
@@ -1736,7 +2216,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 89.07
     },
     {
-      "rank": 90,
+      "rank": 110,
+      "code": "000932",
+      "name": "华菱钢铁",
+      "profit": "2亿~3亿",
+      "growth": "-89%~-83%",
+      "type": "预减",
+      "metricLabel": "2亿~3亿  -89%~-83%",
+      "highlight": "预减",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 300000000,
+      "growthUpper": -82.84
+    },
+    {
+      "rank": 111,
       "code": "002458",
       "name": "益生股份",
       "profit": "2.7亿~3亿",
@@ -1749,7 +2242,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 4774.01
     },
     {
-      "rank": 91,
+      "rank": 112,
       "code": "688548",
       "name": "广钢气体",
       "profit": "2.2亿~2.8亿",
@@ -1762,7 +2255,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 138.24
     },
     {
-      "rank": 92,
+      "rank": 113,
       "code": "301099",
       "name": "雅创电子",
       "profit": "2.2亿~2.7亿",
@@ -1775,7 +2268,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 561.49
     },
     {
-      "rank": 93,
+      "rank": 114,
+      "code": "600596",
+      "name": "新安股份",
+      "profit": "2.4亿~2.6亿",
+      "growth": "+247%~276%",
+      "type": "预增",
+      "metricLabel": "2.4亿~2.6亿  +247%~276%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 260000000,
+      "growthUpper": 276.41
+    },
+    {
+      "rank": 115,
+      "code": "002039",
+      "name": "黔源电力",
+      "profit": "2.2亿~2.55亿",
+      "growth": "+73%~101%",
+      "type": "预增",
+      "metricLabel": "2.2亿~2.55亿  +73%~101%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 255000000,
+      "growthUpper": 100.54
+    },
+    {
+      "rank": 116,
       "code": "601162",
       "name": "天风证券",
       "profit": "1.64亿~2.46亿",
@@ -1788,7 +2307,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 693.55
     },
     {
-      "rank": 94,
+      "rank": 117,
       "code": "605007",
       "name": "五洲特纸",
       "profit": "2.26亿~2.36亿",
@@ -1801,7 +2320,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 93.97
     },
     {
-      "rank": 95,
+      "rank": 118,
       "code": "001237",
       "name": "惠康科技",
       "profit": "2.2亿~2.33亿",
@@ -1814,7 +2333,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 13.67
     },
     {
-      "rank": 96,
+      "rank": 119,
       "code": "920079",
       "name": "乔路铭",
       "profit": "2.14亿~2.33亿",
@@ -1827,7 +2346,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 15.72
     },
     {
-      "rank": 97,
+      "rank": 120,
       "code": "002810",
       "name": "山东赫达",
       "profit": "2.04亿~2.26亿",
@@ -1840,7 +2359,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 100
     },
     {
-      "rank": 98,
+      "rank": 121,
       "code": "603209",
       "name": "兴通股份",
       "profit": "2.1亿~2.23亿",
@@ -1853,7 +2372,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 64.75
     },
     {
-      "rank": 99,
+      "rank": 122,
       "code": "300497",
       "name": "富祥股份",
       "profit": "1.65亿~2.15亿",
@@ -1866,7 +2385,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 3204
     },
     {
-      "rank": 100,
+      "rank": 123,
       "code": "300867",
       "name": "圣元环保",
       "profit": "1.78亿~2.07亿",
@@ -1879,7 +2398,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 80
     },
     {
-      "rank": 101,
+      "rank": 124,
       "code": "603223",
       "name": "恒通股份",
       "profit": "1.66亿~2.03亿",
@@ -1892,7 +2411,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 104.03
     },
     {
-      "rank": 102,
+      "rank": 125,
       "code": "603826",
       "name": "坤彩科技",
       "profit": "1.75亿~2亿",
@@ -1905,7 +2424,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 304.76
     },
     {
-      "rank": 103,
+      "rank": 126,
+      "code": "002805",
+      "name": "丰元股份",
+      "profit": "1.4亿~2亿",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "1.4亿~2亿  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 200000000,
+      "growthUpper": 182.22
+    },
+    {
+      "rank": 127,
       "code": "002042",
       "name": "华孚时尚",
       "profit": "1.6亿~2亿",
@@ -1918,7 +2450,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 696.88
     },
     {
-      "rank": 104,
+      "rank": 128,
+      "code": "605118",
+      "name": "力鼎光电",
+      "profit": "1.72亿~1.97亿",
+      "growth": "+33%~53%",
+      "type": "预增",
+      "metricLabel": "1.72亿~1.97亿  +33%~53%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 197000000,
+      "growthUpper": 52.74
+    },
+    {
+      "rank": 129,
       "code": "002979",
       "name": "雷赛智能",
       "profit": "1.84亿~1.96亿",
@@ -1931,7 +2476,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 65
     },
     {
-      "rank": 105,
+      "rank": 130,
       "code": "000601",
       "name": "韶能股份",
       "profit": "1.55亿~1.95亿",
@@ -1944,7 +2489,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 103.33
     },
     {
-      "rank": 106,
+      "rank": 131,
       "code": "603165",
       "name": "荣晟环保",
       "profit": "1.73亿~1.93亿",
@@ -1957,7 +2502,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 67.79
     },
     {
-      "rank": 107,
+      "rank": 132,
       "code": "601121",
       "name": "宝地矿业",
       "profit": "1.78亿~1.91亿",
@@ -1970,7 +2515,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 210.11
     },
     {
-      "rank": 108,
+      "rank": 133,
       "code": "688378",
       "name": "奥来德",
       "profit": "1.6亿~1.9亿",
@@ -1983,7 +2528,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 603.58
     },
     {
-      "rank": 109,
+      "rank": 134,
       "code": "002292",
       "name": "奥飞娱乐",
       "profit": "1.5亿~1.9亿",
@@ -1996,7 +2541,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 413.38
     },
     {
-      "rank": 110,
+      "rank": 135,
       "code": "603992",
       "name": "松霖科技",
       "profit": "1.4亿~1.85亿",
@@ -2009,7 +2554,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 98.74
     },
     {
-      "rank": 111,
+      "rank": 136,
+      "code": "002606",
+      "name": "大连电瓷",
+      "profit": "1.4亿~1.8亿",
+      "growth": "+201%~286%",
+      "type": "预增",
+      "metricLabel": "1.4亿~1.8亿  +201%~286%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 180000000,
+      "growthUpper": 286.43
+    },
+    {
+      "rank": 137,
       "code": "000810",
       "name": "创维数字",
       "profit": "1.4亿~1.8亿",
@@ -2022,7 +2580,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 235.88
     },
     {
-      "rank": 112,
+      "rank": 138,
+      "code": "002803",
+      "name": "吉宏股份",
+      "profit": "1.54亿~1.77亿",
+      "growth": "+30%~50%",
+      "type": "略增",
+      "metricLabel": "1.54亿~1.77亿  +30%~50%",
+      "highlight": "略增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 177220200,
+      "growthUpper": 50
+    },
+    {
+      "rank": 139,
       "code": "301563",
       "name": "云汉芯城",
       "profit": "1.58亿~1.74亿",
@@ -2035,7 +2606,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 223.08
     },
     {
-      "rank": 113,
+      "rank": 140,
       "code": "600727",
       "name": "鲁北化工",
       "profit": "1.72亿",
@@ -2048,7 +2619,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 119.82
     },
     {
-      "rank": 114,
+      "rank": 141,
       "code": "300389",
       "name": "艾比森",
       "profit": "1.36亿~1.6亿",
@@ -2061,7 +2632,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 37.78
     },
     {
-      "rank": 115,
+      "rank": 142,
+      "code": "001218",
+      "name": "丽臣实业",
+      "profit": "1.4亿~1.6亿",
+      "growth": "+154%~191%",
+      "type": "预增",
+      "metricLabel": "1.4亿~1.6亿  +154%~191%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 160000000,
+      "growthUpper": 190.54
+    },
+    {
+      "rank": 143,
       "code": "002067",
       "name": "景兴纸业",
       "profit": "1.3亿~1.6亿",
@@ -2074,7 +2658,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 190.73
     },
     {
-      "rank": 116,
+      "rank": 144,
       "code": "001395",
       "name": "亚联机械",
       "profit": "1.57亿",
@@ -2087,7 +2671,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 59.63
     },
     {
-      "rank": 117,
+      "rank": 145,
       "code": "300620",
       "name": "光库科技",
       "profit": "1.4亿~1.5亿",
@@ -2100,7 +2684,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 190
     },
     {
-      "rank": 118,
+      "rank": 146,
       "code": "688690",
       "name": "纳微科技",
       "profit": "1.28亿~1.5亿",
@@ -2113,7 +2697,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 137
     },
     {
-      "rank": 119,
+      "rank": 147,
       "code": "002552",
       "name": "宝鼎科技",
       "profit": "1.25亿~1.45亿",
@@ -2126,7 +2710,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 559.71
     },
     {
-      "rank": 120,
+      "rank": 148,
       "code": "300233",
       "name": "金城医药",
       "profit": "1.1亿~1.4亿",
@@ -2139,7 +2723,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 222.71
     },
     {
-      "rank": 121,
+      "rank": 149,
       "code": "603466",
       "name": "风语筑",
       "profit": "9000万~1.35亿",
@@ -2152,7 +2736,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 696.36
     },
     {
-      "rank": 122,
+      "rank": 150,
       "code": "002990",
       "name": "盛视科技",
       "profit": "1.05亿~1.35亿",
@@ -2165,7 +2749,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 460.59
     },
     {
-      "rank": 123,
+      "rank": 151,
       "code": "001393",
       "name": "维通利",
       "profit": "1.21亿~1.3亿",
@@ -2178,7 +2762,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -6.42
     },
     {
-      "rank": 124,
+      "rank": 152,
       "code": "603329",
       "name": "上海雅仕",
       "profit": "1.03亿~1.25亿",
@@ -2191,7 +2775,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 514.97
     },
     {
-      "rank": 125,
+      "rank": 153,
       "code": "002274",
       "name": "华昌化工",
       "profit": "1.23亿",
@@ -2204,7 +2788,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 1025.93
     },
     {
-      "rank": 126,
+      "rank": 154,
       "code": "688005",
       "name": "容百科技",
       "profit": "1亿~1.2亿",
@@ -2217,7 +2801,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 275.45
     },
     {
-      "rank": 127,
+      "rank": 155,
       "code": "002829",
       "name": "星网宇达",
       "profit": "9000万~1.2亿",
@@ -2230,7 +2814,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 854.56
     },
     {
-      "rank": 128,
+      "rank": 156,
       "code": "688797",
       "name": "臻宝科技",
       "profit": "1.05亿~1.15亿",
@@ -2243,7 +2827,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 35
     },
     {
-      "rank": 129,
+      "rank": 157,
       "code": "300671",
       "name": "富满微",
       "profit": "9000万~1.1亿",
@@ -2256,7 +2840,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 407.54
     },
     {
-      "rank": 130,
+      "rank": 158,
       "code": "600707",
       "name": "彩虹股份",
       "profit": "9600万~1.1亿",
@@ -2269,7 +2853,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -75.66
     },
     {
-      "rank": 131,
+      "rank": 159,
       "code": "600201",
       "name": "生物股份",
       "profit": "9100万~1.09亿",
@@ -2282,7 +2866,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 80.39
     },
     {
-      "rank": 132,
+      "rank": 160,
       "code": "603101",
       "name": "汇嘉时代",
       "profit": "9600万~1.07亿",
@@ -2295,7 +2879,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 59.59
     },
     {
-      "rank": 133,
+      "rank": 161,
+      "code": "603325",
+      "name": "博隆技术",
+      "profit": "8800万~1.05亿",
+      "growth": "-64%~-57%",
+      "type": "预减",
+      "metricLabel": "8800万~1.05亿  -64%~-57%",
+      "highlight": "预减",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 105000000,
+      "growthUpper": -56.69
+    },
+    {
+      "rank": 162,
+      "code": "000525",
+      "name": "红太阳",
+      "profit": "9500万~1.05亿",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "9500万~1.05亿  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 105000000,
+      "growthUpper": 150.37
+    },
+    {
+      "rank": 163,
       "code": "600230",
       "name": "沧州大化",
       "profit": "1.01亿",
@@ -2308,7 +2918,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 330.75
     },
     {
-      "rank": 134,
+      "rank": 164,
       "code": "300531",
       "name": "优博讯",
       "profit": "9000万~1亿",
@@ -2321,7 +2931,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 125.97
     },
     {
-      "rank": 135,
+      "rank": 165,
       "code": "002054",
       "name": "德美化工",
       "profit": "9500万~1亿",
@@ -2334,7 +2944,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 108.7
     },
     {
-      "rank": 136,
+      "rank": 166,
       "code": "920136",
       "name": "永励精密",
       "profit": "8908万~9776万",
@@ -2347,7 +2957,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 78.17
     },
     {
-      "rank": 137,
+      "rank": 167,
       "code": "300221",
       "name": "银禧科技",
       "profit": "8700万~9300万",
@@ -2360,7 +2970,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 95
     },
     {
-      "rank": 138,
+      "rank": 168,
+      "code": "603072",
+      "name": "天和磁材",
+      "profit": "7300万~9300万",
+      "growth": "+37%~74%",
+      "type": "预增",
+      "metricLabel": "7300万~9300万  +37%~74%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 93000000,
+      "growthUpper": 73.98
+    },
+    {
+      "rank": 169,
       "code": "301110",
       "name": "青木科技",
       "profit": "8000万~9000万",
@@ -2373,7 +2996,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 74.23
     },
     {
-      "rank": 139,
+      "rank": 170,
       "code": "603822",
       "name": "ST嘉澳",
       "profit": "6000万~9000万",
@@ -2386,7 +3009,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 215.05
     },
     {
-      "rank": 140,
+      "rank": 171,
+      "code": "605289",
+      "name": "罗曼股份",
+      "profit": "7000万~9000万",
+      "growth": "+429%~580%",
+      "type": "预增",
+      "metricLabel": "7000万~9000万  +429%~580%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 90000000,
+      "growthUpper": 580.36
+    },
+    {
+      "rank": 172,
       "code": "002787",
       "name": "华源控股",
       "profit": "7300万~9000万",
@@ -2399,7 +3035,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 85.56
     },
     {
-      "rank": 141,
+      "rank": 173,
       "code": "002998",
       "name": "优彩资源",
       "profit": "7000万~9000万",
@@ -2412,7 +3048,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 122.17
     },
     {
-      "rank": 142,
+      "rank": 174,
       "code": "301086",
       "name": "鸿富瀚",
       "profit": "7300万~8300万",
@@ -2425,7 +3061,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 265.13
     },
     {
-      "rank": 143,
+      "rank": 175,
       "code": "920206",
       "name": "彩客科技",
       "profit": "7400万~8300万",
@@ -2438,7 +3074,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -3.97
     },
     {
-      "rank": 144,
+      "rank": 176,
+      "code": "002536",
+      "name": "飞龙股份",
+      "profit": "6800万~8000万",
+      "growth": "-68%~-62%",
+      "type": "预减",
+      "metricLabel": "6800万~8000万  -68%~-62%",
+      "highlight": "预减",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 80000000,
+      "growthUpper": -61.98
+    },
+    {
+      "rank": 177,
       "code": "002107",
       "name": "沃华医药",
       "profit": "6500万~8000万",
@@ -2451,7 +3100,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 79.07
     },
     {
-      "rank": 145,
+      "rank": 178,
       "code": "301531",
       "name": "春光集团",
       "profit": "6328万~7593万",
@@ -2464,7 +3113,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 29.76
     },
     {
-      "rank": 146,
+      "rank": 179,
       "code": "000070",
       "name": "特发信息",
       "profit": "5500万~7100万",
@@ -2477,7 +3126,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 1166.93
     },
     {
-      "rank": 147,
+      "rank": 180,
       "code": "920126",
       "name": "永大股份",
       "profit": "6103万~7040万",
@@ -2490,7 +3139,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -1.19
     },
     {
-      "rank": 148,
+      "rank": 181,
       "code": "603327",
       "name": "福蓉科技",
       "profit": "7005万",
@@ -2503,7 +3152,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 68.94
     },
     {
-      "rank": 149,
+      "rank": 182,
       "code": "920117",
       "name": "龙鑫智能",
       "profit": "6450万~6950万",
@@ -2516,7 +3165,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 8.3
     },
     {
-      "rank": 150,
+      "rank": 183,
+      "code": "600506",
+      "name": "统一股份",
+      "profit": "6910万",
+      "growth": "+106%",
+      "type": "预增",
+      "metricLabel": "6910万  +106%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 69096700,
+      "growthUpper": 105.98
+    },
+    {
+      "rank": 184,
       "code": "300733",
       "name": "西菱动力",
       "profit": "6500万~6800万",
@@ -2529,7 +3191,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 21.73
     },
     {
-      "rank": 151,
+      "rank": 185,
       "code": "300980",
       "name": "祥源新材",
       "profit": "4950万~6600万",
@@ -2542,7 +3204,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 227.69
     },
     {
-      "rank": 152,
+      "rank": 186,
       "code": "300687",
       "name": "赛意信息",
       "profit": "5250万~6500万",
@@ -2555,7 +3217,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 257.01
     },
     {
-      "rank": 153,
+      "rank": 187,
       "code": "920193",
       "name": "吉和昌",
       "profit": "4800万~6200万",
@@ -2568,7 +3230,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 99.86
     },
     {
-      "rank": 154,
+      "rank": 188,
+      "code": "002376",
+      "name": "新北洋",
+      "profit": "5000万~5800万",
+      "growth": "+34%~56%",
+      "type": "预增",
+      "metricLabel": "5000万~5800万  +34%~56%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 58000000,
+      "growthUpper": 56
+    },
+    {
+      "rank": 189,
       "code": "000818",
       "name": "航锦科技",
       "profit": "4000万~5600万",
@@ -2581,7 +3256,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 308.03
     },
     {
-      "rank": 155,
+      "rank": 190,
       "code": "600744",
       "name": "华银电力",
       "profit": "4500万~5500万",
@@ -2594,7 +3269,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -73.37
     },
     {
-      "rank": 156,
+      "rank": 191,
+      "code": "002115",
+      "name": "三维通信",
+      "profit": "4000万~5500万",
+      "growth": "+1429%~2002%",
+      "type": "预增",
+      "metricLabel": "4000万~5500万  +1429%~2002%",
+      "highlight": "预增",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 55000000,
+      "growthUpper": 2001.8
+    },
+    {
+      "rank": 192,
       "code": "920161",
       "name": "龙辰科技",
       "profit": "5200万~5400万",
@@ -2607,7 +3295,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 9.54
     },
     {
-      "rank": 157,
+      "rank": 193,
       "code": "002134",
       "name": "天津普林",
       "profit": "3600万~5200万",
@@ -2620,7 +3308,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 673.71
     },
     {
-      "rank": 158,
+      "rank": 194,
       "code": "920220",
       "name": "朗信电气",
       "profit": "4500万~5000万",
@@ -2633,7 +3321,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 12.76
     },
     {
-      "rank": 159,
+      "rank": 195,
       "code": "300964",
       "name": "本川智能",
       "profit": "3200万~4800万",
@@ -2646,7 +3334,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 123.68
     },
     {
-      "rank": 160,
+      "rank": 196,
       "code": "600889",
       "name": "*ST京化",
       "profit": "4000万~4800万",
@@ -2659,7 +3347,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 153.97
     },
     {
-      "rank": 161,
+      "rank": 197,
       "code": "920176",
       "name": "维琪科技",
       "profit": "4700万",
@@ -2672,7 +3360,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 16.92
     },
     {
-      "rank": 162,
+      "rank": 198,
       "code": "920189",
       "name": "康美特",
       "profit": "4000万~4600万",
@@ -2685,7 +3373,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 29.63
     },
     {
-      "rank": 163,
+      "rank": 199,
       "code": "920218",
       "name": "新天力",
       "profit": "4300万~4600万",
@@ -2698,7 +3386,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 8.05
     },
     {
-      "rank": 164,
+      "rank": 200,
       "code": "688620",
       "name": "安凯微",
       "profit": "3800万~4300万",
@@ -2711,7 +3399,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 187.31
     },
     {
-      "rank": 165,
+      "rank": 201,
       "code": "688337",
       "name": "普源精电",
       "profit": "3458万~4262万",
@@ -2724,7 +3412,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 162.84
     },
     {
-      "rank": 166,
+      "rank": 202,
       "code": "688635",
       "name": "长进光子",
       "profit": "3825万~4145万",
@@ -2737,7 +3425,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 21.74
     },
     {
-      "rank": 167,
+      "rank": 203,
       "code": "920072",
       "name": "科莱瑞迪",
       "profit": "3388万~3877万",
@@ -2750,7 +3438,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 26.95
     },
     {
-      "rank": 168,
+      "rank": 204,
       "code": "002827",
       "name": "高争民爆",
       "profit": "2900万~3800万",
@@ -2763,7 +3451,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -45.09
     },
     {
-      "rank": 169,
+      "rank": 205,
       "code": "301068",
       "name": "大地海洋",
       "profit": "2900万~3500万",
@@ -2776,7 +3464,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 189.4
     },
     {
-      "rank": 170,
+      "rank": 206,
       "code": "920222",
       "name": "益坤电气",
       "profit": "2680万~2950万",
@@ -2789,7 +3477,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 10.12
     },
     {
-      "rank": 171,
+      "rank": 207,
       "code": "301369",
       "name": "联动科技",
       "profit": "2100万~2900万",
@@ -2802,7 +3490,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 139.44
     },
     {
-      "rank": 172,
+      "rank": 208,
       "code": "920083",
       "name": "金戈新材",
       "profit": "2500万~2700万",
@@ -2815,7 +3503,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 13.39
     },
     {
-      "rank": 173,
+      "rank": 209,
       "code": "603316",
       "name": "诚邦股份",
       "profit": "2600万",
@@ -2828,7 +3516,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 349.1
     },
     {
-      "rank": 174,
+      "rank": 210,
       "code": "002377",
       "name": "国创高新",
       "profit": "1500万~2250万",
@@ -2841,7 +3529,33 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 128.45
     },
     {
-      "rank": 175,
+      "rank": 211,
+      "code": "603001",
+      "name": "奥康国际",
+      "profit": "1800万",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "1800万  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 18000000,
+      "growthUpper": 119.56
+    },
+    {
+      "rank": 212,
+      "code": "000819",
+      "name": "岳阳兴长",
+      "profit": "1200万~1600万",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "1200万~1600万  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 16000000,
+      "growthUpper": 154.27
+    },
+    {
+      "rank": 213,
       "code": "300209",
       "name": "行云科技",
       "profit": "1000万~1500万",
@@ -2854,7 +3568,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 699.15
     },
     {
-      "rank": 176,
+      "rank": 214,
       "code": "600423",
       "name": "*ST柳化",
       "profit": "1400万",
@@ -2867,7 +3581,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 308
     },
     {
-      "rank": 177,
+      "rank": 215,
       "code": "600084",
       "name": "*ST尼雅",
       "profit": "750万~1090万",
@@ -2880,7 +3594,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 1523.23
     },
     {
-      "rank": 178,
+      "rank": 216,
       "code": "600187",
       "name": "*ST国中",
       "profit": "600万~800万",
@@ -2893,7 +3607,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 143.67
     },
     {
-      "rank": 179,
+      "rank": 217,
+      "code": "000504",
+      "name": "南华生物",
+      "profit": "420万~620万",
+      "growth": "扭亏",
+      "type": "扭亏",
+      "metricLabel": "420万~620万  扭亏",
+      "highlight": "扭亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": 6200000,
+      "growthUpper": 277.94
+    },
+    {
+      "rank": 218,
       "code": "002148",
       "name": "北纬科技",
       "profit": "400万~500万",
@@ -2906,7 +3633,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 259.72
     },
     {
-      "rank": 180,
+      "rank": 219,
       "code": "002915",
       "name": "中欣氟材",
       "profit": "—",
@@ -2919,7 +3646,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": null
     },
     {
-      "rank": 181,
+      "rank": 220,
       "code": "002977",
       "name": "*ST天箭",
       "profit": "-421万~-298万",
@@ -2932,7 +3659,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 54.75
     },
     {
-      "rank": 182,
+      "rank": 221,
       "code": "000852",
       "name": "石化机械",
       "profit": "-750万~-550万",
@@ -2945,7 +3672,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -119.62
     },
     {
-      "rank": 183,
+      "rank": 222,
       "code": "603386",
       "name": "骏亚科技",
       "profit": "-1200万~-600万",
@@ -2958,7 +3685,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -115.74
     },
     {
-      "rank": 184,
+      "rank": 223,
+      "code": "002527",
+      "name": "新时达",
+      "profit": "-1600万~-1100万",
+      "growth": "首亏",
+      "type": "首亏",
+      "metricLabel": "-1600万~-1100万  首亏",
+      "highlight": "首亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": -11000000,
+      "growthUpper": -689.68
+    },
+    {
+      "rank": 224,
       "code": "600653",
       "name": "申华控股",
       "profit": "-2000万~-1500万",
@@ -2971,7 +3711,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 75
     },
     {
-      "rank": 185,
+      "rank": 225,
+      "code": "601519",
+      "name": "大智慧",
+      "profit": "-3300万~-2300万",
+      "growth": "增亏",
+      "type": "增亏",
+      "metricLabel": "-3300万~-2300万  增亏",
+      "highlight": "增亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": -23000000,
+      "growthUpper": -562.81
+    },
+    {
+      "rank": 226,
       "code": "000713",
       "name": "国投丰乐",
       "profit": "-3300万~-2800万",
@@ -2984,7 +3737,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 0.09
     },
     {
-      "rank": 186,
+      "rank": 227,
       "code": "000859",
       "name": "国风新材",
       "profit": "-3800万~-2800万",
@@ -2997,7 +3750,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 30.11
     },
     {
-      "rank": 187,
+      "rank": 228,
       "code": "002766",
       "name": "索菱股份",
       "profit": "-4690万~-3910万",
@@ -3010,7 +3763,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -775.99
     },
     {
-      "rank": 188,
+      "rank": 229,
       "code": "002093",
       "name": "国脉科技",
       "profit": "-4300万~-4000万",
@@ -3023,7 +3776,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -126.42
     },
     {
-      "rank": 189,
+      "rank": 230,
       "code": "600793",
       "name": "宜宾纸业",
       "profit": "-6150万~-4100万",
@@ -3036,7 +3789,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -285.82
     },
     {
-      "rank": 190,
+      "rank": 231,
+      "code": "002943",
+      "name": "宇晶股份",
+      "profit": "-8500万~-6500万",
+      "growth": "首亏",
+      "type": "首亏",
+      "metricLabel": "-8500万~-6500万  首亏",
+      "highlight": "首亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": -65000000,
+      "growthUpper": -651.01
+    },
+    {
+      "rank": 232,
       "code": "601005",
       "name": "重庆钢铁",
       "profit": "-1.79亿",
@@ -3049,7 +3815,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -36.64
     },
     {
-      "rank": 191,
+      "rank": 233,
       "code": "688806",
       "name": "泰诺麦博",
       "profit": "-2.04亿~-2.01亿",
@@ -3062,7 +3828,7 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": 30.72
     },
     {
-      "rank": 192,
+      "rank": 234,
       "code": "000635",
       "name": "英力特",
       "profit": "-2.47亿",
@@ -3075,7 +3841,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -58.76
     },
     {
-      "rank": 193,
+      "rank": 235,
+      "code": "603660",
+      "name": "苏州科达",
+      "profit": "-3.3亿~-2.7亿",
+      "growth": "增亏",
+      "type": "增亏",
+      "metricLabel": "-3.3亿~-2.7亿  增亏",
+      "highlight": "增亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": -270000000,
+      "growthUpper": -24.51
+    },
+    {
+      "rank": 236,
       "code": "002456",
       "name": "欧菲光",
       "profit": "-4.6亿~-3.6亿",
@@ -3088,7 +3867,20 @@ const INTERIM_FORECAST_2026H1 = {
       "growthUpper": -374.24
     },
     {
-      "rank": 194,
+      "rank": 237,
+      "code": "002157",
+      "name": "正邦科技",
+      "profit": "-8亿~-7亿",
+      "growth": "首亏",
+      "type": "首亏",
+      "metricLabel": "-8亿~-7亿  首亏",
+      "highlight": "首亏",
+      "noticeDate": "2026-07-10",
+      "profitUpper": -700000000,
+      "growthUpper": -447.11
+    },
+    {
+      "rank": 238,
       "code": "600418",
       "name": "江淮汽车",
       "profit": "-7.4亿",
