@@ -7,13 +7,23 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const AS_OF = '2026-07-08';
+const AS_OF = '2026-07-09';
 const OUT = path.join(__dirname, '../data/interim-forecast-2026h1.js');
 
-const URL =
+const API_BASE =
   'https://datacenter-web.eastmoney.com/api/data/v1/get?sortColumns=NOTICE_DATE&sortTypes=-1'
-  + '&pageSize=500&pageNumber=1&reportName=RPT_PUBLIC_OP_NEWPREDICT&columns=ALL'
+  + '&pageSize=500&reportName=RPT_PUBLIC_OP_NEWPREDICT&columns=ALL'
   + '&filter=(REPORT_DATE%3D%272026-06-30%27)';
+
+/** 存储芯片赛道成分：中报分析榜 Top10 + 订单榜 Top10 去重 */
+const STORAGE_CHIP_UNIVERSE = [
+  '江波龙', '佰维存储', '兆易创新', '北京君正', '澜起科技', '普冉股份', '东芯股份', '聚辰股份', '恒烁股份', '国科微',
+  '长电科技', '生益科技', '深南电路', '德明利', '深科技', '太极实业', '长川科技', '香农芯创', '中电港', '雅创电子',
+  '瑞芯微', '全志科技', '复旦微电', '行云科技', '协创数据', '朗科科技', '联芸科技',
+];
+
+const STORAGE_REASON_KW = /存储晶圆|半导体存储|存储产业|存储和算力|存储模组|存储芯片|存储主控|存储业务|存储器|DRAM|NAND|NOR Flash|闪存|内存接口|嵌入式存储|企业级存储|SLC NAND|存储价格/;
+const STORAGE_EXCLUDE = new Set(['京东方A', '京东方B', '视源股份']);
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
@@ -31,6 +41,18 @@ function fetchJson(url) {
       })
       .on('error', reject);
   });
+}
+
+async function fetchAllRows() {
+  const first = await fetchJson(`${API_BASE}&pageNumber=1`);
+  const total = first?.result?.count || 0;
+  const pages = Math.ceil(total / 500) || 1;
+  let rows = [...(first?.result?.data || [])];
+  for (let p = 2; p <= pages; p++) {
+    const payload = await fetchJson(`${API_BASE}&pageNumber=${p}`);
+    rows = rows.concat(payload?.result?.data || []);
+  }
+  return rows;
 }
 
 function fmtAmt(v) {
@@ -91,7 +113,6 @@ function toItem(r, rank) {
   };
 }
 
-/** 增幅榜：仅预增/略增，同比增幅有可比性 */
 function isGrowthRankEligible(r) {
   return (
     (r.PREDICT_TYPE === '预增' || r.PREDICT_TYPE === '略增')
@@ -100,9 +121,21 @@ function isGrowthRankEligible(r) {
   );
 }
 
+function isStorageChipCompany(r) {
+  const name = r.SECURITY_NAME_ABBR || '';
+  if (STORAGE_EXCLUDE.has(name)) return false;
+  if (STORAGE_CHIP_UNIVERSE.includes(name)) return true;
+  const blob = (r.CHANGE_REASON_EXPLAIN || '') + (r.PREDICT_CONTENT || '');
+  return STORAGE_REASON_KW.test(blob);
+}
+
+function formatAsOfLabel(iso) {
+  const [, m, d] = iso.split('-');
+  return `${Number(m)}月${Number(d)}日`;
+}
+
 async function main() {
-  const payload = await fetchJson(URL);
-  const rows = payload?.result?.data || [];
+  const rows = await fetchAllRows();
   const filtered = rows.filter(
     (r) => (r.NOTICE_DATE || '').slice(0, 10) <= AS_OF && r.PREDICT_FINANCE_CODE === '004'
   );
@@ -128,6 +161,13 @@ async function main() {
     (a, b) => Number(b.ADD_AMP_UPPER) - Number(a.ADD_AMP_UPPER)
   );
 
+  const storageDisclosed = companies.filter(isStorageChipCompany);
+  const storageGrowth = [...storageDisclosed].filter(isGrowthRankEligible).sort(
+    (a, b) => Number(b.ADD_AMP_UPPER) - Number(a.ADD_AMP_UPPER)
+  );
+  const storageTop = storageGrowth.slice(0, 10);
+  const asOfLabel = formatAsOfLabel(AS_OF);
+
   const output = {
     meta: {
       asOf: AS_OF,
@@ -136,24 +176,33 @@ async function main() {
       positiveRatio: Math.round((good / companies.length) * 1000) / 10,
       positiveCount: good,
       typeCounts,
+      storageDisclosed: storageDisclosed.length,
+      storageGrowthEligible: storageGrowth.length,
       source: '东方财富数据中心 · RPT_PUBLIC_OP_NEWPREDICT',
-      note: '归母净利润预告；截止2026-07-08已披露公司',
+      note: '归母净利润预告；存储芯片赛道含成分股与预告文本关键词匹配',
     },
     profitTop15: {
       title: '2026中报预告 · 净利润规模榜',
-      subtitle: `截至7月8日共${companies.length}家披露中报预告；按归母净利润预告上限排序 Top15`,
+      subtitle: `截至${asOfLabel}共${companies.length}家披露中报预告；按归母净利润预告上限排序 Top15`,
       key: '净利润规模',
       companies: sortedProfit.slice(0, 15).map((r, i) => toItem(r, i + 1)),
     },
     growthTop15: {
       title: '2026中报预告 · 净利润增幅榜',
-      subtitle: `截至7月8日预喜率${Math.round((good / companies.length) * 100)}%；按同比增幅上限排序 Top15（仅预增/略增，不含扭亏）`,
+      subtitle: `截至${asOfLabel}预喜率${Math.round((good / companies.length) * 100)}%；按同比增幅上限排序 Top15（仅预增/略增，不含扭亏）`,
       key: '净利润增幅',
       companies: sortedGrowth.slice(0, 15).map((r, i) => toItem(r, i + 1)),
     },
+    storageGrowthTop10: {
+      title: '2026中报预告 · 存储芯片增幅榜',
+      subtitle: `截至${asOfLabel}存储赛道已披露${storageDisclosed.length}家、可比增幅${storageGrowth.length}家；按归母净利润同比增幅排序 Top10（仅预增/略增）`,
+      key: '存储芯片',
+      cardHead: '存储芯片 · 归母净利润预告增幅 Top10',
+      companies: storageTop.map((r, i) => toItem(r, i + 1)),
+    },
     overview: {
       title: '2026中报业绩预告全景',
-      subtitle: `截至2026年7月8日 · A股${companies.length}家已披露2026H1业绩预告 · 预喜${good}家（${((good / companies.length) * 100).toFixed(1)}%）`,
+      subtitle: `截至${asOfLabel} · A股${companies.length}家已披露2026H1业绩预告 · 预喜${good}家（${((good / companies.length) * 100).toFixed(1)}%）`,
       key: '市场全景',
       stats: [
         { label: '已披露', value: `${companies.length}家` },
@@ -169,7 +218,7 @@ async function main() {
       highlights: [
         `净利润榜首：${sortedProfit[0].SECURITY_NAME_ABBR} ${fmtProfit(sortedProfit[0].PREDICT_AMT_LOWER, sortedProfit[0].PREDICT_AMT_UPPER)}`,
         `增幅榜首：${sortedGrowth[0].SECURITY_NAME_ABBR} ${fmtGrowth(sortedGrowth[0].ADD_AMP_LOWER, sortedGrowth[0].ADD_AMP_UPPER, sortedGrowth[0].PREDICT_TYPE)}`,
-        'AI算力/存储/半导体、化工石化、航运船舶等行业预增集中',
+        `存储芯片增幅榜首：${storageTop[0] ? storageTop[0].SECURITY_NAME_ABBR + ' ' + fmtGrowth(storageTop[0].ADD_AMP_LOWER, storageTop[0].ADD_AMP_UPPER, storageTop[0].PREDICT_TYPE) : '待更多公司披露'}`,
         '强制披露截止日7月15日，名单持续更新中',
       ],
     },
@@ -183,7 +232,9 @@ async function main() {
     + ';\n';
 
   fs.writeFileSync(OUT, js, 'utf8');
-  console.log(`✅ ${companies.length} 家 · 增幅榜 ${sortedGrowth.length} 家符合条件 · 写入 ${OUT}`);
+  console.log(
+    `✅ 全市场 ${companies.length} 家 · 增幅 ${sortedGrowth.length} 家 · 存储赛道披露 ${storageDisclosed.length} 家 / 增幅 ${storageTop.length} 家 → ${OUT}`
+  );
 }
 
 main().catch((e) => {

@@ -37,6 +37,15 @@ const INTERIM_FORECAST_SECTIONS = [
     fileName: '2026中报预告-净利润增幅榜.png',
     hint: '按归母净利润同比增幅上限排序 Top15（仅预增/略增；扭亏、减亏等因基数不可比，不纳入增幅榜）。',
   },
+  {
+    id: 'storage-growth',
+    getData: () => (typeof INTERIM_FORECAST_2026H1 !== 'undefined' ? INTERIM_FORECAST_2026H1.storageGrowthTop10 : null),
+    wrapId: 'if-storage-growth-wrap',
+    pagesId: 'if-storage-growth-pages',
+    canvasId: 'if-storage-growth-canvas',
+    fileName: '2026中报预告-存储芯片增幅榜.png',
+    hint: '存储芯片赛道（成分股+预告文本匹配）已披露公司的归母净利润预告增幅 Top10；仅纳入预增/略增。截止日前名单持续更新。',
+  },
 ];
 
 function getInterimForecastComplianceHtml() {
@@ -113,6 +122,19 @@ function initInterimForecastPage() {
 
   INTERIM_FORECAST_SECTIONS.forEach((cfg) => renderInterimForecastSection(container, cfg));
   renderInterimForecastCompanyTable(container);
+
+  const intro = document.getElementById('interim-forecast-intro');
+  const meta = typeof INTERIM_FORECAST_2026H1 !== 'undefined' ? INTERIM_FORECAST_2026H1.meta : null;
+  if (intro && meta) {
+    const asOf = meta.asOf || '';
+    const m = asOf.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    const asOfText = m ? m[1] + '年' + Number(m[2]) + '月' + Number(m[3]) + '日' : asOf;
+    intro.innerHTML =
+      '截至 <strong>' + asOfText + '</strong>，A股已有 <strong>'
+      + meta.totalDisclosed + '家</strong> 披露 <strong>2026H1业绩预告</strong>（归母净利润），预喜率约 <strong>'
+      + meta.positiveRatio + '%</strong>。下方含市场全景、规模榜、增幅榜与 <strong>存储芯片增幅 Top10</strong>（赛道已披露'
+      + (meta.storageDisclosed || '—') + '家），附完整名单。';
+  }
 }
 
 function openInterimForecastPage() {
