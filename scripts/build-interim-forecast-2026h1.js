@@ -31,6 +31,14 @@ const SEMICONDUCTOR_EXCLUDE = new Set([
   '诚邦股份', '欧菲光', '万华化学', '立讯精密',
 ]);
 
+const COMPUTE_LEASE_REASON_KW = /算力租赁|智算中心|AIDC|GPU集群租赁|算力运营|智算算力|算力租赁业务|超擎数智|英博数科|润六尺/;
+const COMPUTE_LEASE_EXCLUDE = new Set([
+  '京东方A', '京东方B', '视源股份', '寒武纪', '海光信息', '景嘉微',
+  '光库科技', '优博讯', '行云科技', '智微智能',
+]);
+/** 订单/产能榜未覆盖但属算力租赁赛道的补充成分 */
+const COMPUTE_LEASE_EXTRA = ['航锦科技'];
+
 function loadSemiconductorUniverse() {
   const base = path.join(__dirname, '../data');
   const names = new Set(STORAGE_CHIP_UNIVERSE);
@@ -79,6 +87,36 @@ let SEMICONDUCTOR_UNIVERSE = null;
 function getSemiconductorUniverse() {
   if (!SEMICONDUCTOR_UNIVERSE) SEMICONDUCTOR_UNIVERSE = loadSemiconductorUniverse();
   return SEMICONDUCTOR_UNIVERSE;
+}
+
+function loadComputeLeaseUniverse() {
+  const base = path.join(__dirname, '../data');
+  const names = new Set();
+
+  const orderPath = path.join(base, 'order-rank-computing2026.js');
+  if (fs.existsSync(orderPath)) {
+    const text = fs.readFileSync(orderPath, 'utf8');
+    const re = /(?:name: '([^']+)'|"name": "([^"]+)")/g;
+    let m;
+    while ((m = re.exec(text))) names.add(m[1] || m[2]);
+  }
+
+  ['capacity-rank-compute-lease2026.json', 'capacity-rank-compute-cloud2026.json'].forEach((file) => {
+    const fp = path.join(base, file);
+    if (!fs.existsSync(fp)) return;
+    const d = JSON.parse(fs.readFileSync(fp, 'utf8'));
+    (d.companies || []).forEach((c) => names.add(c.name));
+  });
+
+  COMPUTE_LEASE_EXTRA.forEach((n) => names.add(n));
+
+  return names;
+}
+
+let COMPUTE_LEASE_UNIVERSE = null;
+function getComputeLeaseUniverse() {
+  if (!COMPUTE_LEASE_UNIVERSE) COMPUTE_LEASE_UNIVERSE = loadComputeLeaseUniverse();
+  return COMPUTE_LEASE_UNIVERSE;
 }
 
 function fetchJson(url) {
@@ -193,6 +231,14 @@ function isSemiconductorCompany(r) {
   return SEMICONDUCTOR_REASON_KW.test(blob);
 }
 
+function isComputeLeaseCompany(r) {
+  const name = r.SECURITY_NAME_ABBR || '';
+  if (COMPUTE_LEASE_EXCLUDE.has(name)) return false;
+  if (getComputeLeaseUniverse().has(name)) return true;
+  const blob = (r.CHANGE_REASON_EXPLAIN || '') + (r.PREDICT_CONTENT || '');
+  return COMPUTE_LEASE_REASON_KW.test(blob);
+}
+
 function profitUpperValue(r) {
   return Number(r.PREDICT_AMT_UPPER ?? r.PREDICT_AMT_LOWER ?? -Infinity);
 }
@@ -240,6 +286,13 @@ async function main() {
     .filter((r) => profitUpperValue(r) > 0)
     .sort((a, b) => profitUpperValue(b) - profitUpperValue(a));
   const semiProfitTop = semiProfit.slice(0, 15);
+
+  const computeLeaseDisclosed = companies.filter(isComputeLeaseCompany);
+  const computeLeaseProfit = [...computeLeaseDisclosed]
+    .filter((r) => profitUpperValue(r) > 0)
+    .sort((a, b) => profitUpperValue(b) - profitUpperValue(a));
+  const computeLeaseProfitTop = computeLeaseProfit.slice(0, 15);
+
   const asOfLabel = formatAsOfLabel(AS_OF);
 
   const output = {
@@ -254,6 +307,8 @@ async function main() {
       storageGrowthEligible: storageGrowth.length,
       semiDisclosed: semiDisclosed.length,
       semiProfitPositive: semiProfit.length,
+      computeLeaseDisclosed: computeLeaseDisclosed.length,
+      computeLeaseProfitPositive: computeLeaseProfit.length,
       source: '东方财富数据中心 · RPT_PUBLIC_OP_NEWPREDICT',
       note: '归母净利润预告；赛道成分来自产业链榜单与预告文本匹配',
     },
@@ -283,6 +338,13 @@ async function main() {
       cardHead: '半导体 · 归母净利润预告规模 Top15',
       companies: semiProfitTop.map((r, i) => toItem(r, i + 1)),
     },
+    computeLeaseProfitTop15: {
+      title: '2026中报预告 · 算力租赁净利润榜',
+      subtitle: `截至${asOfLabel}算力租赁赛道已披露${computeLeaseDisclosed.length}家、盈利预告${computeLeaseProfit.length}家；按归母净利润预告上限排序 Top15`,
+      key: '算力租赁',
+      cardHead: '算力租赁 · 归母净利润预告规模 Top15',
+      companies: computeLeaseProfitTop.map((r, i) => toItem(r, i + 1)),
+    },
     overview: {
       title: '2026中报业绩预告全景',
       subtitle: `截至${asOfLabel} · A股${companies.length}家已披露2026H1业绩预告 · 预喜${good}家（${((good / companies.length) * 100).toFixed(1)}%）`,
@@ -303,6 +365,7 @@ async function main() {
         `增幅榜首：${sortedGrowth[0].SECURITY_NAME_ABBR} ${fmtGrowth(sortedGrowth[0].ADD_AMP_LOWER, sortedGrowth[0].ADD_AMP_UPPER, sortedGrowth[0].PREDICT_TYPE)}`,
         `存储芯片增幅榜首：${storageTop[0] ? storageTop[0].SECURITY_NAME_ABBR + ' ' + fmtGrowth(storageTop[0].ADD_AMP_LOWER, storageTop[0].ADD_AMP_UPPER, storageTop[0].PREDICT_TYPE) : '待更多公司披露'}`,
         `半导体净利润榜首：${semiProfitTop[0] ? semiProfitTop[0].SECURITY_NAME_ABBR + ' ' + fmtProfit(semiProfitTop[0].PREDICT_AMT_LOWER, semiProfitTop[0].PREDICT_AMT_UPPER) : '待更多公司披露'}`,
+        `算力租赁净利润榜首：${computeLeaseProfitTop[0] ? computeLeaseProfitTop[0].SECURITY_NAME_ABBR + ' ' + fmtProfit(computeLeaseProfitTop[0].PREDICT_AMT_LOWER, computeLeaseProfitTop[0].PREDICT_AMT_UPPER) : '待更多公司披露'}`,
         '强制披露截止日7月15日，名单持续更新中',
       ],
     },
@@ -317,7 +380,7 @@ async function main() {
 
   fs.writeFileSync(OUT, js, 'utf8');
   console.log(
-    `✅ 全市场 ${companies.length} 家 · 存储增幅 ${storageTop.length} 家 · 半导体净利润 ${semiProfitTop.length} 家 → ${OUT}`
+    `✅ 全市场 ${companies.length} 家 · 存储增幅 ${storageTop.length} 家 · 半导体净利润 ${semiProfitTop.length} 家 · 算力租赁净利润 ${computeLeaseProfitTop.length} 家 → ${OUT}`
   );
 }
 

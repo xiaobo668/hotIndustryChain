@@ -191,3 +191,7 @@ function openOrderTracksPage() {
 function openHumanoidEightPosterPage() {
   window.location.href = 'humanoid-eight-poster.html';
 }
+
+function openNvidiaRelatedPosterPage() {
+  window.location.href = 'nvidia-related-poster.html';
+}

@@ -55,6 +55,15 @@ const INTERIM_FORECAST_SECTIONS = [
     fileName: '2026中报预告-半导体净利润榜.png',
     hint: '半导体赛道（存储/设备/先进封装/材料等产业链成分+预告文本匹配）按归母净利润预告上限排序 Top15。',
   },
+  {
+    id: 'compute-lease-profit',
+    getData: () => (typeof INTERIM_FORECAST_2026H1 !== 'undefined' ? INTERIM_FORECAST_2026H1.computeLeaseProfitTop15 : null),
+    wrapId: 'if-compute-lease-profit-wrap',
+    pagesId: 'if-compute-lease-profit-pages',
+    canvasId: 'if-compute-lease-profit-canvas',
+    fileName: '2026中报预告-算力租赁净利润榜.png',
+    hint: '算力租赁赛道（订单榜/产能榜成分+预告文本匹配）按归母净利润预告上限排序 Top15；含IDC智算、GPU集群租赁等。',
+  },
 ];
 
 function getInterimForecastComplianceHtml() {
@@ -141,8 +150,8 @@ function initInterimForecastPage() {
     intro.innerHTML =
       '截至 <strong>' + asOfText + '</strong>，A股已有 <strong>'
       + meta.totalDisclosed + '家</strong> 披露 <strong>2026H1业绩预告</strong>（归母净利润），预喜率约 <strong>'
-      + meta.positiveRatio + '%</strong>。下方含市场全景、规模榜、增幅榜、<strong>存储芯片增幅 Top10</strong> 与 <strong>半导体净利润 Top15</strong>（赛道已披露'
-      + (meta.storageDisclosed || '—') + ' / ' + (meta.semiDisclosed || '—') + '家），附完整名单。';
+      + meta.positiveRatio + '%</strong>。下方含市场全景、规模榜、增幅榜、<strong>存储芯片增幅 Top10</strong>、<strong>半导体净利润 Top15</strong> 与 <strong>算力租赁净利润 Top15</strong>（赛道已披露'
+      + (meta.storageDisclosed || '—') + ' / ' + (meta.semiDisclosed || '—') + ' / ' + (meta.computeLeaseDisclosed || '—') + '家），附完整名单。';
   }
 }
 
