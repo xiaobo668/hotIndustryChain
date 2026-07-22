@@ -101,7 +101,7 @@ function renderOrderRankPoster(data, containerId, canvasId) {
 
 function drawOrderRankPoster(ctx, data, W, H) {
   const L = ORDER_RANK_POSTER_LAYOUT;
-  const T = ORDER_RANK_POSTER_THEME;
+  const T = Object.assign({}, ORDER_RANK_POSTER_THEME, data.theme || {});
   const CARD_RADIUS = 10;
   const innerPadX = 10;
 
@@ -225,7 +225,8 @@ function drawOrderRankPoster(ctx, data, W, H) {
   ctx.font = L.FOOTER_FONT;
   ctx.textAlign = 'center';
   const footerTop = cardBottom + L.GAP;
-  ORDER_RANK_POSTER_FOOTER_LINES.forEach((line, i) => {
+  const footerLines = data.footerLines || ORDER_RANK_POSTER_FOOTER_LINES;
+  footerLines.forEach((line, i) => {
     ctx.fillText(line, W / 2, footerTop + 10 + i * L.FOOTER_LINE_H);
   });
   ctx.textAlign = 'left';

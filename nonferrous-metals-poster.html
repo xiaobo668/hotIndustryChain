@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>有色金属产业链 · 核心龙头 Top10 海报</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --text: #e8e8f0;
+      --text-muted: #a8a29e;
+      --accent: #d97706;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .wrap { max-width: 520px; margin: 0 auto; }
+    h1 { font-size: 20px; margin-bottom: 8px; color: #fbbf24; }
+    .sub { color: var(--text-muted); font-size: 13px; line-height: 1.65; margin-bottom: 20px; }
+    .poster-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      padding: 10px 18px; border-radius: 10px; border: none;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #d97706, #92400e);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    a.back { color: #fbbf24; font-size: 13px; display: inline-block; margin-bottom: 16px; text-decoration: none; }
+    .nav-card {
+      display: block;
+      margin-bottom: 12px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(217, 119, 6, 0.4);
+      background: rgba(217, 119, 6, 0.08);
+      color: #fbbf24;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .nav-card:hover { background: rgba(217, 119, 6, 0.14); }
+    .note {
+      margin-top: 20px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(217, 119, 6, 0.25);
+      background: rgba(217, 119, 6, 0.07);
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+    .note strong { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← 返回产业链首页</a>
+    <a class="nav-card" href="index.html">⛏️ 返回产业链分析首页 →</a>
+    <h1>有色金属产业链核心龙头 Top10</h1>
+    <p class="sub">覆盖铜、铝、锂、钴、镍五大有色金属赛道，从资源端、冶炼端到加工端梳理 10 家代表企业；支持海报下载、复制与刷新。</p>
+    <div class="poster-wrap" id="nonferrous-metals-wrap">
+      <div id="nonferrous-metals-pages"></div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" onclick="downloadOrderRankPoster('nonferrous-metals-canvas','有色金属产业链核心龙头Top10-2026.png')">⬇️ 下载海报</button>
+        <button class="btn btn-secondary" type="button" onclick="copyOrderRankPoster('nonferrous-metals-canvas')">📋 复制海报</button>
+        <button class="btn btn-secondary" type="button" onclick="initOrderRankPosterPage(NONFERROUS_METALS_TOP102026,'nonferrous-metals-pages','nonferrous-metals-canvas')">🔄 刷新</button>
+      </div>
+    </div>
+    <div class="note">
+      <strong>口径说明：</strong>按资源禀赋、产业链位置与行业代表性综合梳理，序号只用于海报展示，不代表证券价值或投资优先级；内容仅作产业学习，不构成投资建议。
+    </div>
+  </div>
+  <script src="js/utils/canvas.js"></script>
+  <script src="data/nonferrous-metals-top102026.js"></script>
+  <script src="js/industry/order-rank-poster.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initOrderRankPosterPage(NONFERROUS_METALS_TOP102026, 'nonferrous-metals-pages', 'nonferrous-metals-canvas');
+    });
+  </script>
+</body>
+</html>

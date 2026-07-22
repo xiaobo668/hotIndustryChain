@@ -195,3 +195,7 @@ function openHumanoidEightPosterPage() {
 function openNvidiaRelatedPosterPage() {
   window.location.href = 'nvidia-related-poster.html';
 }
+
+function openNonferrousMetalsPosterPage() {
+  window.location.href = 'nonferrous-metals-poster.html';
+}
