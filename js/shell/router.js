@@ -199,3 +199,7 @@ function openNvidiaRelatedPosterPage() {
 function openNonferrousMetalsPosterPage() {
   window.location.href = 'nonferrous-metals-poster.html';
 }
+
+function openGridEquipmentPosterPage() {
+  window.location.href = 'grid-equipment-poster.html';
+}
